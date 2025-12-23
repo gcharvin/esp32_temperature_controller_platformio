@@ -1,319 +1,502 @@
 #include <Arduino.h>
+
+#define DEBUG true
+
+
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <DHT.h>
-#include <PID_v2.h>
 #include <math.h>
-#include <stdlib.h>
+#include <PID_v2.h>
+#include <Preferences.h>
+#include <ESP32RotaryEncoder.h>
+#include "menu.h"
+#include "parameters.h"  // Inclusion de parameters.h
 
-#ifndef SCREEN_WIDTH
+// https://www.upesy.fr/blogs/tutorials/esp32-pinout-reference-gpio-pins-ultimate-guide
+
+// Stockage en mémoire
+Preferences preferences;
+
+// OLED display size
 #define SCREEN_WIDTH 128
-#endif
-
-#ifndef SCREEN_HEIGHT
 #define SCREEN_HEIGHT 64
-#endif
+#define OLED_RESET -1
+#define OLED_ADDRESS 0x3C // Adresse I2C de l'OLED
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-#ifndef OLED_RESET_PIN
-#define OLED_RESET_PIN -1
-#endif
+// DHT22 sensor settings
+#define DHTPIN 18
+#define DHTTYPE DHT22
+DHT dht(DHTPIN, DHTTYPE);
 
-#ifndef OLED_I2C_ADDRESS
-#define OLED_I2C_ADDRESS 0x3C
-#endif
+// PWM settings
+const int mosfetPin = 5;
+const int pwmChannel = 0;
+const int pwmFrequency = 500; // 100 % with 5000Hz I had interference and poor thermistor reading !
+const int pwmResolution = 8;
 
-#ifndef DHT_SENSOR_PIN
-#define DHT_SENSOR_PIN 4
-#endif
+// Thermistor settings
+int thermistorPin = 15;
+float divisorValue = 8400.0; // recalibrated using DHT22
+float Bvalue = 3920.0; // extracted from datsheet values : https://www.ovenind.com/pdf/datasheets/DS-TR136.pdf
 
-#ifndef DHT_SENSOR_TYPE
-#define DHT_SENSOR_TYPE DHT22
-#endif
+// Déclaration des paramètres
+float Setpoint;
+float Kp, Ki, Kd;
+float resistorValue;
+double Input, Output;
+float dhtTemperatureC;
 
-#ifndef HEATER_PIN
-#define HEATER_PIN 5
-#endif
+// Tableau unique contenant tous les paramètres
+Parameter parameters[] = {
+    {"Setpoint", &Setpoint, 32.0, 20.0, 40.0, 0.1},
+    {"Kp", &Kp, 40.0, 0.0, 100.0, 0.1},
+    {"Ki", &Ki, 8.0, 0.0, 50.0, 0.1},
+    {"Kd", &Kd, 0.0, 0.0, 10.0, 0.1},
+    {"resistorValue", &resistorValue, 15000.0, 1000.0, 30000.0, 500.0}
+};
 
-#ifndef PID_PWM_CHANNEL
-#define PID_PWM_CHANNEL 0
-#endif
+// Nombre total de paramètres
+//const int numParameters = sizeof(parameters) / sizeof(Parameter);
+int numParameters = sizeof(parameters) / sizeof(Parameter);
 
-#ifndef PID_PWM_FREQUENCY
-#define PID_PWM_FREQUENCY 5000
-#endif
+// PID controller
+PID_v2 myPID( Kp, Ki, Kd, PID::Direct);
 
-#ifndef PID_PWM_RESOLUTION
-#define PID_PWM_RESOLUTION 10
-#endif
+// Déclaration des broches pour l'encodeur
+#define encoder0PinA  4  // Pin A de l'encodeur
+#define encoder0PinB  19 // Pin B de l'encodeur
+#define encoder0Press 23  // Pin du bouton de l'encodeur
 
-#ifndef PID_KP
-#define PID_KP 12.0
-#endif
+RotaryEncoder rotaryEncoder(encoder0PinA, encoder0PinB, encoder0Press);
 
-#ifndef PID_KI
-#define PID_KI 0.5
-#endif
+unsigned long lastPIDTime = 0;
+unsigned long lastDisplayTime = 0;
+const long PIDInterval = 500;
+const long DisplayInterval = 500;
+bool displayNeedsUpdate=true;
 
-#ifndef PID_KD
-#define PID_KD 1.2
-#endif
+// Function declarations
+void setupPWM();
+void setupOLED();
+void setupPID();
+bool readThermistor();
+void updatePID();
+void debugPrint(const char* message);
+void handleSerialCommand();
+void processCommand(String command);
 
-#ifndef PID_SAMPLE_TIME_MS
-#define PID_SAMPLE_TIME_MS 1000
-#endif
+// PWM helpers (compat core 2.x / 3.x)
+bool pwmInit(uint8_t pin, uint32_t freqHz, uint8_t resolutionBits, int8_t preferredChannel = -1);
+void pwmWriteDuty(uint8_t pin, uint32_t duty);
+void pwmDetach(uint8_t pin);
+uint32_t pwmMaxDuty(uint8_t resolutionBits);
 
-#ifndef PID_MIN_SETPOINT
-#define PID_MIN_SETPOINT 10.0
-#endif
 
-#ifndef PID_MAX_SETPOINT
-#define PID_MAX_SETPOINT 80.0
-#endif
+bool initSuccess = true;
+String serialBuffer = ""; // Tampon pour stocker les caractères reçus
 
-#ifndef PID_DEFAULT_SETPOINT
-#define PID_DEFAULT_SETPOINT 25.0
-#endif
 
-#ifndef SENSOR_READ_INTERVAL_MS
-#define SENSOR_READ_INTERVAL_MS 2000
-#endif
+void setup() {
+  Serial.begin(9600);
+  debugPrint("Init components setup");
 
-#ifndef DISPLAY_REFRESH_INTERVAL_MS
-#define DISPLAY_REFRESH_INTERVAL_MS 1000
-#endif
+  // Setup OLED
+  setupOLED();
 
-#if defined(PID_v2_h) || defined(PID_v1_h)
-#ifndef PID_DIRECTION_DIRECT
-#define PID_DIRECTION_DIRECT PID::DIRECT
-#endif
-#ifndef PID_MODE_AUTOMATIC
-#define PID_MODE_AUTOMATIC PID::AUTOMATIC
-#endif
-#endif
+  debugPrint("Get parameters");
+  preferences.begin("my-app", false);
+  for (int i = 0; i < numParameters; i++) {
+    *(parameters[i].value) = preferences.getFloat(parameters[i].name, parameters[i].defaultValue);
+  }
 
-#ifndef PID_DIRECTION_DIRECT
-#ifdef DIRECT
-#define PID_DIRECTION_DIRECT DIRECT
+  debugPrint("Init PID");
+  myPID.SetTunings(Kp, Ki, Kd);
+  myPID.SetOutputLimits(0, 255);
+  bool error=readThermistor();
+
+  if (error) {
+    debugPrint("Thermistor sensor failed!");
+  } else {
+    debugPrint("Thermistor OK");
+  }
+
+
+  myPID.Start(Input, 0, Setpoint);
+
+  debugPrint("Setup Encoder");
+
+    pinMode(encoder0Press, INPUT_PULLUP);  // Assurez-vous que la résistance pull-up interne est activée pour le bouton
+    rotaryEncoder.setEncoderType(EncoderType::HAS_PULLUP);
+    rotaryEncoder.setBoundaries(0, numParameters, true); // Limite le range de 0 à numParameters
+    rotaryEncoder.onTurned(&knobCallback);
+    rotaryEncoder.onPressed(&buttonCallback);
+    rotaryEncoder.begin();
+
+  // rotaryEncoder.setEncoderType(EncoderType::HAS_PULLUP);
+  // rotaryEncoder.setBoundaries(0, 5, true);
+  // rotaryEncoder.onTurned(&knobCallback);
+  // rotaryEncoder.onPressed(&buttonCallback);
+  // rotaryEncoder.begin();
+  debugPrint("Encoder OK");
+
+  setupPWM();
+
+  debugPrint("DHT22 sensor setup");
+  dht.begin();
+  float temperature = dht.readTemperature();
+  if (isnan(temperature)) {
+    debugPrint("DHT sensor failed!");
+  } else {
+    debugPrint("DHT sensor OK");
+  }
+
+  debugPrint("Init procedure OK");
+  delay(1000);
+
+
+   updateDisplay(error);
+}
+
+void loop() {
+    if (!initSuccess) return;
+    unsigned long currentTime = millis();
+
+    // Gérer les commandes reçues sur le port série
+    if (Serial.available() > 0) {
+        handleSerialCommand();
+    }
+
+    // Lire la thermistance et mettre à jour le PID, sauf si en mode d'édition
+    bool error = false;
+    if (!menuActive || (menuActive && !editing)) {
+        if (currentTime - lastPIDTime >= PIDInterval) {
+            lastPIDTime = currentTime;
+            error = readThermistor();
+            if (!error) {
+                updatePID();
+            } else {
+                // Forcer le PWM à 0% en cas d'erreur
+                Output = 0;
+                pwmWriteDuty((uint8_t)mosfetPin, 0);
+            }
+            dhtTemperatureC = dht.readTemperature();
+        }
+    }
+
+    // Gérer l'affichage et le menu
+    if (menuActive) {
+        if (editing) {
+            if (displayNeedsUpdate) {
+                showSingleParameter(editIndex);
+                displayNeedsUpdate = false;
+            }
+        } else {
+            if (displayNeedsUpdate) {
+                showMenu();
+                displayNeedsUpdate = false;
+            }
+        }
+    } else {
+        if (currentTime - lastDisplayTime >= DisplayInterval) {
+            lastDisplayTime = currentTime;
+            updateDisplay(error); // Passer l'erreur à updateDisplay()
+        }
+    }
+}
+
+
+
+void debugPrint(const char* message) {
+  if (DEBUG) {
+    Serial.println(message);
+  }
+
+  if(oledInitialized) {
+      displayTextLine(message);
+      delay(500);
+  }
+}
+
+
+void setupPWM() {
+  if (DEBUG) Serial.println("Init PWM");
+
+  // preferredChannel = pwmChannel (utile sur core 2.x, ignoré sur core 3.x si auto)
+  if (!pwmInit((uint8_t)mosfetPin, (uint32_t)pwmFrequency, (uint8_t)pwmResolution, (int8_t)pwmChannel)) {
+    initSuccess = false;
+    debugPrint("PWM init failed!");
+    return;
+  }
+
+  pwmWriteDuty((uint8_t)mosfetPin, 0);
+}
+
+void setupOLED() {
+ 
+debugPrint("Init OLED");
+
+ bool error= display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDRESS); 
+ 
+  if (error) {
+        // Essayer d'écrire puis lire quelque chose sur l'écran pour vérifier
+        display.clearDisplay();
+        display.drawPixel(0, 0, SSD1306_WHITE); // Dessiner un pixel en haut à gauche
+        display.display();
+        delay(10); // Attendre un instant pour donner le temps d'afficher
+
+        // Essayer de vérifier si l'écran répond correctement en lisant un état
+        if (Wire.requestFrom(OLED_ADDRESS, 1) == 1) {
+            oledInitialized = true;
+            debugPrint("OLED setup successful");
+           
+        } else {
+            oledInitialized = false;
+            debugPrint("OLED not detected!");
+        }
+    } else {
+        oledInitialized = false;
+        debugPrint("OLED initi failed!");
+    }
+
+}
+
+void setupPID() {
+  pinMode(mosfetPin, OUTPUT);
+  
+  if (DEBUG) {
+    Serial.println("Init PID");
+  }
+  myPID.SetOutputLimits(0, 255);
+  myPID.Start(25, 0, Setpoint);
+}
+
+bool readThermistor() {
+    int adcValue = analogRead(thermistorPin);
+    float voltage = adcValue * (3.3 / 4095.0);
+
+    if (voltage != 0) {
+        float thermistorResistance = divisorValue * (3.3 / voltage - 1.0);
+
+        if (thermistorResistance > 0) {
+            float temp = 1.0 / (log(thermistorResistance / resistorValue) / Bvalue + 1.0 / 298.15) - 273.15;
+
+            if (temp > 0) {
+                Input = temp;
+
+                // Vérifiez si la température dépasse 45°C
+                if (temp > 45.0) {
+                    if (DEBUG) {
+                        Serial.println("Erreur : Température > 45°C !");
+                    }
+                    return true; // Erreur : température trop élevée
+                }
+            }
+        }
+        return false; // Pas d'erreur
+    } else {
+        if (DEBUG) {
+            Serial.println("Thermistor: Tension est 0, erreur détectée !");
+        }
+        return true; // Erreur : tension de la thermistance est 0
+    }
+}
+
+void updatePID() {
+    // Mise à jour de la sortie PID
+    Output = myPID.Run(Input);
+    pwmWriteDuty((uint8_t)mosfetPin, (uint32_t)Output);
+
+    // Affichage des informations PID et des paramètres stockés sur une seule ligne
+    if (DEBUG) {
+        Serial.print("Setpoint: ");
+        Serial.print(Setpoint);
+        Serial.print(", Input: ");
+        Serial.print(Input);
+        Serial.print(", Output: ");
+        Serial.print(Output);
+
+        // Afficher les paramètres stockés
+        for (int i = 0; i < numParameters; i++) {
+            float storedValue = preferences.getFloat(parameters[i].name, parameters[i].defaultValue);
+            Serial.print(", ");
+            Serial.print(parameters[i].name);
+            Serial.print(": ");
+            Serial.print(storedValue);
+        }
+
+        // Terminer la ligne
+        Serial.println();
+    }
+}
+
+void handleSerialCommand() {
+    while (Serial.available() > 0) {
+        char receivedChar = Serial.read(); // Lire un caractère
+        if (receivedChar == '\n') {
+            // Une commande complète a été reçue
+            serialBuffer.trim(); // Supprimer les espaces inutiles
+
+            if (serialBuffer.length() > 0) {
+                // Traiter la commande reçue
+                processCommand(serialBuffer);
+            }
+
+            // Réinitialiser le buffer pour la prochaine commande
+            serialBuffer = "";
+        } else {
+            // Ajouter le caractère au buffer
+            serialBuffer += receivedChar;
+        }
+    }
+}
+
+void processCommand(String command) {
+    // Rechercher le délimiteur ":"
+    int delimiterIndex = command.indexOf(':');
+    if (delimiterIndex == -1) {
+        Serial.println("Commande invalide. Format attendu : paramname : value");
+        return;
+    }
+
+    // Extraire le nom du paramètre et la nouvelle valeur
+    String paramName = command.substring(0, delimiterIndex);
+    String paramValueStr = command.substring(delimiterIndex + 1);
+    paramName.trim();
+    paramValueStr.trim();
+
+    // Convertir la valeur en float
+    float paramValue = paramValueStr.toFloat();
+
+    // Rechercher le paramètre dans le tableau
+    for (int i = 0; i < numParameters; i++) {
+        if (paramName == parameters[i].name) {
+            // Vérifier si la valeur est dans les limites définies
+            if (paramValue >= parameters[i].minValue && paramValue <= parameters[i].maxValue) {
+                // Mettre à jour la valeur du paramètre
+                *(parameters[i].value) = paramValue;
+
+                // Sauvegarder la nouvelle valeur dans les préférences
+                preferences.putFloat(parameters[i].name, paramValue);
+
+                // Si c'est un paramètre PID ou Setpoint, appliquer les changements immédiatement
+                if (paramName == "Kp" || paramName == "Ki" || paramName == "Kd" || paramName == "Setpoint") {
+                    applyUpdatedParameters();
+                }
+
+                // Confirmer la mise à jour
+                Serial.print("Parametre ");
+                Serial.print(paramName);
+                Serial.print(" updated with value : ");
+                Serial.println(paramValue);
+
+                return;
+            } else {
+                Serial.print("Value is outside bounds: ");
+                Serial.print(paramName);
+                Serial.print(". Min : ");
+                Serial.print(parameters[i].minValue);
+                Serial.print(", Max : ");
+                Serial.println(parameters[i].maxValue);
+                return;
+            }
+        }
+    }
+
+    // Si le paramètre n'est pas trouvé
+    Serial.print("Paramètre inconnu : ");
+    Serial.println(paramName);
+}
+
+// -----------------------------------------------------------------------------
+// PWM compatibility layer (Arduino-ESP32 core 2.x vs 3.x)
+// -----------------------------------------------------------------------------
+// Goal: keep main code stable: use pwmInit(pin,freq,res) + pwmWriteDuty(pin,duty)
+// Core 3.x: ledcAttach(pin,freq,res) + ledcWrite(pin,duty) (channels auto-managed)
+// Core 2.x: ledcSetup(ch,freq,res) + ledcAttachPin(pin,ch) + ledcWrite(ch,duty)
+
+static int8_t g_pwmChannelForPin[40];  // ESP32 has <= 40 GPIO indices (not all exist)
+static uint8_t g_pwmResolutionBits = 8;
+static bool g_pwmMapInit = false;
+
+uint32_t pwmMaxDuty(uint8_t resolutionBits) {
+  if (resolutionBits >= 31) return 0x7FFFFFFFUL;
+  return (1UL << resolutionBits) - 1UL;
+}
+
+static void pwmEnsureMapInit() {
+  if (g_pwmMapInit) return;
+  for (int i = 0; i < 40; ++i) g_pwmChannelForPin[i] = -1;
+  g_pwmMapInit = true;
+}
+
+bool pwmInit(uint8_t pin, uint32_t freqHz, uint8_t resolutionBits, int8_t preferredChannel) {
+  pwmEnsureMapInit();
+  g_pwmResolutionBits = resolutionBits;
+
+  // Basic guard
+  if (pin >= 40) return false;
+
+#if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR >= 3)
+  // Core 3.x: channels can be auto-assigned to pin
+  // If you want to force a channel, use ledcAttachChannel (available in 3.x).
+  bool ok = false;
+  if (preferredChannel >= 0) {
+    // Force a given channel if user requested it
+    ok = ledcAttachChannel(pin, freqHz, resolutionBits, preferredChannel);
+    if (ok) g_pwmChannelForPin[pin] = preferredChannel;
+  } else {
+    ok = ledcAttach(pin, freqHz, resolutionBits);
+    // channel auto-assigned; we don't know it -> keep -1
+    g_pwmChannelForPin[pin] = -1;
+  }
+  return ok;
+
 #else
-#define PID_DIRECTION_DIRECT 0
+  // Core 2.x: need an explicit channel.
+  int8_t ch = preferredChannel;
+  if (ch < 0) {
+    // pick a default channel 0 if caller didn't care
+    ch = 0;
+  }
+  ledcSetup((uint8_t)ch, freqHz, resolutionBits);
+  ledcAttachPin(pin, (uint8_t)ch);
+  g_pwmChannelForPin[pin] = ch;
+  return true;
 #endif
-#endif
+}
 
-#ifndef PID_MODE_AUTOMATIC
-#ifdef AUTOMATIC
-#define PID_MODE_AUTOMATIC AUTOMATIC
+void pwmWriteDuty(uint8_t pin, uint32_t duty) {
+  pwmEnsureMapInit();
+  const uint32_t maxDuty = pwmMaxDuty(g_pwmResolutionBits);
+  if (duty > maxDuty) duty = maxDuty;
+
+#if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR >= 3)
+  // Core 3.x: ledcWrite(pin, duty)
+  ledcWrite(pin, duty);
 #else
-#define PID_MODE_AUTOMATIC 1
+  // Core 2.x: ledcWrite(channel, duty)
+  if (pin < 40 && g_pwmChannelForPin[pin] >= 0) {
+    ledcWrite((uint8_t)g_pwmChannelForPin[pin], duty);
+  } else {
+    // Fallback: try channel 0 (best-effort)
+    ledcWrite((uint8_t)0, duty);
+  }
 #endif
+}
+
+void pwmDetach(uint8_t pin) {
+  pwmEnsureMapInit();
+#if defined(ESP_ARDUINO_VERSION_MAJOR) && (ESP_ARDUINO_VERSION_MAJOR >= 3)
+  ledcDetach(pin);
+#else
+  ledcDetachPin(pin);
 #endif
-
-namespace
-{
-constexpr uint32_t kPwmMaxDuty = (1UL << PID_PWM_RESOLUTION) - 1UL;
-const double kPidOutputMax = static_cast<double>(kPwmMaxDuty);
-
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET_PIN);
-DHT dht(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);
-
-double targetTemperatureC = PID_DEFAULT_SETPOINT;
-double measuredTemperatureC = PID_DEFAULT_SETPOINT;
-double pidOutputValue = 0.0;
-float lastHumidity = NAN;
-
-PID temperatureController(&measuredTemperatureC,
-                          &pidOutputValue,
-                          &targetTemperatureC,
-                          PID_KP,
-                          PID_KI,
-                          PID_KD,
-                          PID_DIRECTION_DIRECT);
-
-bool displayReady = false;
-
-uint32_t lastSensorReadMs = 0;
-uint32_t lastDisplayRefreshMs = 0;
-
-void initializeDisplay()
-{
-    displayReady = display.begin(SSD1306_SWITCHCAPVCC, OLED_I2C_ADDRESS);
-    if (!displayReady)
-    {
-        Serial.println(F("[OLED] Unable to initialize display"));
-        return;
-    }
-
-    display.clearDisplay();
-    display.setTextColor(SSD1306_WHITE);
-    display.setTextSize(1);
-    display.setCursor(0, 0);
-    display.println(F("ESP32 Temp PID"));
-    display.println(F("Display initialised"));
-    display.display();
+  if (pin < 40) g_pwmChannelForPin[pin] = -1;
 }
 
-void initializeHeaterPwm()
-{
-    ledcSetup(PID_PWM_CHANNEL, PID_PWM_FREQUENCY, PID_PWM_RESOLUTION);
-    ledcAttachPin(HEATER_PIN, PID_PWM_CHANNEL);
-    ledcWrite(PID_PWM_CHANNEL, 0);
-}
 
-void updateSetpointFromSerial()
-{
-    if (!Serial.available())
-    {
-        return;
-    }
 
-    const String input = Serial.readStringUntil('\n');
-    String trimmed = input;
-    trimmed.trim();
 
-    if (trimmed.isEmpty())
-    {
-        return;
-    }
-
-    char *endPtr = nullptr;
-    const double candidate = strtod(trimmed.c_str(), &endPtr);
-
-    if (endPtr == trimmed.c_str())
-    {
-        Serial.println(F("[PID] Ignoring invalid setpoint"));
-        return;
-    }
-
-    const double clamped = constrain(candidate, PID_MIN_SETPOINT, PID_MAX_SETPOINT);
-
-    targetTemperatureC = clamped;
-    Serial.print(F("[PID] New setpoint: "));
-    Serial.print(targetTemperatureC, 1);
-    Serial.println(F(" C"));
-}
-
-void readSensors()
-{
-    const float temperature = dht.readTemperature();
-    const float humidity = dht.readHumidity();
-
-    if (!isnan(temperature))
-    {
-        measuredTemperatureC = temperature;
-    }
-    else
-    {
-        Serial.println(F("[Sensor] Temperature read failed"));
-    }
-
-    if (!isnan(humidity))
-    {
-        lastHumidity = humidity;
-    }
-    else
-    {
-        Serial.println(F("[Sensor] Humidity read failed"));
-    }
-}
-
-void applyPidOutput()
-{
-    const double clampedOutput = constrain(pidOutputValue, 0.0, kPidOutputMax);
-    ledcWrite(PID_PWM_CHANNEL, static_cast<uint32_t>(clampedOutput));
-}
-
-void updateDisplay()
-{
-    if (!displayReady)
-    {
-        return;
-    }
-
-    display.clearDisplay();
-    display.setCursor(0, 0);
-    display.print(F("Temp: "));
-    display.print(measuredTemperatureC, 1);
-    display.println(F(" C"));
-
-    display.print(F("Target: "));
-    display.print(targetTemperatureC, 1);
-    display.println(F(" C"));
-
-    display.print(F("Output: "));
-    display.print(pidOutputValue, 0);
-
-    if (!isnan(lastHumidity))
-    {
-        display.println();
-        display.print(F("Humidity: "));
-        display.print(lastHumidity, 1);
-        display.println(F(" %"));
-    }
-
-    display.display();
-}
-
-void logStatus()
-{
-    Serial.print(F("[Status] Temp="));
-    Serial.print(measuredTemperatureC, 2);
-    Serial.print(F("C, Target="));
-    Serial.print(targetTemperatureC, 2);
-    Serial.print(F("C, Output="));
-    Serial.print(pidOutputValue, 2);
-
-    if (!isnan(lastHumidity))
-    {
-        Serial.print(F(", Humidity="));
-        Serial.print(lastHumidity, 1);
-        Serial.print(F("%"));
-    }
-
-    Serial.println();
-}
-
-} // namespace
-
-void setup()
-{
-    Serial.begin(9600);
-
-    Serial.println(F("Starting ESP32 temperature controller"));
-
-    dht.begin();
-    initializeDisplay();
-    pinMode(HEATER_PIN, OUTPUT);
-    initializeHeaterPwm();
-
-    temperatureController.SetOutputLimits(0.0, kPidOutputMax);
-    temperatureController.SetSampleTime(PID_SAMPLE_TIME_MS);
-    temperatureController.SetMode(PID_MODE_AUTOMATIC);
-
-    updateDisplay();
-    logStatus();
-}
-
-void loop()
-{
-    const uint32_t now = millis();
-
-    updateSetpointFromSerial();
-
-    if (now - lastSensorReadMs >= SENSOR_READ_INTERVAL_MS)
-    {
-        lastSensorReadMs = now;
-        readSensors();
-    }
-
-    if (temperatureController.Compute())
-    {
-        applyPidOutput();
-    }
-
-    if (now - lastDisplayRefreshMs >= DISPLAY_REFRESH_INTERVAL_MS)
-    {
-        lastDisplayRefreshMs = now;
-        updateDisplay();
-        logStatus();
-    }
-}
