@@ -18,7 +18,7 @@ extern float Kp, Ki, Kd;
 extern Parameter parameters[];
 extern int numParameters;          // <- plus de const ici
 extern double Input, Output;
-extern float dhtTemperatureC;
+extern float roomTemperatureC;
 
 // (temporaire) état menu/UI
 extern volatile int menuIndex;
@@ -28,8 +28,8 @@ extern int editIndex;
 extern int lastEncoderPosition;
 extern unsigned long lastDebounceTime;
 extern unsigned long debounceDelay;
-extern int cursorY;
-extern bool oledInitialized;
+extern int cursorRow;
+extern bool lcdInitialized;
 extern bool displayNeedsUpdate;
 
 #endif

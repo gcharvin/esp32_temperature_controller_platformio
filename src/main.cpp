@@ -4,9 +4,10 @@
 
 
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include <DHT.h>
+#include <hd44780.h>
+#include <hd44780ioClass/hd44780_I2Cexp.h>
+#include <Adafruit_TMP117.h>
+#include <BH1750.h>
 #include <math.h>
 #include <PID_v2.h>
 #include <Preferences.h>
@@ -19,17 +20,18 @@
 // Stockage en mémoire
 Preferences preferences;
 
-// OLED display size
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
-#define OLED_RESET -1
-#define OLED_ADDRESS 0x3C // Adresse I2C de l'OLED
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+// LCD 20x4 (I2C backpack)
+#define LCD_COLS 20
+#define LCD_ROWS 4
+hd44780_I2Cexp lcd;
 
-// DHT22 sensor settings
-#define DHTPIN 18
-#define DHTTYPE DHT22
-DHT dht(DHTPIN, DHTTYPE);
+// I2C sensors
+Adafruit_TMP117 tmp117;
+BH1750 lightMeter;
+bool tmp117Initialized = false;
+bool bh1750Initialized = false;
+uint8_t tmp117Address = 0;
+uint8_t bh1750Address = 0;
 
 // PWM settings
 const int mosfetPin = 5;
@@ -39,7 +41,7 @@ const int pwmResolution = 8;
 
 // Thermistor settings
 int thermistorPin = 15;
-float divisorValue = 8400.0; // recalibrated using DHT22
+float divisorValue = 8400.0; // recalibrated using room sensor
 float Bvalue = 3920.0; // extracted from datsheet values : https://www.ovenind.com/pdf/datasheets/DS-TR136.pdf
 
 // Déclaration des paramètres
@@ -47,7 +49,7 @@ float Setpoint;
 float Kp, Ki, Kd;
 float resistorValue;
 double Input, Output;
-float dhtTemperatureC;
+float roomTemperatureC;
 
 // Tableau unique contenant tous les paramètres
 Parameter parameters[] = {
@@ -80,11 +82,14 @@ bool displayNeedsUpdate=true;
 
 // Function declarations
 void setupPWM();
-void setupOLED();
+void setupLCD();
 void setupPID();
 bool readThermistor();
 void updatePID();
 void debugPrint(const char* message);
+void scanI2C();
+bool initTMP117();
+bool initBH1750();
 void handleSerialCommand();
 void processCommand(String command);
 
@@ -103,8 +108,8 @@ void setup() {
   Serial.begin(9600);
   debugPrint("Init components setup");
 
-  // Setup OLED
-  setupOLED();
+  // Setup LCD
+  setupLCD();
 
   debugPrint("Get parameters");
   preferences.begin("my-app", false);
@@ -144,14 +149,25 @@ void setup() {
 
   setupPWM();
 
-  debugPrint("DHT22 sensor setup");
-  dht.begin();
-  float temperature = dht.readTemperature();
-  if (isnan(temperature)) {
-    debugPrint("DHT sensor failed!");
+  debugPrint("TMP117 sensor setup");
+  tmp117Initialized = initTMP117();
+  if (!tmp117Initialized) {
+    debugPrint("TMP117 not detected!");
   } else {
-    debugPrint("DHT sensor OK");
+    Serial.print("TMP117 addr: 0x");
+    Serial.println(tmp117Address, HEX);
   }
+
+  debugPrint("BH1750 sensor setup");
+  bh1750Initialized = initBH1750();
+  if (!bh1750Initialized) {
+    debugPrint("BH1750 not detected!");
+  } else {
+    Serial.print("BH1750 addr: 0x");
+    Serial.println(bh1750Address, HEX);
+  }
+
+  roomTemperatureC = NAN;
 
   debugPrint("Init procedure OK");
   delay(1000);
@@ -182,7 +198,22 @@ void loop() {
                 Output = 0;
                 pwmWriteDuty((uint8_t)mosfetPin, 0);
             }
-            dhtTemperatureC = dht.readTemperature();
+            if (tmp117Initialized) {
+                sensors_event_t tempEvent;
+                if (tmp117.getEvent(&tempEvent)) {
+                    roomTemperatureC = tempEvent.temperature;
+                } else {
+                    roomTemperatureC = NAN;
+                }
+            } else {
+                roomTemperatureC = NAN;
+            }
+
+            if (bh1750Initialized) {
+                float lux = lightMeter.readLightLevel();
+                Serial.print("Lux: ");
+                Serial.println(lux);
+            }
         }
     }
 
@@ -214,7 +245,7 @@ void debugPrint(const char* message) {
     Serial.println(message);
   }
 
-  if(oledInitialized) {
+  if(lcdInitialized) {
       displayTextLine(message);
       delay(500);
   }
@@ -234,33 +265,71 @@ void setupPWM() {
   pwmWriteDuty((uint8_t)mosfetPin, 0);
 }
 
-void setupOLED() {
- 
-debugPrint("Init OLED");
+void setupLCD() {
+  debugPrint("Init LCD");
 
- bool error= display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDRESS); 
- 
-  if (error) {
-        // Essayer d'écrire puis lire quelque chose sur l'écran pour vérifier
-        display.clearDisplay();
-        display.drawPixel(0, 0, SSD1306_WHITE); // Dessiner un pixel en haut à gauche
-        display.display();
-        delay(10); // Attendre un instant pour donner le temps d'afficher
+  Wire.begin();
+  Wire.setClock(50000);   // 50 kHz (plus robuste sur breadboard)
+  Wire.setTimeOut(50);    // évite les blocages infinis
+  //Wire.setClock(100000);
+  scanI2C();
 
-        // Essayer de vérifier si l'écran répond correctement en lisant un état
-        if (Wire.requestFrom(OLED_ADDRESS, 1) == 1) {
-            oledInitialized = true;
-            debugPrint("OLED setup successful");
-           
-        } else {
-            oledInitialized = false;
-            debugPrint("OLED not detected!");
-        }
-    } else {
-        oledInitialized = false;
-        debugPrint("OLED initi failed!");
+  int status = lcd.begin(LCD_COLS, LCD_ROWS);
+  Serial.print("LCD begin status: ");
+  Serial.println(status);
+  if (status) {
+    lcdInitialized = false;
+    debugPrint("LCD init failed!");
+    return;
+  }
+
+  lcdInitialized = true;
+  lcd.backlight();
+  lcd.clear();
+  debugPrint("LCD ready");
+}
+
+void scanI2C() {
+  byte error;
+  int nDevices = 0;
+
+  Serial.println("I2C scan start");
+  for (byte address = 1; address < 127; address++) {
+    Wire.beginTransmission(address);
+    error = Wire.endTransmission();
+    if (error == 0) {
+      Serial.print("I2C device found at 0x");
+      if (address < 16) Serial.print("0");
+      Serial.println(address, HEX);
+      nDevices++;
     }
+  }
+  if (nDevices == 0) {
+    Serial.println("I2C scan: no devices found");
+  }
+  Serial.println("I2C scan done");
+}
 
+bool initTMP117() {
+  const uint8_t addresses[] = {0x48, 0x49, 0x4A, 0x4B};
+  for (size_t i = 0; i < sizeof(addresses) / sizeof(addresses[0]); ++i) {
+    if (tmp117.begin(addresses[i])) {
+      tmp117Address = addresses[i];
+      return true;
+    }
+  }
+  return false;
+}
+
+bool initBH1750() {
+  const uint8_t addresses[] = {0x23, 0x5C};
+  for (size_t i = 0; i < sizeof(addresses) / sizeof(addresses[0]); ++i) {
+    if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE, addresses[i])) {
+      bh1750Address = addresses[i];
+      return true;
+    }
+  }
+  return false;
 }
 
 void setupPID() {

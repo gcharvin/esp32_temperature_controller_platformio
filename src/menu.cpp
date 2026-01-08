@@ -1,13 +1,12 @@
 #include <Arduino.h>
+#include <stdio.h>
+#include <string.h>
 #include "menu.h"
 #include "parameters.h"
 
-
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
-#define OLED_RESET -1
-#define LINE_HEIGHT 8 // Hauteur de la ligne (taille de texte 1 = 8 pixels)
-#define OLED_ADDRESS 0x3C // Adresse I2C de l'OLED
+#define LCD_COLS 20
+#define LCD_ROWS 4
+#define MENU_NAME_WIDTH 8
 
 // Déclaration des broches pour l'encodeur
 #define encoder0PinA  4  // Pin A de l'encodeur
@@ -21,8 +20,27 @@ int editIndex = -1;
 int lastEncoderPosition = 0;
 unsigned long lastDebounceTime = 0;
 unsigned long debounceDelay = 20;
-int cursorY = 0; // Position verticale du curseur sur l'écran
-bool oledInitialized=false;
+int cursorRow = 0; // Position verticale du curseur sur l'ecran (0..3)
+bool lcdInitialized=false;
+
+static void lcdPrintLine(uint8_t row, const char* text) {
+    char buf[LCD_COLS + 1];
+    size_t len = strlen(text);
+    if (len > LCD_COLS) {
+        len = LCD_COLS;
+    }
+    memset(buf, ' ', LCD_COLS);
+    memcpy(buf, text, len);
+    buf[LCD_COLS] = '\0';
+    lcd.setCursor(0, row);
+    lcd.print(buf);
+}
+
+static void lcdClearRows() {
+    for (uint8_t row = 0; row < LCD_ROWS; ++row) {
+        lcdPrintLine(row, "");
+    }
+}
 
 void knobCallback(long value) {
     unsigned long currentTime = millis();
@@ -97,8 +115,7 @@ void buttonCallback(unsigned long duration) {
 }
 
 void showMenu() {
-    int fontHeight = 8;
-    int visibleItems = SCREEN_HEIGHT / fontHeight;
+    int visibleItems = LCD_ROWS;
     int topItem = 0;
 
 //Serial.println(menuIndex);
@@ -108,53 +125,48 @@ void showMenu() {
         topItem = menuIndex - visibleItems + 1;
     }
 
-    display.clearDisplay();
-    display.setTextSize(1);
-    display.setTextColor(SSD1306_WHITE);
-    display.setCursor(0, 0);
-
     // Afficher les éléments du menu
     for (int i = 0; i < visibleItems; i++) {
         int itemIndex = topItem + i;
 
-        if (itemIndex > numParameters) break;
-
-        int y = i * fontHeight;
-
-        if (itemIndex == menuIndex) {
-            display.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
-            display.fillRect(0, y, SCREEN_WIDTH, fontHeight, SSD1306_WHITE);
-        } else {
-            display.setTextColor(SSD1306_WHITE, SSD1306_BLACK);
+        if (itemIndex > numParameters) {
+            lcdPrintLine(i, "");
+            continue;
         }
+
+        char line[LCD_COLS + 1];
+        char selector = (itemIndex == menuIndex) ? '>' : ' ';
 
         if (itemIndex == 0) {
-            display.setCursor(0, y);
-            display.println("Back");
+            snprintf(line, sizeof(line), "%c Back", selector);
         } else {
-            display.setCursor(0, y);
-            display.print(parameters[itemIndex - 1].name);
-            display.setCursor(SCREEN_WIDTH - 50, y);
-            display.print(": ");
-            display.println(*(float*)parameters[itemIndex - 1].value, 2);
+            char nameBuf[MENU_NAME_WIDTH + 1];
+            strncpy(nameBuf, parameters[itemIndex - 1].name, MENU_NAME_WIDTH);
+            nameBuf[MENU_NAME_WIDTH] = '\0';
+            snprintf(
+                line,
+                sizeof(line),
+                "%c %-8s:%8.2f",
+                selector,
+                nameBuf,
+                *(float*)parameters[itemIndex - 1].value
+            );
         }
-    }
 
-    display.display();
+        lcdPrintLine(i, line);
+    }
 }
 
 void showSingleParameter(int index) {
-    display.clearDisplay();
-    display.setTextSize(1);
-    display.setTextColor(SSD1306_WHITE);
-    display.setCursor(0, 0);
-    display.print("Set ");
-    display.print(parameters[index].name);
-    display.println(" ?");
-    display.setTextSize(2);
-    display.setCursor(0, 20);
-    display.print(*(parameters[index].value), 2);
-    display.display();
+    char line[LCD_COLS + 1];
+
+    snprintf(line, sizeof(line), "Set %s", parameters[index].name);
+    lcdPrintLine(0, line);
+
+    snprintf(line, sizeof(line), "Value: %.2f", *(parameters[index].value));
+    lcdPrintLine(1, line);
+    lcdPrintLine(2, "Rotate=Adj");
+    lcdPrintLine(3, "Press=Back");
 }
 
 void applyUpdatedParameters() {
@@ -231,84 +243,50 @@ void adjustParameter(int index, int direction) {
 // }
 
 void updateDisplay(bool error) {
-      display.clearDisplay();
-  display.setTextSize(2);
-  display.setTextColor(SSD1306_WHITE);
-  display.setCursor(0, 0);
-  if (error) {
-  display.print("Err"); 
-  } else {
-  display.print(Input, 1);
-  }
+    char line[LCD_COLS + 1];
+    char inputBuf[8];
+    char roomBuf[8];
+    char degreeChar = (char)0xDF;
 
- // float dhtTemperatureC = dht.readTemperature();
-  display.setCursor(70, 0);
-  if (isnan(dhtTemperatureC)) {
-    display.print("Err");
-  } else {
-    display.print(dhtTemperatureC, 1);
-  }
-  display.setCursor(0, 25);
-  display.print("Set: ");
-  display.print(Setpoint, 1);
+    if (error) {
+        snprintf(inputBuf, sizeof(inputBuf), "Err");
+    } else {
+        snprintf(inputBuf, sizeof(inputBuf), "%.1f", Input);
+    }
 
-  int outputPercentage;
+    if (isnan(roomTemperatureC)) {
+        snprintf(roomBuf, sizeof(roomBuf), "Err");
+    } else {
+        snprintf(roomBuf, sizeof(roomBuf), "%.1f", roomTemperatureC);
+    }
 
-   if (error) {
-  outputPercentage=0;  
-   } else {
-  outputPercentage = (int)(Output / 255.0 * 100);
-   }
+    snprintf(line, sizeof(line), "Set : %.1f%cC", Setpoint, degreeChar);
+    lcdPrintLine(0, line);
 
-  display.setCursor(0, 50);
-  display.print("PWM: ");
-  display.print(outputPercentage);
-  display.println("%");
-  display.display();
+    snprintf(line, sizeof(line), "Current : %-5s%cC", inputBuf, degreeChar);
+    lcdPrintLine(1, line);
+
+    snprintf(line, sizeof(line), "Room : %-5s%cC", roomBuf, degreeChar);
+    lcdPrintLine(2, line);
+
+    int outputPercentage = error ? 0 : (int)(Output / 255.0 * 100);
+    snprintf(line, sizeof(line), "PWM: %3d%%", outputPercentage);
+    lcdPrintLine(3, line);
 }
 
 void displayTextLine(const char* text) {
     // Vérifie si on dépasse la hauteur de l'écran
-    if (cursorY >= SCREEN_HEIGHT) {
-        cursorY = 0;             // Réinitialise la position du curseur
+    if (cursorRow >= LCD_ROWS) {
+        cursorRow = 0;
     }
 
-     if (cursorY ==0) {
-        display.clearDisplay();  // Efface l'écran
+    if (cursorRow == 0) {
+        lcdClearRows();
     }
 
     // Affiche le texte à la position actuelle du curseur
-    display.setTextSize(1);
-    display.setTextColor(SSD1306_WHITE);
-    display.setCursor(0, cursorY);
-    display.println(text);
-    display.display(); // Mise à jour de l'affichage
+    lcdPrintLine(cursorRow, text);
 
     // Passe à la ligne suivante
-    cursorY += LINE_HEIGHT;
-}
-
-bool isOLEDConnected() {
-   byte error, address;
-  int nDevices;
-
-  nDevices = 0;
-  for (address = 1; address < 127; address++) { // Les adresses I2C sont sur 7 bits (1-127)
-    Wire.beginTransmission(address); // Commence la transmission vers cette adresse
-    error = Wire.endTransmission();  // Fin de la transmission et retour du code d'erreur
-
-    if (error == 0) {
-      Serial.print("Périphérique I2C trouvé à l'adresse 0x");
-      if (address < 16)
-        Serial.print("0"); // Ajouter un 0 pour les adresses < 0x10
-      Serial.println(address, HEX); // Afficher l'adresse en hexadécimal
-      nDevices++;
-    } else if (error == 4) {
-      Serial.print("Erreur inconnue à l'adresse 0x");
-      if (address < 16)
-        Serial.print("0");
-      Serial.println(address, HEX);
-    }
-  }
-  return (nDevices > 0);
+    cursorRow += 1;
 }
