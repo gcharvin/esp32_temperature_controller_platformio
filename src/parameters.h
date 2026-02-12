@@ -12,15 +12,26 @@ struct Parameter {
     float increment;
 };
 
-// Paramètres PID / mesures
-extern float Setpoint;
-extern float Kp, Ki, Kd;
-extern Parameter parameters[];
-extern int numParameters;          // <- plus de const ici
-extern double Input, Output;
-extern float roomTemperatureC;
+struct UiSnapshot {
+    const char* setLabel;
+    const char* processLabel;
+    const char* auxLabel;
+    const char* unit;
+    float setpoint;
+    float processValue;
+    float auxValue;
+    int outputPercent;
+    bool processValid;
+    bool auxValid;
+};
 
-// (temporaire) état menu/UI
+typedef void (*ParameterChangedCallback)(int index);
+
+extern Parameter* parameters;
+extern int numParameters;
+extern UiSnapshot uiSnapshot;
+extern ParameterChangedCallback onParameterChanged;
+
 extern volatile int menuIndex;
 extern bool menuActive;
 extern bool editing;
