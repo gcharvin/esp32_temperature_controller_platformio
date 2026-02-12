@@ -22,10 +22,13 @@ RotaryEncoder rotaryEncoder(kUiPins.encoderA, kUiPins.encoderB, kUiPins.encoderB
 bool initSuccess = true;
 unsigned long lastDisplayTime = 0;
 String serialBuffer = "";
+uint8_t detectedI2cAddresses[16] = {0};
+uint8_t detectedI2cCount = 0;
 
 void debugPrint(const char* message);
 void setupLCD();
 void scanI2C();
+void showDetectedI2CDevices();
 void handleSerialCommand();
 void processCommand(const String& command);
 
@@ -137,11 +140,13 @@ void setupLCD() {
     lcd.backlight();
     lcd.clear();
     debugPrint("LCD ready");
+    showDetectedI2CDevices();
 }
 
 void scanI2C() {
     byte error;
     int nDevices = 0;
+    detectedI2cCount = 0;
 
     Serial.println("I2C scan start");
     for (byte address = 1; address < 127; address++) {
@@ -153,6 +158,9 @@ void scanI2C() {
                 Serial.print("0");
             }
             Serial.println(address, HEX);
+            if (detectedI2cCount < sizeof(detectedI2cAddresses)) {
+                detectedI2cAddresses[detectedI2cCount++] = address;
+            }
             nDevices++;
         }
     }
@@ -161,6 +169,38 @@ void scanI2C() {
         Serial.println("I2C scan: no devices found");
     }
     Serial.println("I2C scan done");
+}
+
+void showDetectedI2CDevices() {
+    if (!lcdInitialized) {
+        return;
+    }
+
+    if (detectedI2cCount == 0) {
+        debugPrint("I2C: no devices");
+        return;
+    }
+
+    debugPrint("I2C devices found");
+
+    for (uint8_t i = 0; i < detectedI2cCount; ++i) {
+        char line[LCD_COLS + 1];
+        uint8_t address = detectedI2cAddresses[i];
+        const char* label = "I2C";
+
+        if (address == 0x27) {
+            label = "LCD";
+        } else if (address == 0x44 || address == 0x45) {
+            label = "SHT31";
+        } else if (address == 0x5C || address == 0x23) {
+            label = "BH1750";
+        } else if (address >= 0x48 && address <= 0x4B) {
+            label = "TMP117";
+        }
+
+        snprintf(line, sizeof(line), "%s: 0x%02X", label, address);
+        debugPrint(line);
+    }
 }
 
 void handleSerialCommand() {

@@ -2,6 +2,7 @@
 
 #include <Wire.h>
 #include <Adafruit_TMP117.h>
+#include <Adafruit_SHT31.h>
 #include <BH1750.h>
 #include <PID_v2.h>
 #include <math.h>
@@ -34,12 +35,15 @@ static float g_roomTemperatureC = NAN;
 
 static bool g_error = true;
 static bool g_tmp117Initialized = false;
+static bool g_sht31Initialized = false;
 static bool g_bh1750Initialized = false;
 static uint8_t g_tmp117Address = 0;
+static uint8_t g_sht31Address = 0;
 static uint8_t g_bh1750Address = 0;
 static unsigned long g_lastControlTime = 0;
 
 static Adafruit_TMP117 g_tmp117;
+static Adafruit_SHT31 g_sht31;
 static BH1750 g_lightMeter;
 static PID_v2 g_pid(g_kp, g_ki, g_kd, PID::Direct);
 
@@ -64,11 +68,35 @@ static UiSnapshot g_snapshot = {
     false,
 };
 
+static bool i2cAddressResponds(uint8_t address) {
+    Wire.beginTransmission(address);
+    return Wire.endTransmission() == 0;
+}
+
 static bool initTMP117() {
     const uint8_t addresses[] = {0x48, 0x49, 0x4A, 0x4B};
     for (size_t i = 0; i < sizeof(addresses) / sizeof(addresses[0]); ++i) {
-        if (g_tmp117.begin(addresses[i])) {
-            g_tmp117Address = addresses[i];
+        uint8_t address = addresses[i];
+        if (!i2cAddressResponds(address)) {
+            continue;
+        }
+        if (g_tmp117.begin(address)) {
+            g_tmp117Address = address;
+            return true;
+        }
+    }
+    return false;
+}
+
+static bool initSht31() {
+    const uint8_t addresses[] = {0x44, 0x45};
+    for (size_t i = 0; i < sizeof(addresses) / sizeof(addresses[0]); ++i) {
+        uint8_t address = addresses[i];
+        if (!i2cAddressResponds(address)) {
+            continue;
+        }
+        if (g_sht31.begin(address)) {
+            g_sht31Address = address;
             return true;
         }
     }
@@ -76,10 +104,14 @@ static bool initTMP117() {
 }
 
 static bool initBH1750() {
-    const uint8_t addresses[] = {0x23, 0x5C};
+    const uint8_t addresses[] = {0x5C, 0x23};
     for (size_t i = 0; i < sizeof(addresses) / sizeof(addresses[0]); ++i) {
-        if (g_lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE, addresses[i])) {
-            g_bh1750Address = addresses[i];
+        uint8_t address = addresses[i];
+        if (!i2cAddressResponds(address)) {
+            continue;
+        }
+        if (g_lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE, address)) {
+            g_bh1750Address = address;
             return true;
         }
     }
@@ -184,6 +216,13 @@ bool setup() {
         Serial.println(g_tmp117Address, HEX);
     } else {
         Serial.println("TMP117 not detected");
+        g_sht31Initialized = initSht31();
+        if (g_sht31Initialized) {
+            Serial.print("SHT31 addr: 0x");
+            Serial.println(g_sht31Address, HEX);
+        } else {
+            Serial.println("SHT31 not detected");
+        }
     }
 
     g_bh1750Initialized = initBH1750();
@@ -194,7 +233,6 @@ bool setup() {
         Serial.println("BH1750 not detected");
     }
 
-    g_roomTemperatureC = NAN;
     refreshSnapshot();
     return true;
 }
@@ -223,6 +261,13 @@ void tick(unsigned long currentTimeMs, bool uiEditing) {
             g_roomTemperatureC = tempEvent.temperature;
         } else {
             g_roomTemperatureC = NAN;
+        }
+    } else if (g_sht31Initialized) {
+        float shtTemp = g_sht31.readTemperature();
+        if (isnan(shtTemp)) {
+            g_roomTemperatureC = NAN;
+        } else {
+            g_roomTemperatureC = shtTemp;
         }
     } else {
         g_roomTemperatureC = NAN;

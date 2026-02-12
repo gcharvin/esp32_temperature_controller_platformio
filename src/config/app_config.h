@@ -27,7 +27,8 @@ struct I2cConfig {
 
 inline constexpr UiPinConfig kUiPins = {4, 19, 23};
 inline constexpr TemperaturePinConfig kTemperaturePins = {5, 15};
-inline constexpr I2cConfig kI2cConfig = {-1, -1, 50000, 50};
+// NodeMCU-32S default I2C pins (adjust if your wiring uses other GPIOs)
+inline constexpr I2cConfig kI2cConfig = {21, 22, 100000, 50};
 
 inline constexpr uint32_t kSerialBaud = 9600;
 inline constexpr unsigned long kControlIntervalMs = 500;
