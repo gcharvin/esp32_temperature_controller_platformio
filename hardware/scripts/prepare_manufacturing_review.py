@@ -146,7 +146,7 @@ def main():
                    ROOT/'manufacturing/supplier_candidates.json',ROOT/'manufacturing/supplier_review.json',
                    ROOT/'manufacturing/process_requirements.json',ROOT/'manufacturing/manufacturing_fit_audit.json',
                    ROOT/'manufacturing/assembly_RFQ_draft.md',ROOT/'manufacturing/usb_service_test.md',
-                   ROOT/'manufacturing/panel_B_proposal.svg'):
+                   ROOT/'manufacturing/panel_B_proposal.svg',ROOT/'devkit_compatibility.md'):
         manifest['sources_sha256'][source.relative_to(ROOT).as_posix()]=sha(source)
     native_hashes={p:sha(p) for name in ('pcb_a_display','pcb_b_temperature')
                    for suffix in ('.kicad_sch','.kicad_pcb','.kicad_pro')
@@ -296,6 +296,7 @@ def main():
                      'supplier_candidates.json','supplier_review.json','supplier_review.csv',
                      'process_requirements.json','manufacturing_fit_audit.json','assembly_RFQ_draft.md','usb_service_test.md','panel_B_proposal.svg'):
             bundle.write(OUT.parent/name,name)
+        bundle.write(ROOT/'devkit_compatibility.md','devkit_compatibility.md')
     print(json.dumps(dict(status=manifest['status'],boards=manifest['boards'],archive=str(archive)),indent=2))
 
 

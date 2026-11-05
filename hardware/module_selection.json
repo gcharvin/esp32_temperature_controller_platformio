@@ -123,7 +123,22 @@
       "uncertainty_mm": null,
       "scope": "row spacing only; outline, pin labels, insertion height and USB position are not confirmed by this measurement"
     },
-    "connected_board_identity_status": "2026-11-05: connected USB-C cards enumerate as Silicon Labs CP210x on COM4/COM8; exact correspondence to the diymore CH340 purchase variant is unconfirmed. Keep the measured25.4mm spacing; confirm physical30-pin labels and power circuit per actual card."
+    "connected_board_identity_status": "2026-11-05: connected USB-C cards enumerate as Silicon Labs CP210x on COM4/COM8; exact correspondence to the diymore CH340 purchase variant is unconfirmed. Keep the measured25.4mm spacing; confirm physical30-pin labels and power circuit per actual card.",
+    "support_scope": "Manufacturer-independent common host for the three user-owned ESP32 USB-C DevKits; diymore remains the historical reference drawing, not the only intended compatible module.",
+    "family_compatibility": {
+      "target_module_count": 3,
+      "same_pinout_user_confirmed": true,
+      "same_USB_C_connector_user_confirmed": true,
+      "confirmation_date": "2026-11-05",
+      "header_rows": 2,
+      "contacts_per_row": 15,
+      "header_pitch_mm": 2.54,
+      "row_spacing_mm": 25.4,
+      "native_routing_change_required_for_common_pinout": false,
+      "mechanical_envelopes_of_all_three_verified": false,
+      "VIN_VBUS_behavior_of_all_three_verified": false,
+      "reference": "devkit_compatibility.md"
+    }
   },
   "buck": {
     "model": "LM2596S-5.0/NOPB",

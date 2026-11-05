@@ -37,6 +37,13 @@ Dans l'éditeur PCB, afficher F.Cu/B.Cu et masquer temporairement les zones remp
 
 ## Modules achetés et empreintes
 
+**Cible commune : les trois DevKit ESP32 USB-C de l'utilisateur**, au même
+brochage et à l'entraxe 25,4 mm. A conserve deux sockets 1×15 et n'est pas
+réservée à une marque ou à un pont USB/série. Voir le
+[contrat de compatibilité](devkit_compatibility.md) : les contacts sont communs,
+mais l'encombrement et le comportement VIN/VBUS restent à vérifier par variante.
+La diymore ci-dessous reste la représentation de référence du schéma et du STEP.
+
 - **DevKit diymore, USB-C, CH340, 30 contacts**, [ASIN B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76). Elle remplace l'hypothèse ELEGOO/CP2102. Empreinte locale `LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED`, pour deux barrettes femelles 1×15 au pas 2,54 mm. Brochage relevé sur les vues du vendeur. Encombrement annoncé : 54 × 27 mm. **L'entraxe de 25,40 mm est maintenant confirmé par mesure de la carte achetée.** Le suffixe `_ASSUMED` et les anciennes annotations natives restent des identifiants/notes historiques ; le statut courant est dans `module_selection.json` et le dossier de fabrication régénéré. Aucun changement de géométrie ni de pistes n'est nécessaire pour cette cote. Contour, brochage et hauteur montée/USB ne sont pas validés par cette seule mesure. Voir `module_selection.json` pour les 30 contacts et la correspondance aux GPIO.
 - **B v0.5 : LM2596S-5.0/NOPB intégré**, self 100 µH SRP1770TA-101M, diode SS36, C8 d’entrée 100 µF / 50 V, C9 de découplage 100 nF / 50 V, C10 de sortie 330 µF / 35 V et résistance R13 de 56 mΩ. Le module XL4015 acheté n’est plus utilisé dans cette révision. J8/J9 sont supprimés ; NT1 matérialise la jonction des masses.
 

@@ -86,6 +86,14 @@ ce dossier provisoire dans un panier pour passer commande.
 
 ## Choix d'assemblage
 
+A cible les **trois DevKit USB-C au brochage commun confirmé par l'utilisateur**.
+Le fabricant assemble les mêmes deux sockets ; la DevKit reste fournie et
+enfichée par l'utilisateur. Le MPN diymore historique ne restreint pas le
+support à cette marque. Le contrat est dans `../devkit_compatibility.md` ;
+les enveloppes et circuits VIN/VBUS ne sont pas tous qualifiés par le seul
+brochage commun. Les essais série des variantes sont consignés dans
+`../review/hardware_usb_checks_20261105.json`.
+
 Le périmètre demandé au fabricant est : **tous les CMS, puis les traversants
 et les deux barrettes femelles de la DevKit**. Demander deux lignes de devis
 si son service distingue CMS et soudure manuelle. Une solution d'assemblage

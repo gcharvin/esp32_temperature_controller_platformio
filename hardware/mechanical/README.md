@@ -68,6 +68,11 @@ imposerait une nouvelle revue du STEP.
 La DevKit diymore reste enfichable sur A : corps vendeur 54 × 27 mm, deux supports
 femelles 1×15, entraxe **25,40 mm confirmé par mesure utilisateur le 5 novembre 2026**,
 hauteur des supports 8,5 mm supposée. La géométrie de cet entraxe était déjà correcte.
+La cible est désormais le support des trois DevKit au brochage commun confirmé
+par l'utilisateur. Les sockets restent identiques ; la rallonge USB-C flexible
+est conservée. Le STEP représente seulement la carte de référence : contour,
+hauteur, antenne et prise du câble des deux autres variantes restent à comparer
+avant de qualifier leur montage. Voir `../devkit_compatibility.md`.
 Le LCD de référence a un PCB 98 × 60 mm et un backpack jusqu'à y=28. Ces cotes
 restent à mesurer sur le matériel acheté, à l'exception de l'entraxe confirmé.
 
