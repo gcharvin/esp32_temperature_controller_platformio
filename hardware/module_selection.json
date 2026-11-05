@@ -1,9 +1,9 @@
 {
   "revision": "A 0.4 / B 0.5 integrated buck",
   "devkit": {
-    "manufacturer": "diymore",
+    "manufacturer": "Customer supplied; diymore is historical reference drawing",
     "purchase_url": "https://www.amazon.fr/dp/B0DGLCWR76",
-    "usb_bridge": "CH340",
+    "usb_bridge": "CP210x or CH340 on the removable module; carrier independent",
     "contacts": 30,
     "header_pitch_mm": 2.54,
     "row_spacing_mm": 25.4,
@@ -13,7 +13,7 @@
       27
     ],
     "outline_source": "Seller image: 5.4 x 2.7 cm; not a controlled mechanical drawing",
-    "spacing_reason": "Initial seller-image inference of 25.40 mm confirmed by user measurement. Existing footprint geometry is retained; _ASSUMED remains its historical library identifier.",
+    "spacing_reason": "25.40mm row spacing confirmed by user. Current footprint selects two Harwin sockets and1.05mm nominal holes; old _ASSUMED library file is historical only.",
     "top_view_orientation": "Before placement rotation: antenna top, USB bottom; numbering down left 1..15, up right 16..30. On PCB A: antenna left, USB right.",
     "pin_labels": {
       "1": "EN",
@@ -79,7 +79,7 @@
       "29": "I2C_SCL",
       "30": "ENC_SW"
     },
-    "footprint": "LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED",
+    "footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
     "pcb_A_header_rows_antenna_left_usb_right": {
       "top_row_left_to_right": [
         30,
@@ -138,6 +138,31 @@
       "mechanical_envelopes_of_all_three_verified": false,
       "VIN_VBUS_behavior_of_all_three_verified": false,
       "reference": "devkit_compatibility.md"
+    },
+    "socket": {
+      "MPN": "M20-7821546",
+      "quantity": 2,
+      "nominal_body_mm": [
+        38.5,
+        2.5,
+        8.5
+      ],
+      "maximum_body_mm": [
+        38.85,
+        2.65,
+        8.65
+      ],
+      "native_finished_hole_nominal_mm": 1.05,
+      "manufacturer_recommended_hole_mm": [
+        1.02,
+        1.07
+      ],
+      "male_contact_interface_mm": 0.64,
+      "assumed_male_header_insulator_mm": 2.54,
+      "assembly_gap_allowance_mm": 0.15,
+      "source": "https://content.harwin.com/asset/53851ba8-b32e-4ac5-a0c5-09d9271c0c0a/DRG-00385-Technical-Drawing-Datasheet-M20-782-pdf.pdf",
+      "drawing_revision": "11 / 2026-08-03",
+      "limits": "Female dimensions documented; DevKit male-header plastic and full three-board bodies remain envelopes to check on hardware."
     }
   },
   "buck": {

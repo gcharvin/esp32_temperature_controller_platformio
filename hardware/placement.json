@@ -149,14 +149,14 @@
             55.0
           ],
           "rotation_deg": 0.0,
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "bounds_mm": [
-            97.08,
-            53.98,
-            3.795,
-            2.04
+            96.89,
+            54.05,
+            4.185,
+            1.9
           ],
-          "height_mm": 0.75,
+          "height_mm": 0.9,
           "status": "diagnostic component / physical package selected"
         },
         {
@@ -167,14 +167,14 @@
             64.0
           ],
           "rotation_deg": 0.0,
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "bounds_mm": [
-            97.08,
-            62.98,
-            3.795,
-            2.04
+            96.89,
+            63.05,
+            4.185,
+            1.9
           ],
-          "height_mm": 0.75,
+          "height_mm": 0.9,
           "status": "diagnostic component / physical package selected"
         },
         {
@@ -449,7 +449,7 @@
         },
         {
           "reference": "U1",
-          "value": "diymore CH340 USB-C / 30P",
+          "value": "ESP32 USB-C / 30P user module",
           "origin_mm": [
             32.0,
             40.0
@@ -457,12 +457,12 @@
           "rotation_deg": 0.0,
           "bounds_mm": [
             4.925,
-            25.955,
+            25.7,
             56.15,
-            28.09
+            28.6
           ],
-          "footprint": "LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED",
-          "height_mm": 13,
+          "footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
+          "height_mm": 18,
           "status": "physical routed prototype; verify module fit and thermal behavior"
         },
         {
@@ -816,7 +816,7 @@
           "reference": "R13",
           "value": "56m / 1% / 0.25W",
           "origin_mm": [
-            21,
+            21.0,
             44.5
           ],
           "rotation_deg": 0.0,
@@ -917,8 +917,8 @@
             11.125
           ],
           "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
-          "height_mm": 9.8,
-          "status": "physical footprint / prototype review pending"
+          "height_mm": 14.0,
+          "status": "Phoenix1715721 installed height13.8mm; model allowance14.0mm; exact MPN selected"
         },
         {
           "reference": "R4",
@@ -1133,8 +1133,8 @@
             11.22
           ],
           "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
-          "height_mm": 9.8,
-          "status": "physical footprint / prototype review pending"
+          "height_mm": 14.0,
+          "status": "Phoenix1715721 installed height13.8mm; model allowance14.0mm; exact MPN selected"
         },
         {
           "reference": "J7",
@@ -1198,14 +1198,14 @@
             39.0
           ],
           "rotation_deg": 0.0,
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "bounds_mm": [
-            64.08,
-            37.98,
-            3.795,
-            2.04
+            63.89,
+            38.05,
+            4.185,
+            1.9
           ],
-          "height_mm": 0.75,
+          "height_mm": 0.9,
           "status": "physical footprint / prototype review pending"
         },
         {
@@ -1270,14 +1270,14 @@
             31.5
           ],
           "rotation_deg": 90.0,
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "bounds_mm": [
-            50.98,
-            29.625,
-            2.04,
-            3.795
+            51.05,
+            29.425,
+            1.9,
+            4.185
           ],
-          "height_mm": 0.75,
+          "height_mm": 0.9,
           "status": "physical footprint / prototype review pending"
         },
         {
@@ -1306,14 +1306,14 @@
             43.0
           ],
           "rotation_deg": 90.0,
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "bounds_mm": [
-            3.98,
-            41.125,
-            2.04,
-            3.795
+            4.05,
+            40.925,
+            1.9,
+            4.185
           ],
-          "height_mm": 0.75,
+          "height_mm": 0.9,
           "status": "physical footprint / prototype review pending"
         },
         {
@@ -1411,17 +1411,17 @@
           "value": "APT2012LZGCK",
           "origin_mm": [
             72.0,
-            49.0
+            49.25
           ],
           "rotation_deg": 90.0,
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "bounds_mm": [
-            70.98,
-            47.125,
-            2.04,
-            3.795
+            71.05,
+            47.175,
+            1.9,
+            4.185
           ],
-          "height_mm": 0.75,
+          "height_mm": 0.9,
           "status": "physical footprint / prototype review pending"
         }
       ],

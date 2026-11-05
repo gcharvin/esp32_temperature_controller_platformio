@@ -102,7 +102,7 @@ def main():
             series=pins[(resistor,'2')]
             assert groups[series]=={(resistor,'2'),(led,'2')},(led,'wrong series chain')
             assert comps[resistor].findtext('value').split(' / ')[0]==resistance
-            assert comps[led].findtext('footprint')=='LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder'
+            assert comps[led].findtext('footprint')=='LabHardware:LED_Kingbright_APT2012_Manufacturer'
             assert comps[led].findtext('value')==('APT2012LSECK/J4-PRV' if led=='D8' else 'APT2012LZGCK')
             diagnostics.append(dict(board=name,led=led,resistor=resistor,supply=rail,return_net=ground,
                                     series_only=True,cathode_pin=1,anode_pin=2))

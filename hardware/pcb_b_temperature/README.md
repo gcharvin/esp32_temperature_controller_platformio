@@ -92,7 +92,7 @@ diode, fusibles, transitoires d'entrée, thermique, bruit sur la NTC et défauts
 restent à vérifier sur prototype. Ce n'est pas un dossier libéré pour fabrication.
 Le partage USB/VBUS et la mise à jour du firmware restent des sujets distincts.
 
-**Mécanique :** le [STEP v0.7](../mechanical/README.md) représente maintenant ce
+**Mécanique :** le [STEP v0.8](../mechanical/README.md) représente maintenant ce
 placement de B et ses hauteurs. Le berceau du XL4015 est retiré ; quatre pièces
 imprimées et 17 étapes de montage/service passent les contrôles géométriques.
 J1 reste proche de C10 : la fiche XHP documentée et sa marge passent, mais la
@@ -103,3 +103,5 @@ Sources : [TI LM2596](https://www.ti.com/lit/ds/symlink/lm2596.pdf),
 [Bourns SRP1770TA](https://www.bourns.com/docs/Product-Datasheets/srp1770ta.pdf),
 [Vishay SS36](https://www.vishay.com/docs/88751/ss32.pdf),
 [Panasonic C10](https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB).
+
+La préparation3 fige les MPN dans KiCad, emploie les pastilles Kingbright pour les voyants et décale D7 de0,25mm en Y pour dégager SDA. Les borniers sont modélisés à14mm de hauteur enveloppe. Les valeurs électriques et les pistes sont conservées. Les instructions de câblage, de test et d’assemblage sont dans le dossier de fabrication.

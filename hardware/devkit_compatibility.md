@@ -19,9 +19,9 @@ de DevKit enfichable, indépendant de son fabricant et du pont USB/série.
 - Le port USB-C latéral du boîtier rejoint la DevKit par une rallonge de
   données flexible ; le connecteur n'est pas directement soudé sur A.
 
-**La géométrie des contacts de A et son routage n'ont donc pas à changer pour
-ce brochage commun.** Le nom historique de l'empreinte contient `Diymore` et
-`ASSUMED` ; cela n'impose pas cette marque, et la cote 25,4 mm est confirmée.
+**La position des contacts et le routage de A restent communs.** La préparation
+finale emploie deux sockets Harwin dans une empreinte documentée, avec
+perçages1,05mm. L’ancienne empreinte `Diymore`/`ASSUMED` reste historique.
 Le schéma et le STEP conservent pour l'instant la DevKit de référence comme
 représentation, sans prétendre montrer les trois variantes physiques.
 
@@ -46,3 +46,5 @@ La procédure commune reste celle de
 `manufacturing/usb_service_test.md`, avec résultats propres à chaque variante.
 Une difficulté de connexion au bootloader ne démontre pas une incompatibilité
 avec les sockets de A ; elle doit être diagnostiquée sur la carte concernée.
+
+La préparation finale utilise `LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm`, avec deux HarwinM20-7821546, trous1,05mm et entraxe confirmé. L’ancienne empreinte `_ASSUMED` ne sert qu’aux révisions archivées. Le STEP v0.8 inclut le plastique des broches mâles sous forme d’une enveloppe2,54mm, à vérifier sur les modules.

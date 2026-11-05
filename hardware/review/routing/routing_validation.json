@@ -117,6 +117,6 @@
     "Row spacing and common pinout confirmed by user; actual outline, socket/USB height and electrical power path still require checking.",
     "Power/thermal and fault testing not performed.",
     "Integrated LM2596 input transients, startup and fault conditions not qualified.",
-    "Enclosure STEP v0.7 geometry reconciled; real fit, cables, clips and thermal tests pending."
+    "Enclosure STEP v0.8 geometry reconciled; real fit, cables, clips and thermal tests pending."
   ]
 }

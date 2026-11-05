@@ -155,7 +155,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0722RL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -189,11 +189,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "b2543f23-bba4-4c29-8114-d082a27a9608")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0722RL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "558a2ef6-b3c6-4280-b2ac-6e9a712762b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "29d687cc-686d-46a6-ab8c-7511c4b0aa9e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a38b94b8-2bf6-4c9d-846d-e58390bddeb6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -317,7 +353,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/download/specsheet/C0603C104K4RACTU"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -351,11 +387,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "9859ef90-0af2-4cd6-8199-39dfeb852881")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K4RACTU"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6a44c8f9-95c5-4024-a8a8-3e75d1d1ac08")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET / Yageo Group"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d45c8581-f550-4c94-81bf-573af6a7db78")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d2baad40-7fa1-4392-896b-7cebfabbd971")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -479,7 +551,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/srp1770ta.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -505,7 +577,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Prototype 0.5 integrated buck; thermal and fault qualification pending"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -522,6 +594,30 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "62109ebb-e74c-4c1d-aa67-83e3b51f688e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Bourns"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1d080689-f63c-41ce-a901-5bdca0511635")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1431ea6f-60a4-45e0-906b-e9f9e38094ab")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -909,7 +1005,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -943,11 +1039,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "b6486937-105b-4bc6-ad58-590de2d0ceb4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "B2B-XH-A(LF)(SN)"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "93ac8f1a-6ac1-47bc-a27a-7f390a5593f4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2eebb5bd-ab89-477c-befd-abbb14252152")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ea7d8632-8133-46cc-9286-d9f50675d450")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1198,7 +1330,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1224,7 +1356,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Prototype 0.5 integrated buck; thermal and fault qualification pending"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -1241,6 +1373,30 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "0638f9cf-7791-43cc-a2d1-81e6d5ed6434")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3a320117-1272-48f6-b1e0-61f4ad8e2635")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "73b037a0-6a8e-4e7a-aa27-978cf115fe5c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1492,7 +1648,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-072K2L"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -1526,11 +1682,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic current limit"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "f7d7f872-a2f5-4c38-8ce0-f0ee84b23cab")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-072K2L"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3175d164-acd3-4153-8024-ca672ffd1d74")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a01cda87-0a9e-4115-83ba-30907a475cfe")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c0f3a03a-d67b-4223-a710-ed4d35dbdc2d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1654,7 +1846,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ucc27517.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1688,11 +1880,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "TI physical DBV pinout; TTL input, UVLO, output referenced to PGND"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "ba6b3ca7-8587-478d-b071-e4c827366248")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "UCC27517DBVR"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ec521788-4eb6-47d7-bd4d-483cc66d3359")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ca19f816-3243-4481-b66b-103956e7bce2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5764e009-e41c-458d-bd29-dc813452e12f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2052,7 +2280,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/download/specsheet/C0603C104K4RACTU"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2086,11 +2314,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "51ba5323-9be4-4e0d-938f-fb6ffa0b376a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K4RACTU"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "79eb891e-350e-475d-9416-93c1a6a61a5f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET / Yageo Group"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "99e5f6a0-9200-4965-af4d-dce68a90d649")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "79eb5e2d-03f5-4328-8425-cf1bed635dd4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2214,7 +2478,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-078K45L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2248,11 +2512,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "2aa8031a-88b6-4436-9fe5-b72b30f5b5b0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-078K45L"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c1c0c5d3-3260-4988-a5bb-8abd572d3634")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8008b988-aaf3-48d0-b644-796970525333")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "85f8342c-cc1f-40fd-8ac3-031166831988")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2376,7 +2676,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07470RL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2410,11 +2710,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic current limit"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "420c166a-a3d0-41cc-8b53-048a87a2ff53")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07470RL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e4999e67-7dfd-4b48-a0b9-b2f03e2cf603")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "eb508fa4-cee8-429c-ad54-fc43a83363af")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e300c0fe-1993-478b-b3e5-5625dd7ec49e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2538,7 +2874,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2572,11 +2908,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "83941cd9-7667-4206-8229-dabc025cca97")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C1608X7R1C105K080AC"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8f02a1ee-2cda-42cf-9aa7-c4d37b52afca")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1074eba6-12d5-41a6-b61c-3c0ced5212c0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8da94460-00d7-4923-ad2e-26a6718df370")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2700,7 +3072,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1H101"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2734,11 +3106,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "82bd6566-2576-4923-8e1f-43999e722340")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "EEUFR1H101"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d6bc11f3-12b5-44cc-9f03-a411d7a39182")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "30aa2b14-9a89-4c0f-a7ac-1ff342b2bac0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "13d745c2-f91a-470d-91f5-99418d984285")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4446,7 +4854,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stps5l60.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4472,11 +4880,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "22fdf3f7-ae46-4c90-9bea-cd1baf8d198a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "STPS5L60U"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3ca61341-b29b-4929-b031-e1f257549a28")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "STMicroelectronics"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "048eb1ae-c8da-4fd6-a2ca-cf86469ccae7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a1b8887e-b916-433e-ac6d-e424184efed1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4728,7 +5172,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/download/specsheet/C0603C104K4RACTU"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4762,11 +5206,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "542745ba-b88f-46b9-b0e2-7c9210379b40")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K4RACTU"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fd0b53d1-1da0-4475-bc09-90ecad33f573")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET / Yageo Group"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d333867d-d48b-4a64-aef9-513940e7b464")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "295f93e2-251c-44b9-a4c0-7bf3238c6e31")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4890,7 +5370,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.vishay.com/docs/30100/wsl.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4924,11 +5404,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "Prototype 0.5 integrated buck; thermal and fault qualification pending"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "e231a2c9-169c-40ba-a7e4-6fd552ff88ea")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "WSL1206R0560FEA"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a734baa3-c187-4051-b9b2-849e51f9681b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay Dale"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5a19c7a2-e210-43d0-ab5f-ead59f3927a7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "569213de-d0fa-4a02-b5a1-8ad8eb6d2846")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5050,7 +5566,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/DMP6023LE.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5076,11 +5592,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "0a8dbd30-4a77-443d-a462-3d7ff8500847")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "DMP6023LE-13"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "78d5ac23-864c-41b9-95eb-aceb231a9709")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8a093ee3-5006-443f-8bb4-4ab9e00f149d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b17bb6b7-0cd2-46f5-aa7c-e5030d4bc92d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5322,7 +5874,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5348,11 +5900,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "67f5432c-a569-4287-91a7-3b9c7957e45d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "045106.3MRL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "54f3927e-dff2-49f6-a45e-fecc9b119e44")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d7db51ef-1068-4287-9885-71b1a467274c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5074e403-f8ee-4cc2-8a56-363e89e10128")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5532,7 +6120,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/download/specsheet/C0603C104K4RACTU"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5566,11 +6154,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "e9874506-4895-4482-844f-7178feaa88b3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K4RACTU"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fe0eed76-71ff-4ff5-9471-ce892a4f3b8c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET / Yageo Group"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "870ce3e8-9f3b-4130-9252-b904783f2b76")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c9725475-89ad-4662-9420-6542803f4559")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5694,7 +6318,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.diodes.com/part/view/BZT52C12"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5720,11 +6344,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "cca6ac49-8390-4e2f-ba5a-60cc3f173883")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "BZT52C12-7-F"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2ee913ff-868f-42a4-a113-1b6efd7c6476")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d946223c-3ded-48b6-8d9a-5bb19c9bec6a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "580c8df7-dd33-43f0-9ae9-81294bdced09")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5986,7 +6646,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6020,11 +6680,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "d4623753-3506-45df-a987-897db8959916")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "1715721"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "86b237b6-8d13-480d-b835-38a0e8318037")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Phoenix Contact"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9398d6d1-151e-4384-9749-43b5a0cd0cb9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0fbf178c-6720-46e3-8469-2c1e1e3f7206")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6354,7 +7050,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6388,11 +7084,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "0c30c16b-ed4e-45b5-bc20-3ce6cc62da46")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7ed0ee38-b27f-40a3-99dc-d6af5adcd618")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d3627962-ce29-46bc-a60e-94a22213b636")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "781cee55-57ae-4b84-841e-ba496c65bdf5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6516,7 +7248,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf"
+		(property "Datasheet" "https://www.infineon.com/part/IRLZ44N"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6550,11 +7282,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "f308eb98-23c9-48fc-8bd5-de05ce240f0c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "IRLZ44NPBF"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "91c1bc27-ba34-4d82-833d-9ccb7df7697e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Infineon"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "57f84d5e-26e5-4d47-a561-1201a08dc261")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f6f42526-a032-4ca0-a54a-2fd87f80cfa2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6769,7 +7537,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6803,11 +7571,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "5f3360ec-9607-4535-8ae9-50ae8c5426be")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C1608X7R1C105K080AC"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f5c74537-7c1a-4526-aa71-df39731efe11")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a96738db-7770-43f0-a8fd-bf1637375993")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b9e6e3e2-128c-4c90-8250-e22c4f299cf7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6931,7 +7735,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6965,11 +7769,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "d14dfe5d-d859-4f68-be34-bc7b39107df0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0747KL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0ac2d15c-73ac-4582-be64-885b64d7bc9a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "80a080e9-c5f9-4eb6-930e-ab839f8c4f03")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "685f6cb3-572a-451d-88c2-3c7f40bc5812")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7093,7 +7933,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7127,11 +7967,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "f2f00d2c-c8d2-4b79-8b39-5364be2bd91e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0747KL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9a06560b-1622-4dbc-9a7b-0bf276416ae7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3cd3acf8-98a6-4303-9be9-60a1127cc2b3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "221447b0-37cd-4ced-b1a1-7ae7e8f52e6f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7289,11 +8165,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "9bfee48b-d02c-450d-8014-ea81d0e5cb79")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "SN74LVC1G08DBVR"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e05a5031-7484-4262-a7c6-622372490c22")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cdf98cc9-aaf2-47ac-a9b3-7d99b644eb1b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d79ddc48-8206-4f70-9fc1-9821166669cd")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7680,11 +8592,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "Prototype 0.5 integrated buck; thermal and fault qualification pending"
+		(property "Design_Status" "NOT_A_FACTORY_PURCHASED_NATIVE_PART"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "be789daa-88f0-4e2c-8c75-1319f1974a39")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "11c7bc82-0c03-48e9-aa8d-44b7765d2d35")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "82181fef-e63f-4370-94bb-bdde4419c7dc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "NONE_COPPER"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "4242547b-1800-4fca-a8c7-e1ae804e6639")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7755,7 +8703,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7789,7 +8737,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Prototype 0.5 integrated buck; thermal and fault qualification pending"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -7806,6 +8754,30 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "6b6f010f-6d75-4587-ac88-b8e79482a707")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e4a289ec-46ba-45a4-b614-30e63a504504")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8440ac48-5e84-4e92-9e7a-e1ef709221f1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9863,7 +10835,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9897,11 +10869,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "b31eb7de-74d0-4ac6-80cb-f1995724ab39")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "B3B-XH-A(LF)(SN)"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "520e492e-596a-4219-a972-48554615330f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "79877461-a4e9-4be8-a80c-f9303889fc85")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "57dc63e3-1c2a-4429-b674-256cc4744a60")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10195,11 +11203,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "a94c1d35-fa01-4fab-8ef8-6c0d449815ee")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "AP2112K-3.3TRG1"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a73ee71a-0dd6-4ed5-9706-941452ad43d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "67f1e913-98c1-4a0d-b77b-ecbea461288e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "01734c93-0103-475d-8998-18daa182dbfe")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10559,7 +11603,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10593,11 +11637,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "9be7f866-e4c3-4dcf-b39a-ad2c1eebdf35")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-0710KL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3bc0bab3-bae8-443f-9e71-ac427be0001e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0773c5ee-c216-4d21-b438-dd5e3b9c58a4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5740eb27-ba16-40dd-ad50-986ebc61812b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10721,7 +11801,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721"
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -10755,11 +11835,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "35ba7fa1-b139-4218-a6e5-cde9b2168a3e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "1715721"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cb4c088e-e339-4841-87bb-3e3a6e4c2ab5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Phoenix Contact"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "66739a44-436b-445c-ba98-c09378689aa3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9979ef18-e28d-4c85-8368-d77c52ae0c7f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11089,7 +12205,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11123,11 +12239,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "f97c1a5c-b538-472d-a369-9a162214b2e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "B6B-XH-A(LF)(SN)"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a85e68f4-ad74-40ef-94ea-aa6a3f8997d3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "217321fc-dbf3-4d87-967f-33f8668574de")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6a01ea8b-f440-4316-9fb9-88e4e7cf947d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11414,7 +12566,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.littelfuse.com/products/tvs-diodes/surface-mount/smbj"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11440,11 +12592,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "da8f3755-cce1-442c-aa17-a175a692762d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "SMBJ24CA"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "79148e20-5816-44d6-bcd8-7b30dccdd684")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5eadf08c-01ec-4a5f-8aec-fb168c6647dc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "10cbf894-9a7a-4977-9eef-0ec8f5f44b17")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11696,7 +12884,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0715KL"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11730,11 +12918,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic current limit"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 180)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "0e59e0f4-facf-443d-bd85-26dd5989f10b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0805FR-0715KL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e21e6c85-c7ab-4a95-bf34-a767b5aead6d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9f5136da-4eea-426c-8fbf-2e6c4981e678")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f2868036-6386-4c60-b1eb-ccdee5efd40f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11829,11 +13053,11 @@
 			)
 		)
 	)
-	(footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+	(footprint "LabHardware:LED_Kingbright_APT2012_Manufacturer"
 		(layer "F.Cu")
 		(uuid "bb538156-ad95-4bde-bdc3-468402682c45")
 		(at 126 94)
-		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(descr "Kingbright APT2012 green/orange: manufacturer lands1.25x1.10mm, gap1.10mm, cathode pad1. See manufacturing/land_pattern_review.json")
 		(tags "LED handsolder")
 		(property "Reference" "D8"
 			(at 0 1.8 0)
@@ -11892,7 +13116,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic orange / 0805 / low-current"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -11916,51 +13140,84 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Kingbright"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d2a81de7-91bd-497a-8a03-bc1a56c73713")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "34e81884-173f-4394-921d-8793fbddef0e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/0cb64b04-d374-5edb-a14d-4c1490cce3a3/72eda490-7fa8-591b-b4ca-9ef394021b0a")
 		(sheetname "pcb_b_temperature")
 		(sheetfile "pcb_b_temperature.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -1.86 -0.96)
-			(end -1.86 0.96)
+			(start -2.049999 -0.8)
+			(end -2.049999 0.8)
 			(stroke
 				(width 0.12)
-				(type solid)
+				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "84c55bf2-39e2-4009-abab-bb78dcc6c6e5")
+			(uuid "4e4f9e25-4d60-4e0c-b904-f8abcbf38055")
 		)
 		(fp_line
-			(start -1.86 0.96)
-			(end 1 0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "84600ede-caee-4d8d-a7b4-9934aa3e7a8c")
-		)
-		(fp_line
-			(start 1 -0.96)
-			(end -1.86 -0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7befd77e-f88b-4c89-b882-b7cd075de5d0")
-		)
-		(fp_rect
-			(start -1.85 -0.95)
-			(end 1.85 0.95)
+			(start -2.049999 -0.925)
+			(end 2.049999 -0.925)
 			(stroke
 				(width 0.05)
-				(type solid)
+				(type default)
 			)
-			(fill no)
 			(layer "F.CrtYd")
-			(uuid "0b58c667-2cc9-48e6-a232-45e4610c0e45")
+			(uuid "6a790d09-c9c4-4c63-a3c8-e38cb5a93b68")
+		)
+		(fp_line
+			(start -2.049999 0.925)
+			(end -2.049999 -0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "941a5427-26af-42a6-9e66-4d3c65928c73")
+		)
+		(fp_line
+			(start 2.049999 -0.925)
+			(end 2.049999 0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "7f1a6209-a4a5-4bce-9eb6-55910ef5d538")
+		)
+		(fp_line
+			(start 2.049999 0.925)
+			(end -2.049999 0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "5f9a891b-818c-4912-b6db-1ec4a639e357")
 		)
 		(fp_line
 			(start -1 -0.3)
@@ -12023,19 +13280,17 @@
 				)
 			)
 		)
-		(pad "1" smd roundrect
-			(at -1.025 0)
-			(size 1.15 1.4)
+		(pad "1" smd rect
+			(at -1.175 0)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/PGND")
 			(uuid "a6090e95-83c7-4686-995d-ba6a0dad8e3e")
 		)
-		(pad "2" smd roundrect
-			(at 1.025 0)
-			(size 1.15 1.4)
+		(pad "2" smd rect
+			(at 1.175 0)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/LED_B_D8")
 			(uuid "fa8989e2-25e9-40bc-984d-05d12c6eb754")
 		)
@@ -12081,7 +13336,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071K5L"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12115,11 +13370,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic current limit"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 180)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "76a6cc14-f1ad-4151-904e-c2b3ca6fd98b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-071K5L"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2a901616-1214-4845-ba93-1e763f02a0b3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c1994d9f-ec1e-4c48-a5d8-48a7e2930246")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "bd5185cb-1106-47bd-a82d-18510668f2ff")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12243,7 +13534,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ads1113.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ads1115.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12277,11 +13568,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "3bf73a65-bd34-4a8a-94d8-9a0d23d97f63")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "ADS1115IDGSR"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "13b88c5b-a6b5-4aa8-9bca-5b0e450489ea")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0a2d895d-3f9e-4855-b7bf-2d2fc01f120f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6065ba58-c8b3-47a6-928e-4bb1aab2aa3b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12631,7 +13958,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12665,11 +13992,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "292cf130-3bed-4e76-a4e5-aa1b2520d0c1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "B2B-XH-A(LF)(SN)"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "eea38d76-1b5e-44bf-89e4-94aa8af59943")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "be2e42b4-28f1-4a4f-a91e-28e45fc56f8b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_THT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d027fc05-3531-40e4-94b2-6f4fc8650753")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12891,11 +14254,11 @@
 			)
 		)
 	)
-	(footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+	(footprint "LabHardware:LED_Kingbright_APT2012_Manufacturer"
 		(layer "F.Cu")
 		(uuid "d3fc5f2a-9d2a-4005-b69d-2846b45e0684")
 		(at 112 86.5 90)
-		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(descr "Kingbright APT2012 green/orange: manufacturer lands1.25x1.10mm, gap1.10mm, cathode pad1. See manufacturing/land_pattern_review.json")
 		(tags "LED handsolder")
 		(property "Reference" "D6"
 			(at 0 1.8 90)
@@ -12954,7 +14317,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic green / 0805 / low-current"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
@@ -12978,51 +14341,84 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Kingbright"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0d04e044-9029-4f51-82ef-41b153667d36")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "25d6d9f3-0764-400c-99bd-befe16d4bd89")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/0cb64b04-d374-5edb-a14d-4c1490cce3a3/86c58300-6dee-50b7-a494-9df0d251c63f")
 		(sheetname "pcb_b_temperature")
 		(sheetfile "pcb_b_temperature.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 1 -0.96)
-			(end -1.86 -0.96)
+			(start -2.049999 -0.8)
+			(end -2.049999 0.8)
 			(stroke
 				(width 0.12)
-				(type solid)
+				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "a534732e-f960-4002-b5b3-909ec50d5c24")
+			(uuid "a6674150-0696-4aa3-9bb5-3bee4d0c52ca")
 		)
 		(fp_line
-			(start -1.86 -0.96)
-			(end -1.86 0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e9f9894f-007e-4512-8502-737484e661e6")
-		)
-		(fp_line
-			(start -1.86 0.96)
-			(end 1 0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "f8640f13-0dd8-48e5-a02e-ac843a0966de")
-		)
-		(fp_rect
-			(start -1.85 -0.95)
-			(end 1.85 0.95)
+			(start 2.049999 -0.925)
+			(end 2.049999 0.925)
 			(stroke
 				(width 0.05)
-				(type solid)
+				(type default)
 			)
-			(fill no)
 			(layer "F.CrtYd")
-			(uuid "a6b7753b-4412-4f89-808a-90b0b4af6f25")
+			(uuid "627ac1bf-a3f9-4cca-9cf7-ec72ce805325")
+		)
+		(fp_line
+			(start -2.049999 -0.925)
+			(end 2.049999 -0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "8b37bf49-17f7-4e50-be80-98641dc61785")
+		)
+		(fp_line
+			(start 2.049999 0.925)
+			(end -2.049999 0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "bfc57280-5845-4e33-8073-5f1ee56a8853")
+		)
+		(fp_line
+			(start -2.049999 0.925)
+			(end -2.049999 -0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "0121a130-9737-407e-92d7-c44c72a8d9a9")
 		)
 		(fp_line
 			(start 1 -0.6)
@@ -13085,19 +14481,17 @@
 				)
 			)
 		)
-		(pad "1" smd roundrect
-			(at -1.025 0 90)
-			(size 1.15 1.4)
+		(pad "1" smd rect
+			(at -1.175 0 90)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/GND")
 			(uuid "f77938f3-7c31-4d62-98a3-bf7ac1c9bc26")
 		)
-		(pad "2" smd roundrect
-			(at 1.025 0 90)
-			(size 1.15 1.4)
+		(pad "2" smd rect
+			(at 1.175 0 90)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/LED_B_D6")
 			(uuid "2cccd642-3318-42d3-9056-e0d85d0715e5")
 		)
@@ -13143,7 +14537,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13177,11 +14571,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "8f6b6d0c-aba2-4781-9f18-57655bd78860")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-071KL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "35e13d61-2671-402f-8d28-d8b18b0c323e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "903126e6-6af6-4b73-abf1-027d1a18f00b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "143f9872-bd24-4f33-a9d3-36a4b6ca53d9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13276,11 +14706,11 @@
 			)
 		)
 	)
-	(footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+	(footprint "LabHardware:LED_Kingbright_APT2012_Manufacturer"
 		(layer "F.Cu")
 		(uuid "d970ff4a-3c80-46da-8870-e47da3f125fb")
 		(at 65 98 90)
-		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(descr "Kingbright APT2012 green/orange: manufacturer lands1.25x1.10mm, gap1.10mm, cathode pad1. See manufacturing/land_pattern_review.json")
 		(tags "LED handsolder")
 		(property "Reference" "D5"
 			(at 1 -2 0)
@@ -13339,7 +14769,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic green / 0805 / low-current"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13363,51 +14793,84 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Kingbright"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "46974dbd-bd9b-426a-9ae2-bdedbbfc85a7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b3fade24-bac9-42ec-95c7-109eefd51d1f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/0cb64b04-d374-5edb-a14d-4c1490cce3a3/4534eb1d-a04b-568e-b0a9-d95fb2fa1b35")
 		(sheetname "pcb_b_temperature")
 		(sheetfile "pcb_b_temperature.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 1 -0.96)
-			(end -1.86 -0.96)
+			(start -2.049999 -0.8)
+			(end -2.049999 0.8)
 			(stroke
 				(width 0.12)
-				(type solid)
+				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "05515e80-e56f-4fc6-803c-48c1a737d557")
+			(uuid "bdfe0a4a-b20c-42e7-b47b-1bee8c316def")
 		)
 		(fp_line
-			(start -1.86 -0.96)
-			(end -1.86 0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "bf9939fa-f52b-400d-b2e9-e7efd9a44d2a")
-		)
-		(fp_line
-			(start -1.86 0.96)
-			(end 1 0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "3e1d2501-fcf9-4fcf-94a7-13487ac62f3b")
-		)
-		(fp_rect
-			(start -1.85 -0.95)
-			(end 1.85 0.95)
+			(start 2.049999 -0.925)
+			(end 2.049999 0.925)
 			(stroke
 				(width 0.05)
-				(type solid)
+				(type default)
 			)
-			(fill no)
 			(layer "F.CrtYd")
-			(uuid "ad455fd6-5019-4dad-b699-25574bd55099")
+			(uuid "e862b716-95c9-4dd7-b2e3-bd8013c491ae")
+		)
+		(fp_line
+			(start -2.049999 -0.925)
+			(end 2.049999 -0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "b1dacc49-b179-449d-975d-a8547dfd34b5")
+		)
+		(fp_line
+			(start 2.049999 0.925)
+			(end -2.049999 0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "421eda08-9630-4cbb-8df0-4ee2531a9d4f")
+		)
+		(fp_line
+			(start -2.049999 0.925)
+			(end -2.049999 -0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "a97cb69b-6485-4798-8d5a-8b69e7e1ea66")
 		)
 		(fp_line
 			(start 1 -0.6)
@@ -13470,19 +14933,17 @@
 				)
 			)
 		)
-		(pad "1" smd roundrect
-			(at -1.025 0 90)
-			(size 1.15 1.4)
+		(pad "1" smd rect
+			(at -1.175 0 90)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/PGND")
 			(uuid "3db36e3f-772a-4690-80e4-dac14aca773f")
 		)
-		(pad "2" smd roundrect
-			(at 1.025 0 90)
-			(size 1.15 1.4)
+		(pad "2" smd rect
+			(at 1.175 0 90)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/LED_B_D5")
 			(uuid "fa96941d-d173-43ef-bf51-03d3e47b100b")
 		)
@@ -13528,7 +14989,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13562,11 +15023,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "25a15675-3e74-4d28-acd1-ee0ed5c171b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "RC0603FR-07100KL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f17481c9-ef3c-4c56-8f04-db09b532bd35")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "13744f14-89dd-4419-815a-4c47bc1f7fae")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "13de72b3-0c77-47f1-add5-973337700ff0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13690,7 +15187,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13724,11 +15221,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "1c230260-6170-42bb-88d8-05a8d93d964e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C1608X7R1C105K080AC"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c236d8bc-6ec8-4219-a3cc-2ac7e2d9dd53")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "513a4716-b68c-4200-a1cc-3b972080924a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "31558eb7-d245-46e9-a811-ff3c4ba9ab73")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13852,7 +15385,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2596.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm2596.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -13886,7 +15419,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Prototype 0.5 integrated buck; thermal and fault qualification pending"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13903,6 +15436,30 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "9fb55c5a-4de2-4d58-8850-16f2706ccddb")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f3e20e24-758a-43f1-9410-e89c45605c23")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2cdc8532-9357-45e5-abf0-9203c4e6a7c8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14301,7 +15858,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14327,11 +15884,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "provisional"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "9af6bde6-a510-4884-a75f-baac6b784419")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "0451001.MRL"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9e1f2f9d-086f-49d0-85f8-1e3ac93f0216")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5ec360c0-35ba-4e23-9097-75e03ad5d804")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "748ed1cb-b27c-4d90-b0be-7f83b51db7b8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14511,7 +16104,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/download/specsheet/C0805C104K5RACTU"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14545,11 +16138,47 @@
 				)
 			)
 		)
-		(property "Design_Status" "Prototype 0.5 integrated buck; thermal and fault qualification pending"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "a3b1f4fa-5752-4934-b005-8d78e9bc9f85")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "C0805C104K5RACTU"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "054d15b6-9889-4653-82cf-9f60b8e3b6ad")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET / Yageo Group"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "36c287c5-418c-4a8a-b19c-c7db751b6bad")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "bd9b9d8c-c6fc-489d-8e9f-e6d24254218d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14644,11 +16273,11 @@
 			)
 		)
 	)
-	(footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+	(footprint "LabHardware:LED_Kingbright_APT2012_Manufacturer"
 		(layer "F.Cu")
 		(uuid "ffa97e09-95cd-4764-a5ed-8e5ee394ddfd")
-		(at 132 104 90)
-		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(at 132 104.25 90)
+		(descr "Kingbright APT2012 green/orange: manufacturer lands1.25x1.10mm, gap1.10mm, cathode pad1. See manufacturing/land_pattern_review.json")
 		(tags "LED handsolder")
 		(property "Reference" "D7"
 			(at 2.5 0 0)
@@ -14707,7 +16336,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "Diagnostic green / 0805 / low-current"
+		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
 			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
@@ -14731,51 +16360,84 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Kingbright"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0cf9b67f-e66d-4f24-91d3-fe18c14583c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly" "FACTORY_SMT_QUOTE"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "6fda5660-e281-4bf3-9c95-40a84aff073f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/0cb64b04-d374-5edb-a14d-4c1490cce3a3/cf1b0919-8cb8-59cd-948e-af4ca3a55a04")
 		(sheetname "pcb_b_temperature")
 		(sheetfile "pcb_b_temperature.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 1 -0.96)
-			(end -1.86 -0.96)
+			(start -2.049999 -0.8)
+			(end -2.049999 0.8)
 			(stroke
 				(width 0.12)
-				(type solid)
+				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "e707ac7d-47b4-463d-9724-e301ea262f9b")
+			(uuid "be17e9da-5e19-404b-8ef7-2111fdf1a379")
 		)
 		(fp_line
-			(start -1.86 -0.96)
-			(end -1.86 0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "0c26efd0-5927-41d4-8b0a-f45b02d7431f")
-		)
-		(fp_line
-			(start -1.86 0.96)
-			(end 1 0.96)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "702a3aa4-c159-49f0-b32f-9d25806f6781")
-		)
-		(fp_rect
-			(start -1.85 -0.95)
-			(end 1.85 0.95)
+			(start 2.049999 -0.925)
+			(end 2.049999 0.925)
 			(stroke
 				(width 0.05)
-				(type solid)
+				(type default)
 			)
-			(fill no)
 			(layer "F.CrtYd")
-			(uuid "7a60da0e-cbd9-4462-865c-32ac7da14604")
+			(uuid "cc791314-8ceb-450f-93d6-1fea7e7654f2")
+		)
+		(fp_line
+			(start -2.049999 -0.925)
+			(end 2.049999 -0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "cf01e508-63cd-42c0-8ce9-15e457d4056e")
+		)
+		(fp_line
+			(start 2.049999 0.925)
+			(end -2.049999 0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "53829e3a-1fb9-4ae5-936e-b4e180216e2b")
+		)
+		(fp_line
+			(start -2.049999 0.925)
+			(end -2.049999 -0.925)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "F.CrtYd")
+			(uuid "0df00e0f-d40f-433c-80a3-dba3f40a102b")
 		)
 		(fp_line
 			(start 1 -0.6)
@@ -14838,19 +16500,17 @@
 				)
 			)
 		)
-		(pad "1" smd roundrect
-			(at -1.025 0 90)
-			(size 1.15 1.4)
+		(pad "1" smd rect
+			(at -1.175 0 90)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/GND")
 			(uuid "805d8597-a322-407d-81fc-0e582965ffdc")
 		)
-		(pad "2" smd roundrect
-			(at 1.025 0 90)
-			(size 1.15 1.4)
+		(pad "2" smd rect
+			(at 1.175 0 90)
+			(size 1.25 1.1)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.217391)
 			(net "/LED_B_D7")
 			(uuid "02d41fc0-a9da-4041-9344-695e7d4a3b32")
 		)

@@ -1,0 +1,728 @@
+{
+  "revision": "A04/B05 prototype engineering selection 2026-11-05",
+  "status": "Engineering selections frozen; exact sourcing and assembler process approval required before build",
+  "scope": "68 physical native PCB components; excludes virtual ESP32 module and copper net tie; sockets and shunt separate",
+  "substitution_policy": "No manufacturer/MPN substitutions without engineering review and regeneration of native data",
+  "boards": {
+    "A": {
+      "C1": {
+        "Value": "1uF",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C1608X7R1C105K080AC",
+        "Manufacturer": "TDK",
+        "Requirements": "1uF nominal, 16V, X7R, 10%, 0603; AP2112 typical application uses1uF X5R/X7R. No guaranteed in-circuit capacitance inferred from nominal rating; prototype scope accepted with rail transient/stability bench test.",
+        "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C2": {
+        "Value": "1uF",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C1608X7R1C105K080AC",
+        "Manufacturer": "TDK",
+        "Requirements": "1uF nominal, 16V, X7R, 10%, 0603; AP2112 typical application uses1uF X5R/X7R. No guaranteed in-circuit capacitance inferred from nominal rating; prototype scope accepted with rail transient/stability bench test.",
+        "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C3": {
+        "Value": "10uF",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C1608X5R1A106K080AC",
+        "Manufacturer": "TDK",
+        "Requirements": "10uF 10V X5R 10% 0603; verify DC bias",
+        "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1A106K080AC",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D1": {
+        "Value": "APT2012LZGCK",
+        "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+        "MPN": "APT2012LZGCK",
+        "Manufacturer": "Kingbright",
+        "Requirements": "green low-current LED 0805; cathode pad 1",
+        "Source": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D2": {
+        "Value": "APT2012LZGCK",
+        "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+        "MPN": "APT2012LZGCK",
+        "Manufacturer": "Kingbright",
+        "Requirements": "green low-current LED 0805; cathode pad 1",
+        "Source": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J1": {
+        "Value": "A-B POWER / XH-2",
+        "Footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+        "MPN": "B2B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "2P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J2": {
+        "Value": "LCD20x4 + backpack / 3V3",
+        "Footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+        "MPN": "B4B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "4P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J3": {
+        "Value": "Encoder / A B SW GND",
+        "Footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+        "MPN": "B4B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "4P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J4": {
+        "Value": "TMP117 module / addr 0x48",
+        "Footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+        "MPN": "B4B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "4P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J5": {
+        "Value": "BH1750 module / addr 0x23",
+        "Footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+        "MPN": "B4B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "4P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J6": {
+        "Value": "A-B I2C / XH-3",
+        "Footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+        "MPN": "B3B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "3P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J7": {
+        "Value": "A-B CTRL / XH-6",
+        "Footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+        "MPN": "B6B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "6P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "JP1": {
+        "Value": "5V DevKit link / remove for service",
+        "Footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+        "MPN": "M20-9990246",
+        "Manufacturer": "Harwin",
+        "Requirements": "2P 2.54mm THT male header H8.64mm; separate M7566-05 shunt",
+        "Source": "https://www.harwin.com/products/M20-9990246",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R1": {
+        "Value": "10k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-0710KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "10k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R2": {
+        "Value": "10k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-0710KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "10k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R3": {
+        "Value": "10k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-0710KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "10k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R4": {
+        "Value": "4.7k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-074K7L",
+        "Manufacturer": "YAGEO",
+        "Requirements": "4.7k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R5": {
+        "Value": "4.7k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-074K7L",
+        "Manufacturer": "YAGEO",
+        "Requirements": "4.7k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R6": {
+        "Value": "1.5k / 1% / 0.1W",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-071K5L",
+        "Manufacturer": "YAGEO",
+        "Requirements": "1.5k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071K5L",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R7": {
+        "Value": "470R / 1% / 0.1W",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-07470RL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "470R 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07470RL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "U1": {
+        "Value": "ESP32 USB-C / 30P user module",
+        "Footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
+        "MPN": "",
+        "Manufacturer": "Customer supplied",
+        "Requirements": "Common pinout confirmed by user; 30P, row25.4mm, pitch2.54mm, 0.64mm square male contacts; actual body and power path checked at integration",
+        "Source": "devkit_compatibility.md",
+        "Assembly": "CUSTOMER_PLUG_IN",
+        "Decision": "NOT_A_FACTORY_PURCHASED_NATIVE_PART"
+      },
+      "U2": {
+        "Value": "AP2112K-3.3 peripherals",
+        "Footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "MPN": "AP2112K-3.3TRG1",
+        "Manufacturer": "Diodes Incorporated",
+        "Requirements": "3.3V SOT25 / SOT-23-5, pin5 output",
+        "Source": "https://www.diodes.com/assets/Datasheets/AP2112.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      }
+    },
+    "B": {
+      "C1": {
+        "Value": "1uF / 16V X7R",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C1608X7R1C105K080AC",
+        "Manufacturer": "TDK",
+        "Requirements": "1uF nominal, 16V, X7R, 10%, 0603; AP2112 typical application uses1uF X5R/X7R. No guaranteed in-circuit capacitance inferred from nominal rating; prototype scope accepted with rail transient/stability bench test.",
+        "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C2": {
+        "Value": "1uF / 10V X7R",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C1608X7R1C105K080AC",
+        "Manufacturer": "TDK",
+        "Requirements": "1uF nominal, 16V, X7R, 10%, 0603; AP2112 typical application uses1uF X5R/X7R. No guaranteed in-circuit capacitance inferred from nominal rating; prototype scope accepted with rail transient/stability bench test.",
+        "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C3": {
+        "Value": "100nF / 10V X7R",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C0603C104K4RACTU",
+        "Manufacturer": "KEMET / Yageo Group",
+        "Requirements": "100nF 16V X7R 10% 0603",
+        "Source": "https://yageogroup.com/download/specsheet/C0603C104K4RACTU",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C4": {
+        "Value": "100nF / 10V X7R",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C0603C104K4RACTU",
+        "Manufacturer": "KEMET / Yageo Group",
+        "Requirements": "100nF 16V X7R 10% 0603",
+        "Source": "https://yageogroup.com/download/specsheet/C0603C104K4RACTU",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C5": {
+        "Value": "100nF / 10V X7R",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C0603C104K4RACTU",
+        "Manufacturer": "KEMET / Yageo Group",
+        "Requirements": "100nF 16V X7R 10% 0603",
+        "Source": "https://yageogroup.com/download/specsheet/C0603C104K4RACTU",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C6": {
+        "Value": "100nF / 16V X7R",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C0603C104K4RACTU",
+        "Manufacturer": "KEMET / Yageo Group",
+        "Requirements": "100nF 16V X7R 10% 0603",
+        "Source": "https://yageogroup.com/download/specsheet/C0603C104K4RACTU",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C7": {
+        "Value": "1uF / 16V X7R",
+        "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+        "MPN": "C1608X7R1C105K080AC",
+        "Manufacturer": "TDK",
+        "Requirements": "1uF nominal, 16V, X7R, 10%, 0603; AP2112 typical application uses1uF X5R/X7R. No guaranteed in-circuit capacitance inferred from nominal rating; prototype scope accepted with rail transient/stability bench test.",
+        "Source": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C8": {
+        "Value": "100uF / 50V / EEUFR1H101",
+        "Footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+        "MPN": "EEUFR1H101",
+        "Manufacturer": "Panasonic",
+        "Requirements": "100uF 50V D8 P3.5 H11.5mm; polarity",
+        "Source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1H101",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C9": {
+        "Value": "100nF / 50V X7R",
+        "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "MPN": "C0805C104K5RACTU",
+        "Manufacturer": "KEMET / Yageo Group",
+        "Requirements": "100nF 50V X7R 10% 0805 Hmax0.88mm",
+        "Source": "https://yageogroup.com/download/specsheet/C0805C104K5RACTU",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "C10": {
+        "Value": "330uF / 35V",
+        "Footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+        "MPN": "EEUFR1V331UB",
+        "Manufacturer": "Panasonic",
+        "Requirements": "330uF 35V D10 P5 H12.5mm; polarity; retain specified ESR/damping",
+        "Source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D2": {
+        "Value": "SMBJ24CA / transients NOT qualified",
+        "Footprint": "Diode_SMD:D_SMB",
+        "MPN": "SMBJ24CA",
+        "Manufacturer": "Littelfuse",
+        "Requirements": "bidirectional TVS SMB; upstream transients NOT qualified",
+        "Source": "https://www.littelfuse.com/products/tvs-diodes/surface-mount/smbj",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D3": {
+        "Value": "BZT52C12 / 12V gate clamp",
+        "Footprint": "Diode_SMD:D_SOD-123",
+        "MPN": "BZT52C12-7-F",
+        "Manufacturer": "Diodes Incorporated",
+        "Requirements": "12V zener SOD123; gate-source polarity; exact ordering suffix to confirm",
+        "Source": "https://www.diodes.com/part/view/BZT52C12",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D4": {
+        "Value": "STPS5L60U / cable flyback",
+        "Footprint": "Diode_SMD:D_SMB",
+        "MPN": "STPS5L60U",
+        "Manufacturer": "STMicroelectronics",
+        "Requirements": "60V 5A SMB Schottky; cathode pad1",
+        "Source": "https://www.st.com/resource/en/datasheet/stps5l60.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D5": {
+        "Value": "APT2012LZGCK",
+        "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+        "MPN": "APT2012LZGCK",
+        "Manufacturer": "Kingbright",
+        "Requirements": "green low-current LED 0805; cathode pad 1",
+        "Source": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D6": {
+        "Value": "APT2012LZGCK",
+        "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+        "MPN": "APT2012LZGCK",
+        "Manufacturer": "Kingbright",
+        "Requirements": "green low-current LED 0805; cathode pad 1",
+        "Source": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D7": {
+        "Value": "APT2012LZGCK",
+        "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+        "MPN": "APT2012LZGCK",
+        "Manufacturer": "Kingbright",
+        "Requirements": "green low-current LED 0805; cathode pad 1",
+        "Source": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D8": {
+        "Value": "APT2012LSECK/J4-PRV",
+        "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+        "MPN": "APT2012LSECK/J4-PRV",
+        "Manufacturer": "Kingbright",
+        "Requirements": "orange low-current LED 0805; cathode pad1",
+        "Source": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lseck-j4-prv.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "D9": {
+        "Value": "SS36 / 60V 3A",
+        "Footprint": "Diode_SMD:D_SMC",
+        "MPN": "SS36-E3/57T",
+        "Manufacturer": "Vishay",
+        "Requirements": "60V 3A SMC Schottky; cathode pad1",
+        "Source": "https://www.vishay.com/docs/88751/ss32.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "F1": {
+        "Value": "6.3A / 125VDC / 045106.3MRL",
+        "Footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+        "MPN": "045106.3MRL",
+        "Manufacturer": "Littelfuse",
+        "Requirements": "6.3A 125VDC NANO2 451 fast fuse; actual fault clearing to qualify",
+        "Source": "https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "F2": {
+        "Value": "1A / 125VDC / 0451001.MRL",
+        "Footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+        "MPN": "0451001.MRL",
+        "Manufacturer": "Littelfuse",
+        "Requirements": "1A 125VDC NANO2 451 fast fuse; startup coordination to qualify",
+        "Source": "https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J1": {
+        "Value": "A-B POWER / XH-2",
+        "Footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+        "MPN": "B2B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "2P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J2": {
+        "Value": "24V IN / + PGND",
+        "Footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+        "MPN": "1715721",
+        "Manufacturer": "Phoenix Contact",
+        "Requirements": "MKDS 1,5/2-5,08 THT terminal; heater current to qualify",
+        "Source": "https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J3": {
+        "Value": "HEATER / + switched return",
+        "Footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+        "MPN": "1715721",
+        "Manufacturer": "Phoenix Contact",
+        "Requirements": "MKDS 1,5/2-5,08 THT terminal; heater current to qualify",
+        "Source": "https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J4": {
+        "Value": "TEMP / NTC 15k B3920",
+        "Footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+        "MPN": "B2B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "2P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J6": {
+        "Value": "A-B I2C / XH-3",
+        "Footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+        "MPN": "B3B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "3P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "J7": {
+        "Value": "A-B CTRL / XH-6",
+        "Footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+        "MPN": "B6B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "6P 2.50mm vertical THT, no locating boss",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "L1": {
+        "Value": "100uH / SRP1770TA-101M",
+        "Footprint": "Inductor_SMD:L_Bourns_SRP1770TA_16.9x16.9mm",
+        "MPN": "SRP1770TA-101M",
+        "Manufacturer": "Bourns",
+        "Requirements": "100uH 20% DCRmax118mOhm; H7mm; Isat1=6.5A at25C, Irms=5.3A",
+        "Source": "https://www.bourns.com/docs/Product-Datasheets/srp1770ta.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "NT1": {
+        "Value": "GND STAR / NO COMPONENT",
+        "Footprint": "NetTie:NetTie-2_SMD_Pad2.0mm",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "copper net tie; no physical component; never populate",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "NOT_A_FACTORY_PURCHASED_NATIVE_PART"
+      },
+      "Q1": {
+        "Value": "IRLZ44NPBF / gate 5 V",
+        "Footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+        "MPN": "IRLZ44NPBF",
+        "Manufacturer": "Infineon",
+        "Requirements": "TO220 vertical G-D-S; no heatsink included; heater thermal test required",
+        "Source": "https://www.infineon.com/part/IRLZ44N",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "Q2": {
+        "Value": "DMP6023LE-13 / reverse input",
+        "Footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+        "MPN": "DMP6023LE-13",
+        "Manufacturer": "Diodes Incorporated",
+        "Requirements": "SOT223 G=1 D=2/tab S=3 P-channel 60V",
+        "Source": "https://www.diodes.com/datasheet/download/DMP6023LE.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R1": {
+        "Value": "47k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-0747KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "47k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R2": {
+        "Value": "47k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-0747KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "47k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R3": {
+        "Value": "22R",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-0722RL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "22R 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0722RL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R4": {
+        "Value": "100k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-07100KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "100k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R5": {
+        "Value": "8.45k 1%",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-078K45L",
+        "Manufacturer": "YAGEO",
+        "Requirements": "8.45k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-078K45L",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R6": {
+        "Value": "1k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-071KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "1k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R7": {
+        "Value": "10k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-0710KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "10k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R8": {
+        "Value": "100k",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-07100KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "100k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R9": {
+        "Value": "15k / 1% / 0.125W",
+        "Footprint": "Resistor_SMD:R_0805_2012Metric",
+        "MPN": "RC0805FR-0715KL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "15k 1% 0805 >= 0.125W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0715KL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R10": {
+        "Value": "1.5k / 1% / 0.1W",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-071K5L",
+        "Manufacturer": "YAGEO",
+        "Requirements": "1.5k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071K5L",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R11": {
+        "Value": "470R / 1% / 0.1W",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-07470RL",
+        "Manufacturer": "YAGEO",
+        "Requirements": "470R 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07470RL",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R12": {
+        "Value": "2.2k / 1% / 0.1W",
+        "Footprint": "Resistor_SMD:R_0603_1608Metric",
+        "MPN": "RC0603FR-072K2L",
+        "Manufacturer": "YAGEO",
+        "Requirements": "2.2k 1% 0603 >= 0.1W",
+        "Source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-072K2L",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "R13": {
+        "Value": "56m / 1% / 0.25W",
+        "Footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
+        "MPN": "WSL1206R0560FEA",
+        "Manufacturer": "Vishay Dale",
+        "Requirements": "56mOhm 1% 0.25W 1206 in C10 return, not load return",
+        "Source": "https://www.vishay.com/docs/30100/wsl.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "U1": {
+        "Value": "LM2596S-5.0/NOPB",
+        "Footprint": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
+        "MPN": "LM2596S-5.0/NOPB",
+        "Manufacturer": "Texas Instruments",
+        "Requirements": "fixed5V TO263-5; pin3/tab PGND; do not substitute ADJ or TO220",
+        "Source": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "U2": {
+        "Value": "AP2112K-3.3",
+        "Footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "MPN": "AP2112K-3.3TRG1",
+        "Manufacturer": "Diodes Incorporated",
+        "Requirements": "3.3V SOT25 / SOT-23-5, pin5 output",
+        "Source": "https://www.diodes.com/assets/Datasheets/AP2112.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "U3": {
+        "Value": "SN74LVC1G08DBVR",
+        "Footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "MPN": "SN74LVC1G08DBVR",
+        "Manufacturer": "Texas Instruments",
+        "Requirements": "AND SOT23-5 DBV; 3.3V",
+        "Source": "https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "U4": {
+        "Value": "ADS1115IDGSR / 0x49",
+        "Footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+        "MPN": "ADS1115IDGSR",
+        "Manufacturer": "Texas Instruments",
+        "Requirements": "VSSOP10 DG S / KiCad TSSOP10 3x3 P0.5; ADDR=VDD ->0x49",
+        "Source": "https://www.ti.com/lit/ds/symlink/ads1115.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "U5": {
+        "Value": "UCC27517DBVR",
+        "Footprint": "Package_TO_SOT_SMD:SOT-23-5",
+        "MPN": "UCC27517DBVR",
+        "Manufacturer": "Texas Instruments",
+        "Requirements": "gate driver SOT23-5 DBV; 5V; verify IN- pin4 PGND",
+        "Source": "https://www.ti.com/lit/ds/symlink/ucc27517.pdf",
+        "Assembly": "FACTORY_SMT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      }
+    }
+  },
+  "extra_assembly_items": {
+    "A_U1_SOCKETS": {
+      "MPN": "M20-7821546",
+      "Manufacturer": "Harwin",
+      "Quantity": 2,
+      "Assembly": "FACTORY_THT",
+      "Source": "https://www.harwin.com/products/M20-7821546"
+    },
+    "A_JP1_SHUNT": {
+      "MPN": "M7566-05",
+      "Manufacturer": "Harwin",
+      "Quantity": 1,
+      "Assembly": "SUPPLY_LOOSE",
+      "Source": "https://www.harwin.com/products/M7566-05"
+    }
+  }
+}
