@@ -91,6 +91,18 @@
     "firmware_written": false,
     "specifications_retrieved": false,
     "complete_backup_available": false,
-    "cause_identified": false
+    "cause_identified": false,
+    "USB_only_confirmed_by_user": true,
+    "ROM_only_trace_test": {
+      "baud": 115200,
+      "RAM_stub_disabled": true,
+      "flash_id_ok": false,
+      "trace_write_events": 5,
+      "trace_read_events": 24,
+      "reported_error": "Serial data stream stopped: Possible serial noise or corruption.",
+      "normal_reset_pulse_requested": true,
+      "firmware_written": false
+    },
+    "diagnostic_limit": "Incoming serial bytes are observed, but valid command exchange is not established; root cause and chip/flash specifications remain unconfirmed."
   }
 }
