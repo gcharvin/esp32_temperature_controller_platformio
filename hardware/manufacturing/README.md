@@ -36,12 +36,22 @@ alimentation, charge et pièces imprimées, avec leurs références connues ou
 les choix encore ouverts. Le jeu A+B représente 51 CMS et 19 pièces
 traversantes à souder (dont les deux sockets), plus la DevKit à enficher.
 
+Le [plan d'assemblage A/B](output/pdf/assembly_review_A04_B05.pdf), relu après
+rendu, donne les vues côté composants, les broches 1 et les consignes de
+polarité. `output/assembly_pad_map.csv` fournit les nets et coordonnées de
+chaque pastille ; `output/assembly_THT_placement.csv` décrit les **19 pièces
+traversantes physiques**, avec deux positions de barrettes distinctes pour U1.
+Les coordonnées locales partent du coin supérieur gauche du contour vu de
+dessus ; les coordonnées natives sont également fournies pour éviter de les
+confondre avec celles du CPL. Les angles restent natifs et doivent être revus
+dans l'aperçu de l'assembleur. Ces fichiers sont joints au ZIP dans
+`assembly_review/` et liés aux cartes par des empreintes SHA256.
+
 ## Revue fournisseur et procédé
 
-`supplier_review.json` / `.csv` enregistrent **36 correspondances exactes
+`supplier_review.json` / `.csv` enregistrent **37 correspondances exactes
 fabricant + MPN** vérifiées sur les fiches publiques JLCPCB, avec lien et date.
-Le contrôle de RC0603FR-0747KL a rencontré une limitation HTTP429 : son ID
-repéré C105579 reste à confirmer. C10 EEUFR1V331UB, R13 WSL1206R0560FEA,
+RC0603FR-0747KL est maintenant confirmé sous C105579. C10 EEUFR1V331UB, R13 WSL1206R0560FEA,
 les deux sockets et les accessoires Harwin nécessitent une demande de sourcing.
 Une recherche sans résultat ne démontre pas une indisponibilité.
 
@@ -129,9 +139,15 @@ alternative ne sera retenue qu'après comparaison des devis.
 
 Les deux nouveaux candidats du buck sont **C9 : C0805C104K5RACTU** (100 nF,
 50 V, X7R, 0805) et **R13 : WSL1206R0560FEA** (56 mΩ, 1 %, 0,25 W, 1206).
-Leurs caractéristiques correspondent aux exigences nominales. Vérifier les
-plages de pastilles recommandées, le profil de soudure et l'approvisionnement
-avant approbation. R13 reste dans la branche de C10, jamais en série avec
+Leurs caractéristiques correspondent aux exigences nominales. **R13 utilise
+désormais l'empreinte locale Vishay**, avec deux plages de 1,65 × 1,93 mm,
+entraxes 3,45 mm et intervalle intérieur 1,80 mm, recommandés pour cette plage
+de résistances. Sa position passe de (20,5 ; 45) à (21 ; 44,5) mm pour libérer
+les zones de dégagement de C10/F2, sans modifier les connecteurs ni les pistes existantes.
+`land_pattern_review.json` et le contrôle natif associé documentent cette
+correction ainsi que les pas et enveloppes vérifiés de C8/C10. L'approbation
+du pochoir/profil de soudure et l'approvisionnement restent à obtenir.
+R13 reste dans la branche de C10, jamais en série avec
 la charge. La capacité effective sous polarisation des petits condensateurs
 CMS, notamment autour des AP2112, reste à confronter aux minima du circuit.
 
@@ -179,7 +195,10 @@ autre fabricant, avec adaptation de son format.
 ## Régénération
 
 ```powershell
+& 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/check_manufacturer_land_patterns.py
+& 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/build_assembly_review.py --pdf-python 'C:/Users/Gilles/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe'
 & 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/prepare_manufacturing_review.py
+& 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/verify_manufacturing_review.py
 ```
 
 Ce script lit les cartes, vérifie la parité des repères, valeurs, empreintes
@@ -187,3 +206,7 @@ et nets des pastilles sur une netlist fraîche, exécute ERC/DRC et exporte le
 dossier. Il ne modifie aucun schéma, routage ni modèle mécanique. Après une
 modification native, la revue humaine et les artefacts de simulation/mécanique
 liés peuvent exiger leur propre mise à jour ; le script ne les libère pas.
+Le rendu PDF nécessite ReportLab dans l'interpréteur indiqué par `--pdf-python`.
+Le générateur refuse de joindre un dessin ou un contrôle de pastilles périmé.
+La vérification indépendante contrôle tous les membres du ZIP, leurs SHA256,
+les sources actuelles et les ensembles BOM/CPL, sans autoriser de commande.

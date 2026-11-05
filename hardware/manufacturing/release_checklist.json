@@ -1,5 +1,5 @@
 {
-  "revision": "A 0.4 / B temperature 0.5 / manufacturing review 1",
+  "revision": "A 0.4 / B temperature 0.5 / manufacturing review 2",
   "date": "2026-11-05",
   "fabrication_release": false,
   "order_placed": false,
@@ -25,7 +25,17 @@
     {
       "id": "procurement",
       "status": "CATALOGUE_IDENTITIES_MATCHED_PARTIALLY",
-      "action": "36 exact manufacturer/MPN identities verified on public JLC pages; supplier IDs prepared. RC0603FR-0747KL check rate-limited. Exact C10/R13 and Harwin parts require sourcing. Live assembly stock, pricing, MLCC bias and final land-pattern/substitution approvals remain open."
+      "action": "37 exact manufacturer/MPN identities verified on public JLC pages, including RC0603FR-0747KL/C105579. Exact C10/R13 and Harwin parts require sourcing. Live assembly stock, pricing, MLCC bias and final land-pattern/substitution approvals remain open."
+    },
+    {
+      "id": "selected_manufacturer_lands",
+      "status": "CHECKED_AND_NATIVE_R13_CORRECTED",
+      "action": "Vishay WSL1206 0.006..0.200ohm recommended lands implemented for R13 in local library, schematic and routed board. Native pad sizes/gap and C8/C10 lead pitches checked; no full-footprint or stencil approval implied. Mechanical model regenerated with relocated R13."
+    },
+    {
+      "id": "assembly_drawings",
+      "status": "PREPARED_AND_VISUALLY_REVIEWED",
+      "action": "Three-page source-bound top-view assembly PDF, full per-pad net/coordinate map, and 19-item physical THT placement list prepared. Includes two separate U1 socket rows, pin1/polarity and R13 lands. Actual assembler library rotations still need approval."
     },
     {
       "id": "USB_service",

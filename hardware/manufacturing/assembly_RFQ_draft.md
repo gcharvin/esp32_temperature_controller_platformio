@@ -35,6 +35,10 @@ The attached SMT BOM/CPL pairs have matching designators. Rotations are native
 KiCad values; approve against actual assembly-library orientation for each
 polarized/asymmetric part, including MOSFETs, LEDs, D9 and LM2596 tab/pin3.
 Through-hole parts require the separate THT lists and socket instructions.
+The three-page assembly drawing, per-pad net/coordinate map and physical THT
+placement list are supplied in `assembly_review/`. Local coordinates start at
+the upper-left board corner in the top view; native coordinates are also
+included. Quote and align the two socket rows separately, not at U1's centroid.
 
 **Special purchasing/assembly points:**
 
@@ -48,12 +52,15 @@ Through-hole parts require the separate THT lists and socket instructions.
   not establish reserved or live assembly stock. Please confirm quantity,
   availability, lead time, losses/minimum quantities and price for every line.
 - Exact sourcing remains requested for **EEUFR1V331UB**, **WSL1206R0560FEA**
-  and the Harwin parts above. RC0603FR-0747KL has a discovered C105579
-  identifier but its current JLC page check was rate-limited; confirm it.
+  and the Harwin parts above. RC0603FR-0747KL is verified as C105579 in the
+  public catalogue; live assembly stock still requires confirmation.
   Do not change manufacturer merely because another part has a similar MPN.
 - C10's exact height, capacitance/ESR and R13's value are design constraints.
   Alternatives must be proposed with manufacturer data, land pattern,
   dimensions and electrical rationale before substitution approval.
+- R13's local footprint follows Vishay's recommended lands for WSL1206 in the
+  0.006..0.200 ohm range: two 1.65 x 1.93 mm rectangles, 3.45 mm centre spacing,
+  1.80 mm inner gap. Please review stencil apertures and process for this part.
 - Please itemize sourcing, PCB, stencil, setup, SMT, THT, inspection,
   depanelization, lead time and delivery charges. Include factory DFM issues.
 

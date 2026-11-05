@@ -1,0 +1,8018 @@
+{
+  "boards": [
+    {
+      "code": "A",
+      "size_mm": [
+        110.0,
+        75.0
+      ],
+      "native_origin_mm": [
+        60.0,
+        55.0
+      ],
+      "parts": [
+        {
+          "ref": "C1",
+          "value": "1uF",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            75.0,
+            55.0
+          ],
+          "label": [
+            75.0,
+            53.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  74.2,
+                  54.6
+                ],
+                [
+                  75.8,
+                  55.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                74.225,
+                55.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                75.775,
+                55.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C2",
+          "value": "1uF",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            85.0,
+            55.0
+          ],
+          "label": [
+            85.0,
+            53.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  84.2,
+                  54.6
+                ],
+                [
+                  85.8,
+                  55.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                84.225,
+                55.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                85.775,
+                55.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C3",
+          "value": "10uF",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            88.0,
+            60.0
+          ],
+          "label": [
+            88.0,
+            58.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  87.2,
+                  59.6
+                ],
+                [
+                  88.8,
+                  60.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                87.225,
+                60.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                88.775,
+                60.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D1",
+          "value": "APT2012LZGCK",
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "at": [
+            99.0,
+            55.0
+          ],
+          "label": [
+            99.0,
+            56.8
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  98.0,
+                  54.7
+                ],
+                [
+                  98.0,
+                  55.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  98.0,
+                  55.6
+                ],
+                [
+                  100.0,
+                  55.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  98.3,
+                  54.4
+                ],
+                [
+                  98.0,
+                  54.7
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  100.0,
+                  54.4
+                ],
+                [
+                  98.3,
+                  54.4
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  100.0,
+                  55.6
+                ],
+                [
+                  100.0,
+                  54.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                97.975,
+                55.0
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_A_D1",
+              "at": [
+                100.025,
+                55.0
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D2",
+          "value": "APT2012LZGCK",
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "at": [
+            99.0,
+            64.0
+          ],
+          "label": [
+            99.0,
+            65.8
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  98.0,
+                  63.7
+                ],
+                [
+                  98.0,
+                  64.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  98.0,
+                  64.6
+                ],
+                [
+                  100.0,
+                  64.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  98.3,
+                  63.4
+                ],
+                [
+                  98.0,
+                  63.7
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  100.0,
+                  63.4
+                ],
+                [
+                  98.3,
+                  63.4
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  100.0,
+                  64.6
+                ],
+                [
+                  100.0,
+                  63.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                97.975,
+                64.0
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_A_D2",
+              "at": [
+                100.025,
+                64.0
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J1",
+          "value": "A-B POWER / XH-2",
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "at": [
+            94.0,
+            12.0
+          ],
+          "label": [
+            95.25,
+            8.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  93.375,
+                  9.65
+                ],
+                [
+                  94.0,
+                  10.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  94.0,
+                  10.65
+                ],
+                [
+                  94.625,
+                  9.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  91.55,
+                  9.65
+                ],
+                [
+                  98.95,
+                  15.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                94.0,
+                12.0
+              ],
+              "size": [
+                1.7,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+5V_AB",
+              "at": [
+                96.5,
+                12.0
+              ],
+              "size": [
+                1.7,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J2",
+          "value": "LCD20x4 + backpack / 3V3",
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "at": [
+            66.0,
+            10.0
+          ],
+          "label": [
+            69.75,
+            6.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  65.375,
+                  7.65
+                ],
+                [
+                  66.0,
+                  8.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  66.0,
+                  8.65
+                ],
+                [
+                  66.625,
+                  7.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  63.55,
+                  7.65
+                ],
+                [
+                  75.95,
+                  13.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                66.0,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+3V3_A",
+              "at": [
+                68.5,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "I2C_SDA",
+              "at": [
+                71.0,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "I2C_SCL",
+              "at": [
+                73.5,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J3",
+          "value": "Encoder / A B SW GND",
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "at": [
+            72.0,
+            64.0
+          ],
+          "label": [
+            75.75,
+            60.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  71.375,
+                  61.65
+                ],
+                [
+                  72.0,
+                  62.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.0,
+                  62.65
+                ],
+                [
+                  72.625,
+                  61.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  69.55,
+                  61.65
+                ],
+                [
+                  81.95,
+                  67.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "ENC_A",
+              "at": [
+                72.0,
+                64.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "ENC_B",
+              "at": [
+                74.5,
+                64.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "ENC_SW",
+              "at": [
+                77.0,
+                64.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "GND",
+              "at": [
+                79.5,
+                64.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J4",
+          "value": "TMP117 module / addr 0x48",
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "at": [
+            44.0,
+            10.0
+          ],
+          "label": [
+            47.75,
+            6.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  43.375,
+                  7.65
+                ],
+                [
+                  44.0,
+                  8.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  44.0,
+                  8.65
+                ],
+                [
+                  44.625,
+                  7.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  41.55,
+                  7.65
+                ],
+                [
+                  53.95,
+                  13.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                44.0,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+3V3_A",
+              "at": [
+                46.5,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "I2C_SDA",
+              "at": [
+                49.0,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "I2C_SCL",
+              "at": [
+                51.5,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J5",
+          "value": "BH1750 module / addr 0x23",
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "at": [
+            23.0,
+            10.0
+          ],
+          "label": [
+            26.75,
+            6.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  22.375,
+                  7.65
+                ],
+                [
+                  23.0,
+                  8.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  23.0,
+                  8.65
+                ],
+                [
+                  23.625,
+                  7.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  20.55,
+                  7.65
+                ],
+                [
+                  32.95,
+                  13.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                23.0,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+3V3_A",
+              "at": [
+                25.5,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "I2C_SDA",
+              "at": [
+                28.0,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "I2C_SCL",
+              "at": [
+                30.5,
+                10.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J6",
+          "value": "A-B I2C / XH-3",
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "at": [
+            94.0,
+            28.0
+          ],
+          "label": [
+            96.5,
+            24.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  93.375,
+                  25.65
+                ],
+                [
+                  94.0,
+                  26.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  94.0,
+                  26.65
+                ],
+                [
+                  94.625,
+                  25.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  91.55,
+                  25.65
+                ],
+                [
+                  101.45,
+                  31.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                94.0,
+                28.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "I2C_SDA",
+              "at": [
+                96.5,
+                28.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "I2C_SCL",
+              "at": [
+                99.0,
+                28.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J7",
+          "value": "A-B CTRL / XH-6",
+          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+          "at": [
+            88.0,
+            45.0
+          ],
+          "label": [
+            94.25,
+            41.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  87.375,
+                  42.65
+                ],
+                [
+                  88.0,
+                  43.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  88.0,
+                  43.65
+                ],
+                [
+                  88.625,
+                  42.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  85.55,
+                  42.65
+                ],
+                [
+                  102.95,
+                  48.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                88.0,
+                45.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PWM0",
+              "at": [
+                90.5,
+                45.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "ENABLE",
+              "at": [
+                93.0,
+                45.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "FAULT_N",
+              "at": [
+                95.5,
+                45.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "PWM1",
+              "at": [
+                98.0,
+                45.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "6",
+              "net": "DIN0",
+              "at": [
+                100.5,
+                45.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "JP1",
+          "value": "5V DevKit link / remove for service",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "at": [
+            72.0,
+            40.0
+          ],
+          "label": [
+            72.0,
+            37.62
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  70.73,
+                  39.365
+                ],
+                [
+                  71.365,
+                  38.73
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  70.73,
+                  43.81
+                ],
+                [
+                  70.73,
+                  39.365
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  71.365,
+                  38.73
+                ],
+                [
+                  73.27,
+                  38.73
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  73.27,
+                  38.73
+                ],
+                [
+                  73.27,
+                  43.81
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  73.27,
+                  43.81
+                ],
+                [
+                  70.73,
+                  43.81
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                72.0,
+                40.0
+              ],
+              "size": [
+                1.7,
+                1.7
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+5V_DEVKIT",
+              "at": [
+                72.0,
+                42.54
+              ],
+              "size": [
+                1.7,
+                1.7
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "R1",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            62.0,
+            61.0
+          ],
+          "label": [
+            62.0,
+            59.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  61.2,
+                  60.5875
+                ],
+                [
+                  62.8,
+                  61.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                61.175,
+                61.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "ENC_A",
+              "at": [
+                62.825,
+                61.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R2",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            65.0,
+            57.0
+          ],
+          "label": [
+            65.0,
+            55.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  64.2,
+                  56.5875
+                ],
+                [
+                  65.8,
+                  57.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                64.175,
+                57.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "ENC_B",
+              "at": [
+                65.825,
+                57.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R3",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            68.0,
+            57.0
+          ],
+          "label": [
+            68.0,
+            55.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  67.2,
+                  56.5875
+                ],
+                [
+                  68.8,
+                  57.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                67.175,
+                57.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "ENC_SW",
+              "at": [
+                68.825,
+                57.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R4",
+          "value": "4.7k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            64.0,
+            22.0
+          ],
+          "label": [
+            64.0,
+            20.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  63.2,
+                  21.5875
+                ],
+                [
+                  64.8,
+                  22.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                63.175,
+                22.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "I2C_SDA",
+              "at": [
+                64.825,
+                22.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R5",
+          "value": "4.7k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            67.0,
+            22.0
+          ],
+          "label": [
+            67.0,
+            20.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  66.2,
+                  21.5875
+                ],
+                [
+                  67.8,
+                  22.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                66.175,
+                22.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "I2C_SCL",
+              "at": [
+                67.825,
+                22.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R6",
+          "value": "1.5k / 1% / 0.1W",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            94.0,
+            55.0
+          ],
+          "label": [
+            94.0,
+            56.8
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  93.2,
+                  54.5875
+                ],
+                [
+                  94.8,
+                  55.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                93.175,
+                55.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_A_D1",
+              "at": [
+                94.825,
+                55.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R7",
+          "value": "470R / 1% / 0.1W",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            94.0,
+            64.0
+          ],
+          "label": [
+            94.0,
+            65.8
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  93.2,
+                  63.5875
+                ],
+                [
+                  94.8,
+                  64.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                93.175,
+                64.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_A_D2",
+              "at": [
+                94.825,
+                64.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "U1",
+          "value": "diymore CH340 USB-C / 30P",
+          "footprint": "LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED",
+          "at": [
+            32.0,
+            40.0
+          ],
+          "label": [
+            32.0,
+            24.0
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  5.0,
+                  26.5
+                ],
+                [
+                  59.0,
+                  26.5
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  5.0,
+                  53.5
+                ],
+                [
+                  5.0,
+                  26.5
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  59.0,
+                  26.5
+                ],
+                [
+                  59.0,
+                  53.5
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  59.0,
+                  35.0
+                ],
+                [
+                  61.0,
+                  35.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  59.0,
+                  53.5
+                ],
+                [
+                  5.0,
+                  53.5
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  61.0,
+                  35.0
+                ],
+                [
+                  61.0,
+                  45.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  61.0,
+                  45.0
+                ],
+                [
+                  59.0,
+                  45.0
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "unconnected-(U1-EN-Pad1)",
+              "at": [
+                14.22,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "unconnected-(U1-GPIO36-Pad2)",
+              "at": [
+                16.76,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "unconnected-(U1-GPIO39-Pad3)",
+              "at": [
+                19.3,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "unconnected-(U1-GPIO34-Pad4)",
+              "at": [
+                21.84,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "unconnected-(U1-GPIO35-Pad5)",
+              "at": [
+                24.38,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "6",
+              "net": "DIN0",
+              "at": [
+                26.92,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "7",
+              "net": "FAULT_N",
+              "at": [
+                29.46,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "8",
+              "net": "PWM0",
+              "at": [
+                32.0,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "9",
+              "net": "PWM1",
+              "at": [
+                34.539999,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "10",
+              "net": "ENABLE",
+              "at": [
+                37.079999,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "11",
+              "net": "unconnected-(U1-GPIO14-Pad11)",
+              "at": [
+                39.619999,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "12",
+              "net": "unconnected-(U1-GPIO12-Pad12)",
+              "at": [
+                42.16,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "13",
+              "net": "unconnected-(U1-GPIO13-Pad13)",
+              "at": [
+                44.7,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "14",
+              "net": "GND",
+              "at": [
+                47.24,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "15",
+              "net": "+5V_DEVKIT",
+              "at": [
+                49.78,
+                52.7
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "16",
+              "net": "unconnected-(U1-3V3-Pad16)",
+              "at": [
+                49.78,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "17",
+              "net": "GND",
+              "at": [
+                47.24,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "18",
+              "net": "unconnected-(U1-GPIO15-Pad18)",
+              "at": [
+                44.7,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "19",
+              "net": "unconnected-(U1-GPIO2-Pad19)",
+              "at": [
+                42.16,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "20",
+              "net": "ENC_A",
+              "at": [
+                39.619999,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "21",
+              "net": "unconnected-(U1-GPIO16-Pad21)",
+              "at": [
+                37.079999,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "22",
+              "net": "unconnected-(U1-GPIO17-Pad22)",
+              "at": [
+                34.539999,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "23",
+              "net": "unconnected-(U1-GPIO5-Pad23)",
+              "at": [
+                32.0,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "24",
+              "net": "unconnected-(U1-GPIO18-Pad24)",
+              "at": [
+                29.46,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "25",
+              "net": "ENC_B",
+              "at": [
+                26.92,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "26",
+              "net": "I2C_SDA",
+              "at": [
+                24.38,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "27",
+              "net": "unconnected-(U1-GPIO3-Pad27)",
+              "at": [
+                21.84,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "28",
+              "net": "unconnected-(U1-GPIO1-Pad28)",
+              "at": [
+                19.3,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "29",
+              "net": "I2C_SCL",
+              "at": [
+                16.76,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "30",
+              "net": "ENC_SW",
+              "at": [
+                14.22,
+                27.3
+              ],
+              "size": [
+                1.8,
+                1.8
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "U2",
+          "value": "AP2112K-3.3 peripherals",
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "at": [
+            80.0,
+            55.0
+          ],
+          "label": [
+            80.0,
+            52.6
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "poly",
+              "points": [
+                [
+                  79.6,
+                  53.55
+                ],
+                [
+                  80.8,
+                  53.55
+                ],
+                [
+                  80.8,
+                  56.45
+                ],
+                [
+                  79.2,
+                  56.45
+                ],
+                [
+                  79.2,
+                  53.95
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                78.8625,
+                54.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                78.8625,
+                55.0
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "+5V_AB",
+              "at": [
+                78.8625,
+                55.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "unconnected-(U2-NC-Pad4)",
+              "at": [
+                81.1375,
+                55.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "+3V3_A",
+              "at": [
+                81.1375,
+                54.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "size_mm": [
+        90.0,
+        65.0
+      ],
+      "native_origin_mm": [
+        60.0,
+        55.0
+      ],
+      "parts": [
+        {
+          "ref": "C1",
+          "value": "1uF / 16V X7R",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            53.0,
+            40.0
+          ],
+          "label": [
+            53.0,
+            38.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  52.2,
+                  39.6
+                ],
+                [
+                  53.8,
+                  40.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                52.225,
+                40.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                53.775,
+                40.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C10",
+          "value": "330uF / 35V",
+          "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+          "at": [
+            10.0,
+            46.5
+          ],
+          "label": [
+            8.0,
+            40.5
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  8.211139,
+                  44.3125
+                ],
+                [
+                  9.211139,
+                  44.3125
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  8.711139,
+                  43.8125
+                ],
+                [
+                  8.711139,
+                  44.8125
+                ]
+              ]
+            },
+            {
+              "kind": "circle",
+              "center": [
+                12.5,
+                46.5
+              ],
+              "radius": 5.0
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_BUCK",
+              "at": [
+                10.0,
+                46.5
+              ],
+              "size": [
+                2.0,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "BUCK_CAP_RETURN",
+              "at": [
+                15.0,
+                46.5
+              ],
+              "size": [
+                2.0,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "C2",
+          "value": "1uF / 10V X7R",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            54.5,
+            48.5
+          ],
+          "label": [
+            54.5,
+            47.07
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  53.7,
+                  48.1
+                ],
+                [
+                  55.3,
+                  48.9
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                53.725,
+                48.5
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                55.275,
+                48.5
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C3",
+          "value": "100nF / 10V X7R",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            65.0,
+            42.0
+          ],
+          "label": [
+            66.0,
+            43.5
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  64.2,
+                  41.6
+                ],
+                [
+                  65.8,
+                  42.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                64.225,
+                42.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                65.775,
+                42.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C4",
+          "value": "100nF / 10V X7R",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            81.0,
+            43.0
+          ],
+          "label": [
+            81.0,
+            41.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  80.2,
+                  42.6
+                ],
+                [
+                  81.8,
+                  43.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "NTC_ADC",
+              "at": [
+                80.225,
+                43.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                81.775,
+                43.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C5",
+          "value": "100nF / 10V X7R",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            80.0,
+            35.0
+          ],
+          "label": [
+            80.0,
+            33.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  79.2,
+                  34.6
+                ],
+                [
+                  80.8,
+                  35.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                79.225,
+                35.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                80.775,
+                35.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C6",
+          "value": "100nF / 16V X7R",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            56.0,
+            32.0
+          ],
+          "label": [
+            56.0,
+            30.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  55.2,
+                  31.6
+                ],
+                [
+                  56.8,
+                  32.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                55.225,
+                32.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                56.775,
+                32.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C7",
+          "value": "1uF / 16V X7R",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "at": [
+            56.0,
+            38.0
+          ],
+          "label": [
+            56.0,
+            36.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  55.2,
+                  37.6
+                ],
+                [
+                  56.8,
+                  38.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                55.225,
+                38.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                56.775,
+                38.0
+              ],
+              "size": [
+                0.9,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "C8",
+          "value": "100uF / 50V / EEUFR1H101",
+          "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+          "at": [
+            17.0,
+            24.0
+          ],
+          "label": [
+            18.75,
+            18.75
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  15.323241,
+                  22.2525
+                ],
+                [
+                  16.123241,
+                  22.2525
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  15.723241,
+                  21.8525
+                ],
+                [
+                  15.723241,
+                  22.6525
+                ]
+              ]
+            },
+            {
+              "kind": "circle",
+              "center": [
+                18.75,
+                24.0
+              ],
+              "radius": 4.0
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                17.0,
+                24.0
+              ],
+              "size": [
+                1.6,
+                1.6
+              ],
+              "angle": 0.0,
+              "drill": 0.8,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                20.5,
+                24.0
+              ],
+              "size": [
+                1.6,
+                1.6
+              ],
+              "angle": 0.0,
+              "drill": 0.8,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "C9",
+          "value": "100nF / 50V X7R",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "at": [
+            26.5,
+            42.8
+          ],
+          "label": [
+            24.82,
+            42.8
+          ],
+          "angle": 90.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  25.875,
+                  43.8
+                ],
+                [
+                  27.125,
+                  41.8
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                26.5,
+                43.75
+              ],
+              "size": [
+                1.0,
+                1.45
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                26.5,
+                41.85
+              ],
+              "size": [
+                1.0,
+                1.45
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D2",
+          "value": "SMBJ24CA / transients NOT qualified",
+          "footprint": "Diode_SMD:D_SMB",
+          "at": [
+            59.0,
+            12.0
+          ],
+          "label": [
+            59.0,
+            9.0
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  56.7,
+                  14.0
+                ],
+                [
+                  56.7,
+                  10.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  58.35056,
+                  11.20092
+                ],
+                [
+                  58.35056,
+                  12.80112
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  58.35056,
+                  12.00102
+                ],
+                [
+                  57.44886,
+                  12.00102
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  58.35056,
+                  12.00102
+                ],
+                [
+                  59.50118,
+                  11.20092
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  58.35056,
+                  12.00102
+                ],
+                [
+                  59.50118,
+                  12.75032
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  59.50118,
+                  12.00102
+                ],
+                [
+                  60.4994,
+                  12.00102
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  59.50118,
+                  12.75032
+                ],
+                [
+                  59.50118,
+                  11.20092
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  61.3,
+                  10.0
+                ],
+                [
+                  56.7,
+                  10.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  61.3,
+                  10.0
+                ],
+                [
+                  61.3,
+                  14.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  61.3,
+                  14.0
+                ],
+                [
+                  56.7,
+                  14.0
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PGND",
+              "at": [
+                56.85,
+                12.0
+              ],
+              "size": [
+                2.5,
+                2.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "VIN_PROTECTED",
+              "at": [
+                61.15,
+                12.0
+              ],
+              "size": [
+                2.5,
+                2.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D3",
+          "value": "BZT52C12 / 12V gate clamp",
+          "footprint": "Diode_SMD:D_SOD-123",
+          "at": [
+            45.0,
+            27.0
+          ],
+          "label": [
+            45.0,
+            25.0
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  43.6,
+                  26.1
+                ],
+                [
+                  46.4,
+                  26.1
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  43.6,
+                  27.9
+                ],
+                [
+                  43.6,
+                  26.1
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  44.25,
+                  27.0
+                ],
+                [
+                  44.65,
+                  27.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  44.65,
+                  27.0
+                ],
+                [
+                  44.65,
+                  26.45
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  44.65,
+                  27.0
+                ],
+                [
+                  44.65,
+                  27.55
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  44.65,
+                  27.0
+                ],
+                [
+                  45.25,
+                  26.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  45.25,
+                  26.6
+                ],
+                [
+                  45.25,
+                  27.4
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  45.25,
+                  27.0
+                ],
+                [
+                  45.75,
+                  27.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  45.25,
+                  27.4
+                ],
+                [
+                  44.65,
+                  27.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  46.4,
+                  26.1
+                ],
+                [
+                  46.4,
+                  27.9
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  46.4,
+                  27.9
+                ],
+                [
+                  43.6,
+                  27.9
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                43.35,
+                27.0
+              ],
+              "size": [
+                0.9,
+                1.2
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "REV_GATE",
+              "at": [
+                46.65,
+                27.0
+              ],
+              "size": [
+                0.9,
+                1.2
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D4",
+          "value": "STPS5L60U / cable flyback",
+          "footprint": "Diode_SMD:D_SMB",
+          "at": [
+            81.0,
+            23.0
+          ],
+          "label": [
+            81.0,
+            20.0
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  78.7,
+                  25.0
+                ],
+                [
+                  78.7,
+                  21.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  80.35056,
+                  22.20092
+                ],
+                [
+                  80.35056,
+                  23.80112
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  80.35056,
+                  23.00102
+                ],
+                [
+                  79.44886,
+                  23.00102
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  80.35056,
+                  23.00102
+                ],
+                [
+                  81.50118,
+                  22.20092
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  80.35056,
+                  23.00102
+                ],
+                [
+                  81.50118,
+                  23.75032
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  81.50118,
+                  23.00102
+                ],
+                [
+                  82.4994,
+                  23.00102
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  81.50118,
+                  23.75032
+                ],
+                [
+                  81.50118,
+                  22.20092
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  83.3,
+                  21.0
+                ],
+                [
+                  78.7,
+                  21.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  83.3,
+                  21.0
+                ],
+                [
+                  83.3,
+                  25.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  83.3,
+                  25.0
+                ],
+                [
+                  78.7,
+                  25.0
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                78.85,
+                23.0
+              ],
+              "size": [
+                2.5,
+                2.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "HEATER_LOW",
+              "at": [
+                83.15,
+                23.0
+              ],
+              "size": [
+                2.5,
+                2.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D5",
+          "value": "APT2012LZGCK",
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "at": [
+            5.0,
+            43.0
+          ],
+          "label": [
+            3.0,
+            42.0
+          ],
+          "angle": 90.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  4.4,
+                  42.0
+                ],
+                [
+                  4.4,
+                  43.7
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  4.4,
+                  43.7
+                ],
+                [
+                  4.7,
+                  44.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  4.7,
+                  44.0
+                ],
+                [
+                  5.6,
+                  44.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  5.6,
+                  42.0
+                ],
+                [
+                  4.4,
+                  42.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  5.6,
+                  44.0
+                ],
+                [
+                  5.6,
+                  42.0
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PGND",
+              "at": [
+                5.0,
+                44.025
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D5",
+              "at": [
+                5.0,
+                41.975
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D6",
+          "value": "APT2012LZGCK",
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "at": [
+            52.0,
+            31.5
+          ],
+          "label": [
+            53.8,
+            31.5
+          ],
+          "angle": 90.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  51.4,
+                  30.5
+                ],
+                [
+                  51.4,
+                  32.2
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  51.4,
+                  32.2
+                ],
+                [
+                  51.7,
+                  32.5
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  51.7,
+                  32.5
+                ],
+                [
+                  52.6,
+                  32.5
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  52.6,
+                  30.5
+                ],
+                [
+                  51.4,
+                  30.5
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  52.6,
+                  32.5
+                ],
+                [
+                  52.6,
+                  30.5
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                52.0,
+                32.525
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D6",
+              "at": [
+                52.0,
+                30.475
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D7",
+          "value": "APT2012LZGCK",
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "at": [
+            72.0,
+            49.0
+          ],
+          "label": [
+            72.0,
+            46.5
+          ],
+          "angle": 90.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  71.4,
+                  48.0
+                ],
+                [
+                  71.4,
+                  49.7
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  71.4,
+                  49.7
+                ],
+                [
+                  71.7,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  71.7,
+                  50.0
+                ],
+                [
+                  72.6,
+                  50.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.6,
+                  48.0
+                ],
+                [
+                  71.4,
+                  48.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.6,
+                  50.0
+                ],
+                [
+                  72.6,
+                  48.0
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                72.0,
+                50.025
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D7",
+              "at": [
+                72.0,
+                47.975
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D8",
+          "value": "APT2012LSECK/J4-PRV",
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "at": [
+            66.0,
+            39.0
+          ],
+          "label": [
+            66.0,
+            40.8
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  65.0,
+                  38.7
+                ],
+                [
+                  65.0,
+                  39.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  65.0,
+                  39.6
+                ],
+                [
+                  67.0,
+                  39.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  65.3,
+                  38.4
+                ],
+                [
+                  65.0,
+                  38.7
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  67.0,
+                  38.4
+                ],
+                [
+                  65.3,
+                  38.4
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  67.0,
+                  39.6
+                ],
+                [
+                  67.0,
+                  38.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PGND",
+              "at": [
+                64.975,
+                39.0
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D8",
+              "at": [
+                67.025,
+                39.0
+              ],
+              "size": [
+                1.15,
+                1.4
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "D9",
+          "value": "SS36 / 60V 3A",
+          "footprint": "Diode_SMD:D_SMC",
+          "at": [
+            33.0,
+            25.0
+          ],
+          "label": [
+            28.9,
+            25.0
+          ],
+          "angle": 90.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  29.9,
+                  21.45
+                ],
+                [
+                  29.9,
+                  28.55
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  29.9,
+                  21.45
+                ],
+                [
+                  36.1,
+                  21.45
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  32.20092,
+                  25.64944
+                ],
+                [
+                  33.80112,
+                  25.64944
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  33.00102,
+                  24.49882
+                ],
+                [
+                  33.00102,
+                  23.5006
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  33.00102,
+                  25.64944
+                ],
+                [
+                  32.20092,
+                  24.49882
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  33.00102,
+                  25.64944
+                ],
+                [
+                  33.00102,
+                  26.55114
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  33.00102,
+                  25.64944
+                ],
+                [
+                  33.75032,
+                  24.49882
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  33.75032,
+                  24.49882
+                ],
+                [
+                  32.20092,
+                  24.49882
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  36.1,
+                  21.45
+                ],
+                [
+                  36.1,
+                  28.55
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  36.1,
+                  28.55
+                ],
+                [
+                  29.9,
+                  28.55
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "BUCK_SW",
+              "at": [
+                33.0,
+                28.4
+              ],
+              "size": [
+                3.3,
+                2.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                33.0,
+                21.6
+              ],
+              "size": [
+                3.3,
+                2.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "F1",
+          "value": "6.3A / 125VDC / 045106.3MRL",
+          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+          "at": [
+            27.0,
+            12.0
+          ],
+          "label": [
+            27.0,
+            9.5
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  23.95,
+                  10.655
+                ],
+                [
+                  23.95,
+                  13.345
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  23.95,
+                  10.655
+                ],
+                [
+                  30.05,
+                  10.655
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  23.95,
+                  13.345
+                ],
+                [
+                  30.05,
+                  13.345
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  30.05,
+                  13.345
+                ],
+                [
+                  30.05,
+                  10.655
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_RAW",
+              "at": [
+                24.545,
+                12.0
+              ],
+              "size": [
+                1.96,
+                3.15
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "VIN_FUSED",
+              "at": [
+                29.455,
+                12.0
+              ],
+              "size": [
+                1.96,
+                3.15
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "F2",
+          "value": "1A / 125VDC / 0451001.MRL",
+          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+          "at": [
+            25.0,
+            48.0
+          ],
+          "label": [
+            22.0,
+            50.8
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  21.95,
+                  46.655
+                ],
+                [
+                  21.95,
+                  49.345
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  21.95,
+                  46.655
+                ],
+                [
+                  28.05,
+                  46.655
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  21.95,
+                  49.345
+                ],
+                [
+                  28.05,
+                  49.345
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  28.05,
+                  49.345
+                ],
+                [
+                  28.05,
+                  46.655
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_BUCK",
+              "at": [
+                22.545,
+                48.0
+              ],
+              "size": [
+                1.96,
+                3.15
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+5V_AB",
+              "at": [
+                27.455,
+                48.0
+              ],
+              "size": [
+                1.96,
+                3.15
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J1",
+          "value": "A-B POWER / XH-2",
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "at": [
+            15.0,
+            55.0
+          ],
+          "label": [
+            16.25,
+            51.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  14.375,
+                  52.65
+                ],
+                [
+                  15.0,
+                  53.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  15.0,
+                  53.65
+                ],
+                [
+                  15.625,
+                  52.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  12.55,
+                  52.65
+                ],
+                [
+                  19.95,
+                  58.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                15.0,
+                55.0
+              ],
+              "size": [
+                1.7,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+5V_AB",
+              "at": [
+                17.5,
+                55.0
+              ],
+              "size": [
+                1.7,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J2",
+          "value": "24V IN / + PGND",
+          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+          "at": [
+            9.0,
+            12.0
+          ],
+          "label": [
+            15.32,
+            14.54
+          ],
+          "angle": -90.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  4.4,
+                  9.96
+                ],
+                [
+                  4.9,
+                  9.46
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  4.4,
+                  19.62
+                ],
+                [
+                  4.4,
+                  9.96
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  4.9,
+                  9.46
+                ],
+                [
+                  4.9,
+                  19.62
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  4.9,
+                  9.46
+                ],
+                [
+                  14.2,
+                  9.46
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  6.4,
+                  9.46
+                ],
+                [
+                  6.4,
+                  19.62
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  9.955,
+                  13.138
+                ],
+                [
+                  7.862,
+                  11.045
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  9.955,
+                  18.218
+                ],
+                [
+                  7.862,
+                  16.125
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  10.138,
+                  12.955
+                ],
+                [
+                  8.045,
+                  10.862
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  10.138,
+                  18.035
+                ],
+                [
+                  8.045,
+                  15.942
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  11.3,
+                  9.46
+                ],
+                [
+                  11.3,
+                  19.62
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  14.2,
+                  9.46
+                ],
+                [
+                  14.2,
+                  19.62
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  14.2,
+                  19.62
+                ],
+                [
+                  4.4,
+                  19.62
+                ]
+              ]
+            },
+            {
+              "kind": "circle",
+              "center": [
+                9.0,
+                12.0
+              ],
+              "radius": 1.5
+            },
+            {
+              "kind": "circle",
+              "center": [
+                9.0,
+                17.08
+              ],
+              "radius": 1.5
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_RAW",
+              "at": [
+                9.0,
+                12.0
+              ],
+              "size": [
+                2.6,
+                2.6
+              ],
+              "angle": 270.0,
+              "drill": 1.3,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                9.0,
+                17.08
+              ],
+              "size": [
+                2.6,
+                2.6
+              ],
+              "angle": 270.0,
+              "drill": 1.3,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "J3",
+          "value": "HEATER / + switched return",
+          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+          "at": [
+            75.0,
+            12.0
+          ],
+          "label": [
+            77.54,
+            5.68
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.46,
+                  6.8
+                ],
+                [
+                  82.62,
+                  6.8
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.46,
+                  9.7
+                ],
+                [
+                  82.62,
+                  9.7
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.46,
+                  14.6
+                ],
+                [
+                  82.62,
+                  14.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.46,
+                  16.1
+                ],
+                [
+                  72.46,
+                  6.8
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.46,
+                  16.1
+                ],
+                [
+                  82.62,
+                  16.1
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.96,
+                  16.6
+                ],
+                [
+                  72.46,
+                  16.1
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  75.955,
+                  10.862
+                ],
+                [
+                  73.862,
+                  12.955
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  76.138,
+                  11.045
+                ],
+                [
+                  74.045,
+                  13.138
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  81.035,
+                  10.862
+                ],
+                [
+                  78.942,
+                  12.955
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  81.218,
+                  11.045
+                ],
+                [
+                  79.125,
+                  13.138
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  82.62,
+                  6.8
+                ],
+                [
+                  82.62,
+                  16.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  82.62,
+                  16.6
+                ],
+                [
+                  72.96,
+                  16.6
+                ]
+              ]
+            },
+            {
+              "kind": "circle",
+              "center": [
+                75.0,
+                12.0
+              ],
+              "radius": 1.5
+            },
+            {
+              "kind": "circle",
+              "center": [
+                80.08,
+                12.0
+              ],
+              "radius": 1.5
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                75.0,
+                12.0
+              ],
+              "size": [
+                2.6,
+                2.6
+              ],
+              "angle": 0.0,
+              "drill": 1.3,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "HEATER_LOW",
+              "at": [
+                80.08,
+                12.0
+              ],
+              "size": [
+                2.6,
+                2.6
+              ],
+              "angle": 0.0,
+              "drill": 1.3,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "J4",
+          "value": "TEMP / NTC 15k B3920",
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "at": [
+            81.0,
+            52.0
+          ],
+          "label": [
+            87.5,
+            52.0
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  80.375,
+                  49.65
+                ],
+                [
+                  81.0,
+                  50.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  81.0,
+                  50.65
+                ],
+                [
+                  81.625,
+                  49.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  78.55,
+                  49.65
+                ],
+                [
+                  85.95,
+                  55.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                81.0,
+                52.0
+              ],
+              "size": [
+                1.7,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "NTC_RAW",
+              "at": [
+                83.5,
+                52.0
+              ],
+              "size": [
+                1.7,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J6",
+          "value": "A-B I2C / XH-3",
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "at": [
+            33.0,
+            55.0
+          ],
+          "label": [
+            35.5,
+            51.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  32.375,
+                  52.65
+                ],
+                [
+                  33.0,
+                  53.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  33.0,
+                  53.65
+                ],
+                [
+                  33.625,
+                  52.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  30.55,
+                  52.65
+                ],
+                [
+                  40.45,
+                  58.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                33.0,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "I2C_SDA",
+              "at": [
+                35.5,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "I2C_SCL",
+              "at": [
+                38.0,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J7",
+          "value": "A-B CTRL / XH-6",
+          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+          "at": [
+            53.0,
+            55.0
+          ],
+          "label": [
+            59.25,
+            51.45
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  52.375,
+                  52.65
+                ],
+                [
+                  53.0,
+                  53.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  53.0,
+                  53.65
+                ],
+                [
+                  53.625,
+                  52.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  50.55,
+                  52.65
+                ],
+                [
+                  67.95,
+                  58.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                53.0,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PWM0",
+              "at": [
+                55.5,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "ENABLE",
+              "at": [
+                58.0,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "FAULT_N",
+              "at": [
+                60.5,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "unconnected-(J7-Pin_5-Pad5)",
+              "at": [
+                63.0,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "6",
+              "net": "unconnected-(J7-Pin_6-Pad6)",
+              "at": [
+                65.5,
+                55.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "L1",
+          "value": "100uH / SRP1770TA-101M",
+          "footprint": "Inductor_SMD:L_Bourns_SRP1770TA_16.9x16.9mm",
+          "at": [
+            39.5,
+            41.5
+          ],
+          "label": [
+            39.5,
+            31.6
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  31.05,
+                  33.35
+                ],
+                [
+                  31.05,
+                  49.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  31.35,
+                  33.05
+                ],
+                [
+                  47.65,
+                  33.05
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  47.65,
+                  49.95
+                ],
+                [
+                  31.35,
+                  49.95
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  47.95,
+                  33.35
+                ],
+                [
+                  47.95,
+                  49.65
+                ]
+              ]
+            },
+            {
+              "kind": "path",
+              "points": [
+                [
+                  31.05,
+                  33.35
+                ],
+                [
+                  31.05036136313845,
+                  33.33527969770178
+                ],
+                [
+                  31.051444581998343,
+                  33.320594857901135
+                ],
+                [
+                  31.053247047010565,
+                  33.30598085766339
+                ],
+                [
+                  31.055764415879032,
+                  33.29147290339516
+                ],
+                [
+                  31.058990624041638,
+                  33.277105946029025
+                ],
+                [
+                  31.06291789928034,
+                  33.26291459682366
+                ],
+                [
+                  31.067536780445096,
+                  33.24893304398233
+                ],
+                [
+                  31.072836140246615,
+                  33.23519497029047
+                ],
+                [
+                  31.07880321206297,
+                  33.221733471970914
+                ],
+                [
+                  31.085423620695494,
+                  33.2085809789522
+                ],
+                [
+                  31.09268141699992,
+                  33.19576917674203
+                ],
+                [
+                  31.10055911630924,
+                  33.18332893009412
+                ],
+                [
+                  31.109037740555806,
+                  33.17129020865227
+                ],
+                [
+                  31.11809686399118,
+                  33.159682014750906
+                ],
+                [
+                  31.12771466239351,
+                  33.14853231354589
+                ],
+                [
+                  31.137867965644038,
+                  33.137867965644034
+                ],
+                [
+                  31.148532313545896,
+                  33.127714662393515
+                ],
+                [
+                  31.159682014750906,
+                  33.11809686399118
+                ],
+                [
+                  31.17129020865227,
+                  33.109037740555806
+                ],
+                [
+                  31.18332893009412,
+                  33.100559116309235
+                ],
+                [
+                  31.195769176742033,
+                  33.092681416999916
+                ],
+                [
+                  31.208580978952202,
+                  33.085423620695494
+                ],
+                [
+                  31.221733471970918,
+                  33.078803212062965
+                ],
+                [
+                  31.235194970290475,
+                  33.072836140246615
+                ],
+                [
+                  31.248933043982337,
+                  33.067536780445096
+                ],
+                [
+                  31.262914596823663,
+                  33.062917899280336
+                ],
+                [
+                  31.27710594602902,
+                  33.058990624041634
+                ],
+                [
+                  31.291472903395164,
+                  33.05576441587903
+                ],
+                [
+                  31.305980857663393,
+                  33.053247047010565
+                ],
+                [
+                  31.320594857901135,
+                  33.05144458199834
+                ],
+                [
+                  31.335279697701775,
+                  33.05036136313845
+                ],
+                [
+                  31.35,
+                  33.05
+                ]
+              ]
+            },
+            {
+              "kind": "path",
+              "points": [
+                [
+                  31.35,
+                  49.95
+                ],
+                [
+                  31.335279697701775,
+                  49.94963863686156
+                ],
+                [
+                  31.32059485790113,
+                  49.94855541800166
+                ],
+                [
+                  31.305980857663393,
+                  49.946752952989435
+                ],
+                [
+                  31.291472903395164,
+                  49.944235584120975
+                ],
+                [
+                  31.27710594602902,
+                  49.941009375958366
+                ],
+                [
+                  31.262914596823663,
+                  49.937082100719664
+                ],
+                [
+                  31.248933043982333,
+                  49.93246321955491
+                ],
+                [
+                  31.235194970290472,
+                  49.927163859753385
+                ],
+                [
+                  31.221733471970914,
+                  49.921196787937035
+                ],
+                [
+                  31.2085809789522,
+                  49.914576379304506
+                ],
+                [
+                  31.195769176742033,
+                  49.907318583000084
+                ],
+                [
+                  31.183328930094117,
+                  49.899440883690765
+                ],
+                [
+                  31.17129020865227,
+                  49.890962259444194
+                ],
+                [
+                  31.159682014750906,
+                  49.88190313600882
+                ],
+                [
+                  31.148532313545893,
+                  49.87228533760649
+                ],
+                [
+                  31.137867965644034,
+                  49.862132034355966
+                ],
+                [
+                  31.12771466239351,
+                  49.85146768645411
+                ],
+                [
+                  31.118096863991177,
+                  49.840317985249094
+                ],
+                [
+                  31.109037740555806,
+                  49.828709791347734
+                ],
+                [
+                  31.100559116309235,
+                  49.81667106990588
+                ],
+                [
+                  31.092681416999916,
+                  49.80423082325797
+                ],
+                [
+                  31.08542362069549,
+                  49.7914190210478
+                ],
+                [
+                  31.078803212062965,
+                  49.778266528029086
+                ],
+                [
+                  31.07283614024661,
+                  49.76480502970953
+                ],
+                [
+                  31.067536780445092,
+                  49.75106695601767
+                ],
+                [
+                  31.062917899280336,
+                  49.73708540317634
+                ],
+                [
+                  31.058990624041634,
+                  49.722894053970975
+                ],
+                [
+                  31.05576441587903,
+                  49.70852709660484
+                ],
+                [
+                  31.05324704701056,
+                  49.69401914233661
+                ],
+                [
+                  31.05144458199834,
+                  49.679405142098865
+                ],
+                [
+                  31.050361363138446,
+                  49.66472030229822
+                ],
+                [
+                  31.049999999999997,
+                  49.65
+                ]
+              ]
+            },
+            {
+              "kind": "path",
+              "points": [
+                [
+                  47.65,
+                  33.05
+                ],
+                [
+                  47.66472030229822,
+                  33.05036136313844
+                ],
+                [
+                  47.679405142098865,
+                  33.05144458199834
+                ],
+                [
+                  47.69401914233661,
+                  33.053247047010565
+                ],
+                [
+                  47.70852709660484,
+                  33.055764415879025
+                ],
+                [
+                  47.722894053970975,
+                  33.058990624041634
+                ],
+                [
+                  47.73708540317634,
+                  33.062917899280336
+                ],
+                [
+                  47.75106695601767,
+                  33.06753678044509
+                ],
+                [
+                  47.76480502970953,
+                  33.072836140246615
+                ],
+                [
+                  47.778266528029086,
+                  33.078803212062965
+                ],
+                [
+                  47.7914190210478,
+                  33.085423620695494
+                ],
+                [
+                  47.80423082325797,
+                  33.092681416999916
+                ],
+                [
+                  47.81667106990588,
+                  33.100559116309235
+                ],
+                [
+                  47.828709791347734,
+                  33.109037740555806
+                ],
+                [
+                  47.840317985249094,
+                  33.11809686399118
+                ],
+                [
+                  47.85146768645411,
+                  33.12771466239351
+                ],
+                [
+                  47.862132034355966,
+                  33.137867965644034
+                ],
+                [
+                  47.87228533760649,
+                  33.14853231354589
+                ],
+                [
+                  47.88190313600882,
+                  33.159682014750906
+                ],
+                [
+                  47.890962259444194,
+                  33.171290208652266
+                ],
+                [
+                  47.899440883690765,
+                  33.18332893009412
+                ],
+                [
+                  47.907318583000084,
+                  33.19576917674203
+                ],
+                [
+                  47.914576379304506,
+                  33.2085809789522
+                ],
+                [
+                  47.921196787937035,
+                  33.221733471970914
+                ],
+                [
+                  47.927163859753385,
+                  33.23519497029047
+                ],
+                [
+                  47.93246321955491,
+                  33.24893304398233
+                ],
+                [
+                  47.937082100719664,
+                  33.26291459682366
+                ],
+                [
+                  47.941009375958366,
+                  33.277105946029025
+                ],
+                [
+                  47.944235584120975,
+                  33.29147290339516
+                ],
+                [
+                  47.946752952989435,
+                  33.30598085766339
+                ],
+                [
+                  47.94855541800166,
+                  33.320594857901135
+                ],
+                [
+                  47.94963863686156,
+                  33.33527969770178
+                ],
+                [
+                  47.95,
+                  33.35
+                ]
+              ]
+            },
+            {
+              "kind": "path",
+              "points": [
+                [
+                  47.95,
+                  49.65
+                ],
+                [
+                  47.94963863686156,
+                  49.66472030229822
+                ],
+                [
+                  47.94855541800166,
+                  49.679405142098865
+                ],
+                [
+                  47.946752952989435,
+                  49.69401914233661
+                ],
+                [
+                  47.944235584120975,
+                  49.70852709660484
+                ],
+                [
+                  47.941009375958366,
+                  49.722894053970975
+                ],
+                [
+                  47.937082100719664,
+                  49.73708540317634
+                ],
+                [
+                  47.93246321955491,
+                  49.75106695601767
+                ],
+                [
+                  47.927163859753385,
+                  49.76480502970953
+                ],
+                [
+                  47.921196787937035,
+                  49.778266528029086
+                ],
+                [
+                  47.914576379304506,
+                  49.7914190210478
+                ],
+                [
+                  47.907318583000084,
+                  49.80423082325797
+                ],
+                [
+                  47.899440883690765,
+                  49.81667106990588
+                ],
+                [
+                  47.890962259444194,
+                  49.828709791347734
+                ],
+                [
+                  47.88190313600882,
+                  49.840317985249094
+                ],
+                [
+                  47.87228533760649,
+                  49.85146768645411
+                ],
+                [
+                  47.862132034355966,
+                  49.862132034355966
+                ],
+                [
+                  47.85146768645411,
+                  49.87228533760649
+                ],
+                [
+                  47.840317985249094,
+                  49.88190313600882
+                ],
+                [
+                  47.828709791347734,
+                  49.890962259444194
+                ],
+                [
+                  47.81667106990588,
+                  49.899440883690765
+                ],
+                [
+                  47.80423082325797,
+                  49.907318583000084
+                ],
+                [
+                  47.7914190210478,
+                  49.914576379304506
+                ],
+                [
+                  47.778266528029086,
+                  49.921196787937035
+                ],
+                [
+                  47.76480502970953,
+                  49.927163859753385
+                ],
+                [
+                  47.75106695601767,
+                  49.93246321955491
+                ],
+                [
+                  47.73708540317634,
+                  49.937082100719664
+                ],
+                [
+                  47.722894053970975,
+                  49.941009375958366
+                ],
+                [
+                  47.70852709660484,
+                  49.944235584120975
+                ],
+                [
+                  47.69401914233661,
+                  49.946752952989435
+                ],
+                [
+                  47.679405142098865,
+                  49.94855541800166
+                ],
+                [
+                  47.66472030229822,
+                  49.94963863686156
+                ],
+                [
+                  47.65,
+                  49.95
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "BUCK_SW",
+              "at": [
+                31.825,
+                41.5
+              ],
+              "size": [
+                3.15,
+                12.5
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "+5V_BUCK",
+              "at": [
+                47.175,
+                41.5
+              ],
+              "size": [
+                3.15,
+                12.5
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "NT1",
+          "value": "GND STAR / NO COMPONENT",
+          "footprint": "NetTie:NetTie-2_SMD_Pad2.0mm",
+          "at": [
+            8.0,
+            31.0
+          ],
+          "label": [
+            8.0,
+            29.0
+          ],
+          "angle": 0.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PGND",
+              "at": [
+                6.0,
+                31.0
+              ],
+              "size": [
+                2.0,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": true
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                10.0,
+                31.0
+              ],
+              "size": [
+                2.0,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "Q1",
+          "value": "IRLZ44NPBF / gate 5 V",
+          "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+          "at": [
+            66.0,
+            23.0
+          ],
+          "label": [
+            68.54,
+            18.9
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  63.54,
+                  21.12
+                ],
+                [
+                  73.54,
+                  21.12
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  66.69,
+                  19.85
+                ],
+                [
+                  66.69,
+                  21.12
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  70.39,
+                  19.85
+                ],
+                [
+                  70.39,
+                  21.12
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  63.54,
+                  19.85
+                ],
+                [
+                  73.54,
+                  24.25
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GATE",
+              "at": [
+                66.0,
+                23.0
+              ],
+              "size": [
+                1.905,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.1,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "HEATER_LOW",
+              "at": [
+                68.54,
+                23.0
+              ],
+              "size": [
+                1.905,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.1,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "PGND",
+              "at": [
+                71.08,
+                23.0
+              ],
+              "size": [
+                1.905,
+                2.0
+              ],
+              "angle": 0.0,
+              "drill": 1.1,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "Q2",
+          "value": "DMP6023LE-13 / reverse input",
+          "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+          "at": [
+            43.0,
+            17.0
+          ],
+          "label": [
+            43.0,
+            12.5
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  41.15,
+                  14.65
+                ],
+                [
+                  41.15,
+                  20.35
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  41.15,
+                  14.65
+                ],
+                [
+                  42.15,
+                  13.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  41.15,
+                  20.35
+                ],
+                [
+                  44.85,
+                  20.35
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  42.15,
+                  13.65
+                ],
+                [
+                  44.85,
+                  13.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  44.85,
+                  13.65
+                ],
+                [
+                  44.85,
+                  20.35
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "REV_GATE",
+              "at": [
+                39.85,
+                14.7
+              ],
+              "size": [
+                2.0,
+                1.5
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "VIN_FUSED",
+              "at": [
+                39.85,
+                17.0
+              ],
+              "size": [
+                2.0,
+                1.5
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "VIN_FUSED",
+              "at": [
+                46.15,
+                17.0
+              ],
+              "size": [
+                2.0,
+                3.8
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "VIN_PROTECTED",
+              "at": [
+                39.85,
+                19.3
+              ],
+              "size": [
+                2.0,
+                1.5
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R1",
+          "value": "47k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            57.0,
+            46.0
+          ],
+          "label": [
+            57.0,
+            44.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  56.2,
+                  45.5875
+                ],
+                [
+                  57.8,
+                  46.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PWM0",
+              "at": [
+                56.175,
+                46.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                57.825,
+                46.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R10",
+          "value": "1.5k / 1% / 0.1W",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            52.0,
+            26.5
+          ],
+          "label": [
+            49.2,
+            26.5
+          ],
+          "angle": 90.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  51.5875,
+                  27.3
+                ],
+                [
+                  52.4125,
+                  25.7
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                52.0,
+                27.325
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D6",
+              "at": [
+                52.0,
+                25.675
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R11",
+          "value": "470R / 1% / 0.1W",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            75.0,
+            49.0
+          ],
+          "label": [
+            75.0,
+            46.2
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  74.2,
+                  48.5875
+                ],
+                [
+                  75.8,
+                  49.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                74.175,
+                49.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D7",
+              "at": [
+                75.825,
+                49.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R12",
+          "value": "2.2k / 1% / 0.1W",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            66.0,
+            35.0
+          ],
+          "label": [
+            68.8,
+            35.0
+          ],
+          "angle": -90.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  66.4125,
+                  34.2
+                ],
+                [
+                  65.5875,
+                  35.8
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GATE_DRV",
+              "at": [
+                66.0,
+                34.175
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 270.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D8",
+              "at": [
+                66.0,
+                35.825
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 270.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R13",
+          "value": "56m / 1% / 0.25W",
+          "footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
+          "at": [
+            21.0,
+            44.5
+          ],
+          "label": [
+            21.0,
+            42.67
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  19.4,
+                  43.7
+                ],
+                [
+                  22.6,
+                  45.3
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "BUCK_CAP_RETURN",
+              "at": [
+                19.275,
+                44.5
+              ],
+              "size": [
+                1.65,
+                1.93
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                22.725,
+                44.5
+              ],
+              "size": [
+                1.65,
+                1.93
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R2",
+          "value": "47k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            59.0,
+            49.0
+          ],
+          "label": [
+            59.0,
+            47.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  58.2,
+                  48.5875
+                ],
+                [
+                  59.8,
+                  49.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "ENABLE",
+              "at": [
+                58.175,
+                49.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                59.825,
+                49.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R3",
+          "value": "22R",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            64.0,
+            29.0
+          ],
+          "label": [
+            64.0,
+            27.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  63.2,
+                  28.5875
+                ],
+                [
+                  64.8,
+                  29.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GATE_DRV",
+              "at": [
+                63.175,
+                29.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GATE",
+              "at": [
+                64.825,
+                29.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R4",
+          "value": "100k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            75.0,
+            28.0
+          ],
+          "label": [
+            75.0,
+            26.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  74.2,
+                  27.5875
+                ],
+                [
+                  75.8,
+                  28.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GATE",
+              "at": [
+                74.175,
+                28.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                75.825,
+                28.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R5",
+          "value": "8.45k 1%",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            85.0,
+            45.0
+          ],
+          "label": [
+            85.0,
+            43.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  84.2,
+                  44.5875
+                ],
+                [
+                  85.8,
+                  45.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "NTC_RAW",
+              "at": [
+                84.175,
+                45.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                85.825,
+                45.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R6",
+          "value": "1k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            85.0,
+            39.0
+          ],
+          "label": [
+            85.0,
+            37.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  84.2,
+                  38.5875
+                ],
+                [
+                  85.8,
+                  39.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "NTC_RAW",
+              "at": [
+                84.175,
+                39.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "NTC_ADC",
+              "at": [
+                85.825,
+                39.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R7",
+          "value": "10k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            71.0,
+            45.0
+          ],
+          "label": [
+            71.0,
+            43.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  70.2,
+                  44.5875
+                ],
+                [
+                  71.8,
+                  45.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                70.175,
+                45.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "FAULT_N",
+              "at": [
+                71.825,
+                45.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R8",
+          "value": "100k",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "at": [
+            39.0,
+            28.0
+          ],
+          "label": [
+            39.0,
+            26.57
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  38.2,
+                  27.5875
+                ],
+                [
+                  39.8,
+                  28.4125
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "REV_GATE",
+              "at": [
+                38.175,
+                28.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                39.825,
+                28.0
+              ],
+              "size": [
+                0.8,
+                0.95
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "R9",
+          "value": "15k / 1% / 0.125W",
+          "footprint": "Resistor_SMD:R_0805_2012Metric",
+          "at": [
+            5.0,
+            38.0
+          ],
+          "label": [
+            2.2,
+            38.0
+          ],
+          "angle": 90.0,
+          "fab": [
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  4.375,
+                  39.0
+                ],
+                [
+                  5.625,
+                  37.0
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                5.0,
+                38.9125
+              ],
+              "size": [
+                1.025,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "LED_B_D5",
+              "at": [
+                5.0,
+                37.0875
+              ],
+              "size": [
+                1.025,
+                1.4
+              ],
+              "angle": 90.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "U1",
+          "value": "LM2596S-5.0/NOPB",
+          "footprint": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
+          "at": [
+            18.0,
+            35.0
+          ],
+          "label": [
+            18.0,
+            41.65
+          ],
+          "angle": 180.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  12.375,
+                  30.0
+                ],
+                [
+                  13.375,
+                  30.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  12.375,
+                  40.0
+                ],
+                [
+                  12.375,
+                  30.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  13.375,
+                  40.0
+                ],
+                [
+                  12.375,
+                  40.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  22.625,
+                  32.0
+                ],
+                [
+                  27.325,
+                  32.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  22.625,
+                  33.7
+                ],
+                [
+                  27.325,
+                  33.7
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  22.625,
+                  35.4
+                ],
+                [
+                  27.325,
+                  35.4
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  22.625,
+                  37.1
+                ],
+                [
+                  27.325,
+                  37.1
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  22.625,
+                  38.8
+                ],
+                [
+                  27.325,
+                  38.8
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  31.2
+                ],
+                [
+                  22.625,
+                  31.2
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  32.0
+                ],
+                [
+                  27.325,
+                  31.2
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  32.9
+                ],
+                [
+                  22.625,
+                  32.9
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  33.7
+                ],
+                [
+                  27.325,
+                  32.9
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  34.6
+                ],
+                [
+                  22.625,
+                  34.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  35.4
+                ],
+                [
+                  27.325,
+                  34.6
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  36.3
+                ],
+                [
+                  22.625,
+                  36.3
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  37.1
+                ],
+                [
+                  27.325,
+                  36.3
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  38.0
+                ],
+                [
+                  22.625,
+                  38.0
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  27.325,
+                  38.8
+                ],
+                [
+                  27.325,
+                  38.0
+                ]
+              ]
+            },
+            {
+              "kind": "poly",
+              "points": [
+                [
+                  13.375,
+                  40.0
+                ],
+                [
+                  13.375,
+                  30.0
+                ],
+                [
+                  22.625,
+                  30.0
+                ],
+                [
+                  22.625,
+                  39.0
+                ],
+                [
+                  21.625,
+                  40.0
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                25.65,
+                38.4
+              ],
+              "size": [
+                4.6,
+                1.1
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "BUCK_SW",
+              "at": [
+                25.65,
+                36.7
+              ],
+              "size": [
+                4.6,
+                1.1
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "PGND",
+              "at": [
+                25.65,
+                35.0
+              ],
+              "size": [
+                4.6,
+                1.1
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "PGND",
+              "at": [
+                16.5,
+                35.0
+              ],
+              "size": [
+                9.4,
+                10.8
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "+5V_BUCK",
+              "at": [
+                25.65,
+                33.3
+              ],
+              "size": [
+                4.6,
+                1.1
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "PGND",
+              "at": [
+                25.65,
+                31.6
+              ],
+              "size": [
+                4.6,
+                1.1
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "U2",
+          "value": "AP2112K-3.3",
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "at": [
+            52.0,
+            44.0
+          ],
+          "label": [
+            52.0,
+            41.6
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "poly",
+              "points": [
+                [
+                  51.6,
+                  42.55
+                ],
+                [
+                  52.8,
+                  42.55
+                ],
+                [
+                  52.8,
+                  45.45
+                ],
+                [
+                  51.2,
+                  45.45
+                ],
+                [
+                  51.2,
+                  42.95
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                50.8625,
+                43.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "at": [
+                50.8625,
+                44.0
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "+5V_AB",
+              "at": [
+                50.8625,
+                44.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "unconnected-(U2-NC-Pad4)",
+              "at": [
+                53.1375,
+                44.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "+3V3_B",
+              "at": [
+                53.1375,
+                43.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "U3",
+          "value": "SN74LVC1G08DBVR",
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "at": [
+            62.0,
+            46.0
+          ],
+          "label": [
+            62.0,
+            43.6
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "poly",
+              "points": [
+                [
+                  61.6,
+                  44.55
+                ],
+                [
+                  62.8,
+                  44.55
+                ],
+                [
+                  62.8,
+                  47.45
+                ],
+                [
+                  61.2,
+                  47.45
+                ],
+                [
+                  61.2,
+                  44.95
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PWM0",
+              "at": [
+                60.8625,
+                45.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "ENABLE",
+              "at": [
+                60.8625,
+                46.0
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "GND",
+              "at": [
+                60.8625,
+                46.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "GATE_CMD",
+              "at": [
+                63.1375,
+                46.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "+3V3_B",
+              "at": [
+                63.1375,
+                45.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "U4",
+          "value": "ADS1115IDGSR / 0x49",
+          "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+          "at": [
+            76.0,
+            40.0
+          ],
+          "label": [
+            76.0,
+            37.55
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "poly",
+              "points": [
+                [
+                  75.25,
+                  38.5
+                ],
+                [
+                  77.5,
+                  38.5
+                ],
+                [
+                  77.5,
+                  41.5
+                ],
+                [
+                  74.5,
+                  41.5
+                ],
+                [
+                  74.5,
+                  39.25
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                73.85,
+                39.0
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "FAULT_N",
+              "at": [
+                73.85,
+                39.5
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "GND",
+              "at": [
+                73.85,
+                40.0
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "NTC_ADC",
+              "at": [
+                73.85,
+                40.5
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "unconnected-(U4-AIN1-Pad5)",
+              "at": [
+                73.85,
+                41.0
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "6",
+              "net": "unconnected-(U4-AIN2-Pad6)",
+              "at": [
+                78.15,
+                41.0
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "7",
+              "net": "unconnected-(U4-AIN3-Pad7)",
+              "at": [
+                78.15,
+                40.5
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "8",
+              "net": "+3V3_B",
+              "at": [
+                78.15,
+                40.0
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "9",
+              "net": "I2C_SDA",
+              "at": [
+                78.15,
+                39.5
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "10",
+              "net": "I2C_SCL",
+              "at": [
+                78.15,
+                39.0
+              ],
+              "size": [
+                1.45,
+                0.3
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "U5",
+          "value": "UCC27517DBVR",
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "at": [
+            60.0,
+            35.0
+          ],
+          "label": [
+            60.0,
+            32.6
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "poly",
+              "points": [
+                [
+                  59.6,
+                  33.55
+                ],
+                [
+                  60.8,
+                  33.55
+                ],
+                [
+                  60.8,
+                  36.45
+                ],
+                [
+                  59.2,
+                  36.45
+                ],
+                [
+                  59.2,
+                  33.95
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                58.8625,
+                34.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "PGND",
+              "at": [
+                58.8625,
+                35.0
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "GATE_CMD",
+              "at": [
+                58.8625,
+                35.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "4",
+              "net": "PGND",
+              "at": [
+                61.1375,
+                35.95
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            },
+            {
+              "number": "5",
+              "net": "GATE_DRV",
+              "at": [
+                61.1375,
+                34.05
+              ],
+              "size": [
+                1.325,
+                0.6
+              ],
+              "angle": 0.0,
+              "drill": 0.0,
+              "circle": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "scripts/build_assembly_review.py": "424b35c13dabc4779abdb72cd71dfea9b68dc5b055eb85244461ae3269aaef62",
+    "manufacturing/land_pattern_review.json": "83ed857730200edefc2d9855290a07fc48751cde51ea20b099e708f79c49125c",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "f7705f87215e4a18769525250f8c91dc2e1cad0488f5dd6e411b9a34ade7f757",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469"
+  }
+}

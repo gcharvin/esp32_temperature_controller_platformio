@@ -23,7 +23,7 @@
       "failures": []
     },
     "B": {
-      "native_PCB_sha256": "b836fc13c47ba221dfce18677d17ecdd8a936275cd9e8569e2a944593391424d",
+      "native_PCB_sha256": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469",
       "track_min_mm": 0.25,
       "via_count": 31,
       "via_min_annular_ring_mm": 0.2,

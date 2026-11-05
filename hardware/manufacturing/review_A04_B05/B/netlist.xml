@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\Gilles\Documents\PlatformIO\Projects\esp32-temperature-controller-platformio\hardware\pcb_b_temperature\pcb_b_temperature.kicad_sch</source>
-    <date>2026-11-05T19:56:12</date>
+    <date>2026-11-05T22:31:03</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1144,10 +1144,10 @@
     </comp>
     <comp ref="R13">
       <value>56m / 1% / 0.25W</value>
-      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <footprint>LabHardware:Vishay_WSL1206_6m_to_200m</footprint>
       <fields>
         <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
-        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Footprint">LabHardware:Vishay_WSL1206_6m_to_200m</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>

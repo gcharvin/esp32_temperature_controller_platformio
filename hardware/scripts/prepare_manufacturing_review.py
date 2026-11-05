@@ -13,6 +13,7 @@ from pathlib import Path
 import subprocess
 import xml.etree.ElementTree as ET
 import zipfile
+import shutil
 
 import pcbnew
 
@@ -134,19 +135,34 @@ def run(*args):
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
+    # Never attach an old drawing to newly exported Gerbers or procurement data.
+    drawings=ROOT/'manufacturing/output/assembly_review_manifest.json'
+    drawing_review=json.loads(drawings.read_text(encoding='utf-8'))
+    for section in ('source_sha256','output_sha256'):
+        for relative,digest in drawing_review[section].items():
+            if sha(ROOT/relative)!=digest:
+                raise ValueError('Assembly drawing is stale: '+relative)
+    lands=ROOT/'review/routing/manufacturer_land_patterns.json'
+    for relative,digest in json.loads(lands.read_text(encoding='utf-8'))['source_sha256'].items():
+        if sha(ROOT/relative)!=digest:
+            raise ValueError('Manufacturer land-pattern check is stale: '+relative)
     manifest=dict(status='DRAFT / RFQ review only; NOT RELEASED FOR FABRICATION',
                   sources_sha256={}, boards={}, automatic_checks=[],
                   limits=['Public supplier catalogue identities checked; live order stock and all-in prices remain unconfirmed.',
                           'MPNs are external review candidates, not yet approved native schematic fields.',
                           'No placement rotations approved by assembly house; THT requires explicit quotation.',
                           'USB/external simultaneous operation remains unqualified.'])
-    for source in (Path(__file__), ROOT/'interface_ab.json',ROOT/'module_selection.json',
+    for source in (Path(__file__), ROOT/'scripts/verify_manufacturing_review.py', ROOT/'interface_ab.json',ROOT/'module_selection.json',
                    ROOT/'manufacturing/power_and_usb_review.md', ROOT/'manufacturing/README.md',
                    ROOT/'manufacturing/release_checklist.json',ROOT/'manufacturing/system_bom_review.csv',
                    ROOT/'manufacturing/supplier_candidates.json',ROOT/'manufacturing/supplier_review.json',
                    ROOT/'manufacturing/process_requirements.json',ROOT/'manufacturing/manufacturing_fit_audit.json',
                    ROOT/'manufacturing/assembly_RFQ_draft.md',ROOT/'manufacturing/usb_service_test.md',
-                   ROOT/'manufacturing/panel_B_proposal.svg',ROOT/'devkit_compatibility.md'):
+                   ROOT/'manufacturing/panel_B_proposal.svg',ROOT/'devkit_compatibility.md',
+                   ROOT/'manufacturing/land_pattern_review.json', lands, drawings,
+                   ROOT/'scripts/build_assembly_review.py', ROOT/'scripts/check_manufacturer_land_patterns.py',
+                   ROOT/'lab_hardware.pretty/Vishay_WSL1206_6m_to_200m.kicad_mod',
+                   ROOT/'pcb_b_temperature/fp-lib-table'):
         manifest['sources_sha256'][source.relative_to(ROOT).as_posix()]=sha(source)
     native_hashes={p:sha(p) for name in ('pcb_a_display','pcb_b_temperature')
                    for suffix in ('.kicad_sch','.kicad_pcb','.kicad_pro')
@@ -284,19 +300,32 @@ def main():
         unverified_rows=[r['requested_mpn'] for r in SUPPLIER['records'] if not r['identity_verified']],
         unmatched_MPNs=list(SUPPLIER['unresolved_exact_MPNs']),
         engineering_and_order_approval=False)
+    assembly_folder=OUT/'assembly_review'
+    assembly_folder.mkdir(exist_ok=True)
+    for relative in drawing_review['output_sha256']:
+        shutil.copy2(ROOT/relative, assembly_folder/Path(relative).name)
+    shutil.copy2(drawings,assembly_folder/drawings.name)
+    shutil.copy2(lands,assembly_folder/lands.name)
+    manifest['assembly_drawings']=dict(pages=drawing_review['pages'],
+        status=drawing_review['status'],physical_THT_items=19,
+        coordinate_map='assembly_review/assembly_pad_map.csv',
+        THT_placement='assembly_review/assembly_THT_placement.csv')
     manifest['output_sha256']={p.relative_to(OUT).as_posix():sha(p) for p in sorted(OUT.rglob('*'))
                                if p.is_file() and p.name!='manifest.json' and p.suffix!='.zip'}
+    attachments=[OUT.parent/name for name in (
+        'README.md','power_and_usb_review.md','release_checklist.json','system_bom_review.csv',
+        'supplier_candidates.json','supplier_review.json','supplier_review.csv','process_requirements.json',
+        'manufacturing_fit_audit.json','assembly_RFQ_draft.md','usb_service_test.md','panel_B_proposal.svg',
+        'land_pattern_review.json')]+[ROOT/'devkit_compatibility.md']
+    manifest['attachments_sha256']={p.name:sha(p) for p in attachments}
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     archive=OUT.parent/'RFQ_A04_B05_DRAFT_NOT_FOR_ORDER.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as bundle:
         for p in sorted(OUT.rglob('*')):
             if p.is_file():
                 bundle.write(p,p.relative_to(OUT))
-        for name in ('README.md','power_and_usb_review.md','release_checklist.json','system_bom_review.csv',
-                     'supplier_candidates.json','supplier_review.json','supplier_review.csv',
-                     'process_requirements.json','manufacturing_fit_audit.json','assembly_RFQ_draft.md','usb_service_test.md','panel_B_proposal.svg'):
-            bundle.write(OUT.parent/name,name)
-        bundle.write(ROOT/'devkit_compatibility.md','devkit_compatibility.md')
+        for p in attachments:
+            bundle.write(p,p.name)
     print(json.dumps(dict(status=manifest['status'],boards=manifest['boards'],archive=str(archive)),indent=2))
 
 

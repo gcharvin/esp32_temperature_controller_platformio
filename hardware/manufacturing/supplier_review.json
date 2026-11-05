@@ -1,7 +1,7 @@
 {
   "scope": "Public catalogue identity/assembly classification only; no order, reservation or upload",
   "checked_date": "2026-11-05",
-  "verified_exact_MPNs": 36,
+  "verified_exact_MPNs": 37,
   "live_stock_confirmed_MPNs": 0,
   "candidate_input_sha256": "a1b9ad4ac19b9272a45ec599ba9824ef3e1a40e2e3b414b8512da714ab8aded0",
   "records": [
@@ -1520,12 +1520,53 @@
       "requested_mpn": "RC0603FR-0747KL",
       "supplier_id": "C105579",
       "source_url": "https://jlcpcb.com/partdetail/C105579",
-      "checked_utc": "2026-11-05T18:02:38.775409+00:00",
-      "identity_verified": false,
+      "checked_utc": "2026-11-05T21:20:45.178948+00:00",
+      "identity_verified": true,
       "stock_quantity": null,
       "stock_status": "NOT EXPOSED / verify in assembly quotation",
       "purchase_approved": false,
-      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "resolved_url": "https://jlcpcb.com/partdetail/C105579",
+      "public_page_sha256": "90adec20e8818d2049622ac23dc830c48cf83c31d8443914de2fd152050a8af9",
+      "mpn": "RC0603FR-0747KL",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-0747KL_C105579.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0031
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0025
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0022
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.002
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0018
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0018
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
       "board_references": [
         "B/R1",
         "B/R2"

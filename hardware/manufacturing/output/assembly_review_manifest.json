@@ -1,0 +1,21 @@
+{
+  "status": "DRAFT / human and assembler review required",
+  "pages": 3,
+  "source_sha256": {
+    "scripts/build_assembly_review.py": "424b35c13dabc4779abdb72cd71dfea9b68dc5b055eb85244461ae3269aaef62",
+    "manufacturing/land_pattern_review.json": "83ed857730200edefc2d9855290a07fc48751cde51ea20b099e708f79c49125c",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "f7705f87215e4a18769525250f8c91dc2e1cad0488f5dd6e411b9a34ade7f757",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469"
+  },
+  "output_sha256": {
+    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "75ac2bb048a18bccff5dd1de77e3c3728a24248fa8f47a8604c876b20f616ab6",
+    "manufacturing/output/assembly_geometry.json": "3fa7006755d05d0c298eb5f13b438d3f028558036ed74d836eba2a9f71dbd865",
+    "manufacturing/output/assembly_pad_map.csv": "db2ef228936df175c41d7d289e3495cb840af7db661b72e13868dd75d125c152",
+    "manufacturing/output/assembly_THT_placement.csv": "c0ea7ef817afbeab7d671477fb79407d494e943ed9b1fc59356ed306f2773179"
+  },
+  "limits": [
+    "Native top view; pad1 dots indicate pin numbering, not universal polarity.",
+    "Rotation convention must be checked in assembler preview; no automatic correction.",
+    "The PDF is not a 1:1 print, fabrication layer or exact supplier 3D model."
+  ]
+}

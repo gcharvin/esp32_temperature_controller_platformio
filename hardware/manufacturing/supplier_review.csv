@@ -26,7 +26,7 @@ RC0603FR-071KL,B/R6,C22548,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assem
 RC0603FR-0722RL,B/R3,C107701,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C107701,
 RC0603FR-072K2L,B/R12,C114662,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C114662,
 RC0603FR-07470RL,A/R7 B/R11,C114669,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C114669,
-RC0603FR-0747KL,B/R1 B/R2,C105579,False,,,,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C105579,HTTPError: HTTP Error 429: Too Many Requests
+RC0603FR-0747KL,B/R1 B/R2,C105579,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C105579,
 RC0603FR-074K7L,A/R4 A/R5,C99782,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C99782,
 RC0603FR-078K45L,B/R5,C163417,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C163417,
 RC0805FR-0715KL,B/R9,C114559,True,YAGEO,0805,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C114559,
