@@ -1,0 +1,25 @@
+{
+  "revision": "A 0.4 / B temperature 0.5 / manufacturing review 1",
+  "date": "2026-11-05",
+  "fabrication_release": false,
+  "order_placed": false,
+  "target": "small prototype batch, 24 V temperature B; A shared across future B supply variants",
+  "before_order": [
+    {"id": "devkit_fit", "status": "OPEN", "action": "Measure purchased diymore 30P board: row spacing, outline, pin labels, header insertion height and USB position. Current 25.40 mm spacing is an authorized assumption."},
+    {"id": "procurement", "status": "OPEN", "action": "Approve every MPN, stock and quote; check all manufacturer drawings, land patterns, pinouts, MLCC effective capacitance and substitutions. C9/R13 and JP1 header/shunt candidates identified but not released."},
+    {"id": "USB_service", "status": "OPEN", "action": "Qualify the purchased DevKit power path and a specific USB service arrangement. Ordinary USB + external 5 V remains prohibited. USB-only disconnected service is retained; powered monitoring is not yet available."},
+    {"id": "buck_review", "status": "REVIEWED_WITH_LIMITS", "action": "Nominal 24 V startup peak 4.88 A is below L1 Isat1 6.5 A at 25 C. Nonlinear saturation, hot tolerance, surge/current-limit and fuse coordination remain unqualified; review package and prototype test plan before order."},
+    {"id": "assembly_quote", "status": "OPEN", "action": "Quote factory SMT plus THT and two separate 1x15 sockets under U1/A. Approve polarity, native rotations, soldering process, heights and 2 oz B capability in manufacturer preview. No automatic substitutions."},
+    {"id": "fabrication_snapshot", "status": "DRAFT_EXPORTED", "action": "Fresh ERC/DRC and source-bound BOM/CPL/Gerber/drill exports are for review only. Re-export after any native change; approve Gerber/drill appearance and board specs before release."}
+  ],
+  "after_prototype_before_operating_heater": [
+    {"id": "firmware", "status": "OPEN", "action": "Migrate PWM GPIO5 to25, handle ENABLE, ADS1115 address0x49, NTC calibration and safe behavior at boot/lost or invalid measurement. Verify real output off on faults."},
+    {"id": "bench", "status": "OPEN", "action": "Execute electronics_bench_plan.md: limited-current bring-up, startup/load/wifi, thermal, PWM/NTC noise, wiring and fault tests."},
+    {"id": "thermal_cutoff", "status": "OPEN", "action": "Define application-dependent independent overtemperature protection and its wiring. No independent thermal cutoff is present on current PCB."},
+    {"id": "mechanical", "status": "OPEN", "action": "Print clip/rail coupon; check actual DevKit/socket/LCD stack, USB fit, connector grip and fully wired board removal. Verify enclosure temperatures."}
+  ],
+  "future_variants": [
+    {"input_V": 12, "status": "core startup exploration only", "action": "Review complete B protection/current/load and additional line/load conditions; do not carry 100 W rating over to 12 V."},
+    {"input_V": 5, "status": "not designed", "action": "Design protected low-drop 5 V distribution or other converter appropriate to source range. Current LM2596 input is not a 5 V pass-through."}
+  ]
+}

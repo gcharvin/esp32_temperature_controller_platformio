@@ -31,8 +31,16 @@ PGND puissance ── NT1, jonction cuivre près de l'entrée ── GND logique
 J8 et J9 et le module XL4015 sont supprimés. U1 a une sortie fixe 5 V : aucune
 consigne à régler. Sa broche 5 ON/OFF est reliée à PGND ; le buck est activé
 avec le 24 V. La limite étudiée est **0,8 A pour le système** ; F2 reste à 1 A.
-Les références d'approvisionnement précises de C9 et R13 restent à confirmer ;
-leurs empreintes et leurs caractéristiques requises sont définies.
+La revue d'approvisionnement propose C9 **C0805C104K5RACTU** et R13
+**WSL1206R0560FEA**. Leurs caractéristiques nominales correspondent aux
+exigences ; disponibilité, pastilles recommandées et procédé restent à
+approuver dans `../manufacturing/README.md` avant gel des MPN dans KiCad.
+
+A reçoit toujours 5 V régulé. Les futures B pourront recevoir 12 V ou 5 V
+avec leur propre adaptation d'alimentation ; cette B v0.5 n'est pas déclarée
+multitension. Le démarrage du cœur du buck à 12 V est étudié séparément ;
+aucune puissance de chauffage 100 W à 12 V/5 V n'est attribuée à cette carte.
+Voir `../manufacturing/power_and_usb_review.md`.
 
 Les masses gardent deux noms pour organiser leurs retours. NT1 les relie
 électriquement près de l'entrée ; ce n'est pas une isolation. Le trajet du

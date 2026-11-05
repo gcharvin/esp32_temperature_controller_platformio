@@ -6,6 +6,20 @@ Révision du **5 novembre 2026**. Les deux cartes sont routées dans les fichier
 
 Une [étude de buck intégré simulable dans KiCad](power_study/README.md) est disponible séparément : variante LM2596 fixe 5 V, six bancs transitoires réussis sous ngspice, sources et classeurs KiCad. Elle est intégrée au schéma et au routage de B v0.5 ; la maquette mécanique v0.7 reprend ce placement, sans module externe.
 
+**Contrat de plateforme : A reçoit toujours un 5 V régulé**, indépendamment de
+l'entrée 24 V, 12 V ou 5 V des futures cartes métier. Chaque B adapte sa propre
+alimentation. B température v0.5 reste une variante 24 V ; les autres tensions
+ne sont pas des modes qualifiés de cette carte. Voir la
+[revue alimentation/USB](manufacturing/power_and_usb_review.md) et le contrat
+`interface_ab.json`. Aucun 12/24 V sur A et aucune mise en parallèle de sources.
+
+Le [dossier de préparation de fabrication](manufacturing/README.md) fournit
+une BOM d'approvisionnement candidate, la répartition CMS/traversants, des
+CPL et Gerber/perçages **provisoires pour revue/devis**. Les deux sockets de
+la DevKit sont comptés séparément ; NT1 est exclu des achats. Le dossier
+n'est pas libéré pour commande : références, cotes DevKit, modes USB et
+aperçu d'assemblage restent à approuver.
+
 ## Fichiers à ouvrir
 
 | Objet | Fichier |

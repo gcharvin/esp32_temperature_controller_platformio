@@ -29,6 +29,12 @@ Conserver les résultats ERC/DRC avec les fichiers effectivement fabriqués.
 USB : procéder d'abord en alimentation USB seule selon la procédure de service
 du dépôt. La mise en parallèle VBUS/5 V externe n'est pas qualifiée ; l'ouverture
 latérale du boîtier ne résout pas la sélection des sources.
+Ce point vaut aussi pour les futures alimentations 12 V ou 5 V de B : A reste
+sous 5 V régulé. La stratégie, les mesures de la DevKit et le mode série
+alimenté restant à qualifier sont détaillés dans
+`../../manufacturing/power_and_usb_review.md`. Les points avant commande sont
+séparés des essais après réception dans
+`../../manufacturing/release_checklist.json`.
 
 Les surtensions, le déclenchement des fusibles, le court-circuit prolongé et la
 coupure thermique indépendante restent des qualifications distinctes. La
