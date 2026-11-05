@@ -1,5 +1,5 @@
 {
-  "revision": "0.6 - lateral passive ventilation / diagnostic PCB envelopes",
+  "revision": "0.7 - PCB B v0.5 integrated LM2596 / external XL4015 bay removed",
   "case_mm": {
     "width": 155,
     "height": 100,
@@ -116,38 +116,8 @@
       "front into tube",
       "USB male cable",
       "B carrier",
-      "independent XL4015 carrier",
       "rear panel"
     ]
-  },
-  "buck": {
-    "pcb_origin_x_z_mm": [
-      8,
-      22
-    ],
-    "pcb_face_depth_mm": 83,
-    "board_mm": [
-      26.3,
-      51,
-      1.6
-    ],
-    "overall_depth_mm": 14,
-    "edge_clearance_assumed_mm": 2,
-    "extraction_mm": 60,
-    "terminal_screw_x_mm": [
-      13,
-      18
-    ],
-    "terminal_screw_z_mm": [
-      28,
-      67
-    ],
-    "pot_screw_x_mm": [
-      25,
-      30
-    ],
-    "pot_screw_z_mm": 46,
-    "lower_groove_capture_mm": 1.5
   },
   "ventilation": {
     "sides": [
@@ -162,5 +132,20 @@
     "lower_z_mm": 5.5,
     "upper_z_mm": 90.5,
     "notes": "Side walls only; roof and base remain closed. No airflow/temperature qualification."
+  },
+  "electronics_revision": {
+    "A": "0.4",
+    "B": "0.5 integrated LM2596",
+    "external_buck": false
+  },
+  "JST_service": {
+    "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+    "housing_family": "XHP",
+    "depth_mm": 5.7,
+    "width_end_allowance_mm": 4.8,
+    "pitch_mm": 2.5,
+    "envelope_margin_each_side_mm": 0.25,
+    "extraction_corridor_mm": 35,
+    "notes": "XHP width = (circuits-1)*pitch+4.8. Clearance is for plug body and nominal margin, not fingers; real mating and cable slack require physical test."
   }
 }

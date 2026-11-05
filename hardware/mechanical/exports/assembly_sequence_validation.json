@@ -107,7 +107,7 @@
         -40,
         0
       ],
-      "prism_count": 220,
+      "prism_count": 240,
       "reversible": true
     },
     {
@@ -118,44 +118,11 @@
         0,
         -3.5
       ],
-      "prism_count": 220,
+      "prism_count": 240,
       "reversible": true
     },
     {
       "stage": "3 B outside tube: pivot and release clips",
-      "method": "BRep poses at 0.1 degree intervals",
-      "angle_deg": [
-        4,
-        0
-      ],
-      "clips_held_outward_mm": 2.4,
-      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
-      "reversible": true
-    },
-    {
-      "stage": "3b buck outside tube: approach above groove lip",
-      "method": "planar-face translational swept volumes",
-      "translation_mm": [
-        0,
-        -40,
-        0
-      ],
-      "prism_count": 38,
-      "reversible": true
-    },
-    {
-      "stage": "3b buck outside tube: lower into groove",
-      "method": "planar-face translational swept volumes",
-      "translation_mm": [
-        0,
-        0,
-        -3.5
-      ],
-      "prism_count": 38,
-      "reversible": true
-    },
-    {
-      "stage": "3b buck outside tube: pivot and release clips",
       "method": "BRep poses at 0.1 degree intervals",
       "angle_deg": [
         4,
@@ -195,18 +162,7 @@
         50,
         0
       ],
-      "prism_count": 156,
-      "reversible": true
-    },
-    {
-      "stage": "6b independent buck extraction",
-      "method": "planar-face translational swept volumes",
-      "translation_mm": [
-        0,
-        60,
-        0
-      ],
-      "prism_count": 44,
+      "prism_count": 168,
       "reversible": true
     },
     {
@@ -217,37 +173,38 @@
         60,
         0
       ],
-      "prism_count": 33,
+      "prism_count": 32,
       "reversible": true
-    },
-    {
-      "stage": "8 buck screwdriver service",
-      "shaft_diameter_mm": 6,
-      "rear_panel_removed": true,
-      "method": "BRep intersection of reserved tool cylinders",
-      "terminal_and_trimmer_positions": "approximate, verify purchased module"
     },
     {
       "stage": "9 B connector service",
       "rear_panel_removed": true,
       "shaft_diameter_mm": 6,
       "JST_rear_corridor_length_mm": 35,
+      "JST_housing_basis": {
+        "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "housing_family": "XHP",
+        "depth_mm": 5.7,
+        "width_end_allowance_mm": 4.8,
+        "pitch_mm": 2.5,
+        "envelope_margin_each_side_mm": 0.25,
+        "extraction_corridor_mm": 35,
+        "notes": "XHP width = (circuits-1)*pitch+4.8. Clearance is for plug body and nominal margin, not fingers; real mating and cable slack require physical test."
+      },
       "terminal_refs": [
         "J2",
-        "J3",
-        "J8"
+        "J3"
       ],
       "JST_refs": [
         "J1",
         "J4",
         "J6",
-        "J7",
-        "J9"
+        "J7"
       ],
-      "method": "BRep intersection above connector envelopes; actual contacts and side wire entries unqualified"
+      "method": "BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified"
     }
   ],
   "failures": [],
-  "reverse_order": "rear off; B or buck independently disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped",
+  "reverse_order": "rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped",
   "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
 }

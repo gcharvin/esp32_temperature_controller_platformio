@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 import math
 import sys
+import hashlib
 import cadquery as cq
 
 HERE=Path(__file__).resolve().parent
@@ -30,8 +31,7 @@ PRINT_NAMES={
  '01_Shell_open_front_and_rear':'01_Coque_ouverte',
  '02_Removable_front_LCD_A':'02_Facade_supports_LCD_A',
  '03_B_removable_carrier':'03_Berceau_B',
- '04_Rear_panel_with_latches':'04_Panneau_arriere',
- '05_XL4015_removable_carrier':'05_Berceau_XL4015'}
+ '04_Rear_panel_with_latches':'04_Panneau_arriere'}
 COLORS={'shell':(.78,.82,.85),'rear':(.54,.64,.70),'tray':(.95,.64,.25),
         'pcb':(.10,.48,.34),'module':(.20,.24,.29),'connector':(.92,.90,.79),
         'chip':(.18,.20,.22),'lcd':(.08,.19,.26),'metal':(.68,.71,.74),
@@ -199,14 +199,6 @@ def main(validate=True):
         shell=shell.union(box(bx+86,78,z,W-T+.5-(bx+86),29,2))
     # Front stops, only at the carrier sides; board remains freely extractible.
     for x in (bx-4,bx+86):shell=shell.union(box(x,77.5,fmin-gap-.3,8,2.9,4+gap+.3))
-    # Independent buck cassette in the left bay, sliding out rearward.
-    buck=P['buck'];kx,kz=buck['pcb_origin_x_z_mm'];kw,kh,kt=buck['board_mm'];kf=buck['pcb_face_depth_mm']
-    assert kt==P['pcb_thickness_mm']
-    buck_frame=pcb_frame(kx,kz,kw,kh,kf,groove_capture=buck['lower_groove_capture_mm'])
-    buck_frame=buck_frame.union(box(4,83,33,4,20,10))
-    for gz in (15.75,77.25):shell=shell.union(box(2.5,78,gz,37.55,24.7,2))
-    shell=shell.union(box(38.55,78,15.75,1.5,29,63.5))
-    shell=shell.union(box(2.5,75.5,18,7,2.9,4))
     shell=lateral_vents(shell,bare_tube)
     # Rear panel: integral locating lip and two cantilever side latches.
     rc=P['rear_panel_mm']['lip_clearance'];ld=P['rear_panel_mm']['lip_depth']
@@ -219,12 +211,10 @@ def main(validate=True):
     panel=fuse([panel,lip,latch,latch.mirror('YZ').translate((W,0,0))])
     # Soft stop behind the carrier's right handle, gap at rest.
     panel=panel.union(box(bx+93,103.3,bz+24,4,rear_y-103.3,8))
-    panel=panel.union(box(4,103.3,34,4,rear_y-103.3,8))
     for port in P['bulkheads']:
         panel=panel.cut(cyl(port['center_x_mm'],rear_y-ld-.1,port['center_z_mm'],
                             port['hole_diameter_mm']/2,front+ld+.2))
     RELEASED_PRINT_SHAPES['rear']=panel.cut(latch).cut(latch.mirror('YZ').translate((W,0,0))).union(latch.translate((1.5,0,0))).union(latch.mirror('YZ').translate((W-1.5,0,0)))
-    add('05_XL4015_removable_carrier',buck_frame,'tray','buck')
     add('01_Shell_open_front_and_rear',shell,'shell','shell')
     add('02_Removable_front_LCD_A',facade,'shell','front')
     add('03_B_removable_carrier',tray,'tray','B')
@@ -244,6 +234,7 @@ def main(validate=True):
                 color='module' if ref=='U1' else 'connector'
             else:height=1.5;color='chip'
             height=row.get('height_mm',height)
+            if height<=0:continue  # NT1 is copper, not a mechanical part
             add(group+'_'+ref+'_ENVELOPE',box(x+rx,face,H-y-ry-rh,rw,height,rh),color,group)
     # Purchased DevKit: two socket strips, PCB, RF shield and USB-C envelope.
     for z in (34.03,59.43):add('A_DEVKIT_SOCKET_'+str(z),box(20.95,45,z,38.1,8.5,2.54),'connector','A')
@@ -251,15 +242,6 @@ def main(validate=True):
     add('A_DIYMORE_RF_SHIELD',box(21,55.1,36,23,3,24),'metal','A')
     add('A_DIYMORE_CH340',box(49,55.1,43,8,2,10),'chip','A')
     add('A_DIYMORE_USB_C',box(65,55.1,43.5,4,3,9),'metal','A')
-    # XL4015 rotated in-plane to fit the independent left bay. Component
-    # footprints are planning envelopes; a 2mm edge service band is assumed.
-    add('XL4015_PCB',box(kx,kf-kt,kz,kw,kt,kh),'pcb','buck')
-    buck_body=box(10,83,24,22.3,12.4,47)
-    for z in (24,63):buck_body=buck_body.cut(box(9.9,82.9,z-.1,11.2,12.6,8.2))
-    for x in (23,28):buck_body=buck_body.cut(box(x,89,43,4,6.5,6))
-    add('XL4015_COMPONENT_ENVELOPE',buck_body,'module','buck')
-    for z in (24,63):add('XL4015_TERMINAL_'+str(z),box(10,83,z,11,10,8),'connector','buck')
-    for x in (23,28):add('XL4015_TRIMMER_'+str(x),box(x,89,43,4,6.4,6),'trimmer','buck')
     # LCD simplified reference assembly. Front optical opening is independent.
     add('LCD_PCB_98x60_TBD',box(8,13.5,28,98,1.6,60),'pcb','LCD')
     add('LCD_front_bezel_TBD',box(15,3.4,40,84,10.1,36),'lcd','LCD')
@@ -295,9 +277,17 @@ def main(validate=True):
         add('BULKHEAD_'+port['name']+'_TBD',body,'metal' if 'PROBE' in port['name'] else 'module','rear')
         add('CABLE_'+port['name'],cyl(x,D-inside,z,port['cable_diameter_mm']/2,inside+outside+12),'wire','rear',False)
     # Three A/B bundle paths, only indicative routing, not minimum bend radii.
-    paths=[[(102,54.8,76),(138,62,76),(138,100,76),(55,100,29),(55,94.8,29)],
-           [(102,54.8,60),(138,64,60),(138,101,60),(74,101,29),(74,94.8,29)],
-           [(96,54.8,43),(138,66,55),(138,102,55),(96,102,29),(96,94.8,29)]]
+    paths=[]
+    for ref in ('J1','J6','J7'):
+        endpoints=[]
+        for group in ('A','B'):
+            board=next(b for b in LAYOUT['boards'] if b['name']==('pcb_a_display' if group=='A' else 'pcb_b_temperature'))
+            row=next(r for r in board['components'] if r['reference']==ref)
+            ox,oy,face=LAYOUT['assembly'][group+'_board_origin_x_y_d_mm']
+            rx,ry,rw,rh=row['bounds_mm']
+            endpoints.append((ox+rx+rw/2,face+row['height_mm'],H-oy-ry-rh/2))
+        start,end=endpoints
+        paths.append([start,(138,65,start[2]),(138,104,end[2]),(end[0],104,end[2]),end])
     for i,path in enumerate(paths,1):
         segments=[]
         for start,end in zip(path,path[1:]):
@@ -306,6 +296,28 @@ def main(validate=True):
         add(f'BUNDLE_AB_{i}_SCHEMATIC',fuse(segments),'wire','wire',False)
     if validate:validate_export()
     render_previews()
+    if validate:write_source_manifest()
+
+
+def write_source_manifest():
+    """Record the inputs after a successful complete generation."""
+    validation=json.loads((OUT/'validation.json').read_text(encoding='utf-8'))
+    paths=json.loads((OUT/'assembly_sequence_validation.json').read_text(encoding='utf-8'))
+    assert not validation['collisions_mm3'] and not paths['failures']
+    assert validation['printed_parts_STEP']['solid_count']==len(PRINT_NAMES)==4
+    assert not any('XL4015' in item['name'] or item['group']=='buck' for item in validation['parts'])
+    inputs=[HERE/'build_enclosure.py',HERE/'enclosure_parameters.json',ROOT/'placement.json',
+            ROOT/'pcb_a_display/pcb_a_display.kicad_pcb',ROOT/'pcb_b_temperature/pcb_b_temperature.kicad_pcb']
+    geometry=json.dumps({'boards':LAYOUT['boards'],'assembly':LAYOUT['assembly']},sort_keys=True)
+    manifest=dict(revision=P['revision'],source_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},
+        placement_geometry_projection_sha256=hashlib.sha256(geometry.encode()).hexdigest(),
+        printed_parts=4,assembled_STEP_solids=validation['STEP_round_trip_solids'],assembly_service_stages=len(paths['tests']),
+        static_collisions=0,assembly_failures=0,external_buck=False,fusion_import_tested=False,
+        connector_review=dict(ref='J1 near C10',legacy_overpadded_corridor_overlap_mm3=10.96875,
+            resolution='Manufacturer XHP body with 0.25mm each-side margin replaces generic footprint+1mm corridor',
+            manufacturer_source=P['JST_service']['source'],finger_and_cable_clearance_tested=False),
+        limits=['Rigid-body envelope model, not exact supplier component CAD','Real print, grip, cable slack, flexure and thermal tests pending'])
+    (OUT/'source_manifest_v07.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
 
 def _shape(value):
     return value.val() if isinstance(value,cq.Workplane) else value
@@ -393,12 +405,10 @@ def verify_assembly_paths():
         tests.append({'stage':tag+': pivot and release clips','method':'BRep poses at 0.1 degree intervals',
                       'angle_deg':[4,0],'clips_held_outward_mm':2.4,
                       'note':'Free arm/hook translated as release envelope; no elastic/FEM claim','reversible':True})
-    lcd_frame,a_frame,b_frame,buck_frame=FRAME_GEOMETRIES
+    lcd_frame,a_frame,b_frame=FRAME_GEOMETRIES
     board_loading('1 LCD outside tube',lcd,lcd_frame,facade,[],True)
     board_loading('2 A outside tube',a_parts,a_frame,facade,lcd+encoder)
     board_loading('3 B outside tube',[p for p in b_parts if p['name'] not in PRINT_NAMES],b_frame,byname['03_B_removable_carrier']['shape'],[])
-    buck_parts=[p for p in PARTS if p['group']=='buck']
-    board_loading('3b buck outside tube',[p for p in buck_parts if p['name'] not in PRINT_NAMES],buck_frame,byname['05_XL4015_removable_carrier']['shape'],[])
     # Front latch hooks are held inward; male USB and flexible bundles disconnected.
     equipped_front=[RELEASED_PRINT_SHAPES['front']]+[p['shape'] for p in a_parts+lcd+encoder]
     translating('4 equipped front enters from front',shift_shapes(equipped_front,(0,-100,0)),(0,100,0),
@@ -408,18 +418,10 @@ def verify_assembly_paths():
     translating('5 USB male plug insertion after front fitted',[usb_plug.translate((15,0,0))],(-15,0,0),
                 [tube]+front_at_rest+[p['shape'] for p in usb_fixed])
     translating('6 B carrier extraction / reverse insertion',[p['shape'] for p in b_parts],(0,50,0),
-                [tube]+front_at_rest+[p['shape'] for p in usb_fixed]+[usb_plug]+[p['shape'] for p in buck_parts])
-    translating('6b independent buck extraction',[p['shape'] for p in buck_parts],(0,60,0),[tube]+front_at_rest+[p['shape'] for p in usb_fixed]+[usb_plug]+[p['shape'] for p in b_parts])
+                [tube]+front_at_rest+[p['shape'] for p in usb_fixed]+[usb_plug])
     rear_parts=[RELEASED_PRINT_SHAPES['rear']]+[p['shape'] for p in PARTS if p['group']=='rear' and p['physical'] and not p['name'].startswith('04_')]
     translating('7 rear panel withdrawal / reverse insertion',rear_parts,(0,60,0),
-                [tube]+front_at_rest+[p['shape'] for p in usb_fixed]+[usb_plug]+[p['shape'] for p in b_parts+buck_parts])
-    # Tool service volumes after rear panel removal: straight rear approach.
-    tools=[]
-    for tx in P['buck']['terminal_screw_x_mm']:
-        for tz in P['buck']['terminal_screw_z_mm']:tools.append(cyl(tx,96,tz,3,50))
-    for tx in P['buck']['pot_screw_x_mm']:tools.append(cyl(tx,96,46,3,50))
-    collision('8 buck terminal and trimmer screwdriver corridors',tools,[p['shape'] for p in PARTS if p['physical'] and p['group'] not in ('rear','wire')])
-    tests.append({'stage':'8 buck screwdriver service','shaft_diameter_mm':6,'rear_panel_removed':True,'method':'BRep intersection of reserved tool cylinders','terminal_and_trimmer_positions':'approximate, verify purchased module'})
+                [tube]+front_at_rest+[p['shape'] for p in usb_fixed]+[usb_plug]+[p['shape'] for p in b_parts])
     # Free corridors ABOVE the terminal/housing envelopes. Connector mating
     # detail is deliberately not asserted by these simplified component boxes.
     bspec=next(b for b in LAYOUT['boards'] if b['name']=='pcb_b_temperature')
@@ -428,21 +430,26 @@ def verify_assembly_paths():
     for row in bspec['components']:
         ref=row['reference'];rx,ry,rw,rh=row['bounds_mm']
         y0=bface+row['height_mm']+.2
-        if ref in ('J2','J3','J8'):
+        if ref in ('J2','J3'):
             px,py=row['origin_mm'];angle=math.radians(row['rotation_deg'])
             for dx in (0,5.08):
                 tool_corridors.append(cyl(bx+px+dx*math.cos(angle),y0,H-by-py+dx*math.sin(angle),3,50))
-        elif ref in ('J1','J4','J6','J7','J9'):
-            plug_corridors.append(box(bx+rx-1,y0,H-by-ry-rh-1,rw+2,35,rh+2))
+        elif ref in ('J1','J4','J6','J7'):
+            config=P['JST_service'];circuits={'J1':2,'J4':2,'J6':3,'J7':6}[ref]
+            margin=config['envelope_margin_each_side_mm']
+            plugw=(circuits-1)*config['pitch_mm']+config['width_end_allowance_mm']+2*margin
+            plugh=config['depth_mm']+2*margin
+            # Centered on the header footprint's mating axis; excludes finger room.
+            plug_corridors.append(box(bx+rx+rw/2-plugw/2,y0,H-by-ry-rh/2-plugh/2,plugw,config['extraction_corridor_mm'],plugh))
     service_obstacles=[p['shape'] for p in PARTS if p['physical'] and p['group'] not in ('rear','wire')]
     collision('9 B terminal screwdriver corridors',tool_corridors,service_obstacles)
     collision('9 B JST axial service corridors',plug_corridors,service_obstacles)
     tests.append({'stage':'9 B connector service','rear_panel_removed':True,'shaft_diameter_mm':6,
-                  'JST_rear_corridor_length_mm':35,'terminal_refs':['J2','J3','J8'],
-                  'JST_refs':['J1','J4','J6','J7','J9'],
-                  'method':'BRep intersection above connector envelopes; actual contacts and side wire entries unqualified'})
+                  'JST_rear_corridor_length_mm':P['JST_service']['extraction_corridor_mm'],'JST_housing_basis':P['JST_service'],'terminal_refs':['J2','J3'],
+                  'JST_refs':['J1','J4','J6','J7'],
+                  'method':'BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified'})
     result={'tests':tests,'failures':failures,
-            'reverse_order':'rear off; B or buck independently disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped',
+            'reverse_order':'rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped',
             'limits':'Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation.'}
     (OUT/'assembly_sequence_validation.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     if failures:raise AssertionError(failures[:25])
@@ -451,16 +458,16 @@ def verify_assembly_paths():
 
 
 def validate_export():
-    assembled=cq.Assembly(name='Laboratory_controller_fit_study_06_side_vents')
-    exploded=cq.Assembly(name='Exploded_fit_study_06_side_vents')
-    printed=cq.Assembly(name='Boitier_5_pieces_a_imprimer')
-    printed_exploded=cq.Assembly(name='Boitier_5_pieces_vue_eclatee')
+    assembled=cq.Assembly(name='Laboratory_controller_fit_study_07_integrated_buck')
+    exploded=cq.Assembly(name='Exploded_fit_study_07_integrated_buck')
+    printed=cq.Assembly(name='Boitier_4_pieces_a_imprimer')
+    printed_exploded=cq.Assembly(name='Boitier_4_pieces_vue_eclatee')
     print_names=PRINT_NAMES
     groups={key:cq.Assembly(name=label) for key,label in [
         ('plastic','01_Pieces_imprimees'),('A','02_Carte_A_reference'),
-        ('B','03_Carte_B_reference'),('buck','07_XL4015_reference'),('LCD','04_Afficheur_encodeur_reference'),
+        ('B','03_Carte_B_reference'),('LCD','04_Afficheur_encodeur_reference'),
         ('external','05_Passe_paroi_et_faisceaux_reference'),('USB','06_USB_maintenance_reference')]}
-    partsdir=OUT/'parts_v06';partsdir.mkdir(exist_ok=True)
+    partsdir=OUT/'parts_v07';partsdir.mkdir(exist_ok=True)
     summary={'status':'unqualified fit mock-up, not production design','parts':[],'collisions_mm3':[],
              'coordinates':'x left-right, y front-rear, z bottom-top (mm)',
              'case_mm':P['case_mm'],'bulkheads':P['bulkheads'],'usb_service':P['usb_service'],'retention':P['retention'],
@@ -468,9 +475,9 @@ def validate_export():
     for part in PARTS:
         s=part['shape'];name=part['name'];vol=s.val().Volume()
         assert vol>0 and s.val().isValid(),name
-        group='plastic' if name in print_names else part['group'] if part['group'] in ('A','B','LCD','USB','buck') else 'external'
+        group='plastic' if name in print_names else part['group'] if part['group'] in ('A','B','LCD','USB') else 'external'
         groups[group].add(s,name=name,color=cq.Color(*part['color']))
-        shift=-85 if part['group'] in ('front','A','LCD') else 60 if part['group']=='buck' else 50 if part['group']=='B' else (85 if part['group']=='rear' else 0)
+        shift=-85 if part['group'] in ('front','A','LCD') else 50 if part['group']=='B' else (85 if part['group']=='rear' else 0)
         if part['group']!='wire':exploded.add(s.translate((0,shift,0)),name=name,color=cq.Color(*part['color']))
         summary['parts'].append({'name':name,'volume_mm3':round(vol,3),'solids':len(s.val().Solids()),'group':part['group']})
         if name in PRINT_NAMES:
@@ -487,7 +494,7 @@ def validate_export():
         for b in plastic+others:
             if a is b:continue
             if b in plastic and a['name']>b['name']:continue
-            overlap=a['shape'].val().intersect(b['shape'].val()).Volume()
+            overlap=_overlap(a['shape'],b['shape'])
             if overlap>1e-4:summary['collisions_mm3'].append([a['name'],b['name'],round(overlap,5)])
     for a,b in [('PCB_A','PCB_B')]:
         sa=next(p['shape'] for p in PARTS if p['name']==a)
@@ -496,21 +503,21 @@ def validate_export():
     b_parts=[p for p in PARTS if p['group']=='B' and p['physical']]
     for usb_part in [part for part in PARTS if part['group']=='USB' and part['physical']]:
         for other in [part for part in PARTS if part['group'] in ('A','B','LCD') and part['physical']]:
-            overlap=usb_part['shape'].val().intersect(other['shape'].val()).Volume()
+            overlap=_overlap(usb_part['shape'],other['shape'])
             if overlap>1e-4:summary['collisions_mm3'].append([usb_part['name'],other['name'],round(overlap,5)])
     b_envelope=cq.Compound.makeCompound([p['shape'].val() for p in b_parts]).BoundingBox()
     swept=box(b_envelope.xmin,b_envelope.ymin,b_envelope.zmin,
               b_envelope.xlen,b_envelope.ylen+50,b_envelope.zlen)
     # B and its carrier can translate 50 mm rearward after panel/cables removal.
-    fixed=[p for p in PARTS if p['group'] in ('shell','front','A','LCD','USB','buck')]
+    fixed=[p for p in PARTS if p['group'] in ('shell','front','A','LCD','USB')]
     for obstacle in fixed:
-        volume=swept.val().intersect(obstacle['shape'].val()).Volume()
+        volume=_overlap(swept,obstacle['shape'])
         if volume>1e-4:summary['collisions_mm3'].append(['B_swept_bounding_box_0_to_50',obstacle['name'],round(volume,5)])
     for distance in (0,10,25,50):
         for moving in [p for p in PARTS if p['group']=='B' and p['physical']]:
             shape=moving['shape'].translate((0,distance,0))
             for obstacle in fixed:
-                vol=shape.val().intersect(obstacle['shape'].val()).Volume()
+                vol=_overlap(shape,obstacle['shape'])
                 if vol>1e-4:summary['collisions_mm3'].append(['B_extraction_'+str(distance),moving['name'],obstacle['name'],round(vol,5)])
     (OUT/'validation.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
     if summary['collisions_mm3']:raise AssertionError(summary['collisions_mm3'])
@@ -523,12 +530,12 @@ def validate_export():
     printed_exploded.export(str(OUT/'enclosure_printed_parts_exploded.step'))
     imported_printed=cq.importers.importStep(str(OUT/'enclosure_printed_parts.step'))
     print_solids=imported_printed.val().Solids()
-    assert len(print_solids)==5 and all(s.isValid() for s in print_solids)
+    assert len(print_solids)==len(PRINT_NAMES) and all(s.isValid() for s in print_solids)
     expected_volume=sum(part['shape'].val().Volume() for part in PARTS if part['name'] in print_names)
     assert math.isclose(imported_printed.val().Volume(),expected_volume,rel_tol=1e-8)
-    (OUT/'enclosure_v06_side_vents.step').write_bytes((OUT/'enclosure_assembled.step').read_bytes())
-    (OUT/'enclosure_v06_printed_parts.step').write_bytes((OUT/'enclosure_printed_parts.step').read_bytes())
-    summary['printed_parts_STEP']={'file':'enclosure_printed_parts.step','components':list(print_names.values()),'solid_count':5,'one_connected_solid_per_print_part':True}
+    (OUT/'enclosure_v07_integrated_buck.step').write_bytes((OUT/'enclosure_assembled.step').read_bytes())
+    (OUT/'enclosure_v07_printed_parts.step').write_bytes((OUT/'enclosure_printed_parts.step').read_bytes())
+    summary['printed_parts_STEP']={'file':'enclosure_printed_parts.step','components':list(print_names.values()),'solid_count':len(PRINT_NAMES),'one_connected_solid_per_print_part':True}
     # Round-trip the exchange format, including checks against accidental empty exports.
     reimport=cq.importers.importStep(str(OUT/'enclosure_assembled.step'))
     assert reimport.val().isValid() and len(reimport.val().Solids())>=len(PARTS)
@@ -557,21 +564,21 @@ def render_previews():
         a=vtk.vtkActor();a.SetMapper(mapper);a.GetProperty().SetColor(*part['color'])
         a.GetProperty().SetOpacity(opacity);a.GetProperty().SetSpecular(.2);a.GetProperty().SetSpecularPower(35)
         return a
-    for mode,camera in [('assembled',(230,-260,175)),('side_vents',(420,100,170)),('exploded',(290,330,230)),('service',(260,400,185)),('buck',(100,240,140)),('front_module',(220,200,155)),('front_lcd',(190,160,140)),('rear',(72,400,50)),('clips',(175,245,145)),('lcd_mount',(185,155,140)),('usb',(340,-80,140))]:
+    for mode,camera in [('assembled',(230,-260,175)),('side_vents',(420,100,170)),('exploded',(290,330,230)),('service',(260,400,185)),('b_power',(100,240,140)),('front_module',(220,200,155)),('front_lcd',(190,160,140)),('rear',(72,400,50)),('clips',(175,245,145)),('lcd_mount',(185,155,140)),('usb',(340,-80,140))]:
         renderer=vtk.vtkRenderer();renderer.SetBackground(.94,.96,.97)
         scene=LCD_DETAIL+[p for p in PARTS if p['name'].startswith('LCD_')] if mode=='lcd_mount' else PARTS
         for part in scene:
             if mode=='clips' and part['group']!='B':continue
-            if mode=='buck' and part['group']!='buck':continue
+            if mode=='b_power' and part['group']!='B':continue
             if mode=='service' and (part['group'] in ('rear','wire') or not part['physical']):continue
             if mode=='front_module' and part['group'] not in ('front','A','LCD'):continue
             if mode=='front_lcd' and not (part['group']=='front' or part['name'].startswith('LCD_')):continue
             if mode=='exploded' and (part['group']=='wire' or not part['physical']):continue
-            shift=(-85 if part['group'] in ('front','A','LCD') else 60 if part['group']=='buck' else 50 if part['group']=='B' else 85 if part['group']=='rear' else 0) if mode=='exploded' else 0
+            shift=(-85 if part['group'] in ('front','A','LCD') else 50 if part['group']=='B' else 85 if part['group']=='rear' else 0) if mode=='exploded' else 0
             alpha=.15 if mode in ('exploded','service') and part['group']=='shell' else 1
             renderer.AddActor(actor(part,shift,alpha))
         cam=renderer.GetActiveCamera();cam.SetPosition(*camera);cam.SetFocalPoint(85 if mode=='clips' else 72,12 if mode=='lcd_mount' else 85 if mode=='clips' else 90 if mode=='exploded' else 52,58 if mode=='lcd_mount' else 50)
-        cam.SetViewUp(0,0,1);cam.ParallelProjectionOn();renderer.ResetCamera();cam.Zoom(.85 if mode=='buck' else .90 if mode in ('front_lcd','front_module') else 1.0 if mode=='lcd_mount' else 1.12)
+        cam.SetViewUp(0,0,1);cam.ParallelProjectionOn();renderer.ResetCamera();cam.Zoom(.85 if mode=='b_power' else .90 if mode in ('front_lcd','front_module') else 1.0 if mode=='lcd_mount' else 1.12)
         window=vtk.vtkRenderWindow();window.SetOffScreenRendering(1);window.SetSize(1600,1100)
         window.SetMultiSamples(8);window.AddRenderer(renderer);window.Render()
         capture=vtk.vtkWindowToImageFilter();capture.SetInput(window);capture.Update()
@@ -581,10 +588,10 @@ def render_previews():
         try:font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',28);small=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',21)
         except OSError:font=small=ImageFont.load_default()
         titles={'side_vents':'VENTILATION PASSIVE - ouies basses et hautes sur les deux flancs',
-                'assembled':'MAQUETTE 0.6 - facade / boitier assemble',
-                'exploded':'MAQUETTE 0.6 - facade equipee / coque / B / buck / panneau arriere',
-                'service':'ARRIERE OUVERT - carte B et XL4015 sur leurs berceaux independants',
-                'buck':'XL4015 - berceau independant, rainure basse et deux clips lateraux',
+                'assembled':'MAQUETTE 0.7 - facade / boitier assemble',
+                'exploded':'MAQUETTE 0.7 - facade equipee / coque / B avec buck integre / panneau arriere',
+                'service':'ARRIERE OUVERT - carte B avec convertisseur 5 V integre',
+                'b_power':'CARTE B - LM2596, self, condensateurs et clips du berceau',
                 'front_module':'FACADE EQUIPEE - ecran puis carte A montes hors du boitier',
                 'front_lcd':'ETAPE 1 - LCD monte, support A encore vide',
                 'rear':'PANNEAU ARRIERE - passages de paroi provisoires',
@@ -593,9 +600,9 @@ def render_previews():
                 'usb':'USB LATERAL - acces prevu pour flash et monitoring serie'}
         draw.text((35,24),titles[mode],font=font,fill='#18313e')
         draw.text((35,1050),'Volumes de composants et connecteurs a confirmer - clips non qualifies - pas de fabrication finale',font=small,fill='#435966')
-        if mode=='exploded':draw.text((35,75),'Facade vers avant ; B et buck independamment vers arriere, faisceaux debranches.',font=small,fill='#435966')
-        if mode=='service':draw.text((35,75),'Coque rendue transparente pour inspection. Acces borniers et reglages depuis arriere.',font=small,fill='#435966')
-        if mode=='buck':draw.text((35,75),'Dimensions module 51 x 26,3 x 14 mm ; details et marges de bord a mesurer.',font=small,fill='#435966')
+        if mode=='exploded':draw.text((35,75),'Facade vers avant ; B vers arriere, faisceaux debranches.',font=small,fill='#435966')
+        if mode=='service':draw.text((35,75),'Coque rendue transparente pour inspection. Acces borniers et connecteurs depuis arriere.',font=small,fill='#435966')
+        if mode=='b_power':draw.text((35,75),'PCB 90 x 65 mm ; L1 : 7 mm ; C10 : 12,5 mm ; Q1 : 17 mm. Aucun module externe.',font=small,fill='#435966')
         if mode=='front_module':draw.text((35,75),'Vue depuis arriere : A masque le LCD. Les deux supports appartiennent a la facade imprimee.',font=small,fill='#435966')
         if mode=='front_lcd':draw.text((35,75),'LCD passe dans le cadre A vide, puis se place dans sa rainure et ses clips. Poser A ensuite.',font=small,fill='#435966')
         if mode=='usb':

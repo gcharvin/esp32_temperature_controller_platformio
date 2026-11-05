@@ -2,14 +2,8 @@
   "status": "unqualified fit mock-up, not production design",
   "parts": [
     {
-      "name": "05_XL4015_removable_carrier",
-      "volume_mm3": 4666.33,
-      "solids": 1,
-      "group": "buck"
-    },
-    {
       "name": "01_Shell_open_front_and_rear",
-      "volume_mm3": 172492.422,
+      "volume_mm3": 166142.432,
       "solids": 1,
       "group": "shell"
     },
@@ -27,7 +21,7 @@
     },
     {
       "name": "04_Rear_panel_with_latches",
-      "volume_mm3": 48549.961,
+      "volume_mm3": 48293.161,
       "solids": 1,
       "group": "rear"
     },
@@ -170,13 +164,7 @@
       "group": "B"
     },
     {
-      "name": "B_C1_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C2_ENVELOPE",
+      "name": "B_R3_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
@@ -188,104 +176,8 @@
       "group": "B"
     },
     {
-      "name": "B_C4_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C5_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C6_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C7_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C8_ENVELOPE",
-      "volume_mm3": 859.823,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D2_ENVELOPE",
-      "volume_mm3": 80.753,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D3_ENVELOPE",
-      "volume_mm3": 16.902,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D4_ENVELOPE",
-      "volume_mm3": 80.753,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D5_ENVELOPE",
-      "volume_mm3": 5.806,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D6_ENVELOPE",
-      "volume_mm3": 5.806,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D7_ENVELOPE",
-      "volume_mm3": 5.806,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D8_ENVELOPE",
-      "volume_mm3": 5.806,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_F1_ENVELOPE",
-      "volume_mm3": 74.151,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_F2_ENVELOPE",
-      "volume_mm3": 74.151,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J1_ENVELOPE",
-      "volume_mm3": 563.108,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J2_ENVELOPE",
-      "volume_mm3": 1223.26,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J3_ENVELOPE",
-      "volume_mm3": 1223.26,
+      "name": "B_L1_ENVELOPE",
+      "volume_mm3": 2326.957,
       "solids": 1,
       "group": "B"
     },
@@ -296,56 +188,8 @@
       "group": "B"
     },
     {
-      "name": "B_J6_ENVELOPE",
-      "volume_mm3": 729.708,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J7_ENVELOPE",
-      "volume_mm3": 1229.508,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J8_ENVELOPE",
-      "volume_mm3": 1223.26,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J9_ENVELOPE",
-      "volume_mm3": 563.108,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_Q1_ENVELOPE",
-      "volume_mm3": 887.783,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_Q2_ENVELOPE",
-      "volume_mm3": 116.687,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R1_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R10_ENVELOPE",
-      "volume_mm3": 2.727,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R11_ENVELOPE",
-      "volume_mm3": 2.727,
+      "name": "B_D9_ENVELOPE",
+      "volume_mm3": 160.299,
       "solids": 1,
       "group": "B"
     },
@@ -356,19 +200,13 @@
       "group": "B"
     },
     {
-      "name": "B_R2_ENVELOPE",
-      "volume_mm3": 6.818,
+      "name": "B_U5_ENVELOPE",
+      "volume_mm3": 22.566,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_R3_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R4_ENVELOPE",
+      "name": "B_C5_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
@@ -380,32 +218,98 @@
       "group": "B"
     },
     {
-      "name": "B_R6_ENVELOPE",
+      "name": "B_R11_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C2_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_R7_ENVELOPE",
+      "name": "B_C8_ENVELOPE",
+      "volume_mm3": 859.852,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D4_ENVELOPE",
+      "volume_mm3": 80.753,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C6_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_R8_ENVELOPE",
+      "name": "B_R13_ENVELOPE",
+      "volume_mm3": 8.519,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_Q2_ENVELOPE",
+      "volume_mm3": 116.687,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_F1_ENVELOPE",
+      "volume_mm3": 74.151,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C4_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_R9_ENVELOPE",
-      "volume_mm3": 3.99,
+      "name": "B_D3_ENVELOPE",
+      "volume_mm3": 16.902,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_U2_ENVELOPE",
-      "volume_mm3": 22.566,
+      "name": "B_J3_ENVELOPE",
+      "volume_mm3": 1223.26,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R4_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_Q1_ENVELOPE",
+      "volume_mm3": 887.783,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C7_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R2_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R1_ENVELOPE",
+      "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
     },
@@ -416,14 +320,128 @@
       "group": "B"
     },
     {
+      "name": "B_C10_ENVELOPE",
+      "volume_mm3": 1426.228,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J6_ENVELOPE",
+      "volume_mm3": 729.708,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_U2_ENVELOPE",
+      "volume_mm3": 22.566,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R7_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J2_ENVELOPE",
+      "volume_mm3": 1223.26,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J7_ENVELOPE",
+      "volume_mm3": 1229.508,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D2_ENVELOPE",
+      "volume_mm3": 80.753,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R9_ENVELOPE",
+      "volume_mm3": 3.99,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D8_ENVELOPE",
+      "volume_mm3": 5.806,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R10_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "B"
+    },
+    {
       "name": "B_U4_ENVELOPE",
       "volume_mm3": 33.837,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_U5_ENVELOPE",
-      "volume_mm3": 22.566,
+      "name": "B_J1_ENVELOPE",
+      "volume_mm3": 563.108,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D6_ENVELOPE",
+      "volume_mm3": 5.806,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R6_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D5_ENVELOPE",
+      "volume_mm3": 5.806,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R8_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C1_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_U1_ENVELOPE",
+      "volume_mm3": 909.816,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_F2_ENVELOPE",
+      "volume_mm3": 74.151,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C9_ENVELOPE",
+      "volume_mm3": 9.015,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D7_ENVELOPE",
+      "volume_mm3": 5.806,
       "solids": 1,
       "group": "B"
     },
@@ -462,42 +480,6 @@
       "volume_mm3": 108.0,
       "solids": 1,
       "group": "A"
-    },
-    {
-      "name": "XL4015_PCB",
-      "volume_mm3": 2146.08,
-      "solids": 1,
-      "group": "buck"
-    },
-    {
-      "name": "XL4015_COMPONENT_ENVELOPE",
-      "volume_mm3": 10459.472,
-      "solids": 1,
-      "group": "buck"
-    },
-    {
-      "name": "XL4015_TERMINAL_24",
-      "volume_mm3": 880.0,
-      "solids": 1,
-      "group": "buck"
-    },
-    {
-      "name": "XL4015_TERMINAL_63",
-      "volume_mm3": 880.0,
-      "solids": 1,
-      "group": "buck"
-    },
-    {
-      "name": "XL4015_TRIMMER_23",
-      "volume_mm3": 153.6,
-      "solids": 1,
-      "group": "buck"
-    },
-    {
-      "name": "XL4015_TRIMMER_28",
-      "volume_mm3": 153.6,
-      "solids": 1,
-      "group": "buck"
     },
     {
       "name": "LCD_PCB_98x60_TBD",
@@ -597,19 +579,19 @@
     },
     {
       "name": "BUNDLE_AB_1_SCHEMATIC",
-      "volume_mm3": 661.355,
+      "volume_mm3": 678.412,
       "solids": 1,
       "group": "wire"
     },
     {
       "name": "BUNDLE_AB_2_SCHEMATIC",
-      "volume_mm3": 570.858,
+      "volume_mm3": 556.896,
       "solids": 1,
       "group": "wire"
     },
     {
       "name": "BUNDLE_AB_3_SCHEMATIC",
-      "volume_mm3": 518.479,
+      "volume_mm3": 440.906,
       "solids": 1,
       "group": "wire"
     }
@@ -747,24 +729,6 @@
       "board_origin_x_z_mm": [
         50,
         17
-      ],
-      "side": "right",
-      "root_connected": true,
-      "free_arm_overlap_mm3": 0.0
-    },
-    {
-      "board_origin_x_z_mm": [
-        8,
-        22
-      ],
-      "side": "left",
-      "root_connected": true,
-      "free_arm_overlap_mm3": 0.0
-    },
-    {
-      "board_origin_x_z_mm": [
-        8,
-        22
       ],
       "side": "right",
       "root_connected": true,
@@ -1031,7 +995,7 @@
           -40,
           0
         ],
-        "prism_count": 220,
+        "prism_count": 240,
         "reversible": true
       },
       {
@@ -1042,44 +1006,11 @@
           0,
           -3.5
         ],
-        "prism_count": 220,
+        "prism_count": 240,
         "reversible": true
       },
       {
         "stage": "3 B outside tube: pivot and release clips",
-        "method": "BRep poses at 0.1 degree intervals",
-        "angle_deg": [
-          4,
-          0
-        ],
-        "clips_held_outward_mm": 2.4,
-        "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
-        "reversible": true
-      },
-      {
-        "stage": "3b buck outside tube: approach above groove lip",
-        "method": "planar-face translational swept volumes",
-        "translation_mm": [
-          0,
-          -40,
-          0
-        ],
-        "prism_count": 38,
-        "reversible": true
-      },
-      {
-        "stage": "3b buck outside tube: lower into groove",
-        "method": "planar-face translational swept volumes",
-        "translation_mm": [
-          0,
-          0,
-          -3.5
-        ],
-        "prism_count": 38,
-        "reversible": true
-      },
-      {
-        "stage": "3b buck outside tube: pivot and release clips",
         "method": "BRep poses at 0.1 degree intervals",
         "angle_deg": [
           4,
@@ -1119,18 +1050,7 @@
           50,
           0
         ],
-        "prism_count": 156,
-        "reversible": true
-      },
-      {
-        "stage": "6b independent buck extraction",
-        "method": "planar-face translational swept volumes",
-        "translation_mm": [
-          0,
-          60,
-          0
-        ],
-        "prism_count": 44,
+        "prism_count": 168,
         "reversible": true
       },
       {
@@ -1141,38 +1061,39 @@
           60,
           0
         ],
-        "prism_count": 33,
+        "prism_count": 32,
         "reversible": true
-      },
-      {
-        "stage": "8 buck screwdriver service",
-        "shaft_diameter_mm": 6,
-        "rear_panel_removed": true,
-        "method": "BRep intersection of reserved tool cylinders",
-        "terminal_and_trimmer_positions": "approximate, verify purchased module"
       },
       {
         "stage": "9 B connector service",
         "rear_panel_removed": true,
         "shaft_diameter_mm": 6,
         "JST_rear_corridor_length_mm": 35,
+        "JST_housing_basis": {
+          "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+          "housing_family": "XHP",
+          "depth_mm": 5.7,
+          "width_end_allowance_mm": 4.8,
+          "pitch_mm": 2.5,
+          "envelope_margin_each_side_mm": 0.25,
+          "extraction_corridor_mm": 35,
+          "notes": "XHP width = (circuits-1)*pitch+4.8. Clearance is for plug body and nominal margin, not fingers; real mating and cable slack require physical test."
+        },
         "terminal_refs": [
           "J2",
-          "J3",
-          "J8"
+          "J3"
         ],
         "JST_refs": [
           "J1",
           "J4",
           "J6",
-          "J7",
-          "J9"
+          "J7"
         ],
-        "method": "BRep intersection above connector envelopes; actual contacts and side wire entries unqualified"
+        "method": "BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified"
       }
     ],
     "failures": [],
-    "reverse_order": "rear off; B or buck independently disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped",
+    "reverse_order": "rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped",
     "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
   },
   "printed_parts_STEP": {
@@ -1181,13 +1102,12 @@
       "01_Coque_ouverte",
       "02_Facade_supports_LCD_A",
       "03_Berceau_B",
-      "04_Panneau_arriere",
-      "05_Berceau_XL4015"
+      "04_Panneau_arriere"
     ],
-    "solid_count": 5,
+    "solid_count": 4,
     "one_connected_solid_per_print_part": true
   },
-  "STEP_round_trip_solids": 102,
+  "STEP_round_trip_solids": 99,
   "B_extraction_samples_mm": [
     0,
     10,
@@ -1195,6 +1115,6 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 443022.164,
+  "STEP_volume_mm3": 420056.31,
   "fusion_import_tested": false
 }
