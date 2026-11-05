@@ -50,5 +50,26 @@
     "These CP210x observations do not identify either card as the advertised diymore CH340 variant or validate its30-pin map.",
     "Same USB-C connector and row spacing do not establish the same VBUS/VIN power circuit.",
     "Do not replace firmware to infer power-path behavior; follow manufacturing/usb_service_test.md on each identified board."
+  ],
+  "additional_connection_tests": [
+    {
+      "context": "After user changed the connected board and cable; onlyCOM4 remained enumerated",
+      "local_port": "COM4",
+      "USB_bridge_family": "CP210x",
+      "chip": "ESP32-D0WD-V3 (revision v3.1)",
+      "flash_bytes_identified": 4194304,
+      "same_chip_as_original_backed_up_COM4": false,
+      "probe_read_bytes": 65536,
+      "probe_comparison_ok": true,
+      "baud": 115200,
+      "firmware_written": false,
+      "complete_backup_available_for_this_chip": false,
+      "normal_boot_reset_requested": true,
+      "limits": [
+        "Original COM4 full backup belongs to a different chip; never restore it onto this board merely because the COM number is the same.",
+        "Board and cable changed together, so this successful connection does not isolate the prior cable as the cause.",
+        "No VBUS isolation or externally supplied5V test was performed."
+      ]
+    }
   ]
 }
