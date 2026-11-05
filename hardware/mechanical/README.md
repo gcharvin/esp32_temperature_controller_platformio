@@ -1,4 +1,4 @@
-# Maquette 3D v0.7 — PCB B avec buck intégré
+# Maquette 3D v0.8 — PCB B avec buck intégré
 
 Révision du **5 novembre 2026**. Boîtier nu **155 × 100 × 115 mm**, paroi 3 mm.
 La carte B v0.5 porte maintenant son LM2596 : le XL4015, son berceau, ses guides,
@@ -7,19 +7,19 @@ côté de B peut servir au passage des faisceaux. A reste à v0.4.
 
 ## Ouvrir dans Fusion 360
 
-- **`exports/enclosure_v07_integrated_buck.step`** : assemblage complet courant.
-- `exports/enclosure_v07_printed_parts.step` : les quatre pièces imprimées seules.
+- **`exports/enclosure_v08_integrated_buck.step`** : assemblage complet courant.
+- `exports/enclosure_v08_printed_parts.step` : les quatre pièces imprimées seules.
 - `exports/enclosure_exploded.step` et `enclosure_printed_parts_exploded.step` : vues éclatées courantes.
-- `exports/parts_v07/` : STEP et STL individuels.
+- `exports/parts_v08/` : STEP et STL individuels.
 - `exports/preview_service.png`, `preview_b_power.png`, `preview_exploded.png` : arrière ouvert, B équipée et vue éclatée.
-- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v07.json` : résultats et traçabilité.
-- `exports/enclosure_v07_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
+- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v08.json` : résultats et traçabilité.
+- `exports/enclosure_v08_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
 
-Les fichiers numérotés v01 à v06 et `parts_v06/` sont historiques. Les exports
-sans numéro listés ci-dessus correspondent à v0.7. Ne pas employer l'ancienne
+Les fichiers numérotés v01 à v07 et `parts_v07/` sont historiques. Les exports
+sans numéro listés ci-dessus correspondent à v0.8. Ne pas employer l'ancienne
 vue `preview_buck.png`, qui représente encore le module externe.
 
-Le STEP contient une arborescence de solides nommés : **99 solides valides** dans
+Le STEP contient une arborescence de solides nommés : **101 solides valides** dans
 le complet, **4 solides connectés** dans les pièces imprimées. Il ne transporte
 pas l'historique paramétrique natif Fusion. Les sources paramétriques sont
 `build_enclosure.py`, `enclosure_parameters.json` et `../placement.json`.
@@ -124,7 +124,7 @@ l'établi, déposer A puis l'encodeur si nécessaire, enfin le LCD.
 ## USB et passe-paroi
 
 USB-C de panneau à droite : centre y=64/z=30, trou Ø16, corps Ø15, collerette Ø22,
-empiètement intérieur 28 mm. Rallonge **de données** vers le CH340 de la DevKit.
+empiètement intérieur 28 mm. Rallonge **de données** vers le pont USB/série de la DevKit.
 Fiche interne réservée : 14 × 4 × 10 mm. Ces volumes sont des hypothèses non
 mesurées ; câble et courbures doivent être vérifiés.
 
@@ -182,3 +182,7 @@ uv run hardware/mechanical/build_enclosure.py
 CadQuery 2.6.1 et Pillow sont déclarés dans le script. Le générateur produit les
 STEP, STL, GLB, rendus et rapports sans modifier KiCad. Le pack ZIP est un
 instantané à recréer après régénération.
+
+## Révision de préparation v0.8
+
+Les deux sockets utilisent désormais les enveloppes maximales Harwin38,85×2,65×8,65mm. La pile réserve aussi2,54mm pour le plastique des broches mâles et0,15mm de montage, ce qui recule le PCB et la fiche USB. Les borniers Phoenix1715721 utilisent14mm de hauteur enveloppe au lieu de9,8mm, pour leur hauteur montée13,8mm. Les quatre pièces imprimées restent identiques ; les enveloppes électroniques et les chemins de service sont régénérés. La cote de l’entretoise mâle et les corps des trois DevKit restent à contrôler sur le matériel. Les sources sont figées pendant toute génération ; une modification concurrente fait échouer le manifeste.

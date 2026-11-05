@@ -51,13 +51,13 @@
     },
     {
       "name": "A_D1_ENVELOPE",
-      "volume_mm3": 5.806,
+      "volume_mm3": 7.156,
       "solids": 1,
       "group": "A"
     },
     {
       "name": "A_D2_ENVELOPE",
-      "volume_mm3": 5.806,
+      "volume_mm3": 7.156,
       "solids": 1,
       "group": "A"
     },
@@ -279,7 +279,7 @@
     },
     {
       "name": "B_J3_ENVELOPE",
-      "volume_mm3": 1223.26,
+      "volume_mm3": 1747.515,
       "solids": 1,
       "group": "B"
     },
@@ -345,7 +345,7 @@
     },
     {
       "name": "B_J2_ENVELOPE",
-      "volume_mm3": 1223.26,
+      "volume_mm3": 1747.515,
       "solids": 1,
       "group": "B"
     },
@@ -369,7 +369,7 @@
     },
     {
       "name": "B_D8_ENVELOPE",
-      "volume_mm3": 5.806,
+      "volume_mm3": 7.156,
       "solids": 1,
       "group": "B"
     },
@@ -393,7 +393,7 @@
     },
     {
       "name": "B_D6_ENVELOPE",
-      "volume_mm3": 5.806,
+      "volume_mm3": 7.156,
       "solids": 1,
       "group": "B"
     },
@@ -405,7 +405,7 @@
     },
     {
       "name": "B_D5_ENVELOPE",
-      "volume_mm3": 5.806,
+      "volume_mm3": 7.156,
       "solids": 1,
       "group": "B"
     },
@@ -441,42 +441,54 @@
     },
     {
       "name": "B_D7_ENVELOPE",
-      "volume_mm3": 5.806,
+      "volume_mm3": 7.156,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "A_DEVKIT_SOCKET_34.03",
-      "volume_mm3": 822.579,
+      "name": "A_DEVKIT_SOCKET_1",
+      "volume_mm3": 890.539,
       "solids": 1,
       "group": "A"
     },
     {
-      "name": "A_DEVKIT_SOCKET_59.43",
-      "volume_mm3": 822.579,
+      "name": "A_DEVKIT_MALE_HEADER_SPACER_1",
+      "volume_mm3": 245.806,
       "solids": 1,
       "group": "A"
     },
     {
-      "name": "A_DIYMORE_PCB_54x27",
+      "name": "A_DEVKIT_SOCKET_2",
+      "volume_mm3": 890.539,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_DEVKIT_MALE_HEADER_SPACER_2",
+      "volume_mm3": 245.806,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_DEVKIT_PCB_REFERENCE_54x27",
       "volume_mm3": 2332.8,
       "solids": 1,
       "group": "A"
     },
     {
-      "name": "A_DIYMORE_RF_SHIELD",
+      "name": "A_DEVKIT_RF_SHIELD_ENVELOPE",
       "volume_mm3": 1656.0,
       "solids": 1,
       "group": "A"
     },
     {
-      "name": "A_DIYMORE_CH340",
+      "name": "A_DEVKIT_USB_BRIDGE_ENVELOPE",
       "volume_mm3": 160.0,
       "solids": 1,
       "group": "A"
     },
     {
-      "name": "A_DIYMORE_USB_C",
+      "name": "A_DEVKIT_USB_C_ENVELOPE",
       "volume_mm3": 108.0,
       "solids": 1,
       "group": "A"
@@ -537,7 +549,7 @@
     },
     {
       "name": "USB_INTERNAL_DATA_CABLE_ROUTING_ONLY",
-      "volume_mm3": 361.019,
+      "volume_mm3": 352.443,
       "solids": 1,
       "group": "USB"
     },
@@ -650,7 +662,7 @@
     "outside_depth_mm": 4,
     "devkit_plug_box_mm": [
       69,
-      55.2,
+      58.04,
       43,
       14,
       4,
@@ -962,7 +974,7 @@
           -40,
           0
         ],
-        "prism_count": 140,
+        "prism_count": 150,
         "reversible": true
       },
       {
@@ -973,7 +985,7 @@
           0,
           -3.5
         ],
-        "prism_count": 140,
+        "prism_count": 150,
         "reversible": true
       },
       {
@@ -1028,7 +1040,7 @@
           100,
           0
         ],
-        "prism_count": 157,
+        "prism_count": 163,
         "reversible": true
       },
       {
@@ -1107,7 +1119,7 @@
     "solid_count": 4,
     "one_connected_solid_per_print_part": true
   },
-  "STEP_round_trip_solids": 99,
+  "STEP_round_trip_solids": 101,
   "B_extraction_samples_mm": [
     0,
     10,
@@ -1115,6 +1127,6 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 420060.453,
+  "STEP_volume_mm3": 421736.017,
   "fusion_import_tested": false
 }

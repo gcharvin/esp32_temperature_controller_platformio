@@ -1,5 +1,5 @@
 {
-  "revision": "0.7 - PCB B v0.5 integrated LM2596 / external XL4015 bay removed",
+  "revision": "0.8 - documented Harwin sockets and male header spacer / final prototype preparation",
   "case_mm": {
     "width": 155,
     "height": 100,
@@ -36,7 +36,7 @@
     "outside_depth_mm": 4,
     "devkit_plug_box_mm": [
       69,
-      55.2,
+      58.04,
       43,
       14,
       4,
@@ -147,5 +147,6 @@
     "envelope_margin_each_side_mm": 0.25,
     "extraction_corridor_mm": 35,
     "notes": "XHP width = (circuits-1)*pitch+4.8. Clearance is for plug body and nominal margin, not fingers; real mating and cable slack require physical test."
-  }
+  },
+  "export_tag": "v08"
 }

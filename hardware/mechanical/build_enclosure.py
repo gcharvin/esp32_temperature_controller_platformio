@@ -19,6 +19,11 @@ HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent
 P=json.loads((HERE/'enclosure_parameters.json').read_text(encoding='utf-8'))
 LAYOUT=json.loads((ROOT/'placement.json').read_text(encoding='utf-8'))
+MODULES=json.loads((ROOT/'module_selection.json').read_text(encoding='utf-8'))
+TAG=P.get('export_tag','v07')
+SOURCE_INPUTS=[HERE/'build_enclosure.py',HERE/'enclosure_parameters.json',ROOT/'placement.json',ROOT/'module_selection.json',
+              ROOT/'pcb_a_display/pcb_a_display.kicad_pcb',ROOT/'pcb_b_temperature/pcb_b_temperature.kicad_pcb']
+SOURCE_HASHES={str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes()).hexdigest() for path in SOURCE_INPUTS}
 OUT=HERE/'exports';OUT.mkdir(exist_ok=True)
 W,H,D,T=[P['case_mm'][key] for key in ('width','height','depth','wall')]
 PARTS=[]
@@ -236,12 +241,18 @@ def main(validate=True):
             height=row.get('height_mm',height)
             if height<=0:continue  # NT1 is copper, not a mechanical part
             add(group+'_'+ref+'_ENVELOPE',box(x+rx,face,H-y-ry-rh,rw,height,rh),color,group)
-    # Purchased DevKit: two socket strips, PCB, RF shield and USB-C envelope.
-    for z in (34.03,59.43):add('A_DEVKIT_SOCKET_'+str(z),box(20.95,45,z,38.1,8.5,2.54),'connector','A')
-    add('A_DIYMORE_PCB_54x27',box(13,53.5,34.5,54,1.6,27),'pcb','A')
-    add('A_DIYMORE_RF_SHIELD',box(21,55.1,36,23,3,24),'metal','A')
-    add('A_DIYMORE_CH340',box(49,55.1,43,8,2,10),'chip','A')
-    add('A_DIYMORE_USB_C',box(65,55.1,43.5,4,3,9),'metal','A')
+    # Harwin female sockets at maximum drawing dimensions; add the male
+    # header's plastic spacer that was absent from the previous mock-up.
+    socket=MODULES['devkit']['socket'];sl,sw,sh=socket['maximum_body_mm']
+    spacer=socket['assumed_male_header_insulator_mm'];gap=socket['assembly_gap_allowance_mm']
+    pcb_depth=45+sh+gap+spacer
+    for i,z in enumerate((35.3,60.7),1):
+        add('A_DEVKIT_SOCKET_'+str(i),box(40-sl/2,45,z-sw/2,sl,sh,sw),'connector','A')
+        add('A_DEVKIT_MALE_HEADER_SPACER_'+str(i),box(20.95,45+sh+gap,z-1.27,38.1,spacer,2.54),'connector','A')
+    add('A_DEVKIT_PCB_REFERENCE_54x27',box(13,pcb_depth,34.5,54,1.6,27),'pcb','A')
+    add('A_DEVKIT_RF_SHIELD_ENVELOPE',box(21,pcb_depth+1.6,36,23,3,24),'metal','A')
+    add('A_DEVKIT_USB_BRIDGE_ENVELOPE',box(49,pcb_depth+1.6,43,8,2,10),'chip','A')
+    add('A_DEVKIT_USB_C_ENVELOPE',box(65,pcb_depth+1.6,43.5,4,3,9),'metal','A')
     # LCD simplified reference assembly. Front optical opening is independent.
     add('LCD_PCB_98x60_TBD',box(8,13.5,28,98,1.6,60),'pcb','LCD')
     add('LCD_front_bezel_TBD',box(15,3.4,40,84,10.1,36),'lcd','LCD')
@@ -261,7 +272,7 @@ def main(validate=True):
     usb_port=usb_port.cut(box(W-T-.1,uy-4.5,uz-1.75,usb['outside_depth_mm']+T+.2,9,3.5))
     add('USB_C_PANEL_DATA_EXTENSION_TBD',usb_port,'module','USB')
     add('USB_C_DEVKIT_MALE_PLUG_TBD',box(*usb['devkit_plug_box_mm']),'metal','USB')
-    usb_path=[(127,64,30),(115,65,34),(96,65,48),(83,57.2,48)]
+    usb_path=[(127,64,30),(115,65,34),(96,65,48),(83,pcb_depth+3.7,48)]
     usb_segments=[]
     for start,end in zip(usb_path,usb_path[1:]):
         vector=cq.Vector(*end)-cq.Vector(*start)
@@ -306,10 +317,10 @@ def write_source_manifest():
     assert not validation['collisions_mm3'] and not paths['failures']
     assert validation['printed_parts_STEP']['solid_count']==len(PRINT_NAMES)==4
     assert not any('XL4015' in item['name'] or item['group']=='buck' for item in validation['parts'])
-    inputs=[HERE/'build_enclosure.py',HERE/'enclosure_parameters.json',ROOT/'placement.json',
-            ROOT/'pcb_a_display/pcb_a_display.kicad_pcb',ROOT/'pcb_b_temperature/pcb_b_temperature.kicad_pcb']
+    for path in SOURCE_INPUTS:
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==SOURCE_HASHES[str(path.relative_to(ROOT))], 'Mechanical input changed during generation: '+str(path)
     geometry=json.dumps({'boards':LAYOUT['boards'],'assembly':LAYOUT['assembly']},sort_keys=True)
-    manifest=dict(revision=P['revision'],source_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},
+    manifest=dict(revision=P['revision'],source_sha256=SOURCE_HASHES,
         placement_geometry_projection_sha256=hashlib.sha256(geometry.encode()).hexdigest(),
         printed_parts=4,assembled_STEP_solids=validation['STEP_round_trip_solids'],assembly_service_stages=len(paths['tests']),
         static_collisions=0,assembly_failures=0,external_buck=False,fusion_import_tested=False,
@@ -317,7 +328,11 @@ def write_source_manifest():
             resolution='Manufacturer XHP body with 0.25mm each-side margin replaces generic footprint+1mm corridor',
             manufacturer_source=P['JST_service']['source'],finger_and_cable_clearance_tested=False),
         limits=['Rigid-body envelope model, not exact supplier component CAD','Real print, grip, cable slack, flexure and thermal tests pending'])
-    (OUT/'source_manifest_v07.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+    manifest['devkit_stack']=dict(socket_maximum_mm=MODULES['devkit']['socket']['maximum_body_mm'],
+        male_header_spacer_assumed_mm=MODULES['devkit']['socket']['assumed_male_header_insulator_mm'],
+        gap_allowance_mm=MODULES['devkit']['socket']['assembly_gap_allowance_mm'],
+        physical_fit_of_all_three_variants_verified=False)
+    (OUT/('source_manifest_'+TAG+'.json')).write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
 
 def _shape(value):
     return value.val() if isinstance(value,cq.Workplane) else value
@@ -467,7 +482,7 @@ def validate_export():
         ('plastic','01_Pieces_imprimees'),('A','02_Carte_A_reference'),
         ('B','03_Carte_B_reference'),('LCD','04_Afficheur_encodeur_reference'),
         ('external','05_Passe_paroi_et_faisceaux_reference'),('USB','06_USB_maintenance_reference')]}
-    partsdir=OUT/'parts_v07';partsdir.mkdir(exist_ok=True)
+    partsdir=OUT/('parts_'+TAG);partsdir.mkdir(exist_ok=True)
     summary={'status':'unqualified fit mock-up, not production design','parts':[],'collisions_mm3':[],
              'coordinates':'x left-right, y front-rear, z bottom-top (mm)',
              'case_mm':P['case_mm'],'bulkheads':P['bulkheads'],'usb_service':P['usb_service'],'retention':P['retention'],
@@ -533,8 +548,8 @@ def validate_export():
     assert len(print_solids)==len(PRINT_NAMES) and all(s.isValid() for s in print_solids)
     expected_volume=sum(part['shape'].val().Volume() for part in PARTS if part['name'] in print_names)
     assert math.isclose(imported_printed.val().Volume(),expected_volume,rel_tol=1e-8)
-    (OUT/'enclosure_v07_integrated_buck.step').write_bytes((OUT/'enclosure_assembled.step').read_bytes())
-    (OUT/'enclosure_v07_printed_parts.step').write_bytes((OUT/'enclosure_printed_parts.step').read_bytes())
+    (OUT/('enclosure_'+TAG+'_integrated_buck.step')).write_bytes((OUT/'enclosure_assembled.step').read_bytes())
+    (OUT/('enclosure_'+TAG+'_printed_parts.step')).write_bytes((OUT/'enclosure_printed_parts.step').read_bytes())
     summary['printed_parts_STEP']={'file':'enclosure_printed_parts.step','components':list(print_names.values()),'solid_count':len(PRINT_NAMES),'one_connected_solid_per_print_part':True}
     # Round-trip the exchange format, including checks against accidental empty exports.
     reimport=cq.importers.importStep(str(OUT/'enclosure_assembled.step'))
@@ -588,8 +603,8 @@ def render_previews():
         try:font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',28);small=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',21)
         except OSError:font=small=ImageFont.load_default()
         titles={'side_vents':'VENTILATION PASSIVE - ouies basses et hautes sur les deux flancs',
-                'assembled':'MAQUETTE 0.7 - facade / boitier assemble',
-                'exploded':'MAQUETTE 0.7 - facade equipee / coque / B avec buck integre / panneau arriere',
+                'assembled':'MAQUETTE '+TAG+' - facade / boitier assemble',
+                'exploded':'MAQUETTE '+TAG+' - facade equipee / coque / B avec buck integre / panneau arriere',
                 'service':'ARRIERE OUVERT - carte B avec convertisseur 5 V integre',
                 'b_power':'CARTE B - LM2596, self, condensateurs et clips du berceau',
                 'front_module':'FACADE EQUIPEE - ecran puis carte A montes hors du boitier',
