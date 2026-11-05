@@ -79,12 +79,36 @@ def main():
     for ref,pin,net in [('U3',1,'PWM0'),('U3',2,'ENABLE'),('U3',4,'GATE_CMD'),('Q1',1,'GATE'),('Q1',2,'HEATER_LOW'),('Q1',3,'PGND'),('J3',1,'VIN_PROTECTED'),('J3',2,'HEATER_LOW'),('Q2',2,'VIN_FUSED'),('Q2',3,'VIN_PROTECTED'),('Q2',1,'REV_GATE'),('D3',1,'VIN_PROTECTED'),('D3',2,'REV_GATE'),('D4',1,'VIN_PROTECTED'),('D4',2,'HEATER_LOW'),('F1',1,'VIN_RAW'),('F1',2,'VIN_FUSED'),('F2',1,'+5V_BUCK'),('F2',2,'+5V_AB'),('J8',1,'VIN_PROTECTED'),('J8',2,'PGND'),('J9',1,'GND'),('J9',2,'+5V_BUCK'),('U5',1,'+5V_AB'),('U5',2,'PGND'),('U5',3,'GATE_CMD'),('U5',4,'PGND'),('U5',5,'GATE_DRV'),('C8',1,'VIN_PROTECTED'),('C8',2,'PGND'),('R5',1,'NTC_RAW'),('R5',2,'GND'),('R6',1,'NTC_RAW'),('R6',2,'NTC_ADC')]:
         check_pin(b,ref,pin,net)
     assert bg['GND'].isdisjoint(bg['PGND']), 'Do not short external CC/CV module input and output returns on B'
+    # Independent diagnostic contract: check rail, series resistor, LED polarity
+    # and return. In particular, HEAT must follow the enabled driver output and
+    # no indicator may load the NTC divider or bridge PGND to logic GND.
+    diagnostics=[]
+    contracts={
+        'pcb_a_display': [('D1','R6','+5V_AB','GND','1.5k'),('D2','R7','+3V3_A','GND','470R')],
+        'pcb_b_temperature': [('D5','R9','VIN_PROTECTED','PGND','15k'),('D6','R10','+5V_AB','GND','1.5k'),
+                              ('D7','R11','+3V3_B','GND','470R'),('D8','R12','GATE_DRV','PGND','2.2k')]}
+    for name,rows in contracts.items():
+        pins,groups=boards[name]
+        comps={c.attrib['ref']:c for c in ET.parse(out/(name+'.net.xml')).getroot().findall('./components/comp')}
+        for led,resistor,rail,ground,resistance in rows:
+            check_pin(pins,resistor,1,rail);check_pin(pins,led,1,ground)
+            series=pins[(resistor,'2')]
+            assert groups[series]=={(resistor,'2'),(led,'2')},(led,'wrong series chain')
+            assert comps[resistor].findtext('value').split(' / ')[0]==resistance
+            assert comps[led].findtext('footprint')=='LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder'
+            assert comps[led].findtext('value')==('APT2012LSECK/J4-PRV' if led=='D8' else 'APT2012LZGCK')
+            diagnostics.append(dict(board=name,led=led,resistor=resistor,supply=rail,return_net=ground,
+                                    series_only=True,cathode_pin=1,anode_pin=2))
+    check_pin(b,'J4',1,'+3V3_B');check_pin(b,'J4',2,'NTC_RAW')
+    assert bg['NTC_RAW']=={('J4','2'),('R5','1'),('R6','1')},'Diagnostic circuits must not load the NTC'
+    (out/'routing/diagnostic_validation.json').write_text(json.dumps(dict(LEDs=diagnostics,
+        NTC_divider_unloaded=True,HEAT_measures='gate driver output, not heater current'),indent=2)+'\n',encoding='utf-8')
     for name,groups in [('A',ag),('B',bg)]:
         allowed_rails={'+3V3_A'} if name=='A' else {'+3V3_B'}
         assert allowed_rails.issubset(groups)
         other_rail='+3V3_B' if name=='A' else '+3V3_A'
         assert other_rail not in groups
-    summary='Both schematics: ERC 0 errors / 0 warnings.\nA/B interface, isolated supply rails, ADC address strap, heater enable/gate, NTC and power path checked against exported netlists.\nThese checks do not qualify current ratings, footprints, PCB routing or safety.\n'
+    summary='Both schematics: ERC 0 errors / 0 warnings.\nA/B interface, isolated supply rails, ADC address strap, heater enable/gate, NTC and power path checked against exported netlists.\nSix diagnostic LED series chains, polarity, rail/return assignments and unloaded NTC divider verified.\nThese checks do not qualify current ratings, footprints, PCB routing or safety.\n'
     (out/'validation.txt').write_text(summary,encoding='utf-8')
     print(summary)
 

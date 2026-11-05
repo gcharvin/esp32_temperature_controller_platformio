@@ -93,13 +93,13 @@ def main():
                    ('/PGND',('Q1','3'),('J2','2'))]
             row['high_current_paths']=[power_path(board,*pair) for pair in pairs]
         results.append(row)
-    data={'status':'routed prototype, not fabrication release','target_input_V':24,'target_heater_W':100,
+    data={'revision':'0.4 diagnostics','status':'routed prototype, not fabrication release','target_input_V':24,'target_heater_W':100,
           'heater_current_A':100/24,'required_B_outer_copper_um':70,
           'devkit_row_spacing_mm':25.4,'devkit_spacing_status':'ASSUMED, user verification pending',
           'boards':results,'limits':['Physical DevKit dimensions/pinout must be confirmed.',
                                    'Power/thermal and fault testing not performed.',
                                    'XL4015 complete module transient limits not qualified.',
-                                   'Enclosure v0.5 models revised modules; purchased-module fit and printed clips require physical validation.']}
+                                   'Enclosure v0.5 predates diagnostic LEDs; purchased-module fit and printed clips require physical validation.']}
     (ROOT/'review/routing/routing_validation.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(data,indent=2))
 

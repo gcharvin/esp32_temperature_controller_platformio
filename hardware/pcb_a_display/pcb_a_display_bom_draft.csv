@@ -1,19 +1,23 @@
-Reference,Value,Footprint,Design_Status
-J1,A-B POWER / XH-2,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,provisional
-J6,A-B I2C / XH-3,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,provisional
-J7,A-B CTRL / XH-6,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,provisional
-JP1,5V DevKit link / remove for service,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,provisional
-U2,AP2112K-3.3 peripherals,Package_TO_SOT_SMD:SOT-23-5,provisional
-C1,1uF,Capacitor_SMD:C_0603_1608Metric,provisional
-C2,1uF,Capacitor_SMD:C_0603_1608Metric,provisional
-C3,10uF,Capacitor_SMD:C_0603_1608Metric,provisional
-J2,LCD20x4 + backpack / 3V3,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected
-J3,Encoder / A B SW GND,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected
-R1,10k,Resistor_SMD:R_0603_1608Metric,provisional
-R2,10k,Resistor_SMD:R_0603_1608Metric,provisional
-R3,10k,Resistor_SMD:R_0603_1608Metric,provisional
-R4,4.7k,Resistor_SMD:R_0603_1608Metric,provisional
-R5,4.7k,Resistor_SMD:R_0603_1608Metric,provisional
-J4,TMP117 module / addr 0x48,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected
-J5,BH1750 module / addr 0x23,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected
-U1,diymore CH340 USB-C / 30P,LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED,Row pitch 25.40 mm ASSUMED; verify purchased board before fabrication
+Reference,Value,Footprint,Design_Status,MPN
+J1,A-B POWER / XH-2,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,provisional,
+J6,A-B I2C / XH-3,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,provisional,
+J7,A-B CTRL / XH-6,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,provisional,
+JP1,5V DevKit link / remove for service,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,provisional,
+U2,AP2112K-3.3 peripherals,Package_TO_SOT_SMD:SOT-23-5,provisional,
+C1,1uF,Capacitor_SMD:C_0603_1608Metric,provisional,
+C2,1uF,Capacitor_SMD:C_0603_1608Metric,provisional,
+C3,10uF,Capacitor_SMD:C_0603_1608Metric,provisional,
+J2,LCD20x4 + backpack / 3V3,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected,
+J3,Encoder / A B SW GND,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected,
+R1,10k,Resistor_SMD:R_0603_1608Metric,provisional,
+R2,10k,Resistor_SMD:R_0603_1608Metric,provisional,
+R3,10k,Resistor_SMD:R_0603_1608Metric,provisional,
+R4,4.7k,Resistor_SMD:R_0603_1608Metric,provisional,
+R5,4.7k,Resistor_SMD:R_0603_1608Metric,provisional,
+J4,TMP117 module / addr 0x48,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected,
+J5,BH1750 module / addr 0x23,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST B4B-XH-A physical package selected,
+U1,diymore CH340 USB-C / 30P,LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED,Row pitch 25.40 mm ASSUMED; verify purchased board before fabrication,
+R6,1.5k / 1% / 0.1W,Resistor_SMD:R_0603_1608Metric,Diagnostic current limit,
+D1,APT2012LZGCK,LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,Diagnostic green / 0805 / low-current,APT2012LZGCK
+R7,470R / 1% / 0.1W,Resistor_SMD:R_0603_1608Metric,Diagnostic current limit,
+D2,APT2012LZGCK,LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,Diagnostic green / 0805 / low-current,APT2012LZGCK

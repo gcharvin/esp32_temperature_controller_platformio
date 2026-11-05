@@ -1,4 +1,5 @@
 {
+  "revision": "0.4 diagnostics",
   "status": "routed prototype, not fabrication release",
   "target_input_V": 24,
   "target_heater_W": 100,
@@ -12,9 +13,9 @@
       "DRC_violations": 0,
       "unconnected_items": 0,
       "schematic_parity_issues": 0,
-      "footprints": 18,
-      "tracks": 249,
-      "vias": 6,
+      "footprints": 22,
+      "tracks": 327,
+      "vias": 9,
       "copper_thickness_mm": {
         "F.Cu": 0.035,
         "B.Cu": 0.035
@@ -26,9 +27,9 @@
       "DRC_violations": 0,
       "unconnected_items": 0,
       "schematic_parity_issues": 0,
-      "footprints": 35,
-      "tracks": 250,
-      "vias": 16,
+      "footprints": 43,
+      "tracks": 380,
+      "vias": 22,
       "copper_thickness_mm": {
         "F.Cu": 0.07,
         "B.Cu": 0.07
@@ -116,6 +117,6 @@
     "Physical DevKit dimensions/pinout must be confirmed.",
     "Power/thermal and fault testing not performed.",
     "XL4015 complete module transient limits not qualified.",
-    "Enclosure v0.5 models revised modules; purchased-module fit and printed clips require physical validation."
+    "Enclosure v0.5 predates diagnostic LEDs; purchased-module fit and printed clips require physical validation."
   ]
 }

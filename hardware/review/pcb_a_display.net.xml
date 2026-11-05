@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\Gilles\Documents\PlatformIO\Projects\esp32-temperature-controller-platformio\hardware\pcb_a_display\pcb_a_display.kicad_sch</source>
-    <date>2026-11-05T11:26:17</date>
+    <date>2026-11-05T12:56:38</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>PCB A - Display and ESP32 carrier</title>
         <company>Laboratory hardware platform</company>
-        <rev>0.3 proto</rev>
+        <rev>0.4</rev>
         <date>2026-11-05</date>
         <source>pcb_a_display.kicad_sch</source>
         <comment number="1" value="PROTOTYPE - DEVKIT PITCH TO VERIFY - NOT RELEASED FOR FABRICATION"/>
@@ -93,6 +93,64 @@
       <property name="ki_fp_filters" value="C_*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>04a2b813-5843-5ade-9f7c-a80be132d2e1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>APT2012LZGCK</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</datasheet>
+      <fields>
+        <field name="Design_Status">Diagnostic green / 0805 / low-current</field>
+        <field name="MPN">APT2012LZGCK</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</field>
+        <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Design_Status" value="Diagnostic green / 0805 / low-current"/>
+      <property name="MPN" value="APT2012LZGCK"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e4a4b36-6883-57c4-bf10-07cfca9869dc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>APT2012LZGCK</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</datasheet>
+      <fields>
+        <field name="Design_Status">Diagnostic green / 0805 / low-current</field>
+        <field name="MPN">APT2012LZGCK</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</field>
+        <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Design_Status" value="Diagnostic green / 0805 / low-current"/>
+      <property name="MPN" value="APT2012LZGCK"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8e433bb-1370-5e5e-ae16-d3dd4d4efa41</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -453,6 +511,58 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R6">
+      <value>1.5k / 1% / 0.1W</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Design_Status">Diagnostic current limit</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Design_Status" value="Diagnostic current limit"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b04d7e2d-b3b4-5ebd-a63b-e86037184a5a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>470R / 1% / 0.1W</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Design_Status">Diagnostic current limit</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Design_Status" value="Diagnostic current limit"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>060b875e-39b9-5633-830f-32b8b6d5d858</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U1">
       <value>diymore CH340 USB-C / 30P</value>
       <footprint>LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED</footprint>
@@ -629,6 +739,26 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="R">
       <description>Resistor</description>
       <footprints>
@@ -734,6 +864,7 @@
       <node ref="R3" pin="1" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="VOUT_5" pintype="power_out"/>
     </net>
     <net code="2" name="/+5V_AB" class="Default">
@@ -741,6 +872,7 @@
       <node ref="C3" pin="1" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="JP1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
       <node ref="U2" pin="1" pinfunction="VIN_1" pintype="power_in"/>
       <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
     </net>
@@ -779,6 +911,8 @@
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
@@ -806,66 +940,74 @@
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="U1" pin="26" pinfunction="GPIO21_26" pintype="bidirectional"/>
     </net>
-    <net code="13" name="/PWM0" class="Default">
+    <net code="13" name="/LED_A_D1" class="Default">
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="/LED_A_D2" class="Default">
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="/PWM0" class="Default">
       <node ref="J7" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="GPIO25_8" pintype="output"/>
     </net>
-    <net code="14" name="/PWM1" class="Default">
+    <net code="16" name="/PWM1" class="Default">
       <node ref="J7" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
       <node ref="U1" pin="9" pinfunction="GPIO26_9" pintype="output"/>
     </net>
-    <net code="15" name="unconnected-(U1-3V3-Pad16)" class="Default">
+    <net code="17" name="unconnected-(U1-3V3-Pad16)" class="Default">
       <node ref="U1" pin="16" pinfunction="3V3_16" pintype="power_out+no_connect"/>
     </net>
-    <net code="16" name="unconnected-(U1-EN-Pad1)" class="Default">
+    <net code="18" name="unconnected-(U1-EN-Pad1)" class="Default">
       <node ref="U1" pin="1" pinfunction="EN_1" pintype="input+no_connect"/>
     </net>
-    <net code="17" name="unconnected-(U1-GPIO1-Pad28)" class="Default">
+    <net code="19" name="unconnected-(U1-GPIO1-Pad28)" class="Default">
       <node ref="U1" pin="28" pinfunction="GPIO1_28" pintype="input+no_connect"/>
     </net>
-    <net code="18" name="unconnected-(U1-GPIO2-Pad19)" class="Default">
+    <net code="20" name="unconnected-(U1-GPIO2-Pad19)" class="Default">
       <node ref="U1" pin="19" pinfunction="GPIO2_19" pintype="input+no_connect"/>
     </net>
-    <net code="19" name="unconnected-(U1-GPIO3-Pad27)" class="Default">
+    <net code="21" name="unconnected-(U1-GPIO3-Pad27)" class="Default">
       <node ref="U1" pin="27" pinfunction="GPIO3_27" pintype="input+no_connect"/>
     </net>
-    <net code="20" name="unconnected-(U1-GPIO5-Pad23)" class="Default">
+    <net code="22" name="unconnected-(U1-GPIO5-Pad23)" class="Default">
       <node ref="U1" pin="23" pinfunction="GPIO5_23" pintype="input+no_connect"/>
     </net>
-    <net code="21" name="unconnected-(U1-GPIO12-Pad12)" class="Default">
+    <net code="23" name="unconnected-(U1-GPIO12-Pad12)" class="Default">
       <node ref="U1" pin="12" pinfunction="GPIO12_12" pintype="input+no_connect"/>
     </net>
-    <net code="22" name="unconnected-(U1-GPIO13-Pad13)" class="Default">
+    <net code="24" name="unconnected-(U1-GPIO13-Pad13)" class="Default">
       <node ref="U1" pin="13" pinfunction="GPIO13_13" pintype="input+no_connect"/>
     </net>
-    <net code="23" name="unconnected-(U1-GPIO14-Pad11)" class="Default">
+    <net code="25" name="unconnected-(U1-GPIO14-Pad11)" class="Default">
       <node ref="U1" pin="11" pinfunction="GPIO14_11" pintype="input+no_connect"/>
     </net>
-    <net code="24" name="unconnected-(U1-GPIO15-Pad18)" class="Default">
+    <net code="26" name="unconnected-(U1-GPIO15-Pad18)" class="Default">
       <node ref="U1" pin="18" pinfunction="GPIO15_18" pintype="input+no_connect"/>
     </net>
-    <net code="25" name="unconnected-(U1-GPIO16-Pad21)" class="Default">
+    <net code="27" name="unconnected-(U1-GPIO16-Pad21)" class="Default">
       <node ref="U1" pin="21" pinfunction="GPIO16_21" pintype="input+no_connect"/>
     </net>
-    <net code="26" name="unconnected-(U1-GPIO17-Pad22)" class="Default">
+    <net code="28" name="unconnected-(U1-GPIO17-Pad22)" class="Default">
       <node ref="U1" pin="22" pinfunction="GPIO17_22" pintype="input+no_connect"/>
     </net>
-    <net code="27" name="unconnected-(U1-GPIO18-Pad24)" class="Default">
+    <net code="29" name="unconnected-(U1-GPIO18-Pad24)" class="Default">
       <node ref="U1" pin="24" pinfunction="GPIO18_24" pintype="input+no_connect"/>
     </net>
-    <net code="28" name="unconnected-(U1-GPIO34-Pad4)" class="Default">
+    <net code="30" name="unconnected-(U1-GPIO34-Pad4)" class="Default">
       <node ref="U1" pin="4" pinfunction="GPIO34_4" pintype="input+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(U1-GPIO35-Pad5)" class="Default">
+    <net code="31" name="unconnected-(U1-GPIO35-Pad5)" class="Default">
       <node ref="U1" pin="5" pinfunction="GPIO35_5" pintype="input+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(U1-GPIO36-Pad2)" class="Default">
+    <net code="32" name="unconnected-(U1-GPIO36-Pad2)" class="Default">
       <node ref="U1" pin="2" pinfunction="GPIO36_2" pintype="input+no_connect"/>
     </net>
-    <net code="31" name="unconnected-(U1-GPIO39-Pad3)" class="Default">
+    <net code="33" name="unconnected-(U1-GPIO39-Pad3)" class="Default">
       <node ref="U1" pin="3" pinfunction="GPIO39_3" pintype="input+no_connect"/>
     </net>
-    <net code="32" name="unconnected-(U2-NC-Pad4)" class="Default">
+    <net code="34" name="unconnected-(U2-NC-Pad4)" class="Default">
       <node ref="U2" pin="4" pinfunction="NC_4" pintype="no_connect"/>
     </net>
   </nets>

@@ -1,0 +1,21 @@
+{
+  "baseline_commit": "61622df0b98fa96dff93aacdbaf64159cf181e84",
+  "method": "Native UUID, net, endpoint, width, layer and via drill comparison; original pad geometry and nets compared",
+  "zone_fills": "refilled for added branches; not part of discrete-track preservation claim",
+  "boards": [
+    {
+      "board": "pcb_a_display",
+      "original_tracks_and_vias": 255,
+      "original_tracks_and_vias_preserved": true,
+      "original_pad_geometry_and_nets_preserved": true,
+      "added_tracks_and_vias": 81
+    },
+    {
+      "board": "pcb_b_temperature",
+      "original_tracks_and_vias": 266,
+      "original_tracks_and_vias_preserved": true,
+      "original_pad_geometry_and_nets_preserved": true,
+      "added_tracks_and_vias": 136
+    }
+  ]
+}

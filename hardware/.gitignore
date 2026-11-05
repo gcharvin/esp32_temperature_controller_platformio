@@ -10,3 +10,5 @@ review/routing/*.dsn
 review/routing/*.ses
 review/routing/*.png
 review/routing/*_placement_drc.json
+review/routing/diagnostics_initial_*.json
+review/routing/diagnostics_routed_*.json

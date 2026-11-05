@@ -1,0 +1,66 @@
+{
+  "LEDs": [
+    {
+      "board": "pcb_a_display",
+      "led": "D1",
+      "resistor": "R6",
+      "supply": "+5V_AB",
+      "return_net": "GND",
+      "series_only": true,
+      "cathode_pin": 1,
+      "anode_pin": 2
+    },
+    {
+      "board": "pcb_a_display",
+      "led": "D2",
+      "resistor": "R7",
+      "supply": "+3V3_A",
+      "return_net": "GND",
+      "series_only": true,
+      "cathode_pin": 1,
+      "anode_pin": 2
+    },
+    {
+      "board": "pcb_b_temperature",
+      "led": "D5",
+      "resistor": "R9",
+      "supply": "VIN_PROTECTED",
+      "return_net": "PGND",
+      "series_only": true,
+      "cathode_pin": 1,
+      "anode_pin": 2
+    },
+    {
+      "board": "pcb_b_temperature",
+      "led": "D6",
+      "resistor": "R10",
+      "supply": "+5V_AB",
+      "return_net": "GND",
+      "series_only": true,
+      "cathode_pin": 1,
+      "anode_pin": 2
+    },
+    {
+      "board": "pcb_b_temperature",
+      "led": "D7",
+      "resistor": "R11",
+      "supply": "+3V3_B",
+      "return_net": "GND",
+      "series_only": true,
+      "cathode_pin": 1,
+      "anode_pin": 2
+    },
+    {
+      "board": "pcb_b_temperature",
+      "led": "D8",
+      "resistor": "R12",
+      "supply": "GATE_DRV",
+      "return_net": "PGND",
+      "series_only": true,
+      "cathode_pin": 1,
+      "anode_pin": 2
+    }
+  ],
+  "NTC_divider_unloaded": true,
+  "HEAT_measures": "gate driver output, not heater current"
+}

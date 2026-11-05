@@ -1,5 +1,5 @@
 {
-  "revision": "routed prototype 0.3 / 2026-11-05",
+  "revision": "routed prototype 0.4 diagnostics / 2026-11-05",
   "status": "routed, DRC checked; DevKit pitch assumed 25.40 mm; thermal/module tests pending",
   "case_external_mm": {
     "width": 155,
@@ -140,6 +140,42 @@
           "footprint": "Capacitor_SMD:C_0603_1608Metric",
           "height_mm": 1.5,
           "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "D1",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            99.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "bounds_mm": [
+            97.08,
+            53.98,
+            3.795,
+            2.04
+          ],
+          "height_mm": 0.75,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
+          "reference": "D2",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            99.0,
+            64.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "bounds_mm": [
+            97.08,
+            62.98,
+            3.795,
+            2.04
+          ],
+          "height_mm": 0.75,
+          "status": "diagnostic component / physical package selected"
         },
         {
           "reference": "J1",
@@ -374,6 +410,42 @@
           "footprint": "Resistor_SMD:R_0603_1608Metric",
           "height_mm": 1.5,
           "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R6",
+          "value": "1.5k / 1% / 0.1W",
+          "origin_mm": [
+            94.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            92.495,
+            54.245,
+            3.01,
+            1.51
+          ],
+          "height_mm": 0.6,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
+          "reference": "R7",
+          "value": "470R / 1% / 0.1W",
+          "origin_mm": [
+            94.0,
+            64.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            92.495,
+            63.245,
+            3.01,
+            1.51
+          ],
+          "height_mm": 0.6,
+          "status": "diagnostic component / physical package selected"
         },
         {
           "reference": "U1",
@@ -624,9 +696,9 @@
           "rotation_deg": -90.0,
           "bounds_mm": [
             18.725,
-            21.13,
+            21.1303,
             8.55,
-            8.745
+            8.7447
           ],
           "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
           "height_mm": 11.5,
@@ -685,6 +757,78 @@
           "footprint": "Diode_SMD:D_SMB",
           "height_mm": 2.4,
           "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "D5",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            22.0,
+            37.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "bounds_mm": [
+            20.08,
+            35.98,
+            3.795,
+            2.04
+          ],
+          "height_mm": 0.75,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
+          "reference": "D6",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            28.0,
+            37.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "bounds_mm": [
+            26.08,
+            35.98,
+            3.795,
+            2.04
+          ],
+          "height_mm": 0.75,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
+          "reference": "D7",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            45.0,
+            34.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "bounds_mm": [
+            43.08,
+            32.98,
+            3.795,
+            2.04
+          ],
+          "height_mm": 0.75,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
+          "reference": "D8",
+          "value": "APT2012LSECK/J4-PRV",
+          "origin_mm": [
+            66.0,
+            39.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "bounds_mm": [
+            64.08,
+            37.98,
+            3.795,
+            2.04
+          ],
+          "height_mm": 0.75,
+          "status": "diagnostic component / physical package selected"
         },
         {
           "reference": "F1",
@@ -778,7 +922,7 @@
         },
         {
           "reference": "J4",
-          "value": "NTC 15k B3920",
+          "value": "TEMP / NTC 15k B3920",
           "origin_mm": [
             81.0,
             52.0
@@ -921,6 +1065,60 @@
           "status": "physical routed prototype; verify module fit and thermal behavior"
         },
         {
+          "reference": "R10",
+          "value": "1.5k / 1% / 0.1W",
+          "origin_mm": [
+            28.0,
+            32.0
+          ],
+          "rotation_deg": -90.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            27.245,
+            30.495,
+            1.51,
+            3.01
+          ],
+          "height_mm": 0.6,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
+          "reference": "R11",
+          "value": "470R / 1% / 0.1W",
+          "origin_mm": [
+            45.0,
+            30.0
+          ],
+          "rotation_deg": -90.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            44.245,
+            28.495,
+            1.51,
+            3.01
+          ],
+          "height_mm": 0.6,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
+          "reference": "R12",
+          "value": "2.2k / 1% / 0.1W",
+          "origin_mm": [
+            66.0,
+            35.0
+          ],
+          "rotation_deg": -90.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            65.245,
+            33.495,
+            1.51,
+            3.01
+          ],
+          "height_mm": 0.6,
+          "status": "diagnostic component / physical package selected"
+        },
+        {
           "reference": "R2",
           "value": "47k",
           "origin_mm": [
@@ -1045,6 +1243,24 @@
           "footprint": "Resistor_SMD:R_0603_1608Metric",
           "height_mm": 1.5,
           "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R9",
+          "value": "15k / 1% / 0.125W",
+          "origin_mm": [
+            22.0,
+            32.0
+          ],
+          "rotation_deg": -90.0,
+          "footprint": "Resistor_SMD:R_0805_2012Metric",
+          "bounds_mm": [
+            21.025,
+            30.295,
+            1.95,
+            3.41
+          ],
+          "height_mm": 0.6,
+          "status": "diagnostic component / physical package selected"
         },
         {
           "reference": "U2",

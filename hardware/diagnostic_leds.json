@@ -1,0 +1,173 @@
+{
+  "revision": "0.4",
+  "boards": {
+    "pcb_a_display": [
+      {
+        "led": "D1",
+        "resistor": "R6",
+        "label": "5V_AB",
+        "rail": "+5V_AB",
+        "ground": "GND",
+        "ohms": 1500,
+        "voltage": 5,
+        "led_at": [
+          99,
+          55,
+          0
+        ],
+        "resistor_at": [
+          94,
+          55,
+          0
+        ],
+        "color": "green",
+        "mpn": "APT2012LZGCK",
+        "vf_typ_V": 2.65,
+        "net": "LED_A_D1",
+        "resistor_fp": "Resistor_SMD:R_0603_1608Metric",
+        "resistor_value": "1.5k",
+        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf"
+      },
+      {
+        "led": "D2",
+        "resistor": "R7",
+        "label": "3V3_A",
+        "rail": "+3V3_A",
+        "ground": "GND",
+        "ohms": 470,
+        "voltage": 3.3,
+        "led_at": [
+          99,
+          64,
+          0
+        ],
+        "resistor_at": [
+          94,
+          64,
+          0
+        ],
+        "color": "green",
+        "mpn": "APT2012LZGCK",
+        "vf_typ_V": 2.65,
+        "net": "LED_A_D2",
+        "resistor_fp": "Resistor_SMD:R_0603_1608Metric",
+        "resistor_value": "470R",
+        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf"
+      }
+    ],
+    "pcb_b_temperature": [
+      {
+        "led": "D5",
+        "resistor": "R9",
+        "label": "24V",
+        "rail": "VIN_PROTECTED",
+        "ground": "PGND",
+        "ohms": 15000,
+        "voltage": 24,
+        "led_at": [
+          22,
+          37,
+          0
+        ],
+        "resistor_at": [
+          22,
+          32,
+          270
+        ],
+        "label_at": [
+          17.2,
+          32
+        ],
+        "color": "green",
+        "mpn": "APT2012LZGCK",
+        "vf_typ_V": 2.65,
+        "net": "LED_B_D5",
+        "resistor_fp": "Resistor_SMD:R_0805_2012Metric",
+        "resistor_value": "15k",
+        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf"
+      },
+      {
+        "led": "D6",
+        "resistor": "R10",
+        "label": "5V",
+        "rail": "+5V_AB",
+        "ground": "GND",
+        "ohms": 1500,
+        "voltage": 5,
+        "led_at": [
+          28,
+          37,
+          0
+        ],
+        "resistor_at": [
+          28,
+          32,
+          270
+        ],
+        "color": "green",
+        "mpn": "APT2012LZGCK",
+        "vf_typ_V": 2.65,
+        "net": "LED_B_D6",
+        "resistor_fp": "Resistor_SMD:R_0603_1608Metric",
+        "resistor_value": "1.5k",
+        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf"
+      },
+      {
+        "led": "D7",
+        "resistor": "R11",
+        "label": "3V3",
+        "rail": "+3V3_B",
+        "ground": "GND",
+        "ohms": 470,
+        "voltage": 3.3,
+        "led_at": [
+          45,
+          34,
+          0
+        ],
+        "resistor_at": [
+          45,
+          30,
+          270
+        ],
+        "label_at": [
+          42,
+          32
+        ],
+        "color": "green",
+        "mpn": "APT2012LZGCK",
+        "vf_typ_V": 2.65,
+        "net": "LED_B_D7",
+        "resistor_fp": "Resistor_SMD:R_0603_1608Metric",
+        "resistor_value": "470R",
+        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf"
+      },
+      {
+        "led": "D8",
+        "resistor": "R12",
+        "label": "HEAT",
+        "rail": "GATE_DRV",
+        "ground": "PGND",
+        "ohms": 2200,
+        "voltage": 5,
+        "led_at": [
+          66,
+          39,
+          0
+        ],
+        "resistor_at": [
+          66,
+          35,
+          270
+        ],
+        "color": "orange",
+        "mpn": "APT2012LSECK/J4-PRV",
+        "vf_typ_V": 1.8,
+        "net": "LED_B_D8",
+        "resistor_fp": "Resistor_SMD:R_0603_1608Metric",
+        "resistor_value": "2.2k",
+        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lseck-j4-prv.pdf"
+      }
+    ]
+  }
+}
