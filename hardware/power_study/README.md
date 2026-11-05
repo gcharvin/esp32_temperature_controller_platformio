@@ -1,4 +1,26 @@
-# Proposition de buck intégré à B — étude 0.1
+# Buck intégré à B — études et simulation KiCad
+
+## Solution KiCad disponible — étude 0.2
+
+La variante **LM2596S-5.0** dispose maintenant d'un projet directement simulable
+dans KiCad 10, avec les modèles originaux TI et Vishay, sans installer PSpice.
+Ouvrir **`kicad_simulation/startup/lm2596_5v_startup.kicad_pro`**, puis le schéma
+et **Inspecter → Simulateur**. Le classeur `.wbk` associé prépare les tracés.
+
+**Six transitoires complets ont réussi les critères de l'étude** : démarrage,
+échelons 0,1 ↔ 0,8 A, tolérances L/C à −20 %, ESR basse, entrée 18–26,4 V et arrêt.
+Lors du saut de charge nominal, la sortie reste entre **4,9615 et 5,0128 V**,
+avec **26,9 mV crête à crête** d'ondulation stabilisée. Les modèles, réglages,
+empreintes et fenêtres de mesure sont enregistrés dans
+`lm2596/results/simulation_results.json`. Deux sensibilités ESR supplémentaires
+sont consignées séparément.
+
+Voir [le circuit, les résultats et les limites](lm2596/README.md) et
+[la procédure KiCad](kicad_simulation/README.md). Le choix d'un autre régulateur
+change les passifs, la diode, le brochage et l'encombrement : **le PCB B v0.5 intègre désormais cette variante ; la maquette mécanique v0.7 est réconciliée sans XL4015 externe**. Cette étude réussie ne
+constitue pas encore une qualification thermique ou un dossier de fabrication.
+
+## Historique — proposition LMR36520, étude 0.1
 
 Étude du 5 novembre 2026. **Candidat retenu : TI LMR36520ADDAR**, avec circuit et bancs de simulation documentés. Le PCB B routé v0.4 n'est pas modifié par cette étude : il conserve son XL4015 externe jusqu'à validation du remplacement.
 

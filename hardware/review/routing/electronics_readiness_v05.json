@@ -1,0 +1,9 @@
+{
+  "status": "Existing electrical evidence audited, not rerun: no electrical-source changes this turn",
+  "nominal_cases_passed": 6,
+  "extra_ESR_sensitivity_cases_passed": 2,
+  "integrated_core_startup_complete": true,
+  "source_and_model_hashes_match": true,
+  "hardware_tests_performed": false,
+  "next_gate": "Physical prototype tests described in electronics_bench_plan.md"
+}
