@@ -1,0 +1,43 @@
+﻿MPN,Board_references,JLCPCB_ID,Identity_verified,Manufacturer,Package,Assembly_mode,Stock,Source,Issue
+0451001.MRL,B/F2,C3099,True,Littelfuse,2410,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C3099,
+045106.3MRL,B/F1,C178982,True,Littelfuse,2410,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C178982,
+1715721,B/J2 B/J3,C480516,True,Phoenix Contact,"Plugin,P=5.08mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C480516,
+ADS1115IDGSR,B/U4,C37593,True,Texas Instruments,VSSOP-10,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C37593,
+AP2112K-3.3TRG1,A/U2 B/U2,C51118,True,Diodes Incorporated,SOT-25-5,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C51118,
+APT2012LSECK/J4-PRV,B/D8,C5879381,True,Kingbright,"SMD,2x1.3mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C5879381,
+APT2012LZGCK,A/D1 A/D2 B/D5 B/D6 B/D7,C5569446,True,Kingbright,0805,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C5569446,
+B2B-XH-A(LF)(SN),A/J1 B/J1 B/J4,C158012,True,JST,"Plugin,P=2.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C158012,
+B3B-XH-A(LF)(SN),A/J6 B/J6,C144394,True,JST,"Plugin,P=2.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C144394,
+B4B-XH-A(LF)(SN),A/J2 A/J3 A/J4 A/J5,C144395,True,JST,"Plugin,P=2.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C144395,
+B6B-XH-A(LF)(SN),A/J7 B/J7,C144397,True,JST,"Plugin,P=2.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C144397,
+BZT52C12-7-F,B/D3,C124196,True,Diodes Incorporated,SOD-123,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C124196,
+C0603C104K4RACTU,B/C3 B/C4 B/C5 B/C6,C2181816,True,KEMET,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C2181816,
+C0805C104K5RACTU,B/C9,C3018562,True,KEMET,0805,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C3018562,
+C1608X5R1A106K080AC,A/C3,C2167467,True,TDK,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C2167467,
+C1608X7R1C105K080AC,A/C1 A/C2 B/C1 B/C2 B/C7,C2167399,True,TDK,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C2167399,
+DMP6023LE-13,B/Q2,C154901,True,Diodes Incorporated,SOT-223,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C154901,
+EEUFR1H101,B/C8,C178702,True,PANASONIC,"Plugin,D8xL11.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C178702,
+IRLZ44NPBF,B/Q1,C38774,True,Infineon Technologies,TO-220AB,manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C38774,
+LM2596S-5.0/NOPB,B/U1,C116713,True,Texas Instruments,TO-263-5,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C116713,
+RC0603FR-07100KL,B/R4 B/R8,C14675,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C14675,
+RC0603FR-0710KL,A/R1 A/R2 A/R3 B/R7,C98220,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C98220,
+RC0603FR-071K5L,A/R6 B/R10,C114668,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C114668,
+RC0603FR-071KL,B/R6,C22548,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C22548,
+RC0603FR-0722RL,B/R3,C107701,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C107701,
+RC0603FR-072K2L,B/R12,C114662,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C114662,
+RC0603FR-07470RL,A/R7 B/R11,C114669,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C114669,
+RC0603FR-0747KL,B/R1 B/R2,C105579,False,,,,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C105579,HTTPError: HTTP Error 429: Too Many Requests
+RC0603FR-074K7L,A/R4 A/R5,C99782,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C99782,
+RC0603FR-078K45L,B/R5,C163417,True,YAGEO,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C163417,
+RC0805FR-0715KL,B/R9,C114559,True,YAGEO,0805,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C114559,
+SMBJ24CA,B/D2,C83268,True,Littelfuse,DO-214AA,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C83268,
+SN74LVC1G08DBVR,B/U3,C7666,True,Texas Instruments,SOT-23-5,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C7666,
+SRP1770TA-101M,B/L1,C2045587,True,BOURNS,"SMD,17.8x16.9mm",smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C2045587,
+SS36-E3/57T,B/D9,C35722,True,Vishay Intertech,SMC(DO-214AB),smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C35722,
+STPS5L60U,B/D4,C157397,True,STMicroelectronics,SMB(DO-214AA),smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C157397,
+UCC27517DBVR,B/U5,C99395,True,Texas Instruments,SOT-23-5,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C99395,
+EEUFR1V331UB,B/C10,,False,,,,UNMATCHED / sourcing quotation needed,,Exact compact capacitor selected for ESR and mechanical height. Request sourcing; no automatic substitution of EEUFR1V331U or another capacitor.
+WSL1206R0560FEA,B/R13,,False,,,,UNMATCHED / sourcing quotation needed,,56mOhm damping resistor. Request global sourcing or propose a manufacturer-documented 1206 alternative with the same electrical requirements and land pattern review.
+M20-9990246,A/JP1,,False,,,,UNMATCHED / sourcing quotation needed,,Harwin JP1 THT header; request sourcing or approve a fully dimensioned equivalent.
+M20-7821546,,,False,,,,UNMATCHED / sourcing quotation needed,,Two separate Harwin 1x15 sockets per A; request sourcing with height8.5mm maintained.
+M7566-05,,,False,,,,UNMATCHED / sourcing quotation needed,,"Separate removable jumper shunt; system BOM, not an SMT placement."

@@ -122,7 +122,8 @@
       "source": "User measured center-to-center distance between the two header rows of the purchased DevKit",
       "uncertainty_mm": null,
       "scope": "row spacing only; outline, pin labels, insertion height and USB position are not confirmed by this measurement"
-    }
+    },
+    "connected_board_identity_status": "2026-11-05: connected USB-C cards enumerate as Silicon Labs CP210x on COM4/COM8; exact correspondence to the diymore CH340 purchase variant is unconfirmed. Keep the measured25.4mm spacing; confirm physical30-pin labels and power circuit per actual card."
   },
   "buck": {
     "model": "LM2596S-5.0/NOPB",

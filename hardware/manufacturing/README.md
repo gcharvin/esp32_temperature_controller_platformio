@@ -15,8 +15,9 @@ les futures cartes B 12 V/5 V également ; voir la
   méthode d'assemblage et état d'approbation.
 - `BOM_SMT_RFQ_NOT_FOR_ORDER.csv` et `CPL_SMT_RFQ_ROTATIONS_UNVERIFIED.csv` :
   mêmes repères pour les composants CMS à faire chiffrer. Les références
-  fournisseur restent vides tant qu'elles n'ont pas été rapprochées du
-  catalogue réel. Aucun prix ou stock n'est supposé.
+  fournisseur sont renseignées lorsque le MPN exact et le fabricant ont été
+  vérifiés sur une fiche JLC publique. Les autres restent vides. Aucun prix
+  global ou stock de commande n'est supposé.
 - `THT_assembly_quote.csv` : connecteurs traversants et autres pièces à faire
   **assembler par le fabricant**, sous réserve de son devis et de ses moyens.
   Leur soudure n'est pas implicitement transférée à l'utilisateur.
@@ -34,6 +35,48 @@ la revue électrique, mécanique et du procédé d'assemblage.
 alimentation, charge et pièces imprimées, avec leurs références connues ou
 les choix encore ouverts. Le jeu A+B représente 51 CMS et 19 pièces
 traversantes à souder (dont les deux sockets), plus la DevKit à enficher.
+
+## Revue fournisseur et procédé
+
+`supplier_review.json` / `.csv` enregistrent **36 correspondances exactes
+fabricant + MPN** vérifiées sur les fiches publiques JLCPCB, avec lien et date.
+Le contrôle de RC0603FR-0747KL a rencontré une limitation HTTP429 : son ID
+repéré C105579 reste à confirmer. C10 EEUFR1V331UB, R13 WSL1206R0560FEA,
+les deux sockets et les accessoires Harwin nécessitent une demande de sourcing.
+Une recherche sans résultat ne démontre pas une indisponibilité.
+
+Ces fiches ne publient pas dans les données récupérées le stock principal
+nécessaire pour une commande. Les prix bruts du catalogue ne constituent pas
+un devis avec réglages, pertes, assemblage, transport et taxes. La disponibilité
+réelle reste à confirmer par l'assembleur ; les pièces de fabricants différents
+portant des noms proches ne sont pas substituées automatiquement.
+
+Pour B, la base de devis est **Standard**, avec profil composant validé :
+le LM2596 sélectionné est limité à **245 °C de pic de refusion**. Le profil
+Economic annoncé à 255 ± 5 °C dépasse cette limite. Les exigences et leurs
+sources sont dans `process_requirements.json` ; elles ne constituent pas une
+qualification du profil thermique réel. Source :
+[TI, tableau des boîtiers](https://www.ti.com/lit/ds/symlink/lm2596.pdf#page=37).
+
+Comme B mesure 90 × 65 mm, le devis propose des rails amovibles externes de
+5 mm en haut et en bas, soit 90 × 75 mm au total pour l'assemblage. Voir
+`panel_B_proposal.svg`. Le panneau, ses attaches et son outillage doivent être
+acceptés par le fabricant ; le contour fonctionnel et le boîtier restent
+inchangés. Les cartes sont demandées **dépanélisées et ébavurées** pour les clips.
+
+`manufacturing_fit_audit.json` contrôle sur les cartes natives les largeurs
+de pistes, les perçages de vias et les couronnes des pastilles traversantes.
+Les critères contrôlés passent sur A et B. Ce contrôle limité ne vaut ni
+revue complète des ouvertures de masque ni validation DFM par le fabricant.
+La tolérance d'épaisseur publiée conduit à 1,44–1,76 mm pour un PCB nominal
+de 1,6 mm : tester un coupon de rainure/clips à ces limites. Sources :
+[fabrication JLC](https://jlcpcb.com/capabilities/pcb-capabilities),
+[assemblage JLC](https://jlcpcb.com/capabilities/pcb-assembly-capabilities).
+
+`assembly_RFQ_draft.md` est une demande de devis concrète **rédigée localement,
+pas envoyée**. `usb_service_test.md` décrit l'essai électrique sur les cartes
+réelles et le candidat PortaPow PPUSBBP1. Les sauvegardes de firmware et les
+logs bruts restent hors du dépôt, car ils peuvent contenir des secrets.
 
 Les CSV `*_bom_draft.csv` à côté des projets KiCad restent les anciens exports
 de conception. La sélection d'achat courante est ici, **sans injection aveugle

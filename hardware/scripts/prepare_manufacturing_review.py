@@ -22,6 +22,8 @@ CLI = Path('C:/Program Files/KiCad/10.0/bin/kicad-cli.exe')
 JST = 'https://www.jst-mfg.com/product/pdf/eng/eXH.pdf'
 RC = 'https://www.yageogroup.com/component-documentation/download/specsheet/'
 DEVKIT = json.loads((ROOT/'module_selection.json').read_text(encoding='utf-8'))['devkit']
+SUPPLIER = json.loads((ROOT/'manufacturing/supplier_review.json').read_text(encoding='utf-8'))
+SUPPLIER_BY_MPN = {r['requested_mpn']:r for r in SUPPLIER['records'] if r['identity_verified']}
 
 
 def sha(path):
@@ -134,13 +136,17 @@ def main():
     OUT.mkdir(parents=True,exist_ok=True)
     manifest=dict(status='DRAFT / RFQ review only; NOT RELEASED FOR FABRICATION',
                   sources_sha256={}, boards={}, automatic_checks=[],
-                  limits=['No live supplier matching, stock or prices checked.',
+                  limits=['Public supplier catalogue identities checked; live order stock and all-in prices remain unconfirmed.',
                           'MPNs are external review candidates, not yet approved native schematic fields.',
                           'No placement rotations approved by assembly house; THT requires explicit quotation.',
                           'USB/external simultaneous operation remains unqualified.'])
     for source in (Path(__file__), ROOT/'interface_ab.json',ROOT/'module_selection.json',
                    ROOT/'manufacturing/power_and_usb_review.md', ROOT/'manufacturing/README.md',
-                   ROOT/'manufacturing/release_checklist.json',ROOT/'manufacturing/system_bom_review.csv'):
+                   ROOT/'manufacturing/release_checklist.json',ROOT/'manufacturing/system_bom_review.csv',
+                   ROOT/'manufacturing/supplier_candidates.json',ROOT/'manufacturing/supplier_review.json',
+                   ROOT/'manufacturing/process_requirements.json',ROOT/'manufacturing/manufacturing_fit_audit.json',
+                   ROOT/'manufacturing/assembly_RFQ_draft.md',ROOT/'manufacturing/usb_service_test.md',
+                   ROOT/'manufacturing/panel_B_proposal.svg'):
         manifest['sources_sha256'][source.relative_to(ROOT).as_posix()]=sha(source)
     native_hashes={p:sha(p) for name in ('pcb_a_display','pcb_b_temperature')
                    for suffix in ('.kicad_sch','.kicad_pcb','.kicad_pro')
@@ -177,12 +183,16 @@ def main():
                 if pad.GetNumber() and pins.get((ref,pad.GetNumber()))!=pad.GetNetname().removeprefix('/'):
                     raise ValueError('Pad/net mismatch '+ref+'.'+pad.GetNumber())
             p=selection(code,ref)
+            supplier=SUPPLIER_BY_MPN.get(p['MPN'],{})
             assembly=('NONE_COPPER' if ref=='NT1' else 'CUSTOMER_PLUG_IN' if code=='A' and ref=='U1'
                       else 'FACTORY_THT_QUOTE' if any(pad.GetDrillSize().x for pad in fp.Pads()) else 'FACTORY_SMT_QUOTE')
             rows.append(dict(Board=code,Reference=ref,Quantity=1,Value=comp.findtext('value'),
                              Footprint=comp.findtext('footprint'),Assembly=assembly,**p,
-                             Approval='OPEN / NOT RELEASED',Supplier_part_number='',
-                             Availability='NOT CHECKED',Price='NOT QUOTED'))
+                             Approval='OPEN / NOT RELEASED',Supplier_part_number=supplier.get('supplier_id',''),
+                             Availability=supplier.get('stock_status','UNMATCHED / quotation required'),Price='NOT QUOTED',
+                             Catalogue_identity='EXACT MPN AND MANUFACTURER VERIFIED' if supplier else 'NOT VERIFIED',
+                             Catalogue_source=supplier.get('source_url',''),
+                             Supplier_assembly_mode=supplier.get('assembly_mode','')))
         for port in contract['connectors']:
             for pin in port['pins']:
                 if code=='B' and not pin.get('connected_on_b',True):
@@ -195,7 +205,7 @@ def main():
         smt=[r for r in rows if r['Assembly']=='FACTORY_SMT_QUOTE']
         write_csv(folder/'BOM_SMT_RFQ_NOT_FOR_ORDER.csv',[
             {'Comment':r['Value'],'Designator':r['Reference'],'Footprint':r['Footprint'],
-             'Manufacturer':r['Manufacturer'],'Manufacturer Part':r['MPN'],'LCSC Part #':''} for r in smt])
+             'Manufacturer':r['Manufacturer'],'Manufacturer Part':r['MPN'],'LCSC Part #':r['Supplier_part_number']} for r in smt])
         raw=folder/'positions_native.csv'
         run('pcb','export','pos','--format','csv','--units','mm','--side','both',
             '--smd-only','--exclude-fp-th','--exclude-dnp','--output',raw,pcb)
@@ -269,6 +279,11 @@ def main():
     manifest['automatic_checks']=['fresh ERC/DRC for both boards', 'native board / netlist ref, value, footprint and pad/net parity',
                                     'all 70 native references accounted for', 'SMT BOM and CPL exact reference matching',
                                     'NT1 excluded from purchasing/placement; DevKit separated from two physical sockets']
+    manifest['supplier_review']=dict(exact_catalogue_MPNs=SUPPLIER['verified_exact_MPNs'],
+        live_stock_confirmed=SUPPLIER['live_stock_confirmed_MPNs'],
+        unverified_rows=[r['requested_mpn'] for r in SUPPLIER['records'] if not r['identity_verified']],
+        unmatched_MPNs=list(SUPPLIER['unresolved_exact_MPNs']),
+        engineering_and_order_approval=False)
     manifest['output_sha256']={p.relative_to(OUT).as_posix():sha(p) for p in sorted(OUT.rglob('*'))
                                if p.is_file() and p.name!='manifest.json' and p.suffix!='.zip'}
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -277,7 +292,9 @@ def main():
         for p in sorted(OUT.rglob('*')):
             if p.is_file():
                 bundle.write(p,p.relative_to(OUT))
-        for name in ('README.md','power_and_usb_review.md','release_checklist.json','system_bom_review.csv'):
+        for name in ('README.md','power_and_usb_review.md','release_checklist.json','system_bom_review.csv',
+                     'supplier_candidates.json','supplier_review.json','supplier_review.csv',
+                     'process_requirements.json','manufacturing_fit_audit.json','assembly_RFQ_draft.md','usb_service_test.md','panel_B_proposal.svg'):
             bundle.write(OUT.parent/name,name)
     print(json.dumps(dict(status=manifest['status'],boards=manifest['boards'],archive=str(archive)),indent=2))
 

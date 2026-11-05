@@ -1,0 +1,43 @@
+{
+  "status": "RFQ process requirements; manufacturer acceptance and preview pending",
+  "sources": {
+    "fabrication": "https://jlcpcb.com/capabilities/pcb-capabilities",
+    "assembly": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities",
+    "LM2596_peak_reflow": "https://www.ti.com/lit/ds/symlink/lm2596.pdf#page=37"
+  },
+  "checked_date": "2026-11-05",
+  "board_A": {
+    "assembly_process": "Economic candidate if actual selected components and PCB options accepted; Standard also possible",
+    "outline_mm": [110, 75],
+    "copper_um": 35,
+    "min_track_width_mm": 0.1,
+    "PTH_component_min_annular_ring_mm": 0.18,
+    "manufacturing_rails": "Factory proposal required if Standard selected; remove and deburr before delivery"
+  },
+  "board_B": {
+    "assembly_process": "Standard quotation with approved thermal profile for selected LM2596",
+    "reason": "TI lists245C maximum peak for LM2596S-5.0/NOPB. Economic fixed255+/-5C exceeds this limit. Standard advertised240+/-5C is only a candidate profile, not a measured process guarantee.",
+    "component_peak_max_C": 245,
+    "moisture_control": "LM2596 MSL3; manage floor life/dry handling per actual manufacturer lot label",
+    "outline_mm": [90, 65],
+    "copper_um": 70,
+    "min_track_width_mm": 0.16,
+    "PTH_component_min_annular_ring_mm": 0.254,
+    "standard_min_panel_mm": [70, 70],
+    "proposed_rail_width_mm": 5,
+    "proposed_panel_mm": [90, 75],
+    "panel_note": "5mm rails outside top and bottom edges; panel orientation, tabs, tooling holes and fiducials to be designed/approved by assembler. No panel Gerber release implied. Depanelize, route flush and deburr before delivery; protect clip contact areas. Do not enlarge B or drill tooling holes into the functional board."
+  },
+  "general": {
+    "min_via_drill_mm": 0.15,
+    "min_via_diameter_minus_drill_mm": 0.1,
+    "via_rule_note": "JLC publishes separate via and component-PTH rules. Do not apply component annular-ring numbers blindly to vias.",
+    "finished_thickness_mm": 1.6,
+    "published_thickness_tolerance_percent": 10,
+    "resulting_thickness_range_mm": [1.44, 1.76],
+    "published_regular_routed_outline_tolerance_mm": 0.2,
+    "mechanical_implication": "Clip/rail coupon should test the published thickness range and edge finish; nominal1.6mm CAD alone does not qualify actual fit.",
+    "THT_assembly": "Request all chosen through-hole parts assembled; solder method, fixtures and sourcing acceptance must be quoted.",
+    "delivered_rails": "Removed before delivery for enclosure fit"
+  }
+}

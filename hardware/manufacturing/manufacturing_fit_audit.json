@@ -1,0 +1,49 @@
+{
+  "status": "limited geometric checks",
+  "sources": {
+    "fabrication": "https://jlcpcb.com/capabilities/pcb-capabilities",
+    "assembly": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities",
+    "LM2596_peak_reflow": "https://www.ti.com/lit/ds/symlink/lm2596.pdf#page=37"
+  },
+  "boards": {
+    "A": {
+      "native_PCB_sha256": "f7705f87215e4a18769525250f8c91dc2e1cad0488f5dd6e411b9a34ade7f757",
+      "track_min_mm": 0.2,
+      "via_count": 9,
+      "via_min_annular_ring_mm": 0.2,
+      "component_PTH_count": 59,
+      "component_PTH_min_ring_mm": 0.35,
+      "checks": {
+        "track_width": true,
+        "component_PTH_annular_ring": true,
+        "via_drill": true,
+        "via_diameter_margin": true,
+        "thickness": true
+      },
+      "failures": []
+    },
+    "B": {
+      "native_PCB_sha256": "b836fc13c47ba221dfce18677d17ecdd8a936275cd9e8569e2a944593391424d",
+      "track_min_mm": 0.25,
+      "via_count": 31,
+      "via_min_annular_ring_mm": 0.2,
+      "component_PTH_count": 24,
+      "component_PTH_min_ring_mm": 0.35,
+      "checks": {
+        "track_width": true,
+        "component_PTH_annular_ring": true,
+        "via_drill": true,
+        "via_diameter_margin": true,
+        "thickness": true
+      },
+      "failures": []
+    }
+  },
+  "limits": [
+    "Not factory DFM approval; pad solderability, mask bridges and full assembly preview still need review.",
+    "Minimum component-PTH rings and minimum vias are separate published constraints.",
+    "Proposed manufacturing rails are not functional PCB geometry and have not been accepted by the assembler."
+  ],
+  "all_checked_constraints_passed": true,
+  "policy_sha256": "ca638a1e275341c1e183791347bd4b9800cadf988660d7e55fe63a972224f3b9"
+}

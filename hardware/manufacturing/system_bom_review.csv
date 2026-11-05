@@ -1,4 +1,4 @@
-Item,Quantity_per_system,Description,Reference_or_candidate,Supply_status,Assembly,Remaining_check
+﻿Item,Quantity_per_system,Description,Reference_or_candidate,Supply_status,Assembly,Remaining_check
 PCB_A,1,Display board A v0.4,See review_A04_B05/A,RFQ draft,Factory SMT plus THT,DevKit dimensions and approved purchasing references
 PCB_B,1,Temperature board B v0.5 24V,See review_A04_B05/B,RFQ draft,Factory SMT plus THT,Electrical review and approved purchasing references
 DEVKIT,1,30P ESP32 USB-C CH340 diymore,B0DGLCWR76,Already purchased; row spacing25.40mm confirmed by user2026-11-05,Plug into two sockets after assembly,Outline pinout insertion height and USB position still to check
@@ -20,7 +20,7 @@ POWER_SUPPLY,1,Regulated24V DC supply for temperature prototype,,OPEN exact refe
 HEATER,1,Application-specific24V resistive heater up to100W,,OPEN exact reference,External,Actual resistance wiring temperature rating and control requirements
 POWER_WIRING,1set,Input and heater leads and ferrules,,Quote with assembly,Rear glands to B/J2-J3,Current rating temperature insulation and stripping/ferrule compatibility
 USB_EXTENSION,1,Side-panel USB access to DevKit USB-C,,OPEN exact reference,Side panel and DevKit,Plug dimensions data integrity and assembled removal path
-USB_SERVICE_INTERFACE,1,VBUS-separated powered serial arrangement,,Not qualified,To define after measuring DevKit,CH340 power enumeration VBUS and USB-C CC behavior
+USB_SERVICE_INTERFACE,1,VBUS-separated powered serial arrangement,PortaPow PPUSBBP1,Manufacturer-documented test candidate; no purchase made,External USB-A side of data cable; side USB-C retained,Test each actual DevKit at5V external; CH340/CP210x power and enumeration; not galvanic isolation
 INDEPENDENT_THERMAL_CUTOFF,1,Application-specific independent heater cutoff,,OPEN protection design,External heater power wiring,Trip temperature current reset behavior and sensor placement
 PRINTED_ENCLOSURE,4pieces,Shell front B-carrier rear,Mechanical v0.7,STEP and STL available,Clip assembly,Printed coupon and fully wired fit thermal material choice
 XL4015,0,Previously bought external buck,B0C6R3FMT3,Not used in Bv0.5,None,Do not add to current assembly

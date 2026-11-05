@@ -15,7 +15,7 @@
     {
       "id": "devkit_fit",
       "status": "OPEN",
-      "action": "Row spacing25.40mm confirmed by user2026-11-05, matching existing footprint. Remaining checks: outline, pin labels, header insertion height and USB position.",
+      "action": "Row spacing25.40mm confirmed by user2026-11-05, matching existing footprint. Remaining checks: outline, pin labels, header insertion height and USB position. Identify actual board variant/pin labels: connected CP210x cards are not established as the advertised CH340 diymore variant.",
       "confirmed_dimensions": {
         "row_spacing_mm": 25.4,
         "date": "2026-11-05",
@@ -24,13 +24,13 @@
     },
     {
       "id": "procurement",
-      "status": "OPEN",
-      "action": "Approve every MPN, stock and quote; check all manufacturer drawings, land patterns, pinouts, MLCC effective capacitance and substitutions. C9/R13 and JP1 header/shunt candidates identified but not released."
+      "status": "CATALOGUE_IDENTITIES_MATCHED_PARTIALLY",
+      "action": "36 exact manufacturer/MPN identities verified on public JLC pages; supplier IDs prepared. RC0603FR-0747KL check rate-limited. Exact C10/R13 and Harwin parts require sourcing. Live assembly stock, pricing, MLCC bias and final land-pattern/substitution approvals remain open."
     },
     {
       "id": "USB_service",
       "status": "OPEN",
-      "action": "Qualify the purchased DevKit power path and a specific USB service arrangement. Ordinary USB + external 5 V remains prohibited. USB-only disconnected service is retained; powered monitoring is not yet available."
+      "action": "PortaPow PPUSBBP1 selected as a documented test accessory, not qualified. Connected COM4/COM8 boards enumerate as CP210x; actual diymore CH340 identity and VBUS/VIN electrical measurements remain unresolved. No firmware replacement is needed for power-path testing."
     },
     {
       "id": "buck_review",
@@ -39,8 +39,8 @@
     },
     {
       "id": "assembly_quote",
-      "status": "OPEN",
-      "action": "Quote factory SMT plus THT and two separate 1x15 sockets under U1/A. Approve polarity, native rotations, soldering process, heights and 2 oz B capability in manufacturer preview. No automatic substitutions."
+      "status": "LOCAL_RFQ_PREPARED_NOT_SENT",
+      "action": "Request Standard B assembly with measured LM2596 component peak <=245C and MSL3 handling. B65mm height needs removable external rails/panel accepted by assembler. Deliver depanelized boards with deburred clip edges; no enlarged functional PCB. Draft local only."
     },
     {
       "id": "fabrication_snapshot",

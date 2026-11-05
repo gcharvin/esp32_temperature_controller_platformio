@@ -1,0 +1,2038 @@
+{
+  "scope": "Public catalogue identity/assembly classification only; no order, reservation or upload",
+  "checked_date": "2026-11-05",
+  "verified_exact_MPNs": 36,
+  "live_stock_confirmed_MPNs": 0,
+  "candidate_input_sha256": "a1b9ad4ac19b9272a45ec599ba9824ef3e1a40e2e3b414b8512da714ab8aded0",
+  "records": [
+    {
+      "requested_mpn": "0451001.MRL",
+      "supplier_id": "C3099",
+      "source_url": "https://jlcpcb.com/partdetail/C3099",
+      "checked_utc": "2026-11-05T18:02:31.911114+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C3099",
+      "public_page_sha256": "2baffe5881c04a391f0a67674d3b13d001989cc20f1bf8ebe0d0f2d538abba6d",
+      "mpn": "0451001.MRL",
+      "manufacturer": "Littelfuse",
+      "package": "2410",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Littelfuse-0451001-MRL_C3099.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.2288
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.1794
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 999,
+          "public_productPrice": 0.1582
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 1999,
+          "public_productPrice": 0.1317
+        },
+        {
+          "min_qty": 2000,
+          "max_qty": 4999,
+          "public_productPrice": 0.1199
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": -1,
+          "public_productPrice": 0.1129
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/F2"
+      ]
+    },
+    {
+      "requested_mpn": "045106.3MRL",
+      "supplier_id": "C178982",
+      "source_url": "https://jlcpcb.com/partdetail/C178982",
+      "checked_utc": "2026-11-05T18:02:31.911606+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C178982",
+      "public_page_sha256": "b37a9fea62a4636e6253be30c48c132c6f6f1ca975a039e705d16701b0b53f5c",
+      "mpn": "045106.3MRL",
+      "manufacturer": "Littelfuse",
+      "package": "2410",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Littelfuse-045106-3MRL_C178982.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.2678
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.2187
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 999,
+          "public_productPrice": 0.1978
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 1999,
+          "public_productPrice": 0.15
+        },
+        {
+          "min_qty": 2000,
+          "max_qty": 4999,
+          "public_productPrice": 0.1384
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": -1,
+          "public_productPrice": 0.1314
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/F1"
+      ]
+    },
+    {
+      "requested_mpn": "1715721",
+      "supplier_id": "C480516",
+      "source_url": "https://jlcpcb.com/partdetail/C480516",
+      "checked_utc": "2026-11-05T18:02:31.911606+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C480516",
+      "public_page_sha256": "cd905f92ff421faf41ad4b4502f55ec32989737126409ea5a8a2c4ebb42af98f",
+      "mpn": "1715721",
+      "manufacturer": "Phoenix Contact",
+      "package": "Plugin,P=5.08mm",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2001071235_Phoenix-Contact-1715721_C480516.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 0.4203
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 29,
+          "public_productPrice": 0.3288
+        },
+        {
+          "min_qty": 30,
+          "max_qty": 249,
+          "public_productPrice": 0.2879
+        },
+        {
+          "min_qty": 250,
+          "max_qty": 499,
+          "public_productPrice": 0.2323
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 0.2094
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": -1,
+          "public_productPrice": 0.1963
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/J2",
+        "B/J3"
+      ]
+    },
+    {
+      "requested_mpn": "ADS1115IDGSR",
+      "supplier_id": "C37593",
+      "source_url": "https://jlcpcb.com/partdetail/C37593",
+      "checked_utc": "2026-11-05T18:02:32.751576+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C37593",
+      "public_page_sha256": "0700eae92420fb2f936c508805a00ebef159edf8e8f8129e0d646e989617df0e",
+      "mpn": "ADS1115IDGSR",
+      "manufacturer": "Texas Instruments",
+      "package": "VSSOP-10",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809192322_Texas-Instruments-ADS1115IDGSR_C37593.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 1.4015
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 29,
+          "public_productPrice": 1.2364
+        },
+        {
+          "min_qty": 30,
+          "max_qty": 99,
+          "public_productPrice": 1.081
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 499,
+          "public_productPrice": 0.9649
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 0.9175
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": -1,
+          "public_productPrice": 0.8929
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/U4"
+      ]
+    },
+    {
+      "requested_mpn": "AP2112K-3.3TRG1",
+      "supplier_id": "C51118",
+      "source_url": "https://jlcpcb.com/partdetail/C51118",
+      "checked_utc": "2026-11-05T18:02:32.868740+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C51118",
+      "public_page_sha256": "661b3488c790ad14129191f7798508e5a8c5d71f64a3af5df474398602c0d8cd",
+      "mpn": "AP2112K-3.3TRG1",
+      "manufacturer": "Diodes Incorporated",
+      "package": "SOT-25-5",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Diodes-Incorporated-AP2112K-3-3TRG1_C51118.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.1685
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.1335
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 499,
+          "public_productPrice": 0.1165
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 2999,
+          "public_productPrice": 0.1013
+        },
+        {
+          "min_qty": 3000,
+          "max_qty": 5999,
+          "public_productPrice": 0.0926
+        },
+        {
+          "min_qty": 6000,
+          "max_qty": -1,
+          "public_productPrice": 0.0902
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/U2",
+        "B/U2"
+      ]
+    },
+    {
+      "requested_mpn": "APT2012LSECK/J4-PRV",
+      "supplier_id": "C5879381",
+      "source_url": "https://jlcpcb.com/partdetail/C5879381",
+      "checked_utc": "2026-11-05T18:02:32.950282+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C5879381",
+      "public_page_sha256": "a3febf5e024ce1cd380609028a321a85bf5c8543b982d47efa935a43248d95d4",
+      "mpn": "APT2012LSECK/J4-PRV",
+      "manufacturer": "Kingbright",
+      "package": "SMD,2x1.3mm",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "MSL 3",
+      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2404170948_Kingbright-APT2012LSECK-J4-PRV_C5879381.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.1621
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.1577
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 499,
+          "public_productPrice": 0.1548
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 509,
+          "public_productPrice": 0.1518
+        },
+        {
+          "min_qty": 510,
+          "max_qty": 519,
+          "public_productPrice": 0.1518
+        },
+        {
+          "min_qty": 520,
+          "max_qty": -1,
+          "public_productPrice": 0.1518
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/D8"
+      ]
+    },
+    {
+      "requested_mpn": "APT2012LZGCK",
+      "supplier_id": "C5569446",
+      "source_url": "https://jlcpcb.com/partdetail/C5569446",
+      "checked_utc": "2026-11-05T18:02:33.752921+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C5569446",
+      "public_page_sha256": "bfb96ca6c703d89aff91178952cd248bd7eccc7eeae62a69f97762db087ba9f5",
+      "mpn": "APT2012LZGCK",
+      "manufacturer": "Kingbright",
+      "package": "0805",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 3",
+      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2305261758_Kingbright-APT2012LZGCK_C5569446.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.3749
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.2921
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 499,
+          "public_productPrice": 0.2566
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 1999,
+          "public_productPrice": 0.2123
+        },
+        {
+          "min_qty": 2000,
+          "max_qty": 3999,
+          "public_productPrice": 0.1925
+        },
+        {
+          "min_qty": 4000,
+          "max_qty": -1,
+          "public_productPrice": 0.1808
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/D1",
+        "A/D2",
+        "B/D5",
+        "B/D6",
+        "B/D7"
+      ]
+    },
+    {
+      "requested_mpn": "B2B-XH-A(LF)(SN)",
+      "supplier_id": "C158012",
+      "source_url": "https://jlcpcb.com/partdetail/C158012",
+      "checked_utc": "2026-11-05T18:02:33.818647+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C158012",
+      "public_page_sha256": "2272d10ca2276e68f123756bbb6e47b4163a6540f4518148b01d809227803d13",
+      "mpn": "B2B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "package": "Plugin,P=2.5mm",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B2B-XH-A-LF-SN_C158012.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 199,
+          "public_productPrice": 0.0408
+        },
+        {
+          "min_qty": 200,
+          "max_qty": 999,
+          "public_productPrice": 0.0321
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 1999,
+          "public_productPrice": 0.0282
+        },
+        {
+          "min_qty": 2000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0254
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 19999,
+          "public_productPrice": 0.0243
+        },
+        {
+          "min_qty": 20000,
+          "max_qty": -1,
+          "public_productPrice": 0.0234
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/J1",
+        "B/J1",
+        "B/J4"
+      ]
+    },
+    {
+      "requested_mpn": "B3B-XH-A(LF)(SN)",
+      "supplier_id": "C144394",
+      "source_url": "https://jlcpcb.com/partdetail/C144394",
+      "checked_utc": "2026-11-05T18:02:33.939639+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C144394",
+      "public_page_sha256": "02b24726f6ea8fe66aa405b26b6744eac47693365fbae4e4589221460ddff349",
+      "mpn": "B3B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "package": "Plugin,P=2.5mm",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B3B-XH-A-LF-SN_C144394.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 99,
+          "public_productPrice": 0.0545
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 299,
+          "public_productPrice": 0.0449
+        },
+        {
+          "min_qty": 300,
+          "max_qty": 999,
+          "public_productPrice": 0.0398
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0354
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0339
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": -1,
+          "public_productPrice": 0.0329
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/J6",
+        "B/J6"
+      ]
+    },
+    {
+      "requested_mpn": "B4B-XH-A(LF)(SN)",
+      "supplier_id": "C144395",
+      "source_url": "https://jlcpcb.com/partdetail/C144395",
+      "checked_utc": "2026-11-05T18:02:34.453251+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C144395",
+      "public_page_sha256": "356176580e7de571510e7c103eafb003c4cbc44debfea0ad28576c8625c8b12f",
+      "mpn": "B4B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "package": "Plugin,P=2.5mm",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B4B-XH-A-LF-SN_C144395.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 99,
+          "public_productPrice": 0.0568
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 499,
+          "public_productPrice": 0.0467
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 0.0414
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0372
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0357
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": -1,
+          "public_productPrice": 0.0347
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/J2",
+        "A/J3",
+        "A/J4",
+        "A/J5"
+      ]
+    },
+    {
+      "requested_mpn": "B6B-XH-A(LF)(SN)",
+      "supplier_id": "C144397",
+      "source_url": "https://jlcpcb.com/partdetail/C144397",
+      "checked_utc": "2026-11-05T18:02:34.564860+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C144397",
+      "public_page_sha256": "27ef77ad20a2dcf41b88de4c42d69072a02415c6dbf5dbea07abc358d770c7b2",
+      "mpn": "B6B-XH-A(LF)(SN)",
+      "manufacturer": "JST",
+      "package": "Plugin,P=2.5mm",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B6B-XH-A-LF-SN_C144397.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.0916
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.0748
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 499,
+          "public_productPrice": 0.0663
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 2499,
+          "public_productPrice": 0.0599
+        },
+        {
+          "min_qty": 2500,
+          "max_qty": 4999,
+          "public_productPrice": 0.0548
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": -1,
+          "public_productPrice": 0.0524
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/J7",
+        "B/J7"
+      ]
+    },
+    {
+      "requested_mpn": "BZT52C12-7-F",
+      "supplier_id": "C124196",
+      "source_url": "https://jlcpcb.com/partdetail/C124196",
+      "checked_utc": "2026-11-05T18:02:34.686053+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C124196",
+      "public_page_sha256": "89e7ba0680edc7693dbdcfa7efd8e6ac09788ca03f17ba35fa438ecd3c39879a",
+      "mpn": "BZT52C12-7-F",
+      "manufacturer": "Diodes Incorporated",
+      "package": "SOD-123",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809191839_Diodes-Incorporated-BZT52C12-7-F_C124196.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 99,
+          "public_productPrice": 0.0766
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 299,
+          "public_productPrice": 0.062
+        },
+        {
+          "min_qty": 300,
+          "max_qty": 2999,
+          "public_productPrice": 0.0547
+        },
+        {
+          "min_qty": 3000,
+          "max_qty": 5999,
+          "public_productPrice": 0.0403
+        },
+        {
+          "min_qty": 6000,
+          "max_qty": 8999,
+          "public_productPrice": 0.0359
+        },
+        {
+          "min_qty": 9000,
+          "max_qty": -1,
+          "public_productPrice": 0.0336
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/D3"
+      ]
+    },
+    {
+      "requested_mpn": "C0603C104K4RACTU",
+      "supplier_id": "C2181816",
+      "source_url": "https://jlcpcb.com/partdetail/C2181816",
+      "checked_utc": "2026-11-05T18:02:35.166901+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C2181816",
+      "public_page_sha256": "6b4e729a7a8b5484cbca1551f90807135ee46f1472916317b4771ca68f511a51",
+      "mpn": "C0603C104K4RACTU",
+      "manufacturer": "KEMET",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_KEMET-C0603C104K4RACTU_C2181816.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 199,
+          "public_productPrice": 0.0251
+        },
+        {
+          "min_qty": 200,
+          "max_qty": 599,
+          "public_productPrice": 0.0202
+        },
+        {
+          "min_qty": 600,
+          "max_qty": 3999,
+          "public_productPrice": 0.0175
+        },
+        {
+          "min_qty": 4000,
+          "max_qty": 7999,
+          "public_productPrice": 0.0158
+        },
+        {
+          "min_qty": 8000,
+          "max_qty": 19999,
+          "public_productPrice": 0.0144
+        },
+        {
+          "min_qty": 20000,
+          "max_qty": -1,
+          "public_productPrice": 0.0136
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/C3",
+        "B/C4",
+        "B/C5",
+        "B/C6"
+      ]
+    },
+    {
+      "requested_mpn": "C0805C104K5RACTU",
+      "supplier_id": "C3018562",
+      "source_url": "https://jlcpcb.com/partdetail/C3018562",
+      "checked_utc": "2026-11-05T18:02:35.308465+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C3018562",
+      "public_page_sha256": "e0a2294c37a9440bdf0a300bb014e9c9f092291cd6f50a64b38a3d112be8e5ff",
+      "mpn": "C0805C104K5RACTU",
+      "manufacturer": "KEMET",
+      "package": "0805",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2206221715_KEMET-C0805C104K5RACTU_C3018562.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 99,
+          "public_productPrice": 0.0728
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 299,
+          "public_productPrice": 0.0597
+        },
+        {
+          "min_qty": 300,
+          "max_qty": 999,
+          "public_productPrice": 0.0532
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 3999,
+          "public_productPrice": 0.0483
+        },
+        {
+          "min_qty": 4000,
+          "max_qty": 7999,
+          "public_productPrice": 0.0426
+        },
+        {
+          "min_qty": 8000,
+          "max_qty": -1,
+          "public_productPrice": 0.0406
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/C9"
+      ]
+    },
+    {
+      "requested_mpn": "C1608X5R1A106K080AC",
+      "supplier_id": "C2167467",
+      "source_url": "https://jlcpcb.com/partdetail/C2167467",
+      "checked_utc": "2026-11-05T18:02:35.419669+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C2167467",
+      "public_page_sha256": "81e0053eedb257593bb8042ad8e792a3525b8aadc0cc1382e9136eebefb5aea9",
+      "mpn": "C1608X5R1A106K080AC",
+      "manufacturer": "TDK",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_TDK-C1608X5R1A106K080AC_C2167467.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 0.5299
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 29,
+          "public_productPrice": 0.422
+        },
+        {
+          "min_qty": 30,
+          "max_qty": 99,
+          "public_productPrice": 0.3762
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 499,
+          "public_productPrice": 0.3189
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 0.2944
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": -1,
+          "public_productPrice": 0.2781
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/C3"
+      ]
+    },
+    {
+      "requested_mpn": "C1608X7R1C105K080AC",
+      "supplier_id": "C2167399",
+      "source_url": "https://jlcpcb.com/partdetail/C2167399",
+      "checked_utc": "2026-11-05T18:02:35.809919+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C2167399",
+      "public_page_sha256": "9c80e2f6e8fc6401b50e3d2de4e8f9c4717f20ce665047a09ab6f0cb430cc88e",
+      "mpn": "C1608X7R1C105K080AC",
+      "manufacturer": "TDK",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_TDK-C1608X7R1C105K080AC_C2167399.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 99,
+          "public_productPrice": 0.0548
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 299,
+          "public_productPrice": 0.044
+        },
+        {
+          "min_qty": 300,
+          "max_qty": 999,
+          "public_productPrice": 0.0386
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 3999,
+          "public_productPrice": 0.0346
+        },
+        {
+          "min_qty": 4000,
+          "max_qty": 7999,
+          "public_productPrice": 0.0313
+        },
+        {
+          "min_qty": 8000,
+          "max_qty": -1,
+          "public_productPrice": 0.0296
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/C1",
+        "A/C2",
+        "B/C1",
+        "B/C2",
+        "B/C7"
+      ]
+    },
+    {
+      "requested_mpn": "DMP6023LE-13",
+      "supplier_id": "C154901",
+      "source_url": "https://jlcpcb.com/partdetail/C154901",
+      "checked_utc": "2026-11-05T18:02:36.103124+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C154901",
+      "public_page_sha256": "85b9702ae7a4a30567539038f09408cf779661143cf789f095c99574cc3b501c",
+      "mpn": "DMP6023LE-13",
+      "manufacturer": "Diodes Incorporated",
+      "package": "SOT-223",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1808280023_Diodes-Incorporated-DMP6023LE-13_C154901.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 0.7507
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 29,
+          "public_productPrice": 0.646
+        },
+        {
+          "min_qty": 30,
+          "max_qty": 99,
+          "public_productPrice": 0.5724
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 499,
+          "public_productPrice": 0.5119
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 0.4776
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": -1,
+          "public_productPrice": 0.4661
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/Q2"
+      ]
+    },
+    {
+      "requested_mpn": "EEUFR1H101",
+      "supplier_id": "C178702",
+      "source_url": "https://jlcpcb.com/partdetail/C178702",
+      "checked_utc": "2026-11-05T18:02:36.151540+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C178702",
+      "public_page_sha256": "f27af1e1a8f399a0690b28b42885c8c8022edb968bcdaf7c1149cfe36dc9a19c",
+      "mpn": "EEUFR1H101",
+      "manufacturer": "PANASONIC",
+      "package": "Plugin,D8xL11.5mm",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_PANASONIC-EEUFR1H101_C178702.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.236
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.1883
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 499,
+          "public_productPrice": 0.1678
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 2499,
+          "public_productPrice": 0.1422
+        },
+        {
+          "min_qty": 2500,
+          "max_qty": 4999,
+          "public_productPrice": 0.1309
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": -1,
+          "public_productPrice": 0.124
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/C8"
+      ]
+    },
+    {
+      "requested_mpn": "IRLZ44NPBF",
+      "supplier_id": "C38774",
+      "source_url": "https://jlcpcb.com/partdetail/C38774",
+      "checked_utc": "2026-11-05T18:02:36.431541+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C38774",
+      "public_page_sha256": "c637581a3bebc89480fd96a65be9aa51c2114676cc8ece0395998805588f56e7",
+      "mpn": "IRLZ44NPBF",
+      "manufacturer": "Infineon Technologies",
+      "package": "TO-220AB",
+      "assembly_mode": "manualWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2409302301_Infineon-Technologies-IRLZ44NPBF_C38774.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 0.8946
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 49,
+          "public_productPrice": 0.718
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 99,
+          "public_productPrice": 0.628
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 499,
+          "public_productPrice": 0.5397
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 0.4874
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": -1,
+          "public_productPrice": 0.4596
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/Q1"
+      ]
+    },
+    {
+      "requested_mpn": "LM2596S-5.0/NOPB",
+      "supplier_id": "C116713",
+      "source_url": "https://jlcpcb.com/partdetail/C116713",
+      "checked_utc": "2026-11-05T18:02:36.859010+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C116713",
+      "public_page_sha256": "23ad642b65a37a35314d857439d3c863e41b9ea7315a47ca6c6ca1fdbbf905c2",
+      "mpn": "LM2596S-5.0/NOPB",
+      "manufacturer": "Texas Instruments",
+      "package": "TO-263-5",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 3",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809301614_Texas-Instruments-LM2596S-5-0-NOPB_C116713.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 1.6517
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 44,
+          "public_productPrice": 1.3688
+        },
+        {
+          "min_qty": 45,
+          "max_qty": 89,
+          "public_productPrice": 1.1579
+        },
+        {
+          "min_qty": 90,
+          "max_qty": 449,
+          "public_productPrice": 0.9829
+        },
+        {
+          "min_qty": 450,
+          "max_qty": 899,
+          "public_productPrice": 0.9044
+        },
+        {
+          "min_qty": 900,
+          "max_qty": -1,
+          "public_productPrice": 0.87
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/U1"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-07100KL",
+      "supplier_id": "C14675",
+      "source_url": "https://jlcpcb.com/partdetail/C14675",
+      "checked_utc": "2026-11-05T18:02:37.003672+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C14675",
+      "public_page_sha256": "26c140a3060bc39b6b8fc072395106e156685c426201e4f7fdfeec5cc6ca4b47",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809281124_YAGEO-RC0603FR-07100KL_C14675.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0021
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0015
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0013
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0012
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0011
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0011
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/R4",
+        "B/R8"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-0710KL",
+      "supplier_id": "C98220",
+      "source_url": "https://jlcpcb.com/partdetail/C98220",
+      "checked_utc": "2026-11-05T18:02:37.128696+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C98220",
+      "public_page_sha256": "278a5530f21e171abcf8ef9aee92d2300671774fee531f320ff9ed6a306882a8",
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-0710KL_C98220.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0027
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.002
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0017
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0015
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0013
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0013
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/R1",
+        "A/R2",
+        "A/R3",
+        "B/R7"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-071K5L",
+      "supplier_id": "C114668",
+      "source_url": "https://jlcpcb.com/partdetail/C114668",
+      "checked_utc": "2026-11-05T18:02:37.729139+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C114668",
+      "public_page_sha256": "d2e955873332a60d4b5ad988786d76bdb7b7307de4de5d95764f9cae41a4ca7c",
+      "mpn": "RC0603FR-071K5L",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-071K5L_C114668.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0037
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.003
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0026
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0024
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0021
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0021
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/R6",
+        "B/R10"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-071KL",
+      "supplier_id": "C22548",
+      "source_url": "https://jlcpcb.com/partdetail/C22548",
+      "checked_utc": "2026-11-05T18:02:37.800606+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C22548",
+      "public_page_sha256": "313f4b3fe94cd506454a246b24faa0a1a45cc9ac97633d7df63e9d0869465eda",
+      "mpn": "RC0603FR-071KL",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-071KL_C22548.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0036
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0026
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0022
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0019
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0017
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0017
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/R6"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-0722RL",
+      "supplier_id": "C107701",
+      "source_url": "https://jlcpcb.com/partdetail/C107701",
+      "checked_utc": "2026-11-05T18:02:37.924529+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C107701",
+      "public_page_sha256": "b04c7d618f38ef73837b95f74a7ecec16f8725c622b08ecdd36f12a9a26d63e3",
+      "mpn": "RC0603FR-0722RL",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-0722RL_C107701.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0028
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0023
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.002
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0018
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0017
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0017
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/R3"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-072K2L",
+      "supplier_id": "C114662",
+      "source_url": "https://jlcpcb.com/partdetail/C114662",
+      "checked_utc": "2026-11-05T18:02:38.549225+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C114662",
+      "public_page_sha256": "ce8d5340dc467eee3a021a4e64a6808f9abaf5fa0d55319016096678c2405241",
+      "mpn": "RC0603FR-072K2L",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-072K2L_C114662.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0018
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0014
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0011
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.001
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0009
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0009
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/R12"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-07470RL",
+      "supplier_id": "C114669",
+      "source_url": "https://jlcpcb.com/partdetail/C114669",
+      "checked_utc": "2026-11-05T18:02:38.679808+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C114669",
+      "public_page_sha256": "99a72a18ed3c368f0dc15c4e4c5ac1f4597f947801211f67ab06aa111f5aa264",
+      "mpn": "RC0603FR-07470RL",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-07470RL_C114669.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0025
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0019
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0016
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0014
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0012
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0012
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/R7",
+        "B/R11"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-0747KL",
+      "supplier_id": "C105579",
+      "source_url": "https://jlcpcb.com/partdetail/C105579",
+      "checked_utc": "2026-11-05T18:02:38.775409+00:00",
+      "identity_verified": false,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "board_references": [
+        "B/R1",
+        "B/R2"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-074K7L",
+      "supplier_id": "C99782",
+      "source_url": "https://jlcpcb.com/partdetail/C99782",
+      "checked_utc": "2026-11-05T18:02:39.008338+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C99782",
+      "public_page_sha256": "8cc0ad3ea2ba58b066e049cc6e610b528961bcd332501a3639fd9e4a4e171879",
+      "mpn": "RC0603FR-074K7L",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-074K7L_C99782.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0032
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0023
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0019
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0017
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0015
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0015
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "A/R4",
+        "A/R5"
+      ]
+    },
+    {
+      "requested_mpn": "RC0603FR-078K45L",
+      "supplier_id": "C163417",
+      "source_url": "https://jlcpcb.com/partdetail/C163417",
+      "checked_utc": "2026-11-05T18:02:39.258376+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C163417",
+      "public_page_sha256": "47990ab4eeba1ed68299dc985fd927bb26eb7f1d17276010b14fe363008acdea",
+      "mpn": "RC0603FR-078K45L",
+      "manufacturer": "YAGEO",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0603FR-078K45L_C163417.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0041
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0041
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.004
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 10199,
+          "public_productPrice": 0.0039
+        },
+        {
+          "min_qty": 10200,
+          "max_qty": 10399,
+          "public_productPrice": 0.0039
+        },
+        {
+          "min_qty": 10400,
+          "max_qty": -1,
+          "public_productPrice": 0.0039
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/R5"
+      ]
+    },
+    {
+      "requested_mpn": "RC0805FR-0715KL",
+      "supplier_id": "C114559",
+      "source_url": "https://jlcpcb.com/partdetail/C114559",
+      "checked_utc": "2026-11-05T18:02:39.491365+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C114559",
+      "public_page_sha256": "cfbdb86c916b64c58cf1a2f23bd3ca8eef15ec785ddb53d10a1c9b925be0ea06",
+      "mpn": "RC0805FR-0715KL",
+      "manufacturer": "YAGEO",
+      "package": "0805",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_YAGEO-RC0805FR-0715KL_C114559.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 999,
+          "public_productPrice": 0.0051
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": 4999,
+          "public_productPrice": 0.0041
+        },
+        {
+          "min_qty": 5000,
+          "max_qty": 9999,
+          "public_productPrice": 0.0036
+        },
+        {
+          "min_qty": 10000,
+          "max_qty": 49999,
+          "public_productPrice": 0.0034
+        },
+        {
+          "min_qty": 50000,
+          "max_qty": 50199,
+          "public_productPrice": 0.0031
+        },
+        {
+          "min_qty": 50200,
+          "max_qty": -1,
+          "public_productPrice": 0.0031
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/R9"
+      ]
+    },
+    {
+      "requested_mpn": "SMBJ24CA",
+      "supplier_id": "C83268",
+      "source_url": "https://jlcpcb.com/partdetail/C83268",
+      "checked_utc": "2026-11-05T18:02:39.689356+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C83268",
+      "public_page_sha256": "4afabaf15366265bb7d8a231ca909d2f7960fa4bdf3754a63587d8531bba5649",
+      "mpn": "SMBJ24CA",
+      "manufacturer": "Littelfuse",
+      "package": "DO-214AA",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Littelfuse-SMBJ24CA_C83268.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.1299
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.1027
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 499,
+          "public_productPrice": 0.0892
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 2999,
+          "public_productPrice": 0.079
+        },
+        {
+          "min_qty": 3000,
+          "max_qty": 5999,
+          "public_productPrice": 0.0709
+        },
+        {
+          "min_qty": 6000,
+          "max_qty": -1,
+          "public_productPrice": 0.0668
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/D2"
+      ]
+    },
+    {
+      "requested_mpn": "SN74LVC1G08DBVR",
+      "supplier_id": "C7666",
+      "source_url": "https://jlcpcb.com/partdetail/C7666",
+      "checked_utc": "2026-11-05T18:02:39.926135+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C7666",
+      "public_page_sha256": "3224c2d7b555bc05868b89e60a1e1389f4c39582a73af220e8ea15ee5f34e30e",
+      "mpn": "SN74LVC1G08DBVR",
+      "manufacturer": "Texas Instruments",
+      "package": "SOT-23-5",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Texas-Instruments-SN74LVC1G08DBVR_C7666.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 99,
+          "public_productPrice": 0.0483
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 299,
+          "public_productPrice": 0.0386
+        },
+        {
+          "min_qty": 300,
+          "max_qty": 2999,
+          "public_productPrice": 0.0337
+        },
+        {
+          "min_qty": 3000,
+          "max_qty": 5999,
+          "public_productPrice": 0.0296
+        },
+        {
+          "min_qty": 6000,
+          "max_qty": 8999,
+          "public_productPrice": 0.0282
+        },
+        {
+          "min_qty": 9000,
+          "max_qty": -1,
+          "public_productPrice": 0.0272
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/U3"
+      ]
+    },
+    {
+      "requested_mpn": "SRP1770TA-101M",
+      "supplier_id": "C2045587",
+      "source_url": "https://jlcpcb.com/partdetail/C2045587",
+      "checked_utc": "2026-11-05T18:02:40.330008+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C2045587",
+      "public_page_sha256": "28a563f562781712241d550f75726c8602f53ef08808a08e0da40162eb9f84bd",
+      "mpn": "SRP1770TA-101M",
+      "manufacturer": "BOURNS",
+      "package": "SMD,17.8x16.9mm",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_BOURNS-SRP1770TA-101M_C2045587.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 5.1841
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 29,
+          "public_productPrice": 4.3877
+        },
+        {
+          "min_qty": 30,
+          "max_qty": 99,
+          "public_productPrice": 3.915
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 499,
+          "public_productPrice": 3.4375
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 3.2168
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": -1,
+          "public_productPrice": 3.117
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/L1"
+      ]
+    },
+    {
+      "requested_mpn": "SS36-E3/57T",
+      "supplier_id": "C35722",
+      "source_url": "https://jlcpcb.com/partdetail/C35722",
+      "checked_utc": "2026-11-05T18:02:40.394909+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C35722",
+      "public_page_sha256": "962e86b58d3a05c890164da8630b7305aa007ebcd289ce234e3e486d69d484df",
+      "mpn": "SS36-E3/57T",
+      "manufacturer": "Vishay Intertech",
+      "package": "SMC(DO-214AB)",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809042323_Vishay-Intertech-SS36-E3-57T_C35722.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.3463
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.28
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 849,
+          "public_productPrice": 0.2516
+        },
+        {
+          "min_qty": 850,
+          "max_qty": 2549,
+          "public_productPrice": 0.2161
+        },
+        {
+          "min_qty": 2550,
+          "max_qty": 5099,
+          "public_productPrice": 0.2004
+        },
+        {
+          "min_qty": 5100,
+          "max_qty": -1,
+          "public_productPrice": 0.1909
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/D9"
+      ]
+    },
+    {
+      "requested_mpn": "STPS5L60U",
+      "supplier_id": "C157397",
+      "source_url": "https://jlcpcb.com/partdetail/C157397",
+      "checked_utc": "2026-11-05T18:02:40.725626+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C157397",
+      "public_page_sha256": "c7af216ff2e82635bfd2411be3fd8e3411aad5be9730e0214831949fb5336a19",
+      "mpn": "STPS5L60U",
+      "manufacturer": "STMicroelectronics",
+      "package": "SMB(DO-214AA)",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_1810130916_STMicroelectronics-STPS5L60U_C157397.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 9,
+          "public_productPrice": 0.5381
+        },
+        {
+          "min_qty": 10,
+          "max_qty": 29,
+          "public_productPrice": 0.4301
+        },
+        {
+          "min_qty": 30,
+          "max_qty": 99,
+          "public_productPrice": 0.3844
+        },
+        {
+          "min_qty": 100,
+          "max_qty": 499,
+          "public_productPrice": 0.3288
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 999,
+          "public_productPrice": 0.3026
+        },
+        {
+          "min_qty": 1000,
+          "max_qty": -1,
+          "public_productPrice": 0.2879
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/D4"
+      ]
+    },
+    {
+      "requested_mpn": "UCC27517DBVR",
+      "supplier_id": "C99395",
+      "source_url": "https://jlcpcb.com/partdetail/C99395",
+      "checked_utc": "2026-11-05T18:02:41.140582+00:00",
+      "identity_verified": true,
+      "stock_quantity": null,
+      "stock_status": "NOT EXPOSED / verify in assembly quotation",
+      "purchase_approved": false,
+      "resolved_url": "https://jlcpcb.com/partdetail/C99395",
+      "public_page_sha256": "7ed516f7ed95ee6571d503dd25b40c7a29fd11db1aba08543eb06281e1c14e62",
+      "mpn": "UCC27517DBVR",
+      "manufacturer": "Texas Instruments",
+      "package": "SOT-23-5",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 1",
+      "supplier_datasheet_url": "https://www.lcsc.com/datasheet/lcsc_datasheet_2303021300_Texas-Instruments-UCC27517DBVR_C99395.pdf",
+      "reference_price_tiers": [
+        {
+          "min_qty": 1,
+          "max_qty": 49,
+          "public_productPrice": 0.2998
+        },
+        {
+          "min_qty": 50,
+          "max_qty": 149,
+          "public_productPrice": 0.2355
+        },
+        {
+          "min_qty": 150,
+          "max_qty": 499,
+          "public_productPrice": 0.2041
+        },
+        {
+          "min_qty": 500,
+          "max_qty": 2999,
+          "public_productPrice": 0.1761
+        },
+        {
+          "min_qty": 3000,
+          "max_qty": 5999,
+          "public_productPrice": 0.149
+        },
+        {
+          "min_qty": 6000,
+          "max_qty": -1,
+          "public_productPrice": 0.1445
+        }
+      ],
+      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
+      "board_references": [
+        "B/U5"
+      ]
+    }
+  ],
+  "unresolved_exact_MPNs": {
+    "EEUFR1V331UB": "Exact compact capacitor selected for ESR and mechanical height. Request sourcing; no automatic substitution of EEUFR1V331U or another capacitor.",
+    "WSL1206R0560FEA": "56mOhm damping resistor. Request global sourcing or propose a manufacturer-documented 1206 alternative with the same electrical requirements and land pattern review.",
+    "M20-9990246": "Harwin JP1 THT header; request sourcing or approve a fully dimensioned equivalent.",
+    "M20-7821546": "Two separate Harwin 1x15 sockets per A; request sourcing with height8.5mm maintained.",
+    "M7566-05": "Separate removable jumper shunt; system BOM, not an SMT placement."
+  }
+}
