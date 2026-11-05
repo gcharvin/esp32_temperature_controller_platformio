@@ -1,1 +1,1 @@
-(fp_lib_table (version 7) (lib (name "PlacementOnly") (type "KiCad") (uri "${KIPRJMOD}/../placement_only.pretty") (options "") (descr "UNMEASURED planning envelopes, no pads; not manufacturing footprints")))
+(fp_lib_table (version 7) (lib (name "LabHardware") (type "KiCad") (uri "${KIPRJMOD}/../lab_hardware.pretty") (options "") (descr "Prototype socket; row pitch requires physical verification")))

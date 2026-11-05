@@ -1,6 +1,6 @@
 {
-  "revision": "placement study 0.1",
-  "status": "proposed dimensions, not production ready",
+  "revision": "routed prototype 0.3 / 2026-11-05",
+  "status": "routed, DRC checked; DevKit pitch assumed 25.40 mm; thermal/module tests pending",
   "case_external_mm": {
     "width": 145,
     "height": 100,
@@ -43,7 +43,7 @@
         75,
         1.6
       ],
-      "coordinates": "component-side view, origin upper-left; placement origin may be pad 1",
+      "coordinates": "component-side view, origin upper-left",
       "clip_bands_mm": [
         [
           0,
@@ -58,321 +58,19 @@
           4
         ]
       ],
-      "clip_contact_patches_mm": [
+      "side_support_bands_mm": [
         [
-          8,
           0,
-          12,
-          4
+          4,
+          1.5,
+          67
         ],
         [
-          8,
-          71,
-          12,
-          4
-        ],
-        [
-          90,
-          0,
-          12,
-          4
-        ],
-        [
-          90,
-          71,
-          12,
-          4
+          108.5,
+          4,
+          1.5,
+          67
         ]
-      ],
-      "components": [
-        {
-          "reference": "U1",
-          "value": "ELEGOO ESP32 DevKit - logical pins",
-          "origin_mm": [
-            32,
-            40
-          ],
-          "bounds_mm": [
-            2.0,
-            24.0,
-            60,
-            32
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "U2",
-          "value": "AP2112K-3.3 peripherals",
-          "origin_mm": [
-            80,
-            55
-          ],
-          "bounds_mm": [
-            77.925,
-            53.1,
-            4.15,
-            3.625
-          ],
-          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "J1",
-          "value": "A-B POWER / XH-2",
-          "origin_mm": [
-            94,
-            12
-          ],
-          "bounds_mm": [
-            91.025,
-            9.125,
-            8.45,
-            6.8
-          ],
-          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "J6",
-          "value": "A-B I2C / XH-3",
-          "origin_mm": [
-            94,
-            28
-          ],
-          "bounds_mm": [
-            91.025,
-            25.125,
-            10.95,
-            6.8
-          ],
-          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "J7",
-          "value": "A-B CTRL / XH-6",
-          "origin_mm": [
-            88,
-            45
-          ],
-          "bounds_mm": [
-            85.025,
-            42.125,
-            18.45,
-            6.8
-          ],
-          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "J2",
-          "value": "LCD20x4 + backpack / 3V3",
-          "origin_mm": [
-            66,
-            10
-          ],
-          "bounds_mm": [
-            58.0,
-            5.5,
-            16,
-            9
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "J3",
-          "value": "Encoder / A B SW GND",
-          "origin_mm": [
-            72,
-            64
-          ],
-          "bounds_mm": [
-            64.0,
-            59.5,
-            16,
-            9
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "J4",
-          "value": "TMP117 module / addr 0x48",
-          "origin_mm": [
-            44,
-            10
-          ],
-          "bounds_mm": [
-            37.0,
-            5.5,
-            14,
-            9
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "J5",
-          "value": "BH1750 module / addr 0x23",
-          "origin_mm": [
-            23,
-            10
-          ],
-          "bounds_mm": [
-            16.0,
-            5.5,
-            14,
-            9
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "JP1",
-          "value": "5V DevKit link / remove for service",
-          "origin_mm": [
-            72,
-            40
-          ],
-          "bounds_mm": [
-            70.205,
-            38.205,
-            3.59,
-            6.14
-          ],
-          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C1",
-          "value": "1uF",
-          "origin_mm": [
-            75,
-            55
-          ],
-          "bounds_mm": [
-            73.495,
-            54.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C2",
-          "value": "1uF",
-          "origin_mm": [
-            85,
-            55
-          ],
-          "bounds_mm": [
-            83.495,
-            54.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C3",
-          "value": "10uF",
-          "origin_mm": [
-            88,
-            60
-          ],
-          "bounds_mm": [
-            86.495,
-            59.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R1",
-          "value": "10k",
-          "origin_mm": [
-            62,
-            61
-          ],
-          "bounds_mm": [
-            60.495,
-            60.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R2",
-          "value": "10k",
-          "origin_mm": [
-            65,
-            57
-          ],
-          "bounds_mm": [
-            63.495,
-            56.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R3",
-          "value": "10k",
-          "origin_mm": [
-            68,
-            57
-          ],
-          "bounds_mm": [
-            66.495,
-            56.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R4",
-          "value": "4.7k",
-          "origin_mm": [
-            64,
-            22
-          ],
-          "bounds_mm": [
-            62.495,
-            21.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R5",
-          "value": "4.7k",
-          "origin_mm": [
-            67,
-            22
-          ],
-          "bounds_mm": [
-            65.495,
-            21.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        }
       ],
       "clip_side_contact_patches_mm": [
         [
@@ -387,7 +85,357 @@
           2,
           3
         ]
-      ]
+      ],
+      "components": [
+        {
+          "reference": "C1",
+          "value": "1uF",
+          "origin_mm": [
+            75.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            73.495,
+            54.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C2",
+          "value": "1uF",
+          "origin_mm": [
+            85.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            83.495,
+            54.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C3",
+          "value": "10uF",
+          "origin_mm": [
+            88.0,
+            60.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            86.495,
+            59.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J1",
+          "value": "A-B POWER / XH-2",
+          "origin_mm": [
+            94.0,
+            12.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            91.025,
+            9.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J2",
+          "value": "LCD20x4 + backpack / 3V3",
+          "origin_mm": [
+            66.0,
+            10.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            63.025,
+            7.125,
+            13.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J3",
+          "value": "Encoder / A B SW GND",
+          "origin_mm": [
+            72.0,
+            64.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            69.025,
+            61.125,
+            13.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J4",
+          "value": "TMP117 module / addr 0x48",
+          "origin_mm": [
+            44.0,
+            10.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            41.025,
+            7.125,
+            13.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J5",
+          "value": "BH1750 module / addr 0x23",
+          "origin_mm": [
+            23.0,
+            10.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            20.025,
+            7.125,
+            13.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J6",
+          "value": "A-B I2C / XH-3",
+          "origin_mm": [
+            94.0,
+            28.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            91.025,
+            25.125,
+            10.95,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J7",
+          "value": "A-B CTRL / XH-6",
+          "origin_mm": [
+            88.0,
+            45.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            85.025,
+            42.125,
+            18.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "JP1",
+          "value": "5V DevKit link / remove for service",
+          "origin_mm": [
+            72.0,
+            40.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            70.205,
+            38.205,
+            3.59,
+            6.14
+          ],
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R1",
+          "value": "10k",
+          "origin_mm": [
+            62.0,
+            61.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            60.495,
+            60.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R2",
+          "value": "10k",
+          "origin_mm": [
+            65.0,
+            57.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            63.495,
+            56.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R3",
+          "value": "10k",
+          "origin_mm": [
+            68.0,
+            57.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            66.495,
+            56.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R4",
+          "value": "4.7k",
+          "origin_mm": [
+            64.0,
+            22.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            62.495,
+            21.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R5",
+          "value": "4.7k",
+          "origin_mm": [
+            67.0,
+            22.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            65.495,
+            21.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "U1",
+          "value": "diymore CH340 USB-C / 30P",
+          "origin_mm": [
+            32.0,
+            40.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            4.925,
+            25.955,
+            56.15,
+            28.09
+          ],
+          "footprint": "LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED",
+          "height_mm": 13,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "U2",
+          "value": "AP2112K-3.3 peripherals",
+          "origin_mm": [
+            80.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            77.925,
+            53.1,
+            4.15,
+            3.625
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        }
+      ],
+      "copper_um": 35,
+      "clip_contact_patches_mm": [
+        [
+          8,
+          0,
+          12,
+          4
+        ],
+        [
+          8,
+          71,
+          12,
+          4
+        ]
+      ],
+      "antenna_keepout_mm": [
+        0,
+        17,
+        12.5,
+        46
+      ],
+      "devkit_row_spacing_mm": 25.4,
+      "devkit_spacing_status": "ASSUMED - user to verify",
+      "routed": true
     },
     {
       "name": "pcb_b_temperature",
@@ -396,7 +444,7 @@
         65,
         1.6
       ],
-      "coordinates": "component-side view, origin upper-left; placement origin may be pad 1",
+      "coordinates": "component-side view, origin upper-left",
       "clip_bands_mm": [
         [
           0,
@@ -411,449 +459,19 @@
           4
         ]
       ],
-      "clip_contact_patches_mm": [
+      "side_support_bands_mm": [
         [
-          8,
           0,
-          12,
-          4
+          4,
+          1.5,
+          57
         ],
         [
-          8,
-          61,
-          12,
-          4
-        ],
-        [
-          70,
-          0,
-          12,
-          4
-        ],
-        [
-          70,
-          61,
-          12,
-          4
+          88.5,
+          4,
+          1.5,
+          57
         ]
-      ],
-      "components": [
-        {
-          "reference": "U1",
-          "value": "12V -> 5V module / TBD",
-          "origin_mm": [
-            22,
-            29
-          ],
-          "bounds_mm": [
-            7.0,
-            18.0,
-            30,
-            22
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "U2",
-          "value": "AP2112K-3.3",
-          "origin_mm": [
-            23,
-            45
-          ],
-          "bounds_mm": [
-            20.925,
-            43.1,
-            4.15,
-            3.625
-          ],
-          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "U3",
-          "value": "74LVC1G08",
-          "origin_mm": [
-            54,
-            42
-          ],
-          "bounds_mm": [
-            51.5,
-            39.5,
-            5,
-            5
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "U4",
-          "value": "ADS1115IDGS / 0x49",
-          "origin_mm": [
-            73,
-            29
-          ],
-          "bounds_mm": [
-            69.845,
-            27.2,
-            6.31,
-            3.575
-          ],
-          "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "Q1",
-          "value": "NMOS / 3V3 gate / TBD",
-          "origin_mm": [
-            52,
-            28
-          ],
-          "bounds_mm": [
-            46.0,
-            22.0,
-            12,
-            12
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "F1",
-          "value": "TBD current",
-          "origin_mm": [
-            28,
-            10
-          ],
-          "bounds_mm": [
-            24.0,
-            7.5,
-            8,
-            5
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "D1",
-          "value": "Reverse polarity / TBD rating",
-          "origin_mm": [
-            42,
-            10
-          ],
-          "bounds_mm": [
-            38.0,
-            7.5,
-            8,
-            5
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "D2",
-          "value": "TVS TBD",
-          "origin_mm": [
-            56,
-            10
-          ],
-          "bounds_mm": [
-            52.0,
-            7.5,
-            8,
-            5
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "J2",
-          "value": "12V DC input / + then 0V",
-          "origin_mm": [
-            12,
-            10
-          ],
-          "bounds_mm": [
-            6.0,
-            5.0,
-            12,
-            10
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "J3",
-          "value": "Heater output",
-          "origin_mm": [
-            78,
-            10
-          ],
-          "bounds_mm": [
-            72.0,
-            5.0,
-            12,
-            10
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "J4",
-          "value": "NTC 15k B3920 probe",
-          "origin_mm": [
-            80,
-            44
-          ],
-          "bounds_mm": [
-            75.0,
-            40.0,
-            10,
-            8
-          ],
-          "footprint": null,
-          "status": "unmeasured planning envelope, NO PADS"
-        },
-        {
-          "reference": "J1",
-          "value": "A-B POWER / XH-2",
-          "origin_mm": [
-            15,
-            53
-          ],
-          "bounds_mm": [
-            12.025,
-            50.125,
-            8.45,
-            6.8
-          ],
-          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "J6",
-          "value": "A-B I2C / XH-3",
-          "origin_mm": [
-            34,
-            53
-          ],
-          "bounds_mm": [
-            31.025,
-            50.125,
-            10.95,
-            6.8
-          ],
-          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "J7",
-          "value": "A-B CTRL / XH-6",
-          "origin_mm": [
-            56,
-            53
-          ],
-          "bounds_mm": [
-            53.025,
-            50.125,
-            18.45,
-            6.8
-          ],
-          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C1",
-          "value": "1uF",
-          "origin_mm": [
-            18,
-            45
-          ],
-          "bounds_mm": [
-            16.495,
-            44.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C2",
-          "value": "1uF",
-          "origin_mm": [
-            28,
-            45
-          ],
-          "bounds_mm": [
-            26.495,
-            44.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C3",
-          "value": "100nF",
-          "origin_mm": [
-            50,
-            42
-          ],
-          "bounds_mm": [
-            48.495,
-            41.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C4",
-          "value": "100nF",
-          "origin_mm": [
-            83,
-            36
-          ],
-          "bounds_mm": [
-            81.495,
-            35.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "C5",
-          "value": "100nF",
-          "origin_mm": [
-            68,
-            29
-          ],
-          "bounds_mm": [
-            66.495,
-            28.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R1",
-          "value": "47k",
-          "origin_mm": [
-            46,
-            42
-          ],
-          "bounds_mm": [
-            44.495,
-            41.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R2",
-          "value": "47k",
-          "origin_mm": [
-            46,
-            46
-          ],
-          "bounds_mm": [
-            44.495,
-            45.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R3",
-          "value": "100R",
-          "origin_mm": [
-            58,
-            36
-          ],
-          "bounds_mm": [
-            56.495,
-            35.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R4",
-          "value": "100k",
-          "origin_mm": [
-            62,
-            36
-          ],
-          "bounds_mm": [
-            60.495,
-            35.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R5",
-          "value": "8.45k 1%",
-          "origin_mm": [
-            83,
-            28
-          ],
-          "bounds_mm": [
-            81.495,
-            27.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R6",
-          "value": "1k",
-          "origin_mm": [
-            83,
-            32
-          ],
-          "bounds_mm": [
-            81.495,
-            31.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        },
-        {
-          "reference": "R7",
-          "value": "10k",
-          "origin_mm": [
-            68,
-            35
-          ],
-          "bounds_mm": [
-            66.495,
-            34.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "status": "schematic footprint"
-        }
       ],
       "clip_side_contact_patches_mm": [
         [
@@ -868,7 +486,671 @@
           2,
           3
         ]
+      ],
+      "components": [
+        {
+          "reference": "C1",
+          "value": "1uF / 16V X7R",
+          "origin_mm": [
+            27.0,
+            47.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            25.495,
+            46.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C2",
+          "value": "1uF / 10V X7R",
+          "origin_mm": [
+            36.0,
+            47.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            34.495,
+            46.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C3",
+          "value": "100nF / 10V X7R",
+          "origin_mm": [
+            44.0,
+            39.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            42.495,
+            38.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C4",
+          "value": "100nF / 10V X7R",
+          "origin_mm": [
+            81.0,
+            43.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            79.495,
+            42.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C5",
+          "value": "100nF / 10V X7R",
+          "origin_mm": [
+            80.0,
+            35.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            78.495,
+            34.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C6",
+          "value": "100nF / 16V X7R",
+          "origin_mm": [
+            56.0,
+            32.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            54.495,
+            31.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C7",
+          "value": "1uF / 16V X7R",
+          "origin_mm": [
+            56.0,
+            38.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            54.495,
+            37.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "C8",
+          "value": "100uF / 50V / EEUFR1H101",
+          "origin_mm": [
+            23.0,
+            23.85
+          ],
+          "rotation_deg": -90.0,
+          "bounds_mm": [
+            18.725,
+            21.13,
+            8.55,
+            8.745
+          ],
+          "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+          "height_mm": 11.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "D2",
+          "value": "SMBJ24CA / transients NOT qualified",
+          "origin_mm": [
+            59.0,
+            12.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            55.28,
+            9.725,
+            7.395,
+            4.55
+          ],
+          "footprint": "Diode_SMD:D_SMB",
+          "height_mm": 2.4,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "D3",
+          "value": "BZT52C12 / 12V gate clamp",
+          "origin_mm": [
+            45.0,
+            27.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            42.58,
+            25.825,
+            4.795,
+            2.35
+          ],
+          "footprint": "Diode_SMD:D_SOD-123",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "D4",
+          "value": "STPS5L60U / cable flyback",
+          "origin_mm": [
+            81.0,
+            23.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            77.28,
+            20.725,
+            7.395,
+            4.55
+          ],
+          "footprint": "Diode_SMD:D_SMB",
+          "height_mm": 2.4,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "F1",
+          "value": "6.3A / 125VDC / 045106.3MRL",
+          "origin_mm": [
+            27.0,
+            12.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            23.285,
+            10.145,
+            7.43,
+            3.71
+          ],
+          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+          "height_mm": 2.69,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "F2",
+          "value": "1A / 125VDC / 0451001.MRL",
+          "origin_mm": [
+            23.0,
+            42.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            19.285,
+            40.145,
+            7.43,
+            3.71
+          ],
+          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+          "height_mm": 2.69,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J1",
+          "value": "A-B POWER / XH-2",
+          "origin_mm": [
+            15.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            12.025,
+            52.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J2",
+          "value": "24V IN / + PGND",
+          "origin_mm": [
+            9.0,
+            12.0
+          ],
+          "rotation_deg": -90.0,
+          "bounds_mm": [
+            3.61,
+            8.935,
+            11.125,
+            11.22
+          ],
+          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J3",
+          "value": "HEATER / + switched return",
+          "origin_mm": [
+            75.0,
+            12.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            71.935,
+            6.265,
+            11.22,
+            11.125
+          ],
+          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J4",
+          "value": "NTC 15k B3920",
+          "origin_mm": [
+            81.0,
+            52.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            78.025,
+            49.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J6",
+          "value": "A-B I2C / XH-3",
+          "origin_mm": [
+            33.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            30.025,
+            52.125,
+            10.95,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J7",
+          "value": "A-B CTRL / XH-6",
+          "origin_mm": [
+            53.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            50.025,
+            52.125,
+            18.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J8",
+          "value": "To XL4015 IN / + PGND",
+          "origin_mm": [
+            9.0,
+            30.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            5.935,
+            24.265,
+            11.22,
+            11.125
+          ],
+          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J9",
+          "value": "From XL4015 OUT / GND +5V",
+          "origin_mm": [
+            9.0,
+            44.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            6.025,
+            41.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "Q1",
+          "value": "IRLZ44NPBF / gate 5 V",
+          "origin_mm": [
+            66.0,
+            23.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            63.265,
+            19.575,
+            10.55,
+            4.95
+          ],
+          "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+          "height_mm": 17,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "Q2",
+          "value": "DMP6023LE-13 / reverse input",
+          "origin_mm": [
+            43.0,
+            17.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            38.575,
+            13.3,
+            8.85,
+            7.325
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+          "height_mm": 1.8,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R1",
+          "value": "47k",
+          "origin_mm": [
+            39.0,
+            44.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            37.495,
+            43.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R2",
+          "value": "47k",
+          "origin_mm": [
+            39.0,
+            48.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            37.495,
+            47.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R3",
+          "value": "22R",
+          "origin_mm": [
+            64.0,
+            29.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            62.495,
+            28.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R4",
+          "value": "100k",
+          "origin_mm": [
+            75.0,
+            28.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            73.495,
+            27.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R5",
+          "value": "8.45k 1%",
+          "origin_mm": [
+            85.0,
+            45.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            83.495,
+            44.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R6",
+          "value": "1k",
+          "origin_mm": [
+            85.0,
+            39.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            83.495,
+            38.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R7",
+          "value": "10k",
+          "origin_mm": [
+            71.0,
+            45.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            69.495,
+            44.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "R8",
+          "value": "100k",
+          "origin_mm": [
+            37.0,
+            27.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            35.495,
+            26.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "U2",
+          "value": "AP2112K-3.3",
+          "origin_mm": [
+            32.0,
+            44.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            29.925,
+            42.1,
+            4.15,
+            3.625
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "U3",
+          "value": "SN74LVC1G08DBVR",
+          "origin_mm": [
+            44.0,
+            44.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            41.925,
+            42.1,
+            4.15,
+            3.625
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "U4",
+          "value": "ADS1115IDGSR / 0x49",
+          "origin_mm": [
+            76.0,
+            40.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            72.845,
+            38.2,
+            6.31,
+            3.575
+          ],
+          "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "U5",
+          "value": "UCC27517DBVR",
+          "origin_mm": [
+            60.0,
+            35.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            57.925,
+            33.1,
+            4.15,
+            3.625
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "height_mm": 1.5,
+          "status": "physical routed prototype; verify module fit and thermal behavior"
+        }
+      ],
+      "copper_um": 70,
+      "clip_contact_patches_mm": [
+        [
+          8,
+          0,
+          12,
+          4
+        ],
+        [
+          8,
+          61,
+          12,
+          4
+        ]
+      ],
+      "routed": true,
+      "off_board_components": [
+        "U1"
       ]
+    }
+  ],
+  "external_modules": [
+    {
+      "reference": "B_U1",
+      "model": "TECNOULAB XL4015 CC/CV",
+      "source": "https://www.amazon.fr/dp/B0C6R3FMT3",
+      "dimensions_mm": [
+        51,
+        26.3,
+        14
+      ],
+      "mounting": "off-board, flexible wires; support in enclosure to revise"
     }
   ]
 }

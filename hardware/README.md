@@ -1,150 +1,96 @@
-# Premiers schémas KiCad A et B température
+# PCB A et B température - prototype routé 0.3
 
-Révision 0.2 du 4 novembre 2026. Cette révision remplace le JST 12 positions par trois petits JST-XH de fonctions distinctes. Schémas de conception à examiner, pas des fichiers prêts à fabriquer. Les projets contiennent aussi une première implantation mécanique non routée : [dimensions et maintien](IMPLANTATION.md), [PDF de revue](review/implantation_v01.pdf). Aucun Gerber ou dossier d'assemblage définitif n'est fourni à ce stade.
+Révision du **5 novembre 2026**. Les deux cartes sont routées dans les fichiers natifs KiCad, avec empreintes physiques et plans de masse. Cible de B : **24 V continu / chauffage résistif 100 W**, soit 4,17 A pour la charge. A porte un seul ESP32 ; B reste sans microcontrôleur.
 
-Une [maquette 3D du boîtier](mechanical/README.md) fournit l'assemblage STEP compatible avec l'import Fusion 360, les quatre pièces STL d'essai dont la façade amovible portant le LCD et A, les rainures continues et clips latéraux pour A, B et le LCD, le panneau arrière amovible avec deux presse-étoupes et une prise sonde à deux contacts, et un accès USB-C de maintenance sur le côté droit. La sélection des sources 5 V USB/externe reste à mettre au point avant monitoring sous 12 V.
+**Prototype à contrôler, pas dossier de fabrication libéré.** À la demande de l'utilisateur, le routage avance avec **25,40 mm entre rangées de la DevKit comme hypothèse**, à vérifier sur la carte achetée. Le dimensionnement thermique et les essais de défaut restent à réaliser. Aucun Gerber/CPL final n'est généré.
 
-## Ouvrir les projets
+## Fichiers à ouvrir
 
-- `pcb_a_display/pcb_a_display.kicad_pro` : façade, ESP32 et périphériques.
-- `pcb_b_temperature/pcb_b_temperature.kicad_pro` : alimentation, acquisition NTC et puissance chauffage.
-- `review/pcb_a_display.pdf` et `review/pcb_b_temperature.pdf` : exports de lecture.
+| Objet | Fichier |
+| --- | --- |
+| Projet complet A | `pcb_a_display/pcb_a_display.kicad_pro` |
+| Pistes de A | `pcb_a_display/pcb_a_display.kicad_pcb` |
+| Projet complet B | `pcb_b_temperature/pcb_b_temperature.kicad_pro` |
+| Pistes de B | `pcb_b_temperature/pcb_b_temperature.kicad_pcb` |
+| Vues cuivre dessus/dessous | `review/routing/pcb_a_display_routed.pdf`, `review/routing/pcb_b_temperature_routed.pdf` |
+| Schémas à lire | `review/pcb_a_display.pdf`, `review/pcb_b_temperature.pdf` |
+| Rapport de routage | `review/routing/routing_validation.json` |
+| Pack KiCad de revue | `review/routing/prototype_v03_kicad_bundle.zip` |
 
-Sources natives éditables et versionnées : les fichiers `.kicad_sch` sont la référence. Les symboles utilisés y sont embarqués. `lab_draft.kicad_sym` contient trois interfaces logiques provisoires (DevKit, convertisseur et MOSFET), référencées par les tables locales de bibliothèques. Il ne faut pas en déduire un brochage physique.
+Dans l'éditeur PCB, afficher F.Cu/B.Cu et masquer temporairement les zones remplies si elles cachent les pistes dans la vue choisie. Les fichiers natifs `.kicad_sch` et `.kicad_pcb` sont la référence ; les scripts ne doivent pas écraser des modifications faites ensuite dans KiCad.
 
-## Architecture retenue
+## Modules achetés et empreintes
 
-Un seul ESP32, enfichable sur A. B n'a pas de microcontrôleur. Le 12 V continu entre sur B par J2 et traverse F1 puis D1 (protection série contre l'inversion). `VIN_PROTECTED` alimente le chauffage et le module buck 12 V vers 5 V. D2 est une TVS bidirectionnelle dont la tension et l'énergie admissible restent à choisir.
+- **DevKit diymore, USB-C, CH340, 30 contacts**, [ASIN B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76). Elle remplace l'hypothèse ELEGOO/CP2102. Empreinte locale `LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED`, pour deux barrettes femelles 1×15 au pas 2,54 mm. Brochage relevé sur les vues du vendeur. Encombrement annoncé : 54 × 27 mm. L'entraxe de 25,40 mm est une **inférence**, pas une cote fabricant certifiée : le vérifier avant fabrication. Voir `module_selection.json` pour les 30 contacts et la correspondance aux GPIO.
+- **Buck TECNOULAB XL4015 CC/CV**, [ASIN B0C6R3FMT3](https://www.amazon.fr/dp/B0C6R3FMT3), modèle annoncé RED5AXL4015. Le vendeur donne 51 × 26,3 × 14 mm et une entrée de 5 à 32 V. Module **hors PCB B**, raccordé par fils à ses borniers ; aucune empreinte enfichable ou position de trous inventée. U1 reste présent au schéma et à la BOM, avec `on_board no`.
+- Les ports périphériques A et la sonde B ont des JST-XH physiques. U3 est une SN74LVC1G08DBVR en SOT-23-5 ; U5 une UCC27517DBVR en SOT-23-5. Q1 est une IRLZ44NPBF TO-220 ; Q2 une DMP6023LE-13 SOT-223. Les anciennes enveloppes sans pastilles sont conservées dans leur bibliothèque historique, mais **aucune n'est utilisée dans les PCB routés**.
 
-B fournit le 5 V à A par J1 (2 positions). J6 transporte le bus I2C et J7 les commandes. Les deux cartes ont chacune leur régulateur AP2112K-3.3 pour les périphériques locaux. La DevKit reçoit le 5 V et utilise sa propre régulation interne pour l'ESP32. Sa sortie 3V3 n'est pas mise en parallèle avec le régulateur de A. Les rails `+3V3_A` et `+3V3_B` ne sont jamais reliés, les masses le sont.
+Les caractéristiques publicitaires du module XL4015 ne remplacent pas une qualification du module complet. La [fiche du circuit XL4015](https://www.xlsemi.com/datasheet/XL4015-EN.pdf) décrit la puce, pas toute la carte TECNOULAB. Régler et mesurer **5,00 V** avec le module déconnecté d'A/B avant raccordement, puis contrôler la tension sous charge.
 
-Le courant chauffage circule de l'entrée protégée vers J3.1, traverse la charge externe puis revient par J3.2 et le MOSFET Q1 à la masse d'entrée. Il ne doit pas traverser J1 ni la DevKit. Le routage devra séparer ce trajet des retours d'acquisition. Les protections et sections de la branche logique seront dimensionnées avec le buck et la charge, avant fabrication.
+## Alimentation et chauffage sur B
 
-## Connecteurs communs A et B
+J2.1 reçoit le 24 V et J2.2 le retour **PGND**. F1 est un candidat fusible rapide **6,3 A / 125 VDC, Littelfuse 045106.3MRL**. Il protège contre les surintensités selon son I²t ; il ne limite pas automatiquement la puissance à 100 W. Son déclenchement, l'appel de courant et le courant de court-circuit de l'alimentation doivent être validés.
 
-La Rev 0.2 remplace le connecteur 12 broches de la Rev 0.1 par **trois JST-XH au pas 2,50 mm**. Chaque faisceau est droit : même référence et même numéro de broche sur A et B. Les tailles 2, 3 et 6 positions distinguent les fonctions de la liaison A-B. Ne pas les confondre avec d'autres connecteurs périphériques du même format.
+Q2 assure l'anti-inversion : drain sur `VIN_FUSED`, source sur `VIN_PROTECTED`, grille tirée vers PGND par R8 ; D3 BZT52C12 limite Vgs. D2 SMBJ24CA est placée entre alimentation protégée et PGND. **L'ensemble n'est pas qualifié en surtension/transitoires** : son écrêtage peut dépasser la plage continue annoncée du module acheté. Employer une alimentation 24 V régulée ; revoir la protection avant de revendiquer une tenue à des surtensions industrielles.
 
-| Connecteur sur A et B | Broche | Signal | Sens / usage sur B température |
-| --- | --- | --- | --- |
-| J1 — alimentation, 2 positions | 1 | GND | Retour de l'alimentation logique |
-| J1 | 2 | +5V_AB | B vers A, sortie du buck |
-| J6 — I2C, 3 positions | 1 | GND | Référence commune |
-| J6 | 2 | I2C_SDA | Bidirectionnel, ADS1115 SDA |
-| J6 | 3 | I2C_SCL | A vers B, ADS1115 SCL |
-| J7 — commandes, 6 positions | 1 | GND | Référence commune |
-| J7 | 2 | PWM0 | A vers B, commande chauffe |
-| J7 | 3 | ENABLE | A vers B, autorisation active à 1 |
-| J7 | 4 | FAULT_N | B vers A, ADS1115 ALERT/RDY actif à 0 |
-| J7 | 5 | PWM1 | A vers B ; non connectée sur B température |
-| J7 | 6 | DIN0 | B vers A ; non connectée sur B température |
+Le chauffage se branche entre J3.1 (`VIN_PROTECTED`) et J3.2 (`HEATER_LOW`). Q1 commute son retour vers PGND. La porte AND U3 combine PWM0 et ENABLE à 3,3 V ; U5 commande ensuite Q1 avec le rail 5 V. R3 = 22 ohms et R4 = 100 kohms. La cible de mise au point reste un PWM de **500 Hz**, pas une fréquence arbitrairement élevée. D4 **STPS5L60U** reprend l'inductance des fils à la coupure ; C8 **EEUFR1H101, 100 µF / 50 V** assure le découplage local de puissance.
 
-Signaux logiques 3,3 V exclusivement. Aucun rail 3,3 V n'est transporté : les deux régulateurs locaux restent séparés. Aucun 12 V ni courant chauffage ne passe dans ces faisceaux. Les broches de masse sont communes électriquement ; dimensionner le retour J1 pour l'alimentation de A sans compter sur les fils de référence des deux autres câbles pour augmenter le courant admissible.
+J2, J3 et J8 : borniers Phoenix Contact **1715721, MKDS 1,5/2-5,08**, pas 5,08 mm. Aucun courant de chauffage ne traverse la DevKit ou les JST A/B. Le contrôle suit le circuit de puissance par intersections des formes de cuivre réelles : continuité sans via discret sur le trajet principal, pistes de 2,4 mm avec courts rétrécissements aux composants. **B demande 70 µm de cuivre externe sur les deux faces (2 oz), indiqué dans son empilage KiCad.** A emploie 35 µm. Cela ne constitue pas une qualification thermique.
 
-`interface_ab.json` donne les broches par connecteur et les réserves non connectées sur B. Le vérificateur contrôle les réseaux et les empreintes exportés, notamment l'absence de l'ancien J1 à 12 broches. Le firmware et les GPIO ne changent pas par rapport à la proposition précédente.
+## Raccordement du XL4015
 
-| Connecteur | Embase proposée sur chaque PCB | Boîtier de câble à chaque extrémité |
-| --- | --- | --- |
-| J1 | B2B-XH-A, verticale, 2 positions | XHP-2 |
-| J6 | B3B-XH-A, verticale, 3 positions | XHP-3 |
-| J7 | B6B-XH-A, verticale, 6 positions | XHP-6 |
+| PCB B | Raccordement module |
+| --- | --- |
+| J8.1 | IN+ du XL4015, alimentation protégée 24 V |
+| J8.2 | IN- du XL4015, PGND |
+| J9.1 | OUT- du XL4015, GND logique |
+| J9.2 | OUT+ du XL4015, +5V_BUCK réglé à 5,00 V |
 
-Les empreintes KiCad JST-XH verticales correspondantes sont assignées sur les deux cartes. Choisir les contacts à sertir et les fils compatibles avec les boîtiers, le courant et les recommandations fabricant ; des câbles préassemblés sont préférables quand leur brochage est vérifié. L'orientation verticale reste à confronter au boîtier avant routage. Vérifier la broche 1 côté accouplement : les vues des cartes peuvent apparaître en miroir.
+J8 est un bornier 5,08 mm ; J9 un JST-XH 2 positions. La sortie du module traverse F2, **0451001.MRL, 1 A / 125 VDC**, puis alimente `+5V_AB`.
 
-Câbles internes courts uniquement. **Brancher et débrancher les trois faisceaux avec les deux cartes hors tension** : il n'y a ni séquencement de connexion ni protection contre l'alimentation parasite par les signaux. Marquer les ports POWER, I2C et CTRL, avec la broche 1 et les signaux sur la sérigraphie prévue. Les anciens faisceaux 12 broches ne sont pas directement compatibles avec cette révision.
+**PGND et GND ne sont pas court-circuitées par du cuivre sur B.** Le module CC/CV peut avoir un shunt entre IN- et OUT- ; conserver les deux retours évite de le contourner sur le PCB. Le module reste non isolé. La logique se réfère à OUT- ; le MOSFET et son driver se réfèrent à PGND. Vérifier le décalage de masse réel et le fonctionnement de la limitation sous charge, notamment avec le PC branché.
 
-### Petits connecteurs courants
+## Trois faisceaux A/B
 
-Préférence utilisateur : connecteurs et câbles accessibles au grand public, avec famille, pas, nombre de contacts et sens de numérotation explicites. Privilégier les formats 2 à 6 positions ; ne pas augmenter le nombre de broches d'un connecteur unique pour couvrir toutes les extensions possibles. Des ports séparés sont autorisés pour faciliter le câblage, le boîtier et le remplacement de B.
+Petits JST-XH verticaux au pas **2,50 mm**, faisceaux droits. Aucun 24 V ni rail 3,3 V dans ces faisceaux. Brancher/débrancher hors tension ; aucun hot-plug n'est prévu.
 
-- Liaison interne finale : privilégier de petits JST-XH au pas 2,50 mm, sous réserve de l'encombrement, du courant et de câbles adaptés. « JST » seul n'est pas une référence suffisante.
-- Prototypage, mesures et modules : barrettes au pas 2,54 mm pour les cordons couramment appelés Dupont. Ne pas supposer leur interchangeabilité mécanique avec les JST-XH de 2,50 mm, ni utiliser une même empreinte pour les deux sans validation.
-- Entrée 12 V et sortie chauffage : borniers ou connecteurs de puissance courants, choisis selon le courant, les fils et la place dans le boîtier. Le choix Dupont ne doit pas être appliqué automatiquement au trajet chauffage.
-- Choisir si possible les faisceaux déjà assemblés ; sinon, spécifier aussi les boîtiers, contacts à sertir et fils. Prévoir marquages et détrompage, surtout si plusieurs connecteurs ont la même taille. Un connecteur de même famille ne garantit pas le même brochage entre modules du commerce.
+| Connecteur | Brochage |
+| --- | --- |
+| J1, POWER, 2 positions | 1 GND ; 2 +5V_AB, de B vers A |
+| J6, I2C, 3 positions | 1 GND ; 2 SDA ; 3 SCL |
+| J7, CTRL, 6 positions | 1 GND ; 2 PWM0 ; 3 ENABLE ; 4 FAULT_N ; 5 PWM1 ; 6 DIN0 |
 
-La répartition J1/J6/J7 est désormais appliquée aux schémas. Les ports I2C de capteurs sur A conservent leurs 4 positions avec alimentation locale ; J6 A-B a 3 positions et ne transporte pas de rail 3,3 V. Ne pas utiliser un câble de capteur à la place du faisceau J6.
+J7.5 et J7.6 restent non connectées sur B température. Les empreintes sont B2B-XH-A, B3B-XH-A et B6B-XH-A. Les références de câble sont XHP-2/-3/-6 avec contacts adaptés. `interface_ab.json` conserve le contrat électrique. Le pas JST-XH 2,50 mm diffère des barrettes/Dupont 2,54 mm.
 
-Références de pas : [JST-XH 2,50 mm](https://www.jst-mfg.com/product/index.php?lang=2&series=277) ; [barrettes et cordons de prototypage 2,54 mm](https://www.pololu.com/category/19/connectors).
+## A, périphériques et firmware
 
-## Carte A
+J2 LCD, J4 TMP117 et J5 BH1750 : **1 GND, 2 +3V3_A, 3 SDA, 4 SCL**, JST-XH 4 positions. J3 encodeur : **1 A, 2 B, 3 bouton, 4 GND**, JST-XH 4 positions. Adapter les câbles au brochage réel des modules. Le LCD conserve le 3,3 V utilisé dans le prototype ; vérifier fonctionnement et rétroéclairage avec le module réel. Les deux AP2112K-3.3 alimentent les périphériques locaux, sans relier leurs sorties ni la sortie 3V3 de la DevKit entre elles.
 
-- U1 est le **bloc logique d'une DevKit ELEGOO**, pas un module ESP32 nu. Ses numéros correspondent aux GPIO / noms de rails ; les vrais pads de headers restent à relever. Aucune empreinte de DevKit supposée n'est assignée.
-- J2 : GND, 3V3_A, SDA, SCL vers le LCD 20x4 et son backpack, comme le prototype existant. Vérifier le fonctionnement garanti en 3,3 V, le courant du rétroéclairage et l'ordre réel du connecteur LCD.
-- J3 : encodeur A, B, bouton, masse. Trois pull-ups de 10 kohms.
-- J4/J5 : modules TMP117 et BH1750, respectivement aux adresses 0x48 et 0x23. Ce sont des connecteurs pour modules externes, pas les circuits intégrés eux-mêmes.
-- R4/R5 : pull-ups I2C 4,7 kohms sur A uniquement. Retirer ou calculer les pull-ups supplémentaires des modules et du backpack.
-- U2 : alimentation des périphériques ; budget de courant et dissipation à vérifier, notamment avec le LCD. Condensateurs d'entrée et de sortie de 1 uF, plus 10 uF sur le 5 V.
-- JP1 : lien amovible du 5 V vers la DevKit. Ce header doit recevoir un cavalier en fonctionnement normal. Il ne commute pas automatiquement les alimentations.
+| Fonction | GPIO ESP32 |
+| --- | --- |
+| SDA / SCL | 21 / 22 |
+| Encodeur A / B / bouton | 4 / 19 / 23 |
+| PWM0 / PWM1 | 25 / 26 |
+| ENABLE / FAULT_N / DIN0 | 27 / 33 / 32 |
 
-USB : ne pas mettre en parallèle VBUS et le 5 V externe sans connaître le circuit de la DevKit exacte. Pour le flash USB seul, couper B, déconnecter J1, J6 et J7 et retirer JP1 ; ce mode n'alimente pas les périphériques. Pour un debug série avec B alimentée, utiliser une liaison USB dont VBUS est réellement isolé et vérifier l'absence de retour d'alimentation sur cette DevKit. Une sélection automatique des sources n'est pas implémentée.
+**Le firmware n'a pas été modifié par ce routage.** Le GPIO chauffage historique 5 doit devenir 25, avec gestion d'ENABLE, ADC, défauts et perte de mesure. L'ADS1115 a l'adresse **0x49** (ADDR=VDD), le TMP117 0x48 et le BH1750 0x23. Les pull-ups I2C principaux sont uniquement R4/R5 sur A, 4,7 kohms ; tenir compte de ceux des modules.
 
-| Fonction | GPIO proposé | État du firmware existant |
-| --- | --- | --- |
-| SDA / SCL | 21 / 22 | Conservés |
-| Encodeur A / B / bouton | 4 / 19 / 23 | Conservés |
-| PWM0 chauffage | 25 | Remplace le GPIO5 actuel |
-| PWM1 réserve | 26 | Nouveau |
-| ENABLE | 27 | Nouveau |
-| DIN0 réserve | 32 | Nouveau, laisser inutilisé sur B température |
-| FAULT_N | 33 | Nouveau |
+NTC : sonde 15 kohms, B proche de 3920 K, entre +3V3_B et NTC_RAW ; R5 = 8,45 kohms vers GND. Filtre 1 kohm / 100 nF vers AIN0. Adapter la constante historique 8400 ohms et calibrer la résistance et l'excitation. FAULT_N est ALERT/RDY de l'ADC, à configurer ; aucune coupure thermique indépendante n'est intégrée dans cette révision.
 
-Le firmware n'est pas modifié par cette livraison. Ne pas flasher le firmware actuel en supposant ce brochage compatible.
+USB : la prise latérale et sa rallonge utilisent le pont CH340 de la DevKit. JP1 reste un cavalier de service, **pas une sélection automatique des alimentations**. Ne pas présumer que 5 V externe et VBUS peuvent être mis en parallèle sur cette variante. Pour le flash USB seul : B hors tension, J1/J6/J7 déconnectés et JP1 retiré. Le monitoring alimenté en 24 V nécessite de vérifier la gestion des sources sur la carte réelle.
 
-## Carte B température
+## Mécanique et contrôles
 
-- J2 : entrée 12 V / masse. J3 : chauffage + / retour commuté. J4 : sonde NTC externe, entre 3V3_B et NTC_RAW.
-- NTC 15 kohms à 25 °C, B proche de 3920 K ; résistance basse R5 de 8,45 kohms à 1 %. Filtre R6 = 1 kohm et C4 = 100 nF vers AIN0.
-- U4 : ADS1115IDGS ; ADDR relié à VDD pour **0x49**, afin d'éviter le TMP117 à 0x48. AIN1–3 non utilisées. Découplage local de 100 nF.
-- Calcul : `R_NTC = R5 * (Vexc / Vnode - 1)`. Employer la valeur réelle de R5 et une excitation mesurée/calibrée : la référence interne de l'ADS1115 ne rend pas cette mesure automatiquement ratiométrique. La constante historique 8400 ohms doit être adaptée.
-- U3 : 74LVC1G08 alimentée en 3,3 V. `GATE_CMD = PWM0 AND ENABLE`. Pull-downs 47 kohms sur les deux entrées, 100 ohms en série de grille et 100 kohms grille-masse. Q1 doit avoir un Rds(on) garanti à une tension compatible avec 3,3 V, avec un brochage et une dissipation vérifiés.
-- FAULT_N est l'ALERT/RDY de l'ADC avec pull-up 10 kohms. Programmer le mode comparateur, les seuils et la polarité ; sans cette configuration, ce fil ne constitue pas une alarme température opérationnelle. La logique NTC exige de vérifier le sens du seuil de tension.
-- Il n'y a pas encore de coupure thermique indépendante. La porte AND bloque la chauffe en l'absence de A ou d'ENABLE, mais ne détecte pas un ESP32 figé avec ses sorties actives. Le firmware devra arrêter sur sonde ouverte/court-circuitée, mesure périmée, défaut ADC et dépassement de température ; une protection matérielle adaptée sera à définir avant usage sans surveillance.
+A reste à **110 × 75 × 1,6 mm**, B à **90 × 65 × 1,6 mm**. Les bandes de clips haut/bas de 4 mm et les appuis latéraux de 1,5 mm sont exclus des pistes, vias, remplissages et composants. La réserve d'antenne est provisoire et doit être confrontée au module réel et à son environnement.
 
-## Éléments à arrêter avant implantation
-
-1. Courant nominal/maximal du chauffage, tension réelle et conditions thermiques. Dimensionner Q1, F1, D1, D2, borniers, câblage, pistes et protection de la branche logique.
-2. Modèle exact du buck, courant 5 V disponible et brochage physique. Le bloc U1 de B est une interface fonctionnelle, pas une empreinte de module validée.
-3. Mesures de la DevKit ELEGOO : nombre de broches, numérotation, entraxes, contour, accès USB, zone libre antenne et alimentation USB.
-4. Références/empreintes des connecteurs périphériques et composants provisoires, budget du LCD, dissipation des LDO, découplage final.
-5. Coupure thermique indépendante et stratégie de redémarrage/réarmement.
-6. Enveloppe du boîtier imprimé en 3D, fixation par clips, accès de démontage et zones mécaniques réservées sur A et B, suivant les contraintes ci-dessous.
-
-Les CSV `*_bom_draft.csv` sont des inventaires de revue. Les champs de choix fournisseur sont à compléter ; ils ne sont pas des BOM d'assemblage JLCPCB. Aucun CPL n'existe avant placement.
-
-## Boîtier imprimé en 3D et maintien sans vis
-
-Contrainte utilisateur retenue : les deux cartes seront logées dans un boîtier imprimé en 3D, avec un maintien privilégiant des clips imprimés plutôt que des vis. La carte métier B doit rester remplaçable. Le boîtier et les PCB seront conçus ensemble avant de figer les contours, les empreintes et le routage. Les dimensions, le matériau d'impression, les jeux et la géométrie des clips restent à définir ; aucun ajustement mécanique n'est encore qualifié.
-
-Disposition de départ à étudier : A derrière la façade écran/encodeur, B dans un logement distinct, reliée à A par les trois faisceaux courts J1, J6 et J7. Les faisceaux permettent d'adapter la position relative des cartes sans imposer un empilage ou un connecteur rigide carte à carte. Cette disposition n'est pas un plan coté définitif.
-
-Exigences pour la conception mécanique et le placement :
-
-- Prévoir des appuis et des butées pour positionner les cartes, puis des clips accessibles pour les retenir et les libérer sans détériorer les PCB. L'insertion et le retrait de B doivent être possibles après ouverture du boîtier, sans déposer toute la façade.
-- Réserver aux bords des cartes les surfaces de contact des glissières, appuis et clips : volumes sans composants ni soudures exposées aux contacts, avec exclusions de cuivre et de pistes définies selon la géométrie finale. Prévoir aussi le passage des clips pendant l'insertion et l'accès pour les déverrouiller. Ne pas utiliser la DevKit ou un composant comme point d'appui du boîtier.
-- Conserver une zone libre autour de l'antenne ESP32, cohérente avec les prescriptions du module exact ; coordonner sa position avec la paroi, le câblage et les éléments voisins.
-- Aligner les interfaces utilisateur et externes avec les ouvertures : LCD, axe et bouton de l'encodeur, USB, entrée d'alimentation, sortie chauffage et sonde. Vérifier l'accès aux verrous JST, aux vis des borniers, à JP1 et aux boutons de la DevKit.
-- Prévoir le volume des fiches accouplées, leur trajectoire d'insertion, la courbure du faisceau et le maintien des câbles. Les efforts de branchement des câbles externes devront être repris par la structure prévue, sans déclipser la carte ni solliciter uniquement les soudures.
-- Réserver les volumes des composants hauts des deux côtés, notamment DevKit, backpack LCD, buck et étage de puissance. Prévoir les distances au plastique et la dissipation de B après dimensionnement ; ne pas placer un clip dans un volume destiné à un composant chaud ou à un dissipateur.
-
-Conséquences sur le schéma : le sens de sortie des connecteurs, leur version droite ou coudée, le choix entre composant directement monté et élément déporté par câble, ainsi que les besoins de refroidissement pourront conduire à modifier les références et les empreintes. Les brochages J1/J6/J7 restent la base actuelle ; toute évolution électrique nécessaire sera répercutée sur les deux schémas et le contrat d'interface. Aucune modification des réseaux n'est nécessaire pour enregistrer cette contrainte à ce stade.
-
-Avant lancement des PCB, vérifier l'assemblage boîtier/cartes avec des modèles 3D aux dimensions réelles et une impression d'essai des zones de clips. Valider l'accès, l'insertion, le démontage répété et le maintien lors du branchement des câbles. Un essai thermique de l'ensemble assemblé complétera cette validation une fois la puissance définie.
-
-## Vérifier et exporter
-
-Avec KiCad installé à l'emplacement actuel sous Windows :
+Les [STEP du boîtier v0.4](mechanical/README.md) sont une **étude antérieure**, non réconciliée avec la DevKit diymore et le buck de 51 mm désormais séparé. Le support du XL4015, le rangement des fils et la position précise de l'USB interne restent à reprendre avant impression finale. Les PCB ont leurs contours et réserves conservés ; le modèle mécanique complet n'est pas requalifié par ce routage.
 
 ```powershell
 & 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/check_schematics.py
+& 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/check_routing.py
+& 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/check_placement.py
 ```
 
-Ce script lance l'ERC sans exclusions ajoutées au projet, exporte les PDF et netlists, puis contrôle sur les réseaux exportés les trois connecteurs A/B et leurs empreintes JST, les rails séparés, les broches ADC, la commande de grille et le trajet de puissance. Les rapports sont sous `review/`. L'ERC ne valide ni le dimensionnement ni les empreintes ou la sécurité thermique.
+Résultat livré : **ERC zéro erreur/avertissement, DRC zéro violation, zéro connexion restante et zéro écart schéma/PCB sur les deux cartes**. Les pads sont comparés aux netlists et les trajets principaux de puissance sont contrôlés. `review/routing/` contient les rapports et les PDF relus. Le routage a été amorcé avec Freerouting 2.5.0 **localement**, puis corrigé dans les fichiers natifs ; aucune API de routage distante n'a reçu les cartes. Les `.dsn/.ses` et journaux sont des intermédiaires ignorés par Git. Les scripts initiaux restent des étapes historiques et refusent d'écraser un PCB déjà routé.
 
-`scripts/create_drafts.py` est le générateur initial conservé pour traçabilité. Il refuse d'écraser les schémas existants sans `--overwrite`. Après édition dans KiCad, conserver les fichiers natifs comme référence et ne pas régénérer les schémas ; les exports/BOM devront suivre les sources modifiées.
-
-## Références techniques
-
-- [KiCad : fichiers de schéma](https://dev-docs.kicad.org/en/file-formats/sexpr-schematic/)
-- [KiCad : ligne de commande et ERC](https://docs.kicad.org/10.0/en/cli/cli.html)
-- [TI : ADS1115, brochage, adressage et comparateur](https://www.ti.com/lit/gpn/ads1115)
-- [Diodes : AP2112](https://www.diodes.com/assets/Datasheets/AP2112.pdf)
-- [TI : SN74LVC1G08](https://www.ti.com/product/SN74LVC1G08)
+Références : [JST-XH](https://www.jst-mfg.com/product/pdf/eng/eXH.pdf), [driver UCC27517](https://www.ti.com/lit/gpn/UCC27517), [IRLZ44N](https://www.infineon.com/part/IRLZ44N), [DMP6023LE](https://www.diodes.com/datasheet/download/DMP6023LE.pdf), [fusibles 451/453](https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1), [STPS5L60](https://www.st.com/resource/en/datasheet/stps5l60.pdf), [bornier Phoenix](https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721?type=pdf), [ADS1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf).

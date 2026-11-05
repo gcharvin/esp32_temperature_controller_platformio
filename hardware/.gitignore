@@ -5,3 +5,8 @@
 *.bak
 __pycache__/
 review/*.png
+review/routing/*.log
+review/routing/*.dsn
+review/routing/*.ses
+review/routing/*.png
+review/routing/*_placement_drc.json

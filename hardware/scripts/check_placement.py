@@ -20,7 +20,7 @@ for spec in DATA['boards']:
     assert abs(p.ToMM(edges.GetWidth())-width-.15)<.001
     assert abs(p.ToMM(edges.GetHeight())-height-.15)<.001
     assert abs(p.ToMM(board.GetDesignSettings().GetBoardThickness())-thickness)<.001
-    assert len(list(board.GetTracks()))==0
+    is_routed=bool(list(board.GetTracks()))
     pin_nets={}
     xml=ET.parse(ROOT/'review'/(name+'.net.xml')).getroot()
     for net in xml.findall('./nets/net'):
@@ -45,8 +45,9 @@ for spec in DATA['boards']:
     drc=json.loads(report.read_text(encoding='utf-8'))
     assert drc['violations']==[],drc['violations']
     unconnected=len(drc['unconnected_items'])
-    messages.append(f'{name}: {width} x {height} x {thickness} mm; DRC geometry 0 violations; {unconnected} expected unconnected items; no tracks.')
-    messages.append('Padless provisional envelopes: '+', '.join(provisional))
+    if is_routed:assert unconnected==0
+    messages.append(f'{name}: {width} x {height} x {thickness} mm; DRC geometry 0 violations; {unconnected} unconnected items; '+('routed.' if is_routed else 'unrouted.'))
+    messages.append('Padless provisional envelopes: '+(', '.join(provisional) if provisional else 'none'))
 messages.append('Clip bands and native footprint net assignments verified. No thermal, RF, print tolerance, assembly parity or manufacturing qualification implied.')
 (ROOT/'review'/'placement_validation.txt').write_text('\n'.join(messages)+'\n',encoding='utf-8')
 print('\n'.join(messages))

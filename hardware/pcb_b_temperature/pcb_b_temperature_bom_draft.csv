@@ -1,27 +1,37 @@
 Reference,Value,Footprint,Design_Status
-J2,12V DC input / + then 0V,,provisional
-F1,TBD current,,provisional
-D1,Reverse polarity / TBD rating,,provisional
-D2,TVS TBD,,provisional
-U1,12V -> 5V module / TBD,,"Logical interface only; rating, pinout and footprint TBD"
+J2,24V IN / + PGND,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",provisional
+F1,6.3A / 125VDC / 045106.3MRL,Fuse:Fuse_Littelfuse-NANO2-451_453,provisional
+Q2,DMP6023LE-13 / reverse input,Package_TO_SOT_SMD:SOT-223-3_TabPin2,provisional
+D3,BZT52C12 / 12V gate clamp,Diode_SMD:D_SOD-123,provisional
+R8,100k,Resistor_SMD:R_0603_1608Metric,provisional
+D2,SMBJ24CA / transients NOT qualified,Diode_SMD:D_SMB,provisional
+J3,HEATER / + switched return,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",provisional
+J8,To XL4015 IN / + PGND,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",provisional
+U1,TECNOULAB XL4015 CC/CV / OFF-BOARD,,Purchased module; wire to screw terminals. No PCB mounting pads. Set 5.00V before connection.
+J9,From XL4015 OUT / GND +5V,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,provisional
+F2,1A / 125VDC / 0451001.MRL,Fuse:Fuse_Littelfuse-NANO2-451_453,provisional
+U2,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,provisional
+C1,1uF / 16V X7R,Capacitor_SMD:C_0603_1608Metric,provisional
+C2,1uF / 10V X7R,Capacitor_SMD:C_0603_1608Metric,provisional
 J1,A-B POWER / XH-2,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,provisional
 J6,A-B I2C / XH-3,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,provisional
 J7,A-B CTRL / XH-6,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,provisional
-U2,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,provisional
-C1,1uF,Capacitor_SMD:C_0603_1608Metric,provisional
-C2,1uF,Capacitor_SMD:C_0603_1608Metric,provisional
-U3,74LVC1G08,,provisional
+U3,SN74LVC1G08DBVR,Package_TO_SOT_SMD:SOT-23-5,provisional
 R1,47k,Resistor_SMD:R_0603_1608Metric,provisional
 R2,47k,Resistor_SMD:R_0603_1608Metric,provisional
-C3,100nF,Capacitor_SMD:C_0603_1608Metric,provisional
-R3,100R,Resistor_SMD:R_0603_1608Metric,provisional
-Q1,NMOS / 3V3 gate / TBD,,"Logical G/D/S only; device, physical pads and footprint TBD"
+C3,100nF / 10V X7R,Capacitor_SMD:C_0603_1608Metric,provisional
+U5,UCC27517DBVR,Package_TO_SOT_SMD:SOT-23-5,"TI physical DBV pinout; TTL input, UVLO, output referenced to PGND"
+C6,100nF / 16V X7R,Capacitor_SMD:C_0603_1608Metric,provisional
+C7,1uF / 16V X7R,Capacitor_SMD:C_0603_1608Metric,provisional
+R3,22R,Resistor_SMD:R_0603_1608Metric,provisional
+Q1,IRLZ44NPBF / gate 5 V,Package_TO_SOT_THT:TO-220-3_Vertical,provisional
 R4,100k,Resistor_SMD:R_0603_1608Metric,provisional
-J3,Heater output,,provisional
-J4,NTC 15k B3920 probe,,provisional
+J4,NTC 15k B3920,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,provisional
 R5,8.45k 1%,Resistor_SMD:R_0603_1608Metric,provisional
 R6,1k,Resistor_SMD:R_0603_1608Metric,provisional
-C4,100nF,Capacitor_SMD:C_0603_1608Metric,provisional
-U4,ADS1115IDGS / 0x49,Package_SO:TSSOP-10_3x3mm_P0.5mm,provisional
-C5,100nF,Capacitor_SMD:C_0603_1608Metric,provisional
+C4,100nF / 10V X7R,Capacitor_SMD:C_0603_1608Metric,provisional
+U4,ADS1115IDGSR / 0x49,Package_SO:TSSOP-10_3x3mm_P0.5mm,provisional
+C5,100nF / 10V X7R,Capacitor_SMD:C_0603_1608Metric,provisional
 R7,10k,Resistor_SMD:R_0603_1608Metric,provisional
+D4,STPS5L60U / cable flyback,Diode_SMD:D_SMB,provisional
+C8,100uF / 50V / EEUFR1H101,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,provisional

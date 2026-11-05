@@ -1,0 +1,121 @@
+{
+  "status": "routed prototype, not fabrication release",
+  "target_input_V": 24,
+  "target_heater_W": 100,
+  "heater_current_A": 4.166666666666667,
+  "required_B_outer_copper_um": 70,
+  "devkit_row_spacing_mm": 25.4,
+  "devkit_spacing_status": "ASSUMED, user verification pending",
+  "boards": [
+    {
+      "board": "pcb_a_display",
+      "DRC_violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity_issues": 0,
+      "footprints": 18,
+      "tracks": 249,
+      "vias": 6,
+      "copper_thickness_mm": {
+        "F.Cu": 0.035,
+        "B.Cu": 0.035
+      },
+      "host_orientation_checked": "antenna left / USB right; EN bottom-left; GPIO23 top-left; VIN bottom-right"
+    },
+    {
+      "board": "pcb_b_temperature",
+      "DRC_violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity_issues": 0,
+      "footprints": 35,
+      "tracks": 250,
+      "vias": 16,
+      "copper_thickness_mm": {
+        "F.Cu": 0.07,
+        "B.Cu": 0.07
+      },
+      "high_current_paths": [
+        {
+          "net": "/VIN_RAW",
+          "from": [
+            "J2",
+            "1"
+          ],
+          "to": [
+            "F1",
+            "1"
+          ],
+          "discrete_vias": 0,
+          "minimum_track_width_mm": 2.4,
+          "track_length_mm": 15.545,
+          "neck_length_below_2p4_mm": 0
+        },
+        {
+          "net": "/VIN_FUSED",
+          "from": [
+            "F1",
+            "2"
+          ],
+          "to": [
+            "Q2",
+            "2"
+          ],
+          "discrete_vias": 0,
+          "minimum_track_width_mm": 1.5026,
+          "track_length_mm": 12.834,
+          "neck_length_below_2p4_mm": 2.329
+        },
+        {
+          "net": "/VIN_PROTECTED",
+          "from": [
+            "Q2",
+            "3"
+          ],
+          "to": [
+            "J3",
+            "1"
+          ],
+          "discrete_vias": 0,
+          "minimum_track_width_mm": 2.4,
+          "track_length_mm": 46.65,
+          "neck_length_below_2p4_mm": 0
+        },
+        {
+          "net": "/HEATER_LOW",
+          "from": [
+            "J3",
+            "2"
+          ],
+          "to": [
+            "Q1",
+            "2"
+          ],
+          "discrete_vias": 0,
+          "minimum_track_width_mm": 1.8,
+          "track_length_mm": 11.984,
+          "neck_length_below_2p4_mm": 0.047
+        },
+        {
+          "net": "/PGND",
+          "from": [
+            "Q1",
+            "3"
+          ],
+          "to": [
+            "J2",
+            "2"
+          ],
+          "discrete_vias": 0,
+          "minimum_track_width_mm": 2.4,
+          "track_length_mm": 85.396,
+          "neck_length_below_2p4_mm": 0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Physical DevKit dimensions/pinout must be confirmed.",
+    "Power/thermal and fault testing not performed.",
+    "XL4015 complete module transient limits not qualified.",
+    "Enclosure export predates revised module positions."
+  ]
+}

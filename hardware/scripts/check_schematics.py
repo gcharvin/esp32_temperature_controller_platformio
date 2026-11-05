@@ -69,14 +69,16 @@ def main():
         assert {n for (r,_),n in pins.items() if r=='J1'} == {'GND','+5V_AB'}
         assert {n for (r,_),n in pins.items() if r=='J6'} == {'GND','I2C_SDA','I2C_SCL'}
     a,ag=boards['pcb_a_display']; b,bg=boards['pcb_b_temperature']
-    for pin,net in [('5V','+5V_DEVKIT'),('GND','GND'),('21','I2C_SDA'),('22','I2C_SCL'),('25','PWM0'),('26','PWM1'),('27','ENABLE'),('32','DIN0'),('33','FAULT_N')]:
+    # Physical 30-contact socket numbering; GPIO labels are not pad numbers.
+    for pin,net in [(15,'+5V_DEVKIT'),(14,'GND'),(17,'GND'),(26,'I2C_SDA'),(29,'I2C_SCL'),(8,'PWM0'),(9,'PWM1'),(10,'ENABLE'),(6,'DIN0'),(7,'FAULT_N'),(20,'ENC_A'),(25,'ENC_B'),(30,'ENC_SW')]:
         check_pin(a,'U1',pin,net)
     check_pin(a,'JP1',1,'+5V_AB');check_pin(a,'JP1',2,'+5V_DEVKIT')
     check_pin(a,'U2',5,'+3V3_A');check_pin(a,'J2',2,'+3V3_A')
     for pin,net in [(1,'+3V3_B'),(8,'+3V3_B'),(3,'GND'),(4,'NTC_ADC'),(9,'I2C_SDA'),(10,'I2C_SCL'),(2,'FAULT_N')]:
         check_pin(b,'U4',pin,net)
-    for ref,pin,net in [('U3',1,'PWM0'),('U3',2,'ENABLE'),('U3',4,'GATE_CMD'),('Q1',1,'GATE'),('Q1',2,'HEATER_LOW'),('Q1',3,'GND'),('J3',1,'VIN_PROTECTED'),('J3',2,'HEATER_LOW'),('D1',2,'VIN_FUSED'),('D1',1,'VIN_PROTECTED'),('F1',1,'VIN_RAW'),('F1',2,'VIN_FUSED'),('R5',1,'NTC_RAW'),('R5',2,'GND'),('R6',1,'NTC_RAW'),('R6',2,'NTC_ADC')]:
+    for ref,pin,net in [('U3',1,'PWM0'),('U3',2,'ENABLE'),('U3',4,'GATE_CMD'),('Q1',1,'GATE'),('Q1',2,'HEATER_LOW'),('Q1',3,'PGND'),('J3',1,'VIN_PROTECTED'),('J3',2,'HEATER_LOW'),('Q2',2,'VIN_FUSED'),('Q2',3,'VIN_PROTECTED'),('Q2',1,'REV_GATE'),('D3',1,'VIN_PROTECTED'),('D3',2,'REV_GATE'),('D4',1,'VIN_PROTECTED'),('D4',2,'HEATER_LOW'),('F1',1,'VIN_RAW'),('F1',2,'VIN_FUSED'),('F2',1,'+5V_BUCK'),('F2',2,'+5V_AB'),('J8',1,'VIN_PROTECTED'),('J8',2,'PGND'),('J9',1,'GND'),('J9',2,'+5V_BUCK'),('U5',1,'+5V_AB'),('U5',2,'PGND'),('U5',3,'GATE_CMD'),('U5',4,'PGND'),('U5',5,'GATE_DRV'),('C8',1,'VIN_PROTECTED'),('C8',2,'PGND'),('R5',1,'NTC_RAW'),('R5',2,'GND'),('R6',1,'NTC_RAW'),('R6',2,'NTC_ADC')]:
         check_pin(b,ref,pin,net)
+    assert bg['GND'].isdisjoint(bg['PGND']), 'Do not short external CC/CV module input and output returns on B'
     for name,groups in [('A',ag),('B',bg)]:
         allowed_rails={'+3V3_A'} if name=='A' else {'+3V3_B'}
         assert allowed_rails.issubset(groups)
