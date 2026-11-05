@@ -13,13 +13,14 @@ for engineering review and quotation; it is not an approved production order.
 | THT assembly | 8 native items + 2 separate sockets | 9 native items |
 | Scope | All listed SMT and THT parts soldered | All listed SMT and THT parts soldered |
 
-Please provide lead-free fabrication/assembly options, green soldermask and
-lead-free HASL versus ENIG pricing if available. Quote A Economic versus
+Please quote lead-free compatible FR4 Tg>=150C, **ENIG**, green soldermask and
+white legends. Any lower-cost finish is a separately priced, unapproved alternative. Quote A Economic versus
 Standard if compatible with all selected parts. For B, quote **Standard with
 an approved thermal profile**: TI specifies a peak reflow limit of **245 °C**
 for LM2596S-5.0/NOPB, MSL3. The advertised Economic 255 ± 5 °C profile is not
 acceptable for that component. Confirm lot-specific moisture handling and
 measured component peak temperature, rather than relying only on an oven setpoint.
+Kingbright LED lots also include MSL3 parts. Check all actual lot labels.
 
 B's functional height is 65 mm. Please propose removable manufacturing rails
 and tooling to meet your Standard assembly envelope, for example **5 mm
@@ -63,6 +64,22 @@ included. Quote and align the two socket rows separately, not at U1's centroid.
   1.80 mm inner gap. Please review stencil apertures and process for this part.
 - Please itemize sourcing, PCB, stencil, setup, SMT, THT, inspection,
   depanelization, lead time and delivery charges. Include factory DFM issues.
+
+Please use `fabrication_specification.json` as the build specification and
+return `factory_response.csv` with the quote/DFM/placement-preview evidence.
+Nominal finished socket holes are1.05mm; confirm finished-hole tolerance and
+socket insertion/soldering process. Supply the JP1 shunt loose, not installed.
+Trim THT leads to a target<=2mm beyond the solder side.
+
+Quote100% bare-board electrical test using `bare_board_test.d356`; raw KiCad
+output is included separately. B/NT1 intentionally joins PGND/GND, normalized
+only in the CAM test netlist. All other nets/coordinates remain unchanged.
+Please quote the inspections and low-power functional checks in
+`factory_acceptance_test.md`, with no DevKit, firmware or heater required.
+Do not mark those checks done if they are not included in your service.
+
+Optional cable quotation: one straight POWER, I2C and CTRL harness per A+B
+set,300mm, as specified in `harness_pin_map.csv`/`wiring_and_harnesses.md`.
 
 Sources for process requirements:
 [TI LM2596](https://www.ti.com/lit/ds/symlink/lm2596.pdf#page=37),

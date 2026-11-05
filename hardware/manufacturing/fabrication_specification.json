@@ -1,0 +1,44 @@
+{
+  "revision": "A04-B05 prototype preparation 3",
+  "scope": "Five assembled prototype A boards and five assembled temperature B boards for quotation; not an order",
+  "quote_quantity_each": 5,
+  "order_authorized": false,
+  "material": "FR4, lead-free compatible, Tg >=150C requested",
+  "layers": 2,
+  "finished_thickness_nominal_mm": 1.6,
+  "accepted_published_thickness_range_mm": [1.44, 1.76],
+  "surface_finish": "ENIG requested; any alternative requires approval",
+  "soldermask": "green, both sides",
+  "silkscreen": "white, both sides as supplied",
+  "controlled_impedance": false,
+  "boards": {
+    "A": {"outline_mm": [110, 75], "outer_copper_um_each_side": 35, "SMT": 13, "factory_THT_including_sockets": 10},
+    "B": {"outline_mm": [90, 65], "outer_copper_um_each_side": 70, "SMT": 38, "factory_THT": 9, "input_V": 24, "heater_target_max_W": 100}
+  },
+  "assembly": {
+    "side": "top only",
+    "process_B": "Standard candidate, measured LM2596 package peak <=245C; factory thermal profile approval mandatory",
+    "moisture": "Handle each actual MSL lot correctly; LM2596 and Kingbright LEDs include MSL3 parts",
+    "all_THT_factory_assembled": true,
+    "THT_lead_protrusion_target_max_mm": 2,
+    "extra_sockets": "Two Harwin M20-7821546 under A/U1; nominal finished holes1.05mm; 25.4mm row centres, 2.54mm pitch",
+    "loose_shunt": "One Harwin M7566-05 per A, supplied loose; do not bridge JP1 at delivery",
+    "customer_module": "Do not buy or solder the removable ESP32 DevKit",
+    "net_tie": "B/NT1 copper only; no purchased part",
+    "substitutions": "No automatic manufacturer, package or value substitutions"
+  },
+  "panelization": {
+    "owner": "Assembler, proposal and DFM approval before build",
+    "B_candidate_mm": [90, 75],
+    "B_candidate_external_rails_mm": 5,
+    "delivered_functional_outlines_unchanged": true,
+    "delivered_depanelized_deburred": true,
+    "protect_clip_contact_areas": "Top/bottom4mm bands and side1.5mm supports; no tabs, tooling holes or permanent rails in these areas"
+  },
+  "inspection": {
+    "bare_board_electrical_test": "Request100% opens/shorts test using supplied bare_board_test.d356; B PGND/GND physically equivalent through NT1",
+    "assembly": "AOI plus THT/polarity inspection; confirm LM2596 tab solder process/inspection",
+    "functional_quote": "factory_acceptance_test.md; no ESP32 firmware and no heater attached",
+    "traceability": "Record actual fitted MPNs, authorized substitutions if any, test results and lot identification"
+  }
+}

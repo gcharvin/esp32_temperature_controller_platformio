@@ -48,7 +48,7 @@ Chaque carte B définit séparément tension, puissance et courant maximal.
 
 ## USB latéral : conserver le port, maîtriser le VBUS
 
-Le port accessible est celui de la DevKit diymore, pas un connecteur USB câblé
+Le port accessible est celui de la DevKit enfichable (CP210x ou CH340 selon carte), pas un connecteur USB câblé
 sur A. A n'a accès qu'au VIN de la DevKit, à travers JP1 ; le VBUS du PC
 n'est pas disponible séparément sur A. Les documents du CH340 ne donnent
 pas le schéma d'alimentation de cette DevKit particulière.

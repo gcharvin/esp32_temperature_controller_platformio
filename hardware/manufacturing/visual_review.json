@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "date_utc": "2026-11-05T22:30:49.773067+00:00",
+  "reviewer": "Codex - actual render inspection",
+  "method": "Three assembly PDF pages rendered with pdftoppm and inspected; four independently parsed Gerber images inspected; two mechanical previews inspected; schematic renders and final cartouches inspected.",
+  "findings": [
+    "Readable reference/polarity drawings; no clipped assembly notes.",
+    "Gerber contours/route patterns and keepout appearance match native board views; drill positions checked separately.",
+    "Updated schematic cartouches fit and no longer state row spacing is unverified.",
+    "Mechanical envelopes show raised DevKit stack and taller terminal blocks; actual print/cables remain hardware checks."
+  ],
+  "reviewed_files_sha256": {
+    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "e82d1239984d4ed40f53349484e48f22116c08aa7afbc8894cc15b648f3fe524",
+    "manufacturing/review_A04_B05/gerber_review/A_front.png": "246c9a484bd6900b8884b2c31a8ac98a02be967d0e8e3e53d564d1e87e07a15a",
+    "manufacturing/review_A04_B05/gerber_review/A_back.png": "35d98ee1a698806da22e0f745c1edc1870c1b445fc3c804984359d294eaa4689",
+    "manufacturing/review_A04_B05/gerber_review/B_front.png": "82444f74d3f2f6b8697b8d3633d5083c90600065ebb338c374870ef288189f6f",
+    "manufacturing/review_A04_B05/gerber_review/B_back.png": "2c8dd3ac709cf9dfc69859d543f0f7525209eb7b79199e5e48e71ab456bcb783",
+    "mechanical/exports/preview_service.png": "67186ca17c2251deb38713cb8923d34ed9077996b43ee1b7ae013cfd2a77222f",
+    "mechanical/exports/preview_b_power.png": "1079de36f95b69fbacb78f1383d3cad1623f880c7a04ad1fa9150a8fe8b49fb9",
+    "review/pcb_a_display.pdf": "55ba6b8e71591134fb2112f40be47af5904068daff7e8024b0c152428d21986d",
+    "review/pcb_b_temperature.pdf": "d48b2dd4e6ed74aaab0ca37821c682c2668e19a225fdf8abc6efec7ebb3b46b8"
+  },
+  "limits": [
+    "Engineering visual review, not assembler orientation/process approval or a physical fit/thermal test."
+  ]
+}

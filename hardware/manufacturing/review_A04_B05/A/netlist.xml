@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\Gilles\Documents\PlatformIO\Projects\esp32-temperature-controller-platformio\hardware\pcb_a_display\pcb_a_display.kicad_sch</source>
-    <date>2026-11-05T22:30:59</date>
+    <date>2026-11-05T23:28:04</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -11,7 +11,7 @@
         <rev>0.4</rev>
         <date>2026-11-05</date>
         <source>pcb_a_display.kicad_sch</source>
-        <comment number="1" value="PROTOTYPE - DEVKIT PITCH TO VERIFY - NOT RELEASED FOR FABRICATION"/>
+        <comment number="1" value="PROTOTYPE - ENGINEERING PREPARED - ASSEMBLER APPROVAL REQUIRED"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
@@ -27,14 +27,21 @@
     <comp ref="C1">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="C1608X7R1C105K080AC"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -53,14 +60,21 @@
     <comp ref="C2">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">C1608X7R1C105K080AC</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="C1608X7R1C105K080AC"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -79,14 +93,21 @@
     <comp ref="C3">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1A106K080AC</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">C1608X5R1A106K080AC</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1A106K080AC</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="C1608X5R1A106K080AC"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -104,18 +125,22 @@
     </comp>
     <comp ref="D1">
       <value>APT2012LZGCK</value>
-      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <footprint>LabHardware:LED_Kingbright_APT2012_Manufacturer</footprint>
       <datasheet>https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</datasheet>
       <fields>
-        <field name="Design_Status">Diagnostic green / 0805 / low-current</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
         <field name="MPN">APT2012LZGCK</field>
-        <field name="Footprint">LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
+        <field name="Footprint">LabHardware:LED_Kingbright_APT2012_Manufacturer</field>
         <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="Design_Status" value="Diagnostic green / 0805 / low-current"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
       <property name="MPN" value="APT2012LZGCK"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
@@ -133,18 +158,22 @@
     </comp>
     <comp ref="D2">
       <value>APT2012LZGCK</value>
-      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <footprint>LabHardware:LED_Kingbright_APT2012_Manufacturer</footprint>
       <datasheet>https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</datasheet>
       <fields>
-        <field name="Design_Status">Diagnostic green / 0805 / low-current</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
         <field name="MPN">APT2012LZGCK</field>
-        <field name="Footprint">LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
+        <field name="Footprint">LabHardware:LED_Kingbright_APT2012_Manufacturer</field>
         <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="Design_Status" value="Diagnostic green / 0805 / low-current"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
       <property name="MPN" value="APT2012LZGCK"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
@@ -163,14 +192,21 @@
     <comp ref="J1">
       <value>A-B POWER / XH-2</value>
       <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B2B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B2B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -189,14 +225,21 @@
     <comp ref="J2">
       <value>LCD20x4 + backpack / 3V3</value>
       <footprint>Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
       <fields>
-        <field name="Design_Status">JST B4B-XH-A physical package selected</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B4B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="JST B4B-XH-A physical package selected"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B4B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -217,14 +260,21 @@
     <comp ref="J3">
       <value>Encoder / A B SW GND</value>
       <footprint>Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
       <fields>
-        <field name="Design_Status">JST B4B-XH-A physical package selected</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B4B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="JST B4B-XH-A physical package selected"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B4B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -245,14 +295,21 @@
     <comp ref="J4">
       <value>TMP117 module / addr 0x48</value>
       <footprint>Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
       <fields>
-        <field name="Design_Status">JST B4B-XH-A physical package selected</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B4B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="JST B4B-XH-A physical package selected"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B4B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -273,14 +330,21 @@
     <comp ref="J5">
       <value>BH1750 module / addr 0x23</value>
       <footprint>Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
       <fields>
-        <field name="Design_Status">JST B4B-XH-A physical package selected</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B4B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="JST B4B-XH-A physical package selected"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B4B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -301,14 +365,21 @@
     <comp ref="J6">
       <value>A-B I2C / XH-3</value>
       <footprint>Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B3B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B3B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -328,14 +399,21 @@
     <comp ref="J7">
       <value>A-B CTRL / XH-6</value>
       <footprint>Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B6B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B6B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -358,14 +436,21 @@
     <comp ref="JP1">
       <value>5V DevKit link / remove for service</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.harwin.com/products/M20-9990246</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">M20-9990246</field>
+        <field name="Manufacturer">Harwin</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
         <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.harwin.com/products/M20-9990246</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="M20-9990246"/>
+      <property name="Manufacturer" value="Harwin"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -384,14 +469,21 @@
     <comp ref="R1">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -410,14 +502,21 @@
     <comp ref="R2">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -436,14 +535,21 @@
     <comp ref="R3">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="RC0603FR-0710KL"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -462,14 +568,21 @@
     <comp ref="R4">
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -488,14 +601,21 @@
     <comp ref="R5">
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">RC0603FR-074K7L</field>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="RC0603FR-074K7L"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -514,14 +634,21 @@
     <comp ref="R6">
       <value>1.5k / 1% / 0.1W</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071K5L</datasheet>
       <fields>
-        <field name="Design_Status">Diagnostic current limit</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">RC0603FR-071K5L</field>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071K5L</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Design_Status" value="Diagnostic current limit"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="RC0603FR-071K5L"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -540,14 +667,21 @@
     <comp ref="R7">
       <value>470R / 1% / 0.1W</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07470RL</datasheet>
       <fields>
-        <field name="Design_Status">Diagnostic current limit</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">RC0603FR-07470RL</field>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
-        <field name="Datasheet"/>
+        <field name="Datasheet">https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07470RL</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Design_Status" value="Diagnostic current limit"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="RC0603FR-07470RL"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -564,16 +698,23 @@
       </units>
     </comp>
     <comp ref="U1">
-      <value>diymore CH340 USB-C / 30P</value>
-      <footprint>LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED</footprint>
+      <value>ESP32 USB-C / 30P user module</value>
+      <footprint>LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm</footprint>
+      <datasheet>devkit_compatibility.md</datasheet>
       <fields>
-        <field name="Design_Status">Row pitch 25.40 mm ASSUMED; verify purchased board before fabrication</field>
-        <field name="Footprint">LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED</field>
-        <field name="Datasheet"/>
+        <field name="Design_Status">NOT_A_FACTORY_PURCHASED_NATIVE_PART</field>
+        <field name="MPN"/>
+        <field name="Manufacturer">Customer supplied</field>
+        <field name="Assembly">CUSTOMER_PLUG_IN</field>
+        <field name="Footprint">LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm</field>
+        <field name="Datasheet">devkit_compatibility.md</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Lab" part="Diymore_ESP32_30P" description=""/>
-      <property name="Design_Status" value="Row pitch 25.40 mm ASSUMED; verify purchased board before fabrication"/>
+      <property name="Design_Status" value="NOT_A_FACTORY_PURCHASED_NATIVE_PART"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value="Customer supplied"/>
+      <property name="Assembly" value="CUSTOMER_PLUG_IN"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -620,13 +761,19 @@
       <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
       <datasheet>https://www.diodes.com/assets/Datasheets/AP2112.pdf</datasheet>
       <fields>
-        <field name="Design_Status">provisional</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">AP2112K-3.3TRG1</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
         <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP2112.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Regulator_Linear" part="AP2112K-3.3" description="600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"/>
-      <property name="Design_Status" value="provisional"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="AP2112K-3.3TRG1"/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
       <property name="ki_keywords" value="linear regulator ldo fixed positive"/>

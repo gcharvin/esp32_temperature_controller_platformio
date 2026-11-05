@@ -1,0 +1,86 @@
+{
+  "status": "PASS / all13 local preparation stages; final visual review remains separate",
+  "stages": [
+    {
+      "stage": "schematics",
+      "exit_code": 0
+    },
+    {
+      "stage": "parts",
+      "exit_code": 0
+    },
+    {
+      "stage": "lands",
+      "exit_code": 0
+    },
+    {
+      "stage": "routing",
+      "exit_code": 0
+    },
+    {
+      "stage": "placement",
+      "exit_code": 0
+    },
+    {
+      "stage": "buck_binding",
+      "exit_code": 0
+    },
+    {
+      "stage": "factory_geometry",
+      "exit_code": 0
+    },
+    {
+      "stage": "harnesses",
+      "exit_code": 0
+    },
+    {
+      "stage": "assembly_pdf",
+      "exit_code": 0
+    },
+    {
+      "stage": "mechanical",
+      "exit_code": 0
+    },
+    {
+      "stage": "routing_plots",
+      "exit_code": 0
+    },
+    {
+      "stage": "manufacturing_exports",
+      "exit_code": 0
+    },
+    {
+      "stage": "rfq_integrity",
+      "exit_code": 0
+    }
+  ],
+  "hardware_tests_performed": false,
+  "order_authorized": false,
+  "evidence_sha256": {
+    "review/validation.txt": "2f012cebafe860b7b72d80ad254dcdc74e6b15e2753ea1b28158740c9969bdfb",
+    "review/routing/component_selection_validation.json": "9c936c3d361632cd7825bd69d27018604de1491865b623f43ab2f2971ad44481",
+    "review/routing/manufacturer_land_patterns.json": "ec2f08dcec02dd0bdf86f9715604239b63c4e13a8ea71ef32b25e4f18b910d83",
+    "review/routing/routing_validation.json": "953dfd4d57f2126b7d5eb5d9bb85769eba1fe74a6ad0db3005daca7bdf0076ec",
+    "manufacturing/manufacturing_fit_audit.json": "74ed212044bbb1a101e515865e8277d79cd87ae29e91610e60a26d5d5041347f",
+    "manufacturing/harness_validation.json": "f423a7a40b2cbbd17ef5446391edd5f741fc82a4e5a6a433ed54e8a979a26ac7",
+    "manufacturing/output/assembly_review_manifest.json": "2ccccd7ae092f71e3f1e8bf40c8db810708472e743f63877d9689b42767c0fea",
+    "manufacturing/fabrication_output_validation.json": "ddb4f05d3f1fde6b0e7bc4c45c3f02337ffa5d125c014c620e88fb75621d3714",
+    "manufacturing/rfq_integrity_validation.json": "8a82922552e1d9482b5eb2e16571fc03cdcc053c50d55ecb3c6d0f6468de3285",
+    "mechanical/exports/source_manifest_v08.json": "2aac794fae7ad3906b54cd9cb5bbb96b374ce5cd4c44833e7ba831f98b131af2",
+    "mechanical/exports/assembly_sequence_validation.json": "0b427ef76f8bfe84cc3f92334ad3bb018aff17c9fddc37c364fddbc9660ee0bc",
+    "mechanical/exports/validation.json": "b7b8f1800c3297697521ee3c4ab08c2ab8eeaedb5920053707145292a5353fd7"
+  },
+  "limits": [
+    "Factory sourcing/DFM/placement-preview/quotation approvals are external.",
+    "No actual heater, DevKit power path or printed fit qualification inferred."
+  ],
+  "post_pipeline_rechecks": [
+    {
+      "stage": "routing",
+      "exit_code": 0,
+      "date_utc": "2026-11-05T22:32:04.339395+00:00",
+      "reason": "Mechanical-version wording corrected after successful pipeline. Reran native routing/DRC checks; part/source bindings unchanged.",
+      "checker_sha256": "b26caaf156e76ddb124ac0040231d9cea62964ed021c039201747530b84c5d8d"
+    }
+  ]
+}

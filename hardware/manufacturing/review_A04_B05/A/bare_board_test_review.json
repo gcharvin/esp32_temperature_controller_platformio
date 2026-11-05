@@ -1,0 +1,13 @@
+{
+  "status": "Prepared; bare-board tests have not been performed",
+  "board": "A",
+  "record_count": 97,
+  "ground_tie_records_normalized": 0,
+  "expected_physical_equivalence": [],
+  "all_coordinates_and_other_nets_unchanged": true,
+  "source_PCB_sha256": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
+  "output_sha256": {
+    "bare_board_test_raw_kicad.d356": "bded8398b1517b63ce73fa0a6bf9e8d0c1a002b517f8d3d997cc1bce55294a6b",
+    "bare_board_test.d356": "0664c1d6688c474fcac03356aa932f09ddbf14f5b039c564597b6ed9c423892c"
+  }
+}

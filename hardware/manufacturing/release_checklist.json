@@ -1,61 +1,49 @@
 {
-  "revision": "A 0.4 / B temperature 0.5 / manufacturing review 2",
+  "revision": "A04/B05 prototype preparation3 - native parts frozen; local evidence and factory handoff",
   "date": "2026-11-05",
   "fabrication_release": false,
   "order_placed": false,
   "target": "small prototype batch, 24 V temperature B; A shared across future B supply variants",
   "before_order": [
     {
-      "id": "devkit_row_spacing",
-      "status": "CONFIRMED_BY_USER",
-      "value_mm": 25.4,
-      "date": "2026-11-05",
-      "action": "Measured row-to-row center distance matches existing routed footprint; no geometry change required."
+      "id": "devkit_header_interface",
+      "status": "ENGINEERING_FROZEN",
+      "action": "User confirmed common30P pinout and25.4mm row spacing. Two selected Harwin sockets, native holes1.05mm. Actual bodies, header spacers and USB heights remain integration checks, not claimed measured."
     },
     {
-      "id": "devkit_fit",
-      "status": "OPEN",
-      "action": "Row spacing25.40mm confirmed by user2026-11-05, matching existing footprint. Remaining checks: outline, pin labels, header insertion height and USB position. Identify actual board variant/pin labels: connected CP210x cards are not established as the advertised CH340 diymore variant.",
-      "confirmed_dimensions": {
-        "row_spacing_mm": 25.4,
-        "date": "2026-11-05",
-        "source": "user measurement"
-      }
+      "id": "native_part_selection",
+      "status": "ENGINEERING_FROZEN",
+      "action": "68 physical native MPN/manufacturer fields fixed in schematics and PCBs; two additional Harwin sockets and one loose shunt specified. component_selection.json and validation report are authoritative."
     },
     {
-      "id": "procurement",
-      "status": "CATALOGUE_IDENTITIES_MATCHED_PARTIALLY",
-      "action": "37 exact manufacturer/MPN identities verified on public JLC pages, including RC0603FR-0747KL/C105579. Exact C10/R13 and Harwin parts require sourcing. Live assembly stock, pricing, MLCC bias and final land-pattern/substitution approvals remain open."
+      "id": "footprints_and_exports",
+      "status": "CHECKED_BY_LOCAL_PREPARATION_PIPELINE",
+      "action": "Manufacturer lands for R13/LEDs, socket drilling, Phoenix terminal dimensions; ERC/DRC/parity, actual drills/profile/paste, BOM/CPL and mechanical paths. Final evidence is source-bound; see preparation_checks.json."
     },
     {
-      "id": "selected_manufacturer_lands",
-      "status": "CHECKED_AND_NATIVE_R13_CORRECTED",
-      "action": "Vishay WSL1206 0.006..0.200ohm recommended lands implemented for R13 in local library, schematic and routed board. Native pad sizes/gap and C8/C10 lead pitches checked; no full-footprint or stencil approval implied. Mechanical model regenerated with relocated R13."
+      "id": "prototype_USB_service",
+      "status": "USB_ONLY_SERVICE_DEFINED",
+      "action": "USB service only with all external sources off, J1/J6/J7 unplugged, JP1 removed. Powered USB serial is not a qualified feature of this prototype release and is tested after receipt."
     },
     {
-      "id": "assembly_drawings",
-      "status": "PREPARED_AND_VISUALLY_REVIEWED",
-      "action": "Three-page source-bound top-view assembly PDF, full per-pad net/coordinate map, and 19-item physical THT placement list prepared. Includes two separate U1 socket rows, pin1/polarity and R13 lands. Actual assembler library rotations still need approval."
+      "id": "supplier_sourcing",
+      "status": "MANUFACTURER_RESPONSE_REQUIRED",
+      "action": "Confirm exact part sourcing/stock, including C10/R13/Harwin, MSL lot handling and no unapproved substitutions. Public catalogue identities do not reserve stock."
     },
     {
-      "id": "USB_service",
-      "status": "OPEN",
-      "action": "PortaPow PPUSBBP1 selected as a documented test accessory, not qualified. Connected COM4/COM8 boards enumerate as CP210x; actual diymore CH340 identity and VBUS/VIN electrical measurements remain unresolved. No firmware replacement is needed for power-path testing."
+      "id": "factory_DFM_panel_process",
+      "status": "MANUFACTURER_RESPONSE_REQUIRED",
+      "action": "Approve actual panel/tab/tooling plan, finished holes including1.05mm sockets, ENIG and copper/thickness options, depanelized clip edges, THT process, and measured LM2596 peak<=245C."
     },
     {
-      "id": "buck_review",
-      "status": "REVIEWED_WITH_LIMITS",
-      "action": "Nominal 24 V startup peak 4.88 A is below L1 Isat1 6.5 A at 25 C. Nonlinear saturation, hot tolerance, surge/current-limit and fuse coordination remain unqualified; review package and prototype test plan before order."
+      "id": "factory_placement_preview",
+      "status": "MANUFACTURER_RESPONSE_REQUIRED",
+      "action": "Approve actual library rotations/pad1/polarities against supplied drawing and pad map. Native CPL angles are not assembler-library approval."
     },
     {
-      "id": "assembly_quote",
-      "status": "LOCAL_RFQ_PREPARED_NOT_SENT",
-      "action": "Request Standard B assembly with measured LM2596 component peak <=245C and MSL3 handling. B65mm height needs removable external rails/panel accepted by assembler. Deliver depanelized boards with deburred clip edges; no enlarged functional PCB. Draft local only."
-    },
-    {
-      "id": "fabrication_snapshot",
-      "status": "DRAFT_EXPORTED",
-      "action": "Fresh ERC/DRC and source-bound BOM/CPL/Gerber/drill exports are for review only. Re-export after any native change; approve Gerber/drill appearance and board specs before release."
+      "id": "quotation_and_order",
+      "status": "NOT_ORDERED",
+      "action": "Obtain itemized quote for5A+5B assembled prototypes, electrical test options, lead time and delivery. Purchase/order authorization is separate from autonomous technical preparation."
     }
   ],
   "after_prototype_before_operating_heater": [
@@ -78,6 +66,16 @@
       "id": "mechanical",
       "status": "OPEN",
       "action": "Print clip/rail coupon; check actual DevKit/socket/LCD stack, USB fit, connector grip and fully wired board removal. Verify enclosure temperatures."
+    },
+    {
+      "id": "devkit_stack_fit",
+      "status": "HARDWARE_CHECK_AFTER_RECEIPT",
+      "action": "Check all intended modules against socket contacts and documented stack allowance, actual USB position and panel cable; do not infer universal body fit from equal header pitch."
+    },
+    {
+      "id": "powered_USB_serial",
+      "status": "OPTIONAL_FUNCTION_UNQUALIFIED",
+      "action": "Measure VIN/VBUS topology and qualify a VBUS-separated data arrangement before powered USB monitoring. No firmware replacement is needed for this power-path measurement."
     }
   ],
   "future_variants": [
@@ -91,5 +89,6 @@
       "status": "not designed",
       "action": "Design protected low-drop 5 V distribution or other converter appropriate to source range. Current LM2596 input is not a 5 V pass-through."
     }
-  ]
+  ],
+  "completion_record": "preparation_status.json, produced after automatic checks and final visual review"
 }

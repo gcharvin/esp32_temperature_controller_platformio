@@ -1,0 +1,12 @@
+﻿Harness,End_A,Pin_A,End_B,Pin_B,Net_A,Net_B,Housing_each_end,Contact_each_end,Wire_AWG,Length_mm,Tolerance_mm,Wire_colour
+POWER,A/J1,1,B/J1,1,GND,GND,XHP-2,SXH-001T-P0.6,22,300,10,black
+POWER,A/J1,2,B/J1,2,+5V_AB,+5V_AB,XHP-2,SXH-001T-P0.6,22,300,10,red
+I2C,A/J6,1,B/J6,1,GND,GND,XHP-3,SXH-001T-P0.6,26,300,10,black
+I2C,A/J6,2,B/J6,2,I2C_SDA,I2C_SDA,XHP-3,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+I2C,A/J6,3,B/J6,3,I2C_SCL,I2C_SCL,XHP-3,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+CTRL,A/J7,1,B/J7,1,GND,GND,XHP-6,SXH-001T-P0.6,26,300,10,black
+CTRL,A/J7,2,B/J7,2,PWM0,PWM0,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+CTRL,A/J7,3,B/J7,3,ENABLE,ENABLE,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+CTRL,A/J7,4,B/J7,4,FAULT_N,FAULT_N,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+CTRL,A/J7,5,B/J7,5,PWM1,NC - reserved for other B variants,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+CTRL,A/J7,6,B/J7,6,DIN0,NC - reserved for other B variants,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative

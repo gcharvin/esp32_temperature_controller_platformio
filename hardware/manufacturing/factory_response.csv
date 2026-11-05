@@ -1,0 +1,9 @@
+Gate,Status,Required_response,Evidence,Date
+exact_sourcing,PENDING,"Exact MPN/manufacturer availability incl C10 R13 Harwin; proposed substitutions separately for approval",,
+DFM_and_holes,PENDING,"Finished dimensions copper thickness ENIG and1.05mm socket-hole tolerance accepted",,
+panel_and_edges,PENDING,"Panel tooling tabs/fiducials approved; deliver depanelized deburred clip edges",,
+thermal_and_MSL,PENDING,"Measured LM2596 peak<=245C; all actual MSL lots including LEDs; THT process accepted",,
+placement_preview,PENDING,"Actual assembly-library orientations and polarities match drawing/pad map; two separate socket rows",,
+inspection_and_test,PENDING,"Bare-board test AOI THT inspection and optional functional-test scope confirmed with measured results required",,
+itemized_quote,PENDING,"5A+5B PCB sourcing SMT THT stencil setup inspection depanelization lead time delivery price",,
+purchase_authorization,NOT_AUTHORIZED,"Explicit approval of actual quote and final factory preview before production order",,

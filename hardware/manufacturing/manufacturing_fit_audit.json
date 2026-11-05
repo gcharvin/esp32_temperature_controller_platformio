@@ -7,7 +7,7 @@
   },
   "boards": {
     "A": {
-      "native_PCB_sha256": "f7705f87215e4a18769525250f8c91dc2e1cad0488f5dd6e411b9a34ade7f757",
+      "native_PCB_sha256": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
       "track_min_mm": 0.2,
       "via_count": 9,
       "via_min_annular_ring_mm": 0.2,
@@ -23,7 +23,7 @@
       "failures": []
     },
     "B": {
-      "native_PCB_sha256": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469",
+      "native_PCB_sha256": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9",
       "track_min_mm": 0.25,
       "via_count": 31,
       "via_min_annular_ring_mm": 0.2,
@@ -45,5 +45,5 @@
     "Proposed manufacturing rails are not functional PCB geometry and have not been accepted by the assembler."
   ],
   "all_checked_constraints_passed": true,
-  "policy_sha256": "ca638a1e275341c1e183791347bd4b9800cadf988660d7e55fe63a972224f3b9"
+  "policy_sha256": "33b45711a4c4023afa7fbb10bd70b938330736332dfa3cee129901ab2784ac01"
 }

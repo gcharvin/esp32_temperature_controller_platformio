@@ -197,7 +197,7 @@
         {
           "ref": "D1",
           "value": "APT2012LZGCK",
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "at": [
             99.0,
             55.0
@@ -279,12 +279,12 @@
               "number": "1",
               "net": "GND",
               "at": [
-                97.975,
+                97.825,
                 55.0
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 0.0,
               "drill": 0.0,
@@ -294,12 +294,12 @@
               "number": "2",
               "net": "LED_A_D1",
               "at": [
-                100.025,
+                100.175,
                 55.0
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 0.0,
               "drill": 0.0,
@@ -310,7 +310,7 @@
         {
           "ref": "D2",
           "value": "APT2012LZGCK",
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "at": [
             99.0,
             64.0
@@ -392,12 +392,12 @@
               "number": "1",
               "net": "GND",
               "at": [
-                97.975,
+                97.825,
                 64.0
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 0.0,
               "drill": 0.0,
@@ -407,12 +407,12 @@
               "number": "2",
               "net": "LED_A_D2",
               "at": [
-                100.025,
+                100.175,
                 64.0
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 0.0,
               "drill": 0.0,
@@ -1766,8 +1766,8 @@
         },
         {
           "ref": "U1",
-          "value": "diymore CH340 USB-C / 30P",
-          "footprint": "LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED",
+          "value": "ESP32 USB-C / 30P user module",
+          "footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
           "at": [
             32.0,
             40.0
@@ -1883,7 +1883,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -1898,7 +1898,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -1913,7 +1913,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -1928,7 +1928,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -1943,7 +1943,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -1958,7 +1958,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -1973,7 +1973,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -1988,7 +1988,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2003,7 +2003,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2018,7 +2018,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2033,7 +2033,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2048,7 +2048,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2063,7 +2063,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2078,7 +2078,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2093,7 +2093,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2108,7 +2108,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2123,7 +2123,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2138,7 +2138,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2153,7 +2153,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2168,7 +2168,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2183,7 +2183,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2198,7 +2198,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2213,7 +2213,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2228,7 +2228,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2243,7 +2243,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2258,7 +2258,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2273,7 +2273,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2288,7 +2288,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2303,7 +2303,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             },
             {
@@ -2318,7 +2318,7 @@
                 1.8
               ],
               "angle": 0.0,
-              "drill": 1.0,
+              "drill": 1.05,
               "circle": false
             }
           ]
@@ -3656,7 +3656,7 @@
         {
           "ref": "D5",
           "value": "APT2012LZGCK",
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "at": [
             5.0,
             43.0
@@ -3739,11 +3739,11 @@
               "net": "PGND",
               "at": [
                 5.0,
-                44.025
+                44.175
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 90.0,
               "drill": 0.0,
@@ -3754,11 +3754,11 @@
               "net": "LED_B_D5",
               "at": [
                 5.0,
-                41.975
+                41.825
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 90.0,
               "drill": 0.0,
@@ -3769,7 +3769,7 @@
         {
           "ref": "D6",
           "value": "APT2012LZGCK",
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "at": [
             52.0,
             31.5
@@ -3852,11 +3852,11 @@
               "net": "GND",
               "at": [
                 52.0,
-                32.525
+                32.675
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 90.0,
               "drill": 0.0,
@@ -3867,11 +3867,11 @@
               "net": "LED_B_D6",
               "at": [
                 52.0,
-                30.475
+                30.325
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 90.0,
               "drill": 0.0,
@@ -3882,14 +3882,14 @@
         {
           "ref": "D7",
           "value": "APT2012LZGCK",
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "at": [
             72.0,
-            49.0
+            49.25
           ],
           "label": [
             72.0,
-            46.5
+            46.75
           ],
           "angle": 90.0,
           "fab": [
@@ -3898,11 +3898,11 @@
               "points": [
                 [
                   71.4,
-                  48.0
+                  48.25
                 ],
                 [
                   71.4,
-                  49.7
+                  49.95
                 ]
               ]
             },
@@ -3911,11 +3911,11 @@
               "points": [
                 [
                   71.4,
-                  49.7
+                  49.95
                 ],
                 [
                   71.7,
-                  50.0
+                  50.25
                 ]
               ]
             },
@@ -3924,11 +3924,11 @@
               "points": [
                 [
                   71.7,
-                  50.0
+                  50.25
                 ],
                 [
                   72.6,
-                  50.0
+                  50.25
                 ]
               ]
             },
@@ -3937,11 +3937,11 @@
               "points": [
                 [
                   72.6,
-                  48.0
+                  48.25
                 ],
                 [
                   71.4,
-                  48.0
+                  48.25
                 ]
               ]
             },
@@ -3950,11 +3950,11 @@
               "points": [
                 [
                   72.6,
-                  50.0
+                  50.25
                 ],
                 [
                   72.6,
-                  48.0
+                  48.25
                 ]
               ]
             }
@@ -3965,11 +3965,11 @@
               "net": "GND",
               "at": [
                 72.0,
-                50.025
+                50.425
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 90.0,
               "drill": 0.0,
@@ -3980,11 +3980,11 @@
               "net": "LED_B_D7",
               "at": [
                 72.0,
-                47.975
+                48.075
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 90.0,
               "drill": 0.0,
@@ -3995,7 +3995,7 @@
         {
           "ref": "D8",
           "value": "APT2012LSECK/J4-PRV",
-          "footprint": "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "at": [
             66.0,
             39.0
@@ -4077,12 +4077,12 @@
               "number": "1",
               "net": "PGND",
               "at": [
-                64.975,
+                64.825,
                 39.0
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 0.0,
               "drill": 0.0,
@@ -4092,12 +4092,12 @@
               "number": "2",
               "net": "LED_B_D8",
               "at": [
-                67.025,
+                67.175,
                 39.0
               ],
               "size": [
-                1.15,
-                1.4
+                1.25,
+                1.1
               ],
               "angle": 0.0,
               "drill": 0.0,
@@ -8011,8 +8011,8 @@
   ],
   "source_sha256": {
     "scripts/build_assembly_review.py": "424b35c13dabc4779abdb72cd71dfea9b68dc5b055eb85244461ae3269aaef62",
-    "manufacturing/land_pattern_review.json": "83ed857730200edefc2d9855290a07fc48751cde51ea20b099e708f79c49125c",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "f7705f87215e4a18769525250f8c91dc2e1cad0488f5dd6e411b9a34ade7f757",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469"
+    "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "state": "LOCAL_TECHNICAL_PREPARATION_COMPLETE / FACTORY_HANDOFF_PENDING",
+  "local_preparation_complete": true,
+  "date_utc": "2026-11-05T22:32:04.896135+00:00",
+  "automatic_stages": 13,
+  "final_visual_review": true,
+  "physical_native_components": 68,
+  "SMT_components": 51,
+  "physical_THT_items": 19,
+  "extra_loose_shunts": 1,
+  "mechanical_service_stages": 17,
+  "source_geometry_and_MPNs_frozen": true,
+  "simulations_rerun_in_this_revision": false,
+  "hardware_functional_tests_performed": false,
+  "fabrication_release": false,
+  "order_authorized": false,
+  "order_placed": false,
+  "external_gates": "factory_response.csv: exact sourcing, DFM/panel/holes, thermal/MSL process, placement preview, tests/quote and purchase authorization",
+  "scope": "Prototype PCB preparation complete locally; no actual manufacturer acceptance or operational heater qualification inferred."
+}

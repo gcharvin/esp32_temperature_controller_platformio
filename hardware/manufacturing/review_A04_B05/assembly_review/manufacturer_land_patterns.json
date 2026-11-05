@@ -3,14 +3,21 @@
   "checks": [
     "R13 native and library recommended lands",
     "R13 capacitor-return topology",
-    "C8/C10 footprint and lead pitch; distinguishable positive pad"
+    "C8/C10 footprint and lead pitch; distinguishable positive pad",
+    "30 socket holes1.05mm, contact pitch2.54mm and row spacing25.4mm",
+    "Six Kingbright LED land patterns",
+    "Phoenix terminal pitch5.08mm, hole1.3mm, envelope at least installed height13.8mm"
   ],
   "source_sha256": {
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469",
-    "manufacturing/land_pattern_review.json": "83ed857730200edefc2d9855290a07fc48751cde51ea20b099e708f79c49125c",
-    "placement.json": "4c1993a15ccd376842e8eb617d26fe3a918853b10a8e33267dd55a399cdcb583",
-    "scripts/check_manufacturer_land_patterns.py": "a321e858302beca4d515226b6daddc706b9e83d7a7049d6afad6b81a1eda148e",
-    "lab_hardware.pretty/Vishay_WSL1206_6m_to_200m.kicad_mod": "5175ad9968be1486339a3d41f87157080b67465134f4ddaff113bfaade5d598d"
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
+    "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
+    "placement.json": "c19f97a003b3061db67e79551ae4606fa52e2f4667d0142040a403fce9a1675a",
+    "module_selection.json": "eb5a7f97b79a9cae4a4adeb0e71ab71bb7f6cba9b3189ece9b555c1a0dac7967",
+    "scripts/check_manufacturer_land_patterns.py": "e4644b9d72007f47d370ce19d370cca1e8a259a88382074a9b28a5482d07ac85",
+    "lab_hardware.pretty/Vishay_WSL1206_6m_to_200m.kicad_mod": "5175ad9968be1486339a3d41f87157080b67465134f4ddaff113bfaade5d598d",
+    "lab_hardware.pretty/ESP32_30P_Harwin_M20_7821546_Rows25.40mm.kicad_mod": "8bdfe39fbeb8a4d099d4a729061eb70c9a13502a95a935523c74344a3bb6ecb6",
+    "lab_hardware.pretty/LED_Kingbright_APT2012_Manufacturer.kicad_mod": "e91fd0bab4b2069b797c6bbf93dbc21a7b4df0292a405844a870c6425ab7a2f4"
   },
   "limits": [
     "Other footprints, stencil and factory approval are outside this check."
