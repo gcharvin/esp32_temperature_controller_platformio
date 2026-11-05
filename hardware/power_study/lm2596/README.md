@@ -37,4 +37,31 @@ Les deux sensibilités supplémentaires atteignent aussi 12 ms. À 20 mΩ : sort
 
 Le courant crête de démarrage observé dans ces modèles est **4,88 à 4,93 A**, nettement supérieur au courant de service de 0,8 A. Le choix de l'inductance ci-dessus donne une marge de courant, mais la saturation réelle, l'énergie de la diode et le comportement du fusible restent à vérifier avant intégration.
 
-La simulation n'autorise pas encore la fabrication : restent notamment la boucle AC/phase et les autres coins de composants, la référence finale d'entrée, le boîtier et l'implantation, les parasites et EMI, l'échauffement, la tenue au démarrage de la diode et du fusible, et les essais sur alimentation limitée en courant. Le buck intégré change les retours de masse de B et le volume disponible ; son intégration exige une nouvelle implantation complète.
+Le buck est maintenant intégré au schéma et au routage B v0.5 et au boîtier
+v0.7. La préparation de fabrication, les références candidates et les points
+de revue sont dans `../../manufacturing/README.md`. La simulation ne qualifie
+ni tous les coins de composants, ni les parasites/EMI, ni la thermique,
+ni la tenue réelle au démarrage et en défaut de la diode et des fusibles.
+Les essais sur prototype avec alimentation limitée en courant suivent la
+revue de conception ; ils ne sont pas présentés comme déjà réalisés.
+
+## Exploration d'une future alimentation 12 V
+
+Le contrat de plateforme garde A sous 5 V régulé, même avec une carte B
+alimentée en 12 V ou 5 V. B v0.5 reste une carte température 24 V. Un essai
+**séparé** `benches/integrated_B_startup_12V.cir` reprend exactement le cœur
+24 V avec C9 et ne change que l'entrée pour un démarrage 12 V / charge 0,5 A.
+Il atteint 8 ms ; les critères nominaux passent : sortie stabilisée entre
+4,9810 et 4,9920 V, ondulation 10,31 mV crête à crête, maximum au démarrage
+5,0122 V et courant crête de self 4,7994 A. Résultats et limites :
+`startup_12V_results.json`. Ce n'est ni une qualification complète à 12 V,
+ni une extension de la puissance chauffage 100 W aux autres tensions.
+
+```powershell
+& 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/power_study/run_ngspice.py hardware/power_study/lm2596/benches/integrated_B_startup_12V.cir --vectors 'v(vout)' 'v(vin)' 'v(sw)' 'l1#branch'
+& 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/power_study/lm2596/evaluate_12v_startup.py
+```
+
+La variante 5 V doit disposer d'une distribution adaptée : le LM2596 fixe
+5 V n'est pas un chemin passant 5 V -> 5 V. Aucun essai 5 V équivalent n'est
+revendiqué. Voir `../../manufacturing/power_and_usb_review.md`.

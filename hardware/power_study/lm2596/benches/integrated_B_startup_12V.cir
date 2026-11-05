@@ -1,0 +1,19 @@
+LM2596 PCB B core - exploratory 12 V startup - not full board qualification
+.include "../../vendor_model/LM2596_5P0_TRANS.LIB"
+.include "../../vendor_model/ss36.lib"
+VIN vin 0 PWL(0 0 100u 12)
+VDIS disable 0 0
+XU1 vin vout sw 0 disable LM2596_5P0_TRANS
+CIN vin cinret 100u
+RIN_ESR cinret 0 0.1
+L1 sw lind 100u
+RDCR lind vout 0.118
+XD1 0 sw ss36
+COUT vout esr 330u
+RESR esr 0 0.1
+VLOADCMD loadcmd 0 0.5
+GLOAD vout 0 VALUE={V(loadcmd)*LIMIT(V(vout)/4.75,0,1)}
+CLOCAL vin 0 100n
+.options method=gear maxord=2 reltol=0.003 abstol=1n vntol=1u
+.tran 100n 8m 0 100n
+.end

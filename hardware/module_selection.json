@@ -185,5 +185,6 @@
     },
     "note": "Do not short IN- and OUT- on B; preserve possible CC current sense shunt. Module is non-isolated, return common-mode and settings to test.",
     "status": "REMOVED from B v0.5; historical purchase only"
-  }
+  },
+  "platform_supply_contract": "A accepts regulated 5 V at J1; B variants may receive 24/12/5 V and must adapt their own input stage. See interface_ab.json and manufacturing/power_and_usb_review.md."
 }

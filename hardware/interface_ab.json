@@ -1,5 +1,5 @@
 {
-  "revision": "0.2",
+  "revision": "0.3 / supply-independent A contract",
   "logic_voltage_V": 3.3,
   "power_voltage_V": 5,
   "connector_family": "JST-XH",
@@ -81,5 +81,26 @@
         }
       ]
     }
-  ]
+  ],
+  "power_contract": {
+    "A_input": "regulated 5 V only, regardless of the upstream B supply",
+    "A_connector_target_V": [
+      4.75,
+      5.25
+    ],
+    "upstream_B_nominal_variants_V": [
+      24,
+      12,
+      5
+    ],
+    "upstream_variants_status": "platform requirement; not a claim that current B v0.5 supports all variants",
+    "current_B_variant": "temperature 24 V / 100 W; 12 V core exploration does not qualify board; 5 V variant not designed",
+    "conversion_owner": "B or one dedicated external 5 V source; never raw 12/24 V on A",
+    "current_system_shared_budget_A": 0.8,
+    "external_A_source_rule": "Replace the B POWER cable with one protected 5 V source; do not backfeed B/J1 or parallel sources",
+    "logic_voltage_V": 3.3,
+    "partial_powering": "not qualified; connect I2C/CTRL only with both logics supplied; no hot-plug",
+    "usb": "No simultaneous ordinary USB cable and external 5 V; see manufacturing/power_and_usb_review.md",
+    "review": "manufacturing/power_and_usb_review.md"
+  }
 }

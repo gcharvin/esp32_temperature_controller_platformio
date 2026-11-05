@@ -1,0 +1,28 @@
+{
+  "status": "criteria passed",
+  "input_V": 12,
+  "load_A": 0.5,
+  "stop_s": 0.008,
+  "rows": 1801500,
+  "settled_window_s": [
+    0.004,
+    0.008
+  ],
+  "settled_min_V": 4.981014045939936,
+  "settled_max_V": 4.992036007575399,
+  "ripple_window_s": [
+    0.007,
+    0.008
+  ],
+  "ripple_Vpp": 0.010310311262236915,
+  "startup_max_V": 5.012224644592051,
+  "inductor_peak_A": 4.799410839292044,
+  "checks": {
+    "settled_range": true,
+    "settled_ripple": true,
+    "startup_overvoltage": true,
+    "startup_reaches_regulation": true
+  },
+  "waveform_sha256": "ea16aa73108e3975924ea6730255e69f4d4f13d7c4a8e64d10120cfe9f03b32e",
+  "scope": "Exploratory nominal buck core only, same components/C9 as 24 V. No full board 12 V qualification, upstream protection, heater, tolerance, thermal or source-sharing claim."
+}
