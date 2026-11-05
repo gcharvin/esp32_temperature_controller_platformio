@@ -1,0 +1,762 @@
+{
+  "status": "unqualified fit mock-up, not production design",
+  "parts": [
+    {
+      "name": "01_Shell_open_front_and_rear",
+      "volume_mm3": 161596.414,
+      "solids": 1,
+      "group": "shell"
+    },
+    {
+      "name": "02_Removable_front_LCD_A",
+      "volume_mm3": 56985.435,
+      "solids": 1,
+      "group": "front"
+    },
+    {
+      "name": "03_B_removable_carrier",
+      "volume_mm3": 9876.1,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "04_Rear_panel_with_latches",
+      "volume_mm3": 45197.161,
+      "solids": 1,
+      "group": "rear"
+    },
+    {
+      "name": "PCB_A",
+      "volume_mm3": 13200.0,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_U1_ENVELOPE",
+      "volume_mm3": 38400.0,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_U2_ENVELOPE",
+      "volume_mm3": 22.566,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_J1_ENVELOPE",
+      "volume_mm3": 563.108,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_J6_ENVELOPE",
+      "volume_mm3": 729.708,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_J7_ENVELOPE",
+      "volume_mm3": 1229.508,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_J2_ENVELOPE",
+      "volume_mm3": 1440.0,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_J3_ENVELOPE",
+      "volume_mm3": 1440.0,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_J4_ENVELOPE",
+      "volume_mm3": 1260.0,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_J5_ENVELOPE",
+      "volume_mm3": 1260.0,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_JP1_ENVELOPE",
+      "volume_mm3": 33.064,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_C1_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_C2_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_C3_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_R1_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_R2_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_R3_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_R4_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_R5_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "PCB_B",
+      "volume_mm3": 9360.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_U1_ENVELOPE",
+      "volume_mm3": 13200.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_U2_ENVELOPE",
+      "volume_mm3": 22.566,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_U3_ENVELOPE",
+      "volume_mm3": 200.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_U4_ENVELOPE",
+      "volume_mm3": 33.837,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_Q1_ENVELOPE",
+      "volume_mm3": 1152.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_F1_ENVELOPE",
+      "volume_mm3": 320.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D1_ENVELOPE",
+      "volume_mm3": 320.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D2_ENVELOPE",
+      "volume_mm3": 320.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J2_ENVELOPE",
+      "volume_mm3": 1200.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J3_ENVELOPE",
+      "volume_mm3": 1200.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J4_ENVELOPE",
+      "volume_mm3": 800.0,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J1_ENVELOPE",
+      "volume_mm3": 563.108,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J6_ENVELOPE",
+      "volume_mm3": 729.708,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J7_ENVELOPE",
+      "volume_mm3": 1229.508,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C1_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C2_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C3_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C4_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C5_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R1_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R2_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R3_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R4_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R5_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R6_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R7_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "LCD_PCB_98x60_TBD",
+      "volume_mm3": 9408.0,
+      "solids": 1,
+      "group": "LCD"
+    },
+    {
+      "name": "LCD_front_bezel_TBD",
+      "volume_mm3": 30542.4,
+      "solids": 1,
+      "group": "LCD"
+    },
+    {
+      "name": "LCD_backpack_TBD",
+      "volume_mm3": 11610.0,
+      "solids": 1,
+      "group": "LCD"
+    },
+    {
+      "name": "LCD_visible_screen",
+      "volume_mm3": 194.04,
+      "solids": 1,
+      "group": "LCD"
+    },
+    {
+      "name": "Encoder_body_TBD",
+      "volume_mm3": 3072.0,
+      "solids": 1,
+      "group": "LCD"
+    },
+    {
+      "name": "Encoder_shaft",
+      "volume_mm3": 488.983,
+      "solids": 1,
+      "group": "LCD"
+    },
+    {
+      "name": "Encoder_knob_TBD",
+      "volume_mm3": 3455.752,
+      "solids": 1,
+      "group": "LCD"
+    },
+    {
+      "name": "USB_C_PANEL_DATA_EXTENSION_TBD",
+      "volume_mm3": 5970.0,
+      "solids": 1,
+      "group": "USB"
+    },
+    {
+      "name": "USB_C_DEVKIT_MALE_PLUG_TBD",
+      "volume_mm3": 504.0,
+      "solids": 1,
+      "group": "USB"
+    },
+    {
+      "name": "USB_INTERNAL_DATA_CABLE_ROUTING_ONLY",
+      "volume_mm3": 287.52,
+      "solids": 1,
+      "group": "USB"
+    },
+    {
+      "name": "BULKHEAD_POWER_12V_TBD",
+      "volume_mm3": 5548.1,
+      "solids": 1,
+      "group": "rear"
+    },
+    {
+      "name": "CABLE_POWER_12V",
+      "volume_mm3": 902.815,
+      "solids": 1,
+      "group": "rear"
+    },
+    {
+      "name": "BULKHEAD_HEATER_TBD",
+      "volume_mm3": 5548.1,
+      "solids": 1,
+      "group": "rear"
+    },
+    {
+      "name": "CABLE_HEATER",
+      "volume_mm3": 902.815,
+      "solids": 1,
+      "group": "rear"
+    },
+    {
+      "name": "BULKHEAD_NTC_PROBE_TBD",
+      "volume_mm3": 7230.305,
+      "solids": 1,
+      "group": "rear"
+    },
+    {
+      "name": "CABLE_NTC_PROBE",
+      "volume_mm3": 509.92,
+      "solids": 1,
+      "group": "rear"
+    },
+    {
+      "name": "BUNDLE_AB_1_SCHEMATIC",
+      "volume_mm3": 661.355,
+      "solids": 1,
+      "group": "wire"
+    },
+    {
+      "name": "BUNDLE_AB_2_SCHEMATIC",
+      "volume_mm3": 570.858,
+      "solids": 1,
+      "group": "wire"
+    },
+    {
+      "name": "BUNDLE_AB_3_SCHEMATIC",
+      "volume_mm3": 518.479,
+      "solids": 1,
+      "group": "wire"
+    }
+  ],
+  "collisions_mm3": [],
+  "coordinates": "x left-right, y front-rear, z bottom-top (mm)",
+  "case_mm": {
+    "width": 145,
+    "height": 100,
+    "depth": 115,
+    "wall": 3
+  },
+  "bulkheads": [
+    {
+      "name": "POWER_12V",
+      "kind": "cable_gland_M12_envelope",
+      "center_x_mm": 22,
+      "center_z_mm": 75,
+      "hole_diameter_mm": 12.5,
+      "inside_depth_mm": 12,
+      "outside_depth_mm": 14,
+      "body_diameter_mm": 20,
+      "cable_diameter_mm": 5.5
+    },
+    {
+      "name": "HEATER",
+      "kind": "cable_gland_M12_envelope",
+      "center_x_mm": 22,
+      "center_z_mm": 35,
+      "hole_diameter_mm": 12.5,
+      "inside_depth_mm": 12,
+      "outside_depth_mm": 14,
+      "body_diameter_mm": 20,
+      "cable_diameter_mm": 5.5
+    },
+    {
+      "name": "NTC_PROBE",
+      "kind": "GX12_2_contact_envelope",
+      "center_x_mm": 108,
+      "center_z_mm": 85,
+      "hole_diameter_mm": 12.4,
+      "inside_depth_mm": 16,
+      "outside_depth_mm": 25,
+      "body_diameter_mm": 17,
+      "cable_diameter_mm": 3.5
+    }
+  ],
+  "usb_service": {
+    "side": "right",
+    "center_depth_mm": 64,
+    "center_z_mm": 30,
+    "hole_diameter_mm": 16,
+    "body_diameter_mm": 15,
+    "flange_diameter_mm": 22,
+    "inside_depth_mm": 28,
+    "outside_depth_mm": 4,
+    "devkit_plug_box_mm": [
+      70,
+      56,
+      45,
+      14,
+      6,
+      6
+    ],
+    "notes": "USB-C female panel extension to DevKit USB-C male; DATA cable required. Unmeasured mechanical envelope. VBUS source isolation/selection unresolved."
+  },
+  "retention": {
+    "insertion": "lower edge in continuous groove, pivot, engage two side clips",
+    "lower_groove_capture_mm": 3,
+    "left_right_edge_clearance_mm": 0.3,
+    "lateral_clip_board_contact_local_mm": [
+      [
+        0,
+        8,
+        1.8,
+        3
+      ],
+      [
+        "board_width-1.8",
+        8,
+        1.8,
+        3
+      ]
+    ],
+    "no_sideways_board_insertion_required": true
+  },
+  "USB_electrical_VBUS_isolation_verified": false,
+  "frame_clip_checks": [
+    {
+      "board_origin_x_z_mm": [
+        8,
+        28
+      ],
+      "side": "left",
+      "root_connected": true,
+      "free_arm_overlap_mm3": 0.0
+    },
+    {
+      "board_origin_x_z_mm": [
+        8,
+        28
+      ],
+      "side": "right",
+      "root_connected": true,
+      "free_arm_overlap_mm3": 0.0
+    },
+    {
+      "board_origin_x_z_mm": [
+        8,
+        13
+      ],
+      "side": "left",
+      "root_connected": true,
+      "free_arm_overlap_mm3": 0.0
+    },
+    {
+      "board_origin_x_z_mm": [
+        8,
+        13
+      ],
+      "side": "right",
+      "root_connected": true,
+      "free_arm_overlap_mm3": 0.0
+    },
+    {
+      "board_origin_x_z_mm": [
+        40,
+        17
+      ],
+      "side": "left",
+      "root_connected": true,
+      "free_arm_overlap_mm3": 0.0
+    },
+    {
+      "board_origin_x_z_mm": [
+        40,
+        17
+      ],
+      "side": "right",
+      "root_connected": true,
+      "free_arm_overlap_mm3": 0.0
+    }
+  ],
+  "assembly_sequence": {
+    "tests": [
+      {
+        "stage": "1 LCD outside tube: through empty A holder",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          -64,
+          0
+        ],
+        "prism_count": 20,
+        "reversible": true
+      },
+      {
+        "stage": "1 LCD outside tube: align laterally",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          -4,
+          0,
+          0
+        ],
+        "prism_count": 12,
+        "reversible": true
+      },
+      {
+        "stage": "1 LCD outside tube: raise above bottom groove lip",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          0,
+          4.5
+        ],
+        "prism_count": 20,
+        "reversible": true
+      },
+      {
+        "stage": "1 LCD outside tube: approach above groove lip",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          -6,
+          0
+        ],
+        "prism_count": 20,
+        "reversible": true
+      },
+      {
+        "stage": "1 LCD outside tube: lower into groove",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          0,
+          -3.5
+        ],
+        "prism_count": 20,
+        "reversible": true
+      },
+      {
+        "stage": "1 LCD outside tube: pivot and release clips",
+        "method": "BRep poses at 0.1 degree intervals",
+        "angle_deg": [
+          4,
+          0
+        ],
+        "clips_held_outward_mm": 2.4,
+        "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+        "reversible": true
+      },
+      {
+        "stage": "2 A outside tube: approach above groove lip",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          -40,
+          0
+        ],
+        "prism_count": 95,
+        "reversible": true
+      },
+      {
+        "stage": "2 A outside tube: lower into groove",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          0,
+          -3.5
+        ],
+        "prism_count": 95,
+        "reversible": true
+      },
+      {
+        "stage": "2 A outside tube: pivot and release clips",
+        "method": "BRep poses at 0.1 degree intervals",
+        "angle_deg": [
+          4,
+          0
+        ],
+        "clips_held_outward_mm": 2.4,
+        "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+        "reversible": true
+      },
+      {
+        "stage": "3 B outside tube: approach above groove lip",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          -40,
+          0
+        ],
+        "prism_count": 135,
+        "reversible": true
+      },
+      {
+        "stage": "3 B outside tube: lower into groove",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          0,
+          -3.5
+        ],
+        "prism_count": 135,
+        "reversible": true
+      },
+      {
+        "stage": "3 B outside tube: pivot and release clips",
+        "method": "BRep poses at 0.1 degree intervals",
+        "angle_deg": [
+          4,
+          0
+        ],
+        "clips_held_outward_mm": 2.4,
+        "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+        "reversible": true
+      },
+      {
+        "stage": "4 equipped front enters from front",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          100,
+          0
+        ],
+        "prism_count": 130,
+        "reversible": true
+      },
+      {
+        "stage": "5 USB male plug insertion after front fitted",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          -15,
+          0,
+          0
+        ],
+        "prism_count": 3,
+        "reversible": true
+      },
+      {
+        "stage": "6 B carrier extraction / reverse insertion",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          50,
+          0
+        ],
+        "prism_count": 105,
+        "reversible": true
+      },
+      {
+        "stage": "7 rear panel withdrawal / reverse insertion",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          60,
+          0
+        ],
+        "prism_count": 32,
+        "reversible": true
+      }
+    ],
+    "failures": [],
+    "reverse_order": "rear off, B disconnected/extracted, USB male unplugged, front released/pulled, A then LCD unclipped",
+    "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
+  },
+  "printed_parts_STEP": {
+    "file": "enclosure_printed_parts.step",
+    "components": [
+      "01_Coque_ouverte",
+      "02_Facade_supports_LCD_A",
+      "03_Berceau_B",
+      "04_Panneau_arriere"
+    ],
+    "solid_count": 4,
+    "one_connected_solid_per_print_part": true
+  },
+  "STEP_round_trip_solids": 69,
+  "B_extraction_samples_mm": [
+    0,
+    10,
+    25,
+    50
+  ],
+  "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
+  "STEP_volume_mm3": 451945.583,
+  "fusion_import_tested": false
+}

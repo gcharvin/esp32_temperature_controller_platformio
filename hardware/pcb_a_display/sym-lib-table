@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "Lab") (type "KiCad") (uri "${KIPRJMOD}/../lab_draft.kicad_sym") (options "") (descr "Logical module interfaces; physical mappings pending")))

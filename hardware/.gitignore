@@ -1,0 +1,7 @@
+*-backups/
+*.lck
+~*.lck
+*.kicad_prl
+*.bak
+__pycache__/
+review/*.png

@@ -1,0 +1,183 @@
+{
+  "tests": [
+    {
+      "stage": "1 LCD outside tube: through empty A holder",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -64,
+        0
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: align laterally",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        -4,
+        0,
+        0
+      ],
+      "prism_count": 12,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: raise above bottom groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        4.5
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: approach above groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -6,
+        0
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: lower into groove",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        -3.5
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: pivot and release clips",
+      "method": "BRep poses at 0.1 degree intervals",
+      "angle_deg": [
+        4,
+        0
+      ],
+      "clips_held_outward_mm": 2.4,
+      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+      "reversible": true
+    },
+    {
+      "stage": "2 A outside tube: approach above groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -40,
+        0
+      ],
+      "prism_count": 95,
+      "reversible": true
+    },
+    {
+      "stage": "2 A outside tube: lower into groove",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        -3.5
+      ],
+      "prism_count": 95,
+      "reversible": true
+    },
+    {
+      "stage": "2 A outside tube: pivot and release clips",
+      "method": "BRep poses at 0.1 degree intervals",
+      "angle_deg": [
+        4,
+        0
+      ],
+      "clips_held_outward_mm": 2.4,
+      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+      "reversible": true
+    },
+    {
+      "stage": "3 B outside tube: approach above groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -40,
+        0
+      ],
+      "prism_count": 135,
+      "reversible": true
+    },
+    {
+      "stage": "3 B outside tube: lower into groove",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        -3.5
+      ],
+      "prism_count": 135,
+      "reversible": true
+    },
+    {
+      "stage": "3 B outside tube: pivot and release clips",
+      "method": "BRep poses at 0.1 degree intervals",
+      "angle_deg": [
+        4,
+        0
+      ],
+      "clips_held_outward_mm": 2.4,
+      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+      "reversible": true
+    },
+    {
+      "stage": "4 equipped front enters from front",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        100,
+        0
+      ],
+      "prism_count": 130,
+      "reversible": true
+    },
+    {
+      "stage": "5 USB male plug insertion after front fitted",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        -15,
+        0,
+        0
+      ],
+      "prism_count": 3,
+      "reversible": true
+    },
+    {
+      "stage": "6 B carrier extraction / reverse insertion",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        50,
+        0
+      ],
+      "prism_count": 105,
+      "reversible": true
+    },
+    {
+      "stage": "7 rear panel withdrawal / reverse insertion",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        60,
+        0
+      ],
+      "prism_count": 32,
+      "reversible": true
+    }
+  ],
+  "failures": [],
+  "reverse_order": "rear off, B disconnected/extracted, USB male unplugged, front released/pulled, A then LCD unclipped",
+  "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
+}

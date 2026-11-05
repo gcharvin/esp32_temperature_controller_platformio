@@ -1,0 +1,131 @@
+(footprint "pcb_a_display_J3_TBD"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "J3"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "0352fedb-b1a6-490c-885e-ca2eca4295e4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "TBD - ENVELOPE ONLY"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "0ee02f59-3dbf-400c-bad9-eddf02b13e52")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "adaee00d-5789-4fc2-a29f-f01f590653cc")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d1a488f0-c5c6-40f5-98ae-d5f0af9699c6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -8 -4.5)
+		(end 8 -4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "ce94796b-75f8-479c-a236-87bfa6313f60")
+	)
+	(fp_line
+		(start -8 4.5)
+		(end -8 -4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "712440f0-f731-474e-80bd-519f1ed577ae")
+	)
+	(fp_line
+		(start 8 -4.5)
+		(end 8 4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "aa7ff949-b863-4e2e-b298-bfb45b950a2e")
+	)
+	(fp_line
+		(start 8 4.5)
+		(end -8 4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "a5ac4757-58b4-4e11-90cf-c244fbe5596a")
+	)
+	(fp_line
+		(start -8 -4.5)
+		(end 8 -4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "00a48db2-3415-485d-9cad-b244b6a0e1cf")
+	)
+	(fp_line
+		(start -8 4.5)
+		(end -8 -4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "506ceb43-9345-4d96-829d-2fbd132ff17a")
+	)
+	(fp_line
+		(start 8 -4.5)
+		(end 8 4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "81ae48b5-fed5-4dc7-a770-292afe441a9e")
+	)
+	(fp_line
+		(start 8 4.5)
+		(end -8 4.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "c2874b66-5084-45f5-bae3-3f92444b292f")
+	)
+	(embedded_fonts no)
+)

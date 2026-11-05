@@ -1,0 +1,874 @@
+{
+  "revision": "placement study 0.1",
+  "status": "proposed dimensions, not production ready",
+  "case_external_mm": {
+    "width": 145,
+    "height": 100,
+    "depth": 115
+  },
+  "wall_mm": 3,
+  "case_coordinates": "x left-to-right, y top-to-bottom, d front-to-rear",
+  "assembly": {
+    "A_board_origin_x_y_d_mm": [
+      8,
+      12,
+      45
+    ],
+    "B_board_origin_x_y_d_mm": [
+      40,
+      18,
+      85
+    ],
+    "lcd_front_envelope_x_y_w_h_mm": [
+      8,
+      12,
+      98,
+      60
+    ],
+    "lcd_back_depth_max_mm": 28,
+    "encoder_center_x_y_mm": [
+      126,
+      45
+    ],
+    "A_rear_component_allowance_mm": 20,
+    "B_rear_component_allowance_mm": 20,
+    "B_extraction_direction": "rear (+depth), unplug all cables unpowered",
+    "rear_panel_removable": true
+  },
+  "boards": [
+    {
+      "name": "pcb_a_display",
+      "board_mm": [
+        110,
+        75,
+        1.6
+      ],
+      "coordinates": "component-side view, origin upper-left; placement origin may be pad 1",
+      "clip_bands_mm": [
+        [
+          0,
+          0,
+          110,
+          4
+        ],
+        [
+          0,
+          71,
+          110,
+          4
+        ]
+      ],
+      "clip_contact_patches_mm": [
+        [
+          8,
+          0,
+          12,
+          4
+        ],
+        [
+          8,
+          71,
+          12,
+          4
+        ],
+        [
+          90,
+          0,
+          12,
+          4
+        ],
+        [
+          90,
+          71,
+          12,
+          4
+        ]
+      ],
+      "components": [
+        {
+          "reference": "U1",
+          "value": "ELEGOO ESP32 DevKit - logical pins",
+          "origin_mm": [
+            32,
+            40
+          ],
+          "bounds_mm": [
+            2.0,
+            24.0,
+            60,
+            32
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "U2",
+          "value": "AP2112K-3.3 peripherals",
+          "origin_mm": [
+            80,
+            55
+          ],
+          "bounds_mm": [
+            77.925,
+            53.1,
+            4.15,
+            3.625
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "J1",
+          "value": "A-B POWER / XH-2",
+          "origin_mm": [
+            94,
+            12
+          ],
+          "bounds_mm": [
+            91.025,
+            9.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "J6",
+          "value": "A-B I2C / XH-3",
+          "origin_mm": [
+            94,
+            28
+          ],
+          "bounds_mm": [
+            91.025,
+            25.125,
+            10.95,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "J7",
+          "value": "A-B CTRL / XH-6",
+          "origin_mm": [
+            88,
+            45
+          ],
+          "bounds_mm": [
+            85.025,
+            42.125,
+            18.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "J2",
+          "value": "LCD20x4 + backpack / 3V3",
+          "origin_mm": [
+            66,
+            10
+          ],
+          "bounds_mm": [
+            58.0,
+            5.5,
+            16,
+            9
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "J3",
+          "value": "Encoder / A B SW GND",
+          "origin_mm": [
+            72,
+            64
+          ],
+          "bounds_mm": [
+            64.0,
+            59.5,
+            16,
+            9
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "J4",
+          "value": "TMP117 module / addr 0x48",
+          "origin_mm": [
+            44,
+            10
+          ],
+          "bounds_mm": [
+            37.0,
+            5.5,
+            14,
+            9
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "J5",
+          "value": "BH1750 module / addr 0x23",
+          "origin_mm": [
+            23,
+            10
+          ],
+          "bounds_mm": [
+            16.0,
+            5.5,
+            14,
+            9
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "JP1",
+          "value": "5V DevKit link / remove for service",
+          "origin_mm": [
+            72,
+            40
+          ],
+          "bounds_mm": [
+            70.205,
+            38.205,
+            3.59,
+            6.14
+          ],
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C1",
+          "value": "1uF",
+          "origin_mm": [
+            75,
+            55
+          ],
+          "bounds_mm": [
+            73.495,
+            54.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C2",
+          "value": "1uF",
+          "origin_mm": [
+            85,
+            55
+          ],
+          "bounds_mm": [
+            83.495,
+            54.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C3",
+          "value": "10uF",
+          "origin_mm": [
+            88,
+            60
+          ],
+          "bounds_mm": [
+            86.495,
+            59.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R1",
+          "value": "10k",
+          "origin_mm": [
+            62,
+            61
+          ],
+          "bounds_mm": [
+            60.495,
+            60.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R2",
+          "value": "10k",
+          "origin_mm": [
+            65,
+            57
+          ],
+          "bounds_mm": [
+            63.495,
+            56.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R3",
+          "value": "10k",
+          "origin_mm": [
+            68,
+            57
+          ],
+          "bounds_mm": [
+            66.495,
+            56.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R4",
+          "value": "4.7k",
+          "origin_mm": [
+            64,
+            22
+          ],
+          "bounds_mm": [
+            62.495,
+            21.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R5",
+          "value": "4.7k",
+          "origin_mm": [
+            67,
+            22
+          ],
+          "bounds_mm": [
+            65.495,
+            21.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        }
+      ],
+      "clip_side_contact_patches_mm": [
+        [
+          0,
+          8,
+          2,
+          3
+        ],
+        [
+          108,
+          8,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "pcb_b_temperature",
+      "board_mm": [
+        90,
+        65,
+        1.6
+      ],
+      "coordinates": "component-side view, origin upper-left; placement origin may be pad 1",
+      "clip_bands_mm": [
+        [
+          0,
+          0,
+          90,
+          4
+        ],
+        [
+          0,
+          61,
+          90,
+          4
+        ]
+      ],
+      "clip_contact_patches_mm": [
+        [
+          8,
+          0,
+          12,
+          4
+        ],
+        [
+          8,
+          61,
+          12,
+          4
+        ],
+        [
+          70,
+          0,
+          12,
+          4
+        ],
+        [
+          70,
+          61,
+          12,
+          4
+        ]
+      ],
+      "components": [
+        {
+          "reference": "U1",
+          "value": "12V -> 5V module / TBD",
+          "origin_mm": [
+            22,
+            29
+          ],
+          "bounds_mm": [
+            7.0,
+            18.0,
+            30,
+            22
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "U2",
+          "value": "AP2112K-3.3",
+          "origin_mm": [
+            23,
+            45
+          ],
+          "bounds_mm": [
+            20.925,
+            43.1,
+            4.15,
+            3.625
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "U3",
+          "value": "74LVC1G08",
+          "origin_mm": [
+            54,
+            42
+          ],
+          "bounds_mm": [
+            51.5,
+            39.5,
+            5,
+            5
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "U4",
+          "value": "ADS1115IDGS / 0x49",
+          "origin_mm": [
+            73,
+            29
+          ],
+          "bounds_mm": [
+            69.845,
+            27.2,
+            6.31,
+            3.575
+          ],
+          "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "Q1",
+          "value": "NMOS / 3V3 gate / TBD",
+          "origin_mm": [
+            52,
+            28
+          ],
+          "bounds_mm": [
+            46.0,
+            22.0,
+            12,
+            12
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "F1",
+          "value": "TBD current",
+          "origin_mm": [
+            28,
+            10
+          ],
+          "bounds_mm": [
+            24.0,
+            7.5,
+            8,
+            5
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "D1",
+          "value": "Reverse polarity / TBD rating",
+          "origin_mm": [
+            42,
+            10
+          ],
+          "bounds_mm": [
+            38.0,
+            7.5,
+            8,
+            5
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "D2",
+          "value": "TVS TBD",
+          "origin_mm": [
+            56,
+            10
+          ],
+          "bounds_mm": [
+            52.0,
+            7.5,
+            8,
+            5
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "J2",
+          "value": "12V DC input / + then 0V",
+          "origin_mm": [
+            12,
+            10
+          ],
+          "bounds_mm": [
+            6.0,
+            5.0,
+            12,
+            10
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "J3",
+          "value": "Heater output",
+          "origin_mm": [
+            78,
+            10
+          ],
+          "bounds_mm": [
+            72.0,
+            5.0,
+            12,
+            10
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "J4",
+          "value": "NTC 15k B3920 probe",
+          "origin_mm": [
+            80,
+            44
+          ],
+          "bounds_mm": [
+            75.0,
+            40.0,
+            10,
+            8
+          ],
+          "footprint": null,
+          "status": "unmeasured planning envelope, NO PADS"
+        },
+        {
+          "reference": "J1",
+          "value": "A-B POWER / XH-2",
+          "origin_mm": [
+            15,
+            53
+          ],
+          "bounds_mm": [
+            12.025,
+            50.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "J6",
+          "value": "A-B I2C / XH-3",
+          "origin_mm": [
+            34,
+            53
+          ],
+          "bounds_mm": [
+            31.025,
+            50.125,
+            10.95,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "J7",
+          "value": "A-B CTRL / XH-6",
+          "origin_mm": [
+            56,
+            53
+          ],
+          "bounds_mm": [
+            53.025,
+            50.125,
+            18.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C1",
+          "value": "1uF",
+          "origin_mm": [
+            18,
+            45
+          ],
+          "bounds_mm": [
+            16.495,
+            44.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C2",
+          "value": "1uF",
+          "origin_mm": [
+            28,
+            45
+          ],
+          "bounds_mm": [
+            26.495,
+            44.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C3",
+          "value": "100nF",
+          "origin_mm": [
+            50,
+            42
+          ],
+          "bounds_mm": [
+            48.495,
+            41.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C4",
+          "value": "100nF",
+          "origin_mm": [
+            83,
+            36
+          ],
+          "bounds_mm": [
+            81.495,
+            35.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "C5",
+          "value": "100nF",
+          "origin_mm": [
+            68,
+            29
+          ],
+          "bounds_mm": [
+            66.495,
+            28.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R1",
+          "value": "47k",
+          "origin_mm": [
+            46,
+            42
+          ],
+          "bounds_mm": [
+            44.495,
+            41.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R2",
+          "value": "47k",
+          "origin_mm": [
+            46,
+            46
+          ],
+          "bounds_mm": [
+            44.495,
+            45.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R3",
+          "value": "100R",
+          "origin_mm": [
+            58,
+            36
+          ],
+          "bounds_mm": [
+            56.495,
+            35.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R4",
+          "value": "100k",
+          "origin_mm": [
+            62,
+            36
+          ],
+          "bounds_mm": [
+            60.495,
+            35.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R5",
+          "value": "8.45k 1%",
+          "origin_mm": [
+            83,
+            28
+          ],
+          "bounds_mm": [
+            81.495,
+            27.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R6",
+          "value": "1k",
+          "origin_mm": [
+            83,
+            32
+          ],
+          "bounds_mm": [
+            81.495,
+            31.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        },
+        {
+          "reference": "R7",
+          "value": "10k",
+          "origin_mm": [
+            68,
+            35
+          ],
+          "bounds_mm": [
+            66.495,
+            34.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "status": "schematic footprint"
+        }
+      ],
+      "clip_side_contact_patches_mm": [
+        [
+          0,
+          8,
+          2,
+          3
+        ],
+        [
+          88,
+          8,
+          2,
+          3
+        ]
+      ]
+    }
+  ]
+}

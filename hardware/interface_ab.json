@@ -1,0 +1,85 @@
+{
+  "revision": "0.2",
+  "logic_voltage_V": 3.3,
+  "power_voltage_V": 5,
+  "connector_family": "JST-XH",
+  "pitch_mm": 2.5,
+  "harness": "three short internal straight-through cables; all connections made unpowered, no hot-plug",
+  "connectors": [
+    {
+      "reference": "J1",
+      "function": "5V power",
+      "pins": [
+        {
+          "pin": 1,
+          "net": "GND",
+          "direction": "common"
+        },
+        {
+          "pin": 2,
+          "net": "+5V_AB",
+          "direction": "B->A"
+        }
+      ]
+    },
+    {
+      "reference": "J6",
+      "function": "I2C bus, no power rail",
+      "pins": [
+        {
+          "pin": 1,
+          "net": "GND",
+          "direction": "common"
+        },
+        {
+          "pin": 2,
+          "net": "I2C_SDA",
+          "direction": "bidirectional"
+        },
+        {
+          "pin": 3,
+          "net": "I2C_SCL",
+          "direction": "A->B"
+        }
+      ]
+    },
+    {
+      "reference": "J7",
+      "function": "Control and reserved signals",
+      "pins": [
+        {
+          "pin": 1,
+          "net": "GND",
+          "direction": "common"
+        },
+        {
+          "pin": 2,
+          "net": "PWM0",
+          "direction": "A->B"
+        },
+        {
+          "pin": 3,
+          "net": "ENABLE",
+          "direction": "A->B"
+        },
+        {
+          "pin": 4,
+          "net": "FAULT_N",
+          "direction": "B->A, open-drain active-low"
+        },
+        {
+          "pin": 5,
+          "net": "PWM1",
+          "direction": "A->B",
+          "connected_on_b": false
+        },
+        {
+          "pin": 6,
+          "net": "DIN0",
+          "direction": "B->A",
+          "connected_on_b": false
+        }
+      ]
+    }
+  ]
+}

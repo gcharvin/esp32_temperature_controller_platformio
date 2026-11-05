@@ -1,0 +1,27 @@
+Reference,Value,Footprint,Design_Status
+J2,12V DC input / + then 0V,,provisional
+F1,TBD current,,provisional
+D1,Reverse polarity / TBD rating,,provisional
+D2,TVS TBD,,provisional
+U1,12V -> 5V module / TBD,,"Logical interface only; rating, pinout and footprint TBD"
+J1,A-B POWER / XH-2,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,provisional
+J6,A-B I2C / XH-3,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,provisional
+J7,A-B CTRL / XH-6,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,provisional
+U2,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,provisional
+C1,1uF,Capacitor_SMD:C_0603_1608Metric,provisional
+C2,1uF,Capacitor_SMD:C_0603_1608Metric,provisional
+U3,74LVC1G08,,provisional
+R1,47k,Resistor_SMD:R_0603_1608Metric,provisional
+R2,47k,Resistor_SMD:R_0603_1608Metric,provisional
+C3,100nF,Capacitor_SMD:C_0603_1608Metric,provisional
+R3,100R,Resistor_SMD:R_0603_1608Metric,provisional
+Q1,NMOS / 3V3 gate / TBD,,"Logical G/D/S only; device, physical pads and footprint TBD"
+R4,100k,Resistor_SMD:R_0603_1608Metric,provisional
+J3,Heater output,,provisional
+J4,NTC 15k B3920 probe,,provisional
+R5,8.45k 1%,Resistor_SMD:R_0603_1608Metric,provisional
+R6,1k,Resistor_SMD:R_0603_1608Metric,provisional
+C4,100nF,Capacitor_SMD:C_0603_1608Metric,provisional
+U4,ADS1115IDGS / 0x49,Package_SO:TSSOP-10_3x3mm_P0.5mm,provisional
+C5,100nF,Capacitor_SMD:C_0603_1608Metric,provisional
+R7,10k,Resistor_SMD:R_0603_1608Metric,provisional

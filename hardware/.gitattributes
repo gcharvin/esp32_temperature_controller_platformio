@@ -1,0 +1,7 @@
+# Preserve generated CAD and document files byte-for-byte on Windows.
+*.step binary
+*.stl binary
+*.pdf binary
+*.glb binary
+*.zip binary
+*.png binary

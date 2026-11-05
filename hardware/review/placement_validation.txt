@@ -1,0 +1,5 @@
+pcb_a_display: 110 x 75 x 1.6 mm; DRC geometry 0 violations; 19 expected unconnected items; no tracks.
+Padless provisional envelopes: U1, J2, J3, J4, J5
+pcb_b_temperature: 90 x 65 x 1.6 mm; DRC geometry 0 violations; 32 expected unconnected items; no tracks.
+Padless provisional envelopes: U1, U3, Q1, F1, D1, D2, J2, J3, J4
+Clip bands and native footprint net assignments verified. No thermal, RF, print tolerance, assembly parity or manufacturing qualification implied.

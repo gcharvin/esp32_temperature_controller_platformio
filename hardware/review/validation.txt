@@ -1,0 +1,3 @@
+Both schematics: ERC 0 errors / 0 warnings.
+A/B interface, isolated supply rails, ADC address strap, heater enable/gate, NTC and power path checked against exported netlists.
+These checks do not qualify current ratings, footprints, PCB routing or safety.
