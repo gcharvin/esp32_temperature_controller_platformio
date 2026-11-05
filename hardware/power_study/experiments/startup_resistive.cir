@@ -1,0 +1,28 @@
+LMR36520A study - 24 V to 5 V, vendor transistor-level behavioral model
+.include "../vendor_model/LMR36520A_PSPICE_TRANS/LMR36520A_PSPICE_TRANS/LMR36520A_TRANS.LIB"
+VIN vin 0 PWL(0 0 100u 24)
+XU1 0 boot vin fb pg 0 sw vcc vin LMR36520A_TRANS PARAMS: STEADY_STATE=0 FASTSS=0
+CIN1 vin 0 4.7u
+CIN2 vin 0 4.7u
+CHF vin 0 220n
+CB boot sw 100n
+CVCC vcc 0 1u
+L1 sw lout 10u
+RDCR lout vout 45m
+COUT1 vout co1 22u
+RESR1 co1 0 5m
+COUT2 vout co2 22u
+RESR2 co2 0 5m
+RFBT vout fb 100k
+RFBB fb 0 24.9k
+RPG vout pg 100k
+RLOAD vout 0 10
+.options reltol=0.003 abstol=1n vntol=1u method=gear
+.save v(vout) v(vin) v(pg) v(sw) i(L1)
+.control
+set wr_singlescale
+set wr_vecnames
+tran 500n 8m 0 100n uic
+wrdata startup_resistive.dat v(vout) v(vin) v(pg) i(L1)
+.endc
+.end

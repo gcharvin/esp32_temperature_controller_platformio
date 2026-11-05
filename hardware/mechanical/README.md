@@ -1,18 +1,18 @@
-# Maquette 3D v0.5 : DevKit diymore et XL4015 séparé
+# Maquette 3D v0.6 : ventilation passive latérale
 
-Révision du **5 novembre 2026**. Boîtier nu : **155 × 100 × 115 mm** (largeur × hauteur × profondeur), paroi nominale 3 mm. La largeur augmente de 10 mm pour créer une baie indépendante pour le buck à côté de B. Les PCB conservent leurs dimensions : A 110 × 75 × 1,6 mm ; B 90 × 65 × 1,6 mm. Seule la position de B dans le boîtier est décalée de 10 mm vers la droite.
+Révision du **5 novembre 2026**. Boîtier nu : **155 × 100 × 115 mm** (largeur × hauteur × profondeur), paroi nominale 3 mm. Les dimensions de la v0.5 sont conservées, avec une baie indépendante pour le buck à côté de B. Les enveloppes des LED de diagnostic des PCB v0.4 sont désormais incluses. Les PCB conservent leurs dimensions : A 110 × 75 × 1,6 mm ; B 90 × 65 × 1,6 mm. Seule la position de B dans le boîtier est décalée de 10 mm vers la droite.
 
 ## Fichiers pour Fusion 360
 
-- `exports/enclosure_v05_xl4015_diymore.step` : **assemblage complet à ouvrir**, avec électronique et passe-paroi de référence.
-- `exports/enclosure_v05_printed_parts.step` : uniquement les **cinq pièces imprimées**, chacune constituée d'un solide connecté.
+- `exports/enclosure_v06_side_vents.step` : **assemblage complet à ouvrir**, avec électronique et passe-paroi de référence.
+- `exports/enclosure_v06_printed_parts.step` : uniquement les **cinq pièces imprimées**, chacune constituée d'un solide connecté.
 - `exports/enclosure_exploded.step` et `enclosure_printed_parts_exploded.step` : vue éclatée ; façade avancée de 85 mm, B reculé de 50 mm, buck de 60 mm, panneau arrière de 85 mm.
-- `exports/parts_v05/` : STEP et STL individuels des cinq pièces.
+- `exports/parts_v06/` : STEP et STL individuels des cinq pièces.
 - `exports/preview_service.png`, `preview_buck.png`, `preview_exploded.png` : arrière ouvert, détail du berceau XL4015 et vue éclatée.
 - `exports/validation.json` et `assembly_sequence_validation.json` : contrôles des solides, collisions et trajectoires.
-- `exports/enclosure_v05_xl4015_diymore_fusion_bundle.zip` : livraison regroupée avec sources et contrôles.
+- `exports/enclosure_v06_side_vents_fusion_bundle.zip` : livraison regroupée avec sources et contrôles.
 
-Les fichiers v01 à v04 sont historiques. Les exports sans numéro correspondent à la révision courante. Le STEP fournit une arborescence de solides **sans historique paramétrique natif Fusion**. Les sources paramétriques sont `build_enclosure.py`, `enclosure_parameters.json` et `../placement.json`. Aucun `.f3d` n'est fourni. L'export est réimporté par OpenCascade ; son ouverture dans Fusion n'a pas été exécutée pour cette révision.
+Les fichiers v01 à v05 sont historiques. Les exports sans numéro correspondent à la révision courante. Le STEP fournit une arborescence de solides **sans historique paramétrique natif Fusion**. Les sources paramétriques sont `build_enclosure.py`, `enclosure_parameters.json` et `../placement.json`. Aucun `.f3d` n'est fourni. L'export est réimporté par OpenCascade ; son ouverture dans Fusion n'a pas été exécutée pour cette révision.
 
 ## Cinq pièces imprimées
 
@@ -31,6 +31,18 @@ La rainure de chaque support prend le bord inférieur du PCB ; les crochets reti
 LCD/A/B : prise basse 3 mm, appuis latéraux 1,5 mm. Buck : **prise basse réduite à 1,5 mm**, avec une réserve électronique supposée de 2 mm au bord. La compatibilité des clips avec les pistes et composants du buck doit être vérifiée sur la carte réelle ; aucun serrage sur un composant n'est prévu.
 
 PCB nominal 1,6 mm, jeu total de rainure 0,6 mm. Bras de clips : longueur 16 mm, épaisseur 1,2 mm ; crochet : 1,8 mm sur le bord. Les dégagements représentés (2,4 mm pour les clips PCB, 1,2 mm pour la façade, 1,5 mm pour le panneau arrière) sont des enveloppes de libération, sans qualification élastique.
+
+## Ventilation passive : côtés uniquement
+
+La coque comporte **20 ouvertures traversantes** : sur chaque flanc, cinq entrées basses et cinq sorties hautes. Dessus et dessous restent pleins. Il n'y a pas de ventilateur ni de grille de toit.
+
+Chaque ouverture est une fente oblongue de **14 × 4 mm**, extrémités arrondies de rayon 2 mm. Sur l'axe de profondeur, les débuts de fentes sont y=22, 39, 56, 73 et 90 mm ; dernière extrémité y=104 mm. Les rangées occupent z=5,5 à 9,5 mm et z=90,5 à 94,5 mm. Il reste 2,5 mm de matière jusqu'aux surfaces intérieures du plancher et du toit.
+
+Surface libre géométrique : **2,63 cm² par rangée et par flanc**, soit **5,26 cm² d'entrée et 5,26 cm² de sortie** au total. Les volumes réellement enlevés sont contrôlés ; les découpes ne touchent pas les guides et butées ajoutés à la coque. Le port USB latéral et les fenêtres de déverrouillage restent accessibles. Voir `preview_side_vents.png` et le champ `ventilation` de `validation.json`.
+
+Ces ouvertures favorisent un chemin bas/haut pour l'air ; le débit et les températures ne sont pas simulés. Laisser les flancs dégagés et éviter que les faisceaux bouchent les passages. La suffisance thermique doit être testée sous charge ; ni la surface ouverte ni les contrôles de collision ne la garantissent. Ce sont des fentes simples, sans lamelles, filtre ou qualification d'étanchéité.
+
+L'[étude du buck intégré](../power_study/README.md) est une proposition électrique autonome. Le STEP conserve le XL4015 acheté et son berceau pour le prototype actuel ; il ne représente pas un buck intégré déjà implanté sur B.
 
 ## Modules et réservations
 
@@ -88,7 +100,7 @@ Ces cotes sont des réservations ajustables ; choisir les références finales a
 
 Le générateur contrôle les solides, leur connexion, les racines de clips, les collisions statiques et **22 étapes de montage/service** : mise en place des quatre PCB (LCD, A, B, buck), insertion de façade, branchement USB, extraction indépendante des deux berceaux, retrait du panneau et corridors d'accès. Translations par volumes balayés ; pivots échantillonnés tous les 0,1° de 4° à 0°. Les listes `collisions_mm3` et `failures` des rapports doivent être vides.
 
-Les STEP sont réimportés ; les cinq pièces imprimées doivent donner cinq solides valides avec conservation du volume. Les mouvements sont réversibles dans le même état de déconnexion et de libération des clips.
+Les STEP sont réimportés : le complet donne 102 solides valides ; les cinq pièces imprimées donnent cinq solides valides avec conservation du volume. Les contrôles des ouvertures sont ajoutés aux contrôles de montage existants. Les mouvements sont réversibles dans le même état de déconnexion et de libération des clips.
 
 ```powershell
 uv run hardware/mechanical/build_enclosure.py

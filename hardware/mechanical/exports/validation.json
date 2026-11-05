@@ -9,7 +9,7 @@
     },
     {
       "name": "01_Shell_open_front_and_rear",
-      "volume_mm3": 175646.404,
+      "volume_mm3": 172492.422,
       "solids": 1,
       "group": "shell"
     },
@@ -52,6 +52,18 @@
     {
       "name": "A_C3_ENVELOPE",
       "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_D1_ENVELOPE",
+      "volume_mm3": 5.806,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_D2_ENVELOPE",
+      "volume_mm3": 5.806,
       "solids": 1,
       "group": "A"
     },
@@ -134,6 +146,18 @@
       "group": "A"
     },
     {
+      "name": "A_R6_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "A"
+    },
+    {
+      "name": "A_R7_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "A"
+    },
+    {
       "name": "A_U2_ENVELOPE",
       "volume_mm3": 22.566,
       "solids": 1,
@@ -189,7 +213,7 @@
     },
     {
       "name": "B_C8_ENVELOPE",
-      "volume_mm3": 859.852,
+      "volume_mm3": 859.823,
       "solids": 1,
       "group": "B"
     },
@@ -208,6 +232,30 @@
     {
       "name": "B_D4_ENVELOPE",
       "volume_mm3": 80.753,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D5_ENVELOPE",
+      "volume_mm3": 5.806,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D6_ENVELOPE",
+      "volume_mm3": 5.806,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D7_ENVELOPE",
+      "volume_mm3": 5.806,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D8_ENVELOPE",
+      "volume_mm3": 5.806,
       "solids": 1,
       "group": "B"
     },
@@ -290,6 +338,24 @@
       "group": "B"
     },
     {
+      "name": "B_R10_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R11_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R12_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "B"
+    },
+    {
       "name": "B_R2_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
@@ -328,6 +394,12 @@
     {
       "name": "B_R8_ENVELOPE",
       "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R9_ENVELOPE",
+      "volume_mm3": 3.99,
       "solids": 1,
       "group": "B"
     },
@@ -699,6 +771,157 @@
       "free_arm_overlap_mm3": 0.0
     }
   ],
+  "ventilation": {
+    "openings": [
+      {
+        "side": "left",
+        "band": "inlet",
+        "depth_start_mm": 22,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "inlet",
+        "depth_start_mm": 39,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "inlet",
+        "depth_start_mm": 56,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "inlet",
+        "depth_start_mm": 73,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "inlet",
+        "depth_start_mm": 90,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "outlet",
+        "depth_start_mm": 22,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "outlet",
+        "depth_start_mm": 39,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "outlet",
+        "depth_start_mm": 56,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "outlet",
+        "depth_start_mm": 73,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "left",
+        "band": "outlet",
+        "depth_start_mm": 90,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "inlet",
+        "depth_start_mm": 22,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "inlet",
+        "depth_start_mm": 39,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "inlet",
+        "depth_start_mm": 56,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "inlet",
+        "depth_start_mm": 73,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "inlet",
+        "depth_start_mm": 90,
+        "z_start_mm": 5.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "outlet",
+        "depth_start_mm": 22,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "outlet",
+        "depth_start_mm": 39,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "outlet",
+        "depth_start_mm": 56,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "outlet",
+        "depth_start_mm": 73,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      },
+      {
+        "side": "right",
+        "band": "outlet",
+        "depth_start_mm": 90,
+        "z_start_mm": 90.5,
+        "free_area_mm2": 52.566
+      }
+    ],
+    "count": 20,
+    "area_per_side_and_band_mm2": 262.832,
+    "total_inlet_area_mm2": 525.664,
+    "total_outlet_area_mm2": 525.664,
+    "structural_guides_untouched": true,
+    "roof_and_base_closed": true,
+    "thermal_airflow_simulated": false
+  },
   "assembly_sequence": {
     "tests": [
       {
@@ -775,7 +998,7 @@
           -40,
           0
         ],
-        "prism_count": 120,
+        "prism_count": 140,
         "reversible": true
       },
       {
@@ -786,7 +1009,7 @@
           0,
           -3.5
         ],
-        "prism_count": 120,
+        "prism_count": 140,
         "reversible": true
       },
       {
@@ -808,7 +1031,7 @@
           -40,
           0
         ],
-        "prism_count": 180,
+        "prism_count": 220,
         "reversible": true
       },
       {
@@ -819,7 +1042,7 @@
           0,
           -3.5
         ],
-        "prism_count": 180,
+        "prism_count": 220,
         "reversible": true
       },
       {
@@ -874,7 +1097,7 @@
           100,
           0
         ],
-        "prism_count": 145,
+        "prism_count": 157,
         "reversible": true
       },
       {
@@ -896,7 +1119,7 @@
           50,
           0
         ],
-        "prism_count": 132,
+        "prism_count": 156,
         "reversible": true
       },
       {
@@ -964,7 +1187,7 @@
     "solid_count": 5,
     "one_connected_solid_per_print_part": true
   },
-  "STEP_round_trip_solids": 90,
+  "STEP_round_trip_solids": 102,
   "B_extraction_samples_mm": [
     0,
     10,
@@ -972,6 +1195,6 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 446123.712,
+  "STEP_volume_mm3": 443022.164,
   "fusion_import_tested": false
 }

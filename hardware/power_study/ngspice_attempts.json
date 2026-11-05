@@ -1,0 +1,59 @@
+{
+  "engine": "ngspice-46 shared DLL shipped with KiCad 10.0.6",
+  "model": "TI LMR36520A_TRANS Final 1.10 / unmodified",
+  "compatibility_mode": "ps",
+  "conclusion": "Native vendor model loads but no complete transient was obtained. PSpice execution or documented compatibility work remains required.",
+  "attempts": [
+    {
+      "deck": "experiments/fast_startup.cir",
+      "status": "FAILED / incomplete transient, no functional pass",
+      "last_recorded_time_s": 0.000125131813,
+      "reason": [
+        "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000125132, timestep = 6.25e-20: trouble with node \"xu1.x_u6_u847.yint1\"",
+        "stderr tran simulation(s) aborted"
+      ],
+      "deck_sha256": "038c393966649e5b661129fbc8508232fbe55e3f6e1140a2ae44ffd529b62e32"
+    },
+    {
+      "deck": "experiments/startup.cir",
+      "status": "FAILED / incomplete transient, no functional pass",
+      "last_recorded_time_s": 0.000438734377,
+      "reason": [
+        "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000438734, timestep = 6.98721e-19: trouble with node \"xu1.x_u4_u619.yint\"",
+        "stderr tran simulation(s) aborted"
+      ],
+      "deck_sha256": "15c8f214fa3e5f226f1b4fa48403f87be9eb659f243128ad86cb3bdb7e47260a"
+    },
+    {
+      "deck": "experiments/startup_resistive.cir",
+      "status": "FAILED / incomplete transient, no functional pass",
+      "last_recorded_time_s": 0.00204741216,
+      "reason": [
+        "stderr doAnalyses: TRAN:  Timestep too small; time = 0.00204741, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+        "stderr tran simulation(s) aborted"
+      ],
+      "deck_sha256": "9d9e393e5af3e027dd00fa899fc6fb4eb36dcb91c5ef0149c5af065aad5a2eb8"
+    },
+    {
+      "deck": "experiments/startup_uic.cir",
+      "status": "FAILED / incomplete transient, no functional pass",
+      "last_recorded_time_s": 1.62087677e-05,
+      "reason": [
+        "stderr doAnalyses: TRAN:  Timestep too small; time = 1.62088e-05, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+        "stderr tran simulation(s) aborted"
+      ],
+      "deck_sha256": "0e7fcab6b22f7cea94aac00ededef2e161154d0ca12a00e1a58fc1034cb426b7"
+    },
+    {
+      "deck": "benches/startup.cir",
+      "status": "FAILED / incomplete transient, no functional pass",
+      "last_recorded_time_s": 0.000590220552,
+      "reason": [
+        "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000590221, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+        "stderr run simulation(s) aborted"
+      ],
+      "deck_sha256": "a55dd24946a7e7f62f259f85d3be5a4412fe8c211c89441f3902415ed82c3661"
+    }
+  ],
+  "partial_waveforms_are_validation": false
+}

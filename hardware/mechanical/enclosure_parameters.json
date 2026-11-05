@@ -1,5 +1,5 @@
 {
-  "revision": "0.5 - separate XL4015 and diymore DevKit",
+  "revision": "0.6 - lateral passive ventilation / diagnostic PCB envelopes",
   "case_mm": {
     "width": 155,
     "height": 100,
@@ -148,5 +148,19 @@
     ],
     "pot_screw_z_mm": 46,
     "lower_groove_capture_mm": 1.5
+  },
+  "ventilation": {
+    "sides": [
+      "left",
+      "right"
+    ],
+    "depth_start_mm": 22,
+    "slot_length_mm": 14,
+    "slot_height_mm": 4,
+    "slot_pitch_mm": 17,
+    "slots_per_row": 5,
+    "lower_z_mm": 5.5,
+    "upper_z_mm": 90.5,
+    "notes": "Side walls only; roof and base remain closed. No airflow/temperature qualification."
   }
 }

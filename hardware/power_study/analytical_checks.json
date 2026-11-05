@@ -1,0 +1,44 @@
+{
+  "status": "analytical checks only; functional switching simulation remains a separate gate",
+  "KiCad_pin_mapping_checked": true,
+  "internal_VCC_unloaded": true,
+  "output_V_nominal": 5.016064257028113,
+  "output_V_static_corners_1pct_resistors_and_1p5pct_reference": [
+    4.86249015865442,
+    5.173654821305423
+  ],
+  "rows": [
+    {
+      "input_V": 18,
+      "duty_ideal": 0.2777777777777778,
+      "nominal_inductor_ripple_App": 0.9027777777777779,
+      "peak_A_at_0p8A": 1.251388888888889
+    },
+    {
+      "input_V": 24,
+      "duty_ideal": 0.20833333333333334,
+      "nominal_inductor_ripple_App": 0.9895833333333334,
+      "peak_A_at_0p8A": 1.2947916666666668
+    },
+    {
+      "input_V": 26.4,
+      "duty_ideal": 0.1893939393939394,
+      "nominal_inductor_ripple_App": 1.013257575757576,
+      "peak_A_at_0p8A": 1.306628787878788
+    }
+  ],
+  "output_bank_rated_uF": 88,
+  "output_bank_effective_sensitivity_uF": 44,
+  "minimum_inductance_datasheet_rule_uH": 5.250000000000001,
+  "selected_inductance_uH": 10,
+  "selected_inductance_minus20pct_uH": 8,
+  "estimated_converter_loss_at_5W_if_90pct_efficiency_W": 0.5555555555555558,
+  "loss_caveat": "Illustrative estimate using an efficiency assumption; not a thermal prediction or measurement.",
+  "pending": [
+    "SPICE completion and functional criteria",
+    "actual capacitor DC-bias curves and sourcing",
+    "loop stability across final output bank and loads",
+    "PCB layout and thermal validation",
+    "integration of logic/power returns and USB supply selection"
+  ]
+}

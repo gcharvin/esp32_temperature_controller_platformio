@@ -1,0 +1,62 @@
+{
+  "candidate": "LMR36520ADDAR",
+  "model": {
+    "download_url": "https://www.ti.com/lit/zip/snvmbx7",
+    "archive_sha256": "ee5a5dd82e0e97264d8e87e0f177fe0c5aed5941b60c926d4e9b88cdf792f1e1",
+    "model_sha256": "f8661d25c5517fb2f7fe5bad16fa093eecee13b2f9cefa699e8d15d7004303e2",
+    "model_relative_path": "vendor_model/LMR36520A_PSPICE_TRANS/LMR36520A_PSPICE_TRANS/LMR36520A_TRANS.LIB",
+    "model_version": "TI Final 1.10, 12FEB2020; original, unmodified",
+    "model_temperature_effects": false
+  },
+  "cases": {
+    "startup": {
+      "vin": "PWL(0 0 100u 24)",
+      "en": "PWL(0 0 200u 0 210u 3.3)",
+      "load": "0.5",
+      "cap": 22,
+      "stop": "12m"
+    },
+    "load_step": {
+      "vin": "PWL(0 0 100u 24)",
+      "en": "PWL(0 0 200u 0 210u 3.3)",
+      "load": "PWL(0 0.1 8m 0.1 8.001m 0.8 10m 0.8 10.001m 0.1)",
+      "cap": 22,
+      "stop": "12m"
+    },
+    "load_step_derated": {
+      "vin": "PWL(0 0 100u 24)",
+      "en": "PWL(0 0 200u 0 210u 3.3)",
+      "load": "PWL(0 0.1 8m 0.1 8.001m 0.8 10m 0.8 10.001m 0.1)",
+      "cap": 11,
+      "stop": "12m"
+    },
+    "line_step": {
+      "vin": "PWL(0 0 100u 24 8m 24 8.01m 26.4 10m 26.4 10.01m 18)",
+      "en": "PWL(0 0 200u 0 210u 3.3)",
+      "load": "0.5",
+      "cap": 22,
+      "stop": "12m"
+    },
+    "disable": {
+      "vin": "PWL(0 0 100u 24)",
+      "en": "PWL(0 0 200u 0 210u 3.3 10m 3.3 10.001m 0)",
+      "load": "0.5",
+      "cap": 22,
+      "stop": "12m"
+    }
+  },
+  "execution_status": "PSpice benches prepared; not executed in vendor-supported PSpice. ngspice compatibility attempts failed.",
+  "targets": {
+    "output_min_V": 4.75,
+    "output_max_V": 5.25,
+    "settled_ripple_target_Vpp": 0.05,
+    "load_A": [
+      0.1,
+      0.8
+    ],
+    "nominal_output_V": 5.016064257028113,
+    "system_fuse_A": 1,
+    "converter_rated_A": 2
+  },
+  "scope": "Converter only, after upstream protection and before F2. No semiconductor temperature model, fuse/TVS/inversion/firmware/USB/PCB parasitics."
+}

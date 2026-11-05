@@ -25,6 +25,7 @@ LCD_DETAIL=[]
 FRAME_CHECKS=[]
 FRAME_GEOMETRIES=[]
 RELEASED_PRINT_SHAPES={}
+VENT_CHECKS={}
 PRINT_NAMES={
  '01_Shell_open_front_and_rear':'01_Coque_ouverte',
  '02_Removable_front_LCD_A':'02_Facade_supports_LCD_A',
@@ -122,10 +123,35 @@ def frame_bridges(x,zbottom,width,height,face):
         pieces.append(box(x+width+3,back-2.7,z,W-T+.5-(x+width+3),2.4,3))
     return pieces
 
+def lateral_vents(shell,bare_tube):
+    config=P['ventilation'];protected=shell.cut(bare_tube)
+    count=config['slots_per_row'];length=config['slot_length_mm'];height=config['slot_height_mm'];radius=height/2
+    assert length>=height and config['slot_pitch_mm']>length
+    removed=0;holes=[]
+    for side in config['sides']:
+        x=-.1 if side=='left' else W-T-.1
+        for band,z in [('inlet',config['lower_z_mm']),('outlet',config['upper_z_mm'])]:
+            for i in range(count):
+                y=config['depth_start_mm']+i*config['slot_pitch_mm']
+                assert y>18 and y+length<109 and z>T+2 and z+height<H-T-2
+                cutter=fuse([box(x,y+radius,z,T+.2,length-height,height),
+                             cyl_x(x,y+radius,z+radius,radius,T+.2),
+                             cyl_x(x,y+length-radius,z+radius,radius,T+.2)])
+                assert _overlap(cutter,protected)<1e-5,'Vent intersects a structural guide or stop'
+                volume=_overlap(cutter,shell);assert abs(volume/T-(length*height-(4-math.pi)*radius**2))<1e-5
+                removed+=volume;shell=shell.cut(cutter)
+                holes.append(dict(side=side,band=band,depth_start_mm=y,z_start_mm=z,free_area_mm2=round(volume/T,3)))
+    VENT_CHECKS.update(openings=holes,count=len(holes),area_per_side_and_band_mm2=round(count*(length*height-(4-math.pi)*radius**2),3),
+                       total_inlet_area_mm2=round(removed/T/2,3),total_outlet_area_mm2=round(removed/T/2,3),
+                       structural_guides_untouched=True,roof_and_base_closed=True,thermal_airflow_simulated=False)
+    return shell.clean()
+
+
 def main(validate=True):
     front=P['rear_panel_mm']['thickness'];rear_y=D-front
     # Open-ended tube. Front is a separate, removable equipped faceplate.
     shell=box(0,T,0,W,rear_y-T,H).cut(box(T,T-.1,T,W-2*T,rear_y-T+.2,H-2*T))
+    bare_tube=shell
     facade=box(0,0,0,W,T,H)
     win=P['lcd_window_mm']
     facade=facade.cut(box(win['center_x']-win['width']/2,-.1,win['center_z']-win['height']/2,
@@ -181,7 +207,7 @@ def main(validate=True):
     for gz in (15.75,77.25):shell=shell.union(box(2.5,78,gz,37.55,24.7,2))
     shell=shell.union(box(38.55,78,15.75,1.5,29,63.5))
     shell=shell.union(box(2.5,75.5,18,7,2.9,4))
-    shell=shell.clean()
+    shell=lateral_vents(shell,bare_tube)
     # Rear panel: integral locating lip and two cantilever side latches.
     rc=P['rear_panel_mm']['lip_clearance'];ld=P['rear_panel_mm']['lip_depth']
     panel=box(0,rear_y,0,W,front,H)
@@ -425,8 +451,8 @@ def verify_assembly_paths():
 
 
 def validate_export():
-    assembled=cq.Assembly(name='Laboratory_controller_fit_study_05_XL4015_Diymore')
-    exploded=cq.Assembly(name='Exploded_fit_study_05_XL4015_Diymore')
+    assembled=cq.Assembly(name='Laboratory_controller_fit_study_06_side_vents')
+    exploded=cq.Assembly(name='Exploded_fit_study_06_side_vents')
     printed=cq.Assembly(name='Boitier_5_pieces_a_imprimer')
     printed_exploded=cq.Assembly(name='Boitier_5_pieces_vue_eclatee')
     print_names=PRINT_NAMES
@@ -434,11 +460,11 @@ def validate_export():
         ('plastic','01_Pieces_imprimees'),('A','02_Carte_A_reference'),
         ('B','03_Carte_B_reference'),('buck','07_XL4015_reference'),('LCD','04_Afficheur_encodeur_reference'),
         ('external','05_Passe_paroi_et_faisceaux_reference'),('USB','06_USB_maintenance_reference')]}
-    partsdir=OUT/'parts_v05';partsdir.mkdir(exist_ok=True)
+    partsdir=OUT/'parts_v06';partsdir.mkdir(exist_ok=True)
     summary={'status':'unqualified fit mock-up, not production design','parts':[],'collisions_mm3':[],
              'coordinates':'x left-right, y front-rear, z bottom-top (mm)',
              'case_mm':P['case_mm'],'bulkheads':P['bulkheads'],'usb_service':P['usb_service'],'retention':P['retention'],
-             'USB_electrical_VBUS_isolation_verified':False,'frame_clip_checks':FRAME_CHECKS}
+             'USB_electrical_VBUS_isolation_verified':False,'frame_clip_checks':FRAME_CHECKS,'ventilation':VENT_CHECKS}
     for part in PARTS:
         s=part['shape'];name=part['name'];vol=s.val().Volume()
         assert vol>0 and s.val().isValid(),name
@@ -500,8 +526,8 @@ def validate_export():
     assert len(print_solids)==5 and all(s.isValid() for s in print_solids)
     expected_volume=sum(part['shape'].val().Volume() for part in PARTS if part['name'] in print_names)
     assert math.isclose(imported_printed.val().Volume(),expected_volume,rel_tol=1e-8)
-    (OUT/'enclosure_v05_xl4015_diymore.step').write_bytes((OUT/'enclosure_assembled.step').read_bytes())
-    (OUT/'enclosure_v05_printed_parts.step').write_bytes((OUT/'enclosure_printed_parts.step').read_bytes())
+    (OUT/'enclosure_v06_side_vents.step').write_bytes((OUT/'enclosure_assembled.step').read_bytes())
+    (OUT/'enclosure_v06_printed_parts.step').write_bytes((OUT/'enclosure_printed_parts.step').read_bytes())
     summary['printed_parts_STEP']={'file':'enclosure_printed_parts.step','components':list(print_names.values()),'solid_count':5,'one_connected_solid_per_print_part':True}
     # Round-trip the exchange format, including checks against accidental empty exports.
     reimport=cq.importers.importStep(str(OUT/'enclosure_assembled.step'))
@@ -531,7 +557,7 @@ def render_previews():
         a=vtk.vtkActor();a.SetMapper(mapper);a.GetProperty().SetColor(*part['color'])
         a.GetProperty().SetOpacity(opacity);a.GetProperty().SetSpecular(.2);a.GetProperty().SetSpecularPower(35)
         return a
-    for mode,camera in [('assembled',(230,-260,175)),('exploded',(290,330,230)),('service',(260,400,185)),('buck',(100,240,140)),('front_module',(220,200,155)),('front_lcd',(190,160,140)),('rear',(72,400,50)),('clips',(175,245,145)),('lcd_mount',(185,155,140)),('usb',(340,-80,140))]:
+    for mode,camera in [('assembled',(230,-260,175)),('side_vents',(420,100,170)),('exploded',(290,330,230)),('service',(260,400,185)),('buck',(100,240,140)),('front_module',(220,200,155)),('front_lcd',(190,160,140)),('rear',(72,400,50)),('clips',(175,245,145)),('lcd_mount',(185,155,140)),('usb',(340,-80,140))]:
         renderer=vtk.vtkRenderer();renderer.SetBackground(.94,.96,.97)
         scene=LCD_DETAIL+[p for p in PARTS if p['name'].startswith('LCD_')] if mode=='lcd_mount' else PARTS
         for part in scene:
@@ -554,8 +580,9 @@ def render_previews():
         im=Image.open(file).convert('RGB');draw=ImageDraw.Draw(im)
         try:font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',28);small=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',21)
         except OSError:font=small=ImageFont.load_default()
-        titles={'assembled':'MAQUETTE 0.5 - facade / boitier assemble',
-                'exploded':'MAQUETTE 0.5 - facade equipee / coque / B / buck / panneau arriere',
+        titles={'side_vents':'VENTILATION PASSIVE - ouies basses et hautes sur les deux flancs',
+                'assembled':'MAQUETTE 0.6 - facade / boitier assemble',
+                'exploded':'MAQUETTE 0.6 - facade equipee / coque / B / buck / panneau arriere',
                 'service':'ARRIERE OUVERT - carte B et XL4015 sur leurs berceaux independants',
                 'buck':'XL4015 - berceau independant, rainure basse et deux clips lateraux',
                 'front_module':'FACADE EQUIPEE - ecran puis carte A montes hors du boitier',

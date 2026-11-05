@@ -1,0 +1,19 @@
+Reference,Value,Footprint,Design_Status
+J1,FROM B / protected input,,provisional
+C1,4.7uF / 100V X7S,Capacitor_SMD:C_1210_3225Metric,provisional
+C2,4.7uF / 100V X7S,Capacitor_SMD:C_1210_3225Metric,provisional
+C3,220nF / 100V X7R,Capacitor_SMD:C_0805_2012Metric,provisional
+U1,LMR36520ADDAR,Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias,STUDY / datasheet DDA land pattern and thermal process to verify
+R1,100k / 0805,Resistor_SMD:R_0805_2012Metric,provisional
+JP1,CLOSE TO DISABLE BUCK,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,provisional
+C4,100nF / 25V,Capacitor_SMD:C_0603_1608Metric,provisional
+C5,1uF / 25V,Capacitor_SMD:C_0603_1608Metric,provisional
+L1,10uH / XAL6060-103MEC,Inductor_SMD:L_Coilcraft_XAL6060-XXX,"Shielded, land pattern to verify against Coilcraft drawing"
+C6,22uF / 25V X5R,Capacitor_SMD:C_1210_3225Metric,provisional
+C7,22uF / 25V X5R,Capacitor_SMD:C_1210_3225Metric,provisional
+C8,22uF / 25V X5R,Capacitor_SMD:C_1210_3225Metric,provisional
+C9,22uF / 25V X5R,Capacitor_SMD:C_1210_3225Metric,provisional
+R2,100k / 1%,Resistor_SMD:R_0603_1608Metric,provisional
+R3,24.9k / 1%,Resistor_SMD:R_0603_1608Metric,provisional
+R4,100k / 1%,Resistor_SMD:R_0603_1608Metric,provisional
+J2,TO B / F2 INPUT,,provisional

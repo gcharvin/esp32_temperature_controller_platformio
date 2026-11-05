@@ -1,0 +1,30 @@
+LMR36520ADDAR - line_step - STUDY / PSpice vendor model
+.include "../vendor_model/LMR36520A_PSPICE_TRANS/LMR36520A_PSPICE_TRANS/LMR36520A_TRANS.LIB"
+VIN vin 0 PWL(0 0 100u 24 8m 24 8.01m 26.4 10m 26.4 10.01m 18)
+VEN en 0 PWL(0 0 200u 0 210u 3.3)
+R1 vin en 100k
+XU1 0 boot en fb pg 0 sw vcc vin LMR36520A_TRANS PARAMS: STEADY_STATE=0 FASTSS=0
+C1 vin 0 4.7u
+C2 vin 0 4.7u
+C3 vin 0 220n
+C4 boot sw 100n
+C5 vcc 0 1u
+L1 sw lind 10u
+RDCR lind vout 29.8m
+R2 vout fb 100k
+R3 fb 0 24.9k
+R4 vout pg 100k
+VLOADCMD loadcmd 0 0.5
+GLOAD vout 0 VALUE={V(loadcmd)*LIMIT(V(vout)/4.75,0,1)}
+C6 vout co1 22u
+RESR1 co1 0 5m
+C7 vout co2 22u
+RESR2 co2 0 5m
+C8 vout co3 22u
+RESR3 co3 0 5m
+C9 vout co4 22u
+RESR4 co4 0 5m
+.options reltol=0.003 abstol=1n vntol=1u
+.tran 100n 12m 0 100n
+.probe V(vout) V(vin) V(pg) I(L1)
+.end
