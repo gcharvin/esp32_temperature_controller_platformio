@@ -74,7 +74,7 @@
         -40,
         0
       ],
-      "prism_count": 95,
+      "prism_count": 120,
       "reversible": true
     },
     {
@@ -85,7 +85,7 @@
         0,
         -3.5
       ],
-      "prism_count": 95,
+      "prism_count": 120,
       "reversible": true
     },
     {
@@ -107,7 +107,7 @@
         -40,
         0
       ],
-      "prism_count": 135,
+      "prism_count": 180,
       "reversible": true
     },
     {
@@ -118,11 +118,44 @@
         0,
         -3.5
       ],
-      "prism_count": 135,
+      "prism_count": 180,
       "reversible": true
     },
     {
       "stage": "3 B outside tube: pivot and release clips",
+      "method": "BRep poses at 0.1 degree intervals",
+      "angle_deg": [
+        4,
+        0
+      ],
+      "clips_held_outward_mm": 2.4,
+      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+      "reversible": true
+    },
+    {
+      "stage": "3b buck outside tube: approach above groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -40,
+        0
+      ],
+      "prism_count": 38,
+      "reversible": true
+    },
+    {
+      "stage": "3b buck outside tube: lower into groove",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        -3.5
+      ],
+      "prism_count": 38,
+      "reversible": true
+    },
+    {
+      "stage": "3b buck outside tube: pivot and release clips",
       "method": "BRep poses at 0.1 degree intervals",
       "angle_deg": [
         4,
@@ -140,7 +173,7 @@
         100,
         0
       ],
-      "prism_count": 130,
+      "prism_count": 145,
       "reversible": true
     },
     {
@@ -162,7 +195,18 @@
         50,
         0
       ],
-      "prism_count": 105,
+      "prism_count": 132,
+      "reversible": true
+    },
+    {
+      "stage": "6b independent buck extraction",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        60,
+        0
+      ],
+      "prism_count": 44,
       "reversible": true
     },
     {
@@ -173,11 +217,37 @@
         60,
         0
       ],
-      "prism_count": 32,
+      "prism_count": 33,
       "reversible": true
+    },
+    {
+      "stage": "8 buck screwdriver service",
+      "shaft_diameter_mm": 6,
+      "rear_panel_removed": true,
+      "method": "BRep intersection of reserved tool cylinders",
+      "terminal_and_trimmer_positions": "approximate, verify purchased module"
+    },
+    {
+      "stage": "9 B connector service",
+      "rear_panel_removed": true,
+      "shaft_diameter_mm": 6,
+      "JST_rear_corridor_length_mm": 35,
+      "terminal_refs": [
+        "J2",
+        "J3",
+        "J8"
+      ],
+      "JST_refs": [
+        "J1",
+        "J4",
+        "J6",
+        "J7",
+        "J9"
+      ],
+      "method": "BRep intersection above connector envelopes; actual contacts and side wire entries unqualified"
     }
   ],
   "failures": [],
-  "reverse_order": "rear off, B disconnected/extracted, USB male unplugged, front released/pulled, A then LCD unclipped",
+  "reverse_order": "rear off; B or buck independently disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped",
   "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
 }

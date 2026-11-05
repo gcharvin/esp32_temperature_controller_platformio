@@ -99,7 +99,7 @@ def main():
           'boards':results,'limits':['Physical DevKit dimensions/pinout must be confirmed.',
                                    'Power/thermal and fault testing not performed.',
                                    'XL4015 complete module transient limits not qualified.',
-                                   'Enclosure export predates revised module positions.']}
+                                   'Enclosure v0.5 models revised modules; purchased-module fit and printed clips require physical validation.']}
     (ROOT/'review/routing/routing_validation.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(data,indent=2))
 

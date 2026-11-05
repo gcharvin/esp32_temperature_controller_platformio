@@ -83,7 +83,7 @@ USB : la prise latérale et sa rallonge utilisent le pont CH340 de la DevKit. JP
 
 A reste à **110 × 75 × 1,6 mm**, B à **90 × 65 × 1,6 mm**. Les bandes de clips haut/bas de 4 mm et les appuis latéraux de 1,5 mm sont exclus des pistes, vias, remplissages et composants. La réserve d'antenne est provisoire et doit être confrontée au module réel et à son environnement.
 
-Les [STEP du boîtier v0.4](mechanical/README.md) sont une **étude antérieure**, non réconciliée avec la DevKit diymore et le buck de 51 mm désormais séparé. Le support du XL4015, le rangement des fils et la position précise de l'USB interne restent à reprendre avant impression finale. Les PCB ont leurs contours et réserves conservés ; le modèle mécanique complet n'est pas requalifié par ce routage.
+La [maquette du boîtier v0.5](mechanical/README.md) reprend la DevKit diymore sur supports et le XL4015 sur un berceau extractible indépendant de B. Le boîtier mesure **155 × 100 × 115 mm** ; B est déplacée de 10 mm vers la droite dans l'assemblage, sans changer son PCB. Façade amovible LCD/A, USB latéral et passe-paroi arrière sont conservés. Les contrôles géométriques et séquences de démontage sont documentés ; dimensions supposées des modules, souplesse des clips, vrais câbles et dissipation restent à vérifier physiquement.
 
 ```powershell
 & 'C:/Program Files/KiCad/10.0/bin/python.exe' hardware/scripts/check_schematics.py

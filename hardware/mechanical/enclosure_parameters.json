@@ -1,7 +1,7 @@
 {
-  "revision": "0.4 - removable front carries LCD and A",
+  "revision": "0.5 - separate XL4015 and diymore DevKit",
   "case_mm": {
-    "width": 145,
+    "width": 155,
     "height": 100,
     "depth": 115,
     "wall": 3
@@ -35,18 +35,18 @@
     "inside_depth_mm": 28,
     "outside_depth_mm": 4,
     "devkit_plug_box_mm": [
-      70,
-      56,
-      45,
+      69,
+      55.2,
+      43,
       14,
-      6,
-      6
+      4,
+      10
     ],
     "notes": "USB-C female panel extension to DevKit USB-C male; DATA cable required. Unmeasured mechanical envelope. VBUS source isolation/selection unresolved."
   },
   "bulkheads": [
     {
-      "name": "POWER_12V",
+      "name": "POWER_24V",
       "kind": "cable_gland_M12_envelope",
       "center_x_mm": 22,
       "center_z_mm": 75,
@@ -116,7 +116,37 @@
       "front into tube",
       "USB male cable",
       "B carrier",
+      "independent XL4015 carrier",
       "rear panel"
     ]
+  },
+  "buck": {
+    "pcb_origin_x_z_mm": [
+      8,
+      22
+    ],
+    "pcb_face_depth_mm": 83,
+    "board_mm": [
+      26.3,
+      51,
+      1.6
+    ],
+    "overall_depth_mm": 14,
+    "edge_clearance_assumed_mm": 2,
+    "extraction_mm": 60,
+    "terminal_screw_x_mm": [
+      13,
+      18
+    ],
+    "terminal_screw_z_mm": [
+      28,
+      67
+    ],
+    "pot_screw_x_mm": [
+      25,
+      30
+    ],
+    "pot_screw_z_mm": 46,
+    "lower_groove_capture_mm": 1.5
   }
 }

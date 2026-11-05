@@ -116,6 +116,6 @@
     "Physical DevKit dimensions/pinout must be confirmed.",
     "Power/thermal and fault testing not performed.",
     "XL4015 complete module transient limits not qualified.",
-    "Enclosure export predates revised module positions."
+    "Enclosure v0.5 models revised modules; purchased-module fit and printed clips require physical validation."
   ]
 }

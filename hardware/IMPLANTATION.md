@@ -31,7 +31,7 @@ Le **XL4015 acheté (51 × 26,3 × 14 mm)** est retiré de la surface du PCB B :
 
 Les deux PCB conservent les bandes sans composants ni cuivre de **4 mm en haut et en bas**. Les côtés ont des appuis continus de **1,5 mm**, plus les réserves locales de 2 × 3 mm à 8 mm du haut pour les crochets. Ces zones sont effectivement présentes dans KiCad sur les deux couches ; les plans de cuivre les respectent.
 
-Les cartes restent verticales et parallèles à la façade. A et le LCD se montent sur la façade amovible hors coque ; B s'extrait par l'arrière. Les références de forme du boîtier v0.4 restent historiques : les nouveaux modules, les composants hauts de B et le trajet USB doivent être réconciliés avec le modèle mécanique avant impression finale. Les essais de clips et de démontage réels restent à effectuer.
+Les cartes restent verticales et parallèles à la façade. A et le LCD se montent sur la façade amovible hors coque ; B s'extrait par l'arrière. La [maquette mécanique v0.5](mechanical/README.md) représente la DevKit diymore, les composants hauts de B et un berceau indépendant pour le XL4015, extractible par l'arrière. La coque passe à **155 × 100 × 115 mm** ; l'origine de B dans l'assemblage passe de x=40 à x=50 mm, sans déplacement des composants sur son PCB. Dimensions supposées des modules, clips, câbles et dissipation restent à essayer sur le prototype.
 
 ## Lecture et vérification
 
