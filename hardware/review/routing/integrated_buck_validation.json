@@ -1,9 +1,9 @@
 {
   "revision": "PCB B 0.5 integrated LM2596",
   "source_sha256": {
-    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "b836fc13c47ba221dfce18677d17ecdd8a936275cd9e8569e2a944593391424d",
-    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "6b36808c581a057c2259af6ffa4757a91b884987dc8058874701487e477ed907",
-    "review\\pcb_b_temperature.net.xml": "db8f2a2ba8c5ed929649a4c86cfa22eb18219437f45668ad57dc4f341f3568aa"
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "c3cbc1a2ecfdcccd8123df976ddff1c59c8175837c8e2728dd4b4bb638b7e0b3",
+    "review\\pcb_b_temperature.net.xml": "12038f8fe505b2538004b4a4a79cc4457c4306afb540ac419d9a4bdf473a8eff"
   },
   "dimensions_mm": [
     90,
@@ -23,17 +23,6 @@
     "Core simulation excludes PCB/cable parasitics, upstream protection, thermal and heater coupling.",
     "Capacitor ESR 43mOhm plus physical R13 56mOhm approximated as 100mOhm total.",
     "STEP v0.7 reconciled to B v0.5; real cable, clip and thermal tests pending.",
-    "R13/C9 exact purchasing references and physical startup/thermal/fault tests pending."
-  ],
-  "integrated_core_startup": {
-    "status": "complete / criteria passed",
-    "stop_s": 0.008,
-    "settled_min_V": 4.979509614537757,
-    "settled_max_V": 4.999429308866134,
-    "ripple_Vpp": 0.019829768284278515,
-    "startup_max_V": 4.999457839597647,
-    "inductor_peak_A": 4.883480680887118,
-    "scope": "Buck core from exported PCB B component values, plus C9 local bypass. No PCB parasitic, thermal, upstream or heater-coupling simulation."
-  },
-  "native_A_unchanged_from_HEAD": true
+    "R13/C9 purchasing candidates documented; R13 manufacturer land pattern checked separately. Supplier approval and physical startup/thermal/fault tests pending."
+  ]
 }

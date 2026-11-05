@@ -1,0 +1,38 @@
+{
+  "status": "Manufacturer drawing checks; prototype and assembler approval still required",
+  "checked_date": "2026-11-05",
+  "R13": {
+    "MPN_candidate": "WSL1206R0560FEA",
+    "source": "https://www.vishay.com/docs/30100/wsl.pdf",
+    "drawing": "page 2, WSL1206 resistance range 0.006..0.200 ohm",
+    "footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
+    "pad_size_mm": [1.65, 1.93],
+    "pad_center_distance_mm": 3.45,
+    "inner_gap_mm": 1.8,
+    "outer_copper_span_mm": 5.1,
+    "body_height_max_mm": 0.889,
+    "mechanical_envelope_height_mm": 0.9,
+    "courtyard_mm": [5.6, 2.44],
+    "change": "Replaces generic 1.125 x 1.75mm lands. R13 moved from local (20.5,45) to (21,44.5) to clear C10/F2 courtyards. Existing connected traces remain inside enlarged lands.",
+    "limits": "Applies only to the specified resistance range. Generic 1206 3D body is an envelope, not exact Vishay CAD. Assembly-house stencil and process review pending."
+  },
+  "C8": {
+    "MPN_candidate": "EEUFR1H101",
+    "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1H101",
+    "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+    "body_diameter_mm": 8,
+    "body_height_mm": 11.5,
+    "lead_pitch_mm": 3.5,
+    "positive_pin": "1"
+  },
+  "C10": {
+    "MPN_candidate": "EEUFR1V331UB",
+    "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB",
+    "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+    "body_diameter_mm": 10,
+    "body_height_mm": 12.5,
+    "lead_pitch_mm": 5,
+    "positive_pin": "1",
+    "limits": "Keep UB suffix and envelope; no implicit substitution by a taller or different-ESR capacitor."
+  }
+}

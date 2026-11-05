@@ -1,0 +1,143 @@
+(footprint "Vishay_WSL1206_6m_to_200m"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Vishay WSL1206 0.006..0.200 ohm; manufacturer recommended lands a=1.65 b=1.93 inner gap l=1.80mm; https://www.vishay.com/docs/30100/wsl.pdf page2")
+	(tags "resistor")
+	(property "Reference" "REF**"
+		(at 0 -1.83 0)
+		(layer "F.SilkS")
+		(uuid "be7ff87d-cab8-43a9-ac92-0bb4ddb940d2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "WSL1206"
+		(at 0 1.83 0)
+		(layer "F.Fab")
+		(uuid "34fcb70b-c682-4272-b2c8-b5dceacf5a97")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "64bd6f32-38cc-4870-aeb8-db33b9b3d57f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f432061b-33dc-4964-9e72-6cb9d65fc8df")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "56b4a5ce-8e98-46ff-8e01-052b8b32a8a8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.727064 -0.91)
+		(end 0.727064 -0.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d677a06a-07bf-4aa6-8b0b-cef3a01987e1")
+	)
+	(fp_line
+		(start -0.727064 0.91)
+		(end 0.727064 0.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b2ac7bd9-adc9-46fe-bd46-b57620707257")
+	)
+	(fp_rect
+		(start -2.8 -1.22)
+		(end 2.8 1.22)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "ef90b026-b58f-4aca-868c-d6d78067dde3")
+	)
+	(fp_rect
+		(start -1.6 -0.8)
+		(end 1.6 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8ed3d359-eead-45e0-ad7c-1734f8c196e1")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "c0d4d012-a852-41d2-925c-1919f9400925")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.725 0)
+		(size 1.65 1.93)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "30f65bae-5e43-4a34-bf09-657923d52368")
+	)
+	(pad "2" smd rect
+		(at 1.725 0)
+		(size 1.65 1.93)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3e0e6700-4a47-4033-9060-1d21a2aa11cc")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

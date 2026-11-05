@@ -96,10 +96,11 @@ def main():
                    ('/PGND',('Q1','3'),('J2','2'))]
             row['high_current_paths']=[power_path(board,*pair) for pair in pairs]
         results.append(row)
+    devkit=json.loads((ROOT/'module_selection.json').read_text(encoding='utf-8'))['devkit']
     data={'revision':'A 0.4 / B 0.5 integrated buck','status':'routed prototype, not fabrication release','target_input_V':24,'target_heater_W':100,
           'heater_current_A':100/24,'required_B_outer_copper_um':70,
-          'devkit_row_spacing_mm':25.4,'devkit_spacing_status':'ASSUMED, user verification pending',
-          'boards':results,'limits':['Physical DevKit dimensions/pinout must be confirmed.',
+          'devkit_row_spacing_mm':devkit['row_spacing_mm'],'devkit_spacing_status':devkit['row_spacing_status'],
+          'boards':results,'limits':['Row spacing and common pinout confirmed by user; actual outline, socket/USB height and electrical power path still require checking.',
                                    'Power/thermal and fault testing not performed.',
                                    'Integrated LM2596 input transients, startup and fault conditions not qualified.',
                                    'Enclosure STEP v0.7 geometry reconciled; real fit, cables, clips and thermal tests pending.']}

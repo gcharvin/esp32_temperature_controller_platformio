@@ -1,0 +1,18 @@
+{
+  "status": "PASS / selected dimensions only",
+  "checks": [
+    "R13 native and library recommended lands",
+    "R13 capacitor-return topology",
+    "C8/C10 footprint and lead pitch; distinguishable positive pad"
+  ],
+  "source_sha256": {
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469",
+    "manufacturing/land_pattern_review.json": "83ed857730200edefc2d9855290a07fc48751cde51ea20b099e708f79c49125c",
+    "placement.json": "4c1993a15ccd376842e8eb617d26fe3a918853b10a8e33267dd55a399cdcb583",
+    "scripts/check_manufacturer_land_patterns.py": "a321e858302beca4d515226b6daddc706b9e83d7a7049d6afad6b81a1eda148e",
+    "lab_hardware.pretty/Vishay_WSL1206_6m_to_200m.kicad_mod": "5175ad9968be1486339a3d41f87157080b67465134f4ddaff113bfaade5d598d"
+  },
+  "limits": [
+    "Other footprints, stencil and factory approval are outside this check."
+  ]
+}

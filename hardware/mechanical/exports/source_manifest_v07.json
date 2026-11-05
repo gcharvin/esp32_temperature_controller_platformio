@@ -1,14 +1,13 @@
 {
-  "revision": "0.7 integrated buck / A 0.4 B 0.5",
-  "created_utc": "2026-11-05T15:48:19.152582+00:00",
+  "revision": "0.7 - PCB B v0.5 integrated LM2596 / external XL4015 bay removed",
   "source_sha256": {
-    "mechanical/build_enclosure.py": "40488ad5ef83c630b4d6bdefd353efcbbc634319033a1369b695e67ebf78a5c7",
-    "mechanical/enclosure_parameters.json": "ea2420fb12d616ad9f898a9fdd9c55295125d70e980beea9dbc22ec3c9eb78f8",
-    "placement.json": "417eb315af88eef9d34bc66859a4b7dd1191b4a8ee8432a3b12f46ec798d51d0",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "f7705f87215e4a18769525250f8c91dc2e1cad0488f5dd6e411b9a34ade7f757",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "b836fc13c47ba221dfce18677d17ecdd8a936275cd9e8569e2a944593391424d"
+    "mechanical\\build_enclosure.py": "40488ad5ef83c630b4d6bdefd353efcbbc634319033a1369b695e67ebf78a5c7",
+    "mechanical\\enclosure_parameters.json": "ea2420fb12d616ad9f898a9fdd9c55295125d70e980beea9dbc22ec3c9eb78f8",
+    "placement.json": "4c1993a15ccd376842e8eb617d26fe3a918853b10a8e33267dd55a399cdcb583",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "f7705f87215e4a18769525250f8c91dc2e1cad0488f5dd6e411b9a34ade7f757",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "61c76199c2186195a8586ebc174b38f90962fd11db0401a6aaef8186a625c469"
   },
-  "placement_geometry_projection_sha256": "9cbece0ed2f597a9400bd04875e7e5af6ee9859fd1c86dc0dfd757b48191790e",
+  "placement_geometry_projection_sha256": "d741be63a7b106be4d71494097016f24318af4797bb58159d2546c39117c7d83",
   "printed_parts": 4,
   "assembled_STEP_solids": 99,
   "assembly_service_stages": 17,
@@ -19,12 +18,12 @@
   "connector_review": {
     "ref": "J1 near C10",
     "legacy_overpadded_corridor_overlap_mm3": 10.96875,
-    "resolution": "Use manufacturer XHP plug body plus 0.25mm each-side clearance, not generic footprint+1mm corridor",
+    "resolution": "Manufacturer XHP body with 0.25mm each-side margin replaces generic footprint+1mm corridor",
     "manufacturer_source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
     "finger_and_cable_clearance_tested": false
   },
   "limits": [
     "Rigid-body envelope model, not exact supplier component CAD",
-    "Print fit, grip, cable slack, flexure and thermal behavior require physical tests"
+    "Real print, grip, cable slack, flexure and thermal tests pending"
   ]
 }

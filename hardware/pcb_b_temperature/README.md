@@ -25,8 +25,16 @@ PGND puissance ── NT1, jonction cuivre près de l'entrée ── GND logique
 | C8 | Panasonic EEUFR1H101, 100 µF / 50 V | Condensateur d'entrée existant, déplacé ; Ø8 mm, pas 3,5 mm |
 | C9 | 100 nF / 50 V X7R | 0805, découplage d'entrée local |
 | C10 | Panasonic EEUFR1V331UB, 330 µF / 35 V | Ø10 mm, pas 5 mm, hauteur 12,5 mm |
-| R13 | 56 mΩ / 1 % / ≥0,25 W | 1206, **dans le retour du condensateur C10**, pas en série avec la charge |
+| R13 | Vishay WSL1206R0560FEA, 56 mΩ / 1 % / 0,25 W | Empreinte locale `LabHardware:Vishay_WSL1206_6m_to_200m`, **dans le retour du condensateur C10**, pas en série avec la charge |
 | NT1 | NetTie-2_SMD_Pad2.0mm | Cuivre de liaison des masses, exclu de la BOM d'assemblage |
+
+La revue de fabrication adapte les pastilles R13 au dessin Vishay :
+1,65 × 1,93 mm, centres espacés de 3,45 mm, intervalle intérieur 1,80 mm.
+R13 est légèrement déplacée, de (20,5 ; 45) à (21 ; 44,5) mm dans le repère
+local du PCB, pour dégager les zones de C10 et F2. Les pistes existantes restent
+connectées dans les nouvelles plages. Les contrôles DRC et de démontage
+mécanique ont été régénérés. Voir le [dossier de fabrication](../manufacturing/README.md)
+et son plan d'assemblage pour les polarités et les coordonnées.
 
 J8 et J9 et le module XL4015 sont supprimés. U1 a une sortie fixe 5 V : aucune
 consigne à régler. Sa broche 5 ON/OFF est reliée à PGND ; le buck est activé

@@ -816,19 +816,19 @@
           "reference": "R13",
           "value": "56m / 1% / 0.25W",
           "origin_mm": [
-            20.5,
-            45.0
+            21,
+            44.5
           ],
           "rotation_deg": 0.0,
-          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
           "bounds_mm": [
-            18.195,
-            43.845,
-            4.61,
-            2.31
+            18.175,
+            43.255,
+            5.65,
+            2.49
           ],
-          "status": "physical footprint / prototype review pending",
-          "height_mm": 0.8
+          "status": "Vishay WSL1206 0.006..0.200 ohm recommended lands, datasheet30100 page2; prototype assembly qualification pending",
+          "height_mm": 0.9
         },
         {
           "reference": "Q2",

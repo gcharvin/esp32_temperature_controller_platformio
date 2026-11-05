@@ -6,7 +6,7 @@
   "heater_current_A": 4.166666666666667,
   "required_B_outer_copper_um": 70,
   "devkit_row_spacing_mm": 25.4,
-  "devkit_spacing_status": "ASSUMED, user verification pending",
+  "devkit_spacing_status": "CONFIRMED BY USER MEASUREMENT on purchased DevKit, 2026-11-05",
   "boards": [
     {
       "board": "pcb_a_display",
@@ -114,7 +114,7 @@
     }
   ],
   "limits": [
-    "Physical DevKit dimensions/pinout must be confirmed.",
+    "Row spacing and common pinout confirmed by user; actual outline, socket/USB height and electrical power path still require checking.",
     "Power/thermal and fault testing not performed.",
     "Integrated LM2596 input transients, startup and fault conditions not qualified.",
     "Enclosure STEP v0.7 geometry reconciled; real fit, cables, clips and thermal tests pending."

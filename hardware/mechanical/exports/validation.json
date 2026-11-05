@@ -249,7 +249,7 @@
     },
     {
       "name": "B_R13_ENVELOPE",
-      "volume_mm3": 8.519,
+      "volume_mm3": 12.662,
       "solids": 1,
       "group": "B"
     },
@@ -1115,6 +1115,6 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 420056.31,
+  "STEP_volume_mm3": 420060.453,
   "fusion_import_tested": false
 }

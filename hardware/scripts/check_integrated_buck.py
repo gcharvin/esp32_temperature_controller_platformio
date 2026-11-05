@@ -45,7 +45,7 @@ def main():
    limits=['Core simulation excludes PCB/cable parasitics, upstream protection, thermal and heater coupling.',
            'Capacitor ESR 43mOhm plus physical R13 56mOhm approximated as 100mOhm total.',
            'STEP v0.7 reconciled to B v0.5; real cable, clip and thermal tests pending.',
-           'R13/C9 exact purchasing references and physical startup/thermal/fault tests pending.'])
+           'R13/C9 purchasing candidates documented; R13 manufacturer land pattern checked separately. Supplier approval and physical startup/thermal/fault tests pending.'])
  (ROOT/'review/routing/integrated_buck_validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
  print(json.dumps(report,indent=2))
 

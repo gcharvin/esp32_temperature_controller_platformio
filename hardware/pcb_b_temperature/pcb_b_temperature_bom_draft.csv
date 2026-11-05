@@ -40,7 +40,7 @@ R9,15k / 1% / 0.125W,Resistor_SMD:R_0805_2012Metric,Diagnostic current limit,
 R10,1.5k / 1% / 0.1W,Resistor_SMD:R_0603_1608Metric,Diagnostic current limit,
 R11,470R / 1% / 0.1W,Resistor_SMD:R_0603_1608Metric,Diagnostic current limit,
 R12,2.2k / 1% / 0.1W,Resistor_SMD:R_0603_1608Metric,Diagnostic current limit,
-R13,56m / 1% / 0.25W,Resistor_SMD:R_1206_3216Metric,Prototype 0.5 integrated buck; thermal and fault qualification pending,
+R13,56m / 1% / 0.25W,LabHardware:Vishay_WSL1206_6m_to_200m,Prototype 0.5 integrated buck; thermal and fault qualification pending,
 U1,LM2596S-5.0/NOPB,Package_TO_SOT_SMD:TO-263-5_TabPin3,Prototype 0.5 integrated buck; thermal and fault qualification pending,LM2596S-5.0/NOPB
 U2,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,provisional,
 U3,SN74LVC1G08DBVR,Package_TO_SOT_SMD:SOT-23-5,provisional,

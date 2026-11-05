@@ -4861,11 +4861,11 @@
 			)
 		)
 	)
-	(footprint "Resistor_SMD:R_1206_3216Metric"
+	(footprint "LabHardware:Vishay_WSL1206_6m_to_200m"
 		(layer "F.Cu")
 		(uuid "5d64e4da-b072-49ad-8a75-44cc3b0e3350")
-		(at 80.5 100)
-		(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(at 81 99.5)
+		(descr "Vishay WSL1206 0.006..0.200 ohm; manufacturer recommended lands a=1.65 b=1.93 inner gap l=1.80mm; https://www.vishay.com/docs/30100/wsl.pdf page2")
 		(tags "resistor")
 		(property "Reference" "R13"
 			(at 0 -1.83 0)
@@ -4962,8 +4962,8 @@
 			(uuid "e6749534-7e6c-4184-834f-50fdcc1ea4f9")
 		)
 		(fp_rect
-			(start -2.28 -1.13)
-			(end 2.28 1.13)
+			(start -2.8 -1.22)
+			(end 2.8 1.22)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -4994,19 +4994,17 @@
 				)
 			)
 		)
-		(pad "1" smd roundrect
-			(at -1.4625 0)
-			(size 1.125 1.75)
+		(pad "1" smd rect
+			(at -1.725 0)
+			(size 1.65 1.93)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.222222)
 			(net "/BUCK_CAP_RETURN")
 			(uuid "8b2dcfe7-2c08-42ba-b04e-1e71742fe92d")
 		)
-		(pad "2" smd roundrect
-			(at 1.4625 0)
-			(size 1.125 1.75)
+		(pad "2" smd rect
+			(at 1.725 0)
+			(size 1.65 1.93)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.222222)
 			(net "/PGND")
 			(uuid "2325ae27-a6c5-4c95-bff9-242521297e4c")
 		)
