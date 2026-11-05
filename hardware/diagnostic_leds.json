@@ -1,5 +1,5 @@
 {
-  "revision": "0.4",
+  "revision": "A 0.4 / B 0.5 integrated buck",
   "boards": {
     "pcb_a_display": [
       {
@@ -65,18 +65,14 @@
         "ohms": 15000,
         "voltage": 24,
         "led_at": [
-          22,
-          37,
-          0
+          5.0,
+          43.0,
+          90.0
         ],
         "resistor_at": [
-          22,
-          32,
-          270
-        ],
-        "label_at": [
-          17.2,
-          32
+          5.0,
+          38.0,
+          90.0
         ],
         "color": "green",
         "mpn": "APT2012LZGCK",
@@ -95,14 +91,14 @@
         "ohms": 1500,
         "voltage": 5,
         "led_at": [
-          28,
-          37,
-          0
+          52.0,
+          31.5,
+          90.0
         ],
         "resistor_at": [
-          28,
-          32,
-          270
+          52.0,
+          26.5,
+          90.0
         ],
         "color": "green",
         "mpn": "APT2012LZGCK",
@@ -121,18 +117,14 @@
         "ohms": 470,
         "voltage": 3.3,
         "led_at": [
-          45,
-          34,
-          0
+          72.0,
+          49.0,
+          90.0
         ],
         "resistor_at": [
-          45,
-          30,
-          270
-        ],
-        "label_at": [
-          42,
-          32
+          75.0,
+          49.0,
+          0.0
         ],
         "color": "green",
         "mpn": "APT2012LZGCK",
@@ -151,14 +143,14 @@
         "ohms": 2200,
         "voltage": 5,
         "led_at": [
-          66,
-          39,
-          0
+          66.0,
+          39.0,
+          0.0
         ],
         "resistor_at": [
-          66,
-          35,
-          270
+          66.0,
+          35.0,
+          -90.0
         ],
         "color": "orange",
         "mpn": "APT2012LSECK/J4-PRV",

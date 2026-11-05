@@ -39,6 +39,9 @@ for spec in DATA['boards']:
         else:
             assert fp.GetFPID().GetUniStringLibId()==row['footprint']
             for pad in fp.Pads():
+                if not pad.GetNumber():
+                    assert not pad.IsOnLayer(p.F_Cu) and not pad.IsOnLayer(p.B_Cu)
+                    continue
                 assert pad.GetNetname()==pin_nets[(ref,pad.GetNumber())],(name,ref,pad.GetNumber())
     report=ROOT/'review'/('pcb_'+('a' if name=='pcb_a_display' else 'b')+'_placement_drc.json')
     subprocess.run([CLI,'pcb','drc','--format','json','--output',str(report),str(ROOT/name/(name+'.kicad_pcb'))],check=True)

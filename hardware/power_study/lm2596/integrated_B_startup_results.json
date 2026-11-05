@@ -1,0 +1,10 @@
+{
+  "status": "complete / criteria passed",
+  "stop_s": 0.008,
+  "settled_min_V": 4.979509614537757,
+  "settled_max_V": 4.999429308866134,
+  "ripple_Vpp": 0.019829768284278515,
+  "startup_max_V": 4.999457839597647,
+  "inductor_peak_A": 4.883480680887118,
+  "scope": "Buck core from exported PCB B component values, plus C9 local bypass. No PCB parasitic, thermal, upstream or heater-coupling simulation."
+}

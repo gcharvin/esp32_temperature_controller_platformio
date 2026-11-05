@@ -1,5 +1,5 @@
 {
-  "revision": "0.4 diagnostics",
+  "revision": "A 0.4 / B 0.5 integrated buck",
   "status": "routed prototype, not fabrication release",
   "target_input_V": 24,
   "target_heater_W": 100,
@@ -27,9 +27,9 @@
       "DRC_violations": 0,
       "unconnected_items": 0,
       "schematic_parity_issues": 0,
-      "footprints": 43,
-      "tracks": 380,
-      "vias": 22,
+      "footprints": 48,
+      "tracks": 330,
+      "vias": 31,
       "copper_thickness_mm": {
         "F.Cu": 0.07,
         "B.Cu": 0.07
@@ -77,7 +77,7 @@
           ],
           "discrete_vias": 0,
           "minimum_track_width_mm": 2.4,
-          "track_length_mm": 46.65,
+          "track_length_mm": 44.802,
           "neck_length_below_2p4_mm": 0
         },
         {
@@ -91,9 +91,9 @@
             "2"
           ],
           "discrete_vias": 0,
-          "minimum_track_width_mm": 1.8,
-          "track_length_mm": 11.984,
-          "neck_length_below_2p4_mm": 0.047
+          "minimum_track_width_mm": 1.9048,
+          "track_length_mm": 13.828,
+          "neck_length_below_2p4_mm": 1.891
         },
         {
           "net": "/PGND",
@@ -116,7 +116,7 @@
   "limits": [
     "Physical DevKit dimensions/pinout must be confirmed.",
     "Power/thermal and fault testing not performed.",
-    "XL4015 complete module transient limits not qualified.",
-    "Enclosure v0.5 predates diagnostic LEDs; purchased-module fit and printed clips require physical validation."
+    "Integrated LM2596 input transients, startup and fault conditions not qualified.",
+    "Enclosure STEP v0.7 geometry reconciled; real fit, cables, clips and thermal tests pending."
   ]
 }

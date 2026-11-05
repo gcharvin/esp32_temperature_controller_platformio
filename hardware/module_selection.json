@@ -1,5 +1,5 @@
 {
-  "revision": "routing prototype 0.3 / 2026-11-05",
+  "revision": "A 0.4 / B 0.5 integrated buck",
   "devkit": {
     "manufacturer": "diymore",
     "purchase_url": "https://www.amazon.fr/dp/B0DGLCWR76",
@@ -118,28 +118,24 @@
     }
   },
   "buck": {
-    "seller": "TECNOULAB",
-    "model": "RED5AXL4015",
-    "purchase_url": "https://www.amazon.fr/dp/B0C6R3FMT3",
-    "seller_module_input_V": [
-      5,
-      32
+    "model": "LM2596S-5.0/NOPB",
+    "mounting": "integrated on PCB B v0.5, TO-263-5 tab pin3 PGND",
+    "nominal_input_V": 24,
+    "output_V": 5,
+    "system_budget_A": 0.8,
+    "system_fuse_A": 1,
+    "inductor": "SRP1770TA-101M / 100uH",
+    "diode": "SS36-E3/57T",
+    "input_C8": "EEUFR1H101 / 100uF 50V, reused local input reservoir",
+    "output_C10": "EEUFR1V331UB / 330uF 35V",
+    "output_damping_R13": "56mOhm / 1% / 0.25W / 1206",
+    "ground_connection": "NT1 copper net tie near input: PGND <-> GND; no CC shunt",
+    "removed_connectors": [
+      "J8",
+      "J9"
     ],
-    "seller_module_dimensions_mm": [
-      51,
-      26.3,
-      14
-    ],
-    "datasheet_IC_url": "https://www.xlsemi.com/datasheet/XL4015-EN.pdf",
-    "mounting": "Off-board with flexible wires to its screw terminals; no invented plug-in pad pattern",
-    "output_setting_V": 5.0,
-    "board_b_connections": {
-      "J8.1": "module IN+",
-      "J8.2": "module IN- (PGND)",
-      "J9.1": "module OUT- (GND)",
-      "J9.2": "module OUT+ (+5V_BUCK)"
-    },
-    "note": "Do not short IN- and OUT- on B; preserve possible CC current sense shunt. Module is non-isolated, return common-mode and settings to test."
+    "simulation": "power_study/lm2596/README.md",
+    "status": "Routed prototype; startup, thermal, transient/fault and mechanical tests pending"
   },
   "power": {
     "nominal_input_V": 24,
@@ -163,6 +159,31 @@
     "Power and thermal validation on real hardware still required.",
     "Fuse is not an automatic 100W power limiter.",
     "Independent thermal cutoff remains outside this PCB revision.",
-    "Mechanical STEP v0.4 is an older study, not reconciled to these purchased modules."
-  ]
+    "Enclosure v0.7 matches B v0.5 envelopes; physical assembly and thermal tests remain pending."
+  ],
+  "historical_buck_module": {
+    "seller": "TECNOULAB",
+    "model": "RED5AXL4015",
+    "purchase_url": "https://www.amazon.fr/dp/B0C6R3FMT3",
+    "seller_module_input_V": [
+      5,
+      32
+    ],
+    "seller_module_dimensions_mm": [
+      51,
+      26.3,
+      14
+    ],
+    "datasheet_IC_url": "https://www.xlsemi.com/datasheet/XL4015-EN.pdf",
+    "mounting": "Off-board with flexible wires to its screw terminals; no invented plug-in pad pattern",
+    "output_setting_V": 5.0,
+    "board_b_connections": {
+      "J8.1": "module IN+",
+      "J8.2": "module IN- (PGND)",
+      "J9.1": "module OUT- (GND)",
+      "J9.2": "module OUT+ (+5V_BUCK)"
+    },
+    "note": "Do not short IN- and OUT- on B; preserve possible CC current sense shunt. Module is non-isolated, return common-mode and settings to test.",
+    "status": "REMOVED from B v0.5; historical purchase only"
+  }
 }

@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\Gilles\Documents\PlatformIO\Projects\esp32-temperature-controller-platformio\hardware\pcb_b_temperature\pcb_b_temperature.kicad_sch</source>
-    <date>2026-11-05T12:56:41</date>
+    <date>2026-11-05T16:22:06</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>PCB B - Temperature / 24 V 100 W</title>
         <company>Laboratory hardware platform</company>
-        <rev>0.4</rev>
+        <rev>0.5 INTEGRATED BUCK</rev>
         <date>2026-11-05</date>
         <source>pcb_b_temperature.kicad_sch</source>
         <comment number="1" value="PROTOTYPE - DEVKIT PITCH TO VERIFY - NOT RELEASED FOR FABRICATION"/>
@@ -232,6 +232,60 @@
         </unit>
       </units>
     </comp>
+    <comp ref="C9">
+      <value>100nF / 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Design_Status" value="Prototype 0.5 integrated buck; thermal and fault qualification pending"/>
+      <property name="Sheetname" value="pcb_b_temperature"/>
+      <property name="Sheetfile" value="pcb_b_temperature.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bffcad6a-a462-595d-be28-9d7bed1b1483</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>330uF / 35V</value>
+      <footprint>Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
+        <field name="MPN">EEUFR1V331UB</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Design_Status" value="Prototype 0.5 integrated buck; thermal and fault qualification pending"/>
+      <property name="MPN" value="EEUFR1V331UB"/>
+      <property name="Sheetname" value="pcb_b_temperature"/>
+      <property name="Sheetfile" value="pcb_b_temperature.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bc655b2f-1085-5012-880b-e8b147f237eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="D2">
       <value>SMBJ24CA / transients NOT qualified</value>
       <footprint>Diode_SMD:D_SMB</footprint>
@@ -417,6 +471,34 @@
       <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>72eda490-7fa8-591b-b4ca-9ef394021b0a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D9">
+      <value>SS36 / 60V 3A</value>
+      <footprint>Diode_SMD:D_SMC</footprint>
+      <fields>
+        <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
+        <field name="MPN">SS36-E3/57T</field>
+        <field name="Footprint">Diode_SMD:D_SMC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Design_Status" value="Prototype 0.5 integrated buck; thermal and fault qualification pending"/>
+      <property name="MPN" value="SS36-E3/57T"/>
+      <property name="Sheetname" value="pcb_b_temperature"/>
+      <property name="Sheetfile" value="pcb_b_temperature.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4438b838-79c6-575d-9282-6a31852d40c6</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -639,23 +721,25 @@
         </unit>
       </units>
     </comp>
-    <comp ref="J8">
-      <value>To XL4015 IN / + PGND</value>
-      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</footprint>
+    <comp ref="L1">
+      <value>100uH / SRP1770TA-101M</value>
+      <footprint>Inductor_SMD:L_Bourns_SRP1770TA_16.9x16.9mm</footprint>
       <fields>
-        <field name="Design_Status">provisional</field>
-        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
+        <field name="MPN">SRP1770TA-101M</field>
+        <field name="Footprint">Inductor_SMD:L_Bourns_SRP1770TA_16.9x16.9mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="provisional"/>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Design_Status" value="Prototype 0.5 integrated buck; thermal and fault qualification pending"/>
+      <property name="MPN" value="SRP1770TA-101M"/>
       <property name="Sheetname" value="pcb_b_temperature"/>
       <property name="Sheetfile" value="pcb_b_temperature.kicad_sch"/>
-      <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>7a03583c-57b6-5808-a898-d68fc6f6b82b</tstamps>
+      <tstamps>51f1080f-69d2-5ef4-b4f3-ae9c737626f5</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -665,23 +749,24 @@
         </unit>
       </units>
     </comp>
-    <comp ref="J9">
-      <value>From XL4015 OUT / GND +5V</value>
-      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+    <comp ref="NT1">
+      <value>GND STAR / NO COMPONENT</value>
+      <footprint>NetTie:NetTie-2_SMD_Pad2.0mm</footprint>
       <fields>
-        <field name="Design_Status">provisional</field>
-        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
+        <field name="Footprint">NetTie:NetTie-2_SMD_Pad2.0mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Design_Status" value="provisional"/>
+      <libsource lib="Device" part="NetTie_2" description="Net tie, 2 pins"/>
+      <property name="Design_Status" value="Prototype 0.5 integrated buck; thermal and fault qualification pending"/>
       <property name="Sheetname" value="pcb_b_temperature"/>
       <property name="Sheetfile" value="pcb_b_temperature.kicad_sch"/>
-      <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="net tie short"/>
+      <property name="ki_fp_filters" value="Net*Tie*"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>31515201-a34d-5f53-930f-2abd50330ae5</tstamps>
+      <tstamps>5dfd32ae-9520-5e80-b8bf-c11235c5583a</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1057,28 +1142,60 @@
         </unit>
       </units>
     </comp>
-    <comp ref="U1">
-      <value>TECNOULAB XL4015 CC/CV / OFF-BOARD</value>
+    <comp ref="R13">
+      <value>56m / 1% / 0.25W</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <fields>
-        <field name="Design_Status">Purchased module; wire to screw terminals. No PCB mounting pads. Set 5.00V before connection.</field>
-        <field name="Footprint"/>
+        <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="Lab" part="Buck_Module_TBD" description=""/>
-      <property name="Design_Status" value="Purchased module; wire to screw terminals. No PCB mounting pads. Set 5.00V before connection."/>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Design_Status" value="Prototype 0.5 integrated buck; thermal and fault qualification pending"/>
       <property name="Sheetname" value="pcb_b_temperature"/>
       <property name="Sheetfile" value="pcb_b_temperature.kicad_sch"/>
-      <property name="exclude_from_board"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eedd0497-0af5-5674-ab79-e8a6e57ee8d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>LM2596S-5.0/NOPB</value>
+      <footprint>Package_TO_SOT_SMD:TO-263-5_TabPin3</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm2596.pdf</datasheet>
+      <fields>
+        <field name="Design_Status">Prototype 0.5 integrated buck; thermal and fault qualification pending</field>
+        <field name="MPN">LM2596S-5.0/NOPB</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TO-263-5_TabPin3</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm2596.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Regulator_Switching" part="LM2596S-5" description="5V 3A Step-Down Voltage Regulator, TO-263"/>
+      <property name="Design_Status" value="Prototype 0.5 integrated buck; thermal and fault qualification pending"/>
+      <property name="MPN" value="LM2596S-5.0/NOPB"/>
+      <property name="Sheetname" value="pcb_b_temperature"/>
+      <property name="Sheetfile" value="pcb_b_temperature.kicad_sch"/>
+      <property name="ki_keywords" value="Step-Down Voltage Regulator 5V 3A"/>
+      <property name="ki_fp_filters" value="TO?263*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>a05a454c-cf52-52a8-9a60-48fd8348649e</tstamps>
       <units>
         <unit name="A">
           <pins>
             <pin num="1"/>
-            <pin num="2"/>
+            <pin num="5"/>
             <pin num="3"/>
             <pin num="4"/>
+            <pin num="2"/>
           </pins>
         </unit>
       </units>
@@ -1424,6 +1541,26 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="LED">
       <description>Light emitting diode</description>
       <footprints>
@@ -1444,6 +1581,23 @@
         <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="NetTie_2">
+      <description>Net tie, 2 pins</description>
+      <footprints>
+        <fp>Net*Tie*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">NT</field>
+        <field name="Value">NetTie_2</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Net tie, 2 pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="R">
       <description>Resistor</description>
       <footprints>
@@ -1459,21 +1613,6 @@
       <pins>
         <pin num="1" name="" type="passive"/>
         <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Lab" part="Buck_Module_TBD">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">Buck_Module_TBD</field>
-        <field name="Footprint"/>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <pins>
-        <pin num="1" name="VIN+" type="power_in"/>
-        <pin num="2" name="VIN-" type="power_in"/>
-        <pin num="3" name="5V_OUT+" type="power_out"/>
-        <pin num="4" name="OUT-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Lab" part="UCC27517_DBV">
@@ -1511,6 +1650,27 @@
         <pin num="3" name="EN" type="input"/>
         <pin num="4" name="NC" type="no_connect"/>
         <pin num="5" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Switching" part="LM2596S-5">
+      <description>5V 3A Step-Down Voltage Regulator, TO-263</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm2596.pdf</docs>
+      <footprints>
+        <fp>TO?263*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2596S-5</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TO-263-5_TabPin3</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm2596.pdf</field>
+        <field name="Description">5V 3A Step-Down Voltage Regulator, TO-263</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="OUT" type="output"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="FB" type="input"/>
+        <pin num="5" name="~{ON}/OFF" type="input"/>
       </pins>
     </libpart>
     <libpart lib="Transistor_FET" part="IRLZ44N">
@@ -1567,6 +1727,9 @@
     <library logical="Regulator_Linear">
       <uri>${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_sym</uri>
     </library>
+    <library logical="Regulator_Switching">
+      <uri>${KICAD10_SYMBOL_DIR}/Regulator_Switching.kicad_sym</uri>
+    </library>
     <library logical="Transistor_FET">
       <uri>${KICAD10_SYMBOL_DIR}/Transistor_FET.kicad_sym</uri>
     </library>
@@ -1596,35 +1759,45 @@
       <node ref="U5" pin="1" pinfunction="VDD_1" pintype="power_in"/>
     </net>
     <net code="3" name="/+5V_BUCK" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
       <node ref="F2" pin="1" pintype="passive"/>
-      <node ref="J9" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
-      <node ref="U1" pin="3" pinfunction="5V_OUT+_3" pintype="power_out"/>
+      <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="FB_4" pintype="input"/>
     </net>
-    <net code="4" name="/ENABLE" class="Default">
+    <net code="4" name="/BUCK_CAP_RETURN" class="Default">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="5" name="/BUCK_SW" class="Default">
+      <node ref="D9" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="OUT_2" pintype="output"/>
+    </net>
+    <net code="6" name="/ENABLE" class="Default">
       <node ref="J7" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="U3" pin="2" pintype="input"/>
     </net>
-    <net code="5" name="/FAULT_N" class="Default">
+    <net code="7" name="/FAULT_N" class="Default">
       <node ref="J7" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="U4" pin="2" pinfunction="ALERT/RDY_2" pintype="output"/>
     </net>
-    <net code="6" name="/GATE" class="Default">
+    <net code="8" name="/GATE" class="Default">
       <node ref="Q1" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R3" pin="2" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
     </net>
-    <net code="7" name="/GATE_CMD" class="Default">
+    <net code="9" name="/GATE_CMD" class="Default">
       <node ref="U3" pin="4" pintype="output"/>
       <node ref="U5" pin="3" pinfunction="IN+_3" pintype="input"/>
     </net>
-    <net code="8" name="/GATE_DRV" class="Default">
+    <net code="10" name="/GATE_DRV" class="Default">
       <node ref="R12" pin="1" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
       <node ref="U5" pin="5" pinfunction="OUT_5" pintype="output"/>
     </net>
-    <net code="9" name="/GND" class="Default">
+    <net code="11" name="/GND" class="Default">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
@@ -1635,115 +1808,118 @@
       <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J7" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
-      <node ref="J9" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="NT1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
-      <node ref="U1" pin="4" pinfunction="OUT-_4" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
       <node ref="U3" pin="3" pinfunction="GND_3" pintype="power_in"/>
       <node ref="U4" pin="3" pinfunction="GND_3" pintype="power_in"/>
     </net>
-    <net code="10" name="/HEATER_LOW" class="Default">
+    <net code="12" name="/HEATER_LOW" class="Default">
       <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="Q1" pin="2" pinfunction="D_2" pintype="passive"/>
     </net>
-    <net code="11" name="/I2C_SCL" class="Default">
+    <net code="13" name="/I2C_SCL" class="Default">
       <node ref="J6" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="U4" pin="10" pinfunction="SCL_10" pintype="input"/>
     </net>
-    <net code="12" name="/I2C_SDA" class="Default">
+    <net code="14" name="/I2C_SDA" class="Default">
       <node ref="J6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="U4" pin="9" pinfunction="SDA_9" pintype="bidirectional"/>
     </net>
-    <net code="13" name="/LED_B_D5" class="Default">
+    <net code="15" name="/LED_B_D5" class="Default">
       <node ref="D5" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
     </net>
-    <net code="14" name="/LED_B_D6" class="Default">
+    <net code="16" name="/LED_B_D6" class="Default">
       <node ref="D6" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
     </net>
-    <net code="15" name="/LED_B_D7" class="Default">
+    <net code="17" name="/LED_B_D7" class="Default">
       <node ref="D7" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
     </net>
-    <net code="16" name="/LED_B_D8" class="Default">
+    <net code="18" name="/LED_B_D8" class="Default">
       <node ref="D8" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R12" pin="2" pintype="passive"/>
     </net>
-    <net code="17" name="/NTC_ADC" class="Default">
+    <net code="19" name="/NTC_ADC" class="Default">
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
       <node ref="U4" pin="4" pinfunction="AIN0_4" pintype="input"/>
     </net>
-    <net code="18" name="/NTC_RAW" class="Default">
+    <net code="20" name="/NTC_RAW" class="Default">
       <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
-    <net code="19" name="/PGND" class="Default">
+    <net code="21" name="/PGND" class="Default">
       <node ref="C6" pin="2" pintype="passive"/>
       <node ref="C7" pin="2" pintype="passive"/>
       <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="A1_1" pintype="passive"/>
       <node ref="D5" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D8" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
-      <node ref="J8" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="NT1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="Q1" pin="3" pinfunction="S_3" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
-      <node ref="U1" pin="2" pinfunction="VIN-_2" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U1" pin="5" pinfunction="~{ON}/OFF_5" pintype="input"/>
       <node ref="U5" pin="2" pinfunction="GND_2" pintype="power_in"/>
       <node ref="U5" pin="4" pinfunction="IN-_4" pintype="input"/>
     </net>
-    <net code="20" name="/PWM0" class="Default">
+    <net code="22" name="/PWM0" class="Default">
       <node ref="J7" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="U3" pin="1" pintype="input"/>
     </net>
-    <net code="21" name="/REV_GATE" class="Default">
+    <net code="23" name="/REV_GATE" class="Default">
       <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q2" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R8" pin="1" pintype="passive"/>
     </net>
-    <net code="22" name="/VIN_FUSED" class="Default">
+    <net code="24" name="/VIN_FUSED" class="Default">
       <node ref="F1" pin="2" pintype="passive"/>
       <node ref="Q2" pin="2" pinfunction="D_2" pintype="passive"/>
     </net>
-    <net code="23" name="/VIN_PROTECTED" class="Default">
+    <net code="25" name="/VIN_PROTECTED" class="Default">
       <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
       <node ref="D2" pin="2" pinfunction="A2_2" pintype="passive"/>
       <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
-      <node ref="J8" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="Q2" pin="3" pinfunction="S_3" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
-      <node ref="U1" pin="1" pinfunction="VIN+_1" pintype="power_in"/>
+      <node ref="U1" pin="1" pinfunction="VIN_1" pintype="power_in"/>
     </net>
-    <net code="24" name="/VIN_RAW" class="Default">
+    <net code="26" name="/VIN_RAW" class="Default">
       <node ref="F1" pin="1" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
     </net>
-    <net code="25" name="unconnected-(J7-Pin_5-Pad5)" class="Default">
+    <net code="27" name="unconnected-(J7-Pin_5-Pad5)" class="Default">
       <node ref="J7" pin="5" pinfunction="Pin_5_5" pintype="passive+no_connect"/>
     </net>
-    <net code="26" name="unconnected-(J7-Pin_6-Pad6)" class="Default">
+    <net code="28" name="unconnected-(J7-Pin_6-Pad6)" class="Default">
       <node ref="J7" pin="6" pinfunction="Pin_6_6" pintype="passive+no_connect"/>
     </net>
-    <net code="27" name="unconnected-(U2-NC-Pad4)" class="Default">
+    <net code="29" name="unconnected-(U2-NC-Pad4)" class="Default">
       <node ref="U2" pin="4" pinfunction="NC_4" pintype="no_connect"/>
     </net>
-    <net code="28" name="unconnected-(U4-AIN1-Pad5)" class="Default">
+    <net code="30" name="unconnected-(U4-AIN1-Pad5)" class="Default">
       <node ref="U4" pin="5" pinfunction="AIN1_5" pintype="input+no_connect"/>
     </net>
-    <net code="29" name="unconnected-(U4-AIN2-Pad6)" class="Default">
+    <net code="31" name="unconnected-(U4-AIN2-Pad6)" class="Default">
       <node ref="U4" pin="6" pinfunction="AIN2_6" pintype="input+no_connect"/>
     </net>
-    <net code="30" name="unconnected-(U4-AIN3-Pad7)" class="Default">
+    <net code="32" name="unconnected-(U4-AIN3-Pad7)" class="Default">
       <node ref="U4" pin="7" pinfunction="AIN3_7" pintype="input+no_connect"/>
     </net>
   </nets>

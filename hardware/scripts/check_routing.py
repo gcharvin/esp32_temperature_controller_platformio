@@ -71,7 +71,10 @@ def main():
         pins={(n.attrib['ref'],n.attrib['pin']):net.attrib['name'] for net in xml.findall('./nets/net') for n in net.findall('node')}
         for fp in board.GetFootprints():
             for pad in fp.Pads():
-                assert pad.GetNumber() and pad.GetNetname()==pins[(fp.GetReference(),pad.GetNumber())]
+                if not pad.GetNumber():
+                    assert not pad.IsOnLayer(p.F_Cu) and not pad.IsOnLayer(p.B_Cu), 'Only paste-only anonymous pads allowed'
+                    continue
+                assert pad.GetNetname()==pins[(fp.GetReference(),pad.GetNumber())]
         row={'board':name,'DRC_violations':0,'unconnected_items':0,'schematic_parity_issues':0,
              'footprints':len(list(board.GetFootprints())),
              'tracks':sum(not isinstance(t,p.PCB_VIA) for t in board.GetTracks()),
@@ -93,13 +96,13 @@ def main():
                    ('/PGND',('Q1','3'),('J2','2'))]
             row['high_current_paths']=[power_path(board,*pair) for pair in pairs]
         results.append(row)
-    data={'revision':'0.4 diagnostics','status':'routed prototype, not fabrication release','target_input_V':24,'target_heater_W':100,
+    data={'revision':'A 0.4 / B 0.5 integrated buck','status':'routed prototype, not fabrication release','target_input_V':24,'target_heater_W':100,
           'heater_current_A':100/24,'required_B_outer_copper_um':70,
           'devkit_row_spacing_mm':25.4,'devkit_spacing_status':'ASSUMED, user verification pending',
           'boards':results,'limits':['Physical DevKit dimensions/pinout must be confirmed.',
                                    'Power/thermal and fault testing not performed.',
-                                   'XL4015 complete module transient limits not qualified.',
-                                   'Enclosure v0.5 predates diagnostic LEDs; purchased-module fit and printed clips require physical validation.']}
+                                   'Integrated LM2596 input transients, startup and fault conditions not qualified.',
+                                   'Enclosure STEP v0.7 geometry reconciled; real fit, cables, clips and thermal tests pending.']}
     (ROOT/'review/routing/routing_validation.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(data,indent=2))
 

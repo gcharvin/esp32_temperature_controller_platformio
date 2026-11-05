@@ -76,12 +76,19 @@ def main():
     check_pin(a,'U2',5,'+3V3_A');check_pin(a,'J2',2,'+3V3_A')
     for pin,net in [(1,'+3V3_B'),(8,'+3V3_B'),(3,'GND'),(4,'NTC_ADC'),(9,'I2C_SDA'),(10,'I2C_SCL'),(2,'FAULT_N')]:
         check_pin(b,'U4',pin,net)
-    for ref,pin,net in [('U3',1,'PWM0'),('U3',2,'ENABLE'),('U3',4,'GATE_CMD'),('Q1',1,'GATE'),('Q1',2,'HEATER_LOW'),('Q1',3,'PGND'),('J3',1,'VIN_PROTECTED'),('J3',2,'HEATER_LOW'),('Q2',2,'VIN_FUSED'),('Q2',3,'VIN_PROTECTED'),('Q2',1,'REV_GATE'),('D3',1,'VIN_PROTECTED'),('D3',2,'REV_GATE'),('D4',1,'VIN_PROTECTED'),('D4',2,'HEATER_LOW'),('F1',1,'VIN_RAW'),('F1',2,'VIN_FUSED'),('F2',1,'+5V_BUCK'),('F2',2,'+5V_AB'),('J8',1,'VIN_PROTECTED'),('J8',2,'PGND'),('J9',1,'GND'),('J9',2,'+5V_BUCK'),('U5',1,'+5V_AB'),('U5',2,'PGND'),('U5',3,'GATE_CMD'),('U5',4,'PGND'),('U5',5,'GATE_DRV'),('C8',1,'VIN_PROTECTED'),('C8',2,'PGND'),('R5',1,'NTC_RAW'),('R5',2,'GND'),('R6',1,'NTC_RAW'),('R6',2,'NTC_ADC')]:
+    for ref,pin,net in [('U3',1,'PWM0'),('U3',2,'ENABLE'),('U3',4,'GATE_CMD'),('Q1',1,'GATE'),('Q1',2,'HEATER_LOW'),('Q1',3,'PGND'),('J3',1,'VIN_PROTECTED'),('J3',2,'HEATER_LOW'),('Q2',2,'VIN_FUSED'),('Q2',3,'VIN_PROTECTED'),('Q2',1,'REV_GATE'),('D3',1,'VIN_PROTECTED'),('D3',2,'REV_GATE'),('D4',1,'VIN_PROTECTED'),('D4',2,'HEATER_LOW'),('F1',1,'VIN_RAW'),('F1',2,'VIN_FUSED'),('F2',1,'+5V_BUCK'),('F2',2,'+5V_AB'),('U5',1,'+5V_AB'),('U5',2,'PGND'),('U5',3,'GATE_CMD'),('U5',4,'PGND'),('U5',5,'GATE_DRV'),('C8',1,'VIN_PROTECTED'),('C8',2,'PGND'),('R5',1,'NTC_RAW'),('R5',2,'GND'),('R6',1,'NTC_RAW'),('R6',2,'NTC_ADC')]:
         check_pin(b,ref,pin,net)
-    assert bg['GND'].isdisjoint(bg['PGND']), 'Do not short external CC/CV module input and output returns on B'
+    assert bg['GND'].isdisjoint(bg['PGND']), 'Retain separately routed logic/power returns joined only by NT1'
+    for ref,pin,net in [('U1',1,'VIN_PROTECTED'),('U1',2,'BUCK_SW'),('U1',3,'PGND'),('U1',4,'+5V_BUCK'),('U1',5,'PGND'),('L1',1,'BUCK_SW'),('L1',2,'+5V_BUCK'),('D9',1,'BUCK_SW'),('D9',2,'PGND'),('C9',1,'VIN_PROTECTED'),('C9',2,'PGND'),('C10',1,'+5V_BUCK'),('C10',2,'BUCK_CAP_RETURN'),('R13',1,'BUCK_CAP_RETURN'),('R13',2,'PGND'),('NT1',1,'PGND'),('NT1',2,'GND')]:
+        check_pin(b,ref,pin,net)
+    assert not any(ref in ['J8','J9'] for ref,pin in b), 'External buck wiring must be removed'
+    bc={c.attrib['ref']:c for c in ET.parse(out/'pcb_b_temperature.net.xml').getroot().findall('./components/comp')}
+    assert bc['U1'].findtext('value')=='LM2596S-5.0/NOPB'
+    assert bc['U1'].findtext('footprint')=='Package_TO_SOT_SMD:TO-263-5_TabPin3'
+    assert bc['L1'].findtext('value').startswith('100uH') and bc['C10'].findtext('value').startswith('330uF') and bc['R13'].findtext('value').startswith('56m')
     # Independent diagnostic contract: check rail, series resistor, LED polarity
     # and return. In particular, HEAT must follow the enabled driver output and
-    # no indicator may load the NTC divider or bridge PGND to logic GND.
+    # no indicator may load the NTC divider or add another PGND-to-GND connection.
     diagnostics=[]
     contracts={
         'pcb_a_display': [('D1','R6','+5V_AB','GND','1.5k'),('D2','R7','+3V3_A','GND','470R')],
