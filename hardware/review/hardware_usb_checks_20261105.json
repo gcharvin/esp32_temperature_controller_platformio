@@ -31,10 +31,18 @@
       "boot_reported_loader": "ESP-IDF qa-test-v4.3.3-20220423",
       "identity_limit": "Boot text only, with altered characters; exact chip and flash ID not established by esptool",
       "esptool_connection": "Not established: automatic reset and subsequent no-reset attempts at115200/57600 failed or timed out",
-      "manual_actions": "User confirmed initial BOOT sequence and subsequent EN/RESET during capture; final hold-BOOT attempt was requested",
+      "manual_actions": "User confirmed initial BOOT sequence, EN/RESET during capture and a later BOOT-held sequence. Retried immediately after receiving the last confirmation.",
       "complete_backup_available": false,
       "firmware_written": false,
-      "end_instruction": "Release BOOT and press EN/RESET once to resume normal boot; no further programming attempted"
+      "end_instruction": "Release BOOT and press EN/RESET once to resume normal boot; no further programming attempted",
+      "last_confirmed_BOOT_attempt": {
+        "baud": 57600,
+        "before": "no-reset",
+        "connect_attempts": 3,
+        "chip_identification_success": false,
+        "reported_error": "Serial data stream stopped: Possible serial noise or corruption.",
+        "firmware_written": false
+      }
     }
   ],
   "platform_implications": [
