@@ -1,0 +1,19 @@
+.title KiCad schematic
+.include "../../vendor_model/LM2596_5P0_TRANS.LIB"
+.include "../../vendor_model/ss36.lib"
+.options method=gear maxord=2 reltol=0.003 abstol=1n vntol=1u
+.tran 100n 12m 0 100n
+V1 /vin 0 PWL( 0 0 100u 24 ) 
+C1 /vin /cinret 100u
+XU1 /vin /vout /sw 0 /off LM2596_5P0_TRANS
+R4 /cinret 0 0.1
+V2 /off 0 PWL( 0 0 ) 
+V3 /loadcmd 0 PWL( 0 0.1 5m 0.1 5.01m 0.8 9m 0.8 9.01m 0.1 ) 
+R3 /loadcmd 0 1Meg
+L1 /sw /lind 100u
+R1 /lind /vout 0.118
+C2 /vout /esr 330u
+R2 /esr 0 0.1
+XD1 0 /sw ss36
+B1 /vout 0 i={V(/loadcmd)*LIMIT(V(/vout)/4.75,0,1)}
+.end

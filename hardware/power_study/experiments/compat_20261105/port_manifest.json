@@ -1,0 +1,21 @@
+{
+  "source_sha256": "f8661d25c5517fb2f7fe5bad16fa093eecee13b2f9cefa699e8d15d7004303e2",
+  "vendor_validation": false,
+  "experiments": [
+    {
+      "library": "all_if_smooth_100u.lib",
+      "smoothing_width_SPICE": "100u",
+      "sha256": "3f7e0467636bf31dca5aadc2d6f836df58d117da776517f110a436e8ff73fdf0"
+    },
+    {
+      "library": "all_if_smooth_1m.lib",
+      "smoothing_width_SPICE": "1m",
+      "sha256": "7ca2faa3190dc7d8265982f7c2e17a4688064449ba991265708320a79752ed72"
+    },
+    {
+      "library": "all_if_smooth_10m.lib",
+      "smoothing_width_SPICE": "10m",
+      "sha256": "84eaf0a687b8d93533dbb0973f63f7ab1b62b02d9c53179fc9f0d6c19cd6388c"
+    }
+  ]
+}

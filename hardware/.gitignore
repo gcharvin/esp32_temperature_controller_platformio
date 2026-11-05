@@ -20,3 +20,12 @@ power_study/lmr36520_datasheet.txt
 power_study/**/*.dat
 power_study/**/*.log
 power_study/buck_5v/preview.png
+# Experiments may contain downloaded manufacturer material or generated ports.
+# Track recipes and reports, never silently relicense the model libraries.
+power_study/experiments/**/*.lib
+power_study/experiments/**/*.LIB
+power_study/experiments/**/*.zip
+power_study/experiments/**/*.partial.dat
+power_study/experiments/**/*.run.json
+power_study/experiments/alternatives_20261105/
+power_study/lm2596/benches/*.trap_attempt.json

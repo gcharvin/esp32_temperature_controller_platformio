@@ -1,0 +1,67 @@
+{
+  "candidate": "LM2596S-5.0, 24 V to 5 V / 0.8 A study",
+  "model": {
+    "name": "LM2596_5P0_TRANS",
+    "version": "TI Final 1.00 / 2015-07-06",
+    "modified": false,
+    "source_url": "https://www.ti.com/lit/zip/snvma62",
+    "archive_sha256": "c8d6730cb669b577e013acd14653ef2be12035e778b3b4449e384c93bab8636f",
+    "sha256": "bf883d939dbdce9c9146f9fd6d6c090e7cfb7afb5aaa01b6b8391ca06dbe8134",
+    "diode": {
+      "name": "ss36",
+      "source_url": "https://www.vishay.com/docs/88171/ss36.txt",
+      "sha256": "ed8ecea02b1440cbb7a3db34dc57a7a88581f34b71ffd8795607a8f3758b202a",
+      "modified": false
+    }
+  },
+  "scope": "Out-of-bound sensitivity study, not nominal acceptance: 20 mOhm total ESR implies the proposed physical 56 mOhm series resistor is missing; 150 mOhm exceeds the proposed room-temperature capacitor approximation. Both use L=80 uH and C=264 uF. Temperature is not qualified by this test.",
+  "criteria": {
+    "output_range_V": [
+      4.75,
+      5.25
+    ],
+    "ripple_max_Vpp": 0.05
+  },
+  "external_components": {
+    "L_H": 0.0001,
+    "L_DCR_ohm": 0.118,
+    "Cin_F": 0.0001,
+    "Cin_ESR_ohm": 0.1,
+    "Cout_F": 0.00033,
+    "Cout_total_series_ohm": 0.1,
+    "Cout_added_series_resistance_ohm": 0.056,
+    "Cout_lower_series_bound_ohm": 0.056,
+    "Cout_tolerance_case_F": 0.000264,
+    "output_capacitor_example": "Panasonic EEUFR1V331U, 330 uF / 35 V, +/-20%, 43 mOhm max impedance at 100 kHz and 20 C. Add an explicit 56 mOhm series resistor in the capacitor branch to bound minimum ESR. Total 100 mOhm rounds up the capacitor 43 mOhm maximum impedance plus 56 mOhm resistor; lower-bound case assumes zero capacitor ESR and 56 mOhm total. Constant ESR at switching frequency is an approximation, not a fitted capacitor model; temperature, ESL and aging are not qualified.",
+    "output_capacitor_source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB",
+    "diode": "Vishay SS36, SMC, 60 V / 3 A, official unmodified SPICE3 model",
+    "inductor": "Bourns SRP1770TA-101M, 100 uH +/-20%, DCR max 118 mOhm, Isat1 6.5 A at 20% loss; modeled linearly. Derated case L=80 uH and C=264 uF. Startup peaks and physical integration require review.",
+    "inductor_source": "https://www.bourns.com/docs/Product-Datasheets/srp1770ta.pdf"
+  },
+  "cases": [
+    {
+      "name": "stress_esr_20m",
+      "deck": "benches/stress_esr_20m.cir",
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ]
+    },
+    {
+      "name": "stress_esr_150m",
+      "deck": "benches/stress_esr_150m.cir",
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "deck": "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\lm2596\\benches\\stress_esr_20m.cir",
+  "status": "complete",
+  "expected_stop_s": 0.012,
+  "vectors": [
+    "v(vout)",
+    "v(vin)",
+    "v(sw)",
+    "l1#branch"
+  ],
+  "engine": "KiCad 10 ngspice shared library",
+  "compatibility": "psa",
+  "input_sha256": {
+    "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\lm2596\\benches\\stress_esr_20m.cir": "cf25c7e4095da30706890031c6f3a774a3cc0cf656f93aa1dde3ffc2f8a0834e",
+    "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\vendor_model\\LM2596_5P0_TRANS.LIB": "bf883d939dbdce9c9146f9fd6d6c090e7cfb7afb5aaa01b6b8391ca06dbe8134",
+    "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\vendor_model\\ss36.lib": "ed8ecea02b1440cbb7a3db34dc57a7a88581f34b71ffd8795607a8f3758b202a"
+  },
+  "command_status": 0,
+  "errors": [],
+  "last_time_s": 0.012,
+  "rows": 2631942,
+  "datafile": "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\lm2596\\benches\\stress_esr_20m.dat",
+  "elapsed_s": 115.531
+}

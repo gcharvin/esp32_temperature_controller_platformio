@@ -1,0 +1,24 @@
+{
+  "deck": "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\lm2596\\benches\\startup.cir",
+  "status": "complete",
+  "expected_stop_s": 0.008,
+  "vectors": [
+    "v(vout)",
+    "v(vin)",
+    "v(sw)",
+    "l1#branch"
+  ],
+  "engine": "KiCad 10 ngspice shared library",
+  "compatibility": "psa",
+  "input_sha256": {
+    "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\lm2596\\benches\\startup.cir": "bd5aa834d143017ab8f478b7a16076a034bb6c73ad4a096a67bf4b19f3484176",
+    "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\vendor_model\\LM2596_5P0_TRANS.LIB": "bf883d939dbdce9c9146f9fd6d6c090e7cfb7afb5aaa01b6b8391ca06dbe8134",
+    "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\vendor_model\\ss36.lib": "ed8ecea02b1440cbb7a3db34dc57a7a88581f34b71ffd8795607a8f3758b202a"
+  },
+  "command_status": 0,
+  "errors": [],
+  "last_time_s": 0.008,
+  "rows": 1793476,
+  "datafile": "C:\\Users\\Gilles\\Documents\\PlatformIO\\Projects\\esp32-temperature-controller-platformio\\hardware\\power_study\\lm2596\\benches\\startup.dat",
+  "elapsed_s": 91.859
+}

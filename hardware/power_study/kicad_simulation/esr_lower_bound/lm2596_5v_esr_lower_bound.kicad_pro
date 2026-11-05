@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "filename": "lm2596_5v_esr_lower_bound.kicad_pro",
+    "version": 1
+  },
+  "schematic": {
+    "ngspice": {
+      "fix_include_paths": true,
+      "model_mode": 2,
+      "meta": {
+        "version": 0
+      },
+      "workbook_filename": "lm2596_5v_esr_lower_bound.wbk"
+    }
+  }
+}

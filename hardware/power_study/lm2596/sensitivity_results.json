@@ -1,0 +1,34 @@
+{
+  "scope": "Out-of-bound sensitivity study, not nominal acceptance: 20 mOhm total ESR implies the proposed physical 56 mOhm series resistor is missing; 150 mOhm total ESR exceeds the proposed room-temperature capacitor approximation. Both use L=80 uH and C=264 uF.",
+  "criteria": {
+    "output_range_V": [
+      4.75,
+      5.25
+    ],
+    "ripple_max_Vpp": 0.05
+  },
+  "cases": [
+    {
+      "name": "stress_esr_20m",
+      "completed_until_s": 0.012,
+      "deck_sha256": "cf25c7e4095da30706890031c6f3a774a3cc0cf656f93aa1dde3ffc2f8a0834e",
+      "waveform_sha256": "6de9c83d6bbade89ec6705f17453b47098beba34e86d25f69ebf9b405fe4a949",
+      "output_min_V": 4.969186890288229,
+      "output_max_V": 4.999773168515518,
+      "ripple_Vpp": 0.008350941009057422,
+      "regulated_range": true,
+      "settled_ripple": true
+    },
+    {
+      "name": "stress_esr_150m",
+      "completed_until_s": 0.012,
+      "deck_sha256": "2c6b0727c3ab600f476ceb7a3140ec8329c5b434d18caf50b8c4aa137732ea45",
+      "waveform_sha256": "9f75c84354dc6a39373afb940f841e7176646f08b2d643b67877ebc54cb860f6",
+      "output_min_V": 4.959714845858964,
+      "output_max_V": 5.008147224360711,
+      "ripple_Vpp": 0.031775899334842705,
+      "regulated_range": true,
+      "settled_ripple": true
+    }
+  ]
+}

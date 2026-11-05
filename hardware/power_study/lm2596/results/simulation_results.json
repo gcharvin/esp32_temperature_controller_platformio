@@ -1,0 +1,217 @@
+{
+  "candidate": "LM2596S-5.0, 24 V to 5 V / 0.8 A study",
+  "model": {
+    "name": "LM2596_5P0_TRANS",
+    "version": "TI Final 1.00 / 2015-07-06",
+    "modified": false,
+    "source_url": "https://www.ti.com/lit/zip/snvma62",
+    "archive_sha256": "c8d6730cb669b577e013acd14653ef2be12035e778b3b4449e384c93bab8636f",
+    "sha256": "bf883d939dbdce9c9146f9fd6d6c090e7cfb7afb5aaa01b6b8391ca06dbe8134",
+    "diode": {
+      "name": "ss36",
+      "source_url": "https://www.vishay.com/docs/88171/ss36.txt",
+      "sha256": "ed8ecea02b1440cbb7a3db34dc57a7a88581f34b71ffd8795607a8f3758b202a",
+      "modified": false
+    }
+  },
+  "scope": "Electrical transient study after upstream protection and before existing F2. Excludes thermal behavior, parasitic PCB/cable effects, EMI, USB sharing, MCU firmware and manufacture qualification.",
+  "criteria": {
+    "output_range_V": [
+      4.75,
+      5.25
+    ],
+    "ripple_max_Vpp": 0.05
+  },
+  "cases": [
+    {
+      "name": "startup",
+      "deck": "benches\\startup.cir",
+      "deck_sha256": "bd5aa834d143017ab8f478b7a16076a034bb6c73ad4a096a67bf4b19f3484176",
+      "waveform_sha256": "20cd916837f9265c71a1ccdd253d933af3792f671db75449b2b5cfe5adf330ec",
+      "samples": 1793476,
+      "completed_until_s": 0.008,
+      "regulated_window_s": [
+        0.004,
+        0.008
+      ],
+      "output_min_V": 4.979509614537757,
+      "output_max_V": 4.999429308866134,
+      "ripple_window_s": [
+        0.007,
+        0.008
+      ],
+      "output_mean_V": 4.984696728325834,
+      "ripple_Vpp": 0.019829768284278515,
+      "startup_max_V": 4.999457839597647,
+      "final_output_V": 4.9830208098483,
+      "checks": {
+        "regulated_range": true,
+        "settled_ripple": true,
+        "startup_overvoltage": true,
+        "startup_reaches_regulation": true
+      },
+      "inputs_hashed_at_run_start": true,
+      "inductor_peak_A": 4.883480680887118,
+      "all_criteria_pass": true
+    },
+    {
+      "name": "load_step",
+      "deck": "benches\\load_step.cir",
+      "deck_sha256": "e345b30cacc84c3bcbe24e1a3d1ba0940305f0a8bfdd6bad76294c59776c5c6a",
+      "waveform_sha256": "44c2035682784720d264ff20f8a0df4774e481822e7847001a1ecc853e1fec99",
+      "samples": 2711641,
+      "completed_until_s": 0.012,
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "output_min_V": 4.961536187361521,
+      "output_max_V": 5.012759180208446,
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ],
+      "output_mean_V": 4.984685072543882,
+      "ripple_Vpp": 0.02689927807430781,
+      "startup_max_V": 4.99977095795462,
+      "final_output_V": 4.983569021116687,
+      "checks": {
+        "regulated_range": true,
+        "settled_ripple": true,
+        "startup_overvoltage": true,
+        "startup_reaches_regulation": true
+      },
+      "inputs_hashed_at_run_start": true,
+      "inductor_peak_A": 4.877552027005258,
+      "all_criteria_pass": true
+    },
+    {
+      "name": "load_step_derated",
+      "deck": "benches\\load_step_derated.cir",
+      "deck_sha256": "905c98e98881b85b477c5a7ff22a728c7d658bfc359a07d1599c99ed5e01d301",
+      "waveform_sha256": "cceea320a82b6c3b99000db6ee5c698f838ec0076f29515277d271ae401cd0a4",
+      "samples": 2682288,
+      "completed_until_s": 0.012,
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "output_min_V": 4.963602940704522,
+      "output_max_V": 5.003178745590744,
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ],
+      "output_mean_V": 4.984641378986575,
+      "ripple_Vpp": 0.023262595276774434,
+      "startup_max_V": 5.002732778203605,
+      "final_output_V": 4.985795391674442,
+      "checks": {
+        "regulated_range": true,
+        "settled_ripple": true,
+        "startup_overvoltage": true,
+        "startup_reaches_regulation": true
+      },
+      "inputs_hashed_at_run_start": true,
+      "inductor_peak_A": 4.906782162292207,
+      "all_criteria_pass": true
+    },
+    {
+      "name": "esr_lower_bound",
+      "deck": "benches\\esr_lower_bound.cir",
+      "deck_sha256": "c1ee1005af4b427020fbab15147abbdd2b5c175ceaa7349afe6ffc78e8720045",
+      "waveform_sha256": "dfd1955da66f6b3f77d0e2c5f82727b91af1a431c1f2162ac36c9fc2c650125f",
+      "samples": 2669046,
+      "completed_until_s": 0.012,
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "output_min_V": 4.966766156094477,
+      "output_max_V": 5.002895332536677,
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ],
+      "output_mean_V": 4.984681488416414,
+      "ripple_Vpp": 0.015193103915100536,
+      "startup_max_V": 4.996013507923612,
+      "final_output_V": 4.983154568617535,
+      "checks": {
+        "regulated_range": true,
+        "settled_ripple": true,
+        "startup_overvoltage": true,
+        "startup_reaches_regulation": true
+      },
+      "inputs_hashed_at_run_start": true,
+      "inductor_peak_A": 4.932453628642159,
+      "all_criteria_pass": true
+    },
+    {
+      "name": "line_step",
+      "deck": "benches\\line_step.cir",
+      "deck_sha256": "bc02490f443b09e1b20da6d59ac32c0689b26ce813e452d1208bc8200f5c1e96",
+      "waveform_sha256": "58818cb480bf861c3287db05fb62f1c9f930068ede9ff2ead127c18481b6291a",
+      "samples": 2711298,
+      "completed_until_s": 0.012,
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "output_min_V": 4.976338098184145,
+      "output_max_V": 5.000726929876312,
+      "ripple_window_s": [
+        0.011,
+        0.012
+      ],
+      "output_mean_V": 4.984510076144653,
+      "ripple_Vpp": 0.016089162944174618,
+      "startup_max_V": 5.008308138554709,
+      "final_output_V": 4.983646630774455,
+      "checks": {
+        "regulated_range": true,
+        "settled_ripple": true,
+        "startup_overvoltage": true,
+        "startup_reaches_regulation": true
+      },
+      "inputs_hashed_at_run_start": true,
+      "inductor_peak_A": 4.884124719198052,
+      "all_criteria_pass": true
+    },
+    {
+      "name": "disable",
+      "deck": "benches\\disable.cir",
+      "deck_sha256": "c8228e40c6b8855a0475566294118277c5dee1ec78f0e4d423f71fb49a2847a8",
+      "waveform_sha256": "cd9cbb2de1bf7d4b57c2c6216f425ac36099c2d822a0cf4973aa657ef87029e4",
+      "samples": 1202527,
+      "completed_until_s": 0.015,
+      "regulated_window_s": [
+        0.004,
+        0.005
+      ],
+      "output_min_V": 4.97973263031446,
+      "output_max_V": 4.999429308866134,
+      "ripple_window_s": [
+        0.004,
+        0.005
+      ],
+      "output_mean_V": 4.984636261451479,
+      "ripple_Vpp": 0.01969667855167412,
+      "startup_max_V": 4.999457839597647,
+      "final_output_V": 0.2101977871676945,
+      "checks": {
+        "regulated_range": true,
+        "settled_ripple": true,
+        "startup_overvoltage": true,
+        "startup_reaches_regulation": true,
+        "shutdown_discharge": true,
+        "shutdown_no_high_switch_pulses_last_ms": true
+      },
+      "inputs_hashed_at_run_start": true,
+      "inductor_peak_A": 4.883480680887118,
+      "shutdown_switch_max_V_last_ms": 0.2882105172603616,
+      "all_criteria_pass": true
+    }
+  ],
+  "all_criteria_pass": true
+}

@@ -1,0 +1,17 @@
+{
+  "verification": "Manual observation of KiCad Simulator GUI through computer-use, plus execution of actual exported SPICE netlist",
+  "verified_at_utc": "2026-11-05T14:40:58.405619+00:00",
+  "KiCad_version": "10.0.6",
+  "model_mode": "PSpice / ngbehavior=psa",
+  "source": "startup\\lm2596_5v_startup.cir",
+  "source_sha256": "36f8166a82a2446f66634c08fa17f35fc623d0f2d6b49f50c07bdfe55b9ea2bb",
+  "workbook_sha256": "45dd7d2c4591b68ce4aaa485605b4d9307f5c31c2f50645d36a6d023aa0ff72f",
+  "gui_completed_data_rows": 1793217,
+  "gui_visible_traces": [
+    "V(/vin)",
+    "V(/vout)"
+  ],
+  "transient_stop_s": 0.008,
+  "exported_netlist_run_report": "startup/lm2596_5v_startup.run.json",
+  "other_case_validation": "ERC on all eight native schematic projects; six acceptance cases plus two sensitivity cases executed as separate SPICE benches"
+}

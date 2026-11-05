@@ -1,0 +1,106 @@
+[
+  {
+    "deck": "all_if_smooth_100u.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000640463, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000640462834,
+      "vout_V": 0.418744392
+    },
+    "deck_sha256": "649da11e24ed6330dc814ba306d99efe1c9ba27edb5944986a217a1f906072a8"
+  },
+  {
+    "deck": "all_if_smooth_10m.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000558003, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000558002663,
+      "vout_V": 0.00580998383
+    },
+    "deck_sha256": "24dbd803c0e1116dce3c178a1ca41e21461b4564299c4e2bfef9c16b60b37a5c"
+  },
+  {
+    "deck": "all_if_smooth_1m.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000609278, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000609278442,
+      "vout_V": 0.266052928
+    },
+    "deck_sha256": "ce5b4d932a23af413db780ce897727c4bceb1b2b55e4fbf5c877be995e4788a7"
+  },
+  {
+    "deck": "buffer_smooth_1m.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000634358, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000634358177,
+      "vout_V": 0.41393483
+    },
+    "deck_sha256": "741131a77843b33779f4f29a904ab042749761b1a7c8bb433c02ccd9f3a5057f"
+  },
+  {
+    "deck": "latch_smooth_1m.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000557997, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000557996769,
+      "vout_V": 0.00592746625
+    },
+    "deck_sha256": "bf67de7ddc4f54a507c70133f7ceeabd0aaf9c088c51e950ea5a76bd4c2154f9"
+  },
+  {
+    "deck": "logic_smooth_10m.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000203704, timestep = 1.25e-19: trouble with node \"xu1.x_u4_u862.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000203703815,
+      "vout_V": 2.00174381e-05
+    },
+    "deck_sha256": "5af5166984428808b4a8c945b182961a5f553dd777639056c1e965ca2321e332"
+  },
+  {
+    "deck": "logic_smooth_1m.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000573297, timestep = 1.25e-19: trouble with node \"xu1.x_u6_u847.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000573296824,
+      "vout_V": 0.0208253149
+    },
+    "deck_sha256": "2d69a2523a36b99804e234467df191421f5cd005628883fc06b44b436de94678"
+  },
+  {
+    "deck": "all_if_smooth_fine.cir",
+    "completed": false,
+    "failure": [
+      "stderr doAnalyses: TRAN:  Timestep too small; time = 0.000558015, timestep = 6.25e-21: trouble with node \"xu1.x_u6_u847.yint1\"",
+      "stderr run simulation(s) aborted"
+    ],
+    "last_partial_point": {
+      "t_s": 0.000558015463,
+      "vout_V": 0.00580915331
+    },
+    "deck_sha256": "8963f8b70fc8ae37c29fc1ed5437161ecbaeec89b63a51f02c6cbaed9be01e54"
+  }
+]
