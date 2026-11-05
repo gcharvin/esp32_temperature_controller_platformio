@@ -2,7 +2,7 @@
 
 Révision du **5 novembre 2026**. Les deux cartes sont routées dans les fichiers natifs KiCad, avec empreintes physiques et plans de masse. Cible de B : **24 V continu / chauffage résistif 100 W**, soit 4,17 A pour la charge. A porte un seul ESP32 ; B reste sans microcontrôleur.
 
-**Prototype à contrôler, pas dossier de fabrication libéré.** À la demande de l'utilisateur, le routage avance avec **25,40 mm entre rangées de la DevKit comme hypothèse**, à vérifier sur la carte achetée. Le dimensionnement thermique et les essais de défaut restent à réaliser. Aucun Gerber/CPL final n'est généré.
+**Prototype à contrôler, pas dossier de fabrication libéré.** L'entraxe des deux rangées de la DevKit est **25,40 mm, confirmé par mesure de l'utilisateur le 5 novembre 2026** ; il correspond à l'empreinte déjà routée. Les autres cotes de montage, le dimensionnement thermique et les essais de défaut restent à vérifier. Aucun Gerber/CPL final n'est généré.
 
 Une [étude de buck intégré simulable dans KiCad](power_study/README.md) est disponible séparément : variante LM2596 fixe 5 V, six bancs transitoires réussis sous ngspice, sources et classeurs KiCad. Elle est intégrée au schéma et au routage de B v0.5 ; la maquette mécanique v0.7 reprend ce placement, sans module externe.
 
@@ -37,7 +37,7 @@ Dans l'éditeur PCB, afficher F.Cu/B.Cu et masquer temporairement les zones remp
 
 ## Modules achetés et empreintes
 
-- **DevKit diymore, USB-C, CH340, 30 contacts**, [ASIN B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76). Elle remplace l'hypothèse ELEGOO/CP2102. Empreinte locale `LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED`, pour deux barrettes femelles 1×15 au pas 2,54 mm. Brochage relevé sur les vues du vendeur. Encombrement annoncé : 54 × 27 mm. L'entraxe de 25,40 mm est une **inférence**, pas une cote fabricant certifiée : le vérifier avant fabrication. Voir `module_selection.json` pour les 30 contacts et la correspondance aux GPIO.
+- **DevKit diymore, USB-C, CH340, 30 contacts**, [ASIN B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76). Elle remplace l'hypothèse ELEGOO/CP2102. Empreinte locale `LabHardware:Diymore_ESP32_30P_Rows25.40mm_ASSUMED`, pour deux barrettes femelles 1×15 au pas 2,54 mm. Brochage relevé sur les vues du vendeur. Encombrement annoncé : 54 × 27 mm. **L'entraxe de 25,40 mm est maintenant confirmé par mesure de la carte achetée.** Le suffixe `_ASSUMED` et les anciennes annotations natives restent des identifiants/notes historiques ; le statut courant est dans `module_selection.json` et le dossier de fabrication régénéré. Aucun changement de géométrie ni de pistes n'est nécessaire pour cette cote. Contour, brochage et hauteur montée/USB ne sont pas validés par cette seule mesure. Voir `module_selection.json` pour les 30 contacts et la correspondance aux GPIO.
 - **B v0.5 : LM2596S-5.0/NOPB intégré**, self 100 µH SRP1770TA-101M, diode SS36, C8 d’entrée 100 µF / 50 V, C9 de découplage 100 nF / 50 V, C10 de sortie 330 µF / 35 V et résistance R13 de 56 mΩ. Le module XL4015 acheté n’est plus utilisé dans cette révision. J8/J9 sont supprimés ; NT1 matérialise la jonction des masses.
 
 - Les ports périphériques A et la sonde B ont des JST-XH physiques. U3 est une SN74LVC1G08DBVR en SOT-23-5 ; U5 une UCC27517DBVR en SOT-23-5. Q1 est une IRLZ44NPBF TO-220 ; Q2 une DMP6023LE-13 SOT-223. Les anciennes enveloppes sans pastilles sont conservées dans leur bibliothèque historique, mais **aucune n'est utilisée dans les PCB routés**.

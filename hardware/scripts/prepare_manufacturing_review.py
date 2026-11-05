@@ -8,6 +8,7 @@ customer-supplied DevKit: quote TWO soldered sockets, not one soldered module.
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 import subprocess
 import xml.etree.ElementTree as ET
@@ -20,6 +21,7 @@ OUT = ROOT / 'manufacturing' / 'review_A04_B05'
 CLI = Path('C:/Program Files/KiCad/10.0/bin/kicad-cli.exe')
 JST = 'https://www.jst-mfg.com/product/pdf/eng/eXH.pdf'
 RC = 'https://www.yageogroup.com/component-documentation/download/specsheet/'
+DEVKIT = json.loads((ROOT/'module_selection.json').read_text(encoding='utf-8'))['devkit']
 
 
 def sha(path):
@@ -74,8 +76,9 @@ def selection(board, ref):
         if ref == 'U2':
             return LDO
         if ref == 'U1':
-            return part('diymore / ASIN B0DGLCWR76','diymore','customer-supplied removable 30P DevKit; row spacing NOT confirmed',
-                        'https://www.amazon.fr/dp/B0DGLCWR76','physical measurement OPEN')
+            return part('diymore / ASIN B0DGLCWR76','diymore',
+                        'customer-supplied removable 30P DevKit; row spacing '+str(DEVKIT['row_spacing_mm'])+' mm; other fit checks OPEN',
+                        'https://www.amazon.fr/dp/B0DGLCWR76',DEVKIT['row_spacing_status'])
     else:
         if ref in ('C1','C2','C7'):
             return CAP1  # 16 V rating also covers the existing 10 V minimum for C2.
@@ -219,14 +222,23 @@ def main():
             '--excellon-separate-th','--generate-map','--map-format','pdf','--output',str(gerbers)+'/',pcb)
         # Extra physical items are not falsely assigned board centroid U1.
         if code=='A':
+            pads={p.GetNumber():p.GetPosition() for p in footprints['U1'].Pads()}
+            centers=[tuple(sum(getattr(pads[str(i)],axis) for i in group)/15 for axis in ('x','y'))
+                     for group in (range(1,16),range(16,31))]
+            native_spacing=pcbnew.ToMM(math.dist(*centers))
+            if abs(native_spacing-DEVKIT['row_spacing_mm'])>1e-5:
+                raise ValueError('DevKit footprint row spacing differs from recorded measurement')
+            manifest['devkit_row_spacing']=dict(native_mm=round(native_spacing,5),
+                recorded_mm=DEVKIT['row_spacing_mm'],status=DEVKIT['row_spacing_status'],
+                evidence=DEVKIT.get('row_spacing_measurement'),other_fit_checks='OPEN')
             write_csv(folder/'U1_socket_assembly_quote.csv',[
                 dict(Assembly_item='U1_SOCKET_BOTTOM',Quantity=1,MPN_candidate='M20-7821546',Manufacturer='Harwin',
                      Pads='U1.1..15',Pitch_mm=2.54,Body_height_mm=8.5,Row_spacing_mm=25.4,
-                     Status='OPEN: row spacing, drill, header insertion and USB height must be checked',
+                     Status='Row spacing25.40mm confirmed by user2026-11-05; OPEN: drill, header insertion and USB height',
                      Source='https://www.harwin.com/products/M20-7821546'),
                 dict(Assembly_item='U1_SOCKET_TOP',Quantity=1,MPN_candidate='M20-7821546',Manufacturer='Harwin',
                      Pads='U1.16..30',Pitch_mm=2.54,Body_height_mm=8.5,Row_spacing_mm=25.4,
-                     Status='OPEN: row spacing, drill, header insertion and USB height must be checked',
+                     Status='Row spacing25.40mm confirmed by user2026-11-05; OPEN: drill, header insertion and USB height',
                      Source='https://www.harwin.com/products/M20-7821546')])
         for source in (sch,pcb,ROOT/name/(name+'.kicad_pro')):
             manifest['sources_sha256'][source.relative_to(ROOT).as_posix()]=native_hashes[source]

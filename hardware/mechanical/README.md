@@ -66,9 +66,10 @@ Aucun dissipateur supplémentaire n'est représenté ; un dissipateur éventuel
 imposerait une nouvelle revue du STEP.
 
 La DevKit diymore reste enfichable sur A : corps vendeur 54 × 27 mm, deux supports
-femelles 1×15, entraxe **25,40 mm supposé**, hauteur des supports 8,5 mm supposée.
+femelles 1×15, entraxe **25,40 mm confirmé par mesure utilisateur le 5 novembre 2026**,
+hauteur des supports 8,5 mm supposée. La géométrie de cet entraxe était déjà correcte.
 Le LCD de référence a un PCB 98 × 60 mm et un backpack jusqu'à y=28. Ces cotes
-restent à mesurer sur le matériel acheté.
+restent à mesurer sur le matériel acheté, à l'exception de l'entraxe confirmé.
 
 ## Accès aux connecteurs
 

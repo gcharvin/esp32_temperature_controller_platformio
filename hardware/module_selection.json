@@ -7,13 +7,13 @@
     "contacts": 30,
     "header_pitch_mm": 2.54,
     "row_spacing_mm": 25.4,
-    "row_spacing_status": "USER-AUTHORIZED ASSUMPTION; verify physical board before manufacture",
+    "row_spacing_status": "CONFIRMED BY USER MEASUREMENT on purchased DevKit, 2026-11-05",
     "outline_mm": [
       54,
       27
     ],
     "outline_source": "Seller image: 5.4 x 2.7 cm; not a controlled mechanical drawing",
-    "spacing_reason": "Top-view seller image has about ten pin pitches between rows. 25.4 mm is an inference, not a certified diymore dimension. No authoritative dimensioned drawing was found.",
+    "spacing_reason": "Initial seller-image inference of 25.40 mm confirmed by user measurement. Existing footprint geometry is retained; _ASSUMED remains its historical library identifier.",
     "top_view_orientation": "Before placement rotation: antenna top, USB bottom; numbering down left 1..15, up right 16..30. On PCB A: antenna left, USB right.",
     "pin_labels": {
       "1": "EN",
@@ -115,6 +115,13 @@
         14,
         15
       ]
+    },
+    "row_spacing_measurement": {
+      "value_mm": 25.4,
+      "date": "2026-11-05",
+      "source": "User measured center-to-center distance between the two header rows of the purchased DevKit",
+      "uncertainty_mm": null,
+      "scope": "row spacing only; outline, pin labels, insertion height and USB position are not confirmed by this measurement"
     }
   },
   "buck": {

@@ -53,8 +53,12 @@ alternative ne sera retenue qu'après comparaison des devis.
   pas un composant unique à placer au centroïde U1. Le fichier
   `A/U1_socket_assembly_quote.csv` donne deux articles candidats
   Harwin **M20-7821546**, hauteur 8,5 mm et pas 2,54 mm, avec leurs groupes de
-  pastilles. Entraxe, perçages et hauteur montée/USB restent à vérifier ; ce
+  pastilles. **L'entraxe de 25,40 mm a été confirmé par mesure de l'utilisateur
+  le 5 novembre 2026.** Perçages, insertion et hauteur montée/USB restent à vérifier ; ce
   choix n'est pas encore intégré comme nouvelle géométrie dans le STEP.
+  Le nom d'empreinte `_ASSUMED` et les anciennes notes natives sont conservés
+  pour éviter une migration sans changement géométrique ; le statut de cette
+  cote dans le dossier courant prévaut sur ces annotations historiques.
 - B/NT1 est du cuivre, **zéro composant à acheter ou placer**. Il est exclu
   explicitement de la BOM d'assemblage et du CPL.
 - JP1 reçoit une barrette candidate **Harwin M20-9990246**, avec cavalier

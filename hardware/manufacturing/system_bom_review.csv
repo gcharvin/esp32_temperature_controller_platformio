@@ -1,7 +1,7 @@
 Item,Quantity_per_system,Description,Reference_or_candidate,Supply_status,Assembly,Remaining_check
 PCB_A,1,Display board A v0.4,See review_A04_B05/A,RFQ draft,Factory SMT plus THT,DevKit dimensions and approved purchasing references
 PCB_B,1,Temperature board B v0.5 24V,See review_A04_B05/B,RFQ draft,Factory SMT plus THT,Electrical review and approved purchasing references
-DEVKIT,1,30P ESP32 USB-C CH340 diymore,B0DGLCWR76,Already purchased,Plug into two sockets after assembly,25.40mm row spacing and USB position to measure
+DEVKIT,1,30P ESP32 USB-C CH340 diymore,B0DGLCWR76,Already purchased; row spacing25.40mm confirmed by user2026-11-05,Plug into two sockets after assembly,Outline pinout insertion height and USB position still to check
 DEVKIT_SOCKETS,2,Female 1x15 2.54mm height8.5mm,M20-7821546,Quote candidate already counted in A socket table,Factory THT under U1 not a single centroid,Drill and insertion height plus actual DevKit pins
 JP1_SHUNT,1,Removable 2.54mm two-contact shunt,M7566-05,Harwin candidate with M20-9990246 header,Fit after assembly with USB disconnected,Mechanical height and access to approve
 LCD,1,LCD20x4 and I2C backpack used at3.3V,,Existing prototype reference to identify,Clip into removable front,Exact board dimensions contrast backlight current and pinout
