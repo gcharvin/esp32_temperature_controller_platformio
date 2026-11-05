@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-05",
+  "scope": "Connected USB-C board observations, serial boot and read-only flash checks. No electrical VBUS/VIN qualification.",
+  "firmware_replaced_or_erased": false,
+  "VBUS_isolation_measured": false,
+  "external_5V_supply_test_performed": false,
+  "sources_of_identity": "Windows USB/serial enumeration, esptool5.1.2 and private serial capture",
+  "boards": [
+    {
+      "local_port": "COM4",
+      "USB_bridge_family": "Silicon Labs CP210x",
+      "chip_identified_by_esptool": "ESP32-D0WD-V3 revision3.1",
+      "flash_bytes_identified": 4194304,
+      "serial_passive_115200_observation": "No bytes during first15-second window; not proof of firmware failure",
+      "read_460800": "Failed packet transfer; no write requested",
+      "read_probe_115200_bytes": 65536,
+      "complete_backup_bytes": 4194304,
+      "complete_backup_compared_with_flash": true,
+      "backup_baud": 115200,
+      "backup_storage": "Private local folder outside Git; includes whole flash, potentially credentials/NVS",
+      "restoration_tested": false,
+      "end_state": "esptool requested hard reset after successful comparison; existing flash image not replaced"
+    },
+    {
+      "local_port": "COM8",
+      "USB_bridge_family": "Silicon Labs CP210x",
+      "USB_enumerated": true,
+      "serial_capture_bytes": 2423,
+      "boot_reported_module": "WROOM-32",
+      "boot_reported_flash_MB": 4,
+      "boot_reported_loader": "ESP-IDF qa-test-v4.3.3-20220423",
+      "identity_limit": "Boot text only, with altered characters; exact chip and flash ID not established by esptool",
+      "esptool_connection": "Not established: automatic reset and subsequent no-reset attempts at115200/57600 failed or timed out",
+      "manual_actions": "User confirmed initial BOOT sequence and subsequent EN/RESET during capture; final hold-BOOT attempt was requested",
+      "complete_backup_available": false,
+      "firmware_written": false,
+      "end_instruction": "Release BOOT and press EN/RESET once to resume normal boot; no further programming attempted"
+    }
+  ],
+  "platform_implications": [
+    "User-confirmed25.4mm row spacing is retained for the measured board.",
+    "These CP210x observations do not identify either card as the advertised diymore CH340 variant or validate its30-pin map.",
+    "Same USB-C connector and row spacing do not establish the same VBUS/VIN power circuit.",
+    "Do not replace firmware to infer power-path behavior; follow manufacturing/usb_service_test.md on each identified board."
+  ]
+}
