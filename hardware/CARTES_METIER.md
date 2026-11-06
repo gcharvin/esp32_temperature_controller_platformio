@@ -13,21 +13,25 @@ leur conception. **Le premier prototype reste A + B température.**
 | **Moteur pas à pas** | Commander un moteur et son déplacement | Driver moteur ; STEP/DIR/ENABLE ou interface propre au driver ; défaut et éventuelles fins de course | Tension moteur, courant par phase, nombre d'axes et performances à préciser | Souhaitée |
 | **Illumination LED** | Commander l'allumage et l'intensité d'un système d'illumination | Entrée de commande d'un éclairage existant, ou étage LED à courant constant ; PWM et/ou consigne analogique ; nombre de canaux à définir | Caractéristiques des LED ou du driver à relever | Souhaitée ; distincte du rétroéclairage LCD de A |
 | **Équipement à interface RS232** | Envoyer les commandes ASCII connues et lire les réponses d'un équipement | UART logique vers transceiver RS232 sur B ; connecteur, niveaux électriques et protocole propres à l'appareil | Alimentation de B à définir ; équipement possiblement alimenté séparément | Souhaitée ; référence, brochage, débit et protocole à documenter |
-| **Électrovannes solénoïdes** | Ouvrir/fermer plusieurs vannes Lee Company ou d'un autre fabricant | Une sortie inductive protégée par voie ; commande individuelle, autorisation globale ; retour de courant/défaut à étudier | **12 V DC et environ 100 mA par vanne**, indication utilisateur à confirmer, soit environ 1,2 W par vanne | Nouveau besoin confirmé ; références, nombre de voies et temps de commutation à préciser |
-| **Relais génériques** | Disposer de sorties tout-ou-rien réutilisables pour divers équipements | Contacts secs ; COM/NO, éventuellement NC ; drivers et protection des bobines ; indicateur de commande par voie | Rail des bobines, tension/courant commutés et nombre de voies à définir | Nouveau besoin confirmé ; peut servir aux vannes si les relais conviennent à leur usage |
+| **MOSFET pour électrovannes** | Ouvrir/fermer plusieurs vannes solénoïdes Lee Company ou d'un autre fabricant | Un étage MOSFET protégé par voie ; commande individuelle, autorisation globale ; retour de courant/défaut à étudier | **12 V DC et environ 100 mA par vanne**, indication utilisateur à confirmer, soit environ 1,2 W par vanne | Carte distincte confirmée ; commande MOSFET retenue, références, nombre de voies et temps de commutation à préciser |
+| **Relais génériques** | Disposer de sorties tout-ou-rien réutilisables pour divers équipements | Contacts secs ; COM/NO, éventuellement NC ; drivers et protection des bobines ; indicateur de commande par voie | Rail des bobines, tension/courant commutés et nombre de voies à définir | Carte distincte confirmée ; dédiée aux commutations génériques par contacts secs |
 
 Les six extensions après température sont des besoins de plateforme, pas des
 cartes déjà schématisées, routées, simulées ou ajoutées à la commande du prototype.
 L'ordre de réalisation après température n'est pas encore décidé.
 
-## Électrovannes : conserver le besoin, choisir ensuite l'étage de sortie
+## Décision : deux cartes distinctes, relais génériques et MOSFET pour vannes
 
-Une électrovanne solénoïde DC n'exige pas systématiquement un relais. Pour les
-vannes décrites, **étudier d'abord une commande MOSFET ou un driver de solénoïde**,
-avec protection contre la surtension de coupure. Cela évite des contacts mobiles
-et permet une commande rapide ou un maintien à courant réduit si la vanne le
-demande. La carte relais générique garde son intérêt pour les contacts secs et
-les commutations occasionnelles d'autres circuits.
+Décision utilisateur du **6 novembre 2026** : prévoir une **B relais générique**
+à contacts secs et une **B MOSFET pour les électrovannes**, séparées dans le
+catalogue. Le premier prototype reste exclusivement **A + B température** ;
+cette décision n'ajoute aucune de ces cartes à la fabrication en cours.
+
+La B MOSFET comportera des sorties adaptées aux charges inductives, avec protection
+contre la surtension de coupure. La topologie exacte, les composants et un éventuel
+pilotage d'appel/maintien seront déterminés à partir des références des vannes.
+La B relais conserve les contacts secs pour les commutations génériques d'autres
+circuits. Elle n'est plus l'architecture prévue pour la carte électrovannes.
 
 Le courant de 100 mA est une estimation de travail, pas une spécification Lee.
 Il faut relever la référence exacte, la résistance de bobine, le courant d'appel
@@ -40,14 +44,15 @@ pas de conclure que les vannes possédées acceptent toutes un 12 V continu.
 
 Une diode de roue libre simple ralentit la démagnétisation ; si le temps de
 fermeture est important, étudier un écrêtage adapté au driver et à la bobine.
-La protection de la bobine d'un relais ne protège pas, à elle seule, la vanne
-branchée sur ses contacts. Le choix doit intégrer l'énergie inductive et la
-fréquence de commutation.
+Sur la B relais, la protection des bobines de relais ne protège pas, à elle seule,
+une éventuelle charge inductive externe branchée sur les contacts. Pour les deux
+cartes, la protection doit intégrer l'énergie inductive et la fréquence de commutation.
 [Source technique : TI, commande et décharge des charges inductives](https://www.ti.com/document-viewer/lit/html/snvaa45).
 
 Avec l'hypothèse utilisateur, quatre vannes simultanées demanderaient environ
 **0,4 A / 4,8 W sous 12 V** ; huit, **0,8 A / 9,6 W**. Ajouter la logique, la
-conversion 5 V, les éventuelles bobines de relais et les appels de courant.
+conversion 5 V et les appels de courant. Le budget des bobines de relais relève
+séparément de la B relais générique.
 Ces calculs ne fixent ni le nombre de voies ni le calibre d'une future carte.
 
 ## Ce que A doit permettre aux futures B
