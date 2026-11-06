@@ -1,0 +1,64 @@
+To: support@jlcpcb.com
+Subject: PRE-SALES RFQ / DFM feasibility review only - 5x A04 + 5x B05 fully assembled - NO ORDER
+
+Hello,
+
+Please provide a pre-sales engineering feasibility review and an itemized quote
+for five A04 display/interface PCBs and five B05 temperature-control PCBs,
+including all SMT AND through-hole parts. This is a request for quotation only.
+Please do not place an order, reserve paid components, or start purchasing or
+production on our behalf.
+
+Your PCBA FAQ states that Review Before Payment is not supported in the normal
+assembly checkout. Can your team review the attached files and resolve the
+following issues before we commit to any purchase? If a full pre-sales DFM is
+unavailable, please state the review scope you can offer without an order.
+
+Project requirements:
+- A04: 110x75mm, 2 layers, 1.6mm, 1oz outer copper each side, 5 fully assembled.
+- B05: 90x65mm FUNCTIONAL outline, 2 layers, 1.6mm, 2oz outer copper each side,
+  5 fully assembled. Target application: regulated24V DC /100W resistive heater.
+- Both: lead-free compatible FR4, Tg>=150C requested, ENIG, green mask, white
+  legends, top-side assembly. Please quote Standard PCBA for both boards.
+- A has13 SMT +10 physical THT placements; B has38 SMT +9 THT placements.
+  Total for the lot:350 placements, plus five Harwin M7566-05 shunts SUPPLIED LOOSE.
+
+Please review specifically:
+1. Exact sourcing, availability, lead time, minimum purchases and attrition for
+   every fitted MPN. The unmatched list includes Panasonic EEUFR1V331UB (C10),
+   Vishay WSL1206R0560FEA (R13), Harwin M20-9990246, M20-7821546 and M7566-05.
+   Blank catalogue codes are NOT DNP instructions. No automatic substitutions.
+2. B is below your published70x70mm Standard minimum. Please propose removable
+   rails, tooling/fiducials and tab locations; 5mm top/bottom rails giving90x75mm
+   is only a proposal, NOT a released panel. Propose rails for A as needed too.
+   Do not enlarge the functional boards or drill tooling holes into them.
+   Deliver depanelized/deburred boards, preserving the clip-contact edge areas.
+3. Confirm the measured LM2596 package peak<=245C, actual lot MSL handling
+   including the LEDs, and THT assembly/inspection. Economic's fixed high
+   reflow profile is not an acceptable fallback for B.
+4. Approve actual library placement/orientation against the supplied pin map
+   and assembly drawings. All CSV positions/rotations remain subject to this
+   approval. THT body centres differ from native pin1 footprint origins.
+5. A/U1 is a customer-owned REMOVABLE ESP32 DevKit: do not buy or solder it.
+   A/J8 and A/J9 are upload-only aliases for two physical M20-7821546 sockets:
+   J8 -> U1 pads1..15; J9 -> U1 pads16..30. They are not new silkscreen labels.
+   Check the mapping and confirm this alias method is acceptable before import.
+   Socket row spacing25.40mm, pitch2.54mm, nominal finished holes1.05mm.
+   B/U1 is the LM2596 and MUST be assembled. B/NT1 is copper only, no component.
+6. Quote100% bare-PCB opens/shorts testing, AOI/THT inspection and, separately,
+   the no-ESP32/no-heater voltage checks in factory_acceptance_test.md.
+7. Itemize PCB, parts, setup/stencil, SMT, THT, panel/depanelization, inspection,
+   optional functional tests, lead times and delivery costs. Destination: France;
+   exact shipping/billing details can be supplied when the quote is reviewed.
+
+The attached JLCPCB_A04_B05_RFQ_DFM_ONLY.zip contains two separate Gerber ZIPs,
+complete per-board BOM/CPL pairs, native/alias pin mapping, reference placement
+images, schematics, assembly drawings, test netlists and review specifications.
+The Gerber ZIPs are FUNCTIONAL unpanelized boards for review; they are not an
+approved Standard assembly panel. Our local checks are not factory approval.
+
+Please return a ticket/reference number, your findings and the response form.
+If the web configurator cannot quote these files directly, please advise the
+manual quotation and panel-review workflow without triggering a paid order.
+
+Thank you.

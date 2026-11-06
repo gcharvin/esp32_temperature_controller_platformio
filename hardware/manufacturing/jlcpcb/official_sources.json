@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-11-06",
+  "scope": "Public documentation only; no authenticated import, quote, stock reservation, support submission or order",
+  "sources": [
+    {"url": "https://jlcpcb.com/help/article/pcb-assembly-faqs-part-2", "use": "Normal PCBA checkout does not support Review Before Payment; request pre-sales review separately without assuming it is available."},
+    {"url": "https://jlcpcb.com/capabilities/pcb-assembly-capabilities", "use": "Standard minimum70x70mm, rails/fiducials, SMT/THT and published reflow profiles."},
+    {"url": "https://jlcpcb.com/help/article/bill-of-materials-for-pcb-assembly", "use": "Machine import BOM fields and CSV format."},
+    {"url": "https://jlcpcb.com/help/article/pick-place-file-for-pcb-assembly", "use": "SMT and THT placement, centroid in mm, side and counterclockwise rotation."},
+    {"url": "https://jlcpcb.com/help/article/pcba-parts-sourcing-instruction", "use": "Different sourcing paths; no live stock inference from catalogue identity."},
+    {"url": "https://jlcpcb.com/help/article/how-do-i-place-an-order", "use": "Gerber upload, viewer and quote entry point; do not apply PCB-only review-before-payment flow to PCBA."},
+    {"url": "https://jlcpcb.com/help/article/how-do-i-get-support", "use": "Official chat and support@jlcpcb.com."}
+  ]
+}
