@@ -2,9 +2,9 @@
 
 Révision du **5 novembre 2026**. Les deux cartes sont routées dans les fichiers natifs KiCad, avec empreintes physiques et plans de masse. Cible de B : **24 V continu / chauffage résistif 100 W**, soit 4,17 A pour la charge. A porte un seul ESP32 ; B reste sans microcontrôleur.
 
-**Prototype à contrôler, pas dossier de fabrication libéré.** L'entraxe des deux rangées de la DevKit est **25,40 mm, confirmé par mesure de l'utilisateur le 5 novembre 2026** ; il correspond à l'empreinte déjà routée. Les autres cotes de montage, le dimensionnement thermique et les essais de défaut restent à vérifier. Aucun Gerber/CPL final n'est généré.
+**Prototype à contrôler, pas dossier de fabrication libéré.** L'entraxe des deux rangées de la DevKit est **25,40 mm, confirmé par mesure de l'utilisateur le 5 novembre 2026** ; il correspond à l'empreinte déjà routée. Les autres cotes de montage, le dimensionnement thermique et les essais de défaut restent à vérifier. Les Gerber/CPL disponibles servent à la revue et au devis ; ils ne sont pas libérés pour commande.
 
-Une [étude de buck intégré simulable dans KiCad](power_study/README.md) est disponible séparément : variante LM2596 fixe 5 V, six bancs transitoires réussis sous ngspice, sources et classeurs KiCad. Elle est intégrée au schéma et au routage de B v0.5 ; la maquette mécanique v0.8 reprend ce placement, sans module externe.
+Une [étude de buck intégré simulable dans KiCad](power_study/README.md) est disponible séparément : variante LM2596 fixe 5 V, six bancs transitoires réussis sous ngspice, sources et classeurs KiCad. Elle est intégrée au schéma et au routage de B v0.5 ; la maquette mécanique v0.9 reprend ce placement, sans module externe.
 
 **Contrat de plateforme : A reçoit toujours un 5 V régulé**, indépendamment de
 l'entrée 24 V, 12 V ou 5 V des futures cartes métier. Chaque B adapte sa propre
@@ -125,10 +125,10 @@ USB : la prise latérale et sa rallonge utilisent le pont USB/série de la DevKi
 
 A reste à **110 × 75 × 1,6 mm**, B à **90 × 65 × 1,6 mm**. Les bandes de clips haut/bas de 4 mm et les appuis latéraux de 1,5 mm sont exclus des pistes, vias, remplissages et composants. La réserve d'antenne est provisoire et doit être confrontée au module réel et à son environnement.
 
-La [maquette du boîtier v0.8](mechanical/README.md) conserve **155 × 100 × 115 mm**,
+La [maquette du boîtier v0.9](mechanical/README.md) conserve **155 × 100 × 115 mm**,
 la façade amovible avec LCD/A clipsés, l'USB latéral et les passe-paroi arrière.
-Elle reprend B v0.5 et supprime la baie XL4015. Les quatre pièces imprimées, les
-hauteurs de composants, les 17 étapes de montage/service et les 20 ouïes
+Elle reprend B v0.5 et supprime la baie XL4015. Les six pièces imprimées, les
+hauteurs de composants, les 20 étapes de montage/service et les 20 ouïes
 latérales sont contrôlées géométriquement. Aucun débit ou échauffement n'est
 qualifié. Les [essais physiques restants](review/routing/electronics_bench_plan.md)
 sont consignés ; le dernier audit confirme les simulations existantes.
@@ -142,7 +142,7 @@ sont consignés ; le dernier audit confirme les simulations existantes.
 
 Résultat livré : **ERC zéro erreur/avertissement, DRC zéro violation, zéro connexion restante et zéro écart schéma/PCB sur les deux cartes**. Les pads sont comparés aux netlists et les trajets principaux de puissance sont contrôlés. Les chaînes série des six voyants, leur polarité, leurs rails/retours et l'absence de charge ajoutée au pont NTC sont vérifiés dans `review/routing/diagnostic_validation.json`. `review/routing/` contient les rapports et les PDF relus. Le routage initial a été amorcé avec Freerouting 2.5.0 **localement**, puis corrigé dans les fichiers natifs. La révision 0.4 ajoute uniquement des branches de faible courant, avec le routeur local conservateur `route_diagnostics.py` puis remplissage et DRC KiCad, en conservant toutes les pistes/vias préexistants. Aucune API distante n'a reçu les cartes. Les `.dsn/.ses` et journaux sont des intermédiaires ignorés par Git. Les scripts initiaux restent des étapes historiques et refusent d'écraser un PCB déjà routé ; `add_diagnostic_leds.py` est également une migration unique, pas un générateur à relancer sur les fichiers livrés.
 
-Les packs v03/v04 et les STEP mécaniques jusqu’à v0.6 sont historiques ; les fichiers natifs A v0.4 / B v0.5 et le pack v0.5 sont la référence électrique actuelle ; la maquette v0.8 reprend B v0.5 et la ventilation latérale.
+Les packs v03/v04 et les STEP mécaniques jusqu’à v0.6 sont historiques ; les fichiers natifs A v0.4 / B v0.5 et le pack v0.5 sont la référence électrique actuelle ; la maquette v0.9 reprend B v0.5 et la ventilation latérale.
 
 Références : [JST-XH](https://www.jst-mfg.com/product/pdf/eng/eXH.pdf), [driver UCC27517](https://www.ti.com/lit/gpn/UCC27517), [IRLZ44N](https://www.infineon.com/part/IRLZ44N), [DMP6023LE](https://www.diodes.com/datasheet/download/DMP6023LE.pdf), [fusibles 451/453](https://www.littelfuse.com/assetdocs/fuse-451-and-453-datasheet?assetguid=533cd5cc-956c-4243-867f-6ab5a62f6ba1), [STPS5L60](https://www.st.com/resource/en/datasheet/stps5l60.pdf), [bornier Phoenix](https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721?type=pdf), [ADS1115](https://www.ti.com/lit/ds/symlink/ads1115.pdf).
 
@@ -151,9 +151,20 @@ Références : [JST-XH](https://www.jst-mfg.com/product/pdf/eng/eXH.pdf), [drive
 La [variante LM2596 fixe 5 V](power_study/lm2596/README.md), simulée dans KiCad, est intégrée à B v0.5. Les essais non convergents du LMR36520 sont conservés comme historique. Les six simulations réussies et le routage intégré ne remplacent pas les essais thermiques et de défaut.
 
 B v0.5 conserve les dimensions, les connecteurs restants et les bandes de clips.
-Le STEP v0.8 est la référence mécanique courante, avec B réimplantée et sans
+Le STEP v0.9 est la référence mécanique courante, avec B réimplantée et sans
 berceau XL4015 ; les versions antérieures restent historiques. Le pack v0.5 et
 les fichiers natifs sont la référence électrique ; A reste à v0.4.
+
+## Écran et lumière ambiante
+
+Le LCD acheté est le Freenove LCD2004 B0B76VGXYH. Le mode retenu reste fixe
+avec extinction après inactivité et réveil par l’encodeur, à porter dans le
+firmware de la nouvelle électronique. La [revue du PWM](display_backlight_study.md)
+explique la commande binaire du backpack et les interfaces matérielles possibles.
+La façade v0.9 reçoit un insert translucide fermé de 0,6 mm et une cassette
+opaque démontable pour le BH1750 ; les cotes du breakout restent à relever.
+A reçoit le 5 V central via J1/JP1 vers VIN de la DevKit ; le monitoring USB
+simultané reste soumis à la qualification de VBUS.
 
 ## Préparation de fabrication terminée localement
 

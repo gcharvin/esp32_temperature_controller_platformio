@@ -133,6 +133,39 @@
       "reversible": true
     },
     {
+      "stage": "BH1 optical insert from inside",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -15,
+        0
+      ],
+      "prism_count": 5,
+      "reversible": true
+    },
+    {
+      "stage": "BH2 PCB into cassette with clips released",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -15,
+        0
+      ],
+      "prism_count": 6,
+      "reversible": true
+    },
+    {
+      "stage": "BH3 equipped cassette with facade clips released",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -20,
+        0
+      ],
+      "prism_count": 26,
+      "reversible": true
+    },
+    {
       "stage": "4 equipped front enters from front",
       "method": "planar-face translational swept volumes",
       "translation_mm": [
@@ -140,7 +173,7 @@
         100,
         0
       ],
-      "prism_count": 163,
+      "prism_count": 205,
       "reversible": true
     },
     {
@@ -205,6 +238,6 @@
     }
   ],
   "failures": [],
-  "reverse_order": "rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped",
+  "reverse_order": "rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped; BH1750 cassette and optical insert removable separately on bench",
   "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
 }

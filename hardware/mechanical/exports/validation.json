@@ -9,7 +9,7 @@
     },
     {
       "name": "02_Removable_front_LCD_A",
-      "volume_mm3": 60081.435,
+      "volume_mm3": 59874.705,
       "solids": 1,
       "group": "front"
     },
@@ -24,6 +24,30 @@
       "volume_mm3": 48293.161,
       "solids": 1,
       "group": "rear"
+    },
+    {
+      "name": "05_Translucent_optical_insert",
+      "volume_mm3": 187.0,
+      "solids": 1,
+      "group": "light"
+    },
+    {
+      "name": "06_BH1750_removable_carrier",
+      "volume_mm3": 1328.798,
+      "solids": 1,
+      "group": "light"
+    },
+    {
+      "name": "BH1750_MODULE_REFERENCE",
+      "volume_mm3": 588.8,
+      "solids": 1,
+      "group": "light"
+    },
+    {
+      "name": "BH1750_SENSOR_PACKAGE",
+      "volume_mm3": 3.84,
+      "solids": 1,
+      "group": "light"
     },
     {
       "name": "PCB_A",
@@ -1033,6 +1057,39 @@
         "reversible": true
       },
       {
+        "stage": "BH1 optical insert from inside",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          -15,
+          0
+        ],
+        "prism_count": 5,
+        "reversible": true
+      },
+      {
+        "stage": "BH2 PCB into cassette with clips released",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          -15,
+          0
+        ],
+        "prism_count": 6,
+        "reversible": true
+      },
+      {
+        "stage": "BH3 equipped cassette with facade clips released",
+        "method": "planar-face translational swept volumes",
+        "translation_mm": [
+          0,
+          -20,
+          0
+        ],
+        "prism_count": 26,
+        "reversible": true
+      },
+      {
         "stage": "4 equipped front enters from front",
         "method": "planar-face translational swept volumes",
         "translation_mm": [
@@ -1040,7 +1097,7 @@
           100,
           0
         ],
-        "prism_count": 163,
+        "prism_count": 205,
         "reversible": true
       },
       {
@@ -1105,7 +1162,7 @@
       }
     ],
     "failures": [],
-    "reverse_order": "rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped",
+    "reverse_order": "rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped; BH1750 cassette and optical insert removable separately on bench",
     "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
   },
   "printed_parts_STEP": {
@@ -1114,12 +1171,14 @@
       "01_Coque_ouverte",
       "02_Facade_supports_LCD_A",
       "03_Berceau_B",
-      "04_Panneau_arriere"
+      "04_Panneau_arriere",
+      "05_Fenetre_translucide",
+      "06_Cassette_BH1750"
     ],
-    "solid_count": 4,
+    "solid_count": 6,
     "one_connected_solid_per_print_part": true
   },
-  "STEP_round_trip_solids": 101,
+  "STEP_round_trip_solids": 105,
   "B_extraction_samples_mm": [
     0,
     10,
@@ -1127,6 +1186,20 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 421736.017,
-  "fusion_import_tested": false
+  "STEP_volume_mm3": 423637.725,
+  "fusion_import_tested": false,
+  "light_sensor": {
+    "center_x_z_mm": [
+      126,
+      77
+    ],
+    "membrane_mm": 0.6,
+    "central_optical_path_closed": true,
+    "optical_transmission_tested": false,
+    "module_dimensions_measured": false,
+    "membrane_back_to_package_front_mm": 5.6000000000000005,
+    "opaque_light_well": true,
+    "removable_cassette": true,
+    "one_solid_per_new_print": true
+  }
 }

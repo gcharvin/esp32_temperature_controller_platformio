@@ -1,0 +1,55 @@
+{
+  "revision": "0.9 - removable BH1750 cassette and closed translucent optical insert",
+  "source_sha256": {
+    "mechanical\\build_enclosure.py": "6238067e0a1cae9f265183227ceef09dff625d799b3087f989c518d0036eb796",
+    "mechanical\\light_sensor_mount.py": "c0b53a91f28ac4433e636308215f43479675ed253105bb419053816ac1647f40",
+    "mechanical\\enclosure_parameters.json": "411c7127f5d6bd56feee05d4756db0541608167e6fd0e49b4df4bc0ae9b2dcec",
+    "placement.json": "c19f97a003b3061db67e79551ae4606fa52e2f4667d0142040a403fce9a1675a",
+    "module_selection.json": "eb5a7f97b79a9cae4a4adeb0e71ab71bb7f6cba9b3189ece9b555c1a0dac7967",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9"
+  },
+  "placement_geometry_projection_sha256": "72756014428c73ce63278eacf3dce9eac2266c0b3c06682269e1013df3781442",
+  "printed_parts": 6,
+  "assembled_STEP_solids": 105,
+  "assembly_service_stages": 20,
+  "static_collisions": 0,
+  "assembly_failures": 0,
+  "external_buck": false,
+  "fusion_import_tested": false,
+  "connector_review": {
+    "ref": "J1 near C10",
+    "legacy_overpadded_corridor_overlap_mm3": 10.96875,
+    "resolution": "Manufacturer XHP body with 0.25mm each-side margin replaces generic footprint+1mm corridor",
+    "manufacturer_source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+    "finger_and_cable_clearance_tested": false
+  },
+  "limits": [
+    "Rigid-body envelope model, not exact supplier component CAD",
+    "Real print, grip, cable slack, flexure and thermal tests pending"
+  ],
+  "light_sensor": {
+    "center_x_z_mm": [
+      126,
+      77
+    ],
+    "membrane_mm": 0.6,
+    "central_optical_path_closed": true,
+    "optical_transmission_tested": false,
+    "module_dimensions_measured": false,
+    "membrane_back_to_package_front_mm": 5.6000000000000005,
+    "opaque_light_well": true,
+    "removable_cassette": true,
+    "one_solid_per_new_print": true
+  },
+  "devkit_stack": {
+    "socket_maximum_mm": [
+      38.85,
+      2.65,
+      8.65
+    ],
+    "male_header_spacer_assumed_mm": 2.54,
+    "gap_allowance_mm": 0.15,
+    "physical_fit_of_all_three_variants_verified": false
+  }
+}

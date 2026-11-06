@@ -1,32 +1,33 @@
-# Maquette 3D v0.8 — PCB B avec buck intégré
+# Maquette 3D v0.9 — fenêtre BH1750 et PCB B avec buck intégré
 
-Révision du **5 novembre 2026**. Boîtier nu **155 × 100 × 115 mm**, paroi 3 mm.
+Révision du **6 novembre 2026**. Boîtier nu **155 × 100 × 115 mm**, paroi 3 mm.
 La carte B v0.5 porte maintenant son LM2596 : le XL4015, son berceau, ses guides,
 la cloison de sa baie et sa butée arrière sont supprimés. Le volume libéré à
 côté de B peut servir au passage des faisceaux. A reste à v0.4.
 
 ## Ouvrir dans Fusion 360
 
-- **`exports/enclosure_v08_integrated_buck.step`** : assemblage complet courant.
-- `exports/enclosure_v08_printed_parts.step` : les quatre pièces imprimées seules.
+- **`exports/enclosure_v09_integrated_buck.step`** : assemblage complet courant.
+- `exports/enclosure_v09_printed_parts.step` : les six pièces imprimées seules.
 - `exports/enclosure_exploded.step` et `enclosure_printed_parts_exploded.step` : vues éclatées courantes.
-- `exports/parts_v08/` : STEP et STL individuels.
+- `exports/parts_v09/` : STEP et STL individuels.
 - `exports/preview_service.png`, `preview_b_power.png`, `preview_exploded.png` : arrière ouvert, B équipée et vue éclatée.
-- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v08.json` : résultats et traçabilité.
-- `exports/enclosure_v08_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
+- `exports/preview_light_sensor.png`, `preview_light_sensor_front.png` : fixation intérieure et fenêtre extérieure, vues locales de la géométrie réelle.
+- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v09.json` : résultats et traçabilité.
+- `exports/enclosure_v09_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
 
-Les fichiers numérotés v01 à v07 et `parts_v07/` sont historiques. Les exports
-sans numéro listés ci-dessus correspondent à v0.8. Ne pas employer l'ancienne
+Les fichiers numérotés v01 à v08 et leurs dossiers de pièces sont historiques. Les exports
+sans numéro listés ci-dessus correspondent à v0.9. Ne pas employer l'ancienne
 vue `preview_buck.png`, qui représente encore le module externe.
 
-Le STEP contient une arborescence de solides nommés : **101 solides valides** dans
-le complet, **4 solides connectés** dans les pièces imprimées. Il ne transporte
+Le STEP contient une arborescence de solides nommés : **105 solides valides** dans
+le complet, **6 solides connectés** dans les pièces imprimées. Il ne transporte
 pas l'historique paramétrique natif Fusion. Les sources paramétriques sont
-`build_enclosure.py`, `enclosure_parameters.json` et `../placement.json`.
+`build_enclosure.py`, `light_sensor_mount.py`, `enclosure_parameters.json` et `../placement.json`.
 L'import STEP est vérifié par OpenCascade ; l'ouverture dans Fusion n'a pas été
 exécutée pour cette révision. Aucun fichier `.f3d` n'est fourni.
 
-## Quatre pièces imprimées
+## Six pièces imprimées
 
 | Pièce | Fonction |
 | --- | --- |
@@ -34,6 +35,8 @@ exécutée pour cette révision. Aucun fichier `.f3d` n'est fourni.
 | 02 Façade équipée | Supports à rainures et clips du LCD et de A, intégrés à la façade |
 | 03 Berceau B | Rainure basse, guides, deux clips et poignées ; coulissement vers l'arrière |
 | 04 Panneau arrière | Lèvre, clips, butée de B, deux presse-étoupes et prise sonde |
+| 05 Fenêtre translucide | Insert à collerette, membrane extérieure fermée de 0,6 mm ; filament translucide |
+| 06 Cassette BH1750 | Porte le petit PCB avec deux clips, puits opaque vers la fenêtre ; retenue par deux clips de façade |
 
 Chaque pièce est un seul solide connecté. Le LCD et A se montent sur la façade
 hors du boîtier ; B se monte dans son berceau hors du boîtier. Les guides de la
@@ -104,7 +107,8 @@ et le mou de service ne sont pas qualifiés par le modèle.
    3,5 mm dans la rainure puis rabattre jusqu'aux clips. Ne pas charger le verre.
 2. Monter l'encodeur, puis A : bord inférieur relevé de 3,5 mm, inclinaison de
    4°, approche, abaissement dans la rainure, rabattement et enclenchement.
-3. Charger B dans son berceau sur l'établi, par le même principe. Installer la
+3. Monter la fenêtre puis la cassette BH1750 suivant la séquence détaillée ci-dessous.
+   Charger B dans son berceau sur l'établi, par le même principe. Installer la
    rallonge USB de panneau, fiche interne encore débranchée et câble hors guides.
 4. Introduire la façade équipée par l'avant et engager ses clips. Depuis
    l'arrière, **avant B**, brancher l'USB sur la DevKit (course latérale 15 mm).
@@ -119,7 +123,62 @@ Débrancher B et extraire son berceau de 50 mm vers l'arrière ; la façade et l
 restent en place. Déclipser le PCB sur l'établi en inversant sa pose. Pour déposer
 la façade, retirer B, débrancher l'USB côté DevKit et les autres faisceaux, libérer
 les clips avant et extraire la façade équipée (course vérifiée 100 mm). Sur
-l'établi, déposer A puis l'encodeur si nécessaire, enfin le LCD.
+l'établi, déposer A puis l'encodeur si nécessaire, enfin le LCD. La cassette BH1750
+se déclipse séparément, depuis l'intérieur ; la fenêtre se retire ensuite vers l'intérieur.
+
+## BH1750 derrière une zone translucide fermée
+
+La fenêtre est centrée à **x=126 / z=77 mm**, au-dessus de l'encodeur et à droite
+du LCD. L'insert a une face de 8 × 8 mm, une membrane de **0,6 mm** et une
+collerette intérieure de 12 × 12 mm. Il entre depuis l'intérieur dans un
+logement étagé ; la cassette le retient. L'extérieur reste fermé par la membrane,
+sans ouverture directe devant le capteur. L'ajustement périphérique n'est pas
+un joint d'étanchéité : aucune protection IP n'est revendiquée.
+
+Imprimer cette petite pièce seule dans un matériau **réellement translucide**,
+par exemple un PETG naturel à qualifier. Une paroi opaque ne devient pas une
+fenêtre par calibration. Les cinq autres pièces peuvent être opaques ; la cassette
+et son puits doivent bloquer la lumière du LCD. Pour 0,6 mm, trois couches de
+0,2 mm donnent une première éprouvette, à confirmer au tranchage et à la mesure.
+Orienter la face extérieure de l'insert à plat sur le plateau : l'épaisseur est
+suivant Y dans le modèle, et non Z. Les STL sont exportés en position d'assemblage,
+sans orientation d'impression automatiquement qualifiée.
+
+Le PCB du capteur est une **hypothèse 23 × 16 × 1,6 mm**, détecteur centré
+et face sensible vers l'avant. La référence exacte du breakout n'est pas connue.
+Le détecteur représenté n'est pas un modèle fournisseur ; le connecteur et son
+câble restent à relever. Ne pas lancer l'impression définitive de la cassette
+sur la seule base de cette hypothèse. Les cotes sont dans `light_sensor` du JSON ;
+le générateur demande une revue explicite des clips si l'on change le format PCB.
+
+La membrane est séparée de la face du détecteur par **5,6 mm d'air**, sans appui
+mécanique sur son boîtier. Le puits intérieur opaque de 6,8 × 6,8 mm limite le
+champ angulaire. La mesure sera une indication de lumière ambiante à calibrer,
+pas un luxmètre qualifié avec réponse angulaire conservée.
+
+Montage, façade déposée :
+
+1. Insérer l'insert depuis l'arrière jusqu'à sa collerette dans le lamage.
+2. Sur l'établi, écarter les deux clips latéraux de la cassette et poser le PCB,
+   capteur tourné vers le puits. Relâcher les clips ; vérifier l'appui et le jeu.
+3. Écarter les deux clips de façade vers le haut/bas et approcher la cassette
+   équipée depuis l'arrière. La plaquer contre ses quatre appuis puis relâcher
+   les clips. Leur crochet retient la plaque arrière de cassette, qui capture
+   la collerette de fenêtre. Raccorder le câble à **A/J5**, selon son brochage.
+4. Pour déposer, débrancher le câble, libérer les deux clips de façade et reculer
+   la cassette ; ses clips PCB sont alors accessibles sur l'établi. La fenêtre
+   se retire librement une fois la cassette retirée.
+
+Les trois translations sont vérifiées par volumes balayés, clips représentés
+en position libérée. L'insertion de la façade équipée, l'accès USB et l'extraction
+de B sont aussi recalculés avec le capteur en place. Les doigts, le connecteur
+réel et le comportement élastique des nouveaux clips restent des essais physiques.
+
+Après impression : relever plusieurs niveaux et angles de lumière avec/sans
+fenêtre, puis comparer LCD allumé/éteint à ambiance constante. Déterminer la
+correction et le bruit utile ; modifier matériau/épaisseur/puits si le signal est
+trop faible ou pollué. Le rétroéclairage reste fixe avec extinction/réveil selon
+la décision utilisateur. Voir l'[étude du LCD Freenove et du PWM](../display_backlight_study.md).
 
 ## USB et passe-paroi
 
@@ -157,14 +216,14 @@ n'est revendiquée.
 ## Contrôles et suite
 
 Le générateur vérifie les solides, leurs connexions, les racines des clips et les
-collisions, puis **17 étapes** de montage/service : mise en place du LCD, de A et
+collisions, puis **20 étapes** de montage/service : mise en place du LCD, de A et
 de B, insertion de façade, branchement USB, extraction de B, retrait du panneau
 et accès aux connecteurs. Les translations utilisent des volumes balayés ; les
 pivots sont échantillonnés tous les 0,1° de 4° à 0°. Les mouvements inverses
 supposent les mêmes déconnexions et clips libérés. Les deux rapports ne doivent
 contenir aucune collision ni étape en échec.
 
-Les quatre pièces imprimées sont réimportées du STEP avec conservation de leur
+Les six pièces imprimées sont réimportées du STEP avec conservation de leur
 volume et un solide connecté par pièce ; le complet est également réimporté.
 Ces contrôles ne simulent ni les efforts, les doigts, les tolérances, les fils,
 la fatigue des clips ou la dissipation. Essayer un coupon de rainure/clip et un
@@ -177,11 +236,13 @@ buck réel, le chauffage/NTC, les défauts et la thermique en boîtier fermé.
 
 ```powershell
 uv run hardware/mechanical/build_enclosure.py
+python hardware/mechanical/package_enclosure.py
 ```
 
 CadQuery 2.6.1 et Pillow sont déclarés dans le script. Le générateur produit les
 STEP, STL, GLB, rendus et rapports sans modifier KiCad. Le pack ZIP est un
-instantané à recréer après régénération.
+instantané à recréer après régénération avec `package_enclosure.py` ; ce script
+vérifie les sources et les SHA256 des membres de l'archive.
 
 ## Révision de préparation v0.8
 

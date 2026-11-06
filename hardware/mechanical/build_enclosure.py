@@ -14,6 +14,7 @@ import math
 import sys
 import hashlib
 import cadquery as cq
+import light_sensor_mount
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent
@@ -21,7 +22,7 @@ P=json.loads((HERE/'enclosure_parameters.json').read_text(encoding='utf-8'))
 LAYOUT=json.loads((ROOT/'placement.json').read_text(encoding='utf-8'))
 MODULES=json.loads((ROOT/'module_selection.json').read_text(encoding='utf-8'))
 TAG=P.get('export_tag','v07')
-SOURCE_INPUTS=[HERE/'build_enclosure.py',HERE/'enclosure_parameters.json',ROOT/'placement.json',ROOT/'module_selection.json',
+SOURCE_INPUTS=[HERE/'build_enclosure.py',HERE/'light_sensor_mount.py',HERE/'enclosure_parameters.json',ROOT/'placement.json',ROOT/'module_selection.json',
               ROOT/'pcb_a_display/pcb_a_display.kicad_pcb',ROOT/'pcb_b_temperature/pcb_b_temperature.kicad_pcb']
 SOURCE_HASHES={str(path.relative_to(ROOT)):hashlib.sha256(path.read_bytes()).hexdigest() for path in SOURCE_INPUTS}
 OUT=HERE/'exports';OUT.mkdir(exist_ok=True)
@@ -32,11 +33,15 @@ FRAME_CHECKS=[]
 FRAME_GEOMETRIES=[]
 RELEASED_PRINT_SHAPES={}
 VENT_CHECKS={}
+LIGHT_MOUNT={}
 PRINT_NAMES={
  '01_Shell_open_front_and_rear':'01_Coque_ouverte',
  '02_Removable_front_LCD_A':'02_Facade_supports_LCD_A',
  '03_B_removable_carrier':'03_Berceau_B',
  '04_Rear_panel_with_latches':'04_Panneau_arriere'}
+if P.get('light_sensor',{}).get('enabled'):
+    PRINT_NAMES.update({'05_Translucent_optical_insert':'05_Fenetre_translucide',
+                        '06_BH1750_removable_carrier':'06_Cassette_BH1750'})
 COLORS={'shell':(.78,.82,.85),'rear':(.54,.64,.70),'tray':(.95,.64,.25),
         'pcb':(.10,.48,.34),'module':(.20,.24,.29),'connector':(.92,.90,.79),
         'chip':(.18,.20,.22),'lcd':(.08,.19,.26),'metal':(.68,.71,.74),
@@ -189,6 +194,9 @@ def main(validate=True):
             for sz in (pz-4,pz+ph+1):posts.append(box(sx,T-.5,sz,3,back-.3-(T-.5),3))
     bare_front=facade
     facade=fuse([facade,lcd_frame,a_frame]+posts)
+    if P.get('light_sensor',{}).get('enabled'):
+        LIGHT_MOUNT.update(light_sensor_mount.build(facade,P['light_sensor']))
+        facade=LIGHT_MOUNT['facade']
     LCD_DETAIL.extend([
         {'name':'Front_support_piece','shape':bare_front,'color':COLORS['shell'],'group':'lcd_detail'},
         {'name':'LCD_mount_integral_with_front','shape':fuse([lcd_frame]+posts[:4]),'color':COLORS['tray'],'group':'lcd_detail'}])
@@ -224,6 +232,11 @@ def main(validate=True):
     add('02_Removable_front_LCD_A',facade,'shell','front')
     add('03_B_removable_carrier',tray,'tray','B')
     add('04_Rear_panel_with_latches',panel.clean(),'rear','rear')
+    if LIGHT_MOUNT:
+        add('05_Translucent_optical_insert',LIGHT_MOUNT['insert'],(.85,.92,.89),'light')
+        add('06_BH1750_removable_carrier',LIGHT_MOUNT['carrier'],'module','light')
+        add('BH1750_MODULE_REFERENCE',LIGHT_MOUNT['pcb'],'pcb','light')
+        add('BH1750_SENSOR_PACKAGE',LIGHT_MOUNT['package'],'chip','light')
     # Boards and all component envelopes come from the current placement study.
     for board in LAYOUT['boards']:
         name=board['name'];is_a=name=='pcb_a_display';group='A' if is_a else 'B'
@@ -315,19 +328,20 @@ def write_source_manifest():
     validation=json.loads((OUT/'validation.json').read_text(encoding='utf-8'))
     paths=json.loads((OUT/'assembly_sequence_validation.json').read_text(encoding='utf-8'))
     assert not validation['collisions_mm3'] and not paths['failures']
-    assert validation['printed_parts_STEP']['solid_count']==len(PRINT_NAMES)==4
+    assert validation['printed_parts_STEP']['solid_count']==len(PRINT_NAMES)
     assert not any('XL4015' in item['name'] or item['group']=='buck' for item in validation['parts'])
     for path in SOURCE_INPUTS:
         assert hashlib.sha256(path.read_bytes()).hexdigest()==SOURCE_HASHES[str(path.relative_to(ROOT))], 'Mechanical input changed during generation: '+str(path)
     geometry=json.dumps({'boards':LAYOUT['boards'],'assembly':LAYOUT['assembly']},sort_keys=True)
     manifest=dict(revision=P['revision'],source_sha256=SOURCE_HASHES,
         placement_geometry_projection_sha256=hashlib.sha256(geometry.encode()).hexdigest(),
-        printed_parts=4,assembled_STEP_solids=validation['STEP_round_trip_solids'],assembly_service_stages=len(paths['tests']),
+        printed_parts=len(PRINT_NAMES),assembled_STEP_solids=validation['STEP_round_trip_solids'],assembly_service_stages=len(paths['tests']),
         static_collisions=0,assembly_failures=0,external_buck=False,fusion_import_tested=False,
         connector_review=dict(ref='J1 near C10',legacy_overpadded_corridor_overlap_mm3=10.96875,
             resolution='Manufacturer XHP body with 0.25mm each-side margin replaces generic footprint+1mm corridor',
             manufacturer_source=P['JST_service']['source'],finger_and_cable_clearance_tested=False),
         limits=['Rigid-body envelope model, not exact supplier component CAD','Real print, grip, cable slack, flexure and thermal tests pending'])
+    manifest['light_sensor']=LIGHT_MOUNT.get('summary')
     manifest['devkit_stack']=dict(socket_maximum_mm=MODULES['devkit']['socket']['maximum_body_mm'],
         male_header_spacer_assumed_mm=MODULES['devkit']['socket']['assumed_male_header_insulator_mm'],
         gap_allowance_mm=MODULES['devkit']['socket']['assembly_gap_allowance_mm'],
@@ -371,6 +385,7 @@ def verify_assembly_paths():
     tube=byname['01_Shell_open_front_and_rear']['shape']
     lcd=[p for p in PARTS if p['name'].startswith('LCD_')]
     encoder=[p for p in PARTS if p['name'].startswith('Encoder_')]
+    light=[p for p in PARTS if p['group']=='light']
     a_parts=[p for p in PARTS if p['group']=='A']
     b_parts=[p for p in PARTS if p['group']=='B']
     usb_fixed=[p for p in PARTS if p['name']=='USB_C_PANEL_DATA_EXTENSION_TBD']
@@ -424,11 +439,22 @@ def verify_assembly_paths():
     board_loading('1 LCD outside tube',lcd,lcd_frame,facade,[],True)
     board_loading('2 A outside tube',a_parts,a_frame,facade,lcd+encoder)
     board_loading('3 B outside tube',[p for p in b_parts if p['name'] not in PRINT_NAMES],b_frame,byname['03_B_removable_carrier']['shape'],[])
+    if LIGHT_MOUNT:
+        lm=LIGHT_MOUNT
+        translating('BH1 optical insert from inside',[lm['insert'].translate((0,15,0))],(0,-15,0),[facade])
+        translating('BH2 PCB into cassette with clips released',
+                    [lm[k].translate((0,15,0)) for k in ('pcb','package')],(0,-15,0),[lm['released_carrier']])
+        released_mount=facade
+        for free in lm['mount_free']:released_mount=released_mount.cut(free)
+        released_mount=fuse([released_mount]+lm['mount_released'])
+        translating('BH3 equipped cassette with facade clips released',
+                    [lm[k].translate((0,20,0)) for k in ('carrier','pcb','package')],(0,-20,0),
+                    [released_mount,lm['insert']]+[p['shape'] for p in lcd+encoder])
     # Front latch hooks are held inward; male USB and flexible bundles disconnected.
-    equipped_front=[RELEASED_PRINT_SHAPES['front']]+[p['shape'] for p in a_parts+lcd+encoder]
+    equipped_front=[RELEASED_PRINT_SHAPES['front']]+[p['shape'] for p in a_parts+lcd+encoder+light]
     translating('4 equipped front enters from front',shift_shapes(equipped_front,(0,-100,0)),(0,100,0),
                 [tube]+[p['shape'] for p in usb_fixed])
-    front_at_rest=[facade]+[p['shape'] for p in a_parts+lcd+encoder]
+    front_at_rest=[facade]+[p['shape'] for p in a_parts+lcd+encoder+light]
     usb_plug=byname['USB_C_DEVKIT_MALE_PLUG_TBD']['shape']
     translating('5 USB male plug insertion after front fitted',[usb_plug.translate((15,0,0))],(-15,0,0),
                 [tube]+front_at_rest+[p['shape'] for p in usb_fixed])
@@ -464,7 +490,7 @@ def verify_assembly_paths():
                   'JST_refs':['J1','J4','J6','J7'],
                   'method':'BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified'})
     result={'tests':tests,'failures':failures,
-            'reverse_order':'rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped',
+            'reverse_order':'rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped; BH1750 cassette and optical insert removable separately on bench',
             'limits':'Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation.'}
     (OUT/'assembly_sequence_validation.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     if failures:raise AssertionError(failures[:25])
@@ -473,15 +499,16 @@ def verify_assembly_paths():
 
 
 def validate_export():
-    assembled=cq.Assembly(name='Laboratory_controller_fit_study_07_integrated_buck')
-    exploded=cq.Assembly(name='Exploded_fit_study_07_integrated_buck')
-    printed=cq.Assembly(name='Boitier_4_pieces_a_imprimer')
-    printed_exploded=cq.Assembly(name='Boitier_4_pieces_vue_eclatee')
+    assembled=cq.Assembly(name='Laboratory_controller_fit_study_'+TAG)
+    exploded=cq.Assembly(name='Exploded_fit_study_'+TAG)
+    printed=cq.Assembly(name='Boitier_'+str(len(PRINT_NAMES))+'_pieces_a_imprimer')
+    printed_exploded=cq.Assembly(name='Boitier_pieces_vue_eclatee')
     print_names=PRINT_NAMES
     groups={key:cq.Assembly(name=label) for key,label in [
         ('plastic','01_Pieces_imprimees'),('A','02_Carte_A_reference'),
         ('B','03_Carte_B_reference'),('LCD','04_Afficheur_encodeur_reference'),
-        ('external','05_Passe_paroi_et_faisceaux_reference'),('USB','06_USB_maintenance_reference')]}
+        ('external','05_Passe_paroi_et_faisceaux_reference'),('USB','06_USB_maintenance_reference'),
+        ('light','07_BH1750_reference')]}
     partsdir=OUT/('parts_'+TAG);partsdir.mkdir(exist_ok=True)
     summary={'status':'unqualified fit mock-up, not production design','parts':[],'collisions_mm3':[],
              'coordinates':'x left-right, y front-rear, z bottom-top (mm)',
@@ -490,9 +517,9 @@ def validate_export():
     for part in PARTS:
         s=part['shape'];name=part['name'];vol=s.val().Volume()
         assert vol>0 and s.val().isValid(),name
-        group='plastic' if name in print_names else part['group'] if part['group'] in ('A','B','LCD','USB') else 'external'
+        group='plastic' if name in print_names else part['group'] if part['group'] in ('A','B','LCD','USB','light') else 'external'
         groups[group].add(s,name=name,color=cq.Color(*part['color']))
-        shift=-85 if part['group'] in ('front','A','LCD') else 50 if part['group']=='B' else (85 if part['group']=='rear' else 0)
+        shift=-85 if part['group'] in ('front','A','LCD','light') else 50 if part['group']=='B' else (85 if part['group']=='rear' else 0)
         if part['group']!='wire':exploded.add(s.translate((0,shift,0)),name=name,color=cq.Color(*part['color']))
         summary['parts'].append({'name':name,'volume_mm3':round(vol,3),'solids':len(s.val().Solids()),'group':part['group']})
         if name in PRINT_NAMES:
@@ -517,14 +544,14 @@ def validate_export():
         assert sa.val().intersect(sb.val()).Volume()<1e-5
     b_parts=[p for p in PARTS if p['group']=='B' and p['physical']]
     for usb_part in [part for part in PARTS if part['group']=='USB' and part['physical']]:
-        for other in [part for part in PARTS if part['group'] in ('A','B','LCD') and part['physical']]:
+        for other in [part for part in PARTS if part['group'] in ('A','B','LCD','light') and part['physical']]:
             overlap=_overlap(usb_part['shape'],other['shape'])
             if overlap>1e-4:summary['collisions_mm3'].append([usb_part['name'],other['name'],round(overlap,5)])
     b_envelope=cq.Compound.makeCompound([p['shape'].val() for p in b_parts]).BoundingBox()
     swept=box(b_envelope.xmin,b_envelope.ymin,b_envelope.zmin,
               b_envelope.xlen,b_envelope.ylen+50,b_envelope.zlen)
     # B and its carrier can translate 50 mm rearward after panel/cables removal.
-    fixed=[p for p in PARTS if p['group'] in ('shell','front','A','LCD','USB')]
+    fixed=[p for p in PARTS if p['group'] in ('shell','front','A','LCD','USB','light')]
     for obstacle in fixed:
         volume=_overlap(swept,obstacle['shape'])
         if volume>1e-4:summary['collisions_mm3'].append(['B_swept_bounding_box_0_to_50',obstacle['name'],round(volume,5)])
@@ -559,6 +586,7 @@ def validate_export():
     summary['B_continuous_extraction_check']='Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed'
     summary['STEP_volume_mm3']=round(reimport.val().Volume(),3)
     summary['fusion_import_tested']=False
+    summary['light_sensor']=LIGHT_MOUNT.get('summary')
     (OUT/'validation.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
     print('STEP/STL/GLB exported; BRep collision and extraction samples passed.')
 
@@ -579,20 +607,25 @@ def render_previews():
         a=vtk.vtkActor();a.SetMapper(mapper);a.GetProperty().SetColor(*part['color'])
         a.GetProperty().SetOpacity(opacity);a.GetProperty().SetSpecular(.2);a.GetProperty().SetSpecularPower(35)
         return a
-    for mode,camera in [('assembled',(230,-260,175)),('side_vents',(420,100,170)),('exploded',(290,330,230)),('service',(260,400,185)),('b_power',(100,240,140)),('front_module',(220,200,155)),('front_lcd',(190,160,140)),('rear',(72,400,50)),('clips',(175,245,145)),('lcd_mount',(185,155,140)),('usb',(340,-80,140))]:
+    for mode,camera in [('assembled',(230,-260,175)),('side_vents',(420,100,170)),('exploded',(290,330,230)),('service',(260,400,185)),('b_power',(100,240,140)),('front_module',(220,200,155)),('front_lcd',(190,160,140)),('rear',(72,400,50)),('clips',(175,245,145)),('lcd_mount',(185,155,140)),('usb',(340,-80,140)),('light_sensor',(162,58,108)),('light_sensor_front',(160,-65,105))]:
         renderer=vtk.vtkRenderer();renderer.SetBackground(.94,.96,.97)
         scene=LCD_DETAIL+[p for p in PARTS if p['name'].startswith('LCD_')] if mode=='lcd_mount' else PARTS
+        if mode.startswith('light_sensor'):
+            if not LIGHT_MOUNT:continue
+            front=next(p for p in PARTS if p['group']=='front')
+            scene=[dict(front,shape=front['shape'].intersect(box(110,-.1,65,32,16,29)))]+[p for p in PARTS if p['group']=='light']
         for part in scene:
             if mode=='clips' and part['group']!='B':continue
             if mode=='b_power' and part['group']!='B':continue
             if mode=='service' and (part['group'] in ('rear','wire') or not part['physical']):continue
-            if mode=='front_module' and part['group'] not in ('front','A','LCD'):continue
+            if mode=='front_module' and part['group'] not in ('front','A','LCD','light'):continue
             if mode=='front_lcd' and not (part['group']=='front' or part['name'].startswith('LCD_')):continue
             if mode=='exploded' and (part['group']=='wire' or not part['physical']):continue
-            shift=(-85 if part['group'] in ('front','A','LCD') else 50 if part['group']=='B' else 85 if part['group']=='rear' else 0) if mode=='exploded' else 0
+            shift=(-85 if part['group'] in ('front','A','LCD','light') else 50 if part['group']=='B' else 85 if part['group']=='rear' else 0) if mode=='exploded' else 0
             alpha=.15 if mode in ('exploded','service') and part['group']=='shell' else 1
             renderer.AddActor(actor(part,shift,alpha))
         cam=renderer.GetActiveCamera();cam.SetPosition(*camera);cam.SetFocalPoint(85 if mode=='clips' else 72,12 if mode=='lcd_mount' else 85 if mode=='clips' else 90 if mode=='exploded' else 52,58 if mode=='lcd_mount' else 50)
+        if mode.startswith('light_sensor'):cam.SetFocalPoint(126,5,80)
         cam.SetViewUp(0,0,1);cam.ParallelProjectionOn();renderer.ResetCamera();cam.Zoom(.85 if mode=='b_power' else .90 if mode in ('front_lcd','front_module') else 1.0 if mode=='lcd_mount' else 1.12)
         window=vtk.vtkRenderWindow();window.SetOffScreenRendering(1);window.SetSize(1600,1100)
         window.SetMultiSamples(8);window.AddRenderer(renderer);window.Render()
@@ -612,7 +645,9 @@ def render_previews():
                 'rear':'PANNEAU ARRIERE - passages de paroi provisoires',
                 'clips':'BERCEAU B - rainure continue et deux clips lateraux liberables',
                 'lcd_mount':'FIXATION DU LCD - vue depuis interieur, cartes A et B masquees',
-                'usb':'USB LATERAL - acces prevu pour flash et monitoring serie'}
+                'usb':'USB LATERAL - acces prevu pour flash et monitoring serie',
+                'light_sensor':'BH1750 - cassette opaque et clips ; facade coupee pour inspection',
+                'light_sensor_front':'BH1750 - fenetre translucide fermee 0,6 mm ; vue exterieure locale'}
         draw.text((35,24),titles[mode],font=font,fill='#18313e')
         draw.text((35,1050),'Volumes de composants et connecteurs a confirmer - clips non qualifies - pas de fabrication finale',font=small,fill='#435966')
         if mode=='exploded':draw.text((35,75),'Facade vers avant ; B vers arriere, faisceaux debranches.',font=small,fill='#435966')

@@ -1,5 +1,5 @@
 {
-  "revision": "0.8 - documented Harwin sockets and male header spacer / final prototype preparation",
+  "revision": "0.9 - removable BH1750 cassette and closed translucent optical insert",
   "case_mm": {
     "width": 155,
     "height": 100,
@@ -113,6 +113,7 @@
       "LCD",
       "encoder",
       "PCB A",
+      "BH1750 insert then equipped cassette",
       "front into tube",
       "USB male cable",
       "B carrier",
@@ -148,5 +149,14 @@
     "extraction_corridor_mm": 35,
     "notes": "XHP width = (circuits-1)*pitch+4.8. Clearance is for plug body and nominal margin, not fingers; real mating and cable slack require physical test."
   },
-  "export_tag": "v08"
+  "light_sensor": {
+    "enabled": true,
+    "center_x_z_mm": [126, 77],
+    "module_pcb_mm": [23, 16, 1.6],
+    "module_dimensions_measured": false,
+    "membrane_mm": 0.6,
+    "material": "translucent insert; opaque cassette and facade",
+    "notes": "Planning envelope only: sensor centered, connector toward top. Measure actual breakout and qualify optical transmission before final printing."
+  },
+  "export_tag": "v09"
 }
