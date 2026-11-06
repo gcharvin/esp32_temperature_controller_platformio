@@ -52,7 +52,8 @@ def main():
         assert sum(b['SMT'] for b in counts.values())==51
         assert sum(b['THT_native'] for b in counts.values())+len(sockets)==19
         geometry=json.loads(bundle.read('assembly_review/assembly_geometry.json'))
-        assert sum(len(b['parts']) for b in geometry['boards'])==70
+        assert sum(len(b['parts']) for b in geometry['boards'])==sum(b['native_references'] for b in manifest['boards'].values())
+        assert all(not r['Designator'].startswith('TP') for code in ('A','B') for r in rows(code+'/BOM_SMT_RFQ_NOT_FOR_ORDER.csv'))
         pdf=bundle.read('assembly_review/assembly_review_A04_B05.pdf')
         assert pdf.startswith(b'%PDF-')
         result=dict(status='PASS / RFQ integrity only; not fabrication release',

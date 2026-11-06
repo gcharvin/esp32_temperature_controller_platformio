@@ -20,7 +20,7 @@ def main():
         for name,digest in manifest['archive_files_sha256'].items():
             assert hashlib.sha256(bundle.read(name)).hexdigest()==digest,'Corrupt archive member '+name
         status=json.loads(bundle.read('preparation_status.json'))
-        assert status['local_preparation_complete'] and status['final_visual_review'] and status['automatic_stages']==13
+        assert status['local_preparation_complete'] and status['final_visual_review'] and status['automatic_stages']==15
         assert not status['fabrication_release'] and not status['order_authorized'] and not status['order_placed']
         if args.check_workspace:
             for relative,digest in manifest['workspace_sources_sha256'].items():

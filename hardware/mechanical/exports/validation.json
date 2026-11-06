@@ -188,7 +188,19 @@
       "group": "B"
     },
     {
-      "name": "B_R3_ENVELOPE",
+      "name": "B_C1_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C10_ENVELOPE",
+      "volume_mm3": 1426.182,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C2_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
@@ -200,14 +212,80 @@
       "group": "B"
     },
     {
-      "name": "B_L1_ENVELOPE",
-      "volume_mm3": 2326.957,
+      "name": "B_C4_ENVELOPE",
+      "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_J4_ENVELOPE",
-      "volume_mm3": 563.108,
+      "name": "B_C5_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C6_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C7_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C8_ENVELOPE",
+      "volume_mm3": 859.823,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_C9_ENVELOPE",
+      "volume_mm3": 9.015,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D2_ENVELOPE",
+      "volume_mm3": 80.753,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D3_ENVELOPE",
+      "volume_mm3": 16.902,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D4_ENVELOPE",
+      "volume_mm3": 80.753,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D5_ENVELOPE",
+      "volume_mm3": 7.156,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D6_ENVELOPE",
+      "volume_mm3": 7.156,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D7_ENVELOPE",
+      "volume_mm3": 7.156,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_D8_ENVELOPE",
+      "volume_mm3": 7.156,
       "solids": 1,
       "group": "B"
     },
@@ -218,19 +296,115 @@
       "group": "B"
     },
     {
+      "name": "B_F1_ENVELOPE",
+      "volume_mm3": 74.151,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_F2_ENVELOPE",
+      "volume_mm3": 74.151,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J1_ENVELOPE",
+      "volume_mm3": 563.108,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J2_ENVELOPE",
+      "volume_mm3": 1747.515,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J3_ENVELOPE",
+      "volume_mm3": 1747.515,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J4_ENVELOPE",
+      "volume_mm3": 563.108,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J6_ENVELOPE",
+      "volume_mm3": 729.708,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J7_ENVELOPE",
+      "volume_mm3": 1229.508,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_L1_ENVELOPE",
+      "volume_mm3": 2326.957,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_Q1_ENVELOPE",
+      "volume_mm3": 887.783,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_Q2_ENVELOPE",
+      "volume_mm3": 116.687,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R1_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R10_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R11_ENVELOPE",
+      "volume_mm3": 2.727,
+      "solids": 1,
+      "group": "B"
+    },
+    {
       "name": "B_R12_ENVELOPE",
       "volume_mm3": 2.727,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_U5_ENVELOPE",
-      "volume_mm3": 22.566,
+      "name": "B_R13_ENVELOPE",
+      "volume_mm3": 12.662,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_C5_ENVELOPE",
+      "name": "B_R2_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R3_ENVELOPE",
+      "volume_mm3": 6.818,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_R4_ENVELOPE",
       "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
@@ -242,122 +416,8 @@
       "group": "B"
     },
     {
-      "name": "B_R11_ENVELOPE",
-      "volume_mm3": 2.727,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C2_ENVELOPE",
+      "name": "B_R6_ENVELOPE",
       "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C8_ENVELOPE",
-      "volume_mm3": 859.852,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D4_ENVELOPE",
-      "volume_mm3": 80.753,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C6_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R13_ENVELOPE",
-      "volume_mm3": 12.662,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_Q2_ENVELOPE",
-      "volume_mm3": 116.687,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_F1_ENVELOPE",
-      "volume_mm3": 74.151,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C4_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D3_ENVELOPE",
-      "volume_mm3": 16.902,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J3_ENVELOPE",
-      "volume_mm3": 1747.515,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R4_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_Q1_ENVELOPE",
-      "volume_mm3": 887.783,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C7_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R2_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R1_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_U3_ENVELOPE",
-      "volume_mm3": 22.566,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C10_ENVELOPE",
-      "volume_mm3": 1426.228,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J6_ENVELOPE",
-      "volume_mm3": 729.708,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_U2_ENVELOPE",
-      "volume_mm3": 22.566,
       "solids": 1,
       "group": "B"
     },
@@ -368,20 +428,8 @@
       "group": "B"
     },
     {
-      "name": "B_J2_ENVELOPE",
-      "volume_mm3": 1747.515,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_J7_ENVELOPE",
-      "volume_mm3": 1229.508,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D2_ENVELOPE",
-      "volume_mm3": 80.753,
+      "name": "B_R8_ENVELOPE",
+      "volume_mm3": 6.818,
       "solids": 1,
       "group": "B"
     },
@@ -392,14 +440,20 @@
       "group": "B"
     },
     {
-      "name": "B_D8_ENVELOPE",
-      "volume_mm3": 7.156,
+      "name": "B_U1_ENVELOPE",
+      "volume_mm3": 909.816,
       "solids": 1,
       "group": "B"
     },
     {
-      "name": "B_R10_ENVELOPE",
-      "volume_mm3": 2.727,
+      "name": "B_U2_ENVELOPE",
+      "volume_mm3": 22.566,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_U3_ENVELOPE",
+      "volume_mm3": 22.566,
       "solids": 1,
       "group": "B"
     },
@@ -410,62 +464,8 @@
       "group": "B"
     },
     {
-      "name": "B_J1_ENVELOPE",
-      "volume_mm3": 563.108,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D6_ENVELOPE",
-      "volume_mm3": 7.156,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R6_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D5_ENVELOPE",
-      "volume_mm3": 7.156,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_R8_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C1_ENVELOPE",
-      "volume_mm3": 6.818,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_U1_ENVELOPE",
-      "volume_mm3": 909.816,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_F2_ENVELOPE",
-      "volume_mm3": 74.151,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_C9_ENVELOPE",
-      "volume_mm3": 9.015,
-      "solids": 1,
-      "group": "B"
-    },
-    {
-      "name": "B_D7_ENVELOPE",
-      "volume_mm3": 7.156,
+      "name": "B_U5_ENVELOPE",
+      "volume_mm3": 22.566,
       "solids": 1,
       "group": "B"
     },
@@ -1186,7 +1186,7 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 423637.725,
+  "STEP_volume_mm3": 423637.649,
   "fusion_import_tested": false,
   "light_sensor": {
     "center_x_z_mm": [

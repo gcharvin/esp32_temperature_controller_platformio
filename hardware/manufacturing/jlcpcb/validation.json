@@ -40,5 +40,7 @@
   "order_authorized": false,
   "order_placed": false,
   "B_panel_generated": false,
-  "B_Standard_panel_review_required": true
+  "B_Standard_panel_review_required": true,
+  "copper_testpads_excluded_from_purchasing_and_placement": 22,
+  "actual_back_mask_testpad_openings_verified": 22
 }

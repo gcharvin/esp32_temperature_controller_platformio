@@ -92,7 +92,9 @@ def main():
                    ROOT/'manufacturing/harness_pin_map.csv',ROOT/'manufacturing/harness_validation.json',
                    ROOT/'scripts/build_harness_map.py',ROOT/'scripts/prepare_fabrication.py',
                    ROOT/'manufacturing/START_HERE.md',ROOT/'manufacturing/factory_response.csv',
-                   ROOT/'pcb_a_display/fp-lib-table',ROOT/'pcb_b_temperature/fp-lib-table'):
+                   ROOT/'pcb_a_display/fp-lib-table',ROOT/'pcb_b_temperature/fp-lib-table',
+                   ROOT/'test_points.json',ROOT/'TEST_POINTS.md',ROOT/'scripts/check_test_points.py',
+                   ROOT/'review/routing/test_points_validation.json',ROOT/'review/diagnostic_firmware_validation.json'):
         manifest['sources_sha256'][source.relative_to(ROOT).as_posix()]=sha(source)
     native_hashes={p:sha(p) for name in ('pcb_a_display','pcb_b_temperature')
                    for suffix in ('.kicad_sch','.kicad_pcb','.kicad_pro')
@@ -133,7 +135,7 @@ def main():
             for key in ('MPN','Manufacturer'):
                 if fields.get(key,'')!=p[key] or fp.GetFieldText(key)!=p[key]:raise ValueError('Frozen native part identity mismatch '+code+'/'+ref+'/'+key)
             supplier=SUPPLIER_BY_MPN.get(p['MPN'],{})
-            assembly=('NONE_COPPER' if ref=='NT1' else 'CUSTOMER_PLUG_IN' if code=='A' and ref=='U1'
+            assembly=('NONE_COPPER' if ref=='NT1' or ref.startswith('TP') else 'CUSTOMER_PLUG_IN' if code=='A' and ref=='U1'
                       else 'FACTORY_THT_QUOTE' if any(pad.GetDrillSize().x for pad in fp.Pads()) else 'FACTORY_SMT_QUOTE')
             rows.append(dict(Board=code,Reference=ref,Quantity=1,Value=comp.findtext('value'),
                              Footprint=comp.findtext('footprint'),Assembly=assembly,**p,
@@ -231,7 +233,7 @@ def main():
     write_csv(OUT/'loose_accessories.csv',[dict(Board='A',Reference='JP1_SHUNT',Quantity=1,MPN='M7566-05',Manufacturer='Harwin',Assembly='SUPPLY_LOOSE_NOT_ON_CPL')])
     manifest['fabrication_output_checks']=fabrication['boards']
     manifest['automatic_checks']=['fresh ERC/DRC for both boards', 'native board / netlist ref, value, footprint and pad/net parity',
-                                    'all 70 native references accounted for', 'SMT BOM and CPL exact reference matching',
+                                    'all native references including copper-only test pads accounted for', 'SMT BOM and CPL exact reference matching',
                                     'NT1 excluded from purchasing/placement; DevKit separated from two physical sockets',
                                     'actual Excellon holes and Gerber outlines/paste coordinates compared with native geometry',
                                     'IPC-D-356 test netlists exported; only B NT1 ground equivalence normalized',
@@ -259,7 +261,8 @@ def main():
         'manufacturing_fit_audit.json','assembly_RFQ_draft.md','usb_service_test.md','panel_B_proposal.svg',
         'land_pattern_review.json','component_selection.json','fabrication_specification.json','engineering_review.md',
         'wiring_and_harnesses.md','harness_pin_map.csv','harness_validation.json','factory_acceptance_test.md',
-        'fabrication_output_validation.json','START_HERE.md','factory_response.csv')]+[ROOT/'devkit_compatibility.md']
+        'fabrication_output_validation.json','START_HERE.md','factory_response.csv')]+[ROOT/'devkit_compatibility.md',ROOT/'TEST_POINTS.md',ROOT/'test_points.json',
+        ROOT/'review/test_point_map.csv',ROOT/'review/test_points_A_back.png',ROOT/'review/test_points_B_back.png']
     manifest['attachments_sha256']={p.name:sha(p) for p in attachments}
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     archive=OUT.parent/'RFQ_A04_B05_DRAFT_NOT_FOR_ORDER.zip'

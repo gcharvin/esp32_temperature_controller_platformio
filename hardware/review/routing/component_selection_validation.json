@@ -1,8 +1,8 @@
 {
   "status": "PASS / prototype engineering selection; assembler approval remains external",
   "native_references": {
-    "A": 22,
-    "B": 48
+    "A": 32,
+    "B": 60
   },
   "physical_native_components": 68,
   "extra_sockets": 2,
@@ -10,13 +10,13 @@
   "all_native_MPN_manufacturer_fields_match": true,
   "substitutions_allowed": false,
   "source_sha256": {
-    "manufacturing/component_selection.json": "12604e73482c2ddac8f79335f72b799a57fd8692eddeba0ddded4f706d1a842d",
+    "manufacturing/component_selection.json": "63ff2f71fb229c3790cc9309234dbb04253b025e6e104e6793ec551d2a64f6b5",
     "scripts/check_component_selection.py": "b5973794d9904160182e9884b18ab90dc051754ee633ec76f6f6c1e996416a99",
-    "pcb_a_display/pcb_a_display.kicad_sch": "70cc3d673e24b44a7ec3f662575d27d29d485bb88687d375e8cde26751487ff2",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
-    "review/pcb_a_display.net.xml": "66d4e0b1ce64a5408dab70da3ae621efd97098e35818bb0c49e91a0d16a615c1",
-    "pcb_b_temperature/pcb_b_temperature.kicad_sch": "6cdced84fd65b93f5bdec11e2e45b3a323212bbad9da9d37e70f3fc481b67cde",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9",
-    "review/pcb_b_temperature.net.xml": "466def7690fea8653821bdc8d4562417d9fc60728c84e8d60eb32e64fa19e4ea"
+    "pcb_a_display/pcb_a_display.kicad_sch": "d384bb55aa10397c4ef1f50b366d2d36ec245aafb6505c6ff6b986e91ab3a7ae",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
+    "review/pcb_a_display.net.xml": "6d503847dadcfa983840795475d49d60bed9bcd780bfe8eeb4d0cd4541f42068",
+    "pcb_b_temperature/pcb_b_temperature.kicad_sch": "2fa1e6ff86e1e78516c3eea50a6716275c4539d2a1b6d492ab6fa76fc9932596",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
+    "review/pcb_b_temperature.net.xml": "82dcc702a1078c8bbf665939b98afcb7474b93c3c6ee9116a470a855f11a2c25"
   }
 }

@@ -1,5 +1,12 @@
 # Préparation de fabrication A v0.4 / B v0.5
 
+Révision courante **A0.4.1 / B0.5.1**, ajout de **22 pastilles de test au dos**,
+sans changement des68 composants natifs achetés, des51 CMS ou des19 traversants
+physiques à monter. Les anciens noms A04/B05 désignent la famille de fichiers.
+Les TP ne sont ni à approvisionner ni à souder. Voir [le plan de mesure](../TEST_POINTS.md)
+et [le firmware de diagnostic séparé](../../firmware/diagnostic/README.md).
+Le paquet JLCPCB courant est dans `jlcpcb/` et son archive dédiée.
+
 Le point d’entrée est [START_HERE.md](START_HERE.md). Le dossier prépare un
 **lot de cinq A et cinq B assemblées**, B température24V/100W, A commune aux
 futures variantes B12V/5V via son interface5V régulée. Il ne constitue pas
@@ -106,7 +113,7 @@ modules, les câbles et les clips imprimés se vérifient à l’intégration.
 ```
 
 KiCad10, uv/CadQuery et l’interpréteur PDF avec ReportLab/pypdf sont nécessaires.
-Les13 étapes s’arrêtent au premier échec. Les sources mécaniques sont figées
+Les15 étapes s’arrêtent au premier échec. Les sources mécaniques sont figées
 pendant la génération. Les dessins et rapports périmés sont refusés avant
 constitution du ZIP de devis. La sélection n’est appliquée aux sources que
 par l’outil explicite `finalize_prototype_parts.py --apply` ; ne pas relancer

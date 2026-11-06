@@ -19,7 +19,7 @@ def read(path):return json.loads(path.read_text(encoding='utf-8'))
 
 def main():
     checks=read(FOLDER/'preparation_checks.json')
-    assert len(checks['stages'])==13 and all(s['exit_code']==0 for s in checks['stages'])
+    assert len(checks['stages'])==15 and all(s['exit_code']==0 for s in checks['stages'])
     for relative,digest in checks['evidence_sha256'].items():assert sha(ROOT/relative)==digest,'Stale evidence '+relative
     visual=read(FOLDER/'visual_review.json');assert visual['status']=='PASS'
     required={'manufacturing/output/pdf/assembly_review_A04_B05.pdf',
@@ -46,11 +46,20 @@ def main():
     with zipfile.ZipFile(rfq) as bundle:
         assert bundle.testzip() is None
         for name in bundle.namelist():files['rfq_manifest.json' if name=='manifest.json' else name]=bundle.read(name)
-    for name in ('README.md','interface_ab.json','module_selection.json','placement.json','devkit_compatibility.md','display_backlight_study.md','lab_draft.kicad_sym'):
+    for name in ('README.md','TEST_POINTS.md','test_points.json','interface_ab.json','module_selection.json','placement.json','devkit_compatibility.md','display_backlight_study.md','lab_draft.kicad_sym'):
         add(ROOT/name,'native/hardware/'+name)
     for board in ('pcb_a_display','pcb_b_temperature'):
         for name in (board+'.kicad_pro',board+'.kicad_sch',board+'.kicad_pcb',board+'_bom_draft.csv','fp-lib-table','sym-lib-table','README.md'):
             add(ROOT/board/name,'native/hardware/'+board+'/'+name)
+    for name in ('platformio.ini','BenchPolicy.h','main.cpp','README.md',
+                 'release/firmware.bin','release/bootloader.bin','release/partitions.bin'):
+        path=ROOT.parent/'firmware/diagnostic'/name
+        files['native/firmware/diagnostic/'+name]=path.read_bytes()
+        sources['../firmware/diagnostic/'+name]=sha(path)
+    for name in ('test_point_map.csv','test_points_A_back.png','test_points_B_back.png'):
+        add(ROOT/'review'/name,'evidence/review/'+name)
+        add(ROOT/'review'/name,'native/hardware/review/'+name)
+    add(ROOT/'review/routing/electronics_bench_plan.md','native/hardware/review/routing/electronics_bench_plan.md')
     for path in sorted((ROOT/'lab_hardware.pretty').glob('*.kicad_mod')):add(path,'native/hardware/lab_hardware.pretty/'+path.name)
     for name in ('build_enclosure.py','light_sensor_mount.py','package_enclosure.py','enclosure_parameters.json','README.md'):
         add(ROOT/'mechanical'/name,'native/hardware/mechanical/'+name)
@@ -73,10 +82,11 @@ def main():
         add(ROOT/'review/routing'/name,'evidence/review/routing/'+name)
     status=dict(state='LOCAL_TECHNICAL_PREPARATION_COMPLETE / FACTORY_HANDOFF_PENDING',
         local_preparation_complete=True,date_utc=datetime.now(timezone.utc).isoformat(),
-        automatic_stages=13,final_visual_review=True,physical_native_components=68,SMT_components=51,
+        automatic_stages=15,final_visual_review=True,physical_native_components=68,SMT_components=51,
         physical_THT_items=19,extra_loose_shunts=1,mechanical_service_stages=mechanical['assembly_service_stages'],
         source_geometry_and_MPNs_frozen=True,simulations_rerun_in_this_revision=False,
         mechanical_revision=parameters['revision'],BH1750_breakout_and_optical_transmission_qualified=False,
+        copper_only_testpads=22,diagnostic_firmware_compiled=True,diagnostic_firmware_flashed=False,
         hardware_functional_tests_performed=False,fabrication_release=False,order_authorized=False,order_placed=False,
         external_gates='factory_response.csv: exact sourcing, DFM/panel/holes, thermal/MSL process, placement preview, tests/quote and purchase authorization',
         scope='Prototype PCB preparation complete locally; no actual manufacturer acceptance or operational heater qualification inferred.')

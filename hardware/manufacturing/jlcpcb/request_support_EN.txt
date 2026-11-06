@@ -3,6 +3,13 @@ Subject: PRE-SALES RFQ / DFM feasibility review only - 5x A04 + 5x B05 fully ass
 
 Hello,
 
+Current native revision is A0.4.1 / B0.5.1 (diagnostic revision of the A04/B05
+family):22 exposed BACK-SIDE copper test pads were added. TP* references are
+NOT purchased or fitted components; no solder paste on these pads. Use the
+current regenerated Gerber ZIPs, not a previous A04/B05 upload. The supplied
+test-point maps supplement the component-side assembly drawings. No ESP32
+firmware flashing is requested from the factory.
+
 Please provide a pre-sales engineering feasibility review and an itemized quote
 for five A04 display/interface PCBs and five B05 temperature-control PCBs,
 including all SMT AND through-hole parts. This is a request for quotation only.

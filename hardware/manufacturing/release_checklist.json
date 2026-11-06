@@ -1,5 +1,5 @@
 {
-  "revision": "A04/B05 prototype preparation3 - native parts frozen; local evidence and factory handoff",
+  "revision": "A0.4.1/B0.5.1 diagnostic preparation",
   "date": "2026-11-05",
   "fabrication_release": false,
   "order_placed": false,
@@ -44,13 +44,18 @@
       "id": "quotation_and_order",
       "status": "NOT_ORDERED",
       "action": "Obtain itemized quote for5A+5B assembled prototypes, electrical test options, lead time and delivery. Purchase/order authorization is separate from autonomous technical preparation."
+    },
+    {
+      "id": "diagnostic_testpads_and_firmware",
+      "status": "CHECKED_LOCALLY_HARDWARE_PENDING",
+      "action": "22 back-side copper pads; no purchasing/placement. Standalone bench diagnostic compiles; ENABLE permanently LOW. Board operation not physically tested."
     }
   ],
   "after_prototype_before_operating_heater": [
     {
       "id": "firmware",
       "status": "OPEN",
-      "action": "Migrate PWM GPIO5 to25, handle ENABLE, ADS1115 address0x49, NTC calibration and safe behavior at boot/lost or invalid measurement. Verify real output off on faults."
+      "action": "Standalone bench diagnostic is available with GPIO25/27, ADS0x49 and permanent ENABLE=0; use it for commissioning. Production heating firmware, NTC calibration and safe-fault operation still require implementation/physical checks."
     },
     {
       "id": "bench",

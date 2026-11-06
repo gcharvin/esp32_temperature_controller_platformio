@@ -1,19 +1,42 @@
 {
-  "revision": "A04-B05 prototype preparation 3",
+  "revision": "A0.4.1-B0.5.1 diagnostic test pads; physical assembly unchanged",
   "scope": "Five assembled prototype A boards and five assembled temperature B boards for quotation; not an order",
   "quote_quantity_each": 5,
   "order_authorized": false,
   "material": "FR4, lead-free compatible, Tg >=150C requested",
   "layers": 2,
   "finished_thickness_nominal_mm": 1.6,
-  "accepted_published_thickness_range_mm": [1.44, 1.76],
+  "accepted_published_thickness_range_mm": [
+    1.44,
+    1.76
+  ],
   "surface_finish": "ENIG requested; any alternative requires approval",
   "soldermask": "green, both sides",
   "silkscreen": "white, both sides as supplied",
   "controlled_impedance": false,
   "boards": {
-    "A": {"outline_mm": [110, 75], "outer_copper_um_each_side": 35, "SMT": 13, "factory_THT_including_sockets": 10},
-    "B": {"outline_mm": [90, 65], "outer_copper_um_each_side": 70, "SMT": 38, "factory_THT": 9, "input_V": 24, "heater_target_max_W": 100}
+    "A": {
+      "outline_mm": [
+        110,
+        75
+      ],
+      "outer_copper_um_each_side": 35,
+      "SMT": 13,
+      "factory_THT_including_sockets": 10,
+      "copper_only_testpads": 10
+    },
+    "B": {
+      "outline_mm": [
+        90,
+        65
+      ],
+      "outer_copper_um_each_side": 70,
+      "SMT": 38,
+      "factory_THT": 9,
+      "input_V": 24,
+      "heater_target_max_W": 100,
+      "copper_only_testpads": 12
+    }
   },
   "assembly": {
     "side": "top only",
@@ -25,11 +48,15 @@
     "loose_shunt": "One Harwin M7566-05 per A, supplied loose; do not bridge JP1 at delivery",
     "customer_module": "Do not buy or solder the removable ESP32 DevKit",
     "net_tie": "B/NT1 copper only; no purchased part",
-    "substitutions": "No automatic manufacturer, package or value substitutions"
+    "substitutions": "No automatic manufacturer, package or value substitutions",
+    "testpoints": "TP* are exposed B.Cu/B.Mask copper only, no paste and no purchased/fitted part"
   },
   "panelization": {
     "owner": "Assembler, proposal and DFM approval before build",
-    "B_candidate_mm": [90, 75],
+    "B_candidate_mm": [
+      90,
+      75
+    ],
     "B_candidate_external_rails_mm": 5,
     "delivered_functional_outlines_unchanged": true,
     "delivered_depanelized_deburred": true,

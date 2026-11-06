@@ -129,7 +129,7 @@ def render():
         c.setFillColor(HexColor(color)); c.setFont('Helvetica', size); c.drawString(x, y, line)
     def header(title, page):
         text(30, H-35, title, 19)
-        text(30, H-54, 'ASSEMBLY REVIEW - NOT FOR ORDER | 2026-11-05 | Top view, not mirrored', 9, '#a14d16')
+        text(30, H-54, 'ASSEMBLY REVIEW - NOT FOR ORDER | 2026-11-06 | Top view, not mirrored', 9, '#a14d16')
         text(30, 20, 'A04 / B05 | Native KiCad geometry | PCB corner coordinates in mm; not a printable 1:1 template.', 8)
         text(W-55, 20, str(page), 8)
     for index, b in enumerate(data['boards'], 1):
@@ -143,6 +143,7 @@ def render():
         c.setFillColor(HexColor('#f3f7f8')); c.rect(left, top-height*scale, width*scale, height*scale, fill=1)
         text(left, top+13, f'{width:g} x {height:g} mm | origin (0,0) = upper-left Edge.Cuts corner', 9)
         for f in b['parts']:
+            if f['ref'].startswith('TP'):continue  # Back-side copper, separate bench map.
             c.setStrokeColor(HexColor('#687d89')); c.setLineWidth(.5)
             for shape in f['fab']:
                 kind = shape['kind']
@@ -175,7 +176,7 @@ def render():
             c.setFillColor(HexColor('#123e53'));c.drawCentredString(x,y,f['ref'])
         x=left+width*scale+24
         text(x, H-105, 'READING THE DRAWING', 9)
-        for j,line in enumerate(['Grey: native F.Fab outlines.', 'Gold: copper lands.', 'Red dot: native pad 1.', 'Holes: white centres.', 'All components on top.', 'Not a stencil/rotation approval.']):
+        for j,line in enumerate(['Grey: native F.Fab outlines.', 'Gold: copper lands.', 'Red dot: native pad 1.', 'Holes: white centres.', 'All components on top.', 'TP pads on BACK: separate map.', 'Not a stencil/rotation approval.']):
             text(x, H-126-j*16, line, 8)
         if b['code']=='A':
             notes=['U1: fit TWO 1x15 female sockets; ESP32 is removable.',

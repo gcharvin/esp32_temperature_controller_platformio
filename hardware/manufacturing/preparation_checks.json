@@ -1,5 +1,5 @@
 {
-  "status": "PASS / all13 local preparation stages; final visual review remains separate",
+  "status": "PASS / all15 local preparation stages; final visual review remains separate",
   "stages": [
     {
       "stage": "schematics",
@@ -19,6 +19,14 @@
     },
     {
       "stage": "placement",
+      "exit_code": 0
+    },
+    {
+      "stage": "test_points",
+      "exit_code": 0
+    },
+    {
+      "stage": "diagnostic_firmware",
       "exit_code": 0
     },
     {
@@ -58,17 +66,19 @@
   "order_authorized": false,
   "evidence_sha256": {
     "review/validation.txt": "2f012cebafe860b7b72d80ad254dcdc74e6b15e2753ea1b28158740c9969bdfb",
-    "review/routing/component_selection_validation.json": "b58a153309d517819b4806ffd8c2f794b0eb5005307e3e976c392a76efb696cc",
-    "review/routing/manufacturer_land_patterns.json": "ec2f08dcec02dd0bdf86f9715604239b63c4e13a8ea71ef32b25e4f18b910d83",
-    "review/routing/routing_validation.json": "e122fbc68e973c8b3002d2e7cc708375b17613898a5b1fa371d92affaeed4822",
-    "manufacturing/manufacturing_fit_audit.json": "74ed212044bbb1a101e515865e8277d79cd87ae29e91610e60a26d5d5041347f",
-    "manufacturing/harness_validation.json": "bd809ca023e0098b7e156cd9f01bf91ee7d7b52612c55977797ed288f8e9931a",
-    "manufacturing/output/assembly_review_manifest.json": "2ccccd7ae092f71e3f1e8bf40c8db810708472e743f63877d9689b42767c0fea",
-    "manufacturing/fabrication_output_validation.json": "88c0dba012c651f0b8c12c547ea5118b5e622bb46cde31d4eb4d5e2694915261",
-    "manufacturing/rfq_integrity_validation.json": "aadd4ba250231c8b0ae2638d29f3bb7ba1b1d0affbc0ab39281c88b675d97a9c",
-    "mechanical/exports/source_manifest_v09.json": "e00ee3edff02c7123d4cbc8722510325df0d93ce8399916cf15bf93d2375a102",
+    "review/routing/component_selection_validation.json": "413c8c44cfb9b324d855b6d0cb0a943fd6da159564f5df07fd7f784417ed4016",
+    "review/routing/test_points_validation.json": "1caa202d62f40e918754b6b437f2f48f394d392c3df7b376639078dbd4d19834",
+    "review/diagnostic_firmware_validation.json": "06e05e7b4cfab86deffa2c7525f71e763de2b551225568bf296b59c0e5cc0554",
+    "review/routing/manufacturer_land_patterns.json": "6aac8a2f19d97f05aaf881586bc2d67886e455c03ffd7067f8089de4898d1f28",
+    "review/routing/routing_validation.json": "736d23236f70af33becb5cb201e6a5cb6de13206a74d3a1e18f35ab810b91060",
+    "manufacturing/manufacturing_fit_audit.json": "41abac0cfab02f189d5445c62617ea188765722f250969b5c893b4df3344fceb",
+    "manufacturing/harness_validation.json": "ff4b50e999c75eebf40d937feb44038db47017537ed219e80387333aba96267f",
+    "manufacturing/output/assembly_review_manifest.json": "14faceb94e69462ca1c84a438a29255dc988246e983cc58189a3d2c5c530c6fc",
+    "manufacturing/fabrication_output_validation.json": "f3d16bb739768eb39da907992743bcbb0140a000d8e98f8523aa63b4b7c38c1e",
+    "manufacturing/rfq_integrity_validation.json": "53fb96eafea3fcfb5354fe9d7b778d1d9e583fbecf8c48dcb709b646d16ba9f0",
+    "mechanical/exports/source_manifest_v09.json": "521b077b6dea420fee59f561ae3e9819e46b70ed997b224d94a08ee93d7ddb8a",
     "mechanical/exports/assembly_sequence_validation.json": "5881b8f9188577a8a350251c749d1358f5f27457e8d9cce8a7a6dc578068e9ec",
-    "mechanical/exports/validation.json": "3f4dec0cff71a8742376334e6aa72d02a5e2f88d1c9572e802a06303633521fb"
+    "mechanical/exports/validation.json": "8240afaac8201da396033384d702507c5701f2da405c18744cefd47dde842bf5"
   },
   "limits": [
     "Factory sourcing/DFM/placement-preview/quotation approvals are external.",

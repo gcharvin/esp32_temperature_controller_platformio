@@ -9,10 +9,10 @@
     "Phoenix terminal pitch5.08mm, hole1.3mm, envelope at least installed height13.8mm"
   ],
   "source_sha256": {
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
     "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
-    "placement.json": "c19f97a003b3061db67e79551ae4606fa52e2f4667d0142040a403fce9a1675a",
+    "placement.json": "ad62a3777cb2b2a3a1925a856a9085cccef0bf35fffb5a32e2720affa9579776",
     "module_selection.json": "eb5a7f97b79a9cae4a4adeb0e71ab71bb7f6cba9b3189ece9b555c1a0dac7967",
     "scripts/check_manufacturer_land_patterns.py": "e4644b9d72007f47d370ce19d370cca1e8a259a88382074a9b28a5482d07ac85",
     "lab_hardware.pretty/Vishay_WSL1206_6m_to_200m.kicad_mod": "5175ad9968be1486339a3d41f87157080b67465134f4ddaff113bfaade5d598d",

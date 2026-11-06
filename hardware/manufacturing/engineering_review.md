@@ -66,11 +66,11 @@ du buck par un montage improvisé si un exemplaire échoue à ce contrôle.
 
 ## Mécanique et service
 
-La maquette v0.8 réserve les dimensions maximales documentées des sockets,
+La maquette v0.9 réserve les dimensions maximales documentées des sockets,
 un espace de montage de 0,15 mm et une entretoise plastique de broches mâles
 supposée de 2,54 mm. Cette dernière cote reste une enveloppe de conception,
 pas une mesure des trois DevKit. La hauteur montée des borniers Phoenix est
-13,8 mm ; l'enveloppe utilise 14 mm. Les accès et les 17 séquences rigides sont
+13,8 mm ; l'enveloppe utilise 14 mm. Les accès et les 20 séquences rigides sont
 recontrôlés. Le modèle ne valide ni le sertissage, ni les câbles réels, ni les
 efforts et tolérances des clips. Les vérifications d'insertion et le coupon
 d'impression appartiennent à l'intégration du prototype, pas au contrôle

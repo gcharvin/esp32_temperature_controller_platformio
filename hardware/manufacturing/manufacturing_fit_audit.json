@@ -7,7 +7,7 @@
   },
   "boards": {
     "A": {
-      "native_PCB_sha256": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
+      "native_PCB_sha256": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
       "track_min_mm": 0.2,
       "via_count": 9,
       "via_min_annular_ring_mm": 0.2,
@@ -23,9 +23,9 @@
       "failures": []
     },
     "B": {
-      "native_PCB_sha256": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9",
+      "native_PCB_sha256": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
       "track_min_mm": 0.25,
-      "via_count": 31,
+      "via_count": 32,
       "via_min_annular_ring_mm": 0.2,
       "component_PTH_count": 24,
       "component_PTH_min_ring_mm": 0.35,

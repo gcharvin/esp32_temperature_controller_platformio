@@ -1,0 +1,27 @@
+{
+  "status": "PASS / native copper pads and original routes preserved",
+  "test_points": {
+    "A": 10,
+    "B": 12
+  },
+  "preserved_original_tracks_and_vias": {
+    "A": 336,
+    "B": 361
+  },
+  "purchased_testpoint_components": 0,
+  "paste_apertures_on_testpads": 0,
+  "measured_on_hardware": false,
+  "source_sha256": {
+    "scripts\\check_test_points.py": "eb86b30ea5976fd7c09a6a777b6b692689175ade3dfa7cb2933f8860f3f5da26",
+    "test_points.json": "ebe55d19169cd5e9a417f1ca68884e92c70c5f2c97f1d28115c81b3d4eb6b751",
+    "lab_hardware.pretty\\ProbePad_D1.5mm_NoPaste.kicad_mod": "0deb0f328baf2004558d6b26cc19d1de1b20a5957d524b83cd69cf0e5999405e",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
+    "pcb_a_display\\pcb_a_display.kicad_sch": "d384bb55aa10397c4ef1f50b366d2d36ec245aafb6505c6ff6b986e91ab3a7ae",
+    "review\\pcb_a_display.net.xml": "6d503847dadcfa983840795475d49d60bed9bcd780bfe8eeb4d0cd4541f42068",
+    "pcb_a_display\\pcb_a_display.kicad_pro": "73b07596f092420fa3b72a0152dc9df208170b09eac07ecdfc9bd39788db9272",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "2fa1e6ff86e1e78516c3eea50a6716275c4539d2a1b6d492ab6fa76fc9932596",
+    "review\\pcb_b_temperature.net.xml": "82dcc702a1078c8bbf665939b98afcb7474b93c3c6ee9116a470a855f11a2c25",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pro": "f7f464a104ded142ea917e63098f873b698e23cb271d9007158f21d7f6588bdf"
+  }
+}

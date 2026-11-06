@@ -1,7 +1,13 @@
 # Dépôt JLCPCB — devis et revue préalable, 5 A + 5 B assemblées
 
-Dossier du **6 novembre 2026**, A v0.4 / B température v0.5, sans changement
-des schémas ni des pistes. **Demande de devis uniquement ; aucune commande,
+**Révision native courante A0.4.1 / B0.5.1 : 22 pastilles de test ajoutées au dos.**
+Les noms A04/B05 restent ceux de la famille de fichiers, mais les Gerber et
+archives ont été régénérés. Les TP ne sont pas des composants à fournir ou monter ;
+les quantités d'assemblage restent23 sur A et47 sur B. Le dossier `support/`
+comprend leur plan de mesure et leurs cartes de repérage.
+
+Dossier du **6 novembre 2026**, A0.4.1 / B température0.5.1 ; schémas et routage
+complétés par les points de test, composants achetés inchangés. **Demande de devis uniquement ; aucune commande,
 réservation payante de composants ou fabrication n'est autorisée.**
 
 ## Commencer par le support technique

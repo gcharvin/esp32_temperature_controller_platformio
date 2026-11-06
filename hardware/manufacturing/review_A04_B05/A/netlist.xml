@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\Gilles\Documents\PlatformIO\Projects\esp32-temperature-controller-platformio\hardware\pcb_a_display\pcb_a_display.kicad_sch</source>
-    <date>2026-11-06T09:22:46</date>
+    <date>2026-11-06T18:44:38</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>PCB A - Display and ESP32 carrier</title>
         <company>Laboratory hardware platform</company>
-        <rev>0.4</rev>
+        <rev>0.4.1</rev>
         <date>2026-11-05</date>
         <source>pcb_a_display.kicad_sch</source>
         <comment number="1" value="PROTOTYPE - ENGINEERING PREPARED - ASSEMBLER APPROVAL REQUIRED"/>
@@ -697,6 +697,326 @@
         </unit>
       </units>
     </comp>
+    <comp ref="TP1">
+      <value>GND</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d591a51-8739-512d-aecc-dddc0568a055</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>+5V_AB</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a17bdbd-5c56-5da4-8953-369e22b9b658</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>+5V_DEVKIT</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>958ee2b8-d538-5110-ae59-c87361fe1625</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>+3V3_A</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a201ec4-ab71-52fc-a67e-95121caf9a88</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>I2C_SDA</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3666b15-f3d7-5c32-8125-ff9c8aec3b9f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>I2C_SCL</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3dbbbeb4-8369-5226-b48a-3f898cd8eea6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>PWM0</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03ca714e-a48a-52b0-81b8-82c5aa2bd2b4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>ENABLE</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32cbec38-d89d-593d-9111-259d8fef3e23</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP9">
+      <value>FAULT_N</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>55f23b28-5a75-5606-a537-8bb15ca9b018</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP10">
+      <value>ENC_SW</value>
+      <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
+      <fields>
+        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="MPN"/>
+        <field name="Manufacturer"/>
+        <field name="Assembly">NONE_COPPER</field>
+        <field name="Footprint">LabHardware:ProbePad_D1.5mm_NoPaste</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="MPN" value=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="Assembly" value="NONE_COPPER"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>967fde58-d78b-5b30-86c0-9d7c707cf2ce</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U1">
       <value>ESP32 USB-C / 30P user module</value>
       <footprint>LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm</footprint>
@@ -794,6 +1114,23 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x02">
       <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <footprints>
@@ -987,6 +1324,9 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
     <library logical="Connector_Generic">
       <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
     </library>
@@ -1012,6 +1352,7 @@
       <node ref="R4" pin="1" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="VOUT_5" pintype="power_out"/>
     </net>
     <net code="2" name="/+5V_AB" class="Default">
@@ -1020,11 +1361,13 @@
       <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="JP1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U2" pin="1" pinfunction="VIN_1" pintype="power_in"/>
       <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
     </net>
     <net code="3" name="/+5V_DEVKIT" class="Default">
       <node ref="JP1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="15" pinfunction="VIN_15" pintype="power_in"/>
     </net>
     <net code="4" name="/DIN0" class="Default">
@@ -1033,6 +1376,7 @@
     </net>
     <net code="5" name="/ENABLE" class="Default">
       <node ref="J7" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="10" pinfunction="GPIO27_10" pintype="output"/>
     </net>
     <net code="6" name="/ENC_A" class="Default">
@@ -1048,10 +1392,12 @@
     <net code="8" name="/ENC_SW" class="Default">
       <node ref="J3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="TP10" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="30" pinfunction="GPIO23_30" pintype="input"/>
     </net>
     <net code="9" name="/FAULT_N" class="Default">
       <node ref="J7" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="GPIO33_7" pintype="input"/>
     </net>
     <net code="10" name="/GND" class="Default">
@@ -1067,6 +1413,7 @@
       <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J7" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="14" pinfunction="GND_14" pintype="power_in"/>
       <node ref="U1" pin="17" pinfunction="GND_17" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
@@ -1077,6 +1424,7 @@
       <node ref="J5" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="J6" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="29" pinfunction="GPIO22_29" pintype="output"/>
     </net>
     <net code="12" name="/I2C_SDA" class="Default">
@@ -1085,6 +1433,7 @@
       <node ref="J5" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="J6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="26" pinfunction="GPIO21_26" pintype="bidirectional"/>
     </net>
     <net code="13" name="/LED_A_D1" class="Default">
@@ -1097,6 +1446,7 @@
     </net>
     <net code="15" name="/PWM0" class="Default">
       <node ref="J7" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="GPIO25_8" pintype="output"/>
     </net>
     <net code="16" name="/PWM1" class="Default">

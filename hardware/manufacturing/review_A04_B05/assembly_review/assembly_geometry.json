@@ -1765,6 +1765,326 @@
           ]
         },
         {
+          "ref": "TP1",
+          "value": "GND",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            94.0,
+            15.0
+          ],
+          "label": [
+            94.0,
+            13.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                94.0,
+                15.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP10",
+          "value": "ENC_SW",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            77.0,
+            67.0
+          ],
+          "label": [
+            77.0,
+            65.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "ENC_SW",
+              "at": [
+                77.0,
+                67.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP2",
+          "value": "+5V_AB",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            99.0,
+            13.0
+          ],
+          "label": [
+            99.0,
+            11.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                99.0,
+                13.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP3",
+          "value": "+5V_DEVKIT",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            72.0,
+            45.0
+          ],
+          "label": [
+            72.0,
+            43.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_DEVKIT",
+              "at": [
+                72.0,
+                45.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP4",
+          "value": "+3V3_A",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            25.0,
+            13.0
+          ],
+          "label": [
+            25.0,
+            11.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_A",
+              "at": [
+                25.0,
+                13.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP5",
+          "value": "I2C_SDA",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            96.0,
+            31.0
+          ],
+          "label": [
+            96.0,
+            29.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "I2C_SDA",
+              "at": [
+                96.0,
+                31.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP6",
+          "value": "I2C_SCL",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            100.0,
+            31.0
+          ],
+          "label": [
+            100.0,
+            29.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "I2C_SCL",
+              "at": [
+                100.0,
+                31.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP7",
+          "value": "PWM0",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            90.0,
+            48.0
+          ],
+          "label": [
+            90.0,
+            46.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PWM0",
+              "at": [
+                90.0,
+                48.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP8",
+          "value": "ENABLE",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            95.0,
+            48.0
+          ],
+          "label": [
+            95.0,
+            46.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "ENABLE",
+              "at": [
+                95.0,
+                48.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP9",
+          "value": "FAULT_N",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            95.0,
+            41.0
+          ],
+          "label": [
+            95.0,
+            39.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "FAULT_N",
+              "at": [
+                95.0,
+                41.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
           "ref": "U1",
           "value": "ESP32 USB-C / 30P user module",
           "footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
@@ -7093,6 +7413,390 @@
           ]
         },
         {
+          "ref": "TP1",
+          "value": "PGND",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            9.0,
+            20.0
+          ],
+          "label": [
+            9.0,
+            18.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PGND",
+              "at": [
+                9.0,
+                20.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP10",
+          "value": "FAULT_N",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            60.0,
+            51.0
+          ],
+          "label": [
+            60.0,
+            49.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "FAULT_N",
+              "at": [
+                60.0,
+                51.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP11",
+          "value": "GATE_DRV",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            63.0,
+            26.0
+          ],
+          "label": [
+            63.0,
+            24.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GATE_DRV",
+              "at": [
+                63.0,
+                26.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP12",
+          "value": "GND",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            15.0,
+            58.0
+          ],
+          "label": [
+            15.0,
+            56.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                15.0,
+                58.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP2",
+          "value": "VIN_PROTECTED",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            72.0,
+            13.0
+          ],
+          "label": [
+            72.0,
+            11.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "VIN_PROTECTED",
+              "at": [
+                72.0,
+                13.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP3",
+          "value": "+5V_BUCK",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            10.0,
+            49.0
+          ],
+          "label": [
+            10.0,
+            47.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_BUCK",
+              "at": [
+                10.0,
+                49.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP4",
+          "value": "+5V_AB",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            20.0,
+            56.0
+          ],
+          "label": [
+            20.0,
+            54.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+5V_AB",
+              "at": [
+                20.0,
+                56.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP5",
+          "value": "+3V3_B",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            81.0,
+            55.0
+          ],
+          "label": [
+            81.0,
+            53.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "+3V3_B",
+              "at": [
+                81.0,
+                55.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP6",
+          "value": "NTC_RAW",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            83.0,
+            48.0
+          ],
+          "label": [
+            83.0,
+            46.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "NTC_RAW",
+              "at": [
+                83.0,
+                48.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP7",
+          "value": "NTC_ADC",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            74.0,
+            41.0
+          ],
+          "label": [
+            74.0,
+            39.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "NTC_ADC",
+              "at": [
+                74.0,
+                41.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP8",
+          "value": "PWM0",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            55.0,
+            58.0
+          ],
+          "label": [
+            55.0,
+            56.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "PWM0",
+              "at": [
+                55.0,
+                58.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
+          "ref": "TP9",
+          "value": "ENABLE",
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "at": [
+            60.0,
+            58.0
+          ],
+          "label": [
+            60.0,
+            56.352
+          ],
+          "angle": 180.0,
+          "fab": [],
+          "pads": [
+            {
+              "number": "1",
+              "net": "ENABLE",
+              "at": [
+                60.0,
+                58.0
+              ],
+              "size": [
+                1.5,
+                1.5
+              ],
+              "angle": 180.0,
+              "drill": 0.0,
+              "circle": true
+            }
+          ]
+        },
+        {
           "ref": "U1",
           "value": "LM2596S-5.0/NOPB",
           "footprint": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
@@ -8010,9 +8714,9 @@
     }
   ],
   "source_sha256": {
-    "scripts/build_assembly_review.py": "424b35c13dabc4779abdb72cd71dfea9b68dc5b055eb85244461ae3269aaef62",
+    "scripts/build_assembly_review.py": "d9ddc829eebf7cb9487167175ee40e52a0b09bacd4ffd8292de6bac509a28edd",
     "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "9e34f29fdec422e2e3a93d66f5925f1a6601e6815b3f29c356090b54ad0455c1",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9"
+    "pcb_a_display/pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711"
   }
 }

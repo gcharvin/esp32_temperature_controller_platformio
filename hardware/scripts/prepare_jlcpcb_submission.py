@@ -10,6 +10,7 @@ import hashlib
 import io
 import json
 import math
+import re
 from pathlib import Path
 import zipfile
 
@@ -62,6 +63,25 @@ def check_legacy():
     assert status['local_preparation_complete'] and not status['fabrication_release'] and not status['order_placed']
 
 
+def check_probe_mask(folder,points):
+    """Check the actual exported mask openings, not just footprint attributes."""
+    mask=next(folder.glob('*-B_Mask.gbs'));text=source(mask).decode('utf-8')
+    ref=None;aperture=None;diameters={};actual={}
+    for line in text.splitlines():
+        if m:=re.fullmatch(r'%ADD(\d+)C,([\d.]+)\*%',line):diameters[m[1]]=float(m[2])
+        elif m:=re.fullmatch(r'D(\d+)\*',line):aperture=m[1]
+        elif m:=re.fullmatch(r'%TO.C,([^*]+)\*%',line):ref=m[1]
+        elif line=='%TD*%':ref=None
+        elif ref and ref.startswith('TP') and (m:=re.fullmatch(r'X(-?\d+)Y(-?\d+)D03\*',line)):
+            assert aperture in diameters and diameters[aperture]>=1.5
+            actual[ref]=[int(m[1])/1e6,int(m[2])/1e6]
+    expected={r['ref']:[r['at_mm'][0]+60,-(r['at_mm'][1]+55)] for r in points}
+    assert actual==expected,'Missing/misplaced back solder-mask opening'
+    for suffix in ('F_Paste.gtp','B_Paste.gbp'):
+        paste=source(next(folder.glob('*-'+suffix))).decode('utf-8')
+        assert not re.search(r'%TO.C,TP\d+\*%',paste),'Test pad must not receive solder paste'
+
+
 def body_center(part):
     """THT centroid from actual native F.Fab, not a pin1 footprint origin.
 
@@ -91,7 +111,7 @@ def placement_preview(board,mapping,path):
     d.text((30,53),'THT body centres: red; SMT native origins: blue. Factory alignment NOT approved.',font=font,fill='#354b58')
     d.rectangle((*xy((0,0)),*xy((width,height))),fill='#e0eee4',outline='#234b36',width=2)
     for part in board['parts']:
-        if part['ref']=='U1' and board['code']=='A':continue
+        if part['ref'].startswith('TP') or (part['ref']=='U1' and board['code']=='A'):continue
         for shape in part['fab']:
             points=shape.get('points',[])
             if shape['kind']=='circle':
@@ -129,6 +149,7 @@ def build():
     geometry=read_json(M/'output/assembly_geometry.json')
     for relative,digest in geometry['source_sha256'].items():assert sha(source(ROOT/relative))==digest
     geometry_boards={b['code']:b for b in geometry['boards']}
+    probes=read_json(ROOT/'test_points.json')['boards']
     mappings=[];all_boms=[];counts={}
     for code,prefix,expected_smt,expected_tht in [('A','A04',13,10),('B','B05',38,9)]:
         folder=M/'review_A04_B05'/code;board=geometry_boards[code];ox,oy=board['native_origin_mm']
@@ -178,13 +199,14 @@ def build():
             assert math.isclose(abs(mapping[-1]['Local_Y_mm']-mapping[-2]['Local_Y_mm']),25.4,abs_tol=1e-6)
         assert len(bom)==len(cpl)==expected_smt+expected_tht
         refs={r['Designator'] for r in bom};assert refs=={r['Designator'] for r in cpl} and len(refs)==len(bom)
-        expected=set(native)-({'U1'} if code=='A' else {'NT1'})|({'J8','J9'} if code=='A' else set())
+        expected=set(native)-{ref for ref in native if ref.startswith('TP')}-({'U1'} if code=='A' else {'NT1'})|({'J8','J9'} if code=='A' else set())
         assert refs==expected
         assert all(0<=r['Local_X_mm']<=board['size_mm'][0] and 0<=r['Local_Y_mm']<=board['size_mm'][1] for r in mapping)
         upload=OUT/('upload_'+code)
         write_csv(upload/(prefix+'_BOM_ALL_ASSEMBLED.csv'),bom,BOM_FIELDS)
         write_csv(upload/(prefix+'_CPL_ALL_ASSEMBLED.csv'),cpl,CPL_FIELDS)
         gerbers=folder/'gerbers_DRAFT_NOT_FOR_ORDER'
+        check_probe_mask(gerbers,probes['pcb_a_display' if code=='A' else 'pcb_b_temperature'])
         paths=[p for p in sorted(gerbers.iterdir()) if p.suffix in ('.gtl','.gbl','.gts','.gbs','.gto','.gbo','.gtp','.gbp','.gm1','.drl')]
         assert len(paths)==11 and sum(p.suffix=='.drl' for p in paths)==2
         write(upload/(prefix+'_GERBER_DFM_ONLY.zip'),zip_bytes({p.name:source(p) for p in paths}))
@@ -217,6 +239,18 @@ def build():
     for code,name in [('A','pcb_a_display'),('B','pcb_b_temperature')]:
         write(OUT/'support'/('schematic_'+code+'.pdf'),source(ROOT/'review'/(name+'.pdf')))
         write(OUT/'support'/('bare_board_test_'+code+'.d356'),source(M/'review_A04_B05'/code/'bare_board_test.d356'))
+        write(OUT/'support'/('test_points_'+code+'_back.png'),source(ROOT/'review'/('test_points_'+code+'_back.png')))
+    for path,target in [(ROOT/'TEST_POINTS.md','TEST_POINTS.md'),(ROOT/'test_points.json','test_points.json'),
+                        (ROOT/'review/test_point_map.csv','test_point_map.csv'),
+                        (ROOT/'../firmware/diagnostic/README.md','diagnostic_firmware_README.md'),
+                        (ROOT/'review/routing/electronics_bench_plan.md','electronics_bench_plan.md'),
+                        (ROOT/'manufacturing/power_and_usb_review.md','power_and_usb_review.md')]:
+        blob=source(path)
+        if target=='TEST_POINTS.md':
+            text=blob.decode('utf-8').replace('(review/test_points_','(test_points_').replace('(review/test_point_map.csv)','(test_point_map.csv)')
+            text=text.replace('(../firmware/diagnostic/README.md)','(diagnostic_firmware_README.md)').replace('(review/routing/electronics_bench_plan.md)','(electronics_bench_plan.md)')
+            blob=text.encode('utf-8')
+        write(OUT/'support'/target,blob)
     validation=dict(status='PASS_LOCAL_PACKAGE / RFQ_DFM_ONLY',boards=counts,total_placements_for_5A_5B=350,
         additional_loose_shunts=5,SMT_and_THT_included=True,source_files_modified=False,
         excluded=dict(A_U1='Customer removable ESP32; replaced by two physical socket upload aliases J8/J9',
@@ -225,6 +259,8 @@ def build():
         factory_placement_approved=False,pre_sales_DFM_obtained=False,stock_confirmed=False,
         uploaded=False,support_message_sent=False,order_authorized=False,order_placed=False,
         B_panel_generated=False,B_Standard_panel_review_required=True)
+    validation['copper_testpads_excluded_from_purchasing_and_placement']=22
+    validation['actual_back_mask_testpad_openings_verified']=22
     write(OUT/'validation.json',json_bytes(validation))
     for path in OUTPUT_FILES:
         if path.suffix=='.csv':

@@ -1,36 +1,37 @@
 {
   "status": "PASS",
-  "date_utc": "2026-11-06T08:24:57.208047+00:00",
+  "date_utc": "2026-11-06T17:45:32.496087+00:00",
   "reviewer": "Codex - actual render inspection",
-  "method": "Current v09 assembled, service, local sensor interior/exterior CAD renders inspected; current schematic PDF first pages rendered and inspected. Unchanged assembly PDF, Gerber images and B power preview retain previous visual review by exact SHA256 equality.",
+  "method": "Actual inspection of the current three-page assembly PDF, both schematic PDF renders, all four exported Gerber views, both rear test-point maps and the regenerated B power CAD preview. The four unchanged enclosure views carry forward their earlier review by exact SHA256 equality. After restoring original project rules, all visual file hashes stayed identical except schematic PDF metadata; new schematic raster renders are byte-identical to the inspected images.",
   "findings": [
-    "Closed front optical membrane visible above encoder; opaque cassette with PCB edge clips visible from rear.",
-    "No clash in the modeled envelopes; twenty service stages and STEP reimport passed. Actual BH1750 PCB/connector, transmission, print and cable fit remain unqualified.",
-    "Regenerated schematic pages have readable notes/cartouches. Native electronic sources did not change."
+    "22 copper-only back-side test pads are individually identified; rear probe maps and actual mask openings match the native boards. No paste or purchased test-point parts.",
+    "The B test-point block clears the schematic title block. Assembly drawings retain component orientations and distinguish the separate back-side probe maps.",
+    "Original 697 route items are preserved by UUID and geometry checks; native electrical sources now include diagnostic branches.",
+    "No modeled collision or assembly sequence failure. Physical electrical, thermal, optical, print and cable-fit qualification remains pending."
   ],
   "reviewed_files_sha256": {
-    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "e82d1239984d4ed40f53349484e48f22116c08aa7afbc8894cc15b648f3fe524",
+    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "985019b135bf6c045072511d23e00a0f5ccc6b23fa50eb4090fa447e3c56c75c",
     "manufacturing/review_A04_B05/gerber_review/A_front.png": "246c9a484bd6900b8884b2c31a8ac98a02be967d0e8e3e53d564d1e87e07a15a",
-    "manufacturing/review_A04_B05/gerber_review/A_back.png": "35d98ee1a698806da22e0f745c1edc1870c1b445fc3c804984359d294eaa4689",
-    "manufacturing/review_A04_B05/gerber_review/B_front.png": "82444f74d3f2f6b8697b8d3633d5083c90600065ebb338c374870ef288189f6f",
-    "manufacturing/review_A04_B05/gerber_review/B_back.png": "2c8dd3ac709cf9dfc69859d543f0f7525209eb7b79199e5e48e71ab456bcb783",
+    "manufacturing/review_A04_B05/gerber_review/A_back.png": "dffd87d64468d61932ca051f0b5b2c92409af789a38d53bd7646b8266abb480c",
+    "manufacturing/review_A04_B05/gerber_review/B_front.png": "487d38dc21224f0972fcb900570a1e5bc038d957a86f73c38071e4f6ec78bf61",
+    "manufacturing/review_A04_B05/gerber_review/B_back.png": "79cf87dac35af36e0639066efcc35af368e4edd9fda0c17aba855af223fb2123",
     "mechanical/exports/preview_service.png": "f62c9f7217cc06c1c548804794a68d4921c39d1516f9547b723890c109598cf3",
-    "mechanical/exports/preview_b_power.png": "1079de36f95b69fbacb78f1383d3cad1623f880c7a04ad1fa9150a8fe8b49fb9",
-    "review/pcb_a_display.pdf": "fc524790c553814721843a52f7a0835f17851f7531d64bad7474b28998d4d702",
-    "review/pcb_b_temperature.pdf": "818a6f33a7e5e96fcb59bcfa33fc01e62dc8dbf1d93b3594d402e992841feddd",
+    "mechanical/exports/preview_b_power.png": "346d5ddc077d24375e9c0c731e157400549fc113f00d0a96bf33b91aa0dc2d6f",
+    "review/pcb_a_display.pdf": "6f23de57277864792b159b83c01a6d70051b7d4721c95e5cbaac451fda4741e4",
+    "review/pcb_b_temperature.pdf": "2f2d45e3c44d1692663711d7107e7e3ab00e724de060ec9c5f4fcfbfe1b8adba",
     "mechanical/exports/preview_assembled.png": "b3071df1e3a1d5ec823816c0b3e19c641f996b8a50c486784efb20a9d625d7e1",
     "mechanical/exports/preview_light_sensor.png": "28ce24e462b64f880ba7c1c38016ae90fad606ff8a5909ab4bd45ffb324ddc4b",
-    "mechanical/exports/preview_light_sensor_front.png": "c997364f60482f36f971091ac374ecfd637f2815939bab18da8040d43a043cc4"
+    "mechanical/exports/preview_light_sensor_front.png": "c997364f60482f36f971091ac374ecfd637f2815939bab18da8040d43a043cc4",
+    "review/test_points_A_back.png": "3e1cb23eecc248843caf925bedec01ca00467cbfe3176bc497d0abc3c4ba931c",
+    "review/test_points_B_back.png": "f0a34818ea0a0eaf0386d2b8657b96bc8cfb42a4adeed8702e1c0540a0f4611d"
   },
   "limits": [
     "Engineering visual review, not assembler orientation/process approval or a physical fit/thermal test."
   ],
   "unchanged_visual_evidence_carried_forward": [
-    "manufacturing/output/pdf/assembly_review_A04_B05.pdf",
-    "manufacturing/review_A04_B05/gerber_review/A_front.png",
-    "manufacturing/review_A04_B05/gerber_review/A_back.png",
-    "manufacturing/review_A04_B05/gerber_review/B_front.png",
-    "manufacturing/review_A04_B05/gerber_review/B_back.png",
-    "mechanical/exports/preview_b_power.png"
+    "mechanical/exports/preview_service.png",
+    "mechanical/exports/preview_assembled.png",
+    "mechanical/exports/preview_light_sensor.png",
+    "mechanical/exports/preview_light_sensor_front.png"
   ]
 }

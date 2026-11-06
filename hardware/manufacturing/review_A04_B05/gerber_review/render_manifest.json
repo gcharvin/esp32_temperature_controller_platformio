@@ -3,23 +3,23 @@
   "renderer": "PyGerber2.4.3",
   "dpmm": 16,
   "source_sha256": {
-    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-F_Cu.gtl": "90da7c3a5c5426b351f3ac3ff7d3bcc0982d2bbdcbb97b09bfad3f624c9f0c4d",
-    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-F_Silkscreen.gto": "32d433eff5861c1cedccf13b2ef9940cc4c40909e4946f6dc853f97990e13a36",
-    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-Edge_Cuts.gm1": "95a4050cca842abae0a153788345507692698222f4de91496a078f7be1196e34",
-    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-B_Cu.gbl": "0ec3ba41b7150264d92cce0fd27222b279059e23c1d962972cb216e9391cbcdf",
-    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-B_Silkscreen.gbo": "2b4fecbc857703daccb3deba14f706a8c691919f9a8efa33ba781b012d3d64c9",
-    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-F_Cu.gtl": "7c5dd0595ff63671e4e648005f08e52d2adb6743a1fd67f89cb1b0788010fa51",
-    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-F_Silkscreen.gto": "812195362558751f6eb3bdc64af1d274f8cf2a9504a0b489672c4ca9f722bb98",
-    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-Edge_Cuts.gm1": "9dbc58161592444685d305919c44ede198492a5059bcb803133b942445afbb1a",
-    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-B_Cu.gbl": "fa4272566a18a2a081c1bb06eb624ae971b759a5aa7bd681db0aeaa89e9da345",
-    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-B_Silkscreen.gbo": "f69e215d5c3d3d2e0d4fbbecedba1ba37d098bbbec10bd35645ebe7bf1ac3b11",
+    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-F_Cu.gtl": "262882e75861c9196289d00e4a00a090883ff0d31fd09365e18c4d972f0dcff2",
+    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-F_Silkscreen.gto": "0e5184487294583fcaded9e6d3c63015fd6407c2b68473ebc84f8d2598f7322e",
+    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-Edge_Cuts.gm1": "4c5bbe3864d254c1807d3bea71fb80a8d34fd1a75813dbfaa8da21cbfa8d74bf",
+    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-B_Cu.gbl": "388fbe2263b5cc792ca420e34bd46f80220d714dab32c73975cf2bfe2398b1ce",
+    "manufacturing/review_A04_B05/A/gerbers_DRAFT_NOT_FOR_ORDER/pcb_a_display-B_Silkscreen.gbo": "3d7057b427ecc93b2c5d8981ec3a5db5b39cf1ff019fa718742d629257a4817e",
+    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-F_Cu.gtl": "17ab1558c91cb3be425c801ace536a228e8cc65f1b0e5d443bf14793afef14e7",
+    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-F_Silkscreen.gto": "ed6e39684bbf011ebd4fefed798e07958ca6183c358a76277f09fb786a2205e8",
+    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-Edge_Cuts.gm1": "da1b4f6c3f1ed116c735488e83142811a71a732cf7765c83234f213a53d1f450",
+    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-B_Cu.gbl": "202a51b86b48c75f33e7f2ef1a59535ece5e7d3c71207f8f04cc664c324358ca",
+    "manufacturing/review_A04_B05/B/gerbers_DRAFT_NOT_FOR_ORDER/pcb_b_temperature-B_Silkscreen.gbo": "2ea313f40bdf0ab67b6ab49a45752748987e6124823ebda828ae8636ddace8a9",
     "scripts/render_gerber_review.py": "45e7b49a7ddfa5780473bb910c7f1d1433b8fc1e0bd4e46ad21bec644642103d"
   },
   "output_sha256": {
     "manufacturing/review_A04_B05/gerber_review/A_front.png": "246c9a484bd6900b8884b2c31a8ac98a02be967d0e8e3e53d564d1e87e07a15a",
-    "manufacturing/review_A04_B05/gerber_review/A_back.png": "35d98ee1a698806da22e0f745c1edc1870c1b445fc3c804984359d294eaa4689",
-    "manufacturing/review_A04_B05/gerber_review/B_front.png": "82444f74d3f2f6b8697b8d3633d5083c90600065ebb338c374870ef288189f6f",
-    "manufacturing/review_A04_B05/gerber_review/B_back.png": "2c8dd3ac709cf9dfc69859d543f0f7525209eb7b79199e5e48e71ab456bcb783"
+    "manufacturing/review_A04_B05/gerber_review/A_back.png": "dffd87d64468d61932ca051f0b5b2c92409af789a38d53bd7646b8266abb480c",
+    "manufacturing/review_A04_B05/gerber_review/B_front.png": "487d38dc21224f0972fcb900570a1e5bc038d957a86f73c38071e4f6ec78bf61",
+    "manufacturing/review_A04_B05/gerber_review/B_back.png": "79cf87dac35af36e0639066efcc35af368e4edd9fda0c17aba855af223fb2123"
   },
   "bottom_views_mirrored": false
 }

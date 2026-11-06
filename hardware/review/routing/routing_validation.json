@@ -13,8 +13,8 @@
       "DRC_violations": 0,
       "unconnected_items": 0,
       "schematic_parity_issues": 0,
-      "footprints": 22,
-      "tracks": 327,
+      "footprints": 32,
+      "tracks": 371,
       "vias": 9,
       "copper_thickness_mm": {
         "F.Cu": 0.035,
@@ -27,9 +27,9 @@
       "DRC_violations": 0,
       "unconnected_items": 0,
       "schematic_parity_issues": 0,
-      "footprints": 48,
-      "tracks": 330,
-      "vias": 31,
+      "footprints": 60,
+      "tracks": 380,
+      "vias": 32,
       "copper_thickness_mm": {
         "F.Cu": 0.07,
         "B.Cu": 0.07

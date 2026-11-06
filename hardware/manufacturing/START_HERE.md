@@ -1,5 +1,12 @@
 # Dossier prototype A04 / B05 — point d’entrée
 
+Dernière révision native : **A0.4.1 / B0.5.1**, ajout de22 points de test au dos,
+sans composant supplémentaire acheté. Les archives A04/B05 sont régénérées.
+Voir `../TEST_POINTS.md` et `../../firmware/diagnostic/README.md` : le programme
+de banc maintient ENABLE à zéro, sans autoriser le chauffage. Il est compilé
+mais n'a pas été flashé/testé sur le matériel. Le dossier JLCPCB dédié est dans
+`jlcpcb/README.md`.
+
 Préparation technique pour **5 cartes A et 5 cartes B assemblées**.
 B est la variante température24V/100W ; A reçoit toujours5V régulé et garde
 son interface commune aux futures B12V/5V. L'ESP32 est enfichable et fourni
