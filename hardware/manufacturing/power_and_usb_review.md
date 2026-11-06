@@ -48,6 +48,13 @@ Chaque carte B définit séparément tension, puissance et courant maximal.
 
 ## USB latéral : conserver le port, maîtriser le VBUS
 
+Précision utilisateur du **6 novembre 2026** : en fonctionnement normal,
+A est alimentée par la source centrale, via **5 V régulés → A/J1 → JP1 →
+VIN/5V de la DevKit**. L'USB-C sert aux données, au flash et au diagnostic,
+pas d'entrée d'énergie prévue pour l'ensemble. Aucun 12/24 V sur ce VIN.
+Ce choix ne modifie pas les liaisons internes des trois variantes de DevKit :
+le contrôle de VBUS ci-dessous reste nécessaire pour le monitoring alimenté.
+
 Le port accessible est celui de la DevKit enfichable (CP210x ou CH340 selon carte), pas un connecteur USB câblé
 sur A. A n'a accès qu'au VIN de la DevKit, à travers JP1 ; le VBUS du PC
 n'est pas disponible séparément sur A. Les documents du CH340 ne donnent
