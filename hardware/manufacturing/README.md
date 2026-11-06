@@ -96,7 +96,7 @@ faisceaux, passe-paroi, alimentation et protection thermique d’application.
 Le USB du prototype s’utilise avec toutes sources externes coupées,
 J1/J6/J7 débranchés et JP1 retiré. Le monitoring USB alimenté reste à qualifier
 sur chaque DevKit, comme le décrit [la revue USB](power_and_usb_review.md).
-L’accès latéral est conservé dans la maquette v0.8 ; la géométrie réelle des
+L’accès latéral est conservé dans la maquette v0.9 ; la géométrie réelle des
 modules, les câbles et les clips imprimés se vérifient à l’intégration.
 
 ## Régénération complète

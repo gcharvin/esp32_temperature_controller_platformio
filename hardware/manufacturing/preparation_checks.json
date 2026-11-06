@@ -58,29 +58,20 @@
   "order_authorized": false,
   "evidence_sha256": {
     "review/validation.txt": "2f012cebafe860b7b72d80ad254dcdc74e6b15e2753ea1b28158740c9969bdfb",
-    "review/routing/component_selection_validation.json": "9c936c3d361632cd7825bd69d27018604de1491865b623f43ab2f2971ad44481",
+    "review/routing/component_selection_validation.json": "b58a153309d517819b4806ffd8c2f794b0eb5005307e3e976c392a76efb696cc",
     "review/routing/manufacturer_land_patterns.json": "ec2f08dcec02dd0bdf86f9715604239b63c4e13a8ea71ef32b25e4f18b910d83",
-    "review/routing/routing_validation.json": "953dfd4d57f2126b7d5eb5d9bb85769eba1fe74a6ad0db3005daca7bdf0076ec",
+    "review/routing/routing_validation.json": "e122fbc68e973c8b3002d2e7cc708375b17613898a5b1fa371d92affaeed4822",
     "manufacturing/manufacturing_fit_audit.json": "74ed212044bbb1a101e515865e8277d79cd87ae29e91610e60a26d5d5041347f",
-    "manufacturing/harness_validation.json": "f423a7a40b2cbbd17ef5446391edd5f741fc82a4e5a6a433ed54e8a979a26ac7",
+    "manufacturing/harness_validation.json": "bd809ca023e0098b7e156cd9f01bf91ee7d7b52612c55977797ed288f8e9931a",
     "manufacturing/output/assembly_review_manifest.json": "2ccccd7ae092f71e3f1e8bf40c8db810708472e743f63877d9689b42767c0fea",
-    "manufacturing/fabrication_output_validation.json": "ddb4f05d3f1fde6b0e7bc4c45c3f02337ffa5d125c014c620e88fb75621d3714",
-    "manufacturing/rfq_integrity_validation.json": "8a82922552e1d9482b5eb2e16571fc03cdcc053c50d55ecb3c6d0f6468de3285",
-    "mechanical/exports/source_manifest_v08.json": "2aac794fae7ad3906b54cd9cb5bbb96b374ce5cd4c44833e7ba831f98b131af2",
-    "mechanical/exports/assembly_sequence_validation.json": "0b427ef76f8bfe84cc3f92334ad3bb018aff17c9fddc37c364fddbc9660ee0bc",
-    "mechanical/exports/validation.json": "b7b8f1800c3297697521ee3c4ab08c2ab8eeaedb5920053707145292a5353fd7"
+    "manufacturing/fabrication_output_validation.json": "88c0dba012c651f0b8c12c547ea5118b5e622bb46cde31d4eb4d5e2694915261",
+    "manufacturing/rfq_integrity_validation.json": "aadd4ba250231c8b0ae2638d29f3bb7ba1b1d0affbc0ab39281c88b675d97a9c",
+    "mechanical/exports/source_manifest_v09.json": "e00ee3edff02c7123d4cbc8722510325df0d93ce8399916cf15bf93d2375a102",
+    "mechanical/exports/assembly_sequence_validation.json": "5881b8f9188577a8a350251c749d1358f5f27457e8d9cce8a7a6dc578068e9ec",
+    "mechanical/exports/validation.json": "3f4dec0cff71a8742376334e6aa72d02a5e2f88d1c9572e802a06303633521fb"
   },
   "limits": [
     "Factory sourcing/DFM/placement-preview/quotation approvals are external.",
     "No actual heater, DevKit power path or printed fit qualification inferred."
-  ],
-  "post_pipeline_rechecks": [
-    {
-      "stage": "routing",
-      "exit_code": 0,
-      "date_utc": "2026-11-05T22:32:04.339395+00:00",
-      "reason": "Mechanical-version wording corrected after successful pipeline. Reran native routing/DRC checks; part/source bindings unchanged.",
-      "checker_sha256": "b26caaf156e76ddb124ac0040231d9cea62964ed021c039201747530b84c5d8d"
-    }
   ]
 }

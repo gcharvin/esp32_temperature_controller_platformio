@@ -3,7 +3,7 @@
   "source_sha256": {
     "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "5111de63935117e4c855d2b6387ec5353205e43f1a004b9d99e32a254a939fa9",
     "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "6cdced84fd65b93f5bdec11e2e45b3a323212bbad9da9d37e70f3fc481b67cde",
-    "review\\pcb_b_temperature.net.xml": "0d4a40147e3fcb29eed8ea8580acb30a5e4d315cc40b9e15528b7fdae7125eef"
+    "review\\pcb_b_temperature.net.xml": "466def7690fea8653821bdc8d4562417d9fc60728c84e8d60eb32e64fa19e4ea"
   },
   "dimensions_mm": [
     90,
@@ -22,7 +22,7 @@
   "limits": [
     "Core simulation excludes PCB/cable parasitics, upstream protection, thermal and heater coupling.",
     "Capacitor ESR 43mOhm plus physical R13 56mOhm approximated as 100mOhm total.",
-    "STEP v0.8 reconciled to B v0.5; real cable, clip and thermal tests pending.",
+    "Current STEP fit checked separately against B v0.5; real cable, clip and thermal tests pending.",
     "R13/C9 purchasing candidates documented; R13 manufacturer land pattern checked separately. Supplier approval and physical startup/thermal/fault tests pending."
   ]
 }

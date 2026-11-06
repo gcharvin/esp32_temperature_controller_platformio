@@ -103,7 +103,7 @@ def main():
           'boards':results,'limits':['Row spacing and common pinout confirmed by user; actual outline, socket/USB height and electrical power path still require checking.',
                                    'Power/thermal and fault testing not performed.',
                                    'Integrated LM2596 input transients, startup and fault conditions not qualified.',
-                                   'Enclosure STEP v0.8 geometry reconciled; real fit, cables, clips and thermal tests pending.']}
+                                   'Current enclosure STEP checked separately; real fit, cables, clips and thermal tests pending.']}
     (ROOT/'review/routing/routing_validation.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(data,indent=2))
 

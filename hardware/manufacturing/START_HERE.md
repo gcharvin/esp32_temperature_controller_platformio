@@ -35,11 +35,16 @@ Les trois petits JST A/B sont POWER2, I2C3 et CTRL6, au pas2,50mm.
 Le connecteur de sonde est **B/J4**, NTC passive15k. Voir le schéma et
 `wiring_and_harnesses.md` ; ne pas déterminer la polarité à la couleur des fils.
 
-Le STEP courant est `enclosure_v08_integrated_buck.step` : façade amovible
+Le STEP courant est `enclosure_v09_integrated_buck.step` : façade amovible
 avec LCD/A, rails/clips, berceau B, panneau arrière, USB latéral et ventilation
 sur les côtés. Il représente des enveloppes de composants, avec les dimensions
 documentées des sockets/borniers et une réserve pour le plastique des broches
-mâles. Il ne prétend pas avoir mesuré les trois corps de DevKit ou imprimé les clips.
+mâles. La révision v0.9 ajoute une fenêtre translucide fermée de 0,6 mm et une
+cassette opaque amovible pour le BH1750 : six pièces imprimées au total.
+Le breakout BH1750 reste une enveloppe non mesurée ; transmission optique,
+connecteur, clips et trois corps de DevKit restent à vérifier sur le matériel.
+Voir `../display_backlight_study.md` pour le LCD Freenove, l'extinction/réveil
+retenus et les possibilités PWM non ajoutées à cette BOM.
 
 ## Ce qui doit revenir du fabricant
 

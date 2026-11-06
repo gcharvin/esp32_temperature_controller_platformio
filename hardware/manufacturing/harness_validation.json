@@ -10,8 +10,8 @@
   "lengths": "300+/-10mm for prototype quotation; real cable routing unqualified",
   "source_sha256": {
     "interface_ab.json": "dc6de0be73a5da500104d6c03188ad218038d5b5af78e0f65fe25be81f449f59",
-    "review/pcb_a_display.net.xml": "39b0bb9abf8a977d5601c8393a2f30fe7724d0258e2028144774db862d5832ff",
-    "review/pcb_b_temperature.net.xml": "0d4a40147e3fcb29eed8ea8580acb30a5e4d315cc40b9e15528b7fdae7125eef",
+    "review/pcb_a_display.net.xml": "66d4e0b1ce64a5408dab70da3ae621efd97098e35818bb0c49e91a0d16a615c1",
+    "review/pcb_b_temperature.net.xml": "466def7690fea8653821bdc8d4562417d9fc60728c84e8d60eb32e64fa19e4ea",
     "scripts/build_harness_map.py": "36afed08b12e6d5f2f1c970e8d67cff9963a23b50b8917b385b753d1f25b0d89",
     "manufacturing/harness_pin_map.csv": "a831854f9ddedbda41b40bb69dae429bc3848f835aec8c56f8592900362bb590"
   }

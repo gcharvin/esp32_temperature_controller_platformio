@@ -1,8 +1,8 @@
 {
   "status": "PASS / final handoff integrity; no factory or purchase approval implied",
-  "members": 157,
+  "members": 168,
   "workspace_checked": true,
-  "archive_sha256": "348d60f7dbc90466c8b82532500acd822a09c0e835d6919f739351b34bb8bcbe",
+  "archive_sha256": "8740217404610139c59589298d3e04b53e89dc6e650f0315beca23dbee7b4bd7",
   "local_preparation_complete": true,
   "fabrication_release": false,
   "order_placed": false

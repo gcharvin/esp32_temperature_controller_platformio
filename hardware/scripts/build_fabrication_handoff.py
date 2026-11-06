@@ -24,14 +24,16 @@ def main():
     visual=read(FOLDER/'visual_review.json');assert visual['status']=='PASS'
     required={'manufacturing/output/pdf/assembly_review_A04_B05.pdf',
               *('manufacturing/review_A04_B05/gerber_review/'+code+'_'+side+'.png' for code in 'AB' for side in ('front','back')),
-              'mechanical/exports/preview_service.png','mechanical/exports/preview_b_power.png'}
+              'mechanical/exports/preview_service.png','mechanical/exports/preview_b_power.png',
+              'mechanical/exports/preview_light_sensor.png','mechanical/exports/preview_assembled.png'}
     assert required <= set(visual['reviewed_files_sha256'])
     for relative,digest in visual['reviewed_files_sha256'].items():assert sha(ROOT/relative)==digest,'Stale visual review '+relative
     rfq=FOLDER/'RFQ_A04_B05_DRAFT_NOT_FOR_ORDER.zip';integrity=read(FOLDER/'rfq_integrity_validation.json')
     assert integrity['archive_sha256']==sha(rfq)
     routing=read(ROOT/'review/routing/routing_validation.json')
     assert all(not row[k] for row in routing['boards'] for k in ('DRC_violations','unconnected_items','schematic_parity_issues'))
-    mechanical=read(ROOT/'mechanical/exports/source_manifest_v08.json')
+    parameters=read(ROOT/'mechanical/enclosure_parameters.json');tag=parameters['export_tag']
+    mechanical=read(ROOT/('mechanical/exports/source_manifest_'+tag+'.json'))
     assert mechanical['static_collisions']==mechanical['assembly_failures']==0
     for relative,digest in mechanical['source_sha256'].items():assert sha(ROOT/relative)==digest,'Stale mechanical source '+relative
     parts=read(ROOT/'review/routing/component_selection_validation.json');assert parts['physical_native_components']==68
@@ -44,22 +46,23 @@ def main():
     with zipfile.ZipFile(rfq) as bundle:
         assert bundle.testzip() is None
         for name in bundle.namelist():files['rfq_manifest.json' if name=='manifest.json' else name]=bundle.read(name)
-    for name in ('README.md','interface_ab.json','module_selection.json','placement.json','devkit_compatibility.md','lab_draft.kicad_sym'):
+    for name in ('README.md','interface_ab.json','module_selection.json','placement.json','devkit_compatibility.md','display_backlight_study.md','lab_draft.kicad_sym'):
         add(ROOT/name,'native/hardware/'+name)
     for board in ('pcb_a_display','pcb_b_temperature'):
         for name in (board+'.kicad_pro',board+'.kicad_sch',board+'.kicad_pcb',board+'_bom_draft.csv','fp-lib-table','sym-lib-table','README.md'):
             add(ROOT/board/name,'native/hardware/'+board+'/'+name)
     for path in sorted((ROOT/'lab_hardware.pretty').glob('*.kicad_mod')):add(path,'native/hardware/lab_hardware.pretty/'+path.name)
-    for name in ('build_enclosure.py','enclosure_parameters.json','README.md'):
+    for name in ('build_enclosure.py','light_sensor_mount.py','package_enclosure.py','enclosure_parameters.json','README.md'):
         add(ROOT/'mechanical'/name,'native/hardware/mechanical/'+name)
     # Native manufacturing choices remain alongside CAD in the editable copy.
-    for name in ('component_selection.json','land_pattern_review.json','fabrication_specification.json'):
+    for name in ('component_selection.json','land_pattern_review.json','fabrication_specification.json','power_and_usb_review.md'):
         add(FOLDER/name,'native/hardware/manufacturing/'+name)
-    for name in ('enclosure_v08_integrated_buck.step','enclosure_v08_printed_parts.step','source_manifest_v08.json',
-                 'validation.json','assembly_sequence_validation.json','preview_service.png','preview_b_power.png'):
+    for name in ('enclosure_'+tag+'_integrated_buck.step','enclosure_'+tag+'_printed_parts.step','source_manifest_'+tag+'.json',
+                 'validation.json','assembly_sequence_validation.json','preview_service.png','preview_b_power.png',
+                 'preview_light_sensor.png','preview_light_sensor_front.png','preview_assembled.png'):
         add(ROOT/'mechanical/exports'/name,'mechanical/'+name)
-    for path in sorted((ROOT/'mechanical/exports/parts_v08').iterdir()):
-        if path.suffix in ('.step','.stl'):add(path,'mechanical/parts_v08/'+path.name)
+    for path in sorted((ROOT/('mechanical/exports/parts_'+tag)).iterdir()):
+        if path.suffix in ('.step','.stl'):add(path,'mechanical/parts_'+tag+'/'+path.name)
     for relative in checks['evidence_sha256']:
         add(ROOT/relative,'evidence/'+relative)
     for path in (FOLDER/'visual_review.json',FOLDER/'preparation_checks.json'):
@@ -73,6 +76,7 @@ def main():
         automatic_stages=13,final_visual_review=True,physical_native_components=68,SMT_components=51,
         physical_THT_items=19,extra_loose_shunts=1,mechanical_service_stages=mechanical['assembly_service_stages'],
         source_geometry_and_MPNs_frozen=True,simulations_rerun_in_this_revision=False,
+        mechanical_revision=parameters['revision'],BH1750_breakout_and_optical_transmission_qualified=False,
         hardware_functional_tests_performed=False,fabrication_release=False,order_authorized=False,order_placed=False,
         external_gates='factory_response.csv: exact sourcing, DFM/panel/holes, thermal/MSL process, placement preview, tests/quote and purchase authorization',
         scope='Prototype PCB preparation complete locally; no actual manufacturer acceptance or operational heater qualification inferred.')
@@ -85,7 +89,7 @@ def main():
         'assembly_review/: three-page PDF, pad map and physical THT placements.\n'
         'gerber_review/: independent renders of the actual exported layers.\n'
         'native/hardware/: editable KiCad projects, local footprints and mechanical source.\n'
-        'mechanical/: Fusion-compatible v0.8 STEP and four print parts.\n'
+        f'mechanical/: Fusion-compatible {tag} STEP and {mechanical["printed_parts"]} print parts.\n'
         'evidence/: source-bound checks and actual final visual review.\n'
         'Read fabrication_specification.json, assembly_RFQ_draft.md and factory_response.csv.\n'
         'Keep exact MPNs; obtain factory DFM/process/sourcing/placement-preview and quote approval before build.\n'

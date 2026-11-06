@@ -18,6 +18,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--pdf-python',type=Path,required=True);args=parser.parse_args()
     scripts=ROOT/'scripts';uv=Path.home()/'.local/bin/uv.exe'
+    tag=json.loads((ROOT/'mechanical/enclosure_parameters.json').read_text(encoding='utf-8'))['export_tag']
     stages=[('schematics',[sys.executable,scripts/'check_schematics.py']),
             ('parts',[sys.executable,scripts/'check_component_selection.py']),
             ('lands',[sys.executable,scripts/'check_manufacturer_land_patterns.py']),
@@ -43,7 +44,7 @@ def main():
            ROOT/'review/routing/manufacturer_land_patterns.json',ROOT/'review/routing/routing_validation.json',
            ROOT/'manufacturing/manufacturing_fit_audit.json',ROOT/'manufacturing/harness_validation.json',
            ROOT/'manufacturing/output/assembly_review_manifest.json',ROOT/'manufacturing/fabrication_output_validation.json',
-           ROOT/'manufacturing/rfq_integrity_validation.json',ROOT/'mechanical/exports/source_manifest_v08.json',
+           ROOT/'manufacturing/rfq_integrity_validation.json',ROOT/('mechanical/exports/source_manifest_'+tag+'.json'),
            ROOT/'mechanical/exports/assembly_sequence_validation.json',ROOT/'mechanical/exports/validation.json']
     result=dict(status='PASS / all13 local preparation stages; final visual review remains separate',stages=done,
         hardware_tests_performed=False,order_authorized=False,
