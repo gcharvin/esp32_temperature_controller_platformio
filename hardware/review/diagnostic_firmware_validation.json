@@ -1,0 +1,29 @@
+{
+  "status": "PASS / PlatformIO compilation only, not a hardware test",
+  "environment": "esp32-bench",
+  "project": "firmware/diagnostic",
+  "platform": "espressif32@7.1.3",
+  "hardware_enable_permanently_low": true,
+  "logic_probe_frequency_Hz": 500,
+  "logic_probe_max_percent": 20,
+  "logic_probe_duration_ms": 2000,
+  "flashed": false,
+  "hardware_tests_performed": false,
+  "source_sha256": {
+    "firmware\\diagnostic\\platformio.ini": "5fc41091aa769117ee0407fd31af8418be9b2372f717e2858f13e183b73149b2",
+    "firmware\\diagnostic\\BenchPolicy.h": "1f4f17b90a08a2b49e2f9f650606b0d4c2886b6d37614a3925015ecc6907f3cd",
+    "firmware\\diagnostic\\main.cpp": "52ab9230f89d73b37fd965cd222b55bac82ba43ca03db82c7d1356de29924862",
+    "firmware\\diagnostic\\README.md": "a52ca2e937e874a0d23c49c1d6873b4b28d57f6144da9a63215f43b38b343122",
+    "hardware\\module_selection.json": "eb5a7f97b79a9cae4a4adeb0e71ab71bb7f6cba9b3189ece9b555c1a0dac7967"
+  },
+  "binaries_sha256": {
+    "firmware\\diagnostic\\release\\firmware.bin": "9ab820fa07be69d128ba3b808acc9f3a237406c4f686cd7c7789591476282a5e",
+    "firmware\\diagnostic\\release\\bootloader.bin": "3d234a7471f67b013686dabd4dee7c1fa915c9928463616a94bc9297acf1abf8",
+    "firmware\\diagnostic\\release\\partitions.bin": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
+  },
+  "compile_summary": [
+    "RAM:   [=         ]  13.9% (used 45600 bytes from 327680 bytes)",
+    "Flash: [======    ]  61.6% (used 807325 bytes from 1310720 bytes)",
+    "========================= [SUCCESS] Took 2.51 seconds ========================="
+  ]
+}
