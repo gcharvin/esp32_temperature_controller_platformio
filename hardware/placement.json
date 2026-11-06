@@ -1,5 +1,5 @@
 {
-  "revision": "A 0.4 / B 0.5 integrated buck",
+  "revision": "A0.4.1 / B0.5.1 - back-side test pads; no power topology change",
   "status": "routed, ERC/DRC checked; prototype thermal/mechanical qualification pending",
   "case_external_mm": {
     "width": 155,
@@ -448,6 +448,186 @@
           "status": "diagnostic component / physical package selected"
         },
         {
+          "reference": "TP1",
+          "value": "GND",
+          "origin_mm": [
+            94.0,
+            15.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            92.725,
+            13.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP10",
+          "value": "ENC_SW",
+          "origin_mm": [
+            77.0,
+            67.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            75.725,
+            65.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP2",
+          "value": "+5V_AB",
+          "origin_mm": [
+            99.0,
+            13.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            97.725,
+            11.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP3",
+          "value": "+5V_DEVKIT",
+          "origin_mm": [
+            72.0,
+            45.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            70.725,
+            43.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP4",
+          "value": "+3V3_A",
+          "origin_mm": [
+            25.0,
+            13.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            23.725,
+            11.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP5",
+          "value": "I2C_SDA",
+          "origin_mm": [
+            96.0,
+            31.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            94.725,
+            29.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP6",
+          "value": "I2C_SCL",
+          "origin_mm": [
+            100.0,
+            31.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            98.725,
+            29.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP7",
+          "value": "PWM0",
+          "origin_mm": [
+            90.0,
+            48.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            88.725,
+            46.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP8",
+          "value": "ENABLE",
+          "origin_mm": [
+            95.0,
+            48.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            93.725,
+            46.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP9",
+          "value": "FAULT_N",
+          "origin_mm": [
+            95.0,
+            41.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            93.725,
+            39.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
           "reference": "U1",
           "value": "ESP32 USB-C / 30P user module",
           "origin_mm": [
@@ -561,20 +741,56 @@
       ],
       "components": [
         {
-          "reference": "R3",
-          "value": "22R",
+          "reference": "C1",
+          "value": "1uF / 16V X7R",
           "origin_mm": [
-            64.0,
-            29.0
+            53.0,
+            40.0
           ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            62.495,
-            28.245,
+            51.495,
+            39.245,
             3.01,
             1.51
           ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "C10",
+          "value": "330uF / 35V",
+          "origin_mm": [
+            10.0,
+            46.5
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+          "bounds_mm": [
+            6.96035,
+            41.225,
+            10.81465,
+            10.55
+          ],
+          "status": "physical footprint / prototype review pending",
+          "height_mm": 12.5
+        },
+        {
+          "reference": "C2",
+          "value": "1uF / 10V X7R",
+          "origin_mm": [
+            54.5,
+            48.5
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            52.995,
+            47.745,
+            3.01,
+            1.51
+          ],
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
           "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
@@ -597,92 +813,20 @@
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "L1",
-          "value": "100uH / SRP1770TA-101M",
-          "origin_mm": [
-            39.5,
-            41.5
-          ],
-          "rotation_deg": 0.0,
-          "footprint": "Inductor_SMD:L_Bourns_SRP1770TA_16.9x16.9mm",
-          "bounds_mm": [
-            29.975,
-            32.775,
-            19.05,
-            17.45
-          ],
-          "status": "physical footprint / prototype review pending",
-          "height_mm": 7.0
-        },
-        {
-          "reference": "J4",
-          "value": "TEMP / NTC 15k B3920",
+          "reference": "C4",
+          "value": "100nF / 10V X7R",
           "origin_mm": [
             81.0,
-            52.0
+            43.0
           ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            78.025,
-            49.125,
-            8.45,
-            6.8
+            79.495,
+            42.245,
+            3.01,
+            1.51
           ],
-          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
-          "height_mm": 9.8,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "D9",
-          "value": "SS36 / 60V 3A",
-          "origin_mm": [
-            33.0,
-            25.0
-          ],
-          "rotation_deg": 90.0,
-          "footprint": "Diode_SMD:D_SMC",
-          "bounds_mm": [
-            29.625,
-            20.075,
-            6.75,
-            9.895
-          ],
-          "status": "physical footprint / prototype review pending",
-          "height_mm": 2.4
-        },
-        {
-          "reference": "R12",
-          "value": "2.2k / 1% / 0.1W",
-          "origin_mm": [
-            66.0,
-            35.0
-          ],
-          "rotation_deg": -90.0,
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "bounds_mm": [
-            65.245,
-            33.495,
-            1.51,
-            3.01
-          ],
-          "height_mm": 0.6,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "U5",
-          "value": "UCC27517DBVR",
-          "origin_mm": [
-            60.0,
-            35.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            57.925,
-            33.1,
-            4.15,
-            3.625
-          ],
-          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
           "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
@@ -705,96 +849,6 @@
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "R5",
-          "value": "8.45k 1%",
-          "origin_mm": [
-            85.0,
-            45.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            83.495,
-            44.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "R11",
-          "value": "470R / 1% / 0.1W",
-          "origin_mm": [
-            75.0,
-            49.0
-          ],
-          "rotation_deg": 0.0,
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "bounds_mm": [
-            73.495,
-            48.245,
-            3.01,
-            1.51
-          ],
-          "height_mm": 0.6,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "C2",
-          "value": "1uF / 10V X7R",
-          "origin_mm": [
-            54.5,
-            48.5
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            52.995,
-            47.745,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "C8",
-          "value": "100uF / 50V / EEUFR1H101",
-          "origin_mm": [
-            17.0,
-            24.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            14.28,
-            19.725,
-            8.745,
-            8.55
-          ],
-          "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
-          "height_mm": 11.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "D4",
-          "value": "STPS5L60U / cable flyback",
-          "origin_mm": [
-            81.0,
-            23.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            77.28,
-            20.725,
-            7.395,
-            4.55
-          ],
-          "footprint": "Diode_SMD:D_SMB",
-          "height_mm": 2.4,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
           "reference": "C6",
           "value": "100nF / 16V X7R",
           "origin_mm": [
@@ -810,150 +864,6 @@
           ],
           "footprint": "Capacitor_SMD:C_0603_1608Metric",
           "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "R13",
-          "value": "56m / 1% / 0.25W",
-          "origin_mm": [
-            21.0,
-            44.5
-          ],
-          "rotation_deg": 0.0,
-          "footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
-          "bounds_mm": [
-            18.175,
-            43.255,
-            5.65,
-            2.49
-          ],
-          "status": "Vishay WSL1206 0.006..0.200 ohm recommended lands, datasheet30100 page2; prototype assembly qualification pending",
-          "height_mm": 0.9
-        },
-        {
-          "reference": "Q2",
-          "value": "DMP6023LE-13 / reverse input",
-          "origin_mm": [
-            43.0,
-            17.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            38.575,
-            13.3,
-            8.85,
-            7.325
-          ],
-          "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
-          "height_mm": 1.8,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "F1",
-          "value": "6.3A / 125VDC / 045106.3MRL",
-          "origin_mm": [
-            27.0,
-            12.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            23.285,
-            10.145,
-            7.43,
-            3.71
-          ],
-          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
-          "height_mm": 2.69,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "C4",
-          "value": "100nF / 10V X7R",
-          "origin_mm": [
-            81.0,
-            43.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            79.495,
-            42.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "D3",
-          "value": "BZT52C12 / 12V gate clamp",
-          "origin_mm": [
-            45.0,
-            27.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            42.58,
-            25.825,
-            4.795,
-            2.35
-          ],
-          "footprint": "Diode_SMD:D_SOD-123",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "J3",
-          "value": "HEATER / + switched return",
-          "origin_mm": [
-            75.0,
-            12.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            71.935,
-            6.265,
-            11.22,
-            11.125
-          ],
-          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
-          "height_mm": 14.0,
-          "status": "Phoenix1715721 installed height13.8mm; model allowance14.0mm; exact MPN selected"
-        },
-        {
-          "reference": "R4",
-          "value": "100k",
-          "origin_mm": [
-            75.0,
-            28.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            73.495,
-            27.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "Q1",
-          "value": "IRLZ44NPBF / gate 5 V",
-          "origin_mm": [
-            66.0,
-            23.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            63.265,
-            19.575,
-            10.55,
-            4.95
-          ],
-          "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
-          "height_mm": 17,
           "status": "physical footprint / prototype review pending"
         },
         {
@@ -975,21 +885,399 @@
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "R2",
-          "value": "47k",
+          "reference": "C8",
+          "value": "100uF / 50V / EEUFR1H101",
           "origin_mm": [
-            59.0,
-            49.0
+            17.0,
+            24.0
           ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            57.495,
-            48.245,
-            3.01,
-            1.51
+            14.2803,
+            19.725,
+            8.7447,
+            8.55
           ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+          "height_mm": 11.5,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "C9",
+          "value": "100nF / 50V X7R",
+          "origin_mm": [
+            26.5,
+            42.8
+          ],
+          "rotation_deg": 90.0,
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "bounds_mm": [
+            25.495,
+            41.075,
+            2.01,
+            3.45
+          ],
+          "status": "physical footprint / prototype review pending",
+          "height_mm": 1.3
+        },
+        {
+          "reference": "D2",
+          "value": "SMBJ24CA / transients NOT qualified",
+          "origin_mm": [
+            59.0,
+            12.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            55.28,
+            9.725,
+            7.395,
+            4.55
+          ],
+          "footprint": "Diode_SMD:D_SMB",
+          "height_mm": 2.4,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "D3",
+          "value": "BZT52C12 / 12V gate clamp",
+          "origin_mm": [
+            45.0,
+            27.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            42.58,
+            25.825,
+            4.795,
+            2.35
+          ],
+          "footprint": "Diode_SMD:D_SOD-123",
           "height_mm": 1.5,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "D4",
+          "value": "STPS5L60U / cable flyback",
+          "origin_mm": [
+            81.0,
+            23.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            77.28,
+            20.725,
+            7.395,
+            4.55
+          ],
+          "footprint": "Diode_SMD:D_SMB",
+          "height_mm": 2.4,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "D5",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            5.0,
+            43.0
+          ],
+          "rotation_deg": 90.0,
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+          "bounds_mm": [
+            4.05,
+            40.925,
+            1.9,
+            4.185
+          ],
+          "height_mm": 0.9,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "D6",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            52.0,
+            31.5
+          ],
+          "rotation_deg": 90.0,
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+          "bounds_mm": [
+            51.05,
+            29.425,
+            1.9,
+            4.185
+          ],
+          "height_mm": 0.9,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "D7",
+          "value": "APT2012LZGCK",
+          "origin_mm": [
+            72.0,
+            49.25
+          ],
+          "rotation_deg": 90.0,
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+          "bounds_mm": [
+            71.05,
+            47.175,
+            1.9,
+            4.185
+          ],
+          "height_mm": 0.9,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "D8",
+          "value": "APT2012LSECK/J4-PRV",
+          "origin_mm": [
+            66.0,
+            39.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+          "bounds_mm": [
+            63.89,
+            38.05,
+            4.185,
+            1.9
+          ],
+          "height_mm": 0.9,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "D9",
+          "value": "SS36 / 60V 3A",
+          "origin_mm": [
+            33.0,
+            25.0
+          ],
+          "rotation_deg": 90.0,
+          "footprint": "Diode_SMD:D_SMC",
+          "bounds_mm": [
+            29.625,
+            20.075,
+            6.75,
+            9.895
+          ],
+          "status": "physical footprint / prototype review pending",
+          "height_mm": 2.4
+        },
+        {
+          "reference": "F1",
+          "value": "6.3A / 125VDC / 045106.3MRL",
+          "origin_mm": [
+            27.0,
+            12.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            23.285,
+            10.145,
+            7.43,
+            3.71
+          ],
+          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+          "height_mm": 2.69,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "F2",
+          "value": "1A / 125VDC / 0451001.MRL",
+          "origin_mm": [
+            25.0,
+            48.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            21.285,
+            46.145,
+            7.43,
+            3.71
+          ],
+          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
+          "height_mm": 2.69,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "J1",
+          "value": "A-B POWER / XH-2",
+          "origin_mm": [
+            15.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            12.025,
+            52.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "J2",
+          "value": "24V IN / + PGND",
+          "origin_mm": [
+            9.0,
+            12.0
+          ],
+          "rotation_deg": -90.0,
+          "bounds_mm": [
+            3.61,
+            8.935,
+            11.125,
+            11.22
+          ],
+          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+          "height_mm": 14.0,
+          "status": "Phoenix1715721 installed height13.8mm; model allowance14.0mm; exact MPN selected"
+        },
+        {
+          "reference": "J3",
+          "value": "HEATER / + switched return",
+          "origin_mm": [
+            75.0,
+            12.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            71.935,
+            6.265,
+            11.22,
+            11.125
+          ],
+          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+          "height_mm": 14.0,
+          "status": "Phoenix1715721 installed height13.8mm; model allowance14.0mm; exact MPN selected"
+        },
+        {
+          "reference": "J4",
+          "value": "TEMP / NTC 15k B3920",
+          "origin_mm": [
+            81.0,
+            52.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            78.025,
+            49.125,
+            8.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "J6",
+          "value": "A-B I2C / XH-3",
+          "origin_mm": [
+            33.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            30.025,
+            52.125,
+            10.95,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "J7",
+          "value": "A-B CTRL / XH-6",
+          "origin_mm": [
+            53.0,
+            55.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            50.025,
+            52.125,
+            18.45,
+            6.8
+          ],
+          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+          "height_mm": 9.8,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "L1",
+          "value": "100uH / SRP1770TA-101M",
+          "origin_mm": [
+            39.5,
+            41.5
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "Inductor_SMD:L_Bourns_SRP1770TA_16.9x16.9mm",
+          "bounds_mm": [
+            29.975,
+            32.775,
+            19.05,
+            17.45
+          ],
+          "status": "physical footprint / prototype review pending",
+          "height_mm": 7.0
+        },
+        {
+          "reference": "NT1",
+          "value": "GND STAR / NO COMPONENT",
+          "origin_mm": [
+            8.0,
+            31.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "NetTie:NetTie-2_SMD_Pad2.0mm",
+          "bounds_mm": [
+            5.0,
+            30.0,
+            6.0,
+            2.0
+          ],
+          "status": "physical footprint / prototype review pending",
+          "height_mm": 0
+        },
+        {
+          "reference": "Q1",
+          "value": "IRLZ44NPBF / gate 5 V",
+          "origin_mm": [
+            66.0,
+            23.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            63.265,
+            19.575,
+            10.55,
+            4.95
+          ],
+          "footprint": "Package_TO_SOT_THT:TO-220-3_Vertical",
+          "height_mm": 17,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "Q2",
+          "value": "DMP6023LE-13 / reverse input",
+          "origin_mm": [
+            43.0,
+            17.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            38.575,
+            13.3,
+            8.85,
+            7.325
+          ],
+          "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+          "height_mm": 1.8,
           "status": "physical footprint / prototype review pending"
         },
         {
@@ -1011,92 +1299,164 @@
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "U3",
-          "value": "SN74LVC1G08DBVR",
+          "reference": "R10",
+          "value": "1.5k / 1% / 0.1W",
           "origin_mm": [
-            62.0,
-            46.0
+            52.0,
+            26.5
+          ],
+          "rotation_deg": 90.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            51.245,
+            24.995,
+            1.51,
+            3.01
+          ],
+          "height_mm": 0.6,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "R11",
+          "value": "470R / 1% / 0.1W",
+          "origin_mm": [
+            75.0,
+            49.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            73.495,
+            48.245,
+            3.01,
+            1.51
+          ],
+          "height_mm": 0.6,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "R12",
+          "value": "2.2k / 1% / 0.1W",
+          "origin_mm": [
+            66.0,
+            35.0
+          ],
+          "rotation_deg": -90.0,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "bounds_mm": [
+            65.245,
+            33.495,
+            1.51,
+            3.01
+          ],
+          "height_mm": 0.6,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "R13",
+          "value": "56m / 1% / 0.25W",
+          "origin_mm": [
+            21.0,
+            44.5
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
+          "bounds_mm": [
+            18.175,
+            43.255,
+            5.65,
+            2.49
+          ],
+          "status": "Vishay WSL1206 0.006..0.200 ohm recommended lands, datasheet30100 page2; prototype assembly qualification pending",
+          "height_mm": 0.9
+        },
+        {
+          "reference": "R2",
+          "value": "47k",
+          "origin_mm": [
+            59.0,
+            49.0
           ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            59.925,
-            44.1,
-            4.15,
-            3.625
+            57.495,
+            48.245,
+            3.01,
+            1.51
           ],
-          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
           "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "NT1",
-          "value": "GND STAR / NO COMPONENT",
+          "reference": "R3",
+          "value": "22R",
           "origin_mm": [
-            8.0,
-            31.0
-          ],
-          "rotation_deg": 0.0,
-          "footprint": "NetTie:NetTie-2_SMD_Pad2.0mm",
-          "bounds_mm": [
-            5.0,
-            30.0,
-            6.0,
-            2.0
-          ],
-          "status": "physical footprint / prototype review pending",
-          "height_mm": 0
-        },
-        {
-          "reference": "C10",
-          "value": "330uF / 35V",
-          "origin_mm": [
-            10.0,
-            46.5
-          ],
-          "rotation_deg": 0.0,
-          "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
-          "bounds_mm": [
-            6.96,
-            41.225,
-            10.815,
-            10.55
-          ],
-          "status": "physical footprint / prototype review pending",
-          "height_mm": 12.5
-        },
-        {
-          "reference": "J6",
-          "value": "A-B I2C / XH-3",
-          "origin_mm": [
-            33.0,
-            55.0
+            64.0,
+            29.0
           ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            30.025,
-            52.125,
-            10.95,
-            6.8
+            62.495,
+            28.245,
+            3.01,
+            1.51
           ],
-          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
-          "height_mm": 9.8,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "U2",
-          "value": "AP2112K-3.3",
+          "reference": "R4",
+          "value": "100k",
           "origin_mm": [
-            52.0,
-            44.0
+            75.0,
+            28.0
           ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            49.925,
-            42.1,
-            4.15,
-            3.625
+            73.495,
+            27.245,
+            3.01,
+            1.51
           ],
-          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "R5",
+          "value": "8.45k 1%",
+          "origin_mm": [
+            85.0,
+            45.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            83.495,
+            44.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
+          "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "R6",
+          "value": "1k",
+          "origin_mm": [
+            85.0,
+            39.0
+          ],
+          "rotation_deg": 0.0,
+          "bounds_mm": [
+            83.495,
+            38.245,
+            3.01,
+            1.51
+          ],
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
           "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
@@ -1119,57 +1479,21 @@
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "J2",
-          "value": "24V IN / + PGND",
+          "reference": "R8",
+          "value": "100k",
           "origin_mm": [
-            9.0,
-            12.0
-          ],
-          "rotation_deg": -90.0,
-          "bounds_mm": [
-            3.61,
-            8.935,
-            11.125,
-            11.22
-          ],
-          "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
-          "height_mm": 14.0,
-          "status": "Phoenix1715721 installed height13.8mm; model allowance14.0mm; exact MPN selected"
-        },
-        {
-          "reference": "J7",
-          "value": "A-B CTRL / XH-6",
-          "origin_mm": [
-            53.0,
-            55.0
+            39.0,
+            28.0
           ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            50.025,
-            52.125,
-            18.45,
-            6.8
+            37.495,
+            27.245,
+            3.01,
+            1.51
           ],
-          "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
-          "height_mm": 9.8,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "D2",
-          "value": "SMBJ24CA / transients NOT qualified",
-          "origin_mm": [
-            59.0,
-            12.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            55.28,
-            9.725,
-            7.395,
-            4.55
-          ],
-          "footprint": "Diode_SMD:D_SMB",
-          "height_mm": 2.4,
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
         {
@@ -1191,39 +1515,273 @@
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "D8",
-          "value": "APT2012LSECK/J4-PRV",
+          "reference": "TP1",
+          "value": "PGND",
           "origin_mm": [
-            66.0,
-            39.0
+            9.0,
+            20.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            7.725,
+            18.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP10",
+          "value": "FAULT_N",
+          "origin_mm": [
+            60.0,
+            51.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            58.725,
+            49.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP11",
+          "value": "GATE_DRV",
+          "origin_mm": [
+            63.0,
+            26.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            61.725,
+            24.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP12",
+          "value": "GND",
+          "origin_mm": [
+            15.0,
+            58.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            13.725,
+            56.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP2",
+          "value": "VIN_PROTECTED",
+          "origin_mm": [
+            72.0,
+            13.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            70.725,
+            11.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP3",
+          "value": "+5V_BUCK",
+          "origin_mm": [
+            10.0,
+            49.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            8.725,
+            47.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP4",
+          "value": "+5V_AB",
+          "origin_mm": [
+            20.0,
+            56.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            18.725,
+            54.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP5",
+          "value": "+3V3_B",
+          "origin_mm": [
+            81.0,
+            55.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            79.725,
+            53.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP6",
+          "value": "NTC_RAW",
+          "origin_mm": [
+            83.0,
+            48.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            81.725,
+            46.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP7",
+          "value": "NTC_ADC",
+          "origin_mm": [
+            74.0,
+            41.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            72.725,
+            39.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP8",
+          "value": "PWM0",
+          "origin_mm": [
+            55.0,
+            58.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            53.725,
+            56.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "TP9",
+          "value": "ENABLE",
+          "origin_mm": [
+            60.0,
+            58.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+          "bounds_mm": [
+            58.725,
+            56.725,
+            2.55,
+            2.55
+          ],
+          "height_mm": 0,
+          "status": "Copper-only B.Cu/B.Mask probe pad; no purchased component"
+        },
+        {
+          "reference": "U1",
+          "value": "LM2596S-5.0/NOPB",
+          "origin_mm": [
+            18.0,
+            35.0
+          ],
+          "rotation_deg": 180.0,
+          "footprint": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
+          "bounds_mm": [
+            11.525,
+            29.325,
+            16.7,
+            11.35
+          ],
+          "status": "physical footprint / prototype review pending",
+          "height_mm": 4.8
+        },
+        {
+          "reference": "U2",
+          "value": "AP2112K-3.3",
+          "origin_mm": [
+            52.0,
+            44.0
           ],
           "rotation_deg": 0.0,
-          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
           "bounds_mm": [
-            63.89,
-            38.05,
-            4.185,
-            1.9
+            49.925,
+            42.1,
+            4.15,
+            3.625
           ],
-          "height_mm": 0.9,
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "R10",
-          "value": "1.5k / 1% / 0.1W",
+          "reference": "U3",
+          "value": "SN74LVC1G08DBVR",
           "origin_mm": [
-            52.0,
-            26.5
+            62.0,
+            46.0
           ],
-          "rotation_deg": 90.0,
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "rotation_deg": 0.0,
           "bounds_mm": [
-            51.245,
-            24.995,
-            1.51,
-            3.01
+            59.925,
+            44.1,
+            4.15,
+            3.625
           ],
-          "height_mm": 0.6,
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         },
         {
@@ -1245,183 +1803,21 @@
           "status": "physical footprint / prototype review pending"
         },
         {
-          "reference": "J1",
-          "value": "A-B POWER / XH-2",
+          "reference": "U5",
+          "value": "UCC27517DBVR",
           "origin_mm": [
-            15.0,
-            55.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            12.025,
-            52.125,
-            8.45,
-            6.8
-          ],
-          "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
-          "height_mm": 9.8,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "D6",
-          "value": "APT2012LZGCK",
-          "origin_mm": [
-            52.0,
-            31.5
-          ],
-          "rotation_deg": 90.0,
-          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
-          "bounds_mm": [
-            51.05,
-            29.425,
-            1.9,
-            4.185
-          ],
-          "height_mm": 0.9,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "R6",
-          "value": "1k",
-          "origin_mm": [
-            85.0,
-            39.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            83.495,
-            38.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "D5",
-          "value": "APT2012LZGCK",
-          "origin_mm": [
-            5.0,
-            43.0
-          ],
-          "rotation_deg": 90.0,
-          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
-          "bounds_mm": [
-            4.05,
-            40.925,
-            1.9,
-            4.185
-          ],
-          "height_mm": 0.9,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "R8",
-          "value": "100k",
-          "origin_mm": [
-            39.0,
-            28.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            37.495,
-            27.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Resistor_SMD:R_0603_1608Metric",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "C1",
-          "value": "1uF / 16V X7R",
-          "origin_mm": [
-            53.0,
-            40.0
-          ],
-          "rotation_deg": 0.0,
-          "bounds_mm": [
-            51.495,
-            39.245,
-            3.01,
-            1.51
-          ],
-          "footprint": "Capacitor_SMD:C_0603_1608Metric",
-          "height_mm": 1.5,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "U1",
-          "value": "LM2596S-5.0/NOPB",
-          "origin_mm": [
-            18.0,
+            60.0,
             35.0
           ],
-          "rotation_deg": 180.0,
-          "footprint": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
-          "bounds_mm": [
-            11.525,
-            29.325,
-            16.7,
-            11.35
-          ],
-          "status": "physical footprint / prototype review pending",
-          "height_mm": 4.8
-        },
-        {
-          "reference": "F2",
-          "value": "1A / 125VDC / 0451001.MRL",
-          "origin_mm": [
-            25.0,
-            48.0
-          ],
           "rotation_deg": 0.0,
           "bounds_mm": [
-            21.285,
-            46.145,
-            7.43,
-            3.71
+            57.925,
+            33.1,
+            4.15,
+            3.625
           ],
-          "footprint": "Fuse:Fuse_Littelfuse-NANO2-451_453",
-          "height_mm": 2.69,
-          "status": "physical footprint / prototype review pending"
-        },
-        {
-          "reference": "C9",
-          "value": "100nF / 50V X7R",
-          "origin_mm": [
-            26.5,
-            42.8
-          ],
-          "rotation_deg": 90.0,
-          "footprint": "Capacitor_SMD:C_0805_2012Metric",
-          "bounds_mm": [
-            25.495,
-            41.075,
-            2.01,
-            3.45
-          ],
-          "status": "physical footprint / prototype review pending",
-          "height_mm": 1.3
-        },
-        {
-          "reference": "D7",
-          "value": "APT2012LZGCK",
-          "origin_mm": [
-            72.0,
-            49.25
-          ],
-          "rotation_deg": 90.0,
-          "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
-          "bounds_mm": [
-            71.05,
-            47.175,
-            1.9,
-            4.185
-          ],
-          "height_mm": 0.9,
+          "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+          "height_mm": 1.5,
           "status": "physical footprint / prototype review pending"
         }
       ],

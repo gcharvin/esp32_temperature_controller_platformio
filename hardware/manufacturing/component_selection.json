@@ -1,7 +1,7 @@
 {
   "revision": "A04/B05 prototype engineering selection 2026-11-05",
   "status": "Engineering selections frozen; exact sourcing and assembler process approval required before build",
-  "scope": "68 physical native PCB components; excludes virtual ESP32 module and copper net tie; sockets and shunt separate",
+  "scope": "68 physical native PCB components; excludes virtual ESP32, copper net tie and22 copper test pads; sockets and shunt separate",
   "substitution_policy": "No manufacturer/MPN substitutions without engineering review and regeneration of native data",
   "boards": {
     "A": {
@@ -224,6 +224,106 @@
         "Source": "https://www.diodes.com/assets/Datasheets/AP2112.pdf",
         "Assembly": "FACTORY_SMT_QUOTE",
         "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "TP1": {
+        "Value": "GND",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP2": {
+        "Value": "+5V_AB",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP3": {
+        "Value": "+5V_DEVKIT",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP4": {
+        "Value": "+3V3_A",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP5": {
+        "Value": "I2C_SDA",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP6": {
+        "Value": "I2C_SCL",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP7": {
+        "Value": "PWM0",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP8": {
+        "Value": "ENABLE",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP9": {
+        "Value": "FAULT_N",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP10": {
+        "Value": "ENC_SW",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
       }
     },
     "B": {
@@ -706,6 +806,126 @@
         "Source": "https://www.ti.com/lit/ds/symlink/ucc27517.pdf",
         "Assembly": "FACTORY_SMT_QUOTE",
         "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+      },
+      "TP1": {
+        "Value": "PGND",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP2": {
+        "Value": "VIN_PROTECTED",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP3": {
+        "Value": "+5V_BUCK",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP4": {
+        "Value": "+5V_AB",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP5": {
+        "Value": "+3V3_B",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP6": {
+        "Value": "NTC_RAW",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP7": {
+        "Value": "NTC_ADC",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP8": {
+        "Value": "PWM0",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP9": {
+        "Value": "ENABLE",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP10": {
+        "Value": "FAULT_N",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP11": {
+        "Value": "GATE_DRV",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "TP12": {
+        "Value": "GND",
+        "Footprint": "LabHardware:ProbePad_D1.5mm_NoPaste",
+        "MPN": "",
+        "Manufacturer": "",
+        "Requirements": "Exposed1.5mm ENIG test pad on back; no paste, no fitted part",
+        "Source": "",
+        "Assembly": "NONE_COPPER",
+        "Decision": "COPPER_ONLY_TEST_POINT"
       }
     }
   },

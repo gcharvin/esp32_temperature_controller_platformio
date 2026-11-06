@@ -5,6 +5,8 @@
 *.bak
 __pycache__/
 review/*.png
+!review/test_points_A_back.png
+!review/test_points_B_back.png
 review/routing/*.log
 review/routing/*.dsn
 review/routing/*.ses

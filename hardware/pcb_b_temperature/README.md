@@ -105,3 +105,10 @@ Sources : [TI LM2596](https://www.ti.com/lit/ds/symlink/lm2596.pdf),
 [Panasonic C10](https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB).
 
 La préparation3 fige les MPN dans KiCad, emploie les pastilles Kingbright pour les voyants et décale D7 de0,25mm en Y pour dégager SDA. Les borniers sont modélisés à14mm de hauteur enveloppe. Les valeurs électriques et les pistes sont conservées. Les instructions de câblage, de test et d’assemblage sont dans le dossier de fabrication.
+
+## Révision diagnostic du 6 novembre 2026
+
+Les pastilles TP au dos sont du cuivre seul, sans pâte ni pièce à acheter.
+Voir [le plan de mesure](../TEST_POINTS.md) et le firmware autonome dans
+`../../firmware/diagnostic/`. Les pistes antérieures et le circuit de puissance
+sont conservés ; le diagnostic maintient ENABLE à zéro.

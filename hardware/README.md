@@ -1,5 +1,13 @@
 # PCB A et B température — A v0.4 / B v0.5 buck intégré
 
+**Révision diagnostic du 6 novembre : A 0.4.1 / B 0.5.1.** Les noms de fichiers
+A04/B05 sont conservés pour cette famille ; utiliser les archives régénérées,
+dont les SHA256 et les cartouches identifient la révision courante.
+Les [22 points de test au dos](TEST_POINTS.md) sont du cuivre seul, sans pièces
+à commander. Le [firmware de diagnostic autonome](../firmware/diagnostic/README.md)
+maintient ENABLE à zéro et fournit mesures I²C, encodeur, LCD et page Wi-Fi locale.
+Le firmware historique de chauffage n'est pas remplacé par ce programme de banc.
+
 Révision du **5 novembre 2026**. Les deux cartes sont routées dans les fichiers natifs KiCad, avec empreintes physiques et plans de masse. Cible de B : **24 V continu / chauffage résistif 100 W**, soit 4,17 A pour la charge. A porte un seul ESP32 ; B reste sans microcontrôleur.
 
 **Prototype à contrôler, pas dossier de fabrication libéré.** L'entraxe des deux rangées de la DevKit est **25,40 mm, confirmé par mesure de l'utilisateur le 5 novembre 2026** ; il correspond à l'empreinte déjà routée. Les autres cotes de montage, le dimensionnement thermique et les essais de défaut restent à vérifier. Les Gerber/CPL disponibles servent à la revue et au devis ; ils ne sont pas libérés pour commande.

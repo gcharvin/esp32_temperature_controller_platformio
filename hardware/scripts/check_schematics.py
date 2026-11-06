@@ -107,7 +107,7 @@ def main():
             diagnostics.append(dict(board=name,led=led,resistor=resistor,supply=rail,return_net=ground,
                                     series_only=True,cathode_pin=1,anode_pin=2))
     check_pin(b,'J4',1,'+3V3_B');check_pin(b,'J4',2,'NTC_RAW')
-    assert bg['NTC_RAW']=={('J4','2'),('R5','1'),('R6','1')},'Diagnostic circuits must not load the NTC'
+    assert bg['NTC_RAW']=={('J4','2'),('R5','1'),('R6','1'),('TP6','1')},'Only the copper probe may be added to the NTC divider'
     (out/'routing/diagnostic_validation.json').write_text(json.dumps(dict(LEDs=diagnostics,
         NTC_divider_unloaded=True,HEAT_measures='gate driver output, not heater current'),indent=2)+'\n',encoding='utf-8')
     for name,groups in [('A',ag),('B',bg)]:
