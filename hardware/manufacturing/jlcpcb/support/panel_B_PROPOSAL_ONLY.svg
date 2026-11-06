@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="760" viewBox="0 0 120 104">
+ <rect width="120" height="104" fill="#fff"/>
+ <g font-family="Arial,sans-serif" fill="#1c3447">
+  <text x="60" y="6" font-size="3" text-anchor="middle">B — intention de panélisation pour devis</text>
+  <rect x="10" y="12" width="90" height="5" fill="#e4a356" stroke="#82561e" stroke-width="0.25"/>
+  <rect x="10" y="17" width="90" height="65" fill="#dcecef" stroke="#1c6877" stroke-width="0.35"/>
+  <rect x="10" y="82" width="90" height="5" fill="#e4a356" stroke="#82561e" stroke-width="0.25"/>
+  <path d="M10 17H100M10 82H100" fill="none" stroke="#82561e" stroke-width="0.5" stroke-dasharray="1,1"/>
+  <text x="55" y="45" font-size="4" text-anchor="middle">PCB B : 90 × 65 mm</text>
+  <text x="55" y="51" font-size="2.8" text-anchor="middle">Contour fonctionnel conservé</text>
+  <text x="55" y="57" font-size="2.8" text-anchor="middle">Livraison sans rails ni ergots résiduels</text>
+  <text x="55" y="15.6" font-size="2.6" text-anchor="middle">Rail proposé : 5 mm</text>
+  <text x="55" y="85.6" font-size="2.6" text-anchor="middle">Rail proposé : 5 mm</text>
+  <path d="M10 91V94M100 91V94M10 93H100M104 12H108M104 87H108M107 12V87" fill="none" stroke="#1c3447" stroke-width="0.2"/>
+  <text x="55" y="98" font-size="2.8" text-anchor="middle">90 mm</text>
+  <text x="111" y="50" font-size="2.8" text-anchor="middle" transform="rotate(90 111 50)">75 mm proposés avec rails</text>
+  <text x="60" y="102" font-size="2.1" text-anchor="middle">Pas de Gerber de panneau libéré — usinage, attaches, fiduciels et trous à faire valider par l’assembleur.</text>
+ </g>
+</svg>

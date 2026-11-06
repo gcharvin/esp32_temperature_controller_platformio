@@ -1,0 +1,44 @@
+{
+  "status": "PASS_LOCAL_PACKAGE / RFQ_DFM_ONLY",
+  "boards": {
+    "A": {
+      "quantity": 5,
+      "SMT_per_board": 13,
+      "THT_per_board": 10,
+      "physical_placements_per_board": 23,
+      "placements_in_lot": 115
+    },
+    "B": {
+      "quantity": 5,
+      "SMT_per_board": 38,
+      "THT_per_board": 9,
+      "physical_placements_per_board": 47,
+      "placements_in_lot": 235
+    }
+  },
+  "total_placements_for_5A_5B": 350,
+  "additional_loose_shunts": 5,
+  "SMT_and_THT_included": true,
+  "source_files_modified": false,
+  "excluded": {
+    "A_U1": "Customer removable ESP32; replaced by two physical socket upload aliases J8/J9",
+    "B_NT1": "Copper only; not a purchased component"
+  },
+  "missing_exact_catalogue_MPNs": [
+    "EEUFR1V331UB",
+    "M20-7821546",
+    "M20-9990246",
+    "M7566-05",
+    "WSL1206R0560FEA"
+  ],
+  "JLCPCB_import_tested": false,
+  "factory_placement_approved": false,
+  "pre_sales_DFM_obtained": false,
+  "stock_confirmed": false,
+  "uploaded": false,
+  "support_message_sent": false,
+  "order_authorized": false,
+  "order_placed": false,
+  "B_panel_generated": false,
+  "B_Standard_panel_review_required": true
+}
