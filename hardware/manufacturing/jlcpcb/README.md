@@ -6,9 +6,17 @@ archives ont été régénérés. Les TP ne sont pas des composants à fournir o
 les quantités d'assemblage restent23 sur A et47 sur B. Le dossier `support/`
 comprend leur plan de mesure et leurs cartes de repérage.
 
-Dossier du **6 novembre 2026**, A0.4.1 / B température0.5.1 ; schémas et routage
+Dossier mis à jour le **7 novembre 2026**, A0.4.1 / B température0.5.1 ; schémas et routage
 complétés par les points de test, composants achetés inchangés. **Demande de devis uniquement ; aucune commande,
 réservation payante de composants ou fabrication n'est autorisée.**
+
+La [liste des achats client](support/customer_purchase_list.csv) contient les
+liens fournisseurs/Amazon, les modules déjà achetés et les contrôles encore
+nécessaires. Elle est distincte des BOM d'assemblage de `upload_A/` et `upload_B/` :
+ne pas l'importer comme BOM PCBA et ne pas faire acheter ces accessoires au
+fabricant. Le [guide d'achat dans le dépôt](https://github.com/gcharvin/esp32_temperature_controller_platformio/blob/newdev/hardware/manufacturing/README.md#achats-à-notre-charge-et-liens)
+présente les mêmes besoins avec des liens cliquables ; il ne remplace pas
+les références usine figées. Aucun composant supplémentaire n'est ajouté aux PCB.
 
 ## Commencer par le support technique
 

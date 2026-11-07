@@ -232,6 +232,7 @@ def build():
         'output/assembly_pad_map.csv':'assembly_pad_map.csv',
         'output/assembly_THT_placement.csv':'assembly_THT_placement_NATIVE.csv',
         'component_selection.json':'component_selection.json','fabrication_specification.json':'fabrication_specification.json',
+        'system_bom_review.csv':'customer_purchase_list.csv',
         'land_pattern_review.json':'land_pattern_review.json','process_requirements.json':'process_requirements.json',
         'factory_acceptance_test.md':'factory_acceptance_test.md','factory_response.csv':'factory_response_REQUIRED.csv',
         'panel_B_proposal.svg':'panel_B_PROPOSAL_ONLY.svg'}
@@ -268,7 +269,7 @@ def build():
         if path.suffix=='.zip':
             with zipfile.ZipFile(path) as z:assert z.testzip() is None
     for name in ('README.md','request_support_EN.txt','official_sources.json'):OUTPUT_FILES.add(OUT/name)
-    manifest=dict(status=validation['status'],date='2026-11-06',workspace_sources_sha256=SOURCE_HASHES,
+    manifest=dict(status=validation['status'],date='2026-11-07',workspace_sources_sha256=SOURCE_HASHES,
         files_sha256={p.relative_to(OUT).as_posix():sha(p.read_bytes()) for p in sorted(OUTPUT_FILES)},
         counts=counts,order_authorized=False,order_placed=False)
     (OUT/'package_manifest.json').write_bytes(json_bytes(manifest))

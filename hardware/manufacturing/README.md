@@ -106,6 +106,64 @@ sur chaque DevKit, comme le décrit [la revue USB](power_and_usb_review.md).
 L’accès latéral est conservé dans la maquette v0.9 ; la géométrie réelle des
 modules, les câbles et les clips imprimés se vérifient à l’intégration.
 
+## Achats à notre charge et liens
+
+Liens revus le **7 novembre 2026**. La [BOM système](system_bom_review.csv)
+contient maintenant les colonnes d'action d'achat, fiche fournisseur, lien
+Amazon, statut du lien et points à vérifier. Ses quantités sont **par appareil** :
+le devis de cinq paires de PCB n'impose pas d'acheter immédiatement cinq jeux
+de tous les accessoires.
+
+Les fiches ci-dessous sont des **candidats d'approvisionnement** lorsqu'aucune
+référence n'est encore arrêtée. Les liens « Recherche Amazon » sont des recherches,
+pas des articles dont la compatibilité serait validée. Les offres, variantes,
+prix et stocks restent à vérifier au moment de l'achat. Les pages Amazon de
+la DevKit et du LCD n'ont pas pu être relues ; leurs liens sont ceux fournis
+par l'utilisateur. Aucun composant du PCB ni dimension du boîtier n'est changé
+par cette liste.
+
+| Article à fournir | Quantité | Fiche ou référence | Amazon | Point à vérifier |
+| --- | --- | --- | --- | --- |
+| DevKit ESP32 USB-C | 1, déjà acheté | Diymore B0DGLCWR76 | [Lien d'achat existant](https://www.amazon.fr/dp/B0DGLCWR76) | 30 contacts, entraxe 25,40 mm, brochage et corps réels |
+| LCD 20×4 avec backpack I²C | 1, déjà acheté | Freenove B0B76VGXYH | [Lien d'achat existant](https://www.amazon.fr/dp/B0B76VGXYH) | Alimentation prévue 3,3 V, contraste et cotes |
+| Encodeur avec poussoir et bouton de façade | 1 si absent | [Adafruit 377](https://www.adafruit.com/product/377) | [Recherche Amazon](https://www.amazon.fr/s?k=encodeur+rotatif+EC11+bouton+poussoir+axe+6mm) | Encodeur passif, câblage A/B/SW/GND ; filetage et axe. Adafruit indiquait une rupture à la revue |
+| TMP117, température ambiante | 1 optionnel | [Adafruit 4821](https://www.adafruit.com/product/4821) | [Recherche Amazon](https://www.amazon.fr/s?k=Adafruit+TMP117+4821) | Faisceau XH côté A ; pastilles ou JST-SH STEMMA QT côté module, à adapter |
+| BH1750, luminosité | 1 pour cette fonction | [GY-302 chez Reichelt](https://www.reichelt.com/fr/fr/shop/produit/cartes_de_developpement_-_capteur_de_lumiere_numerique_bh1750-224217) | [AZ-Delivery B07TKWNGZ4](https://www.amazon.fr/dp/B07TKWNGZ4) | ASIN issu de la documentation AZ-Delivery, offre Amazon.fr non relue. Mesurer le PCB pour adapter la cassette |
+| Sonde NTC passive | 1 | Référence encore ouverte | [Recherche Amazon](https://www.amazon.fr/s?k=sonde+NTC+15K+temperature+etanche) | **15 kΩ à 25 °C et courbe documentée**, cible B≈3920. Aucune sonde exacte qualifiée |
+| Faisceau A/B POWER | 1 | [XHP-2](https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-2/555485), deux boîtiers ; [fil JST préserti 305 mm AWG22](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ASXHSXH22K305/6684932), deux conducteurs | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+2+broches+300mm+22AWG) | Ces articles séparés ne sont pas un faisceau fini ; continuité 1→1 et 2→2 |
+| Faisceau A/B I²C | 1 | [XHP-3](https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-3/1651017), deux boîtiers + trois fils sertis | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+3+broches+300mm+26AWG+femelle+femelle) | 300±10 mm, AWG26, GND/SDA/SCL droits |
+| Faisceau A/B CTRL | 1 | [XHP-6 et contacts SXH : documentation JST](https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf) | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+6+broches+300mm+26AWG+femelle+femelle) | Deux boîtiers, six conducteurs AWG26 ; broches 5/6 libres sur B température |
+| Sonde interne, embase arrière vers B/J4 | 1 | [XHP-2 côté B](https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-2/555485) | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+2+broches+cable+pre+serti+300mm) | Une extrémité XH, l'autre à souder à l'embase ; mou de démontage |
+| Faisceaux LCD, encodeur, TMP117, BH1750 | Jusqu'à 4 | [XHP-4 et contacts SXH : documentation JST](https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf) | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+4+broches+cable+pre+serti+Dupont+femelle) | Adapter l'ordre des fils aux modules ; ne pas se fier aux couleurs |
+| Prise de sonde arrière | 1 paire embase + fiche | [Famille GX12-2P](https://connector-sensor.com/product/gx12-2p/) | [Recherche Amazon](https://www.amazon.fr/s?k=GX12-2+connecteur+panneau+male+femelle+2+broches+paire) | Comparer les plans : trou prévu 12,4 mm, corps 17 mm ; acheter les deux parties compatibles |
+| Presse-étoupes et écrous/joints | 2 | [LAPP 53111000 M12×1,5](https://www.digikey.com/en/products/detail/lapp/53111000/18878806) | [Recherche Amazon](https://www.amazon.fr/s?k=presse+etoupe+M12x1.5+3.5+7mm+ecrou) | Gaine 3,5–7 mm ; longueur et dépassement à comparer aux réserves du panneau |
+| Alimentation externe 24 V | 1 si absente | [MEAN WELL GST160A24-R7B, 160 W](https://www.digikey.com/en/products/detail/mean-well-usa-inc/GST160A24-R7B/7703602) | [Recherche Amazon](https://www.amazon.fr/s?k=Mean+Well+GST160A24-R7B+24V) | Ajouter cordon IEC C13 et câble/adaptateur Power-DIN 4 contacts correctement dimensionné et câblé ; aucun branchement direct à B/J2 |
+| Chauffage résistif | 1 selon l'expérience | Référence encore ouverte | [Recherche Amazon](https://www.amazon.fr/s?k=element+chauffant+silicone+24V+100W) | 24 V, 100 W maximum ; géométrie, support et température d'usage à définir |
+| Câbles de puissance et embouts | Selon montage | Cuivre souple 0,75 mm², isolation adaptée | [Recherche Amazon](https://www.amazon.fr/s?k=cable+silicone+cuivre+2x0.75+mm2+embouts+0.75mm2) | Gaine compatible avec les presse-étoupes et embouts compatibles avec les borniers |
+| Rallonge USB-C de panneau | 1 | Référence encore ouverte | [Recherche Amazon](https://www.amazon.fr/s?k=rallonge+USB+C+panneau+ronde+femelle+male+donnees+30cm) | Données USB requises ; trou prévu 16 mm. Aucun modèle actuellement qualifié pour cette ouverture |
+| Accessoire USB de service alimenté | 1 option de banc | [PortaPow PPUSBBP1](https://portablepowersupplies.co.uk/product/usb-power-blocker) | [Amazon EU publié par PortaPow](https://www.amazon.de/dp/B094FYL9QT) | **Power blocker**, +5 V coupé et données conservées ; compatibilité DevKit encore à tester. Le diagnostic Wi-Fi peut s'en passer |
+| Coupure thermique indépendante | 1 avant essais du chauffage | Seuil et référence à définir | [Recherche Amazon](https://www.amazon.fr/s?k=thermostat+securite+normalement+ferme+rearmement+manuel+courant+continu) | Pouvoir de coupure **DC 24 V / ≥4,17 A** et température adaptés ; une valeur AC ne suffit pas |
+| Filament et pièces imprimées | 6 pièces | [STEP/STL et sources du boîtier](../mechanical/README.md) | [Recherche de filament translucide](https://www.amazon.fr/s?k=PETG+naturel+translucide+filament+1.75mm) | Insert optique translucide ; cassette et autres pièces opaques. Matériau et clips à qualifier |
+
+Les **JST-XH sont au pas de 2,50 mm**. Les intitulés Amazon « XH 2.54 » sont
+souvent imprécis : demander confirmation de la série et du pas réels, des
+sections et des longueurs ; un assortiment de boîtiers seuls n'est pas un lot
+de câbles prêt à brancher. Le détail broche à broche reste dans
+[le plan de câblage](wiring_and_harnesses.md).
+
+La [fiche AZ-Delivery du BH1750](https://m.media-amazon.com/images/I/81N6D6v-dYL.pdf)
+identifie l'ASIN lié ci-dessus. Le GY-302 Reichelt annoncé 18,5×13,5 mm n'est
+pas une correspondance mécanique démontrée avec le berceau prévu 23×16 mm :
+adapter ce dernier au module réel. Les cotes des prises, presse-étoupes et de
+l'USB restent également à confronter à leurs plans avant impression finale.
+La [fiche MEAN WELL](https://www.meanwell.com/Upload/PDF/GST160A/GST160A-SPEC.PDF)
+documente le candidat 24 V / 6,67 A et sa sortie Power-DIN.
+
+Les sockets ESP32, les LED et tous les composants montés sur les PCB restent
+dans la BOM **usine**. Le cavalier JP1 est demandé livré séparément par l'usine.
+Le XL4015 [déjà acheté](https://www.amazon.fr/dp/B0C6R3FMT3) reste à **quantité
+zéro** pour ce prototype à buck intégré : ne pas le racheter pour ce montage.
+
 ## Régénération complète
 
 ```powershell
