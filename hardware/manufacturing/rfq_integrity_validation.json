@@ -1,7 +1,7 @@
 {
   "status": "PASS / RFQ integrity only; not fabrication release",
   "archive": "RFQ_A04_B05_DRAFT_NOT_FOR_ORDER.zip",
-  "archive_sha256": "eee4305af0c7523461f5258c077003480c2495047272cf075289e805d2f462ec",
+  "archive_sha256": "1b0ee41084ea03951a61995111705f622828949664b83e47c983cd760f143211",
   "members": 93,
   "source_hashes_checked": 53,
   "boards": {
