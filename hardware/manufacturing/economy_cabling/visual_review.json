@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "date": "2026-11-09",
+  "pdf_sha256": "26c098a78a727556ae9f0bb82bc37b1e2969f3a917344b2e4c468819e41e2adf",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "method": "All6 pages rendered withPoppler100dpi and inspected as3pairs; all4 ArtifactTool table previews inspected, correctedRetail identifier width reviewed.",
+  "tables_sha256": {
+    "custom_quote_lines.csv": "06c563a6868418e0632afd7b68e72d8ba617e5d57a79a57f40d916b96a9f6ed3",
+    "custom_pin_map.csv": "dbd1ebadd838bad1fb09a6becdfaea126e9b8ad944c64a05557942785a624ace",
+    "purchase_plan.csv": "1c7e26533689adc59638ffc3e75a8e852a277cfb4b6e34429cced193540e36c8",
+    "retail_basket.csv": "377981ea58ed802b8ccdbdf360a81168660b4a81ec20c621ac29617f969eac24"
+  },
+  "checks": [
+    "All four quantities and30OR40 U04 alternate visible; no double-counted alternate.",
+    "Universal numerical pin labelling clearly differs from function assignment; encoderGND4 vs I2CGND1 shown.",
+    "No missing pages, clipping, overlaps or broken symbols; supplier packet excludes internal cost estimates.",
+    "Catalogue items conditional, soldering labour excluded, exteriorprobe jacket and protection retained."
+  ],
+  "physical_fit_qualified": false,
+  "submitted": false
+}

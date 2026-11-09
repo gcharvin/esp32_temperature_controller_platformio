@@ -1,7 +1,7 @@
 {
   "date": "2026-11-09",
   "scope": "Customer-owned peripherals and harnesses; assembler BOM/CPL remain separate and unchanged",
-  "status": "Two regular channels selected by user; basket incomplete, no order authorized",
+  "status": "Current economy policy:Amazon/GoTronic catalogue plus4 missing custom cable types; no order",
   "user_constraints": {
     "regular_suppliers": [
       "Amazon.fr",
@@ -13,9 +13,9 @@
       "European Union"
     ],
     "account_decision": "User explicitly accepts one GoTronic account, in addition to existing Amazon channel. Guest checkout is not a condition for GoTronic.",
-    "no_crimping": "Prefer complete factory-terminated harnesses. Distinguish fully plug-in, one-sided precrimped, manual insertion of precrimped contacts, and soldering.",
+    "no_crimping": "No customer crimping; user explicitly accepts workshop soldering at encoder and probe jack on2026-11-09. Finished catalogue cords preferred.",
     "repeatability": "Record supplier SKU, manufacturer/model, exact variant, pin map and dimensions; for Amazon also seller and dispatch origin.",
-    "additional_supplier": "No third regular supplier proposed; unresolved items stay explicitly open instead of adding individual shops."
+    "additional_supplier": "LCSC Cable permitted only for4 unqualified catalogue gaps; not general custom outsourcing. Deferred external components not to be ordered before definition."
   },
   "account_created": false,
   "order_placed": false,
@@ -93,7 +93,7 @@
   "probe_cable_requirements": {
     "external": "Two flexible stranded conductors inside a continuous common outer jacket; robust handling, probe-end strain relief and plug cable clamp matched to actual jacket diameter. Prefer factory-assembled probe/cable/TRS plug.",
     "temperature": "Cable jacket and probe junction rated for actual experimental temperatures; temperature range and length still to define with exact15k NTC reference.",
-    "internal": "JST1164 is only a partial two-wire pigtail; no common jacket documented. Add one length per unit of retained flexible insulating protective sleeve (Amazon/GoTronic reference and diameter still open), insulate solder joints individually and verify15cm service slack.",
+    "internal": "Individually insulated JST1164 wires plus retained abrasion protection braidGAIT06 and individual solder-joint insulation.15cm service slack must be checked; not externally jacketed probe cable.",
     "qualification": "Neither exact robust factory-terminated probe nor complete jacketed XH2-to-PJ392 internal harness is qualified. Two separate insulated wires alone do not satisfy external cable requirement."
   },
   "excluded_from_regular_customer_orders": [
@@ -108,5 +108,30 @@
   "electrical_or_mechanical_design_changed": false,
   "complete_purchase_list": "system_bom_review.csv",
   "readable_grouped_list": "README.md#achats-à-notre-charge-et-liens",
-  "harness_details": "wiring_and_harnesses.md"
+  "harness_details": "wiring_and_harnesses.md",
+  "custom_service_exception": {
+    "supplier": "LCSC Cable",
+    "profile": "RFQ-CABLE-02-ECONOMY",
+    "types": [
+      "H01",
+      "H02",
+      "H03",
+      "U04"
+    ],
+    "base_quantities": [
+      10,
+      10,
+      10,
+      30
+    ],
+    "with_TMP_total_quantities": [
+      10,
+      10,
+      10,
+      40
+    ],
+    "current_plan": "economy_cabling/README.md",
+    "supersedes": "RFQ-CABLE-01 all13lines as current procurement route"
+  },
+  "power_cabling_without_crimp": "Phoenix1715721 permits flexible0.14..1.5mm2 directly;0.75mm2 may be stripped7mm and screw-clamped0.5..0.6Nm with block supported, one wire per pole, no loose strands or solder tinning. Actual source/heater end still unqualified."
 }

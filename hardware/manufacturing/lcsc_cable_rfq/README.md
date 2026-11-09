@@ -1,5 +1,11 @@
 # Devis LCSC Cable - 10 exemplaires de chaque faisceau
 
+> **Comparatif historique RFQ-CABLE-01.** La stratégie courante est le
+> [plan économique RFQ-CABLE-02](../economy_cabling/README.md), limité à quatre
+> références spéciales et complété chezAmazon/GoTronic. Ne pas déposer les
+> treize lignes ci-dessous comme demande courante. Les fichiers restent une
+> définition comparative, non envoyée et sans autorisation de production.
+
 Dossier RFQ-CABLE-01 du **9 novembre 2026**, préparé localement. **Aucun envoi,
 compte créé, commande, paiement ni lancement de production.**
 

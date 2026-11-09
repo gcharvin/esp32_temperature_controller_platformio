@@ -1,0 +1,14 @@
+Old_ID,Function,Quantity_for_10_sets,Route,Implementation
+H01,A-B POWER,10,CUSTOM,"H01x10; standard300mm AWG22, same pin map"
+H02,A-B I2C,10,CUSTOM,"H02x10; standard300mm AWG26, same pin map"
+H03,A-B CTRL,10,CUSTOM,"H03x10; six wires, B5/6 NC"
+H04,LCD I2C,10,SHARED_CUSTOM,10 of baseU04 allocation toLCD; numbered individual female tails
+H05,Encoder completed subassembly,10,CATALOGUE_PLUS_SOLDER,GoTronicADA377 +10 of baseU04; local solder/common bridge
+H06,TMP117 direct XH-SH option,10,OPTIONAL_CATALOGUE_PLUS_SHARED,10extraU04 +10GoTronicQW-4C; no customSH transition; noTMP117 module included
+H07,BH1750 GY302 I2C,10,SHARED_CUSTOM,10 of baseU04 allocation toBH1750; existing module male header required
+H08,Internal probe panel socket subassembly,10,CATALOGUE_PLUS_SOLDER,GoTronicJST1164 +Amazonjack +protective braid;150mm slack conditional
+H09,External jacketed NTC probe option,10,DEFERRED,No custom probe order until exactNTC/temperature/length defined; robust jacket retained
+H10,DC supply input cord,10,CATALOGUE_DEFERRED,"Standard jacketed2x0.75 cable, no mandatory ferrules atPhoenix; PSU output stillTBD"
+H11,Heater output cord,10,CATALOGUE_DEFERRED,Standard jacketed2x0.75 cable; heater end temperature/termination stillTBD
+H12,Independent thermal cutoff lead set,10,DEFERRED,No customlead set before exact thermal protection; protection not waived
+H13,SideUSB-C data extension,10,REUSE_DEFERRED,Reuse data cable for bench; exact16mm panel extension stillTBD

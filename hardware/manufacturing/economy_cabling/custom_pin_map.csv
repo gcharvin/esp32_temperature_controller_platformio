@@ -1,0 +1,16 @@
+ID,A_pin,B_pin,Function,Colour_note
+H01,1,1,GND,black
+H01,2,2,+5V_AB,red
+H02,1,1,GND,black
+H02,2,2,I2C_SDA,blue
+H02,3,3,I2C_SCL,yellow
+H03,1,1,GND,black
+H03,2,2,PWM0,white
+H03,3,3,ENABLE,red
+H03,4,4,FAULT_N,yellow
+H03,5,5,PWM1 / B pad NC,blue
+H03,6,6,DIN0 / B pad NC,green
+U04,1,1,GENERIC CAVITY 1,supplier standard; number authoritative
+U04,2,2,GENERIC CAVITY 2,supplier standard; number authoritative
+U04,3,3,GENERIC CAVITY 3,supplier standard; number authoritative
+U04,4,4,GENERIC CAVITY 4,supplier standard; number authoritative

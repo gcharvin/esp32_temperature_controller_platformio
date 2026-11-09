@@ -1,0 +1,536 @@
+{
+  "revision": "RFQ-CABLE-02-ECONOMY",
+  "date": "2026-11-09",
+  "equipment_sets": 10,
+  "status": "CURRENT COST-REDUCED QUOTATION PLAN - NO ORDER OR PRODUCTION RELEASE",
+  "user_soldering_accepted": true,
+  "customer_crimping_required": false,
+  "custom": [
+    {
+      "id": "H01",
+      "name": "A-B POWER",
+      "category": "INTERNAL",
+      "from": "A/J1",
+      "to": "B/J1",
+      "end_a": "XH2",
+      "end_b": "XH2",
+      "awg": 22,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "length_status": "Existing A-B quotation contract; physical service route pending",
+      "finish": "Standard individually insulated flexible stranded copper wires, ordinary colours and cavity labels at each end. No custom common outer jacket, overmould, special tube or workshop soldering. Optional light bundling fitted during integration; retain full insulation, wire gauge and crimp quality.",
+      "approval": "Electrical map fixed; supplier drawing, OD/bend radius and real routed service slack to approve",
+      "map": [
+        [
+          "1",
+          "1",
+          "GND",
+          "black"
+        ],
+        [
+          "2",
+          "2",
+          "+5V_AB",
+          "red"
+        ]
+      ],
+      "quantity": 10,
+      "optional_extra_quantity": 0
+    },
+    {
+      "id": "H02",
+      "name": "A-B I2C",
+      "category": "INTERNAL",
+      "from": "A/J6",
+      "to": "B/J6",
+      "end_a": "XH3",
+      "end_b": "XH3",
+      "awg": 26,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "length_status": "Existing A-B quotation contract; physical service route pending",
+      "finish": "Standard individually insulated flexible stranded copper wires, ordinary colours and cavity labels at each end. No custom common outer jacket, overmould, special tube or workshop soldering. Optional light bundling fitted during integration; retain full insulation, wire gauge and crimp quality.",
+      "approval": "Electrical map fixed; supplier drawing and actual service fit pending",
+      "map": [
+        [
+          "1",
+          "1",
+          "GND",
+          "black"
+        ],
+        [
+          "2",
+          "2",
+          "I2C_SDA",
+          "blue"
+        ],
+        [
+          "3",
+          "3",
+          "I2C_SCL",
+          "yellow"
+        ]
+      ],
+      "quantity": 10,
+      "optional_extra_quantity": 0
+    },
+    {
+      "id": "H03",
+      "name": "A-B CTRL",
+      "category": "INTERNAL",
+      "from": "A/J7",
+      "to": "B/J7",
+      "end_a": "XH6",
+      "end_b": "XH6",
+      "awg": 26,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "length_status": "Existing A-B quotation contract; physical service route pending",
+      "finish": "Standard individually insulated flexible stranded copper wires, ordinary colours and cavity labels at each end. No custom common outer jacket, overmould, special tube or workshop soldering. Optional light bundling fitted during integration; retain full insulation, wire gauge and crimp quality.",
+      "approval": "Positions5/6 must still be wired through, even though PCB B temperature leaves those pads NC; no commoning to GND",
+      "map": [
+        [
+          "1",
+          "1",
+          "GND",
+          "black"
+        ],
+        [
+          "2",
+          "2",
+          "PWM0",
+          "white"
+        ],
+        [
+          "3",
+          "3",
+          "ENABLE",
+          "red"
+        ],
+        [
+          "4",
+          "4",
+          "FAULT_N",
+          "yellow"
+        ],
+        [
+          "5",
+          "5",
+          "PWM1 / B pad NC",
+          "blue"
+        ],
+        [
+          "6",
+          "6",
+          "DIN0 / B pad NC",
+          "green"
+        ]
+      ],
+      "quantity": 10,
+      "optional_extra_quantity": 0
+    },
+    {
+      "id": "U04",
+      "name": "Universal XH4 to four individual female sockets",
+      "quantity": 30,
+      "optional_extra_quantity": 10,
+      "end_a": "XH4",
+      "end_b": "FLY4",
+      "awg": 26,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "from": "A/J2 LCD, A/J5 BH1750, A/J3 encoder; optional A/J4 TMP117",
+      "to": "Four independently movable female0.64mm-square-post sockets, numbered1..4",
+      "finish": "Standard individually insulated stranded copper wires. Number1..4 permanently at BOTH ends; no fixed GND/VCC function labels because encoder has a different map. Four independent1-position female sockets, ordinary crimp construction. No custom jacket, gauge transition, soldering or overmould. Harwin parts are dimensional/reference proposal; quote exact documented compatible lower-cost MPN separately if cheaper.",
+      "approval": "30pcs base:10 LCD +10 BH1750 +10 encoder. Quote40pcs as an alternative total if TMP117 is populated; NOT30+40. Encoder sockets will be cut off locally, stripped and soldered with a common-ground bridge by the integrator (user accepted). TMP117 uses retail QW-4C male tails with numbered universal female sockets. No direct custom XH-SH needed.",
+      "map": [
+        [
+          "1",
+          "1",
+          "GENERIC CAVITY 1",
+          "supplier standard; number authoritative"
+        ],
+        [
+          "2",
+          "2",
+          "GENERIC CAVITY 2",
+          "supplier standard; number authoritative"
+        ],
+        [
+          "3",
+          "3",
+          "GENERIC CAVITY 3",
+          "supplier standard; number authoritative"
+        ],
+        [
+          "4",
+          "4",
+          "GENERIC CAVITY 4",
+          "supplier standard; number authoritative"
+        ]
+      ]
+    }
+  ],
+  "connectors": {
+    "XH2": {
+      "housing": "JST XHP-2",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 2,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "XH3": {
+      "housing": "JST XHP-3",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 3,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "XH4": {
+      "housing": "JST XHP-4",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 4,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "XH6": {
+      "housing": "JST XHP-6",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 6,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "FLY4": {
+      "housing": "4 individual Harwin M20-1060100 female1-position housings",
+      "contact": "4 Harwin M20-1160042 female crimp contacts",
+      "pitch_mm": 2.54,
+      "cavities": 4,
+      "contact_awg_min": 22,
+      "contact_awg_max": 30,
+      "source": "https://www.harwin.com/products/M20-1060100",
+      "note": "Four independent1-way housings, side-stackable on0.64mm square male posts. Supplier to confirm contact insulation OD/tooling. Label functions rather than assume LCD/GY302 physical order. Proposed documented replacement for generic Dupont, module engagement/clearance still needs real sample check."
+    }
+  },
+  "retail": [
+    {
+      "item": "ENCODER",
+      "supplier": "GoTronic",
+      "reference": "ADA377 /38383",
+      "qty_base": 10,
+      "qty_optional": 0,
+      "unit": "piece",
+      "unit_price_TTC_EUR": 5.9,
+      "url": "https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm",
+      "status": "Exact candidate; shaft/terminal variant still to confirm",
+      "work": "Use10 U04 cables; cut module-end sockets, strip and solder A/B/SW/common, bridge encoderC andSW2. No crimping. Labour not included."
+    },
+    {
+      "item": "NTC_INTERNAL",
+      "supplier": "GoTronic",
+      "reference": "JST1164 /49197",
+      "qty_base": 10,
+      "qty_optional": 0,
+      "unit": "piece",
+      "unit_price_TTC_EUR": 2.1,
+      "url": "https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm",
+      "status": "CONDITIONAL:150mm slack and actual wire gauge to check before lot",
+      "work": "Two solder joints at rear jack; individually insulate joints and retain protective braid. If150mm fails service route, reprice300mm pigtail before purchase; do not stretch or silently shorten service loop."
+    },
+    {
+      "item": "NTC_BRAID",
+      "supplier": "GoTronic",
+      "reference": "GAIT06 /48620",
+      "qty_base": 2,
+      "qty_optional": 0,
+      "unit": "metre",
+      "unit_price_TTC_EUR": 0.8,
+      "url": "https://www.gotronic.fr/art-gaine-tressee-gait06-15337.htm",
+      "status": "Polyester braid3..9mm, sold per1m; fit on actual bundle to check",
+      "work": "2m planning quantity for10x150mm internal probe cords plus cut margin. Abrasion protection only, not common electrical insulation and not the external probe jacket."
+    },
+    {
+      "item": "TMP_QT_ADAPTER",
+      "supplier": "GoTronic",
+      "reference": "QW-4C /49152",
+      "qty_base": 0,
+      "qty_optional": 10,
+      "unit": "piece",
+      "unit_price_TTC_EUR": 2.1,
+      "url": "https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm",
+      "status": "Optional STEMMA QT to4male pins150mm; standard finished cord",
+      "work": "Use only with10 extraU04 female-tail cables; connect by functionGND/VIN/SDA/SCL, immobilize middle junction; total about450mm. Bus/service route and modules to test; may shorten U04 by approved length revision if needed."
+    },
+    {
+      "item": "PROBE_SOCKET_AND_PLUG",
+      "supplier": "Amazon.fr",
+      "reference": "DAOKI B08XM6DR96 candidate",
+      "qty_base": 10,
+      "qty_optional": 0,
+      "unit": "pair required; pack count TBD",
+      "unit_price_TTC_EUR": null,
+      "url": "https://www.amazon.fr/dp/B08XM6DR96",
+      "status": "Amazon offer/pack count/dimensions unverified; coupon required",
+      "work": "Buy required10pairs based on actual pack count, not10lots by default. Two internal solder joints plus two external plug joints per device. Socket/plug clamp and probe jacket fit pending."
+    },
+    {
+      "item": "INTERNAL_WRAP_OPTION",
+      "supplier": "GoTronic",
+      "reference": "SW06B /48441, optional",
+      "qty_base": 0,
+      "qty_optional": 1,
+      "unit": "10m roll",
+      "unit_price_TTC_EUR": 3.9,
+      "url": "https://www.gotronic.fr/art-gaine-cache-fils-sw06b-205.htm",
+      "status": "Optional4mmID/6mmOD spiral wrap; actual bundle fit pending",
+      "work": "Only where useful inside case; existing ties/wrap may be reused. No compulsory custom cable sleeve; not suitable as sole jacket for external probe."
+    },
+    {
+      "item": "POWER_LEADS",
+      "supplier": "Amazon.fr or GoTronic",
+      "reference": "2-core flexible copper0.75mm2 common-jacket cable, exact ref TBD",
+      "qty_base": 0,
+      "qty_optional": 0,
+      "unit": "length and quantity afterPSU/heater choice",
+      "unit_price_TTC_EUR": null,
+      "url": "https://www.amazon.fr/s?k=cable+souple+2x0.75+mm2+gaine",
+      "status": "DEFERRED: actual connector, jacket temperature and lengths not frozen",
+      "work": "Phoenix1715721 accepts flexible conductor0.14..1.5mm2 without mandatory ferrules. One stripped0.75mm2 conductor per pole,7mm strip,0.5..0.6Nm, support block, no loose strands or solder tinning. Exact source/heater termination still to qualify."
+    },
+    {
+      "item": "EXTERNAL_PROBE",
+      "supplier": "Amazon.fr or GoTronic",
+      "reference": "NTC15k/R-T curve + robust common jacket +TRS plug, exact ref TBD",
+      "qty_base": 0,
+      "qty_optional": 0,
+      "unit": "deferred application choice",
+      "unit_price_TTC_EUR": null,
+      "url": "https://www.amazon.fr/s?k=sonde+NTC+15k+cable+gaine",
+      "status": "DEFERRED, not a qualified retail item",
+      "work": "Keep robust continuous common outer jacket and strain relief; no15k-to10k/DS18B20 substitution. Only quote custom if the exact finished probe cannot be sourced after temperature/geometry fixed."
+    },
+    {
+      "item": "USB_AND_THERMAL",
+      "supplier": "Amazon.fr or GoTronic",
+      "reference": "Reuse existingUSB data cable; final panel extension/cutoff TBD",
+      "qty_base": 0,
+      "qty_optional": 0,
+      "unit": "deferred final integration",
+      "unit_price_TTC_EUR": null,
+      "url": "",
+      "status": "No customUSB/cutoff series at this stage",
+      "work": "Retain sideUSB reservation; no unverified16mm panel cable declared fitted. Service with external sources disconnected. Thermal cutoff remains required before heater trials, DC rating/application unresolved; not removed by cost plan."
+    }
+  ],
+  "allocations": [
+    {
+      "id": "H01",
+      "name": "A-B POWER",
+      "quantity_for_10_sets": 10,
+      "route": "CUSTOM",
+      "implementation": "H01x10; standard300mm AWG22, same pin map"
+    },
+    {
+      "id": "H02",
+      "name": "A-B I2C",
+      "quantity_for_10_sets": 10,
+      "route": "CUSTOM",
+      "implementation": "H02x10; standard300mm AWG26, same pin map"
+    },
+    {
+      "id": "H03",
+      "name": "A-B CTRL",
+      "quantity_for_10_sets": 10,
+      "route": "CUSTOM",
+      "implementation": "H03x10; six wires, B5/6 NC"
+    },
+    {
+      "id": "H04",
+      "name": "LCD I2C",
+      "quantity_for_10_sets": 10,
+      "route": "SHARED_CUSTOM",
+      "implementation": "10 of baseU04 allocation toLCD; numbered individual female tails"
+    },
+    {
+      "id": "H05",
+      "name": "Encoder completed subassembly",
+      "quantity_for_10_sets": 10,
+      "route": "CATALOGUE_PLUS_SOLDER",
+      "implementation": "GoTronicADA377 +10 of baseU04; local solder/common bridge"
+    },
+    {
+      "id": "H06",
+      "name": "TMP117 direct XH-SH option",
+      "quantity_for_10_sets": 10,
+      "route": "OPTIONAL_CATALOGUE_PLUS_SHARED",
+      "implementation": "10extraU04 +10GoTronicQW-4C; no customSH transition; noTMP117 module included"
+    },
+    {
+      "id": "H07",
+      "name": "BH1750 GY302 I2C",
+      "quantity_for_10_sets": 10,
+      "route": "SHARED_CUSTOM",
+      "implementation": "10 of baseU04 allocation toBH1750; existing module male header required"
+    },
+    {
+      "id": "H08",
+      "name": "Internal probe panel socket subassembly",
+      "quantity_for_10_sets": 10,
+      "route": "CATALOGUE_PLUS_SOLDER",
+      "implementation": "GoTronicJST1164 +Amazonjack +protective braid;150mm slack conditional"
+    },
+    {
+      "id": "H09",
+      "name": "External jacketed NTC probe option",
+      "quantity_for_10_sets": 10,
+      "route": "DEFERRED",
+      "implementation": "No custom probe order until exactNTC/temperature/length defined; robust jacket retained"
+    },
+    {
+      "id": "H10",
+      "name": "DC supply input cord",
+      "quantity_for_10_sets": 10,
+      "route": "CATALOGUE_DEFERRED",
+      "implementation": "Standard jacketed2x0.75 cable, no mandatory ferrules atPhoenix; PSU output stillTBD"
+    },
+    {
+      "id": "H11",
+      "name": "Heater output cord",
+      "quantity_for_10_sets": 10,
+      "route": "CATALOGUE_DEFERRED",
+      "implementation": "Standard jacketed2x0.75 cable; heater end temperature/termination stillTBD"
+    },
+    {
+      "id": "H12",
+      "name": "Independent thermal cutoff lead set",
+      "quantity_for_10_sets": 10,
+      "route": "DEFERRED",
+      "implementation": "No customlead set before exact thermal protection; protection not waived"
+    },
+    {
+      "id": "H13",
+      "name": "SideUSB-C data extension",
+      "quantity_for_10_sets": 10,
+      "route": "REUSE_DEFERRED",
+      "implementation": "Reuse data cable for bench; exact16mm panel extension stillTBD"
+    }
+  ],
+  "inspection": "100percent continuity and unintended-short check, standard cavity labels and crimp pull/retention controls per connector specification. Supplier provides mating/wire-entry views and cavity1. No recurring special-label/custom-jacket/overmould operations. No customer crimping.",
+  "length_definition": "Flexible wire-path length between rear wire exits of connector housings, or solder joints/terminal shoulders for soldered ends. Includes fan-outs, branches and transitions along that path, excludes connector bodies and contacts. Supplier must state exact datum and physical tip-to-tip length on approval drawing; do not silently interpret as cut-wire length. 300mm is a quotation/service-loop proposal, actual routed fit unqualified.",
+  "functional_map": {
+    "LCD_BH_TMP": {
+      "1": "GND",
+      "2": "+3V3_A",
+      "3": "I2C_SDA",
+      "4": "I2C_SCL"
+    },
+    "ENCODER": {
+      "1": "ENC_A",
+      "2": "ENC_B",
+      "3": "ENC_SW",
+      "4": "GND -> encoderC andSW2"
+    },
+    "PROBE": {
+      "1": "B/J4.1 +3V3_B ->TIP",
+      "2": "B/J4.2 NTC_RAW ->SLEEVE; ringNC, notGND"
+    }
+  },
+  "budget": {
+    "currency": "EUR",
+    "basis": "Budget hypotheses, NOT LCSC quote. Same internal functions and optionalTMP shown separately; no guaranteed saving until quote and labour priced.",
+    "catalogue_public_base_TTC": 81.6,
+    "catalogue_public_TMP_extra_TTC": 21.0,
+    "custom_base_ex_fees_tax_estimate": [
+      95,
+      205
+    ],
+    "custom_TMP_extra_ex_fees_tax_estimate": [
+      15,
+      30
+    ],
+    "jack_lot_allocation_estimate": [
+      10,
+      20
+    ],
+    "workshop_consumables_estimate": [
+      5,
+      15
+    ],
+    "preparation_shipping_tax_contingency_estimate": [
+      50,
+      120
+    ],
+    "resulting_base_cash_estimate": [
+      241.6,
+      441.6
+    ],
+    "resulting_with_TMP_cash_estimate": [
+      277.6,
+      492.6
+    ],
+    "paid_soldering_labour": "EXCLUDED AND TO PRICE; no assumption of free third-party workshop labour",
+    "excluded": "NTCprobe, PSU,heater,cutoff,finalUSBextension,peripheralmodules,printedcase. No subtraction of unlike all13-line scope to claim savings."
+  },
+  "unresolved": [
+    "Catalogue15cm probe pigtail service slack/gauge",
+    "Universal300mm module routing and450mmTMP combined lead I2C behaviour",
+    "Actual header/encoder mechanics",
+    "Amazonjack pack/geometry",
+    "External probe/PSU/heater/thermal/USB selections",
+    "LCSC quote and workshop labour"
+  ],
+  "rejected": [
+    {
+      "candidate": "AmazonLyeteungB0CDGC1ZQS double-precrimp kit",
+      "reason": "Amazon primary page inaccessible; copied seller descriptions give150mm and22AWG. Does not qualify300mm AWG26 signal harnesses; no kit-based saving assumed.",
+      "url": "https://www.amazon.fr/dp/B0CDGC1ZQS"
+    },
+    {
+      "candidate": "GoTronicXH2 male-female50cm orSH6cord",
+      "reason": "Wrong mating ends or connector family; not substitutes for A/Bfemale-femaleXH300mm."
+    }
+  ],
+  "authority": "Preparation only; no supplier contacted, no quote received, no account/order/payment. No change to PCB connector pinout or mechanics.",
+  "web_sources": [
+    "https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721",
+    "https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm",
+    "https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm",
+    "https://www.gotronic.fr/art-gaine-tressee-gait06-15337.htm",
+    "https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm",
+    "https://www.amazon.fr/dp/B08XM6DR96",
+    "https://www.gotronic.fr/art-gaine-cache-fils-sw06b-205.htm",
+    "https://www.amazon.fr/s?k=cable+souple+2x0.75+mm2+gaine",
+    "https://www.amazon.fr/s?k=sonde+NTC+15k+cable+gaine"
+  ],
+  "sources": [
+    "hardware/interface_ab.json",
+    "hardware/manufacturing/harness_pin_map.csv",
+    "hardware/manufacturing/lcsc_cable_rfq/rfq_specification.json",
+    "hardware/manufacturing/system_bom_review.csv",
+    "hardware/manufacturing/wiring_and_harnesses.md",
+    "hardware/manufacturing/customer_supply_policy.json"
+  ]
+}

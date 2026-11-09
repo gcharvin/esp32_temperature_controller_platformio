@@ -1,0 +1,23 @@
+Subject: RFQ-CABLE-02-ECONOMY - four standard cable types for10 instrument sets - quotation only
+
+Hello LCSC Cable team,
+
+Please quote ONLY the four types in custom_quote_lines.csv and their attached pin map/drawings. This cost-reduced plan supersedes the earlier13-line all-custom RFQ-CABLE-01 as our current procurement request. No order or production release is authorized.
+
+Base quantities for10 instrument sets:
+- H01:10pcs, XHP-2 female to female,300+/-10mm,22AWG, straight1-to-1 and2-to-2.
+- H02:10pcs, XHP-3 female to female,300+/-10mm,26AWG, straight1-to-1 through3-to-3.
+- H03:10pcs, XHP-6 female to female,300+/-10mm,26AWG, all six wires straight through. Positions5/6 are intentionally NC only on our PCB B, not in the cable.
+- U04:30pcs, XHP-4 female to four individual female1-way2.54mm sockets accepting0.64mm square posts,300+/-10mm,26AWG. Each cavity maps to the same numbered flying socket1..4.
+
+Please ALSO quote an alternative TOTAL of40pcs U04 if we populate the optional TMP117 sensor. This is30 OR40 U04, not30+40. Base total is60cables; alternative total70cables. Three uses share U04 in the base instrument: LCD, BH1750 and encoder. Do not put universal GND/VCC function labels on U04: the encoder has a different assignment. Permanent cavity numbers1..4 on both ends are required.
+
+Use ordinary individually insulated flexible stranded copper wires, standard colours and normal crimped/housed ends. We do NOT require special common jackets, overmoulds, custom gauge transitions or factory-soldered encoder/jack assemblies in this quote. We will obtain catalogue peripherals and finished adapter cords and have the few solder joints made locally. No customer crimping is acceptable; all supplied contacts must be properly crimped, retained and housed.
+
+Specified JST housings/contacts remain as in the drawings. For individual female header sockets, Harwin M20-1060100 +M20-1160042 are a documented reference. If a lower-cost compatible option is available, quote its exact manufacturer/MPN and drawing separately for approval. Do not assume an unspecified copy with a similar photograph is approved. XH2.50mm and header2.54mm are different systems.
+
+Please provide exact part and wire specifications, insulation OD compatible with contacts, dimensional/continuity inspection and normal crimp/retention controls. Keep100percent continuity/unintended-short checking. Supply approval drawings with mating and wire-entry views, cavity1/key, length datums and dimensions. The attached logical wiring is not a physical connector-face view.
+
+Please itemize unit prices, setup/tooling fees, first-article costs, lead times and shipping/tax/Incoterm to France. State whether any first article is included in the quantities. Include your lower-cost standard-construction suggestions and identify every deviation. Do not build samples or production before separate purchaser approval.
+
+Thank you.

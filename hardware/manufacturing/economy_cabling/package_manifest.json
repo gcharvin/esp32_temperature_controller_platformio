@@ -1,0 +1,13 @@
+{
+  "revision": "RFQ-CABLE-02-ECONOMY",
+  "submitted": false,
+  "order_placed": false,
+  "files_sha256": {
+    "request_quote_EN.txt": "36289079a23e28ed14482fbe090ce96efe1bfe57aa0e2afe94811728383180d7",
+    "custom_quote_lines.csv": "06c563a6868418e0632afd7b68e72d8ba617e5d57a79a57f40d916b96a9f6ed3",
+    "custom_pin_map.csv": "dbd1ebadd838bad1fb09a6becdfaea126e9b8ad944c64a05557942785a624ace",
+    "supplier_specification.json": "dc06b297633fc7164c2f7e39c2e72f74097ef7641261fdc640f46c9d4d63e0b2",
+    "output/pdf/LCSC_CABLE_RFQ_ECONOMY.pdf": "26c098a78a727556ae9f0bb82bc37b1e2969f3a917344b2e4c468819e41e2adf",
+    "READ_FIRST.txt": "3fdeb369649bfd7ebfcf95b0b0df53ad5d39a6385ad638514defa2e0397572b8"
+  }
+}

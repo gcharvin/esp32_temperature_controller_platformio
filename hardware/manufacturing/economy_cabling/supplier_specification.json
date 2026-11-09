@@ -1,0 +1,238 @@
+{
+  "revision": "RFQ-CABLE-02-ECONOMY",
+  "status": "QUOTATION ONLY",
+  "custom": [
+    {
+      "id": "H01",
+      "name": "A-B POWER",
+      "category": "INTERNAL",
+      "from": "A/J1",
+      "to": "B/J1",
+      "end_a": "XH2",
+      "end_b": "XH2",
+      "awg": 22,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "length_status": "Existing A-B quotation contract; physical service route pending",
+      "finish": "Standard individually insulated flexible stranded copper wires, ordinary colours and cavity labels at each end. No custom common outer jacket, overmould, special tube or workshop soldering. Optional light bundling fitted during integration; retain full insulation, wire gauge and crimp quality.",
+      "approval": "Electrical map fixed; supplier drawing, OD/bend radius and real routed service slack to approve",
+      "map": [
+        [
+          "1",
+          "1",
+          "GND",
+          "black"
+        ],
+        [
+          "2",
+          "2",
+          "+5V_AB",
+          "red"
+        ]
+      ],
+      "quantity": 10,
+      "optional_extra_quantity": 0
+    },
+    {
+      "id": "H02",
+      "name": "A-B I2C",
+      "category": "INTERNAL",
+      "from": "A/J6",
+      "to": "B/J6",
+      "end_a": "XH3",
+      "end_b": "XH3",
+      "awg": 26,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "length_status": "Existing A-B quotation contract; physical service route pending",
+      "finish": "Standard individually insulated flexible stranded copper wires, ordinary colours and cavity labels at each end. No custom common outer jacket, overmould, special tube or workshop soldering. Optional light bundling fitted during integration; retain full insulation, wire gauge and crimp quality.",
+      "approval": "Electrical map fixed; supplier drawing and actual service fit pending",
+      "map": [
+        [
+          "1",
+          "1",
+          "GND",
+          "black"
+        ],
+        [
+          "2",
+          "2",
+          "I2C_SDA",
+          "blue"
+        ],
+        [
+          "3",
+          "3",
+          "I2C_SCL",
+          "yellow"
+        ]
+      ],
+      "quantity": 10,
+      "optional_extra_quantity": 0
+    },
+    {
+      "id": "H03",
+      "name": "A-B CTRL",
+      "category": "INTERNAL",
+      "from": "A/J7",
+      "to": "B/J7",
+      "end_a": "XH6",
+      "end_b": "XH6",
+      "awg": 26,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "length_status": "Existing A-B quotation contract; physical service route pending",
+      "finish": "Standard individually insulated flexible stranded copper wires, ordinary colours and cavity labels at each end. No custom common outer jacket, overmould, special tube or workshop soldering. Optional light bundling fitted during integration; retain full insulation, wire gauge and crimp quality.",
+      "approval": "Positions5/6 must still be wired through, even though PCB B temperature leaves those pads NC; no commoning to GND",
+      "map": [
+        [
+          "1",
+          "1",
+          "GND",
+          "black"
+        ],
+        [
+          "2",
+          "2",
+          "PWM0",
+          "white"
+        ],
+        [
+          "3",
+          "3",
+          "ENABLE",
+          "red"
+        ],
+        [
+          "4",
+          "4",
+          "FAULT_N",
+          "yellow"
+        ],
+        [
+          "5",
+          "5",
+          "PWM1 / B pad NC",
+          "blue"
+        ],
+        [
+          "6",
+          "6",
+          "DIN0 / B pad NC",
+          "green"
+        ]
+      ],
+      "quantity": 10,
+      "optional_extra_quantity": 0
+    },
+    {
+      "id": "U04",
+      "name": "Universal XH4 to four individual female sockets",
+      "quantity": 30,
+      "optional_extra_quantity": 10,
+      "end_a": "XH4",
+      "end_b": "FLY4",
+      "awg": 26,
+      "length_mm": 300,
+      "tolerance_mm": 10,
+      "from": "A/J2 LCD, A/J5 BH1750, A/J3 encoder; optional A/J4 TMP117",
+      "to": "Four independently movable female0.64mm-square-post sockets, numbered1..4",
+      "finish": "Standard individually insulated stranded copper wires. Number1..4 permanently at BOTH ends; no fixed GND/VCC function labels because encoder has a different map. Four independent1-position female sockets, ordinary crimp construction. No custom jacket, gauge transition, soldering or overmould. Harwin parts are dimensional/reference proposal; quote exact documented compatible lower-cost MPN separately if cheaper.",
+      "approval": "30pcs base:10 LCD +10 BH1750 +10 encoder. Quote40pcs as an alternative total if TMP117 is populated; NOT30+40. Encoder sockets will be cut off locally, stripped and soldered with a common-ground bridge by the integrator (user accepted). TMP117 uses retail QW-4C male tails with numbered universal female sockets. No direct custom XH-SH needed.",
+      "map": [
+        [
+          "1",
+          "1",
+          "GENERIC CAVITY 1",
+          "supplier standard; number authoritative"
+        ],
+        [
+          "2",
+          "2",
+          "GENERIC CAVITY 2",
+          "supplier standard; number authoritative"
+        ],
+        [
+          "3",
+          "3",
+          "GENERIC CAVITY 3",
+          "supplier standard; number authoritative"
+        ],
+        [
+          "4",
+          "4",
+          "GENERIC CAVITY 4",
+          "supplier standard; number authoritative"
+        ]
+      ]
+    }
+  ],
+  "connectors": {
+    "XH2": {
+      "housing": "JST XHP-2",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 2,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "XH3": {
+      "housing": "JST XHP-3",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 3,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "XH4": {
+      "housing": "JST XHP-4",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 4,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "XH6": {
+      "housing": "JST XHP-6",
+      "contact": "JST SXH-001T-P0.6",
+      "pitch_mm": 2.5,
+      "cavities": 6,
+      "contact_awg_min": 22,
+      "contact_awg_max": 28,
+      "insulation_od_mm": [
+        0.9,
+        1.9
+      ],
+      "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+    },
+    "FLY4": {
+      "housing": "4 individual Harwin M20-1060100 female1-position housings",
+      "contact": "4 Harwin M20-1160042 female crimp contacts",
+      "pitch_mm": 2.54,
+      "cavities": 4,
+      "contact_awg_min": 22,
+      "contact_awg_max": 30,
+      "source": "https://www.harwin.com/products/M20-1060100",
+      "note": "Four independent1-way housings, side-stackable on0.64mm square male posts. Supplier to confirm contact insulation OD/tooling. Label functions rather than assume LCD/GY302 physical order. Proposed documented replacement for generic Dupont, module engagement/clearance still needs real sample check."
+    }
+  },
+  "length_definition": "Flexible wire-path length between rear wire exits of connector housings, or solder joints/terminal shoulders for soldered ends. Includes fan-outs, branches and transitions along that path, excludes connector bodies and contacts. Supplier must state exact datum and physical tip-to-tip length on approval drawing; do not silently interpret as cut-wire length. 300mm is a quotation/service-loop proposal, actual routed fit unqualified.",
+  "inspection": "100percent continuity and unintended-short check, standard cavity labels and crimp pull/retention controls per connector specification. Supplier provides mating/wire-entry views and cavity1. No recurring special-label/custom-jacket/overmould operations. No customer crimping.",
+  "base_total": 60,
+  "alternate_with_TMP_total": 70
+}

@@ -9,3 +9,6 @@
 manufacturing/lcsc_cable_rfq/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 scripts/build_lcsc_cable_rfq.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
 scripts/export_lcsc_cable_tables.mjs -text whitespace=trailing-space,space-before-tab,cr-at-eol
+manufacturing/economy_cabling/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/build_economy_cabling.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/export_economy_cabling.mjs -text whitespace=trailing-space,space-before-tab,cr-at-eol

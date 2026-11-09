@@ -108,110 +108,78 @@ modules, les câbles et les clips imprimés se vérifient à l’intégration.
 
 ## Achats à notre charge et liens
 
-Liste regroupée le **9 novembre 2026** selon le choix de l’utilisateur :
-**Amazon.fr + GoTronic**, avec un seul compte GoTronic accepté. La
-[BOM système complète](system_bom_review.csv) comporte 25 lignes et indique
-pour chaque article le fournisseur préféré, le statut d’approvisionnement et
-ce qui reste à faire sur les faisceaux. Les quantités sont **par appareil** ;
-commander cinq paires de PCB n’oblige pas à acheter cinq jeux d’accessoires.
-La [politique d’approvisionnement](customer_supply_policy.json) fixe ce périmètre.
+**Plan économique courant du9novembre2026 :** catalogue Amazon.fr/GoTronic
+en priorité ; sur-mesure LCSC limité aux quatre références sans équivalent
+catalogue exact qualifié. L’utilisateur accepte des soudures à faire réaliser,
+**aucun sertissage manuel**. Le [plan détaillé et son devis réduit](economy_cabling/README.md)
+remplace la stratégie tout-sur-mesure du premier dossier LCSC.
 
-**Déjà disponibles / fournis par l’usine :** réutiliser la DevKit
-[diymore B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76) et le LCD
-[Freenove B0B76VGXYH](https://www.amazon.fr/dp/B0B76VGXYH).
-Le fabricant PCBA fournit les composants montés sur A et B, dont les deux
-sockets ESP32 ; il livre le cavalier JP1 séparément. Ne pas acheter ces pièces
-en double. Le XL4015 déjà acheté reste à quantité **zéro**, B intégrant le LM2596.
+La [BOM système](system_bom_review.csv) conserve25lignes et les quantités
+par appareil ; le [plan de câblage](wiring_and_harnesses.md) distingue
+enfichage, soudures et raccordement par borne. La [politique fournisseur](customer_supply_policy.json)
+garde deux canaux catalogue et un câbleur uniquement pour les manques.
 
-### Panier GoTronic — références identifiées
+### Sur-mesure restant : quatre références partagées
 
-| Article | Quantité par appareil | Référence et lien direct | État / adaptation restante |
-| --- | --- | --- | --- |
-| Encodeur avec poussoir et capuchon | 1 si absent | [ADA377, code38383](https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm), PEC11-4215F-S24 | Même candidat Adafruit377. Composant nu à souder ; faisceau A/B/SW/GND encore à réaliser ou trouver. Vérifier axe et fixation de façade |
-| TMP117 de température ambiante | 1 **optionnel** | [ADA4821, code37274](https://www.gotronic.fr/art-capteur-de-t-haute-precision-tmp117-ada4821-33489.htm) | Même module Adafruit4821, 3,3V et adresse0x48 ; raccordement vers A à compléter |
-| Cordon du TMP117 | 1 seulement si TMP117 | [QW-4C, code49152](https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm) | Fini : SH1mm quatre contacts vers quatre broches mâles, 15cm. Remplace la piste d’achat direct Adafruit4209 ; **le XH4 côté A manque encore** |
-| Cordon interne de sonde | 1 **sous réserve de longueur** | [JST1164, code49197](https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm) | XH2 femelle2,50mm vers fils dénudés, **15cm**, section non publiée. Deux soudures au jack ; vérifier le mou de démontage avant achat. Ce n’est pas le précédent30cm ni un faisceau complet |
-
-Le [catalogue XH GoTronic](https://www.gotronic.fr/cat-jst-1509.htm) comporte
-des boîtiers et contacts nus : ils ne constituent pas une solution sans pince.
-La rallonge XH2 mâle-femelle50cm ne convient pas aux deux embases PCB A/B.
-
-### Panier Amazon.fr — conserver les modèles identifiés
-
-| Article | Quantité par appareil | Lien | État / adaptation restante |
-| --- | --- | --- | --- |
-| BH1750 GY-302 | 1 pour la luminosité, si absent | [AZ-Delivery B07TKWNGZ4](https://www.amazon.fr/dp/B07TKWNGZ4) | ASIN identifié par la [documentation AZ-Delivery](https://m.media-amazon.com/images/I/81N6D6v-dYL.pdf), offre non relue. Choisir barrette déjà soudée si possible, mesurer le module et adapter la cassette au réel |
-| Prise de sonde, embase + fiche TRS3,5mm | 1 paire, selon contenu du lot | [DAOKI B08XM6DR96](https://www.amazon.fr/dp/B08XM6DR96) | Candidat PJ-392 ; équivalence dimensionnelle au [dessin Tayda](https://www.taydaelectronics.com/datasheets/files/PJ-392.pdf) non prouvée. Essayer le coupon v0.10. Deux soudures à l’embase et deux à la fiche ; ring isolé |
-| Presse-étoupes, joints et contre-écrous | 2 | [HB-Digital M12 B0CLLQCCWW](https://www.amazon.fr/dp/B0CLLQCCWW) | Gaine3–6,5mm, trou12,5mm ; vérifier contenu du lot et cotes réelles du corps, faute de dessin HB-Digital |
-| Filament si absent | Selon impression | [Recherche PETG naturel translucide](https://www.amazon.fr/s?k=PETG+naturel+translucide+filament+1.75mm) | Six pièces v0.10 : insert optique translucide, cassette et autres pièces opaques. Matériau et clips à qualifier |
-
-Amazon.fr est une plateforme : conserver marque, référence, variante exacte,
-vendeur et origine d’expédition pour les réachats. Les pages des offres Amazon
-ci-dessus n’ont pas pu être relues directement ; prix, stock, expédition France
-et équivalence restent à confirmer. Un lien de recherche ne vaut pas référence
-qualifiée. Aucun total de panier livré n’est annoncé.
-
-Le BH1750 [GoTronic ADA4681](https://www.gotronic.fr/art-capteur-de-lumiere-bh1750-ada4681-33469.htm)
-fait25,3×17,7×4,5mm : ce n’est pas le GY-302 de l’enveloppe actuelle23×16mm.
-**Ne pas le substituer pour regrouper les achats** sans revoir cassette,
-fixation et câblage. Aucune substitution n’est faite dans cette révision.
-
-### Faisceaux complets sans sertissage encore à trouver
-
-Le [tableau détaillé des liaisons et de leurs deux extrémités](wiring_and_harnesses.md#liste-explicite-des-câbles-prêts-à-brancher--revue-du-9-novembre-2026)
-reste le document de câblage. Dans le périmètre Amazon.fr/GoTronic, les besoins
-suivants n’ont **pas encore de référence complète qualifiée** :
-
-| Faisceau | Quantité | Spécification à conserver |
+| Référence | Pour10appareils | Pourquoi |
 | --- | --- | --- |
-| A/B POWER | 1 | XHP-2 femelle ↔ femelle, 300±10mm, AWG22, droit1→1/2→2 |
-| A/B I²C | 1 | XHP-3 femelle ↔ femelle, 300±10mm, AWG26, droit1→1 à3→3 |
-| A/B CTRL | 1 | XHP-6 femelle ↔ femelle, 300±10mm, AWG26, droit1→1 à6→6 ; positions5/6 NC sur B |
-| LCD et BH1750 | 2 | XHP-4 femelle ↔ quatre Dupont femelles, barrette mâle déjà soudée sur les modules |
-| TMP117, si monté | 1 | XHP-4 femelle ↔ quatre Dupont femelles pour joindre le QW-4C GoTronic déjà identifié |
-| Encodeur | 1 | XHP-4 femelle ↔ A/B/SW/GND, avec commun du poussoir adapté ; soudures probables sur ADA377 |
-| Sonde interne et externe | 1 de chaque | Interne XHP-2 ↔ embase PJ-392 : cordon GoTronic partiel, deux soudures restantes ; externe NTC15k/B≈3920 ↔ fiche TRS montée introuvable qualifiée |
-| Alimentation et chauffage | 2 | Cuivre souple0,75mm² avec embouts **déjà sertis** côté Phoenix, gaine et autre terminaison adaptées aux appareils |
-| Protection thermique | Selon montage | Terminaisons à figer avec la protection et son seuil, puis cordon équipé |
-| USB latéral | 1 | USB-C femelle panneau ↔ USB-C mâle DevKit, données, plan compatible avec ouverture16mm ; aucun modèle retenu |
+| H01 POWER | 10 | XHP-2 femelle-femelle300mm AWG22 droit, pas de câble catalogue exact qualifié |
+| H02 I2C | 10 | XHP-3 femelle-femelle300mm AWG26 droit, même limite d’approvisionnement |
+| H03 CTRL | 10 | XHP-6 femelle-femelle300mm AWG26 droit, six fils dont5/6NCsurB |
+| U04 universel | 30 en base, **40au total** si TMP117 | XHP-4 vers quatre femelles individuelles2,54mm, AWG26/300mm, broches numérotées1..4. Une référence pour LCD, BH1750, encodeur et optionTMP |
 
-Les **JST-XH sont au pas2,50mm**, distinct des Dupont2,54mm. Ne pas acheter
-un lot de boîtiers et de contacts non sertis en pensant obtenir des faisceaux.
-Des contacts déjà sertis aux deux bouts puis insérés à la main seraient une
-solution sans pince, mais aucun kit qualifié couvrant2/3/6 voies dans ce panier
-n’est actuellement retenu. Sans sertissage ne signifie pas sans soudure.
+Le câbleur livre les contacts sertis et les boîtiers montés. Les fils isolés
+et les repères de cavités sont standards : pas de surmoulage, de gaine commune
+spéciale ni de sous-ensemble soudé industriel à commander. Le [ZIP économique](LCSC_CABLE_RFQ_ECONOMY_NOT_FOR_ORDER.zip)
+est le dossier actuel de consultation, sans envoi ni commande. L’ancien ZIP
+de13lignes est un comparatif historique, pas la liste à déposer maintenant.
 
-### Autres achats différés dans le même périmètre fournisseurs
+### Achats catalogue regroupés
 
-**Cordon de sonde robuste :** exiger deux conducteurs multibrins sous une
-gaine extérieure commune continue, souple, avec maintien anti-arrachement
-côté sonde et serre-câble de fiche adapté au diamètre extérieur. Gaine et
-raccord sonde doivent supporter la température réelle de l’expérience,
-encore à préciser. Préférer l’ensemble sonde/câble gainé/fiche monté en usine.
-Deux fils isolés seuls ne répondent pas à cette exigence. Le JST1164 interne
-reste une solution partielle : ajouter une gaine isolante de protection
-retenue mécaniquement (une longueur par appareil, référence à préciser),
-isoler les soudures et vérifier le mou de démontage. Voir
-[les exigences de câble de sonde](wiring_and_harnesses.md#câble-de-sonde-gainé-et-robuste--exigence-dachat).
+Prix publics observés le9novembre2026, à revérifier avec stock, port et
+contenu des lots. Ils ne sont pas des prix LCSC.
 
-La sonde exige **15kΩ à25°C et une courbe documentée**, cible B≈3920 :
-[recherche Amazon](https://www.amazon.fr/s?k=sonde+NTC+15K+temperature+etanche),
-aucun article exact qualifié. Alimentation et chauffage restent à choisir
-après résolution du nominal12/24V et de la puissance réelle. L’étude native B
-reste24V/100W ; elle ne qualifie pas100W sous12V. Prévoir aussi une coupure
-thermique indépendante avec seuil et pouvoir de coupure DC adaptés ; une
-valeur AC seule ne suffit pas. Ces lignes restent à définir, sans fournisseur
-supplémentaire ajouté.
+| Article | Fournisseur / référence | Besoin pour10appareils | Intervention |
+| --- | --- | --- | --- |
+| Encodeur | [GoTronic ADA377/38383](https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm),5,90EURTTC | 10siabsents,59EUR | Couper les femelles côté module du U04 puis souder A/B/SW/GND, communC-SW2 ponté |
+| Cordon sonde interne | [GoTronic JST1164/49197](https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm),2,10EURTTC | 10,21EUR **si15cm suffisent** | Deux soudures au jack, isolation séparée et protection du faisceau |
+| Protection interne sonde | [GoTronic GAIT06/48620](https://www.gotronic.fr/art-gaine-tressee-gait06-15337.htm),0,80EUR/mTTC | Proposition2m,1,60EUR | Polyester expansible3..9mm, à retenir aux extrémités ; abrasion, pas double isolation |
+| Adaptateur TMP117, option | [GoTronic QW-4C/49152](https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm),2,10EURTTC | 10optionnels,21EUR | Fini SH vers4mâles, à joindre à10U04 supplémentaires ; pas de transition de calibres à fabriquer |
+| Jack embase+fiche | [Amazon DAOKI B08XM6DR96](https://www.amazon.fr/dp/B08XM6DR96),candidat | 10paires utiles, nombre de lots à confirmer | Soudures ; dimensions au coupon et serre-câble à vérifier, offre non relue |
+| Regroupement interne, option | [GoTronic SW06B/48441](https://www.gotronic.fr/art-gaine-cache-fils-sw06b-205.htm),3,90EUR/10mTTC | 1bobine si utile | Pose de spirale seulement si adaptée au diamètre ; réutiliser les accessoires existants |
+| DevKit/LCD | Déjà achetés, réutiliser | Pas de nouvel achat par défaut | Sockets et composantsPCB déjà au devis usine ; JP1 fourni séparément |
 
-Le PortaPow PPUSBBP1 reste une **option de banc**, non nécessaire au diagnostic
-Wi-Fi initial : [fonction fabricant](https://portablepowersupplies.co.uk/product/usb-power-blocker),
-[recherche Amazon.fr](https://www.amazon.fr/s?k=PortaPow+PPUSBBP1+USB+power+blocker).
-Aucune offre .fr qualifiée ni compatibilité avec chaque DevKit n’est établie.
+Le sous-total public connu est **81,60EURTTC** (encodeurs+cordons sonde+tresse),
+ou102,60EUR avec les10adaptateursTMP, hors port et autres articles. Les15cm
+du JST1164 ne sont pas encore validés pour le démontage : ne pas acheter le
+lot avant essai du trajet, et reconsulter pour30cm s’il manque du mou.
 
-Les anciennes pistes Makers Electronics, eBay, TinyTronics, Reichelt, Tayda
-et Adafruit direct ne sont plus des instructions d’achat. Les dessins et
-fiches fabricants restent des sources techniques. Aucun troisième fournisseur
-régulier n’est proposé. Les PCB, le brochage et le STEP v0.10 restent inchangés.
+### Coût et achats différés
+
+Le [budget détaillé](economy_cabling/README.md#budget-et-main-dœuvre) vise
+environ **250-450EUR de débours pour10jeux internes sansTMP**, ou280-500EUR
+avec l’option, **hors main-d’œuvre de soudure et hors périphériques/appareils**.
+Ce sont des hypothèses et provisions, pas un devis ni une économie garantie.
+Compter cinq points de soudure encodeur et deux au jack par appareil,
+soit70points pour10jeux, plus les fiches des sondes extérieures quand retenues.
+Le coût de cet atelier doit être chiffré, pas supposé nul.
+
+Sonde extérieure15k, alimentation, chauffage, protection thermique et rallonge
+USB de panneau restent à qualifier : pas de commande sur-mesure anticipée
+pour ces cinq lignes. La sonde garde impérativement une **gaine extérieure
+commune robuste**, des retenues anti-arrachement et une classe thermique
+adaptée. Le BH1750 reste dans la famille GY-302 ; le plus grand ADA4681 n’est
+pas substitué. Les presse-étoupesM12 et le coupon PJ-392 restent inchangés.
+
+Pour la puissance, les Phoenix1715721 acceptent du conducteur souple nu
+0,14..1,5mm2 : le0,75mm2 peut donc être **dénudé et serré directement**, sans
+embout obligatoire ni sertissage (7mm,0,5..0,6Nm, bloc soutenu, aucun brin
+libre, aucun étamage). Les autres extrémités et la classe thermique restent
+à choisir avec les appareils. [Données fabricant](https://www.phoenixcontact.com/en-gb/products/printed-circuit-board-terminal-mkds-15-2-508-1715721).
+
+Les XH2,50mm, SH1mm et Dupont2,54mm ne sont pas interchangeables. Aucun kit
+Amazon15cm ou à contacts nus n’est compté comme câble300mm déjà terminé.
+La liste n’affirme pas que le panier soit entièrement prêt à commander.
 
 ## Régénération complète
 
