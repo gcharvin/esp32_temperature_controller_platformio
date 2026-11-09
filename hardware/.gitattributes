@@ -5,3 +5,7 @@
 *.glb binary
 *.zip binary
 *.png binary
+# Keep checksum-bound LCSC RFQ tables, reports and generators byte-for-byte.
+manufacturing/lcsc_cable_rfq/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/build_lcsc_cable_rfq.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+scripts/export_lcsc_cable_tables.mjs -text whitespace=trailing-space,space-before-tab,cr-at-eol

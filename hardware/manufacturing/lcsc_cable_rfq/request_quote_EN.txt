@@ -1,0 +1,33 @@
+Subject: RFQ-CABLE-01 - laboratory prototype harnesses - 10 of each assembly - quotation only
+
+Hello LCSC Cable team,
+
+Please quote the attached RFQ-CABLE-01 dossier for our modular laboratory instrument prototype. We request TEN units of EACH line H01-H13, priced separately. This is a quotation request only, not a purchase order or an authorization to manufacture samples or production units.
+
+The PDF includes all electrical maps, length definitions and finishing requirements. The three CSV tables provide the quotation lines, pin-to-pin connections and connector references. This is a cable-assembly RFQ, not a PCB assembly BOM/CPL submission.
+
+H01-H08 are eight internal assemblies (80pcs including the optional TMP117 line H06). H09-H13 are five provisional probe/power/service lines (50pcs) for which we request your proposed parts, assumptions and budgetary prices. Please identify missing application information instead of treating undefined parts or assumed lengths as approved production details.
+
+Please quote genuine specified JST and Harwin components first; identify exact manufacturer/MPN and any alternative separately. XH is2.50mm, SH is1.00mm and the individual female module sockets fit2.54mm headers with0.64mm square posts. Include all workshop crimping, housing insertion, jackets, labels, strain relief and indicated soldering. We want finished assemblies without customer crimping or soldering.
+
+Please price H05 with the encoder factory-soldered, and H08 with the rear PJ-392-type socket factory-soldered, including exact sourced part proposals and panel hardware. Show component and labour costs separately, and a consigned-parts alternative if you cannot source the exact selected component. Do not substitute loose solder tails as if they were completed assemblies.
+
+For H06, the selected XH and SH contacts have different insulation-OD ranges. We specify26AWG main wires and28AWG SH tails with four protected factory transitions. Please submit construction details or a fully documented qualified alternative, not26AWG inserted into a28-32AWG SH contact.
+
+All internal bundles require flexible common insulating protection and labelled ends. The external probe cable H09 requires a continuous robust common outer jacket with proper strain relief at both probe and cable plug. Please provide wire/cableMPNs, jacket OD, temperature ratings and bend radii. A PET braid alone is not the requested insulating jacket. Actual probe temperature range and exact15k/beta~3920 NTC part are not finalized.
+
+Critical probe mapping: B/J4.1 = +3V3_B -> TRS TIP; B/J4.2 = NTC_RAW -> TRS SLEEVE. RING and unused switched contacts stay isolated. SLEEVE IS NOT GND. Identify socket solder lugs by continuity with a known plug and document them.
+
+Please supply approval drawings showing both mating-face and wire-entry views, cavity1, key/latch orientation, colours, length datums, fan-outs, jacket dimensions, splice locations and all solder connections. Our PDF diagrams show logical connections only. H03 must contain all six wires; positions5/6 are intentionally NC only on our temperature PCB B.
+
+Please include:
+- Unit and extended prices for10 units of every line, with H06 priced as an option and H09-H13 identified as provisional.
+- Preparation/tooling costs and first-article cost; specify whether sample pieces are included within the10 units or additional. No sample build authorized yet.
+- Exact supplied components and wire types, availability, technical deviations, production and delivery lead times.
+- Your100percent continuity/short-circuit inspection plan, resistance acceptance limits, crimp/retention checks and sampled pull-test specification. Tests must be appropriate to the encoder/NTC/USB parts; no unspecified high-voltage testing through them.
+- Shipping options to France, VAT/import charges and Incoterm, itemized separately. Exact delivery address will be provided when required.
+- Information you still need before a firm quotation or production drawing can be finalized.
+
+No production release is granted. Please return your proposal and drawings for review first.
+
+Thank you.

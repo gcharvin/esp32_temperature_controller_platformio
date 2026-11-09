@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "date": "2026-11-09",
+  "reviewer": "Codex visual inspection",
+  "pdf_sha256": "320978fdf9da80c4fb7ef70b2e5cab8f2becc912a83658c99dbfd1c76fab3a7e",
+  "pdf_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "method": "All15 pages rendered with Poppler100dpi and inspected in four contact sheets; three Artifact Tool CSV-sheet previews inspected separately.",
+  "tables_sha256": {
+    "quote_lines.csv": "672cea48b52df5ea7ef6561f339fac4c02472be62b57673cb5d0bc61cdec882f",
+    "pin_to_pin.csv": "e154c4e89e22f6419564aae29fd33d70f47d50d545d5edded6ccd53042e34b6c",
+    "connector_requirements.csv": "e6f1d0e57d29de3ecb3a5b27e0290819d4b7b25c323f7b2db605f14a6b45e0ea"
+  },
+  "checks": [
+    "All13 line sheets have10units, distinct provisional/optional scope and readable pin tables.",
+    "No clipped or overlapping content, missing pages or unreadable symbols in reviewed renders.",
+    "Logical diagrams explicitly are not physical mating-face views; supplier drawings required.",
+    "CTRL5/6 through wires, encoderGND branch, TMP117 gauge transition and probe sleeve-not-GND called out.",
+    "Quantities and table values reviewed; no physical cable or manufacturer acceptance inferred."
+  ],
+  "production_release": false,
+  "submitted": false
+}
