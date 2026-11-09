@@ -1,9 +1,9 @@
 {
   "status": "PASS / RFQ integrity only; not fabrication release",
   "archive": "RFQ_A04_B05_DRAFT_NOT_FOR_ORDER.zip",
-  "archive_sha256": "1b0ee41084ea03951a61995111705f622828949664b83e47c983cd760f143211",
-  "members": 93,
-  "source_hashes_checked": 53,
+  "archive_sha256": "67dd5f571078dc0cca89f45d798986f152dac141e3005224cb01872b56d76e14",
+  "members": 94,
+  "source_hashes_checked": 54,
   "boards": {
     "A": {
       "SMT": 13,

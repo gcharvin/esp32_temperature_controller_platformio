@@ -74,25 +74,24 @@
     "manufacturing/manufacturing_fit_audit.json": "41abac0cfab02f189d5445c62617ea188765722f250969b5c893b4df3344fceb",
     "manufacturing/harness_validation.json": "ff4b50e999c75eebf40d937feb44038db47017537ed219e80387333aba96267f",
     "manufacturing/output/assembly_review_manifest.json": "14faceb94e69462ca1c84a438a29255dc988246e983cc58189a3d2c5c530c6fc",
-    "manufacturing/fabrication_output_validation.json": "63d72d76ed2c8b242ad10ce805892f52d4b3dd9f871302e2f7ff8b3effb1b2b8",
-    "manufacturing/rfq_integrity_validation.json": "8fc6aef7a6f665714a969849a9c4f0ff6a3cfeae97355967ca0cfa1a0a9df9f3",
-    "mechanical/exports/source_manifest_v09.json": "521b077b6dea420fee59f561ae3e9819e46b70ed997b224d94a08ee93d7ddb8a",
-    "mechanical/exports/assembly_sequence_validation.json": "5881b8f9188577a8a350251c749d1358f5f27457e8d9cce8a7a6dc578068e9ec",
-    "mechanical/exports/validation.json": "8240afaac8201da396033384d702507c5701f2da405c18744cefd47dde842bf5"
+    "manufacturing/fabrication_output_validation.json": "af45df3b0cdfc977491ef0097d5a2a822308ed5763faa46eb238e3bcfba4a610",
+    "manufacturing/rfq_integrity_validation.json": "723d7e2e63ac4ff9cad4b9fcca318ec06f970d08eade6123ca43504b8f70dd8a",
+    "mechanical/exports/source_manifest_v10.json": "b63bc6f6522e14f5ec2f2906b7622d38dff438450bba46d86c689ec4072e9879",
+    "mechanical/exports/assembly_sequence_validation.json": "2c43652d6e936d85c6b622837df4026ffaac6101dd947b94f773217116c19c02",
+    "mechanical/exports/validation.json": "093d2542dd6c8f714678ba07bc5c43eb885679063a849b713787a10dcc7c67ad"
   },
   "limits": [
     "Factory sourcing/DFM/placement-preview/quotation approvals are external.",
     "No actual heater, DevKit power path or printed fit qualification inferred."
   ],
   "documentation_follow_up": {
-    "date": "2026-11-07",
-    "change": "Customer purchase links added to the system BOM and guide; native CAD and firmware unchanged.",
+    "date": "2026-11-09",
+    "change": "Consolidated customer purchases to Amazon.fr and GoTronic; GoTronic account accepted by user; explicit missing complete no-crimp harnesses. Native electronics, firmware and v10 geometry unchanged.",
     "stages_rerun_successfully": [
       "manufacturing_exports",
       "rfq_integrity"
     ],
     "other_stage_evidence_carried_forward_by_exact_sha256": true,
-    "current_gerber_visuals_identical_to_previous_review": true,
-    "scope": "Documentation and source-bound package refresh; no new physical validation or order."
+    "scope": "Procurement documentation and package refresh only; no physical fit, cable assembly, stock or supplier qualification implied."
   }
 }

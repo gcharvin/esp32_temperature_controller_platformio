@@ -1,7 +1,7 @@
 {
   "state": "LOCAL_TECHNICAL_PREPARATION_COMPLETE / FACTORY_HANDOFF_PENDING",
   "local_preparation_complete": true,
-  "date_utc": "2026-11-07T11:36:31.989044+00:00",
+  "date_utc": "2026-11-09T13:24:25.853853+00:00",
   "automatic_stages": 15,
   "final_visual_review": true,
   "physical_native_components": 68,
@@ -11,7 +11,7 @@
   "mechanical_service_stages": 20,
   "source_geometry_and_MPNs_frozen": true,
   "simulations_rerun_in_this_revision": false,
-  "mechanical_revision": "0.9 - removable BH1750 cassette and closed translucent optical insert",
+  "mechanical_revision": "0.10 - compact PJ-392 sensor jack, recessed mounting nut and fitting coupon",
   "BH1750_breakout_and_optical_transmission_qualified": false,
   "copper_only_testpads": 22,
   "diagnostic_firmware_compiled": true,

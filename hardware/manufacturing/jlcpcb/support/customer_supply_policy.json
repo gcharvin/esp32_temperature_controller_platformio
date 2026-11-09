@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-09",
+  "scope": "Customer-owned peripherals and harnesses; assembler BOM/CPL remain separate and unchanged",
+  "status": "Two regular channels selected by user; basket incomplete, no order authorized",
+  "user_constraints": {
+    "regular_suppliers": [
+      "Amazon.fr",
+      "GoTronic"
+    ],
+    "regular_supplier_target": 2,
+    "geographic_priority": [
+      "France",
+      "European Union"
+    ],
+    "account_decision": "User explicitly accepts one GoTronic account, in addition to existing Amazon channel. Guest checkout is not a condition for GoTronic.",
+    "no_crimping": "Prefer complete factory-terminated harnesses. Distinguish fully plug-in, one-sided precrimped, manual insertion of precrimped contacts, and soldering.",
+    "repeatability": "Record supplier SKU, manufacturer/model, exact variant, pin map and dimensions; for Amazon also seller and dispatch origin.",
+    "additional_supplier": "No third regular supplier proposed; unresolved items stay explicitly open instead of adding individual shops."
+  },
+  "account_created": false,
+  "order_placed": false,
+  "supplier_roles": [
+    {
+      "supplier": "GoTronic",
+      "country": "France",
+      "account_accepted_by_user": true,
+      "references": [
+        {
+          "item": "ENCODER",
+          "model": "ADA377 / PEC11-4215F-S24",
+          "sku": "38383",
+          "quantity_per_system": "1 if absent",
+          "url": "https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm",
+          "limit": "Bare encoder, harness and front fit unqualified"
+        },
+        {
+          "item": "TMP117",
+          "model": "ADA4821",
+          "sku": "37274",
+          "quantity_per_system": "1 optional",
+          "url": "https://www.gotronic.fr/art-capteur-de-t-haute-precision-tmp117-ada4821-33489.htm",
+          "limit": "A-side harness incomplete"
+        },
+        {
+          "item": "TMP117_CABLE_PART",
+          "model": "QW-4C",
+          "sku": "49152",
+          "quantity_per_system": "1 only with TMP117",
+          "url": "https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm",
+          "limit": "SH1mm4 to4male pins150mm; XH4-to-female-Dupont adapter still missing"
+        },
+        {
+          "item": "NTC_INTERNAL_HARNESS",
+          "model": "JST1164",
+          "sku": "49197",
+          "quantity_per_system": "1 conditional",
+          "url": "https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm",
+          "limit": "XH2 female to bare ends150mm, gauge unpublished; verify service slack before purchase; two solder joints still needed"
+        }
+      ],
+      "not_substituted": "ADA4681 BH1750 is25.3x17.7x4.5mm, different from GY302/current23x16mm reference cassette. No CAD or sensor substitution made.",
+      "sources": [
+        "https://www.gotronic.fr/faq",
+        "https://www.gotronic.fr/cat-cordons-jst-1608.htm",
+        "https://www.gotronic.fr/art-capteur-de-lumiere-bh1750-ada4681-33469.htm"
+      ]
+    },
+    {
+      "supplier": "Amazon.fr",
+      "role": "Reuse owned DevKit/LCD; retain identified GY302, DAOKI jack and HB-Digital glands candidates; source remaining ordinary accessories when qualified",
+      "limits": "Product pages could not be reread directly. ASIN is not proof of dimensional equivalence, French seller or EU dispatch. Search links are not qualified products. No complete live basket price or stock claimed."
+    }
+  ],
+  "missing_complete_no_crimp_harnesses": [
+    "POWER XHP2 female-female300+/-10mm AWG22 straight",
+    "I2C XHP3 female-female300+/-10mm AWG26 straight",
+    "CTRL XHP6 female-female300+/-10mm AWG26 straight; pins5/6 NC on B",
+    "LCD and GY302: XHP4 female to4individual female Dupont; actual service length",
+    "Optional TMP117: XHP4 female to4female Dupont to join QW-4C",
+    "ADA377 encoder: XHP4 female to A/B/SW/common, likely soldering",
+    "Internal probe: XHP2 to PJ392 female; JST1164 partial,15cm slack unverified, soldering required",
+    "External15k/beta~3920 NTC probe to factory-fitted TRS plug",
+    "Two0.75mm2 power cables with factory-fitted ferrules and correct outer terminations",
+    "Thermal protection cable after exact protection selection",
+    "USB-C data panel extension matching16mm side opening"
+  ],
+  "other_open_gates": [
+    "Nominal12V/24V and actual heater power before PSU/heater purchase; current native study24V/100W does not qualify100W at12V",
+    "ExactNTC R/T curve",
+    "Thermal cutoff trip setting, DC interrupt rating and placement",
+    "Physical jack/glands/module fit"
+  ],
+  "probe_cable_requirements": {
+    "external": "Two flexible stranded conductors inside a continuous common outer jacket; robust handling, probe-end strain relief and plug cable clamp matched to actual jacket diameter. Prefer factory-assembled probe/cable/TRS plug.",
+    "temperature": "Cable jacket and probe junction rated for actual experimental temperatures; temperature range and length still to define with exact15k NTC reference.",
+    "internal": "JST1164 is only a partial two-wire pigtail; no common jacket documented. Add one length per unit of retained flexible insulating protective sleeve (Amazon/GoTronic reference and diameter still open), insulate solder joints individually and verify15cm service slack.",
+    "qualification": "Neither exact robust factory-terminated probe nor complete jacketed XH2-to-PJ392 internal harness is qualified. Two separate insulated wires alone do not satisfy external cable requirement."
+  },
+  "excluded_from_regular_customer_orders": [
+    "Makers Electronics",
+    "eBay multivariant listings",
+    "TinyTronics",
+    "Reichelt",
+    "4project",
+    "Direct Adafruit/DigiKey/Tayda orders"
+  ],
+  "technical_sources_are_not_purchase_routes": true,
+  "electrical_or_mechanical_design_changed": false,
+  "complete_purchase_list": "system_bom_review.csv",
+  "readable_grouped_list": "README.md#achats-à-notre-charge-et-liens",
+  "harness_details": "wiring_and_harnesses.md"
+}
