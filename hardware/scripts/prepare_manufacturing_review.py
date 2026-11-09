@@ -76,6 +76,7 @@ def main():
     for source in (Path(__file__), ROOT/'scripts/verify_manufacturing_review.py', ROOT/'interface_ab.json',ROOT/'module_selection.json',
                    ROOT/'manufacturing/power_and_usb_review.md', ROOT/'manufacturing/README.md',
                    ROOT/'manufacturing/release_checklist.json',ROOT/'manufacturing/system_bom_review.csv',
+                   ROOT/'manufacturing/customer_supply_policy.json',
                    ROOT/'manufacturing/supplier_candidates.json',ROOT/'manufacturing/supplier_review.json',
                    ROOT/'manufacturing/process_requirements.json',ROOT/'manufacturing/manufacturing_fit_audit.json',
                    ROOT/'manufacturing/assembly_RFQ_draft.md',ROOT/'manufacturing/usb_service_test.md',
@@ -256,7 +257,7 @@ def main():
     manifest['output_sha256']={p.relative_to(OUT).as_posix():sha(p) for p in sorted(OUT.rglob('*'))
                                if p.is_file() and p.name!='manifest.json' and p.suffix!='.zip'}
     attachments=[OUT.parent/name for name in (
-        'README.md','power_and_usb_review.md','release_checklist.json','system_bom_review.csv',
+        'README.md','power_and_usb_review.md','release_checklist.json','system_bom_review.csv','customer_supply_policy.json',
         'supplier_candidates.json','supplier_review.json','supplier_review.csv','process_requirements.json',
         'manufacturing_fit_audit.json','assembly_RFQ_draft.md','usb_service_test.md','panel_B_proposal.svg',
         'land_pattern_review.json','component_selection.json','fabrication_specification.json','engineering_review.md',

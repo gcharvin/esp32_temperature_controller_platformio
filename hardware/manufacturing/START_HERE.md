@@ -42,12 +42,17 @@ Les trois petits JST A/B sont POWER2, I2C3 et CTRL6, au pas2,50mm.
 Le connecteur de sonde est **B/J4**, NTC passive15k. Voir le schéma et
 `wiring_and_harnesses.md` ; ne pas déterminer la polarité à la couleur des fils.
 
-Le STEP courant est `enclosure_v09_integrated_buck.step` : façade amovible
+Le STEP courant est `enclosure_v10_integrated_buck.step` : façade amovible
 avec LCD/A, rails/clips, berceau B, panneau arrière, USB latéral et ventilation
 sur les côtés. Il représente des enveloppes de composants, avec les dimensions
 documentées des sockets/borniers et une réserve pour le plastique des broches
 mâles. La révision v0.9 ajoute une fenêtre translucide fermée de 0,6 mm et une
 cassette opaque amovible pour le BH1750 : six pièces imprimées au total.
+La v0.10 remplace le GX12 par un jack PJ-392 : trou6,3 mm et logement d'écrou
+dans une paroi localement1,5 mm. Dessin Tayda documenté ; équivalence du lot
+Amazon DAOKI non qualifiée, coupon d'essai fourni séparément. Les références
+et les deux extrémités des faisceaux sont dans `wiring_and_harnesses.md` ; les
+soudures restant au jack et les raccordements non figés y sont explicites.
 Le breakout BH1750 reste une enveloppe non mesurée ; transmission optique,
 connecteur, clips et trois corps de DevKit restent à vérifier sur le matériel.
 Voir `../display_backlight_study.md` pour le LCD Freenove, l'extinction/réveil

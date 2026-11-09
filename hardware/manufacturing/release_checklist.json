@@ -1,6 +1,6 @@
 {
   "revision": "A0.4.1/B0.5.1 diagnostic preparation",
-  "date": "2026-11-05",
+  "date": "2026-11-09",
   "fabrication_release": false,
   "order_placed": false,
   "target": "small prototype batch, 24 V temperature B; A shared across future B supply variants",
@@ -49,6 +49,11 @@
       "id": "diagnostic_testpads_and_firmware",
       "status": "CHECKED_LOCALLY_HARDWARE_PENDING",
       "action": "22 back-side copper pads; no purchasing/placement. Standalone bench diagnostic compiles; ENABLE permanently LOW. Board operation not physically tested."
+    },
+    {
+      "id": "prototype_operating_voltage",
+      "status": "NOMINAL_SUPPLY_AND_HEATER_TO_CONFIRM",
+      "action": "User questioned 24V shopping candidate and mentioned12V. Existing B CAD remains24V/100W engineering target; do not order supply/heater on that basis until nominal voltage and real load are resolved. No100W capability at12V inferred."
     }
   ],
   "after_prototype_before_operating_heater": [

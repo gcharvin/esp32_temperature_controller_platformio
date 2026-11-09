@@ -108,61 +108,110 @@ modules, les câbles et les clips imprimés se vérifient à l’intégration.
 
 ## Achats à notre charge et liens
 
-Liens revus le **7 novembre 2026**. La [BOM système](system_bom_review.csv)
-contient maintenant les colonnes d'action d'achat, fiche fournisseur, lien
-Amazon, statut du lien et points à vérifier. Ses quantités sont **par appareil** :
-le devis de cinq paires de PCB n'impose pas d'acheter immédiatement cinq jeux
-de tous les accessoires.
+Liste regroupée le **9 novembre 2026** selon le choix de l’utilisateur :
+**Amazon.fr + GoTronic**, avec un seul compte GoTronic accepté. La
+[BOM système complète](system_bom_review.csv) comporte 25 lignes et indique
+pour chaque article le fournisseur préféré, le statut d’approvisionnement et
+ce qui reste à faire sur les faisceaux. Les quantités sont **par appareil** ;
+commander cinq paires de PCB n’oblige pas à acheter cinq jeux d’accessoires.
+La [politique d’approvisionnement](customer_supply_policy.json) fixe ce périmètre.
 
-Les fiches ci-dessous sont des **candidats d'approvisionnement** lorsqu'aucune
-référence n'est encore arrêtée. Les liens « Recherche Amazon » sont des recherches,
-pas des articles dont la compatibilité serait validée. Les offres, variantes,
-prix et stocks restent à vérifier au moment de l'achat. Les pages Amazon de
-la DevKit et du LCD n'ont pas pu être relues ; leurs liens sont ceux fournis
-par l'utilisateur. Aucun composant du PCB ni dimension du boîtier n'est changé
-par cette liste.
+**Déjà disponibles / fournis par l’usine :** réutiliser la DevKit
+[diymore B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76) et le LCD
+[Freenove B0B76VGXYH](https://www.amazon.fr/dp/B0B76VGXYH).
+Le fabricant PCBA fournit les composants montés sur A et B, dont les deux
+sockets ESP32 ; il livre le cavalier JP1 séparément. Ne pas acheter ces pièces
+en double. Le XL4015 déjà acheté reste à quantité **zéro**, B intégrant le LM2596.
 
-| Article à fournir | Quantité | Fiche ou référence | Amazon | Point à vérifier |
-| --- | --- | --- | --- | --- |
-| DevKit ESP32 USB-C | 1, déjà acheté | Diymore B0DGLCWR76 | [Lien d'achat existant](https://www.amazon.fr/dp/B0DGLCWR76) | 30 contacts, entraxe 25,40 mm, brochage et corps réels |
-| LCD 20×4 avec backpack I²C | 1, déjà acheté | Freenove B0B76VGXYH | [Lien d'achat existant](https://www.amazon.fr/dp/B0B76VGXYH) | Alimentation prévue 3,3 V, contraste et cotes |
-| Encodeur avec poussoir et bouton de façade | 1 si absent | [Adafruit 377](https://www.adafruit.com/product/377) | [Recherche Amazon](https://www.amazon.fr/s?k=encodeur+rotatif+EC11+bouton+poussoir+axe+6mm) | Encodeur passif, câblage A/B/SW/GND ; filetage et axe. Adafruit indiquait une rupture à la revue |
-| TMP117, température ambiante | 1 optionnel | [Adafruit 4821](https://www.adafruit.com/product/4821) | [Recherche Amazon](https://www.amazon.fr/s?k=Adafruit+TMP117+4821) | Faisceau XH côté A ; pastilles ou JST-SH STEMMA QT côté module, à adapter |
-| BH1750, luminosité | 1 pour cette fonction | [GY-302 chez Reichelt](https://www.reichelt.com/fr/fr/shop/produit/cartes_de_developpement_-_capteur_de_lumiere_numerique_bh1750-224217) | [AZ-Delivery B07TKWNGZ4](https://www.amazon.fr/dp/B07TKWNGZ4) | ASIN issu de la documentation AZ-Delivery, offre Amazon.fr non relue. Mesurer le PCB pour adapter la cassette |
-| Sonde NTC passive | 1 | Référence encore ouverte | [Recherche Amazon](https://www.amazon.fr/s?k=sonde+NTC+15K+temperature+etanche) | **15 kΩ à 25 °C et courbe documentée**, cible B≈3920. Aucune sonde exacte qualifiée |
-| Faisceau A/B POWER | 1 | [XHP-2](https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-2/555485), deux boîtiers ; [fil JST préserti 305 mm AWG22](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ASXHSXH22K305/6684932), deux conducteurs | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+2+broches+300mm+22AWG) | Ces articles séparés ne sont pas un faisceau fini ; continuité 1→1 et 2→2 |
-| Faisceau A/B I²C | 1 | [XHP-3](https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-3/1651017), deux boîtiers + trois fils sertis | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+3+broches+300mm+26AWG+femelle+femelle) | 300±10 mm, AWG26, GND/SDA/SCL droits |
-| Faisceau A/B CTRL | 1 | [XHP-6 et contacts SXH : documentation JST](https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf) | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+6+broches+300mm+26AWG+femelle+femelle) | Deux boîtiers, six conducteurs AWG26 ; broches 5/6 libres sur B température |
-| Sonde interne, embase arrière vers B/J4 | 1 | [XHP-2 côté B](https://www.digikey.com/en/products/detail/jst-sales-america-inc/XHP-2/555485) | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+2+broches+cable+pre+serti+300mm) | Une extrémité XH, l'autre à souder à l'embase ; mou de démontage |
-| Faisceaux LCD, encodeur, TMP117, BH1750 | Jusqu'à 4 | [XHP-4 et contacts SXH : documentation JST](https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf) | [Recherche Amazon](https://www.amazon.fr/s?k=JST+XH+4+broches+cable+pre+serti+Dupont+femelle) | Adapter l'ordre des fils aux modules ; ne pas se fier aux couleurs |
-| Prise de sonde arrière | 1 paire embase + fiche | [Famille GX12-2P](https://connector-sensor.com/product/gx12-2p/) | [Recherche Amazon](https://www.amazon.fr/s?k=GX12-2+connecteur+panneau+male+femelle+2+broches+paire) | Comparer les plans : trou prévu 12,4 mm, corps 17 mm ; acheter les deux parties compatibles |
-| Presse-étoupes et écrous/joints | 2 | [LAPP 53111000 M12×1,5](https://www.digikey.com/en/products/detail/lapp/53111000/18878806) | [Recherche Amazon](https://www.amazon.fr/s?k=presse+etoupe+M12x1.5+3.5+7mm+ecrou) | Gaine 3,5–7 mm ; longueur et dépassement à comparer aux réserves du panneau |
-| Alimentation externe 24 V | 1 si absente | [MEAN WELL GST160A24-R7B, 160 W](https://www.digikey.com/en/products/detail/mean-well-usa-inc/GST160A24-R7B/7703602) | [Recherche Amazon](https://www.amazon.fr/s?k=Mean+Well+GST160A24-R7B+24V) | Ajouter cordon IEC C13 et câble/adaptateur Power-DIN 4 contacts correctement dimensionné et câblé ; aucun branchement direct à B/J2 |
-| Chauffage résistif | 1 selon l'expérience | Référence encore ouverte | [Recherche Amazon](https://www.amazon.fr/s?k=element+chauffant+silicone+24V+100W) | 24 V, 100 W maximum ; géométrie, support et température d'usage à définir |
-| Câbles de puissance et embouts | Selon montage | Cuivre souple 0,75 mm², isolation adaptée | [Recherche Amazon](https://www.amazon.fr/s?k=cable+silicone+cuivre+2x0.75+mm2+embouts+0.75mm2) | Gaine compatible avec les presse-étoupes et embouts compatibles avec les borniers |
-| Rallonge USB-C de panneau | 1 | Référence encore ouverte | [Recherche Amazon](https://www.amazon.fr/s?k=rallonge+USB+C+panneau+ronde+femelle+male+donnees+30cm) | Données USB requises ; trou prévu 16 mm. Aucun modèle actuellement qualifié pour cette ouverture |
-| Accessoire USB de service alimenté | 1 option de banc | [PortaPow PPUSBBP1](https://portablepowersupplies.co.uk/product/usb-power-blocker) | [Amazon EU publié par PortaPow](https://www.amazon.de/dp/B094FYL9QT) | **Power blocker**, +5 V coupé et données conservées ; compatibilité DevKit encore à tester. Le diagnostic Wi-Fi peut s'en passer |
-| Coupure thermique indépendante | 1 avant essais du chauffage | Seuil et référence à définir | [Recherche Amazon](https://www.amazon.fr/s?k=thermostat+securite+normalement+ferme+rearmement+manuel+courant+continu) | Pouvoir de coupure **DC 24 V / ≥4,17 A** et température adaptés ; une valeur AC ne suffit pas |
-| Filament et pièces imprimées | 6 pièces | [STEP/STL et sources du boîtier](../mechanical/README.md) | [Recherche de filament translucide](https://www.amazon.fr/s?k=PETG+naturel+translucide+filament+1.75mm) | Insert optique translucide ; cassette et autres pièces opaques. Matériau et clips à qualifier |
+### Panier GoTronic — références identifiées
 
-Les **JST-XH sont au pas de 2,50 mm**. Les intitulés Amazon « XH 2.54 » sont
-souvent imprécis : demander confirmation de la série et du pas réels, des
-sections et des longueurs ; un assortiment de boîtiers seuls n'est pas un lot
-de câbles prêt à brancher. Le détail broche à broche reste dans
-[le plan de câblage](wiring_and_harnesses.md).
+| Article | Quantité par appareil | Référence et lien direct | État / adaptation restante |
+| --- | --- | --- | --- |
+| Encodeur avec poussoir et capuchon | 1 si absent | [ADA377, code38383](https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm), PEC11-4215F-S24 | Même candidat Adafruit377. Composant nu à souder ; faisceau A/B/SW/GND encore à réaliser ou trouver. Vérifier axe et fixation de façade |
+| TMP117 de température ambiante | 1 **optionnel** | [ADA4821, code37274](https://www.gotronic.fr/art-capteur-de-t-haute-precision-tmp117-ada4821-33489.htm) | Même module Adafruit4821, 3,3V et adresse0x48 ; raccordement vers A à compléter |
+| Cordon du TMP117 | 1 seulement si TMP117 | [QW-4C, code49152](https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm) | Fini : SH1mm quatre contacts vers quatre broches mâles, 15cm. Remplace la piste d’achat direct Adafruit4209 ; **le XH4 côté A manque encore** |
+| Cordon interne de sonde | 1 **sous réserve de longueur** | [JST1164, code49197](https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm) | XH2 femelle2,50mm vers fils dénudés, **15cm**, section non publiée. Deux soudures au jack ; vérifier le mou de démontage avant achat. Ce n’est pas le précédent30cm ni un faisceau complet |
 
-La [fiche AZ-Delivery du BH1750](https://m.media-amazon.com/images/I/81N6D6v-dYL.pdf)
-identifie l'ASIN lié ci-dessus. Le GY-302 Reichelt annoncé 18,5×13,5 mm n'est
-pas une correspondance mécanique démontrée avec le berceau prévu 23×16 mm :
-adapter ce dernier au module réel. Les cotes des prises, presse-étoupes et de
-l'USB restent également à confronter à leurs plans avant impression finale.
-La [fiche MEAN WELL](https://www.meanwell.com/Upload/PDF/GST160A/GST160A-SPEC.PDF)
-documente le candidat 24 V / 6,67 A et sa sortie Power-DIN.
+Le [catalogue XH GoTronic](https://www.gotronic.fr/cat-jst-1509.htm) comporte
+des boîtiers et contacts nus : ils ne constituent pas une solution sans pince.
+La rallonge XH2 mâle-femelle50cm ne convient pas aux deux embases PCB A/B.
 
-Les sockets ESP32, les LED et tous les composants montés sur les PCB restent
-dans la BOM **usine**. Le cavalier JP1 est demandé livré séparément par l'usine.
-Le XL4015 [déjà acheté](https://www.amazon.fr/dp/B0C6R3FMT3) reste à **quantité
-zéro** pour ce prototype à buck intégré : ne pas le racheter pour ce montage.
+### Panier Amazon.fr — conserver les modèles identifiés
+
+| Article | Quantité par appareil | Lien | État / adaptation restante |
+| --- | --- | --- | --- |
+| BH1750 GY-302 | 1 pour la luminosité, si absent | [AZ-Delivery B07TKWNGZ4](https://www.amazon.fr/dp/B07TKWNGZ4) | ASIN identifié par la [documentation AZ-Delivery](https://m.media-amazon.com/images/I/81N6D6v-dYL.pdf), offre non relue. Choisir barrette déjà soudée si possible, mesurer le module et adapter la cassette au réel |
+| Prise de sonde, embase + fiche TRS3,5mm | 1 paire, selon contenu du lot | [DAOKI B08XM6DR96](https://www.amazon.fr/dp/B08XM6DR96) | Candidat PJ-392 ; équivalence dimensionnelle au [dessin Tayda](https://www.taydaelectronics.com/datasheets/files/PJ-392.pdf) non prouvée. Essayer le coupon v0.10. Deux soudures à l’embase et deux à la fiche ; ring isolé |
+| Presse-étoupes, joints et contre-écrous | 2 | [HB-Digital M12 B0CLLQCCWW](https://www.amazon.fr/dp/B0CLLQCCWW) | Gaine3–6,5mm, trou12,5mm ; vérifier contenu du lot et cotes réelles du corps, faute de dessin HB-Digital |
+| Filament si absent | Selon impression | [Recherche PETG naturel translucide](https://www.amazon.fr/s?k=PETG+naturel+translucide+filament+1.75mm) | Six pièces v0.10 : insert optique translucide, cassette et autres pièces opaques. Matériau et clips à qualifier |
+
+Amazon.fr est une plateforme : conserver marque, référence, variante exacte,
+vendeur et origine d’expédition pour les réachats. Les pages des offres Amazon
+ci-dessus n’ont pas pu être relues directement ; prix, stock, expédition France
+et équivalence restent à confirmer. Un lien de recherche ne vaut pas référence
+qualifiée. Aucun total de panier livré n’est annoncé.
+
+Le BH1750 [GoTronic ADA4681](https://www.gotronic.fr/art-capteur-de-lumiere-bh1750-ada4681-33469.htm)
+fait25,3×17,7×4,5mm : ce n’est pas le GY-302 de l’enveloppe actuelle23×16mm.
+**Ne pas le substituer pour regrouper les achats** sans revoir cassette,
+fixation et câblage. Aucune substitution n’est faite dans cette révision.
+
+### Faisceaux complets sans sertissage encore à trouver
+
+Le [tableau détaillé des liaisons et de leurs deux extrémités](wiring_and_harnesses.md#liste-explicite-des-câbles-prêts-à-brancher--revue-du-9-novembre-2026)
+reste le document de câblage. Dans le périmètre Amazon.fr/GoTronic, les besoins
+suivants n’ont **pas encore de référence complète qualifiée** :
+
+| Faisceau | Quantité | Spécification à conserver |
+| --- | --- | --- |
+| A/B POWER | 1 | XHP-2 femelle ↔ femelle, 300±10mm, AWG22, droit1→1/2→2 |
+| A/B I²C | 1 | XHP-3 femelle ↔ femelle, 300±10mm, AWG26, droit1→1 à3→3 |
+| A/B CTRL | 1 | XHP-6 femelle ↔ femelle, 300±10mm, AWG26, droit1→1 à6→6 ; positions5/6 NC sur B |
+| LCD et BH1750 | 2 | XHP-4 femelle ↔ quatre Dupont femelles, barrette mâle déjà soudée sur les modules |
+| TMP117, si monté | 1 | XHP-4 femelle ↔ quatre Dupont femelles pour joindre le QW-4C GoTronic déjà identifié |
+| Encodeur | 1 | XHP-4 femelle ↔ A/B/SW/GND, avec commun du poussoir adapté ; soudures probables sur ADA377 |
+| Sonde interne et externe | 1 de chaque | Interne XHP-2 ↔ embase PJ-392 : cordon GoTronic partiel, deux soudures restantes ; externe NTC15k/B≈3920 ↔ fiche TRS montée introuvable qualifiée |
+| Alimentation et chauffage | 2 | Cuivre souple0,75mm² avec embouts **déjà sertis** côté Phoenix, gaine et autre terminaison adaptées aux appareils |
+| Protection thermique | Selon montage | Terminaisons à figer avec la protection et son seuil, puis cordon équipé |
+| USB latéral | 1 | USB-C femelle panneau ↔ USB-C mâle DevKit, données, plan compatible avec ouverture16mm ; aucun modèle retenu |
+
+Les **JST-XH sont au pas2,50mm**, distinct des Dupont2,54mm. Ne pas acheter
+un lot de boîtiers et de contacts non sertis en pensant obtenir des faisceaux.
+Des contacts déjà sertis aux deux bouts puis insérés à la main seraient une
+solution sans pince, mais aucun kit qualifié couvrant2/3/6 voies dans ce panier
+n’est actuellement retenu. Sans sertissage ne signifie pas sans soudure.
+
+### Autres achats différés dans le même périmètre fournisseurs
+
+**Cordon de sonde robuste :** exiger deux conducteurs multibrins sous une
+gaine extérieure commune continue, souple, avec maintien anti-arrachement
+côté sonde et serre-câble de fiche adapté au diamètre extérieur. Gaine et
+raccord sonde doivent supporter la température réelle de l’expérience,
+encore à préciser. Préférer l’ensemble sonde/câble gainé/fiche monté en usine.
+Deux fils isolés seuls ne répondent pas à cette exigence. Le JST1164 interne
+reste une solution partielle : ajouter une gaine isolante de protection
+retenue mécaniquement (une longueur par appareil, référence à préciser),
+isoler les soudures et vérifier le mou de démontage. Voir
+[les exigences de câble de sonde](wiring_and_harnesses.md#câble-de-sonde-gainé-et-robuste--exigence-dachat).
+
+La sonde exige **15kΩ à25°C et une courbe documentée**, cible B≈3920 :
+[recherche Amazon](https://www.amazon.fr/s?k=sonde+NTC+15K+temperature+etanche),
+aucun article exact qualifié. Alimentation et chauffage restent à choisir
+après résolution du nominal12/24V et de la puissance réelle. L’étude native B
+reste24V/100W ; elle ne qualifie pas100W sous12V. Prévoir aussi une coupure
+thermique indépendante avec seuil et pouvoir de coupure DC adaptés ; une
+valeur AC seule ne suffit pas. Ces lignes restent à définir, sans fournisseur
+supplémentaire ajouté.
+
+Le PortaPow PPUSBBP1 reste une **option de banc**, non nécessaire au diagnostic
+Wi-Fi initial : [fonction fabricant](https://portablepowersupplies.co.uk/product/usb-power-blocker),
+[recherche Amazon.fr](https://www.amazon.fr/s?k=PortaPow+PPUSBBP1+USB+power+blocker).
+Aucune offre .fr qualifiée ni compatibilité avec chaque DevKit n’est établie.
+
+Les anciennes pistes Makers Electronics, eBay, TinyTronics, Reichelt, Tayda
+et Adafruit direct ne sont plus des instructions d’achat. Les dessins et
+fiches fabricants restent des sources techniques. Aucun troisième fournisseur
+régulier n’est proposé. Les PCB, le brochage et le STEP v0.10 restent inchangés.
 
 ## Régénération complète
 

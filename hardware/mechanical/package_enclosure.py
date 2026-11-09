@@ -34,7 +34,8 @@ def main():
         files[name]=path.read_bytes()
     for relative in model['source_sha256']:add(ROOT/relative)
     for path in (HERE/'README.md',HERE/'package_enclosure.py',ROOT/'display_backlight_study.md',
-                 ROOT/'manufacturing/power_and_usb_review.md'):add(path)
+                 ROOT/'manufacturing/power_and_usb_review.md',ROOT/'manufacturing/system_bom_review.csv',
+                 ROOT/'manufacturing/wiring_and_harnesses.md',ROOT/'manufacturing/customer_supply_policy.json'):add(path)
     for name in ('enclosure_'+tag+'_integrated_buck.step','enclosure_'+tag+'_printed_parts.step',
                  'enclosure_exploded.step','enclosure_printed_parts_exploded.step',
                  'source_manifest_'+tag+'.json','validation.json','assembly_sequence_validation.json'):
