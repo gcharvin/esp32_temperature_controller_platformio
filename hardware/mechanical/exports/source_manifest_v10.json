@@ -1,0 +1,55 @@
+{
+  "revision": "0.10 - compact PJ-392 sensor jack, recessed mounting nut and fitting coupon",
+  "source_sha256": {
+    "mechanical\\build_enclosure.py": "90082a1630aa5e3d786cb85065656064b35bba1f41d2e84bc429b72af7048d3d",
+    "mechanical\\light_sensor_mount.py": "c0b53a91f28ac4433e636308215f43479675ed253105bb419053816ac1647f40",
+    "mechanical\\enclosure_parameters.json": "7fe5d3639635b1b584ca5cac01f283508b174c5c6cc59914cd29bfe9de6f65b9",
+    "placement.json": "ad62a3777cb2b2a3a1925a856a9085cccef0bf35fffb5a32e2720affa9579776",
+    "module_selection.json": "eb5a7f97b79a9cae4a4adeb0e71ab71bb7f6cba9b3189ece9b555c1a0dac7967",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711"
+  },
+  "placement_geometry_projection_sha256": "e4a80f319faa7c84535240f8f02b7b5bee1c8560b528f03390958b95e229b378",
+  "printed_parts": 6,
+  "assembled_STEP_solids": 105,
+  "assembly_service_stages": 20,
+  "static_collisions": 0,
+  "assembly_failures": 0,
+  "external_buck": false,
+  "fusion_import_tested": false,
+  "connector_review": {
+    "ref": "J1 near C10",
+    "legacy_overpadded_corridor_overlap_mm3": 10.96875,
+    "resolution": "Manufacturer XHP body with 0.25mm each-side margin replaces generic footprint+1mm corridor",
+    "manufacturer_source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+    "finger_and_cable_clearance_tested": false
+  },
+  "limits": [
+    "Rigid-body envelope model, not exact supplier component CAD",
+    "Real print, grip, cable slack, flexure and thermal tests pending"
+  ],
+  "light_sensor": {
+    "center_x_z_mm": [
+      126,
+      77
+    ],
+    "membrane_mm": 0.6,
+    "central_optical_path_closed": true,
+    "optical_transmission_tested": false,
+    "module_dimensions_measured": false,
+    "membrane_back_to_package_front_mm": 5.6000000000000005,
+    "opaque_light_well": true,
+    "removable_cassette": true,
+    "one_solid_per_new_print": true
+  },
+  "devkit_stack": {
+    "socket_maximum_mm": [
+      38.85,
+      2.65,
+      8.65
+    ],
+    "male_header_spacer_assumed_mm": 2.54,
+    "gap_allowance_mm": 0.15,
+    "physical_fit_of_all_three_variants_verified": false
+  }
+}

@@ -1,23 +1,23 @@
-# Maquette 3D v0.9 — fenêtre BH1750 et PCB B avec buck intégré
+# Maquette 3D v0.10 — jack de sonde compact et PCB B avec buck intégré
 
-Révision du **6 novembre 2026**. Boîtier nu **155 × 100 × 115 mm**, paroi 3 mm.
+Révision du **9 novembre 2026**. Boîtier nu **155 × 100 × 115 mm**, paroi 3 mm.
 La carte B v0.5 porte maintenant son LM2596 : le XL4015, son berceau, ses guides,
 la cloison de sa baie et sa butée arrière sont supprimés. Le volume libéré à
 côté de B peut servir au passage des faisceaux. A reste à v0.4.
 
 ## Ouvrir dans Fusion 360
 
-- **`exports/enclosure_v09_integrated_buck.step`** : assemblage complet courant.
-- `exports/enclosure_v09_printed_parts.step` : les six pièces imprimées seules.
+- **`exports/enclosure_v10_integrated_buck.step`** : assemblage complet courant.
+- `exports/enclosure_v10_printed_parts.step` : les six pièces imprimées seules.
 - `exports/enclosure_exploded.step` et `enclosure_printed_parts_exploded.step` : vues éclatées courantes.
-- `exports/parts_v09/` : STEP et STL individuels.
+- `exports/parts_v10/` : STEP et STL individuels.
 - `exports/preview_service.png`, `preview_b_power.png`, `preview_exploded.png` : arrière ouvert, B équipée et vue éclatée.
 - `exports/preview_light_sensor.png`, `preview_light_sensor_front.png` : fixation intérieure et fenêtre extérieure, vues locales de la géométrie réelle.
-- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v09.json` : résultats et traçabilité.
-- `exports/enclosure_v09_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
+- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v10.json` : résultats et traçabilité.
+- `exports/enclosure_v10_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
 
-Les fichiers numérotés v01 à v08 et leurs dossiers de pièces sont historiques. Les exports
-sans numéro listés ci-dessus correspondent à v0.9. Ne pas employer l'ancienne
+Les fichiers numérotés v01 à v09 et leurs dossiers de pièces sont historiques. Les exports
+sans numéro listés ci-dessus correspondent à v0.10. Ne pas employer l'ancienne
 vue `preview_buck.png`, qui représente encore le module externe.
 
 Le STEP contient une arborescence de solides nommés : **105 solides valides** dans
@@ -193,7 +193,47 @@ Le panneau arrière conserve le choix utilisateur :
 | --- | --- | --- | --- |
 | Entrée 24 V | Presse-étoupe M12, corps Ø20 | Ø12,5 | 22 / 75 |
 | Chauffage | Presse-étoupe M12, corps Ø20 | Ø12,5 | 22 / 35 |
-| Sonde NTC | Prise GX12-2, corps Ø17 | Ø12,4 | 108 / 85 |
+| Sonde NTC | Jack PJ-392, corps enveloppe Ø8,2 | Ø6,3, logement extérieur Ø14 | 108 / 85 |
+
+### Montage du jack PJ-392
+
+Le GX12 est remplacé par le **jack 3,5 mm PJ-392**, candidat Amazon
+[DAOKI B08XM6DR96](https://www.amazon.fr/dp/B08XM6DR96), avec fiche TRS assortie.
+Le [dessin Tayda A-2585/PJ-392](https://www.taydaelectronics.com/datasheets/files/PJ-392.pdf)
+a été lu visuellement : filetage **M6×0,5, longueur 4,5 mm**, corps **11,8 mm**,
+longueur totale avec pattes **22,8 mm**. Il reste **18,3 mm** derrière la face
+d'appui du corps, hors marge de soudure. Ce modèle est plus étroit que le GX12 ;
+il n'est pas prouvé plus court en profondeur avec ses pattes intactes.
+
+Perçage nominal **Ø6,3 mm** (jeu d'impression 0,3 mm sur M6), avec logement
+extérieur **Ø14 mm, profondeur 1,5 mm**. La paroi locale est ainsi **1,5 mm**.
+La longueur de filetage libre est 3 mm : le modèle réserve 1,5 mm pour l'écrou,
+0,3 mm pour la rondelle et au moins 0,5 mm de marge. Les dimensions d'écrou et
+rondelle sont des hypothèses d'enveloppe, pas des cotes certifiées DAOKI.
+Le modèle conserve 23 mm libres derrière le panneau comme objectif de soudure ;
+les fils et les doigts ne sont pas simulés. Orienter les pattes pour faciliter
+la soudure sans traction ; sortir le panneau avant démontage de B.
+
+**L'équivalence dimensionnelle du lot Amazon avec le dessin Tayda n'est pas
+vérifiée.** La référence alternative documentée est Tayda **A-2585**. Imprimer
+d'abord `98_Optional_jack_fit_coupon.stl` dans `parts_v10/`, puis tester le jack,
+sa rondelle et son écrou réels. Le coupon est séparé des six pièces du boîtier.
+Le jeu FDM, la rigidité locale et la tenue au serrage restent à essayer.
+
+La sonde utilise **tip et sleeve**, ring isolé : B/J4.1 (+3V3_B) vers tip,
+B/J4.2 (NTC_RAW) vers sleeve. Sleeve n'est donc **pas une masse** ; ne pas relier
+le corps du jack à GND ou à un châssis conducteur. Un jack peut court-circuiter
+des contacts pendant son insertion : raccorder hors tension uniquement.
+
+Presse-étoupes : référence Amazon [HB-Digital B0CLLQCCWW](https://www.amazon.fr/dp/B0CLLQCCWW),
+M12 pour gaine **3–6,5 mm**, deux par appareil. Le perçage reste Ø12,5 mm.
+Aucun plan coté spécifique HB-Digital n'a été obtenu : les corps Ø20 et réserves
+12/14 mm restent des enveloppes à vérifier. La liste d'achat ne transforme pas
+ces volumes en pièces fournisseur qualifiées.
+
+Le [tableau détaillé des faisceaux](../manufacturing/wiring_and_harnesses.md)
+sépare câbles finis, adaptateurs accouplés et soudures restantes. La maquette
+ne qualifie pas le mou d'un câble commercial de 15 cm ou son rayon de courbure.
 
 Les presse-étoupes sont des passages et retenues de câbles, pas des prises
 électriques. Choisir les références avec leur plage de câble, filetage et écrou

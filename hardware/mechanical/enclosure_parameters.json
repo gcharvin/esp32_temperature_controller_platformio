@@ -1,5 +1,5 @@
 {
-  "revision": "0.9 - removable BH1750 cassette and closed translucent optical insert",
+  "revision": "0.10 - compact PJ-392 sensor jack, recessed mounting nut and fitting coupon",
   "case_mm": {
     "width": 155,
     "height": 100,
@@ -54,7 +54,10 @@
       "inside_depth_mm": 12,
       "outside_depth_mm": 14,
       "body_diameter_mm": 20,
-      "cable_diameter_mm": 5.5
+      "cable_diameter_mm": 5.5,
+      "amazon_url": "https://www.amazon.fr/dp/B0CLLQCCWW",
+      "supplier_reference": "HB-Digital M12, cable 3..6.5mm; exact mechanical drawing unavailable",
+      "dimensions_verified": false
     },
     {
       "name": "HEATER",
@@ -65,25 +68,44 @@
       "inside_depth_mm": 12,
       "outside_depth_mm": 14,
       "body_diameter_mm": 20,
-      "cable_diameter_mm": 5.5
+      "cable_diameter_mm": 5.5,
+      "amazon_url": "https://www.amazon.fr/dp/B0CLLQCCWW",
+      "supplier_reference": "HB-Digital M12, cable 3..6.5mm; exact mechanical drawing unavailable",
+      "dimensions_verified": false
     },
     {
       "name": "NTC_PROBE",
-      "kind": "GX12_2_contact_envelope",
+      "kind": "PJ392_panel_jack",
       "center_x_mm": 108,
       "center_z_mm": 85,
-      "hole_diameter_mm": 12.4,
-      "inside_depth_mm": 16,
-      "outside_depth_mm": 25,
-      "body_diameter_mm": 17,
-      "cable_diameter_mm": 3.5
+      "hole_diameter_mm": 6.3,
+      "inside_depth_mm": 18.3,
+      "outside_depth_mm": 22,
+      "body_diameter_mm": 8.2,
+      "cable_diameter_mm": 3.5,
+      "counterbore_diameter_mm": 14,
+      "mounting_web_mm": 1.5,
+      "drawing_mm": {
+        "thread_diameter": 6,
+        "thread_pitch": 0.5,
+        "thread_length": 4.5,
+        "body_length": 11.8,
+        "overall_length": 22.8,
+        "internal_total": 18.3
+      },
+      "solder_keepout_depth_mm": 23,
+      "dimension_source": "https://www.taydaelectronics.com/datasheets/files/PJ-392.pdf",
+      "dimension_qualification": "Tayda A-2585 drawing checked; dimensional equivalence of Amazon DAOKI B08XM6DR96 not verified. Fit coupon required.",
+      "amazon_url": "https://www.amazon.fr/dp/B08XM6DR96"
     }
   ],
   "notes": [
     "All bulkhead models are unselected planning envelopes; measure selected manufacturer's panel drawing before manufacture.",
     "Power and heater glands are cable passages / strain relief, not electrical plugs.",
-    "GX12-2 is a proposed detachable probe interface, not a qualified sensor connection.",
-    "Clip geometry, print orientation, material and fatigue are not qualified."
+    "Clip geometry, print orientation, material and fatigue are not qualified.",
+    "PJ-392 drawing checked: M6x0.5 thread 4.5mm; 11.8mm body; total22.8mm including tails. Nut/washer envelope assumed; Amazon variant and real fit pending.",
+    "Jack uses two contacts for passive NTC only; disconnect power before insertion/removal. No power plug or audio equipment.",
+    "Optional coupon is separate from the six enclosure print pieces."
   ],
   "retention": {
     "insertion": "lower edge in continuous groove, pivot, engage two side clips",
@@ -151,12 +173,19 @@
   },
   "light_sensor": {
     "enabled": true,
-    "center_x_z_mm": [126, 77],
-    "module_pcb_mm": [23, 16, 1.6],
+    "center_x_z_mm": [
+      126,
+      77
+    ],
+    "module_pcb_mm": [
+      23,
+      16,
+      1.6
+    ],
     "module_dimensions_measured": false,
     "membrane_mm": 0.6,
     "material": "translucent insert; opaque cassette and facade",
     "notes": "Planning envelope only: sensor centered, connector toward top. Measure actual breakout and qualify optical transmission before final printing."
   },
-  "export_tag": "v09"
+  "export_tag": "v10"
 }

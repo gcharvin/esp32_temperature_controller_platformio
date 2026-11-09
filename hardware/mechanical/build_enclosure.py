@@ -227,6 +227,21 @@ def main(validate=True):
     for port in P['bulkheads']:
         panel=panel.cut(cyl(port['center_x_mm'],rear_y-ld-.1,port['center_z_mm'],
                             port['hole_diameter_mm']/2,front+ld+.2))
+        if port.get('counterbore_diameter_mm'):
+            # Nut seats in an external recess. Keep a thin local mounting web
+            # so the short M6 jack thread can accept its washer and nut.
+            web=port['mounting_web_mm']
+            assert 0<web<front
+            panel=panel.cut(cyl(port['center_x_mm'],rear_y+web,port['center_z_mm'],
+                                port['counterbore_diameter_mm']/2,front-web+.1))
+            x,z=port['center_x_mm'],port['center_z_mm'];rr=port['hole_diameter_mm']/2
+            assert _overlap(panel,cyl(x,rear_y-.05,z,rr-.01,front+.1))<1e-5
+            assert _overlap(panel,cyl(x,rear_y+web+.01,z,port['counterbore_diameter_mm']/2-.01,front-web))<1e-5
+            annulus=cyl(x,rear_y,z,(rr+port['counterbore_diameter_mm']/2)/2,web)
+            annulus=annulus.cut(cyl(x,rear_y-.01,z,rr+.01,web+.02))
+            assert math.isclose(_overlap(panel,annulus),annulus.val().Volume(),rel_tol=1e-7)
+            dims=port['drawing_mm']
+            assert dims['thread_length']-web>=1.5+.3+.5, 'Nut, washer and thread reserve'
     RELEASED_PRINT_SHAPES['rear']=panel.cut(latch).cut(latch.mirror('YZ').translate((W,0,0))).union(latch.translate((1.5,0,0))).union(latch.mirror('YZ').translate((W-1.5,0,0)))
     add('01_Shell_open_front_and_rear',shell,'shell','shell')
     add('02_Removable_front_LCD_A',facade,'shell','front')
@@ -293,6 +308,17 @@ def main(validate=True):
     add('USB_INTERNAL_DATA_CABLE_ROUTING_ONLY',fuse(usb_segments),'wire','USB',False)
     for port in P['bulkheads']:
         x,z=port['center_x_mm'],port['center_z_mm'];radius=port['body_diameter_mm']/2
+        if port['kind']=='PJ392_panel_jack':
+            dims=port['drawing_mm'];seat=rear_y
+            body=fuse([cyl(x,seat-dims['body_length'],z,radius,dims['body_length']),
+                       cyl(x,seat-dims['internal_total'],z,2.8,dims['internal_total']-dims['body_length']+.1),
+                       cyl(x,seat,z,dims['thread_diameter']/2,dims['thread_length']),
+                       cyl(x,seat+port['mounting_web_mm'],z,4.5,1.5),
+                       cyl(x,seat+dims['thread_length'],z,4,port['outside_depth_mm'])])
+            body=body.cut(cyl(x,seat-4,z,1.75,dims['thread_length']+4.1))
+            add('BULKHEAD_NTC_PROBE_PJ392_REFERENCE',body,'module','rear')
+            add('CABLE_NTC_PROBE',cyl(x,D+port['outside_depth_mm'],z,1.75,12),'wire','rear',False)
+            continue
         stem_r=6;inside=port['inside_depth_mm'];outside=port['outside_depth_mm']
         body=fuse([cyl(x,D-inside,z,stem_r,inside+3),cyl(x,rear_y-3,z,radius,3),
                    cyl(x,D,z,radius,outside)])
@@ -510,6 +536,12 @@ def validate_export():
         ('external','05_Passe_paroi_et_faisceaux_reference'),('USB','06_USB_maintenance_reference'),
         ('light','07_BH1750_reference')]}
     partsdir=OUT/('parts_'+TAG);partsdir.mkdir(exist_ok=True)
+    # Optional fitting coupon, not an additional enclosure/assembly piece.
+    jack=next(p for p in P['bulkheads'] if p['kind']=='PJ392_panel_jack') if any(p['kind']=='PJ392_panel_jack' for p in P['bulkheads']) else None
+    if jack:
+        coupon=box(0,0,0,28,3,28).cut(cyl(14,-.1,14,jack['hole_diameter_mm']/2,3.2))
+        coupon=coupon.cut(cyl(14,jack['mounting_web_mm'],14,jack['counterbore_diameter_mm']/2,3.1-jack['mounting_web_mm']))
+        for ext in ('step','stl'):cq.exporters.export(coupon,str(partsdir/('98_Optional_jack_fit_coupon.'+ext)))
     summary={'status':'unqualified fit mock-up, not production design','parts':[],'collisions_mm3':[],
              'coordinates':'x left-right, y front-rear, z bottom-top (mm)',
              'case_mm':P['case_mm'],'bulkheads':P['bulkheads'],'usb_service':P['usb_service'],'retention':P['retention'],
@@ -543,6 +575,21 @@ def validate_export():
         sb=next(p['shape'] for p in PARTS if p['name']==b)
         assert sa.val().intersect(sb.val()).Volume()<1e-5
     b_parts=[p for p in PARTS if p['group']=='B' and p['physical']]
+    for rear in [p for p in PARTS if p['name'].startswith('BULKHEAD_')]:
+        for other in [p for p in PARTS if p['physical'] and p['group'] in ('A','B','LCD','USB','light')]:
+            overlap=_overlap(rear['shape'],other['shape'])
+            if overlap>1e-4:summary['collisions_mm3'].append([rear['name'],other['name'],round(overlap,5)])
+    if jack:
+        corridor=cyl(jack['center_x_mm'],D-P['rear_panel_mm']['thickness']-jack['solder_keepout_depth_mm'],jack['center_z_mm'],5,jack['solder_keepout_depth_mm'])
+        for other in [p for p in PARTS if p['physical'] and p['group'] in ('A','B','LCD','USB','light')]:
+            overlap=_overlap(corridor,other['shape'])
+            if overlap>1e-4:summary['collisions_mm3'].append(['PJ392_solder_corridor',other['name'],round(overlap,5)])
+        summary['rear_jack_review']={'drawing_checked':True,'source':jack['dimension_source'],
+            'hole_mm':jack['hole_diameter_mm'],'local_web_mm':jack['mounting_web_mm'],
+            'nut_pocket_diameter_mm':jack['counterbore_diameter_mm'],
+            'solder_corridor_diameter_mm':10,'solder_corridor_depth_mm':jack['solder_keepout_depth_mm'],
+            'Amazon_variant_dimensions_verified':False,'real_nut_washer_and_print_fit_verified':False,
+            'optional_fit_coupon':'98_Optional_jack_fit_coupon.stl'}
     for usb_part in [part for part in PARTS if part['group']=='USB' and part['physical']]:
         for other in [part for part in PARTS if part['group'] in ('A','B','LCD','light') and part['physical']]:
             overlap=_overlap(usb_part['shape'],other['shape'])

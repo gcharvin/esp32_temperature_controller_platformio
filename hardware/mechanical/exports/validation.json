@@ -21,7 +21,7 @@
     },
     {
       "name": "04_Rear_panel_with_latches",
-      "volume_mm3": 48293.161,
+      "volume_mm3": 48377.783,
       "solids": 1,
       "group": "rear"
     },
@@ -602,14 +602,14 @@
       "group": "rear"
     },
     {
-      "name": "BULKHEAD_NTC_PROBE_TBD",
-      "volume_mm3": 7230.305,
+      "name": "BULKHEAD_NTC_PROBE_PJ392_REFERENCE",
+      "volume_mm3": 1986.603,
       "solids": 1,
       "group": "rear"
     },
     {
       "name": "CABLE_NTC_PROBE",
-      "volume_mm3": 509.92,
+      "volume_mm3": 115.454,
       "solids": 1,
       "group": "rear"
     },
@@ -650,7 +650,10 @@
       "inside_depth_mm": 12,
       "outside_depth_mm": 14,
       "body_diameter_mm": 20,
-      "cable_diameter_mm": 5.5
+      "cable_diameter_mm": 5.5,
+      "amazon_url": "https://www.amazon.fr/dp/B0CLLQCCWW",
+      "supplier_reference": "HB-Digital M12, cable 3..6.5mm; exact mechanical drawing unavailable",
+      "dimensions_verified": false
     },
     {
       "name": "HEATER",
@@ -661,18 +664,35 @@
       "inside_depth_mm": 12,
       "outside_depth_mm": 14,
       "body_diameter_mm": 20,
-      "cable_diameter_mm": 5.5
+      "cable_diameter_mm": 5.5,
+      "amazon_url": "https://www.amazon.fr/dp/B0CLLQCCWW",
+      "supplier_reference": "HB-Digital M12, cable 3..6.5mm; exact mechanical drawing unavailable",
+      "dimensions_verified": false
     },
     {
       "name": "NTC_PROBE",
-      "kind": "GX12_2_contact_envelope",
+      "kind": "PJ392_panel_jack",
       "center_x_mm": 108,
       "center_z_mm": 85,
-      "hole_diameter_mm": 12.4,
-      "inside_depth_mm": 16,
-      "outside_depth_mm": 25,
-      "body_diameter_mm": 17,
-      "cable_diameter_mm": 3.5
+      "hole_diameter_mm": 6.3,
+      "inside_depth_mm": 18.3,
+      "outside_depth_mm": 22,
+      "body_diameter_mm": 8.2,
+      "cable_diameter_mm": 3.5,
+      "counterbore_diameter_mm": 14,
+      "mounting_web_mm": 1.5,
+      "drawing_mm": {
+        "thread_diameter": 6,
+        "thread_pitch": 0.5,
+        "thread_length": 4.5,
+        "body_length": 11.8,
+        "overall_length": 22.8,
+        "internal_total": 18.3
+      },
+      "solder_keepout_depth_mm": 23,
+      "dimension_source": "https://www.taydaelectronics.com/datasheets/files/PJ-392.pdf",
+      "dimension_qualification": "Tayda A-2585 drawing checked; dimensional equivalence of Amazon DAOKI B08XM6DR96 not verified. Fit coupon required.",
+      "amazon_url": "https://www.amazon.fr/dp/B08XM6DR96"
     }
   ],
   "usb_service": {
@@ -922,6 +942,18 @@
     "roof_and_base_closed": true,
     "thermal_airflow_simulated": false
   },
+  "rear_jack_review": {
+    "drawing_checked": true,
+    "source": "https://www.taydaelectronics.com/datasheets/files/PJ-392.pdf",
+    "hole_mm": 6.3,
+    "local_web_mm": 1.5,
+    "nut_pocket_diameter_mm": 14,
+    "solder_corridor_diameter_mm": 10,
+    "solder_corridor_depth_mm": 23,
+    "Amazon_variant_dimensions_verified": false,
+    "real_nut_washer_and_print_fit_verified": false,
+    "optional_fit_coupon": "98_Optional_jack_fit_coupon.stl"
+  },
   "assembly_sequence": {
     "tests": [
       {
@@ -1130,7 +1162,7 @@
           60,
           0
         ],
-        "prism_count": 32,
+        "prism_count": 37,
         "reversible": true
       },
       {
@@ -1186,7 +1218,7 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 423637.649,
+  "STEP_volume_mm3": 418084.105,
   "fusion_import_tested": false,
   "light_sensor": {
     "center_x_z_mm": [
