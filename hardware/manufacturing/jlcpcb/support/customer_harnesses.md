@@ -29,78 +29,63 @@ disposés sans traction dans le boîtier. Leur routage câblé réel reste à es
 
 Source : [JST XH, contacts et boîtiers](https://order.jst-mfg.com/InternetShop/app/pdf_show.php?kbn=1&key=eXH.pdf).
 
-## Liste explicite des câbles prêts à brancher — revue du 9 novembre 2026
+## Plan économique courant — revue du9novembre2026
 
-Périmètre retenu : **Amazon.fr + GoTronic**, compte GoTronic accepté par
-l’utilisateur. Aucun achat ni compte créé pendant cette revue. Le
-[guide d’achat regroupé](../README.md) et la
-[BOM système](customer_purchase_list.csv) distinguent article identifié et liaison
-complète. Les anciennes offres hors de ces deux canaux ne sont plus proposées
-comme panier. Aucun faisceau commercial n’a été essayé sur les cartes réelles.
+L’utilisateur accepte les soudures à faire réaliser au jack et à l’encodeur,
+mais aucun sertissage manuel. Voir le [dossier économique](economy_cabling/README.md)
+et la [BOM système](customer_purchase_list.csv). Le contrat électrique A/B300mm,
+AWG22pourPOWER/AWG26signaux et brochage droit du tableau initial est conservé.
 
-**Aucun sertissage à faire soi-même** reste l’objectif. « Préserti » peut
-désigner un cordon fini d’un seul côté. Deux soudures, une insertion manuelle
-de contacts déjà sertis et un câble directement enfichable sont des états
-différents, indiqués ci-dessous. Toutes les longueurs doivent garder le mou
-de démontage ; les couleurs ne prouvent pas le brochage.
+Sur-mesure limité àH01/H02/H03,10pièces chacun, et un U04 commun de30pièces
+(40au total avecTMP). Aucun câbleXH4versfemelles individuelles exact n’a été
+qualifié chezAmazon/GoTronic ; il reste donc la seule quatrième référence
+spéciale. Finir les fils avec leurs contacts et boîtiers chez le câbleur.
+Pas de gaine spéciale ou de sous-ensembles soudés sur-mesure à faire produire.
 
-| Liaison, quantité par appareil | Les deux extrémités nécessaires | Référence dans le panier retenu | Ce qui reste à trouver ou faire |
-| --- | --- | --- | --- |
-| A/J1 ↔ B/J1, 1 | XHP-2 femelle ↔ XHP-2 femelle, 300±10mm, AWG22 | **À trouver** chez Amazon.fr/GoTronic | Aucun câble complet qualifié. Demander câblage droit et +5V repéré. Un kit nu ne répond pas au besoin |
-| A/J6 ↔ B/J6, 1 | XHP-3 femelle ↔ XHP-3 femelle, 300±10mm, AWG26 | **À trouver** chez Amazon.fr/GoTronic | Aucun câble complet qualifié ; droit1→1 à3→3. Rallonge mâle-femelle non adaptée |
-| A/J7 ↔ B/J7, 1 | XHP-6 femelle ↔ XHP-6 femelle, 300±10mm, AWG26 | **À trouver** chez Amazon.fr/GoTronic | Droit1→1 à6→6. Positions5/6 présentes mais NC sur B. Un SH6 ne convient pas |
-| A/J2 ↔ LCD Freenove, 1 | XHP-4 femelle ↔ quatre Dupont femelles | **À trouver**, longueur à qualifier avec mou de service | Barrettes mâles du backpack déjà soudées requises. Raccorder GND/3V3/SDA/SCL selon le module |
-| A/J3 ↔ encodeur, 1 | XHP-4 femelle ↔ A/B/SW/GND | [GoTronic ADA377/code38383](https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm) pour le composant, **pas le cordon** | Aucun faisceau complet qualifié : trois contacts rotatifs et deux bouton, mettre en commun les retours. Soudures probables ; moduleKY-040 non substitué |
-| A/J4 ↔ TMP117, 1 optionnel | XHP-4 femelle ↔ SH1mm4contacts du module | [GoTronic QW-4C/code49152](https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm) : SH vers quatre broches mâles,15cm, cordon fini | **Il manque le XH4 vers quatre Dupont femelles** pour joindre ce cordon à A. Immobiliser la jonction ; GND/VIN/SDA/SCL à contrôler. Aucun SH directement dans XH |
-| A/J5 ↔ BH1750 GY-302, 1 | XHP-4 femelle ↔ quatre Dupont femelles | **À trouver** chez Amazon.fr/GoTronic | Barrette mâle du module déjà soudée requise ; ADDR bas pour0x23. ADA4681 GoTronic plus grand, non substitué au GY-302 |
-| B/J4 ↔ embase jack arrière, 1 | XHP-2 femelle ↔ tip/sleeve du PJ-392 | [GoTronic JST1164/code49197](https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm) : XH2 femelle2,50mm vers fils dénudés,**15cm** | **Partiel**, aucune pince mais deux soudures au jack. Section non publiée ; vérifier longueur et mou, ne pas remplacer automatiquement le30cm. J4.1(+3V3_B)→tip, J4.2(NTC_RAW)→sleeve, ring isolé ; sleeve pas GND |
-| Sonde externe ↔ prise arrière, 1 | NTC15k/B≈3920 ↔ ficheTRS3,5mm | [Lot DAOKI B08XM6DR96](https://www.amazon.fr/dp/B08XM6DR96) candidat pour embase+fiche ; sonde exacte non retenue | **Sonde avec fiche déjà montée à trouver** ; sinon deux soudures sur fiche, ring isolé. Fiche audio ne veut pas dire sonde adaptée. Insertion/retrait hors tension |
-| Alimentation centrale ↔ B/J2, 1 | Sortie de l’alimentation ↔ bornierPhoenix, via presse-étoupe | **À trouver** : cordon cuivre0,75mm² avec embouts déjà sertis côté PCB | Choix12/24V, puissance et sortie alimentation non figés. Gaine3..6,5mm pour presse-étoupe ; longueur, calibre et autre terminaison à définir |
-| B/J3 ↔ chauffage, 1 | BornierPhoenix ↔ chauffage, via presse-étoupe | **À trouver** : cordon cuivre0,75mm² avec embouts montés côté PCB | Température d’isolation et terminaison chauffage à définir. Ne pas acheter câble nu + embouts nus si on veut éviter la pince |
-| Coupure thermique ↔ chauffage | Contacts adaptés ↔ circuit chauffage | **À définir** avec protection retenue | Seuil et pouvoir de coupure DC à choisir avant de figer le cordon équipé |
-| USB latéral ↔ DevKit, 1 | USB-C femelle de panneau ↔ USB-C mâle, données | **À trouver sur plan** chez Amazon.fr/GoTronic | Trou actuel16mm ; beaucoup de modèles M20/M22 incompatibles. Aucun passe-paroi précis qualifié pour cette ouverture |
-| Ordinateur ↔ USB latéral, 1 câble de service | USB du PC ↔ USB-C mâle | Réutiliser câble de données existant ; recherche Amazon.fr si absent | Premier service USB seul selon procédure. Option PortaPowPPUSBBP1 ultérieure, pas nécessaire au diagnosticWi-Fi et non qualifiée avec chaqueDevKit |
+| Liaison | Solution retenue pour le devis réduit | Intervention restante |
+| --- | --- | --- |
+| A/J1,B/J1 | 10H01 XH2-XH2,300mmAWG22 | Enfichage et contrôle de continuité |
+| A/J6,B/J6 | 10H02 XH3-XH3,300mmAWG26 | Enfichage, aucun croisement |
+| A/J7,B/J7 | 10H03 XH6-XH6,300mmAWG26 | Les6fils sont présents ;5/6NCsurB |
+| A/J2 LCD | 10U04 numérotés1..4 vers femelles individuelles | 1GND,2VCC3,3V,3SDA,4SCL ; barrette mâle déjà soudée requise |
+| A/J5 BH1750 | 10U04 identiques | Mêmes fonctions queLCD ; ADDRbas0x23, module réel à vérifier |
+| A/J3 encodeur | 10U04 + [ADA377GoTronic38383](https://www.gotronic.fr/art-encodeur-24-impulsions-ada377-37481.htm) | Couper uniquement les4femelles côté module, dénuder, souder et isoler ;1A,2B,3SW1,4GNDversC+SW2 pontés |
+| A/J4 TMP117, option | 10U04 supplémentaires + [QW-4C49152](https://www.gotronic.fr/art-cordon-qwiic-stemma-qw-4c-30786.htm) | Cordons finis joints par fonctionsGND/VIN/SDA/SCL, jonction retenue ; environ450mm cumulés, I2C/mou à essayer ; aucun câbleSH spécial |
+| B/J4 vers jack arrière | [JST1164GoTronic49197](https://www.gotronic.fr/art-cordon-jst-xh-femelle-2-cts-15-cm-jst1164-33095.htm),15cm conditionnels | 2soudures :1+3V3_B->tip,2NTC_RAW->sleeve ;ringisolé, sleevepasGND ; vérifier mou de dépose avant achat |
+| Sonde extérieure | Candidat catalogue15k/courbe exacte à trouver | Gaîne extérieure robuste continue et serre-câble ;2soudures sur fiche si nécessaire, pas de sertissage |
+| Puissance | Câble catalogue gainé2x0,75mm2, référence à préciser | CôtéPhoenix :7mm dénudés,0,5..0,6Nm, pas d’embout obligatoire ; autres terminaisons à qualifier |
+| Protection/USB | Choix final différé, câbleUSBde données existant au banc | Protection indépendante non supprimée ; réservationUSB latérale16mm inchangée, aucun passe-paroi précis déclaré compatible |
 
-**Bilan :** trois faisceaux A/B et les quatre liaisons périphériques (dont
-TMP117 optionnel) ne sont pas encore des références complètes achetables
-dans ce panier. Deux cordons partiels sont identifiés chez GoTronic : QW-4C
-pour TMP117 et JST1164 pour la sonde interne. Le second nécessite des soudures
-et un essai du mou ; le premier nécessite encore l’adaptateur XH4. Restent
-aussi à figer la sonde à fiche montée, les deux cordons de puissance équipés,
-la protection et la rallonge USB de panneau.
+**U04 est numérique, pas fonctionnel :** cavité1versprise1,2vers2,3vers3,
+4vers4. SurLCD/BH/TMP,1estGND ; surencodeur,4estGND. Ne pas suivre une couleur
+ou un repèreGND commun aux quatre usages. Étiqueter les fonctions après
+affectation ; aucune inversion sur les PCB. Les femelles individuelles sont
+proposées pour broches carrées0,64mm/2,54mm, engagement à vérifier sur modules.
 
-Un assortiment de boîtiers XH avec contacts nus demande une pince. Des fils
-sertis aux deux bouts puis insérés à la main pourraient convenir, mais aucun
-kit documenté couvrant les2/3/6voies, les sections22/26AWG et300mm n’est
-actuellement retenu chez Amazon.fr/GoTronic. Ne pas remplacer les XH2,50mm par
-Dupont2,54mm ni changer le contrat pour s’adapter à un câble non qualifié.
-Contrôler la continuité broche à broche avant alimentation et essayer le
-démontage câblé réel. Sans pince ne signifie pas sans soudure.
+### Protection et soudures
 
-## Câble de sonde gainé et robuste — exigence d’achat
+Chaque fil interne garde son isolant. Une tresse/spirale légère posée à
+l’intégration est possible ; la deuxième gaine commune isolante de tous
+les faisceaux internes n’est plus une opération industrielle obligatoire.
+Pour la liaison interne de sonde, [GAIT06GoTronic48620](https://www.gotronic.fr/art-gaine-tressee-gait06-15337.htm)
+protège de l’abrasion (polyester3..9mm), sans remplacer l’isolant des fils.
+Isoler chaque soudure et retenir la tresse ; vérifier le passage du boîtier
+XH et le mou des15cm. Si le trajet échoue, demander30cm avant le lot.
 
-Pour le cordon de sonde **extérieur**, exiger deux conducteurs multibrins
-sous une **gaine extérieure commune continue**, souple et résistante aux
-manipulations. Deux fils isolés séparés ne constituent pas le cordon demandé.
-La gaine et le raccord côté sonde doivent être spécifiés pour la température
-réelle de l’expérience ; cette plage et la longueur restent à définir avec
-la sonde retenue. Préférer sonde, câble gainé et fiche TRS montés en usine.
+Le cordon de sonde **extérieur** garde une gaine commune robuste continue,
+une classe thermique adaptée à l’expérience et un vrai maintien à la sonde
+et au serre-câble de fiche. Une paire isolée ou une tresse seule ne suffit
+pas à l’extérieur. NTC15k/B≈3920 à courbe documentée, pas10k/DS18B20 par défaut.
 
-Prévoir un maintien anti-arrachement côté sonde et un serre-câble dans la
-fiche jack, compatible avec le diamètre extérieur du câble. La gaine commune
-doit aller jusque dans cette retenue ; isoler chaque soudure séparément.
-Une gaine thermorétractable sur des soudures ne remplace pas cette retenue.
-La courbe électrique reste NTC15k/B≈3920 : la robustesse mécanique ne qualifie
-pas une sonde d’une autre valeur. Aucun ensemble exact n’est encore retenu.
+Prévoir5points de soudure de terminaux encodeur (avec pontC-SW2) et2aujack
+par appareil :70points pour10appareils, sans compter les fiches de sondes
+externes. L’utilisateur accepte que ce travail soit réalisé, ce qui ne veut
+pas dire qu’une main-d’œuvre payante est gratuite. Contrôler continuité,
+absence de court-circuit, tenue des raccords et fonctionnement du poussoir.
 
-Pour le trajet **interne B/J4 ↔ jack arrière**, le JST1164 GoTronic reste
-un cordon partiel à deux fils isolés : aucune gaine commune n’est documentée.
-Ajouter une gaine isolante de protection souple, retenue mécaniquement, et
-isoler séparément les deux soudures au jack. Prévoir une longueur de protection
-par appareil dans le panier Amazon/GoTronic, référence et diamètre à préciser
-avec le cordon. Vérifier que les15cm gardent le mou nécessaire pour déposer
-le panneau arrière sans tirer sur le XH ou les soudures. Aucun cordon complet
-gainé XH2↔PJ-392 n’est actuellement qualifié.
+Les cinq anciennes lignes de devis externes H09-H13 sont différées ; elles
+ne sont pas transformées en achats catalogue déjà qualifiés. Aucun achat
+ou envoi au câbleur n’est effectué.
 
 ## Puissance et sonde sur B
 
@@ -111,8 +96,10 @@ gainé XH2↔PJ-392 n’est actuellement qualifié.
 | J4, sonde | +3V3_B | NTC_RAW |
 
 Le chauffage résistif 24 V / 100 W appelle environ4,17 A. Prévoir des fils
-souples **0,75 mm²**, isolés pour la température de l'installation, avec
-embouts compatibles. Le choix du câble extérieur et du presse-étoupe dépend
+souples **0,75 mm²**, isolés pour la température de l’installation.
+Le fabricant autorise le fil souple directement dans le bornier : les embouts
+ne sont pas obligatoires côté PCB. S’ils sont utilisés, les faire fournir
+déjà sertis et compatibles. Le choix du câble extérieur et du presse-étoupe dépend
 de sa gaine et reste dans la BOM système, hors assemblage des PCB. Pour les
 borniers1715721 : dénudage7 mm, serrage0,5–0,6 Nm en soutenant leur corps.
 Vérifier l'adaptation de l'embout à la borne ; ne pas étamer les extrémités
