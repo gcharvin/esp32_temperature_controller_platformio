@@ -45,4 +45,5 @@ HEATER / + switched return,J3,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-
 TEMP / NTC 15k B3920,J4,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,JST,B2B-XH-A(LF)(SN),C158012
 A-B I2C / XH-3,J6,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,JST,B3B-XH-A(LF)(SN),C144394
 A-B CTRL / XH-6,J7,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,JST,B6B-XH-A(LF)(SN),C144397
+A-B UART / 3V3 / GND TX_A RX_A,J10,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,JST,B3B-XH-A(LF)(SN),C144394
 IRLZ44NPBF / gate 5 V,Q1,Package_TO_SOT_THT:TO-220-3_Vertical,Infineon,IRLZ44NPBF,C38774

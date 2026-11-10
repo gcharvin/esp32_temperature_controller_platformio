@@ -4,19 +4,19 @@
     "A": {
       "quantity": 5,
       "SMT_per_board": 13,
-      "THT_per_board": 10,
-      "physical_placements_per_board": 23,
-      "placements_in_lot": 115
+      "THT_per_board": 11,
+      "physical_placements_per_board": 24,
+      "placements_in_lot": 120
     },
     "B": {
       "quantity": 5,
       "SMT_per_board": 38,
-      "THT_per_board": 9,
-      "physical_placements_per_board": 47,
-      "placements_in_lot": 235
+      "THT_per_board": 10,
+      "physical_placements_per_board": 48,
+      "placements_in_lot": 240
     }
   },
-  "total_placements_for_5A_5B": 350,
+  "total_placements_for_5A_5B": 360,
   "additional_loose_shunts": 5,
   "SMT_and_THT_included": true,
   "source_files_modified": false,

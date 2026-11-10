@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1700" height="1200" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1700 1200" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1700" height="1200"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-1200)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1700" height="1200" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="50" y="1101" width="58" height="58" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,18%,25%); fill-rule: evenodd;"/>
+			<text x="63.0" y="1118" style="font-family: Arial-Bold; font-size: 32px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,2236) scale(1,-1)">↔</text>
+			<text x="128" y="1121" style="font-family: Arial-Bold; font-size: 36px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,2242) scale(1,-1)">Comment les deux cartes travaillent ensemble</text>
+			<text x="50" y="1081" style="font-family: Arial; font-size: 21px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,2162) scale(1,-1)">Alimentation et puissance séparées des signaux | Numéros = pastilles PCB, pas vue des fiches de câble</text>
+			<rect x="60" y="850" width="430" height="175" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="88" y="985" style="font-family: Arial-Bold; font-size: 28px;fill: rgb(75%,35%,8%); stroke:none;" transform="translate(0,1970) scale(1,-1)">Alimentation externe DC</text>
+			<text x="88" y="945" style="font-family: Arial; font-size: 23px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1890) scale(1,-1)">Entre sur B / J2.</text>
+			<text x="88" y="909" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1818) scale(1,-1)">Dimensionnement étudié : 24 V / 100 W.</text>
+			<rect x="625" y="850" width="430" height="175" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="653" y="985" style="font-family: Arial-Bold; font-size: 28px;fill: rgb(75%,35%,8%); stroke:none;" transform="translate(0,1970) scale(1,-1)">Carte B température</text>
+			<text x="653" y="945" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1890) scale(1,-1)">Protection + buck 5 V + commande.</text>
+			<text x="653" y="909" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1818) scale(1,-1)">Mesure NTC par ADS1115.</text>
+			<rect x="1190" y="850" width="450" height="175" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1218" y="985" style="font-family: Arial-Bold; font-size: 28px;fill: rgb(75%,35%,8%); stroke:none;" transform="translate(0,1970) scale(1,-1)">Chauffage externe</text>
+			<text x="1218" y="945" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1890) scale(1,-1)">Relié au bornier B / J3.</text>
+			<text x="1218" y="909" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1818) scale(1,-1)">Courant commuté par Q1 sur B.</text>
+			<polyline points="490 940, 625 940" style="stroke: rgb(75%,35%,8%); stroke-linecap: butt; stroke-width: 5; fill: None; fill-rule: evenodd;"/>
+			<polygon points="625 940, 614.956 935.5146, 614.956 944.4854" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(75%,35%,8%); fill-rule: evenodd;"/>
+			<circle cx="625" cy="940" r="6" style="stroke: rgb(75%,35%,8%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd;"/>
+			<polyline points="1055 940, 1190 940" style="stroke: rgb(75%,35%,8%); stroke-linecap: butt; stroke-width: 5; fill: None; fill-rule: evenodd;"/>
+			<polygon points="1190 940, 1179.956 935.5146, 1179.956 944.4854" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(75%,35%,8%); fill-rule: evenodd;"/>
+			<circle cx="1190" cy="940" r="6" style="stroke: rgb(75%,35%,8%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd;"/>
+			<rect x="625" y="610" width="430" height="115" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="653" y="680" style="font-family: Arial-Bold; font-size: 27px;fill: rgb(13%,44%,71%); stroke:none;" transform="translate(0,1360) scale(1,-1)">Carte A + DevKit ESP32</text>
+			<text x="653" y="644" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1288) scale(1,-1)">Interface, firmware et réseau.</text>
+			<rect x="60" y="600" width="430" height="210" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="85" y="770" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(46%,33%,69%); stroke:none;" transform="translate(0,1540) scale(1,-1)">J10 ↔ J10 · UART dédié</text>
+			<text x="85" y="730" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1460) scale(1,-1)">1 GND / 2 TX_A / 3 RX_A.</text>
+			<text x="85" y="694" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1388) scale(1,-1)">GPIO17 TX / GPIO16 RX sur A.</text>
+			<text x="85" y="658" style="font-family: Arial; font-size: 22px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1316) scale(1,-1)">2/3 NC sur B température.</text>
+			<text x="85" y="624" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,1248) scale(1,-1)">Câble facultatif ; logique 3,3 V.</text>
+			<polyline points="735 850, 735 725" style="stroke: rgb(75%,35%,8%); stroke-linecap: butt; stroke-width: 4; fill: None; fill-rule: evenodd;"/>
+			<polygon points="735 725, 730.5146 735.044, 739.4854 735.044" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(75%,35%,8%); fill-rule: evenodd;"/>
+			<circle cx="735" cy="725" r="6" style="stroke: rgb(75%,35%,8%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd;"/>
+			<text x="595" y="780" style="font-family: Arial-Bold; font-size: 23px;fill: rgb(75%,35%,8%); stroke:none;" transform="translate(0,1560) scale(1,-1)">5 V</text>
+			<polyline points="835 725, 835 850" style="stroke: rgb(46%,33%,69%); stroke-linecap: butt; stroke-width: 3; fill: None; fill-rule: evenodd;"/>
+			<polygon points="835 850, 839.4854 839.956, 830.5146 839.956" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(46%,33%,69%); fill-rule: evenodd;"/>
+			<circle cx="835" cy="850" r="6" style="stroke: rgb(46%,33%,69%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd;"/>
+			<text x="858" y="798" style="font-family: Arial-Bold; font-size: 19px;fill: rgb(46%,33%,69%); stroke:none;" transform="translate(0,1596) scale(1,-1)">PWM / ENABLE</text>
+			<polyline points="970 850, 970 725" style="stroke: rgb(13%,44%,71%); stroke-linecap: butt; stroke-width: 3; fill: None; fill-rule: evenodd;"/>
+			<polygon points="970 725, 965.5146 735.044, 974.4854 735.044" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(13%,44%,71%); fill-rule: evenodd;"/>
+			<circle cx="970" cy="725" r="6" style="stroke: rgb(13%,44%,71%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd;"/>
+			<text x="995" y="760" style="font-family: Arial-Bold; font-size: 19px;fill: rgb(13%,44%,71%); stroke:none;" transform="translate(0,1520) scale(1,-1)">Mesures I²C</text>
+			<rect x="60" y="365" width="480" height="185" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="85" y="512" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(75%,35%,8%); stroke:none;" transform="translate(0,1024) scale(1,-1)">J1 ↔ J1 · POWER</text>
+			<text x="85" y="474" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,948) scale(1,-1)">1 : GND     2 : +5V_AB</text>
+			<text x="85" y="445" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,890) scale(1,-1)">B fournit le 5 V régulé ; A le reçoit.</text>
+			<text x="85" y="416" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,832) scale(1,-1)">JST-XH 2 contacts, câble droit.</text>
+			<text x="85" y="387" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,774) scale(1,-1)">Le courant du chauffage ne passe pas ici.</text>
+			<rect x="610" y="365" width="480" height="185" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="635" y="512" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(13%,44%,71%); stroke:none;" transform="translate(0,1024) scale(1,-1)">J6 ↔ J6 · I²C</text>
+			<text x="635" y="474" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,948) scale(1,-1)">1 : GND     2 : SDA     3 : SCL</text>
+			<text x="635" y="445" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,890) scale(1,-1)">La DevKit de A dialogue avec B.</text>
+			<text x="635" y="416" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,832) scale(1,-1)">JST-XH 3 contacts, câble droit.</text>
+			<text x="635" y="387" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,774) scale(1,-1)">Niveaux logiques : 3,3 V.</text>
+			<rect x="1160" y="365" width="480" height="185" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1185" y="512" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(46%,33%,69%); stroke:none;" transform="translate(0,1024) scale(1,-1)">J7 ↔ J7 · Commandes</text>
+			<text x="1185" y="474" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,948) scale(1,-1)">1 GND / 2 PWM0 / 3 ENABLE / 4 FAULT_N</text>
+			<text x="1185" y="445" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,890) scale(1,-1)">5 PWM1 / 6 DIN0 : réservés, NC sur B.</text>
+			<text x="1185" y="416" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,832) scale(1,-1)">JST-XH 6 contacts, les 6 fils présents.</text>
+			<text x="1185" y="387" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,774) scale(1,-1)">FAULT_N n’est pas une coupure autonome.</text>
+			<rect x="60" y="120" width="760" height="200" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="85" y="282" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(8%,51%,45%); stroke:none;" transform="translate(0,564) scale(1,-1)">Périphériques raccordés à A</text>
+			<text x="85" y="244" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,488) scale(1,-1)">J2 LCD / J4 TMP117 optionnel / J5 BH1750 :</text>
+			<text x="85" y="215" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,430) scale(1,-1)">1 GND / 2 +3V3_A / 3 SDA / 4 SCL.</text>
+			<text x="85" y="186" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,372) scale(1,-1)">J3 encodeur : 1 A / 2 B / 3 bouton / 4 GND.</text>
+			<text x="85" y="157" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,314) scale(1,-1)">Attention : la masse n’a pas la même position sur J3.</text>
+			<rect x="880" y="120" width="760" height="200" rx="14" ry="14" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="905" y="282" style="font-family: Arial-Bold; font-size: 25px;fill: rgb(8%,51%,45%); stroke:none;" transform="translate(0,564) scale(1,-1)">Sonde et contrôles de B</text>
+			<text x="905" y="244" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,488) scale(1,-1)">B/J4 : 1 +3V3_B / 2 NTC_RAW. Sonde passive 15 kΩ.</text>
+			<text x="905" y="215" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,430) scale(1,-1)">Jack arrière : pointe = +3V3_B ; corps = NTC_RAW.</text>
+			<text x="905" y="186" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,372) scale(1,-1)">Le corps du jack n’est donc pas GND ; anneau non utilisé.</text>
+			<text x="905" y="157" style="font-family: Arial; font-size: 20px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,314) scale(1,-1)">22 points de test au dos : voir TEST_POINTS.md.</text>
+			<polyline points="50 70, 1650 70" style="stroke: rgb(83%,86%,90%); stroke-linecap: butt; stroke-width: 1; fill: None; fill-rule: evenodd;"/>
+			<text x="50" y="42" style="font-family: Arial; font-size: 18px;fill: rgb(8%,18%,25%); stroke:none;" transform="translate(0,84) scale(1,-1)">Les modules LCD / BH1750 / TMP117 et la DevKit sont externes aux composants assemblés sur les PCB.</text>
+			<text x="50" y="14" style="font-family: Arial; font-size: 16px;fill: rgb(32%,41%,48%); stroke:none;" transform="translate(0,28) scale(1,-1)">Guide de lecture, non plan d’assemblage usine. Rebrancher hors tension ; contrôle du brochage par continuité avant mise sous tension.</text>
+		</g>
+	</g>
+</svg>

@@ -1,5 +1,6 @@
 ﻿Board,Assembly_item,Native_reference,Origin,Local_X_mm,Local_Y_mm,Native_X_mm,Native_Y_mm,Native_rotation_deg,Pads,First_pad_X_mm,First_pad_Y_mm,Status
 A,J1,J1,native footprint origin,94.0,12.0,154.0,67.0,0.0,1 2,94.0,12.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
+A,J10,J10,native footprint origin,73.5,31.0,133.5,86.0,0.0,1 2 3,73.5,31.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 A,J2,J2,native footprint origin,66.0,10.0,126.0,65.0,0.0,1 2 3 4,66.0,10.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 A,J3,J3,native footprint origin,72.0,64.0,132.0,119.0,0.0,1 2 3 4,72.0,64.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 A,J4,J4,native footprint origin,44.0,10.0,104.0,65.0,0.0,1 2 3 4,44.0,10.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
@@ -12,6 +13,7 @@ A,U1_SOCKET_TOP,U1,socket pad-centre centroid,32.0,27.3,92.0,82.3,0.0,16 17 18 1
 B,C10,C10,native footprint origin,10.0,46.5,70.0,101.5,0.0,1 2,10.0,46.5,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 B,C8,C8,native footprint origin,17.0,24.0,77.0,79.0,0.0,1 2,17.0,24.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 B,J1,J1,native footprint origin,15.0,55.0,75.0,110.0,0.0,1 2,15.0,55.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
+B,J10,J10,native footprint origin,42.0,7.5,102.0,62.5,0.0,1 2 3,42.0,7.5,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 B,J2,J2,native footprint origin,9.0,12.0,69.0,67.0,-90.0,1 2,9.0,12.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 B,J3,J3,native footprint origin,75.0,12.0,135.0,67.0,0.0,1 2,75.0,12.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"
 B,J4,J4,native footprint origin,81.0,52.0,141.0,107.0,0.0,1 2,81.0,52.0,"Top view; native angle, not approved assembly rotation; sockets require pad-row alignment"

@@ -92,6 +92,12 @@
       "group": "A"
     },
     {
+      "name": "A_J10_ENVELOPE",
+      "volume_mm3": 729.708,
+      "solids": 1,
+      "group": "A"
+    },
+    {
       "name": "A_J2_ENVELOPE",
       "volume_mm3": 896.308,
       "solids": 1,
@@ -310,6 +316,12 @@
     {
       "name": "B_J1_ENVELOPE",
       "volume_mm3": 563.108,
+      "solids": 1,
+      "group": "B"
+    },
+    {
+      "name": "B_J10_ENVELOPE",
+      "volume_mm3": 729.708,
       "solids": 1,
       "group": "B"
     },
@@ -1030,7 +1042,7 @@
           -40,
           0
         ],
-        "prism_count": 150,
+        "prism_count": 155,
         "reversible": true
       },
       {
@@ -1041,7 +1053,7 @@
           0,
           -3.5
         ],
-        "prism_count": 150,
+        "prism_count": 155,
         "reversible": true
       },
       {
@@ -1063,7 +1075,7 @@
           -40,
           0
         ],
-        "prism_count": 240,
+        "prism_count": 245,
         "reversible": true
       },
       {
@@ -1074,7 +1086,7 @@
           0,
           -3.5
         ],
-        "prism_count": 240,
+        "prism_count": 245,
         "reversible": true
       },
       {
@@ -1129,7 +1141,7 @@
           100,
           0
         ],
-        "prism_count": 205,
+        "prism_count": 208,
         "reversible": true
       },
       {
@@ -1151,7 +1163,7 @@
           50,
           0
         ],
-        "prism_count": 168,
+        "prism_count": 171,
         "reversible": true
       },
       {
@@ -1188,7 +1200,8 @@
           "J1",
           "J4",
           "J6",
-          "J7"
+          "J7",
+          "J10"
         ],
         "method": "BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified"
       }
@@ -1210,7 +1223,7 @@
     "solid_count": 6,
     "one_connected_solid_per_print_part": true
   },
-  "STEP_round_trip_solids": 105,
+  "STEP_round_trip_solids": 107,
   "B_extraction_samples_mm": [
     0,
     10,
@@ -1218,7 +1231,7 @@
     50
   ],
   "B_continuous_extraction_check": "Conservative swept bounding box clear from 0 to 50 mm, rear panel and all cables removed",
-  "STEP_volume_mm3": 418084.105,
+  "STEP_volume_mm3": 419543.521,
   "fusion_import_tested": false,
   "light_sensor": {
     "center_x_z_mm": [

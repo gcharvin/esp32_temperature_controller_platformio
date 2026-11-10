@@ -1,5 +1,12 @@
 # PCB A et B température — A v0.4 / B v0.5 buck intégré
 
+## Révision UART du 10 novembre 2026
+
+A0.4.2 / B0.5.2 ajoutent **J10, JST-XH3 UART 3,3V** sur les deux cartes.
+Voir [le contrat et les limites](UART_EXTENSION.md). Le PCB B température
+laisse les signaux UART non connectés ; aucun câble supplémentaire obligatoire.
+
+
 **Révision diagnostic du 6 novembre : A 0.4.1 / B 0.5.1.** Les noms de fichiers
 A04/B05 sont conservés pour cette famille ; utiliser les archives régénérées,
 dont les SHA256 et les cartouches identifient la révision courante.

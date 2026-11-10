@@ -34,7 +34,7 @@ def main():
                 physical+=1
             else:assert not choice['MPN']
         counts[code]=len(table)
-    assert physical==68
+    assert physical==70
     result=dict(status='PASS / prototype engineering selection; assembler approval remains external',
         native_references=counts,physical_native_components=physical,extra_sockets=2,shunts_supplied_loose=1,
         all_native_MPN_manufacturer_fields_match=True,substitutions_allowed=False,

@@ -1,10 +1,10 @@
 {
-  "revision": "0.3 / supply-independent A contract",
+  "revision": "0.4 / dedicated UART J10 / A0.4.2 B0.5.2",
   "logic_voltage_V": 3.3,
   "power_voltage_V": 5,
   "connector_family": "JST-XH",
   "pitch_mm": 2.5,
-  "harness": "three short internal straight-through cables; all connections made unpowered, no hot-plug",
+  "harness": "three required cables plus optional reserved UART cable; straight-through; connections unpowered, no hot-plug",
   "connectors": [
     {
       "reference": "J1",
@@ -80,6 +80,32 @@
           "connected_on_b": false
         }
       ]
+    },
+    {
+      "reference": "J10",
+      "function": "Dedicated 3.3V UART; optional on temperature prototype",
+      "required_for_temperature": false,
+      "pins": [
+        {
+          "pin": 1,
+          "net": "GND",
+          "direction": "common"
+        },
+        {
+          "pin": 2,
+          "net": "UART_A_TX",
+          "direction": "A->future B RX",
+          "gpio_on_a": 17,
+          "connected_on_b": false
+        },
+        {
+          "pin": 3,
+          "net": "UART_A_RX",
+          "direction": "future B TX->A",
+          "gpio_on_a": 16,
+          "connected_on_b": false
+        }
+      ]
     }
   ],
   "power_contract": {
@@ -100,7 +126,7 @@
     "external_A_source_rule": "Replace the B POWER cable with one protected 5 V source; do not backfeed B/J1 or parallel sources",
     "logic_voltage_V": 3.3,
     "partial_powering": "not qualified; connect I2C/CTRL only with both logics supplied; no hot-plug",
-    "usb": "No simultaneous ordinary USB cable and external 5 V; see manufacturing/power_and_usb_review.md",
+    "usb": "User reports successful simultaneous USB/VIN operation on previously used boards (2026-11-10); exact three DevKit power paths not characterized. JP1 retained as bench isolation, not automatic source selection. See manufacturing/power_and_usb_review.md",
     "review": "manufacturing/power_and_usb_review.md"
   }
 }

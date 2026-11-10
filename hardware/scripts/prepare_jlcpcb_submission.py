@@ -151,7 +151,7 @@ def build():
     geometry_boards={b['code']:b for b in geometry['boards']}
     probes=read_json(ROOT/'test_points.json')['boards']
     mappings=[];all_boms=[];counts={}
-    for code,prefix,expected_smt,expected_tht in [('A','A04',13,10),('B','B05',38,9)]:
+    for code,prefix,expected_smt,expected_tht in [('A','A04',13,11),('B','B05',38,10)]:
         folder=M/'review_A04_B05'/code;board=geometry_boards[code];ox,oy=board['native_origin_mm']
         native={p['ref']:p for p in board['parts']}
         bom=read_csv(folder/'BOM_SMT_RFQ_NOT_FOR_ORDER.csv')
@@ -247,7 +247,7 @@ def build():
         write(OUT/'support'/('schematic_'+code+'.pdf'),source(ROOT/'review'/(name+'.pdf')))
         write(OUT/'support'/('bare_board_test_'+code+'.d356'),source(M/'review_A04_B05'/code/'bare_board_test.d356'))
         write(OUT/'support'/('test_points_'+code+'_back.png'),source(ROOT/'review'/('test_points_'+code+'_back.png')))
-    for path,target in [(ROOT/'TEST_POINTS.md','TEST_POINTS.md'),(ROOT/'test_points.json','test_points.json'),
+    for path,target in [(ROOT/'TEST_POINTS.md','TEST_POINTS.md'),(ROOT/'UART_EXTENSION.md','UART_EXTENSION.md'),(ROOT/'test_points.json','test_points.json'),
                         (ROOT/'review/test_point_map.csv','test_point_map.csv'),
                         (ROOT/'../firmware/diagnostic/README.md','diagnostic_firmware_README.md'),
                         (ROOT/'review/routing/electronics_bench_plan.md','electronics_bench_plan.md'),
@@ -258,7 +258,7 @@ def build():
             text=text.replace('(../firmware/diagnostic/README.md)','(diagnostic_firmware_README.md)').replace('(review/routing/electronics_bench_plan.md)','(electronics_bench_plan.md)')
             blob=text.encode('utf-8')
         write(OUT/'support'/target,blob)
-    validation=dict(status='PASS_LOCAL_PACKAGE / RFQ_DFM_ONLY',boards=counts,total_placements_for_5A_5B=350,
+    validation=dict(status='PASS_LOCAL_PACKAGE / RFQ_DFM_ONLY',boards=counts,total_placements_for_5A_5B=360,
         additional_loose_shunts=5,SMT_and_THT_included=True,source_files_modified=False,
         excluded=dict(A_U1='Customer removable ESP32; replaced by two physical socket upload aliases J8/J9',
                       B_NT1='Copper only; not a purchased component'),
@@ -275,7 +275,7 @@ def build():
         if path.suffix=='.zip':
             with zipfile.ZipFile(path) as z:assert z.testzip() is None
     for name in ('README.md','request_support_EN.txt','official_sources.json'):OUTPUT_FILES.add(OUT/name)
-    manifest=dict(status=validation['status'],date='2026-11-09',workspace_sources_sha256=SOURCE_HASHES,
+    manifest=dict(status=validation['status'],date='2026-11-10',workspace_sources_sha256=SOURCE_HASHES,
         files_sha256={p.relative_to(OUT).as_posix():sha(p.read_bytes()) for p in sorted(OUTPUT_FILES)},
         counts=counts,order_authorized=False,order_placed=False)
     (OUT/'package_manifest.json').write_bytes(json_bytes(manifest))
@@ -309,7 +309,7 @@ def check():
         assert sha(ARCHIVE.read_bytes())==checksum
         assert not manifest['order_authorized'] and not manifest['order_placed']
     print(json.dumps(dict(status='PASS',archive=str(ARCHIVE),members=len(manifest['files_sha256'])+1,
-                          placements=350,loose_shunts=5,upload_or_order_performed=False),indent=2))
+                          placements=360,loose_shunts=5,upload_or_order_performed=False),indent=2))
 
 
 if __name__=='__main__':

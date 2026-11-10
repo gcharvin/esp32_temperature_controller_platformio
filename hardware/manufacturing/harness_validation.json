@@ -1,18 +1,20 @@
 {
   "status": "PASS / straight pin mapping matches both schematics",
-  "wire_count": 11,
-  "contact_count": 22,
+  "wire_count": 14,
+  "contact_count": 28,
+  "required_temperature_wires": 11,
+  "optional_UART_wires": 3,
   "housings": {
     "XHP-2": 2,
-    "XHP-3": 2,
+    "XHP-3": 4,
     "XHP-6": 2
   },
-  "lengths": "300+/-10mm for prototype quotation; real cable routing unqualified",
+  "lengths": "300+/-10mm for prototype quotation; UART cable optional and not added to current LCSC RFQ; real cable routing unqualified",
   "source_sha256": {
-    "interface_ab.json": "dc6de0be73a5da500104d6c03188ad218038d5b5af78e0f65fe25be81f449f59",
-    "review/pcb_a_display.net.xml": "6d503847dadcfa983840795475d49d60bed9bcd780bfe8eeb4d0cd4541f42068",
-    "review/pcb_b_temperature.net.xml": "82dcc702a1078c8bbf665939b98afcb7474b93c3c6ee9116a470a855f11a2c25",
-    "scripts/build_harness_map.py": "36afed08b12e6d5f2f1c970e8d67cff9963a23b50b8917b385b753d1f25b0d89",
-    "manufacturing/harness_pin_map.csv": "a831854f9ddedbda41b40bb69dae429bc3848f835aec8c56f8592900362bb590"
+    "interface_ab.json": "f87fad4ef3a8226ccddc440bddc45af0d5c3d7ca315f79864eeb51ccf1e0ae41",
+    "review/pcb_a_display.net.xml": "458b45408441d02f53effc0c43e2ddc226d17b0ce81b8eae2a8d07ad4ab3fef0",
+    "review/pcb_b_temperature.net.xml": "02e9e23db00198be671f155e8d7b72983fd4144a27f7028f96639c86f249b634",
+    "scripts/build_harness_map.py": "c8d509546e590e7d567620c084ac682d1fc9091f495073a2a73aecd81fc21380",
+    "manufacturing/harness_pin_map.csv": "c82e17f5cb0775e5ee93013917fc4381d555e0bf19de189b0f3f80a86e879d0b"
   }
 }

@@ -105,6 +105,8 @@ def main():
                                    'Integrated LM2596 input transients, startup and fault conditions not qualified.',
                                    'Current enclosure STEP checked separately; real fit, cables, clips and thermal tests pending.']}
     (ROOT/'review/routing/routing_validation.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
+    from check_uart_extension import main as check_uart
+    check_uart()
     print(json.dumps(data,indent=2))
 
 if __name__=='__main__':main()

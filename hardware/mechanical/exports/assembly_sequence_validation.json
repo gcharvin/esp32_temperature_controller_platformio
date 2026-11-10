@@ -74,7 +74,7 @@
         -40,
         0
       ],
-      "prism_count": 150,
+      "prism_count": 155,
       "reversible": true
     },
     {
@@ -85,7 +85,7 @@
         0,
         -3.5
       ],
-      "prism_count": 150,
+      "prism_count": 155,
       "reversible": true
     },
     {
@@ -107,7 +107,7 @@
         -40,
         0
       ],
-      "prism_count": 240,
+      "prism_count": 245,
       "reversible": true
     },
     {
@@ -118,7 +118,7 @@
         0,
         -3.5
       ],
-      "prism_count": 240,
+      "prism_count": 245,
       "reversible": true
     },
     {
@@ -173,7 +173,7 @@
         100,
         0
       ],
-      "prism_count": 205,
+      "prism_count": 208,
       "reversible": true
     },
     {
@@ -195,7 +195,7 @@
         50,
         0
       ],
-      "prism_count": 168,
+      "prism_count": 171,
       "reversible": true
     },
     {
@@ -232,7 +232,8 @@
         "J1",
         "J4",
         "J6",
-        "J7"
+        "J7",
+        "J10"
       ],
       "method": "BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified"
     }

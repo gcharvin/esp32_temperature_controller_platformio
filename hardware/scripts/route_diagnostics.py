@@ -65,7 +65,7 @@ def native_apply(source,target,routes):
  p.ZONE_FILLER(board).Fill(board.Zones());p.SaveBoard(str(target),board)
  print('Preserved',len(original),'original tracks/vias; added',len(json.loads(routes.read_text(encoding='utf-8'))))
 
-def plan(data,spec,width,height,keepouts):
+def plan(data,spec,width,height,keepouts,skip_unconnected=False):
  from PIL import Image,ImageDraw
  nx=round(width/STEP)+1;ny=round(height/STEP)+1;size=nx*ny
  rows=data['tracks'];added=[]
@@ -146,7 +146,8 @@ def plan(data,spec,width,height,keepouts):
    rows.append(row);added.append(row)
   print(pad['ref']+'.'+pad['pin'],net,'->',target.get('ref','track'),target.get('pin',''),flush=True)
  # Each resistor/LED pair is routed before its supply and return branches.
- newpads=[pad for pad in data['pads'] if pad['ref'] in newrefs]
+ newpads=[pad for pad in data['pads'] if pad['ref'] in newrefs and not
+          (skip_unconnected and pad['net'].removeprefix('/').startswith('unconnected-'))]
  connected=set()
  for pad in sorted(newpads,key=lambda p:(0 if '/LED_' in p['net'] else 1,p['net'],p['ref'],p['pin'])):
   key=pad['ref'],pad['pin']

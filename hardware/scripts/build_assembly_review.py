@@ -108,7 +108,7 @@ def extract():
                         Pads=' '.join(pad['number'] for pad in pads),First_pad_X_mm=first['at'][0],First_pad_Y_mm=first['at'][1],
                         Status='Top view; native angle, not approved assembly rotation; sockets require pad-row alignment'))
                     count+=1
-        assert count==19, 'Unexpected physical THT assembly scope'
+        assert count==21, 'Unexpected physical THT assembly scope'
     return data
 
 
@@ -129,8 +129,8 @@ def render():
         c.setFillColor(HexColor(color)); c.setFont('Helvetica', size); c.drawString(x, y, line)
     def header(title, page):
         text(30, H-35, title, 19)
-        text(30, H-54, 'ASSEMBLY REVIEW - NOT FOR ORDER | 2026-11-06 | Top view, not mirrored', 9, '#a14d16')
-        text(30, 20, 'A04 / B05 | Native KiCad geometry | PCB corner coordinates in mm; not a printable 1:1 template.', 8)
+        text(30, H-54, 'ASSEMBLY REVIEW - NOT FOR ORDER | 2026-11-10 | Top view, not mirrored', 9, '#a14d16')
+        text(30, 20, 'A0.4.2 / B0.5.2 | Native KiCad geometry | PCB corner coordinates in mm; not a printable 1:1 template.', 8)
         text(W-55, 20, str(page), 8)
     for index, b in enumerate(data['boards'], 1):
         header('PCB '+b['code']+' - component side and pin 1', index)
@@ -213,7 +213,7 @@ def render():
           ('B Q1 / Q2','Q1 G-D-S = 1-2-3; Q2 G-D-S = 1-2-3 (tab=2)'),
           ('B D3 / D4 / D9','Pad1 cathode: VIN_PROTECTED / VIN_PROTECTED / BUCK_SW respectively'),
           ('B C8 / C10','Positive pin1: VIN_PROTECTED / +5V_BUCK; C10 pin2 returns via R13'),
-          ('A/B J1; J6; J7','Pin1 GND on each. J1 pin2=5V. Use per-pin map, not cable colours.'),
+          ('A/B J1; J6; J7; J10','Pin1 GND. J10:2=TX_A,3=RX_A; pins2/3 NC on temperature B.'),
           ('B J2 / J3 / J4','Pin1: VIN_RAW / VIN_PROTECTED / 3V3_B. J4 pin2=NTC_RAW.'),
           ('A U1 sockets','Bottom pads1..15 EN->VIN; top pads16..30 3V3->GPIO23; pitch2.54'),
           ('B NT1','No purchased or fitted part; PGND/GND copper junction')]

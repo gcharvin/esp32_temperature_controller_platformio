@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-11-09T15:06:00+01:00"
+    "CreationDate": "2026-11-10T15:22:59+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "pcb_b_temperature",
       "GUID": "7063625f-625f-4746-956d-706572617475",
-      "Revision": "rev?"
+      "Revision": "0.5.2"
     },
     "Size": {
       "X": 90.15,

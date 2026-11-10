@@ -1,0 +1,19 @@
+{
+  "native_revisions": [
+    "A0.4.2",
+    "B0.5.2"
+  ],
+  "purpose": "French explanatory diagrams; not a manufacturing or placement approval",
+  "source_sha256": {
+    "scripts\\build_board_guides.py": "451731f063d9922d90325bc143be7b1b06d3288e0d1bb097c9c43675d92bd147",
+    "manufacturing\\output\\assembly_geometry.json": "74e040ec33a56f1185e46bc8ea32742e7a4f0edc6d08e712ecffa6c3044254d2",
+    "manufacturing\\wiring_and_harnesses.md": "569a1f60535925032522c2a5f3e04f0bd607a4f9fdbc8ca604ed08e6865a3e5c",
+    "TEST_POINTS.md": "02ac221429a8aefc63104357d6358fde7694eb9ab627383050f35b52dc154471",
+    "diagnostic_leds.json": "7b509eefab2449795e2bd69c93731aa7e7472a59fa2cf43d1001452df8f28489",
+    "scripts/build_assembly_review.py": "bb302b91885e8806d835886aac69677e1bfb3d3486f3079a75201b1e3a85ea49",
+    "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26"
+  },
+  "pcb_sources_modified": false
+}

@@ -261,7 +261,7 @@ def main(validate=True):
         for row in board['components']:
             rx,ry,rw,rh=row['bounds_mm'];ref=row['reference']
             if is_a and ref=='U1':continue
-            if ref in ('J1','J6','J7'):height=9.8;color='connector'
+            if ref in ('J1','J6','J7','J10'):height=9.8;color='connector'
             elif row['footprint'] is None:
                 height=20 if ref=='U1' else (10 if ref.startswith('J') else 8)
                 color='module' if ref=='U1' else 'connector'
@@ -501,8 +501,8 @@ def verify_assembly_paths():
             px,py=row['origin_mm'];angle=math.radians(row['rotation_deg'])
             for dx in (0,5.08):
                 tool_corridors.append(cyl(bx+px+dx*math.cos(angle),y0,H-by-py+dx*math.sin(angle),3,50))
-        elif ref in ('J1','J4','J6','J7'):
-            config=P['JST_service'];circuits={'J1':2,'J4':2,'J6':3,'J7':6}[ref]
+        elif ref in ('J1','J4','J6','J7','J10'):
+            config=P['JST_service'];circuits={'J1':2,'J4':2,'J6':3,'J7':6,'J10':3}[ref]
             margin=config['envelope_margin_each_side_mm']
             plugw=(circuits-1)*config['pitch_mm']+config['width_end_allowance_mm']+2*margin
             plugh=config['depth_mm']+2*margin
@@ -513,7 +513,7 @@ def verify_assembly_paths():
     collision('9 B JST axial service corridors',plug_corridors,service_obstacles)
     tests.append({'stage':'9 B connector service','rear_panel_removed':True,'shaft_diameter_mm':6,
                   'JST_rear_corridor_length_mm':P['JST_service']['extraction_corridor_mm'],'JST_housing_basis':P['JST_service'],'terminal_refs':['J2','J3'],
-                  'JST_refs':['J1','J4','J6','J7'],
+                  'JST_refs':['J1','J4','J6','J7','J10'],
                   'method':'BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified'})
     result={'tests':tests,'failures':failures,
             'reverse_order':'rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped; BH1750 cassette and optical insert removable separately on bench',

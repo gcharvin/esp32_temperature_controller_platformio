@@ -1,7 +1,7 @@
 # Dossier prototype A04 / B05 — point d’entrée
 
-Dernière révision native : **A0.4.1 / B0.5.1**, ajout de22 points de test au dos,
-sans composant supplémentaire acheté. Les archives A04/B05 sont régénérées.
+Dernière révision native : **A0.4.2 / B0.5.2**, ajout du JST UART J10 sur A et B,
+avec les22 points de test au dos conservés. Les archives A04/B05 sont régénérées.
 Voir `../TEST_POINTS.md` et `../../firmware/diagnostic/README.md` : le programme
 de banc maintient ENABLE à zéro, sans autoriser le chauffage. Il est compilé
 mais n'a pas été flashé/testé sur le matériel. Le dossier JLCPCB dédié est dans
@@ -34,15 +34,16 @@ un ancien STEP à la place du dossier courant.
 ## Périmètre figé
 
 Deux couches, A110×75mm /35µm et B90×65mm /70µm, épaisseur nominale1,6mm,
-ENIG demandé. **51 CMS +19 traversants** à assembler en usine, plus un cavalier
+ENIG demandé. **51 CMS +21 traversants** à assembler en usine, plus un cavalier
 à livrer séparément. Ni DevKit ni périphériques à acheter/souder comme U1.
-Les68 composants natifs physiques et les articles Harwin sont fixés par MPN.
+Les70 composants natifs physiques et les articles Harwin sont fixés par MPN.
 
-Les trois petits JST A/B sont POWER2, I2C3 et CTRL6, au pas2,50mm.
+Les trois JST A/B requis sont POWER2, I2C3 et CTRL6. J10 UART3 est ajouté
+sur les deux PCB, signaux NC sur B température, câble facultatif. Tous sont au pas2,50mm.
 Le connecteur de sonde est **B/J4**, NTC passive15k. Voir le schéma et
 `wiring_and_harnesses.md` ; ne pas déterminer la polarité à la couleur des fils.
 
-Le STEP courant est `enclosure_v10_integrated_buck.step` : façade amovible
+Le STEP courant est `enclosure_v11_integrated_buck.step` : façade amovible
 avec LCD/A, rails/clips, berceau B, panneau arrière, USB latéral et ventilation
 sur les côtés. Il représente des enveloppes de composants, avec les dimensions
 documentées des sockets/borniers et une réserve pour le plastique des broches

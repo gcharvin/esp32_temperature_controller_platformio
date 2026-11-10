@@ -10,7 +10,7 @@ for engineering review and quotation; it is not an approved production order.
 | Construction | 2-layer FR-4, 1.6 mm | 2-layer FR-4, 1.6 mm |
 | Finished external copper | 1 oz each side | **2 oz each side** |
 | SMT placement | Top side, 13 components | Top side, 38 components |
-| THT assembly | 8 native items + 2 separate sockets | 9 native items |
+| THT assembly | 9 native items + 2 separate sockets | 10 native items |
 | Scope | All listed SMT and THT parts soldered | All listed SMT and THT parts soldered |
 
 Please quote lead-free compatible FR4 Tg>=150C, **ENIG**, green soldermask and
@@ -40,6 +40,11 @@ The three-page assembly drawing, per-pad net/coordinate map and physical THT
 placement list are supplied in `assembly_review/`. Local coordinates start at
 the upper-left board corner in the top view; native coordinates are also
 included. Quote and align the two socket rows separately, not at U1's centroid.
+
+**Current native revisions: A0.4.2 / B0.5.2, UART extension.** Fit J10 (JST
+B3B-XH-A(LF)(SN)) on both boards. A uses GPIO17 TX and GPIO16 RX; B temperature
+contacts2/3 are deliberately NC. These are two fitted connectors, not DNP.
+The batch now has360 physical placements plus5 loose JP1 shunts.
 
 **Special purchasing/assembly points:**
 

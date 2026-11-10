@@ -1,4 +1,4 @@
-# Maquette 3D v0.10 — jack de sonde compact et PCB B avec buck intégré
+# Maquette 3D v0.11 — jack de sonde compact et PCB B avec buck intégré
 
 Révision du **9 novembre 2026**. Boîtier nu **155 × 100 × 115 mm**, paroi 3 mm.
 La carte B v0.5 porte maintenant son LM2596 : le XL4015, son berceau, ses guides,
@@ -7,17 +7,17 @@ côté de B peut servir au passage des faisceaux. A reste à v0.4.
 
 ## Ouvrir dans Fusion 360
 
-- **`exports/enclosure_v10_integrated_buck.step`** : assemblage complet courant.
-- `exports/enclosure_v10_printed_parts.step` : les six pièces imprimées seules.
+- **`exports/enclosure_v11_integrated_buck.step`** : assemblage complet courant.
+- `exports/enclosure_v11_printed_parts.step` : les six pièces imprimées seules.
 - `exports/enclosure_exploded.step` et `enclosure_printed_parts_exploded.step` : vues éclatées courantes.
-- `exports/parts_v10/` : STEP et STL individuels.
+- `exports/parts_v11/` : STEP et STL individuels.
 - `exports/preview_service.png`, `preview_b_power.png`, `preview_exploded.png` : arrière ouvert, B équipée et vue éclatée.
 - `exports/preview_light_sensor.png`, `preview_light_sensor_front.png` : fixation intérieure et fenêtre extérieure, vues locales de la géométrie réelle.
-- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v10.json` : résultats et traçabilité.
-- `exports/enclosure_v10_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
+- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v11.json` : résultats et traçabilité.
+- `exports/enclosure_v11_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
 
 Les fichiers numérotés v01 à v09 et leurs dossiers de pièces sont historiques. Les exports
-sans numéro listés ci-dessus correspondent à v0.10. Ne pas employer l'ancienne
+sans numéro listés ci-dessus correspondent à v0.11. Ne pas employer l'ancienne
 vue `preview_buck.png`, qui représente encore le module externe.
 
 Le STEP contient une arborescence de solides nommés : **105 solides valides** dans
@@ -216,7 +216,7 @@ la soudure sans traction ; sortir le panneau avant démontage de B.
 
 **L'équivalence dimensionnelle du lot Amazon avec le dessin Tayda n'est pas
 vérifiée.** La référence alternative documentée est Tayda **A-2585**. Imprimer
-d'abord `98_Optional_jack_fit_coupon.stl` dans `parts_v10/`, puis tester le jack,
+d'abord `98_Optional_jack_fit_coupon.stl` dans `parts_v11/`, puis tester le jack,
 sa rondelle et son écrou réels. Le coupon est séparé des six pièces du boîtier.
 Le jeu FDM, la rigidité locale et la tenue au serrage restent à essayer.
 
@@ -287,3 +287,9 @@ vérifie les sources et les SHA256 des membres de l'archive.
 ## Révision de préparation v0.8
 
 Les deux sockets utilisent désormais les enveloppes maximales Harwin38,85×2,65×8,65mm. La pile réserve aussi2,54mm pour le plastique des broches mâles et0,15mm de montage, ce qui recule le PCB et la fiche USB. Les borniers Phoenix1715721 utilisent14mm de hauteur enveloppe au lieu de9,8mm, pour leur hauteur montée13,8mm. Les quatre pièces imprimées restent identiques ; les enveloppes électroniques et les chemins de service sont régénérés. La cote de l’entretoise mâle et les corps des trois DevKit restent à contrôler sur le matériel. Les sources sont figées pendant toute génération ; une modification concurrente fait échouer le manifeste.
+
+## Révision v0.11 : UART
+
+Les deux enveloppes J10 sont ajoutées à partir du PCB natif. Le contrôle de
+déconnexion de B inclut ce nouveau JST même si son câble reste facultatif.
+Les six pièces imprimées et les dimensions155×100×115mm sont conservées.

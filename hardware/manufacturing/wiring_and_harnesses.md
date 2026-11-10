@@ -1,4 +1,4 @@
-# Câblage du prototype A/B
+# CÃ¢blage du prototype A/B
 
 Les numéros ci-dessous sont ceux des **pastilles PCB**. Ne pas les déduire
 du sens de lecture des fils sur une photographie : la vue côté entrée de
@@ -21,7 +21,7 @@ Le tableau machine `harness_pin_map.csv` est contrôlé contre les deux netlists
 
 Boîtiers sélectionnés : JST **XHP-2, XHP-3, XHP-6**. Contacts **SXH-001T-P0.6**
 adaptés aux AWG22–28 et à l'isolant spécifié par JST ; faire confirmer la
-combinaison fil/contact par le câbleur. Il faut 4 contacts pour POWER, 6 pour
+combinaison fil/contact par le cÃ¢bleur. Il faut 4 contacts pour POWER, 6 pour
 I2C et 12 pour CTRL, soit **22 contacts** et six boîtiers par jeu A/B.
 Les XH sont au pas **2,50 mm** ; ne pas commander des boîtiers Dupont2,54 mm
 comme substituts. Les fils de 300 mm réservent du mou de service et seront
@@ -124,3 +124,30 @@ Déconnecter les faisceaux de B avant extraction de son berceau. JP1 est livré
 ouvert, cavalier séparé. Pour le premier flash USB : couper24 V et toute source
 5 V, débrancherJ1/J6/J7, retirerJP1. Pour fonctionner sur B, débrancher l'USB,
 raccorder les trois faisceaux hors tension puis placerJP1.
+
+## Extension UART du 10 novembre 2026
+
+Révisions **A0.4.2 / B0.5.2** : J10 est un JST-XH3 supplémentaire assemblé
+sur chaque PCB, pas2,50mm, même MPN B3B-XH-A(LF)(SN) que J6.
+
+| Broche J10 | Carte A | Carte B température |
+| --- | --- | --- |
+| 1 | GND | GND |
+| 2 | TX_A, GPIO17, pad U1.22 | Non connectée ; réserve RX de future B |
+| 3 | RX_A, GPIO16, pad U1.21 | Non connectée ; réserve TX de future B |
+
+Câblage **droit 1→1, 2→2, 3→3** ; TX/RX sont nommés du point de vue de A.
+UART logique **3,3V**, sans alimentation dans ce connecteur : jamais RS232
+ni5V directement. Les transceivers RS232/RS485 éventuels appartiennent aux
+futures B. Le port série USB de la DevKit reste indépendant ; les deux PWM
+et ENABLE/FAULT_N/DIN0 restent disponibles. GPIO16/17 doivent être libres
+sur la variante de DevKit employée (modules à PSRAM utilisant ces broches
+non couverts par cette interface). Aucun UART n’est activé par le firmware
+de diagnostic actuel ; aucun essai de boucle matérielle n’est déclaré fait.
+
+B température n’a pas de périphérique UART : les deux pastilles sont
+intentionnellement NC et le connecteur est néanmoins à souder. Le câble UART
+est **facultatif pour ce prototype** et n’est pas ajouté au devis LCSC en cours.
+Si nécessaire plus tard, reprendre la construction H02 XHP-3/XHP-3,300mm AWG26
+avec un repérage UART distinct. Ne pas confondre J6 I²C et J10 UART, mécaniquement
+identiques. Les alias fabricant J8/J9 des deux sockets de A restent inchangés.

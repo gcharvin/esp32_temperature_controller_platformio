@@ -1,7 +1,7 @@
 {
-  "revision": "A04/B05 prototype engineering selection 2026-11-05",
+  "revision": "A0.4.2 / B0.5.2 dedicated UART extension 2026-11-10",
   "status": "Engineering selections frozen; exact sourcing and assembler process approval required before build",
-  "scope": "68 physical native PCB components; excludes virtual ESP32, copper net tie and22 copper test pads; sockets and shunt separate",
+  "scope": "70 physical native PCB components; excludes virtual ESP32, copper net tie and22 copper test pads; sockets and shunt separate",
   "substitution_policy": "No manufacturer/MPN substitutions without engineering review and regeneration of native data",
   "boards": {
     "A": {
@@ -324,6 +324,16 @@
         "Source": "",
         "Assembly": "NONE_COPPER",
         "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "J10": {
+        "Value": "A-B UART / 3V3 / GND TX_A RX_A",
+        "Footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+        "MPN": "B3B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "3P 2.50mm vertical THT, no locating boss; dedicated 3.3V UART, 1 GND / 2 TX_A / 3 RX_A; pins2/3 NC on temperature B",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
       }
     },
     "B": {
@@ -926,6 +936,16 @@
         "Source": "",
         "Assembly": "NONE_COPPER",
         "Decision": "COPPER_ONLY_TEST_POINT"
+      },
+      "J10": {
+        "Value": "A-B UART / 3V3 / GND TX_A RX_A",
+        "Footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+        "MPN": "B3B-XH-A(LF)(SN)",
+        "Manufacturer": "JST",
+        "Requirements": "3P 2.50mm vertical THT, no locating boss; dedicated 3.3V UART, 1 GND / 2 TX_A / 3 RX_A; pins2/3 NC on temperature B",
+        "Source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "Assembly": "FACTORY_THT_QUOTE",
+        "Decision": "ENGINEERING_SELECTED_FOR_PROTOTYPE"
       }
     }
   },

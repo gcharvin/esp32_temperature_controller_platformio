@@ -1,8 +1,9 @@
 # Préparation de fabrication A v0.4 / B v0.5
 
-Révision courante **A0.4.1 / B0.5.1**, ajout de **22 pastilles de test au dos**,
-sans changement des68 composants natifs achetés, des51 CMS ou des19 traversants
-physiques à monter. Les anciens noms A04/B05 désignent la famille de fichiers.
+Révision courante **A0.4.2 / B0.5.2**, ajout du **JST UART J10** sur chaque carte.
+Les22 pastilles de test au dos sont conservées. Le lot comprend désormais
+**70 composants natifs achetés, plus les deux sockets**. Cela représente
+**51 CMS et21 traversants physiques à assembler**, sockets incluses. Les anciens noms A04/B05 désignent la famille de fichiers.
 Les TP ne sont ni à approvisionner ni à souder. Voir [le plan de mesure](../TEST_POINTS.md)
 et [le firmware de diagnostic séparé](../../firmware/diagnostic/README.md).
 Le paquet JLCPCB courant est dans `jlcpcb/` et son archive dédiée.
@@ -16,7 +17,7 @@ fabricant restent distincts.
 
 ## Sélection et sources
 
-[component_selection.json](component_selection.json) fixe les68 composants
+[component_selection.json](component_selection.json) fixe les70 composants
 physiques natifs, avec fabricant/MPN exacts, empreintes et sources. Les champs
 sont inscrits dans les schémas et PCB, et vérifiés sur les netlists fraîches.
 Deux sockets HarwinM20-7821546 et un cavalier M7566-05 livré séparément sont
@@ -58,7 +59,7 @@ L’IPC conserve son unité native0,0001pouce ; les Gerber/perçages/CPL sont m�
 Ne pas appliquer un décalage d’origine manuel.
 
 `assembly_review/` contient le PDF trois pages, la carte des pastilles/nets,
-les19 placements traversants physiques et les contrôles liés aux sources.
+les21 placements traversants physiques et les contrôles liés aux sources.
 Les deux barrettes ne sont pas à placer au centroïde de la DevKit. Les
 coordonnées locales partent du coin supérieur gauche vu côté composants ;
 les coordonnées natives sont également fournies. `positions_native.csv`
@@ -75,7 +76,7 @@ compare tous les perçages et les positions des ouvertures de pâte au PCB natif
 [fabrication_specification.json](fabrication_specification.json) est la fiche
 de fabrication : FR4 compatible sans plomb, Tg≥150°C demandé,1,6mm, ENIG,
 masque vert, sérigraphie blanche ; A35µm et B70µm sur les deux faces.
-Les51 CMS et les19 traversants sont à assembler en usine ; cavalier séparé.
+Les51 CMS et les21 traversants sont à assembler en usine ; cavalier séparé.
 Les modules/périphériques externes restent dans la BOM système d’intégration.
 
 Pour B : devis Standard avec profil réel **pic LM2596≤245°C**, manutention MSL

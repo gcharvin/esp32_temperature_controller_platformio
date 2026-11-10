@@ -6,7 +6,7 @@ simulations ni le modèle 3D en qualification du matériel réel.
 
 ## Références et empreintes figées
 
-`component_selection.json` fixe les MPN des 68 composants physiques natifs.
+`component_selection.json` fixe les MPN des 70 composants physiques natifs.
 Ils sont inscrits dans les schémas et PCB, puis comparés aux netlists fraîches.
 Les deux barrettes Harwin et le cavalier livré séparément sont des articles
 supplémentaires explicites. La DevKit reste fournie par l'utilisateur et NT1
@@ -67,7 +67,7 @@ du buck par un montage improvisé si un exemplaire échoue à ce contrôle.
 ## Mécanique et service
 
 La maquette v0.10 réserve les dimensions maximales documentées des sockets,
-un espace de montage de 0,15 mm et une entretoise plastique de broches mâles
+un espace de montage de 0,15 mm et une entretoise plastique de broches mÃ¢les
 supposée de 2,54 mm. Cette dernière cote reste une enveloppe de conception,
 pas une mesure des trois DevKit. La hauteur montée des borniers Phoenix est
 13,8 mm ; l'enveloppe utilise 14 mm. Les accès et les 20 séquences rigides sont
@@ -97,3 +97,16 @@ profil thermique/MSL et les références, son aperçu de placement et son devis.
 Après réception viennent les essais du plan de banc, le firmware adapté et
 la protection thermique indépendante correspondant à l'expérience. Le
 chauffage 100 W n'est pas un essai initial d'alimentation des cartes.
+
+## Révision UART du 10 novembre 2026
+
+A0.4.2 / B0.5.2 ajoutent J10 sur chaque PCB, avec GPIO17 TX_A et GPIO16 RX_A
+sur A. Aucun second MCU ou transceiver sur B température : ses contacts2/3
+restent NC. Les broches de commandes J7, le convertisseur et la mesure NTC
+sont inchangés. Voir `../UART_EXTENSION.md` et les vérifications de conservation
+des pistes. Deux JST traversants sont ajoutés au total ; pas de nouveau CMS.
+
+L’utilisateur rapporte un fonctionnement simultané USB/VIN sans problème
+observé sur les DevKit utilisées. JP1 est conservé dans cette révision UART
+comme isolement de banc ; aucune incompatibilité générale n’est déduite de
+l’absence de schéma documenté. Les chemins des variantes restent à caractériser.

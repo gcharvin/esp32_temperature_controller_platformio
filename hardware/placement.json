@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4.1 / B0.5.1 - back-side test pads; no power topology change",
+  "revision": "A0.4.2 / B0.5.2 dedicated UART J10",
   "status": "routed, ERC/DRC checked; prototype thermal/mechanical qualification pending",
   "case_external_mm": {
     "width": 155,
@@ -194,6 +194,24 @@
           "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
           "height_mm": 9.8,
           "status": "physical routed prototype; verify module fit and thermal behavior"
+        },
+        {
+          "reference": "J10",
+          "value": "A-B UART / 3V3 / GND TX_A RX_A",
+          "origin_mm": [
+            73.5,
+            31.0
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "bounds_mm": [
+            70.525,
+            28.125,
+            10.95,
+            6.8
+          ],
+          "height_mm": 9.8,
+          "status": "JST-XH3 dedicated UART 3.3V; connector fitted, no UART endpoint on temperature B"
         },
         {
           "reference": "J2",
@@ -1117,6 +1135,24 @@
           "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
           "height_mm": 9.8,
           "status": "physical footprint / prototype review pending"
+        },
+        {
+          "reference": "J10",
+          "value": "A-B UART / 3V3 / GND TX_A RX_A",
+          "origin_mm": [
+            42.0,
+            7.5
+          ],
+          "rotation_deg": 0.0,
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "bounds_mm": [
+            39.025,
+            4.625,
+            10.95,
+            6.8
+          ],
+          "height_mm": 9.8,
+          "status": "JST-XH3 dedicated UART 3.3V; connector fitted, no UART endpoint on temperature B"
         },
         {
           "reference": "J2",

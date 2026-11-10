@@ -1,5 +1,5 @@
 {
-  "revision": "A 0.4 / B 0.5 integrated buck",
+  "revision": "A0.4.2 / B0.5.2 UART, original power topology",
   "devkit": {
     "manufacturer": "Customer supplied; diymore is historical reference drawing",
     "purchase_url": "https://www.amazon.fr/dp/B0DGLCWR76",
@@ -68,8 +68,8 @@
       "18": null,
       "19": null,
       "20": "ENC_A",
-      "21": null,
-      "22": null,
+      "21": "UART_A_RX",
+      "22": "UART_A_TX",
       "23": null,
       "24": null,
       "25": "ENC_B",

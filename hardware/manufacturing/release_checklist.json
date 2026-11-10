@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4.1/B0.5.1 diagnostic preparation",
+  "revision": "A0.4.2/B0.5.2 UART preparation",
   "date": "2026-11-09",
   "fabrication_release": false,
   "order_placed": false,
@@ -13,7 +13,7 @@
     {
       "id": "native_part_selection",
       "status": "ENGINEERING_FROZEN",
-      "action": "68 physical native MPN/manufacturer fields fixed in schematics and PCBs; two additional Harwin sockets and one loose shunt specified. component_selection.json and validation report are authoritative."
+      "action": "70 physical native MPN/manufacturer fields fixed in schematics and PCBs; two additional Harwin sockets and one loose shunt specified. component_selection.json and validation report are authoritative."
     },
     {
       "id": "footprints_and_exports",

@@ -1,22 +1,22 @@
 {
   "status": "PASS / prototype engineering selection; assembler approval remains external",
   "native_references": {
-    "A": 32,
-    "B": 60
+    "A": 33,
+    "B": 61
   },
-  "physical_native_components": 68,
+  "physical_native_components": 70,
   "extra_sockets": 2,
   "shunts_supplied_loose": 1,
   "all_native_MPN_manufacturer_fields_match": true,
   "substitutions_allowed": false,
   "source_sha256": {
-    "manufacturing/component_selection.json": "63ff2f71fb229c3790cc9309234dbb04253b025e6e104e6793ec551d2a64f6b5",
-    "scripts/check_component_selection.py": "b5973794d9904160182e9884b18ab90dc051754ee633ec76f6f6c1e996416a99",
-    "pcb_a_display/pcb_a_display.kicad_sch": "d384bb55aa10397c4ef1f50b366d2d36ec245aafb6505c6ff6b986e91ab3a7ae",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
-    "review/pcb_a_display.net.xml": "6d503847dadcfa983840795475d49d60bed9bcd780bfe8eeb4d0cd4541f42068",
-    "pcb_b_temperature/pcb_b_temperature.kicad_sch": "2fa1e6ff86e1e78516c3eea50a6716275c4539d2a1b6d492ab6fa76fc9932596",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
-    "review/pcb_b_temperature.net.xml": "82dcc702a1078c8bbf665939b98afcb7474b93c3c6ee9116a470a855f11a2c25"
+    "manufacturing/component_selection.json": "98cff5178d0b853918e45aa743f7521928651683228ec91e9f67194f26be5d9f",
+    "scripts/check_component_selection.py": "c2a5440dbb1a0255b2b38c271f3859c1798283cde151d64f7fede05d698bf30f",
+    "pcb_a_display/pcb_a_display.kicad_sch": "2552f7f0641d2093ba39fa690c9effa31fbcab8c06515929b86895068d7c5fb2",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+    "review/pcb_a_display.net.xml": "458b45408441d02f53effc0c43e2ddc226d17b0ce81b8eae2a8d07ad4ab3fef0",
+    "pcb_b_temperature/pcb_b_temperature.kicad_sch": "2ecab8c268ec178d21c996a38642f33ae28489d9b481da25c6548ee43e405931",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26",
+    "review/pcb_b_temperature.net.xml": "02e9e23db00198be671f155e8d7b72983fd4144a27f7028f96639c86f249b634"
   }
 }

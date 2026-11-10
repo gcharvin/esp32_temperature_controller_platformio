@@ -94,7 +94,7 @@ def main():
                    ROOT/'scripts/build_harness_map.py',ROOT/'scripts/prepare_fabrication.py',
                    ROOT/'manufacturing/START_HERE.md',ROOT/'manufacturing/factory_response.csv',
                    ROOT/'pcb_a_display/fp-lib-table',ROOT/'pcb_b_temperature/fp-lib-table',
-                   ROOT/'test_points.json',ROOT/'TEST_POINTS.md',ROOT/'scripts/check_test_points.py',
+                   ROOT/'test_points.json',ROOT/'TEST_POINTS.md',ROOT/'UART_EXTENSION.md',ROOT/'scripts/check_uart_extension.py',ROOT/'review/routing/uart_extension_validation.json',ROOT/'scripts/check_test_points.py',
                    ROOT/'review/routing/test_points_validation.json',ROOT/'review/diagnostic_firmware_validation.json'):
         manifest['sources_sha256'][source.relative_to(ROOT).as_posix()]=sha(source)
     native_hashes={p:sha(p) for name in ('pcb_a_display','pcb_b_temperature')
@@ -251,7 +251,7 @@ def main():
     shutil.copy2(drawings,assembly_folder/drawings.name)
     shutil.copy2(lands,assembly_folder/lands.name)
     manifest['assembly_drawings']=dict(pages=drawing_review['pages'],
-        status=drawing_review['status'],physical_THT_items=19,
+        status=drawing_review['status'],physical_THT_items=21,
         coordinate_map='assembly_review/assembly_pad_map.csv',
         THT_placement='assembly_review/assembly_THT_placement.csv')
     manifest['output_sha256']={p.relative_to(OUT).as_posix():sha(p) for p in sorted(OUT.rglob('*'))
@@ -262,7 +262,7 @@ def main():
         'manufacturing_fit_audit.json','assembly_RFQ_draft.md','usb_service_test.md','panel_B_proposal.svg',
         'land_pattern_review.json','component_selection.json','fabrication_specification.json','engineering_review.md',
         'wiring_and_harnesses.md','harness_pin_map.csv','harness_validation.json','factory_acceptance_test.md',
-        'fabrication_output_validation.json','START_HERE.md','factory_response.csv')]+[ROOT/'devkit_compatibility.md',ROOT/'TEST_POINTS.md',ROOT/'test_points.json',
+        'fabrication_output_validation.json','START_HERE.md','factory_response.csv')]+[ROOT/'devkit_compatibility.md',ROOT/'TEST_POINTS.md',ROOT/'UART_EXTENSION.md',ROOT/'test_points.json',
         ROOT/'review/test_point_map.csv',ROOT/'review/test_points_A_back.png',ROOT/'review/test_points_B_back.png']
     manifest['attachments_sha256']={p.name:sha(p) for p in attachments}
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

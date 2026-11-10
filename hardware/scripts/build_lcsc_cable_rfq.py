@@ -41,6 +41,11 @@ def validate():
                     for net in ET.parse(p).findall('./nets/net') for n in net.findall('node')}
     expected={}
     for r in csv.DictReader((ROOT/'hardware/manufacturing/harness_pin_map.csv').open(encoding='utf-8-sig')):
+        if r['Harness']=='UART_OPTIONAL':
+            # Future UART uses a standard XH3 straight cable; not in this temperature RFQ.
+            assert r['End_A']=='A/J10' and r['End_B']=='B/J10'
+            assert r['Pin_A']==r['Pin_B'] and r['Housing_each_end']=='XHP-3'
+            continue
         ident={'POWER':'H01','I2C':'H02','CTRL':'H03'}[r['Harness']]
         h=next(x for x in hs if x['id']==ident)
         assert h['awg']==int(r['Wire_AWG']) and h['length_mm']==int(r['Length_mm'])

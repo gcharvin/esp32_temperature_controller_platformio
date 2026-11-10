@@ -9,11 +9,11 @@
     "Phoenix terminal pitch5.08mm, hole1.3mm, envelope at least installed height13.8mm"
   ],
   "source_sha256": {
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
     "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
-    "placement.json": "ad62a3777cb2b2a3a1925a856a9085cccef0bf35fffb5a32e2720affa9579776",
-    "module_selection.json": "eb5a7f97b79a9cae4a4adeb0e71ab71bb7f6cba9b3189ece9b555c1a0dac7967",
+    "placement.json": "abe05c095f4512ee4aee41556f07a1bf23bfef0cc862dcdf0c1c0cf2a85a2d09",
+    "module_selection.json": "63712d1417803524367246603235468f019b53de587e32b1922d63a382ab97a1",
     "scripts/check_manufacturer_land_patterns.py": "e4644b9d72007f47d370ce19d370cca1e8a259a88382074a9b28a5482d07ac85",
     "lab_hardware.pretty/Vishay_WSL1206_6m_to_200m.kicad_mod": "5175ad9968be1486339a3d41f87157080b67465134f4ddaff113bfaade5d598d",
     "lab_hardware.pretty/ESP32_30P_Harwin_M20_7821546_Rows25.40mm.kicad_mod": "8bdfe39fbeb8a4d099d4a729061eb70c9a13502a95a935523c74344a3bb6ecb6",

@@ -19,6 +19,7 @@ TMP117 module / addr 0x48,J4,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical
 BH1750 module / addr 0x23,J5,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,JST,B4B-XH-A(LF)(SN),C144395
 A-B I2C / XH-3,J6,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,JST,B3B-XH-A(LF)(SN),C144394
 A-B CTRL / XH-6,J7,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,JST,B6B-XH-A(LF)(SN),C144397
+A-B UART / 3V3 / GND TX_A RX_A,J10,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,JST,B3B-XH-A(LF)(SN),C144394
 5V DevKit link / remove for service,JP1,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Harwin,M20-9990246,
 Female socket 1x15 2.54mm 8.5mm high,J8,Harwin_M20-7821546_1x15_P2.54mm,Harwin,M20-7821546,
 Female socket 1x15 2.54mm 8.5mm high,J9,Harwin_M20-7821546_1x15_P2.54mm,Harwin,M20-7821546,

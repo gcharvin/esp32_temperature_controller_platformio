@@ -42,7 +42,7 @@ def main():
         if result.returncode:
             print(result.stdout[-5000:]);print(result.stderr[-3000:]);raise RuntimeError(name+' failed; '+str(log))
         done.append(dict(stage=name,exit_code=0));print('PASS '+name,flush=True)
-    files=[ROOT/'review/validation.txt',ROOT/'review/routing/component_selection_validation.json',
+    files=[ROOT/'review/validation.txt',ROOT/'review/routing/component_selection_validation.json',ROOT/'review/routing/uart_extension_validation.json',
            ROOT/'review/routing/test_points_validation.json',ROOT/'review/diagnostic_firmware_validation.json',
            ROOT/'review/routing/manufacturer_land_patterns.json',ROOT/'review/routing/routing_validation.json',
            ROOT/'manufacturing/manufacturing_fit_audit.json',ROOT/'manufacturing/harness_validation.json',

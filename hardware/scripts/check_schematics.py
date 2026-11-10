@@ -70,8 +70,11 @@ def main():
         assert {n for (r,_),n in pins.items() if r=='J6'} == {'GND','I2C_SDA','I2C_SCL'}
     a,ag=boards['pcb_a_display']; b,bg=boards['pcb_b_temperature']
     # Physical 30-contact socket numbering; GPIO labels are not pad numbers.
-    for pin,net in [(15,'+5V_DEVKIT'),(14,'GND'),(17,'GND'),(26,'I2C_SDA'),(29,'I2C_SCL'),(8,'PWM0'),(9,'PWM1'),(10,'ENABLE'),(6,'DIN0'),(7,'FAULT_N'),(20,'ENC_A'),(25,'ENC_B'),(30,'ENC_SW')]:
+    for pin,net in [(15,'+5V_DEVKIT'),(14,'GND'),(17,'GND'),(26,'I2C_SDA'),(29,'I2C_SCL'),(8,'PWM0'),(9,'PWM1'),(10,'ENABLE'),(6,'DIN0'),(7,'FAULT_N'),(20,'ENC_A'),(25,'ENC_B'),(30,'ENC_SW'),(21,'UART_A_RX'),(22,'UART_A_TX')]:
         check_pin(a,'U1',pin,net)
+    assert ag['UART_A_TX']=={('U1','22'),('J10','2')}
+    assert ag['UART_A_RX']=={('U1','21'),('J10','3')}
+    check_nc(b,bg,'J10',2);check_nc(b,bg,'J10',3)
     check_pin(a,'JP1',1,'+5V_AB');check_pin(a,'JP1',2,'+5V_DEVKIT')
     check_pin(a,'U2',5,'+3V3_A');check_pin(a,'J2',2,'+3V3_A')
     for pin,net in [(1,'+3V3_B'),(8,'+3V3_B'),(3,'GND'),(4,'NTC_ADC'),(9,'I2C_SDA'),(10,'I2C_SCL'),(2,'FAULT_N')]:

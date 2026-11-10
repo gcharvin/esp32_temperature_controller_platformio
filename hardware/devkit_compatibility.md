@@ -48,3 +48,14 @@ Une difficulté de connexion au bootloader ne démontre pas une incompatibilité
 avec les sockets de A ; elle doit être diagnostiquée sur la carte concernée.
 
 La préparation finale utilise `LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm`, avec deux HarwinM20-7821546, trous1,05mm et entraxe confirmé. L’ancienne empreinte `_ASSUMED` ne sert qu’aux révisions archivées. Le STEP v0.8 inclut le plastique des broches mâles sous forme d’une enveloppe2,54mm, à vérifier sur les modules.
+
+## Révision UART et retour d’usage du 10 novembre 2026
+
+A0.4.2 utilise GPIO17 TX et GPIO16 RX sur J10. Ces deux broches doivent être
+libres sur la DevKit : les modules WROVER qui les réservent à la PSRAM ne
+sont pas couverts par cette affectation. Le brochage USB UART0 n’est pas modifié.
+
+L’utilisateur rapporte des utilisations simultanées USB et VIN sans problème
+observé. Cela documente un fonctionnement réel, sans identifier encore le
+chemin VIN/VBUS de chacune des trois cartes. JP1 reste un isolement de banc
+pour cette révision ; aucune incompatibilité USB/VIN générale n’est affirmée.

@@ -1,16 +1,16 @@
 {
   "status": "Prepared; bare-board tests have not been performed",
   "board": "B",
-  "record_count": 169,
+  "record_count": 174,
   "ground_tie_records_normalized": 27,
   "expected_physical_equivalence": [
     "PGND",
     "GND"
   ],
   "all_coordinates_and_other_nets_unchanged": true,
-  "source_PCB_sha256": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
+  "source_PCB_sha256": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26",
   "output_sha256": {
-    "bare_board_test_raw_kicad.d356": "22e83449d84efb5f1468f77d1e0ecf1ef2da6fe905fed11c2184170dc219712d",
-    "bare_board_test.d356": "c1844f0158ac8aa74891c4bc7e43e5ed3a4037bb97709070a3f4ac09f53f966b"
+    "bare_board_test_raw_kicad.d356": "73cac93e91c43a61e5136d1a0d1490ab5b3207d12ef79ba1eaecc48f6baa04cd",
+    "bare_board_test.d356": "3279e39d4d800e83096f1990309983e0caeb6a4e92c8227d07ec42d81645f029"
   }
 }

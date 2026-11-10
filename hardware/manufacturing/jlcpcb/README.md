@@ -1,13 +1,13 @@
 # Dépôt JLCPCB — devis et revue préalable, 5 A + 5 B assemblées
 
-**Révision native courante A0.4.1 / B0.5.1 : 22 pastilles de test ajoutées au dos.**
+**Révision native courante A0.4.2 / B0.5.2 : JST UART J10 ajouté sur A et B, 22 pastilles de test conservées.**
 Les noms A04/B05 restent ceux de la famille de fichiers, mais les Gerber et
 archives ont été régénérés. Les TP ne sont pas des composants à fournir ou monter ;
-les quantités d'assemblage restent23 sur A et47 sur B. Le dossier `support/`
+les quantités d'assemblage deviennent24 sur A et48 sur B. Le dossier `support/`
 comprend leur plan de mesure et leurs cartes de repérage.
 
-Dossier mis à jour le **9 novembre 2026**, A0.4.1 / B température0.5.1 ; schémas et routage
-complétés par les points de test, composants achetés inchangés. **Demande de devis uniquement ; aucune commande,
+Dossier mis à jour le **10 novembre 2026**, A0.4.2 / B température0.5.2 ; schémas et routage
+complétés par J10 UART sur chaque carte ; points de test conservés. **Demande de devis uniquement ; aucune commande,
 réservation payante de composants ou fabrication n'est autorisée.**
 
 La [liste des achats client](support/customer_purchase_list.csv) contient les
@@ -16,13 +16,13 @@ nécessaires. Elle est distincte des BOM d'assemblage de `upload_A/` et `upload_
 ne pas l'importer comme BOM PCBA et ne pas faire acheter ces accessoires au
 fabricant. Le [guide d'achat dans le dépôt](https://github.com/gcharvin/esp32_temperature_controller_platformio/blob/newdev/hardware/manufacturing/README.md#achats-à-notre-charge-et-liens)
 présente les mêmes besoins avec des liens cliquables ; il ne remplace pas
-les références usine figées. Aucun composant supplémentaire n'est ajouté aux PCB.
+les références usine figées. Les deux connecteurs J10 supplémentaires figurent dans les BOM PCBA.
 La liste du 9 novembre regroupe les achats chez Amazon.fr et GoTronic, le
 compte GoTronic étant accepté. Voir la [politique fournisseur](support/customer_supply_policy.json)
 et le [détail des faisceaux](support/customer_harnesses.md). Les trois câbles A/B
 et les quatre liaisons périphériques n’ont pas de référence complète qualifiée
 dans ce panier ; les cordons GoTronic QW-4C et JST1164 sont des solutions partielles. La maquette mécanique
-courante est v0.10 ; le lot Amazon du jack et les faisceaux restent à qualifier
+courante est v0.11 ; le lot Amazon du jack et les faisceaux restent à qualifier
 sur les pièces réelles. Le choix de tension nominale d'usage doit encore être
 résolu avant achat de l'alimentation et du chauffage.
 
@@ -60,7 +60,7 @@ confirmer par le support. Ne pas payer pour déclencher une revue.
 | Cuivre extérieur, chaque face | **1 oz / 35 µm** | **2 oz / 70 µm** |
 | Finition / masque / sérigraphie | ENIG / vert / blanc | ENIG / vert / blanc |
 | Mode d'assemblage demandé pour ce devis | **Standard**, dessus | **Standard**, dessus |
-| Articles à monter par carte | **23 = 13 CMS + 10 traversants** | **47 = 38 CMS + 9 traversants** |
+| Articles à monter par carte | **24 = 13 CMS + 11 traversants** | **48 = 38 CMS + 10 traversants** |
 
 FR4 compatible sans plomb, Tg ≥150 °C demandé ; à confirmer avec le fabricant.
 Les paramètres précis sont dans `support/fabrication_specification.json`.
@@ -110,11 +110,21 @@ Après la première réponse du support, ou pour voir le devis automatique de A 
 Les libellés peuvent varier selon le compte. Cette procédure a été documentée
 depuis les sources publiques ; aucun import dans un compte JLCPCB n'a été testé.
 
+## Révision UART : inclusion obligatoire de J10
+
+Souder **J10, JST B3B-XH-A(LF)(SN), sur les deux cartes**. Les deux signaux
+NC de B température ne signifient pas que le connecteur soit à omettre.
+Brochage droit :1GND,2TX_A,3RX_A ; GPIO17 TX / GPIO16 RX sur A. Aucun
+périphérique UART ni transceiver RS232 ajouté à B température. Le câble
+est optionnel ; le devis LCSC économique courant garde son périmètre.
+Les devis/captures du10novembre portant sur les anciens fichiers A0.4.1/B0.5.1
+ne constituent pas un chiffrage complet de cette nouvelle révision.
+
 ## Points à faire traiter avant toute commande
 
 - **Toutes les pièces montées** : le devis doit couvrir les CMS et les
   traversants, y compris connecteurs, sockets, C8/C10 et Q1. Le lot représente
-  **350 placements**, plus **5 cavaliers JP1 à livrer séparément**.
+  **360 placements**, plus **5 cavaliers JP1 à livrer séparément**.
   DevKit, écran, modules capteurs, sonde, chauffage et boîtier ne sont pas à
   acheter ni à assembler par JLCPCB dans cette demande.
 - **Sourcing** : `support/exact_sourcing_REQUIRED.csv` liste les MPN sans ID

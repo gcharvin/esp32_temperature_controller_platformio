@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4.1-B0.5.1 diagnostic test pads; physical assembly unchanged",
+  "revision": "A0.4.2-B0.5.2 dedicated J10 UART; 22 back test pads retained",
   "scope": "Five assembled prototype A boards and five assembled temperature B boards for quotation; not an order",
   "quote_quantity_each": 5,
   "order_authorized": false,
@@ -22,7 +22,7 @@
       ],
       "outer_copper_um_each_side": 35,
       "SMT": 13,
-      "factory_THT_including_sockets": 10,
+      "factory_THT_including_sockets": 11,
       "copper_only_testpads": 10
     },
     "B": {
@@ -32,7 +32,7 @@
       ],
       "outer_copper_um_each_side": 70,
       "SMT": 38,
-      "factory_THT": 9,
+      "factory_THT": 10,
       "input_V": 24,
       "heater_target_max_W": 100,
       "copper_only_testpads": 12
@@ -49,7 +49,8 @@
     "customer_module": "Do not buy or solder the removable ESP32 DevKit",
     "net_tie": "B/NT1 copper only; no purchased part",
     "substitutions": "No automatic manufacturer, package or value substitutions",
-    "testpoints": "TP* are exposed B.Cu/B.Mask copper only, no paste and no purchased/fitted part"
+    "testpoints": "TP* are exposed B.Cu/B.Mask copper only, no paste and no purchased/fitted part",
+    "UART_J10": "Fit JST B3B-XH-A(LF)(SN) on A and B. B temperature contacts2/3 intentionally NC, not a missing component. No change to J8/J9 socket import aliases."
   },
   "panelization": {
     "owner": "Assembler, proposal and DFM approval before build",

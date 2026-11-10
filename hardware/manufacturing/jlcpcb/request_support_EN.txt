@@ -3,7 +3,9 @@ Subject: PRE-SALES RFQ / DFM feasibility review only - 5x A04 + 5x B05 fully ass
 
 Hello,
 
-Current native revision is A0.4.1 / B0.5.1 (diagnostic revision of the A04/B05
+UART revision: fit J10 (JST B3B-XH-A(LF)(SN)) on BOTH boards. A:1 GND,2 TX_A/GPIO17,3 RX_A/GPIO16. On temperature B, pins2/3 are intentionally NC; fit the connector anyway. Existing J8/J9 remain socket import aliases. Use only A0.4.2/B0.5.2 regenerated files.
+
+Current native revision is A0.4.2 / B0.5.2 (diagnostic revision of the A04/B05
 family):22 exposed BACK-SIDE copper test pads were added. TP* references are
 NOT purchased or fitted components; no solder paste on these pads. Use the
 current regenerated Gerber ZIPs, not a previous A04/B05 upload. The supplied
@@ -27,8 +29,8 @@ Project requirements:
   5 fully assembled. Target application: regulated24V DC /100W resistive heater.
 - Both: lead-free compatible FR4, Tg>=150C requested, ENIG, green mask, white
   legends, top-side assembly. Please quote Standard PCBA for both boards.
-- A has13 SMT +10 physical THT placements; B has38 SMT +9 THT placements.
-  Total for the lot:350 placements, plus five Harwin M7566-05 shunts SUPPLIED LOOSE.
+- A has13 SMT +11 physical THT placements; B has38 SMT +10 THT placements.
+  Total for the lot:360 placements, plus five Harwin M7566-05 shunts SUPPLIED LOOSE.
 
 Please review specifically:
 1. Exact sourcing, availability, lead time, minimum purchases and attrition for

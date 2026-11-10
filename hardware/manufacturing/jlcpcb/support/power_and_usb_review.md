@@ -48,6 +48,15 @@ Chaque carte B définit séparément tension, puissance et courant maximal.
 
 ## USB latéral : conserver le port, maîtriser le VBUS
 
+**Retour utilisateur du10novembre2026 :** plusieurs utilisations simultanées de
+l’alimentation externe sur VIN et de l’USB ont fonctionné sans problème observé.
+Aucune incompatibilité de ces cartes n’est donc établie. La réserve ci-dessous
+porte sur le chemin électrique des trois variantes, non mesuré, et non sur
+un défaut constaté. JP1 reste un point d’isolement de banc dans cette révision
+UART ; ce n’est ni un sélecteur automatique, ni une nécessité universelle des
+DevKit. Sa simplification pourra suivre l’identification de leur alimentation.
+
+
 Précision utilisateur du **6 novembre 2026** : en fonctionnement normal,
 A est alimentée par la source centrale, via **5 V régulés → A/J1 → JP1 →
 VIN/5V de la DevKit**. L'USB-C sert aux données, au flash et au diagnostic,
@@ -70,7 +79,7 @@ pas ce problème : il existe dès que le rail 5 V externe est présent.
 | --- | --- | --- |
 | Fonctionnement complet | Source B ou source 5 V dédiée unique ; JP1 en place ; USB débranché | Architecture courante, essais physiques restants. |
 | Flash USB seul | Couper toutes les sources externes ; débrancher J1/J6/J7 ; retirer JP1 ; brancher l'USB | Mode de service conservé ; A/périphériques et B ne fonctionnent pas dans ce mode. |
-| Série USB pendant fonctionnement | Nécessite une solution vérifiée de séparation du VBUS dans la rallonge latérale, ou une gestion de sources démontrée sur la DevKit réelle | **Non qualifié ; câble USB ordinaire interdit avec le 5 V externe.** |
+| Série USB pendant fonctionnement | Nécessite une solution vérifiée de séparation du VBUS dans la rallonge latérale, ou une gestion de sources démontrée sur la DevKit réelle | **Fonctionnement rapporté par l’utilisateur ; chemins VIN/VBUS des trois variantes non caractérisés.** |
 
 Le choix à qualifier en priorité est un interposeur USB de service qui coupe
 physiquement le VBUS du PC en conservant données et masse. Ce n'est pas un

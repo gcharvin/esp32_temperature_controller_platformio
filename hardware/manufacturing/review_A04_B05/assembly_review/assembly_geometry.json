@@ -508,6 +508,108 @@
           ]
         },
         {
+          "ref": "J10",
+          "value": "A-B UART / 3V3 / GND TX_A RX_A",
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "at": [
+            73.5,
+            31.0
+          ],
+          "label": [
+            76.0,
+            35.5
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  72.875,
+                  28.65
+                ],
+                [
+                  73.5,
+                  29.65
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  73.5,
+                  29.65
+                ],
+                [
+                  74.125,
+                  28.65
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  71.05,
+                  28.65
+                ],
+                [
+                  80.95,
+                  34.4
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                73.5,
+                31.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "UART_A_TX",
+              "at": [
+                76.0,
+                31.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "UART_A_RX",
+              "at": [
+                78.5,
+                31.0
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            }
+          ]
+        },
+        {
           "ref": "J2",
           "value": "LCD20x4 + backpack / 3V3",
           "footprint": "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
@@ -2493,7 +2595,7 @@
             },
             {
               "number": "21",
-              "net": "unconnected-(U1-GPIO16-Pad21)",
+              "net": "UART_A_RX",
               "at": [
                 37.079999,
                 27.3
@@ -2508,7 +2610,7 @@
             },
             {
               "number": "22",
-              "net": "unconnected-(U1-GPIO17-Pad22)",
+              "net": "UART_A_TX",
               "at": [
                 34.539999,
                 27.3
@@ -4886,6 +4988,108 @@
               ],
               "angle": 0.0,
               "drill": 1.0,
+              "circle": false
+            }
+          ]
+        },
+        {
+          "ref": "J10",
+          "value": "A-B UART / 3V3 / GND TX_A RX_A",
+          "footprint": "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "at": [
+            42.0,
+            7.5
+          ],
+          "label": [
+            37.8,
+            7.5
+          ],
+          "angle": 0.0,
+          "fab": [
+            {
+              "kind": "line",
+              "points": [
+                [
+                  41.375,
+                  5.15
+                ],
+                [
+                  42.0,
+                  6.15
+                ]
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                [
+                  42.0,
+                  6.15
+                ],
+                [
+                  42.625,
+                  5.15
+                ]
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                [
+                  39.55,
+                  5.15
+                ],
+                [
+                  49.45,
+                  10.9
+                ]
+              ]
+            }
+          ],
+          "pads": [
+            {
+              "number": "1",
+              "net": "GND",
+              "at": [
+                42.0,
+                7.5
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "2",
+              "net": "unconnected-(J10-Pin_2-Pad2)",
+              "at": [
+                44.5,
+                7.5
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
+              "circle": false
+            },
+            {
+              "number": "3",
+              "net": "unconnected-(J10-Pin_3-Pad3)",
+              "at": [
+                47.0,
+                7.5
+              ],
+              "size": [
+                1.7,
+                1.95
+              ],
+              "angle": 0.0,
+              "drill": 0.95,
               "circle": false
             }
           ]
@@ -8714,9 +8918,9 @@
     }
   ],
   "source_sha256": {
-    "scripts/build_assembly_review.py": "d9ddc829eebf7cb9487167175ee40e52a0b09bacd4ffd8292de6bac509a28edd",
+    "scripts/build_assembly_review.py": "bb302b91885e8806d835886aac69677e1bfb3d3486f3079a75201b1e3a85ea49",
     "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711"
+    "pcb_a_display/pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26"
   }
 }

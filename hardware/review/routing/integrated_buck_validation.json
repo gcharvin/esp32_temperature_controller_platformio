@@ -1,9 +1,9 @@
 {
   "revision": "PCB B 0.5 integrated LM2596",
   "source_sha256": {
-    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711",
-    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "2fa1e6ff86e1e78516c3eea50a6716275c4539d2a1b6d492ab6fa76fc9932596",
-    "review\\pcb_b_temperature.net.xml": "82dcc702a1078c8bbf665939b98afcb7474b93c3c6ee9116a470a855f11a2c25"
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "2ecab8c268ec178d21c996a38642f33ae28489d9b481da25c6548ee43e405931",
+    "review\\pcb_b_temperature.net.xml": "02e9e23db00198be671f155e8d7b72983fd4144a27f7028f96639c86f249b634"
   },
   "dimensions_mm": [
     90,

@@ -2,16 +2,16 @@
   "status": "DRAFT / human and assembler review required",
   "pages": 3,
   "source_sha256": {
-    "scripts/build_assembly_review.py": "d9ddc829eebf7cb9487167175ee40e52a0b09bacd4ffd8292de6bac509a28edd",
+    "scripts/build_assembly_review.py": "bb302b91885e8806d835886aac69677e1bfb3d3486f3079a75201b1e3a85ea49",
     "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "d53e5a8ccbde3dbf696e80807ba30171b2d5778d654ae4dc3abe83fd86cceaf1",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "8b4aaaec157886691d072079319cac01a236e08d357c891fa70a40221fca1711"
+    "pcb_a_display/pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26"
   },
   "output_sha256": {
-    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "985019b135bf6c045072511d23e00a0f5ccc6b23fa50eb4090fa447e3c56c75c",
-    "manufacturing/output/assembly_geometry.json": "97fd7df31df1178f6a5a16638a4731723e9f093af82a0b028be8a7a24d1670b4",
-    "manufacturing/output/assembly_pad_map.csv": "4d9a528d1be284ef94906faef930f97a86f227c4db2177ae7ad4a37cc91c974c",
-    "manufacturing/output/assembly_THT_placement.csv": "c0ea7ef817afbeab7d671477fb79407d494e943ed9b1fc59356ed306f2773179"
+    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "58eeafdad1b61e076efd477b698ccf7e7a936626d03af14647b774432e2bdac2",
+    "manufacturing/output/assembly_geometry.json": "74e040ec33a56f1185e46bc8ea32742e7a4f0edc6d08e712ecffa6c3044254d2",
+    "manufacturing/output/assembly_pad_map.csv": "d6f607abddca95ba37f6d7a48e12abf235c2faa24d1f04d1faf1e92849416274",
+    "manufacturing/output/assembly_THT_placement.csv": "f240e66ff7d2a229fe1dc34a782dc5485cc7f51579cf12f3d6310c339804dcf8"
   },
   "limits": [
     "Native top view; pad1 dots indicate pin numbering, not universal polarity.",

@@ -47,10 +47,10 @@ def main():
         sockets=rows('A/U1_socket_assembly_quote.csv')
         assert len(sockets)==2 and {r['Assembly_item'] for r in sockets}=={'U1_SOCKET_BOTTOM','U1_SOCKET_TOP'}
         tht=rows('assembly_review/assembly_THT_placement.csv')
-        assert len(tht)==19
-        assert len({(r['Board'],r['Assembly_item']) for r in tht})==19
+        assert len(tht)==21
+        assert len({(r['Board'],r['Assembly_item']) for r in tht})==21
         assert sum(b['SMT'] for b in counts.values())==51
-        assert sum(b['THT_native'] for b in counts.values())+len(sockets)==19
+        assert sum(b['THT_native'] for b in counts.values())+len(sockets)==21
         geometry=json.loads(bundle.read('assembly_review/assembly_geometry.json'))
         assert sum(len(b['parts']) for b in geometry['boards'])==sum(b['native_references'] for b in manifest['boards'].values())
         assert all(not r['Designator'].startswith('TP') for code in ('A','B') for r in rows(code+'/BOM_SMT_RFQ_NOT_FOR_ORDER.csv'))
@@ -59,7 +59,7 @@ def main():
         result=dict(status='PASS / RFQ integrity only; not fabrication release',
             archive=archive.name,archive_sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),
             members=len(names),source_hashes_checked=len(manifest['sources_sha256']),
-            boards=counts,physical_THT_items=19,drawings_pages=manifest['assembly_drawings']['pages'],
+            boards=counts,physical_THT_items=21,drawings_pages=manifest['assembly_drawings']['pages'],
             fabrication_release=False,order_placed=False)
     (FOLDER/'rfq_integrity_validation.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,indent=2))

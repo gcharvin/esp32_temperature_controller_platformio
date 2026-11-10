@@ -36,7 +36,7 @@ def main():
     mechanical=read(ROOT/('mechanical/exports/source_manifest_'+tag+'.json'))
     assert mechanical['static_collisions']==mechanical['assembly_failures']==0
     for relative,digest in mechanical['source_sha256'].items():assert sha(ROOT/relative)==digest,'Stale mechanical source '+relative
-    parts=read(ROOT/'review/routing/component_selection_validation.json');assert parts['physical_native_components']==68
+    parts=read(ROOT/'review/routing/component_selection_validation.json');assert parts['physical_native_components']==70
     release=read(FOLDER/'release_checklist.json');assert not release['fabrication_release'] and not release['order_placed']
     files={};sources={}
     def add(path,target):
@@ -46,7 +46,7 @@ def main():
     with zipfile.ZipFile(rfq) as bundle:
         assert bundle.testzip() is None
         for name in bundle.namelist():files['rfq_manifest.json' if name=='manifest.json' else name]=bundle.read(name)
-    for name in ('README.md','TEST_POINTS.md','test_points.json','interface_ab.json','module_selection.json','placement.json','devkit_compatibility.md','display_backlight_study.md','lab_draft.kicad_sym'):
+    for name in ('README.md','UART_EXTENSION.md','TEST_POINTS.md','test_points.json','interface_ab.json','module_selection.json','placement.json','devkit_compatibility.md','display_backlight_study.md','lab_draft.kicad_sym'):
         add(ROOT/name,'native/hardware/'+name)
     for board in ('pcb_a_display','pcb_b_temperature'):
         for name in (board+'.kicad_pro',board+'.kicad_sch',board+'.kicad_pcb',board+'_bom_draft.csv','fp-lib-table','sym-lib-table','README.md'):
@@ -82,8 +82,8 @@ def main():
         add(ROOT/'review/routing'/name,'evidence/review/routing/'+name)
     status=dict(state='LOCAL_TECHNICAL_PREPARATION_COMPLETE / FACTORY_HANDOFF_PENDING',
         local_preparation_complete=True,date_utc=datetime.now(timezone.utc).isoformat(),
-        automatic_stages=15,final_visual_review=True,physical_native_components=68,SMT_components=51,
-        physical_THT_items=19,extra_loose_shunts=1,mechanical_service_stages=mechanical['assembly_service_stages'],
+        automatic_stages=15,final_visual_review=True,physical_native_components=70,SMT_components=51,
+        physical_THT_items=21,extra_loose_shunts=1,mechanical_service_stages=mechanical['assembly_service_stages'],
         source_geometry_and_MPNs_frozen=True,simulations_rerun_in_this_revision=False,
         mechanical_revision=parameters['revision'],BH1750_breakout_and_optical_transmission_qualified=False,
         copper_only_testpads=22,diagnostic_firmware_compiled=True,diagnostic_firmware_flashed=False,

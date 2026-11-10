@@ -1,48 +1,28 @@
 {
   "status": "PASS",
-  "date_utc": "2026-11-09T09:25:23.371460+00:00",
+  "date_utc": "2026-11-10T14:23:01.962544+00:00",
   "reviewer": "Codex - actual render inspection",
-  "method": "Current v10 assembled, rear, exploded and service renders inspected. Other previously reviewed drawings and images carried forward only by identical SHA256.",
+  "method": "Inspected current schematic pages, all three assembly PDF pages, four exported Gerber renders and required mechanical views. SHA256 verifies renders stayed identical during final regeneration.",
   "findings": [
-    "PJ-392 smaller rear-panel interface visible in assembled/exploded/rear views; six connected print pieces and 105 STEP solids.",
-    "Twenty assembly/service stages passed; static interference and dedicated 23mm solder corridor clear in modeled envelopes.",
-    "Panel hole6.3mm, localweb1.5mm and14mm outer nut pocket checked by actual BRep intersections; dimensions based on Tayda drawing. Amazon DAOKI nut/washer and physical fit require coupon.",
-    "Native PCB sources unchanged. Schematic/Gerber images retain earlier visual review by exact hash."
+    "A0.4.2/B0.5.2 J10 fitted on both boards. A GPIO17 TX/GPIO16 RX; B contacts2/3 intentionally NC. Original tracks and vias preserved by UUID and geometry signature.",
+    "J10 visible in assembly drawings and Gerber output; existing J8/J9 factory socket aliases retained.",
+    "Six printed parts and107 STEP reference solids; all20 modeled assembly/service stages pass. B extraction and connector corridor include J10.",
+    "BH1750 retained behind thin optical zone; actual print fit, optical transmission and component/cable grip remain unqualified."
   ],
   "reviewed_files_sha256": {
-    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "985019b135bf6c045072511d23e00a0f5ccc6b23fa50eb4090fa447e3c56c75c",
-    "manufacturing/review_A04_B05/gerber_review/A_front.png": "246c9a484bd6900b8884b2c31a8ac98a02be967d0e8e3e53d564d1e87e07a15a",
-    "manufacturing/review_A04_B05/gerber_review/A_back.png": "dffd87d64468d61932ca051f0b5b2c92409af789a38d53bd7646b8266abb480c",
-    "manufacturing/review_A04_B05/gerber_review/B_front.png": "487d38dc21224f0972fcb900570a1e5bc038d957a86f73c38071e4f6ec78bf61",
-    "manufacturing/review_A04_B05/gerber_review/B_back.png": "79cf87dac35af36e0639066efcc35af368e4edd9fda0c17aba855af223fb2123",
-    "mechanical/exports/preview_service.png": "f62c9f7217cc06c1c548804794a68d4921c39d1516f9547b723890c109598cf3",
-    "mechanical/exports/preview_b_power.png": "346d5ddc077d24375e9c0c731e157400549fc113f00d0a96bf33b91aa0dc2d6f",
-    "review/pcb_a_display.pdf": "6f23de57277864792b159b83c01a6d70051b7d4721c95e5cbaac451fda4741e4",
-    "review/pcb_b_temperature.pdf": "2f2d45e3c44d1692663711d7107e7e3ab00e724de060ec9c5f4fcfbfe1b8adba",
-    "mechanical/exports/preview_assembled.png": "7870a53019cd99793cf61d4abe58ae2f07398d6061f1b388c31107ff5173af31",
-    "mechanical/exports/preview_light_sensor.png": "28ce24e462b64f880ba7c1c38016ae90fad606ff8a5909ab4bd45ffb324ddc4b",
-    "mechanical/exports/preview_light_sensor_front.png": "c997364f60482f36f971091ac374ecfd637f2815939bab18da8040d43a043cc4",
-    "review/test_points_A_back.png": "3e1cb23eecc248843caf925bedec01ca00467cbfe3176bc497d0abc3c4ba931c",
-    "review/test_points_B_back.png": "f0a34818ea0a0eaf0386d2b8657b96bc8cfb42a4adeed8702e1c0540a0f4611d",
-    "mechanical/exports/preview_rear.png": "b86f07d68554a04c04898c04e4d451a38697032d1c223ab8e0c52e11456e4d33",
-    "mechanical/exports/preview_exploded.png": "26cd4c0694460aa95c33860c9413954b58e6a05c908db290f95902ad64f3f6e7"
+    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "58eeafdad1b61e076efd477b698ccf7e7a936626d03af14647b774432e2bdac2",
+    "review/pcb_a_display.pdf": "78effd41834476c8173c7d2b318ff050256aa5831431c7fa1f657f7e4583fb2d",
+    "review/pcb_b_temperature.pdf": "237994ed0c2dc9412c437d2ea2da89d70237d25a49ad3ccc4078dbe916be0c03",
+    "manufacturing/review_A04_B05/gerber_review/A_front.png": "ecfc0ad1364d403642aeca926e478da3e319d4b9bae9adb08e85e9ffd75f7e91",
+    "manufacturing/review_A04_B05/gerber_review/A_back.png": "808bd2f779167d72aa206ec67ba001076c627627f845952a176c850e4734d7db",
+    "manufacturing/review_A04_B05/gerber_review/B_front.png": "4167534e4bfa2ec2d3f581dde323b51e151d3dd4d73b5297e0e6bdad5ac7db6b",
+    "manufacturing/review_A04_B05/gerber_review/B_back.png": "2009c8553d33972f256013f2cb571ad0bf4aff048f8a5301352aa220790b99a3",
+    "mechanical/exports/preview_assembled.png": "eedc53415728c0e018408fe56e73acd43d6433e7ab5632b68625781d8a6dd064",
+    "mechanical/exports/preview_service.png": "39da56b9c4f520efd81c465715b291e03030bce14fccaf30b6f18595026c7710",
+    "mechanical/exports/preview_b_power.png": "d28ea47d35a8494ef3ada1233dbe8e4f544aeaffcf9b435d2c1bc81af366673d",
+    "mechanical/exports/preview_light_sensor.png": "28ce24e462b64f880ba7c1c38016ae90fad606ff8a5909ab4bd45ffb324ddc4b"
   },
   "limits": [
-    "Engineering visual review, not assembler orientation/process approval or a physical fit/thermal test."
-  ],
-  "unchanged_visual_evidence_carried_forward": [
-    "manufacturing/output/pdf/assembly_review_A04_B05.pdf",
-    "manufacturing/review_A04_B05/gerber_review/A_front.png",
-    "manufacturing/review_A04_B05/gerber_review/A_back.png",
-    "manufacturing/review_A04_B05/gerber_review/B_front.png",
-    "manufacturing/review_A04_B05/gerber_review/B_back.png",
-    "mechanical/exports/preview_service.png",
-    "mechanical/exports/preview_b_power.png",
-    "review/pcb_a_display.pdf",
-    "review/pcb_b_temperature.pdf",
-    "mechanical/exports/preview_light_sensor.png",
-    "mechanical/exports/preview_light_sensor_front.png",
-    "review/test_points_A_back.png",
-    "review/test_points_B_back.png"
+    "Engineering visual review; not factory sourcing/orientation/process approval, physical fit, electrical or thermal qualification."
   ]
 }

@@ -1,22 +1,22 @@
 {
   "status": "PASS / RFQ integrity only; not fabrication release",
   "archive": "RFQ_A04_B05_DRAFT_NOT_FOR_ORDER.zip",
-  "archive_sha256": "0e5ab136d03b39096bc0040cf62204c565f7112749d949d4a38bfa2229de5462",
-  "members": 94,
-  "source_hashes_checked": 54,
+  "archive_sha256": "a7871a0f08876c84c6e0fd49266c5dcc7b86c9d9e2a8840b49e347f4b2da2701",
+  "members": 95,
+  "source_hashes_checked": 57,
   "boards": {
     "A": {
       "SMT": 13,
-      "THT_native": 8,
+      "THT_native": 9,
       "unmatched_SMT_supplier_rows": 0
     },
     "B": {
       "SMT": 38,
-      "THT_native": 9,
+      "THT_native": 10,
       "unmatched_SMT_supplier_rows": 1
     }
   },
-  "physical_THT_items": 19,
+  "physical_THT_items": 21,
   "drawings_pages": 3,
   "fabrication_release": false,
   "order_placed": false

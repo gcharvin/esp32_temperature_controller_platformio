@@ -10,3 +10,6 @@ CTRL,A/J7,3,B/J7,3,ENABLE,ENABLE,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; 
 CTRL,A/J7,4,B/J7,4,FAULT_N,FAULT_N,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
 CTRL,A/J7,5,B/J7,5,PWM1,NC - reserved for other B variants,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
 CTRL,A/J7,6,B/J7,6,DIN0,NC - reserved for other B variants,XHP-6,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+UART_OPTIONAL,A/J10,1,B/J10,1,GND,GND,XHP-3,SXH-001T-P0.6,26,300,10,black
+UART_OPTIONAL,A/J10,2,B/J10,2,UART_A_TX,NC - reserved for other B variants,XHP-3,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative
+UART_OPTIONAL,A/J10,3,B/J10,3,UART_A_RX,NC - reserved for other B variants,XHP-3,SXH-001T-P0.6,26,300,10,number-labelled; colour not authoritative

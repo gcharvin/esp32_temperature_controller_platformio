@@ -1,0 +1,35 @@
+{
+  "status": "PASS / dedicated UART hardware reserve; original copper preserved",
+  "boards": {
+    "A": {
+      "original_tracks_vias_preserved": 380,
+      "added_tracks_vias": 52,
+      "connector": "J10, 3.3V UART, 1 GND / 2 TX_A / 3 RX_A",
+      "routing_complete": true,
+      "temperature_B_signal_pins_NC": false
+    },
+    "B": {
+      "original_tracks_vias_preserved": 412,
+      "added_tracks_vias": 44,
+      "connector": "J10, 3.3V UART, 1 GND / 2 TX_A / 3 RX_A",
+      "routing_complete": true,
+      "temperature_B_signal_pins_NC": true
+    }
+  },
+  "software_uart_enabled": false,
+  "UART_hardware_loopback_performed": false,
+  "includes_RS232_transceiver": false,
+  "optional_temperature_cable": true,
+  "source_sha256": {
+    "review\\uart_extension_copper_baseline.json": "2990f6f04ad5170495238f2d8669d01ab335ee1b0f3e934dd38692958777bb09",
+    "scripts\\check_uart_extension.py": "95f6e24ca371fcdf5864bf9b404e7589706f7e80d42af203165745e2cdbb45c4",
+    "interface_ab.json": "f87fad4ef3a8226ccddc440bddc45af0d5c3d7ca315f79864eeb51ccf1e0ae41",
+    "module_selection.json": "63712d1417803524367246603235468f019b53de587e32b1922d63a382ab97a1",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+    "pcb_a_display\\pcb_a_display.kicad_sch": "2552f7f0641d2093ba39fa690c9effa31fbcab8c06515929b86895068d7c5fb2",
+    "review\\pcb_a_display.net.xml": "458b45408441d02f53effc0c43e2ddc226d17b0ce81b8eae2a8d07ad4ab3fef0",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "2ecab8c268ec178d21c996a38642f33ae28489d9b481da25c6548ee43e405931",
+    "review\\pcb_b_temperature.net.xml": "02e9e23db00198be671f155e8d7b72983fd4144a27f7028f96639c86f249b634"
+  }
+}

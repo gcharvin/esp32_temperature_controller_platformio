@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>C:\Users\Gilles\Documents\PlatformIO\Projects\esp32-temperature-controller-platformio\hardware\pcb_a_display\pcb_a_display.kicad_sch</source>
-    <date>2026-11-09T15:05:48</date>
+    <date>2026-11-10T15:22:42</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>PCB A - Display and ESP32 carrier</title>
         <company>Laboratory hardware platform</company>
-        <rev>0.4.1</rev>
-        <date>2026-11-05</date>
+        <rev>0.4.2</rev>
+        <date>2026-11-10</date>
         <source>pcb_a_display.kicad_sch</source>
         <comment number="1" value="PROTOTYPE - ENGINEERING PREPARED - ASSEMBLER APPROVAL REQUIRED"/>
         <comment number="2" value=""/>
@@ -429,6 +429,40 @@
             <pin num="4"/>
             <pin num="5"/>
             <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J10">
+      <value>A-B UART / 3V3 / GND TX_A RX_A</value>
+      <footprint>Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</datasheet>
+      <fields>
+        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
+        <field name="MPN">B3B-XH-A(LF)(SN)</field>
+        <field name="Manufacturer">JST</field>
+        <field name="Assembly">FACTORY_THT_QUOTE</field>
+        <field name="Footprint">Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical</field>
+        <field name="Datasheet">https://www.jst-mfg.com/product/pdf/eng/eXH.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
+      <property name="MPN" value="B3B-XH-A(LF)(SN)"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="Assembly" value="FACTORY_THT_QUOTE"/>
+      <property name="Sheetname" value="pcb_a_display"/>
+      <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>28373105-6454-520a-9505-4ccefa5285cf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
           </pins>
         </unit>
       </units>
@@ -1290,7 +1324,7 @@
         <pin num="19" name="GPIO2" type="input"/>
         <pin num="20" name="GPIO4" type="input"/>
         <pin num="21" name="GPIO16" type="input"/>
-        <pin num="22" name="GPIO17" type="input"/>
+        <pin num="22" name="GPIO17" type="output"/>
         <pin num="23" name="GPIO5" type="input"/>
         <pin num="24" name="GPIO18" type="input"/>
         <pin num="25" name="GPIO19" type="input"/>
@@ -1407,6 +1441,7 @@
       <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="J3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
@@ -1453,41 +1488,43 @@
       <node ref="J7" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
       <node ref="U1" pin="9" pinfunction="GPIO26_9" pintype="output"/>
     </net>
-    <net code="17" name="unconnected-(U1-3V3-Pad16)" class="Default">
+    <net code="17" name="/UART_A_RX" class="Default">
+      <node ref="J10" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="GPIO16_21" pintype="input"/>
+    </net>
+    <net code="18" name="/UART_A_TX" class="Default">
+      <node ref="J10" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U1" pin="22" pinfunction="GPIO17_22" pintype="output"/>
+    </net>
+    <net code="19" name="unconnected-(U1-3V3-Pad16)" class="Default">
       <node ref="U1" pin="16" pinfunction="3V3_16" pintype="power_out+no_connect"/>
     </net>
-    <net code="18" name="unconnected-(U1-EN-Pad1)" class="Default">
+    <net code="20" name="unconnected-(U1-EN-Pad1)" class="Default">
       <node ref="U1" pin="1" pinfunction="EN_1" pintype="input+no_connect"/>
     </net>
-    <net code="19" name="unconnected-(U1-GPIO1-Pad28)" class="Default">
+    <net code="21" name="unconnected-(U1-GPIO1-Pad28)" class="Default">
       <node ref="U1" pin="28" pinfunction="GPIO1_28" pintype="input+no_connect"/>
     </net>
-    <net code="20" name="unconnected-(U1-GPIO2-Pad19)" class="Default">
+    <net code="22" name="unconnected-(U1-GPIO2-Pad19)" class="Default">
       <node ref="U1" pin="19" pinfunction="GPIO2_19" pintype="input+no_connect"/>
     </net>
-    <net code="21" name="unconnected-(U1-GPIO3-Pad27)" class="Default">
+    <net code="23" name="unconnected-(U1-GPIO3-Pad27)" class="Default">
       <node ref="U1" pin="27" pinfunction="GPIO3_27" pintype="input+no_connect"/>
     </net>
-    <net code="22" name="unconnected-(U1-GPIO5-Pad23)" class="Default">
+    <net code="24" name="unconnected-(U1-GPIO5-Pad23)" class="Default">
       <node ref="U1" pin="23" pinfunction="GPIO5_23" pintype="input+no_connect"/>
     </net>
-    <net code="23" name="unconnected-(U1-GPIO12-Pad12)" class="Default">
+    <net code="25" name="unconnected-(U1-GPIO12-Pad12)" class="Default">
       <node ref="U1" pin="12" pinfunction="GPIO12_12" pintype="input+no_connect"/>
     </net>
-    <net code="24" name="unconnected-(U1-GPIO13-Pad13)" class="Default">
+    <net code="26" name="unconnected-(U1-GPIO13-Pad13)" class="Default">
       <node ref="U1" pin="13" pinfunction="GPIO13_13" pintype="input+no_connect"/>
     </net>
-    <net code="25" name="unconnected-(U1-GPIO14-Pad11)" class="Default">
+    <net code="27" name="unconnected-(U1-GPIO14-Pad11)" class="Default">
       <node ref="U1" pin="11" pinfunction="GPIO14_11" pintype="input+no_connect"/>
     </net>
-    <net code="26" name="unconnected-(U1-GPIO15-Pad18)" class="Default">
+    <net code="28" name="unconnected-(U1-GPIO15-Pad18)" class="Default">
       <node ref="U1" pin="18" pinfunction="GPIO15_18" pintype="input+no_connect"/>
-    </net>
-    <net code="27" name="unconnected-(U1-GPIO16-Pad21)" class="Default">
-      <node ref="U1" pin="21" pinfunction="GPIO16_21" pintype="input+no_connect"/>
-    </net>
-    <net code="28" name="unconnected-(U1-GPIO17-Pad22)" class="Default">
-      <node ref="U1" pin="22" pinfunction="GPIO17_22" pintype="input+no_connect"/>
     </net>
     <net code="29" name="unconnected-(U1-GPIO18-Pad24)" class="Default">
       <node ref="U1" pin="24" pinfunction="GPIO18_24" pintype="input+no_connect"/>

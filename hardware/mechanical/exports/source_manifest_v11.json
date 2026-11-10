@@ -1,0 +1,55 @@
+{
+  "revision": "0.11 - J10 UART connector envelopes and B service clearance; printed geometry retained",
+  "source_sha256": {
+    "mechanical\\build_enclosure.py": "31cdb6038dbbc195c2b8286143e90dae1e510c107f7e449430af0f6e46332e41",
+    "mechanical\\light_sensor_mount.py": "c0b53a91f28ac4433e636308215f43479675ed253105bb419053816ac1647f40",
+    "mechanical\\enclosure_parameters.json": "68557c0629a5c0b843d6fcc4c8d1965466fd4d8e3884ed40057229460c603e2b",
+    "placement.json": "abe05c095f4512ee4aee41556f07a1bf23bfef0cc862dcdf0c1c0cf2a85a2d09",
+    "module_selection.json": "63712d1417803524367246603235468f019b53de587e32b1922d63a382ab97a1",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26"
+  },
+  "placement_geometry_projection_sha256": "f021cf12c3fdbd66d1a9bb77fdecf89d679c2851801465acf3c15f198ce44062",
+  "printed_parts": 6,
+  "assembled_STEP_solids": 107,
+  "assembly_service_stages": 20,
+  "static_collisions": 0,
+  "assembly_failures": 0,
+  "external_buck": false,
+  "fusion_import_tested": false,
+  "connector_review": {
+    "ref": "J1 near C10",
+    "legacy_overpadded_corridor_overlap_mm3": 10.96875,
+    "resolution": "Manufacturer XHP body with 0.25mm each-side margin replaces generic footprint+1mm corridor",
+    "manufacturer_source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+    "finger_and_cable_clearance_tested": false
+  },
+  "limits": [
+    "Rigid-body envelope model, not exact supplier component CAD",
+    "Real print, grip, cable slack, flexure and thermal tests pending"
+  ],
+  "light_sensor": {
+    "center_x_z_mm": [
+      126,
+      77
+    ],
+    "membrane_mm": 0.6,
+    "central_optical_path_closed": true,
+    "optical_transmission_tested": false,
+    "module_dimensions_measured": false,
+    "membrane_back_to_package_front_mm": 5.6000000000000005,
+    "opaque_light_well": true,
+    "removable_cassette": true,
+    "one_solid_per_new_print": true
+  },
+  "devkit_stack": {
+    "socket_maximum_mm": [
+      38.85,
+      2.65,
+      8.65
+    ],
+    "male_header_spacer_assumed_mm": 2.54,
+    "gap_allowance_mm": 0.15,
+    "physical_fit_of_all_three_variants_verified": false
+  }
+}
