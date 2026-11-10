@@ -1,12 +1,21 @@
 # Dépôt JLCPCB — devis et revue préalable, 5 A + 5 B assemblées
 
-**Révision native courante A0.4.2 / B0.5.2 : JST UART J10 ajouté sur A et B, 22 pastilles de test conservées.**
+**Révision courante du 10 novembre : A0.4.3 / B0.5.3, maquette v0.12.**
+Les remplacements examinés dans le devis sont reportés dans les sources :
+MLCC Walsin/Samsung, sockets HCTL, C10 Panasonic FS (16,5 mm maximum),
+R13 Vishay 50 mΩ et LED HEAT jaune. Voir
+[le dossier de substitution et le devis](../online_quote_20261110/README.md).
+Les fichiers A04/B05 gardent leurs noms de famille ; employer les nouvelles
+archives et leurs SHA256. Les devis en ligne précédents restent des instantanés,
+le placement final et le DFM usine restent à approuver ; aucune commande lancée.
+
+**Révision native courante A0.4.3 / B0.5.3 : JST UART J10 ajouté sur A et B, 22 pastilles de test conservées.**
 Les noms A04/B05 restent ceux de la famille de fichiers, mais les Gerber et
 archives ont été régénérés. Les TP ne sont pas des composants à fournir ou monter ;
 les quantités d'assemblage deviennent24 sur A et48 sur B. Le dossier `support/`
 comprend leur plan de mesure et leurs cartes de repérage.
 
-Dossier mis à jour le **10 novembre 2026**, A0.4.2 / B température0.5.2 ; schémas et routage
+Dossier mis à jour le **10 novembre 2026**, A0.4.3 / B température0.5.3 ; schémas et routage
 complétés par J10 UART sur chaque carte ; points de test conservés. **Demande de devis uniquement ; aucune commande,
 réservation payante de composants ou fabrication n'est autorisée.**
 
@@ -22,7 +31,7 @@ compte GoTronic étant accepté. Voir la [politique fournisseur](support/custome
 et le [détail des faisceaux](support/customer_harnesses.md). Les trois câbles A/B
 et les quatre liaisons périphériques n’ont pas de référence complète qualifiée
 dans ce panier ; les cordons GoTronic QW-4C et JST1164 sont des solutions partielles. La maquette mécanique
-courante est v0.11 ; le lot Amazon du jack et les faisceaux restent à qualifier
+courante est v0.12 ; le lot Amazon du jack et les faisceaux restent à qualifier
 sur les pièces réelles. Le choix de tension nominale d'usage doit encore être
 résolu avant achat de l'alimentation et du chauffage.
 

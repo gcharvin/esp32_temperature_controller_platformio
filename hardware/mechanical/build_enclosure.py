@@ -269,7 +269,7 @@ def main(validate=True):
             height=row.get('height_mm',height)
             if height<=0:continue  # NT1 is copper, not a mechanical part
             add(group+'_'+ref+'_ENVELOPE',box(x+rx,face,H-y-ry-rh,rw,height,rh),color,group)
-    # Harwin female sockets at maximum drawing dimensions; add the male
+    # Selected female sockets at maximum drawing dimensions; add the male
     # header's plastic spacer that was absent from the previous mock-up.
     socket=MODULES['devkit']['socket'];sl,sw,sh=socket['maximum_body_mm']
     spacer=socket['assumed_male_header_insulator_mm'];gap=socket['assembly_gap_allowance_mm']
@@ -699,7 +699,7 @@ def render_previews():
         draw.text((35,1050),'Volumes de composants et connecteurs a confirmer - clips non qualifies - pas de fabrication finale',font=small,fill='#435966')
         if mode=='exploded':draw.text((35,75),'Facade vers avant ; B vers arriere, faisceaux debranches.',font=small,fill='#435966')
         if mode=='service':draw.text((35,75),'Coque rendue transparente pour inspection. Acces borniers et connecteurs depuis arriere.',font=small,fill='#435966')
-        if mode=='b_power':draw.text((35,75),'PCB 90 x 65 mm ; L1 : 7 mm ; C10 : 12,5 mm ; Q1 : 17 mm. Aucun module externe.',font=small,fill='#435966')
+        if mode=='b_power':draw.text((35,75),'PCB 90 x 65 mm ; L1 : 7 mm ; C10 : 16,5 mm max ; Q1 : 17 mm. Aucun module externe.',font=small,fill='#435966')
         if mode=='front_module':draw.text((35,75),'Vue depuis arriere : A masque le LCD. Les deux supports appartiennent a la facade imprimee.',font=small,fill='#435966')
         if mode=='front_lcd':draw.text((35,75),'LCD passe dans le cadre A vide, puis se place dans sa rainure et ses clips. Poser A ensuite.',font=small,fill='#435966')
         if mode=='usb':

@@ -28,7 +28,7 @@
     {
       "id": "supplier_sourcing",
       "status": "MANUFACTURER_RESPONSE_REQUIRED",
-      "action": "Confirm exact part sourcing/stock, including C10/R13/Harwin, MSL lot handling and no unapproved substitutions. Public catalogue identities do not reserve stock."
+      "action": "Confirm exact part sourcing/stock, including C10/R13/HCTL sockets/Harwin JP1 header, MSL lot handling and no unapproved substitutions. Public catalogue identities do not reserve stock."
     },
     {
       "id": "factory_DFM_panel_process",

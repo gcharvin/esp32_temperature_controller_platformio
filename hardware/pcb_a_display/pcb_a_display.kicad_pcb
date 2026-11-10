@@ -8,7 +8,7 @@
 	)
 	(paper "A4")
 	(title_block
-		(rev "0.4.2")
+		(rev "0.4.3")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -2710,11 +2710,11 @@
 			)
 		)
 	)
-	(footprint "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm"
+	(footprint "LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm"
 		(layer "F.Cu")
 		(uuid "579af8ec-85b3-41ed-8a21-2d761f57c1de")
 		(at 92 95)
-		(descr "Common ESP32 30P host: two Harwin M20-7821546 sockets, pitch2.54mm rows25.40mm confirmed; nominal holes1.05mm. DevKit body envelope remains provisional.")
+		(descr "Two HCTL PM254-1-15-Z-8.5 sockets, pitch2.54mm, rows25.40mm, holes1.05mm; existing conservative courtyard retained.")
 		(property "Reference" "U1"
 			(at 0 -16 0)
 			(layer "F.SilkS")
@@ -3294,7 +3294,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
+		(property "Datasheet" "https://www.ic-components.se/files/d4/0603B105K160CT.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3328,7 +3328,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3340,7 +3340,7 @@
 				)
 			)
 		)
-		(property "MPN" "C1608X7R1C105K080AC"
+		(property "MPN" "0603B105K160CT"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3352,7 +3352,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Walsin"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3690,7 +3690,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1A106K080AC"
+		(property "Datasheet" "https://static6.arrow.com/aropdfconversion/f24e86c802cdb5d71185c025570539bb11b8d108/specsheetcl10a106kp8nnn20250808.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3724,7 +3724,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3736,7 +3736,7 @@
 				)
 			)
 		)
-		(property "MPN" "C1608X5R1A106K080AC"
+		(property "MPN" "CL10A106KP8NNNC"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3748,7 +3748,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Samsung"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -4565,7 +4565,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
+		(property "Datasheet" "https://www.ic-components.se/files/d4/0603B105K160CT.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4599,7 +4599,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -4611,7 +4611,7 @@
 				)
 			)
 		)
-		(property "MPN" "C1608X7R1C105K080AC"
+		(property "MPN" "0603B105K160CT"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -4623,7 +4623,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Walsin"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -6710,7 +6710,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -6857,7 +6857,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7004,7 +7004,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7151,7 +7151,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7298,7 +7298,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7445,7 +7445,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7592,7 +7592,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7739,7 +7739,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7886,7 +7886,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -8033,7 +8033,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -8573,7 +8573,7 @@
 			(justify left)
 		)
 	)
-	(gr_text "U1: 25.40 mm ROWS CONFIRMED / HARWIN SOCKETS"
+	(gr_text "U1: 25.40 mm ROWS CONFIRMED / HCTL SOCKETS"
 		(at 64 138 0)
 		(layer "Dwgs.User")
 		(uuid "3122e763-b3e6-4c17-8937-96df81098288")

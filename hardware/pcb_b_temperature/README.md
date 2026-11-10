@@ -1,6 +1,6 @@
 # PCB B v0.5 — buck 5 V intégré
 
-Révision du 5 novembre 2026. Ouvrir `pcb_b_temperature.kicad_pro`, puis le
+Révision courante B0.5.3 du 10 novembre 2026. Ouvrir `pcb_b_temperature.kicad_pro`, puis le
 schéma ou `pcb_b_temperature.kicad_pcb`. La carte garde **90 × 65 × 1,6 mm**,
 deux couches externes de cuivre **70 µm**, les réserves de clips et les positions
 des connecteurs conservés. A reste à v0.4.
@@ -24,8 +24,8 @@ PGND puissance ── NT1, jonction cuivre près de l'entrée ── GND logique
 | D9 | Vishay SS36-E3/57T, 60 V / 3 A | SMC, cathode sur BUCK_SW |
 | C8 | Panasonic EEUFR1H101, 100 µF / 50 V | Condensateur d'entrée existant, déplacé ; Ø8 mm, pas 3,5 mm |
 | C9 | 100 nF / 50 V X7R | 0805, découplage d'entrée local |
-| C10 | Panasonic EEUFR1V331UB, 330 µF / 35 V | Ø10 mm, pas 5 mm, hauteur 12,5 mm |
-| R13 | Vishay WSL1206R0560FEA, 56 mΩ / 1 % / 0,25 W | Empreinte locale `LabHardware:Vishay_WSL1206_6m_to_200m`, **dans le retour du condensateur C10**, pas en série avec la charge |
+| C10 | Panasonic EEUFS1V331LB, 330 µF / 35 V | Ø8 mm nominal, pas formé 5 mm, hauteur maximale 16,5 mm ; dégagement Ø10 conservé |
+| R13 | Vishay WSL1206R0500FEA, 50 mΩ / 1 % / 0,25 W | Empreinte locale `LabHardware:Vishay_WSL1206_6m_to_200m`, **dans le retour du condensateur C10**, pas en série avec la charge |
 | NT1 | NetTie-2_SMD_Pad2.0mm | Cuivre de liaison des masses, exclu de la BOM d'assemblage |
 
 La revue de fabrication adapte les pastilles R13 au dessin Vishay :
@@ -40,7 +40,7 @@ J8 et J9 et le module XL4015 sont supprimés. U1 a une sortie fixe 5 V : aucune
 consigne à régler. Sa broche 5 ON/OFF est reliée à PGND ; le buck est activé
 avec le 24 V. La limite étudiée est **0,8 A pour le système** ; F2 reste à 1 A.
 La revue d'approvisionnement propose C9 **C0805C104K5RACTU** et R13
-**WSL1206R0560FEA**. Leurs caractéristiques nominales correspondent aux
+**WSL1206R0500FEA**. Leurs caractéristiques nominales correspondent aux
 exigences ; disponibilité, pastilles recommandées et procédé restent à
 approuver dans `../manufacturing/README.md` avant gel des MPN dans KiCad.
 
@@ -102,7 +102,7 @@ réels. Voir le [plan de mise au point](../review/routing/electronics_bench_plan
 Sources : [TI LM2596](https://www.ti.com/lit/ds/symlink/lm2596.pdf),
 [Bourns SRP1770TA](https://www.bourns.com/docs/Product-Datasheets/srp1770ta.pdf),
 [Vishay SS36](https://www.vishay.com/docs/88751/ss32.pdf),
-[Panasonic C10](https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB).
+[Panasonic C10](https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFS1V331LB).
 
 La préparation3 fige les MPN dans KiCad, emploie les pastilles Kingbright pour les voyants et décale D7 de0,25mm en Y pour dégager SDA. Les borniers sont modélisés à14mm de hauteur enveloppe. Les valeurs électriques et les pistes sont conservées. Les instructions de câblage, de test et d’assemblage sont dans le dossier de fabrication.
 
@@ -115,7 +115,7 @@ sont conservés ; le diagnostic maintient ENABLE à zéro.
 
 ## Extension UART du 10 novembre 2026
 
-Révisions **A0.4.2 / B0.5.2** : J10 est un JST-XH3 supplémentaire assemblé
+Révisions **A0.4.3 / B0.5.3** : J10 est un JST-XH3 supplémentaire assemblé
 sur chaque PCB, pas2,50mm, même MPN B3B-XH-A(LF)(SN) que J6.
 
 | Broche J10 | Carte A | Carte B température |
@@ -139,3 +139,13 @@ est **facultatif pour ce prototype** et n’est pas ajouté au devis LCSC en cou
 Si nécessaire plus tard, reprendre la construction H02 XHP-3/XHP-3,300mm AWG26
 avec un repérage UART distinct. Ne pas confondre J6 I²C et J10 UART, mécaniquement
 identiques. Les alias fabricant J8/J9 des deux sockets de A restent inchangés.
+
+## B0.5.3 : variantes du devis intégrées
+
+C10 utilise maintenant `LabHardware:CP_Radial_EEUFS1V331LB_P5_D10_Keepout` :
+les pastilles, trous et dégagement Ø10 antérieurs sont conservés ; le modèle
+3D local a une hauteur maximale de 16,5 mm. R13 = 50 mΩ dans le retour de C10.
+D8 HEAT est jaune ; ses pastilles et sa résistance de 2,2 kΩ sont conservées.
+Les sept essais électriques de la combinaison FS/50 mΩ passent ; voir
+`../power_study/lm2596/current_acceptance.json`. Le STEP courant est v12.
+Les pistes, vias, UUID de pastilles, positions et nets n'ont pas changé.

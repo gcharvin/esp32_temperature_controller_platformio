@@ -1,0 +1,128 @@
+{
+  "candidate": "QUOTE ONLY: WSL1206R0500FEA + EEUFS1V331LB",
+  "model": {
+    "name": "LM2596_5P0_TRANS",
+    "version": "TI Final 1.00 / 2015-07-06",
+    "modified": false,
+    "source_url": "https://www.ti.com/lit/zip/snvma62",
+    "archive_sha256": "c8d6730cb669b577e013acd14653ef2be12035e778b3b4449e384c93bab8636f",
+    "sha256": "bf883d939dbdce9c9146f9fd6d6c090e7cfb7afb5aaa01b6b8391ca06dbe8134",
+    "diode": {
+      "name": "ss36",
+      "source_url": "https://www.vishay.com/docs/88171/ss36.txt",
+      "sha256": "ed8ecea02b1440cbb7a3db34dc57a7a88581f34b71ffd8795607a8f3758b202a",
+      "modified": false
+    }
+  },
+  "scope": "Electrical transient study after upstream protection and before existing F2. Excludes thermal behavior, parasitic PCB/cable effects, EMI, USB sharing, MCU firmware and manufacture qualification. Quote-only substitution study: 50 mOhm +/-1% damping resistor in the C10 branch, not in the load return; same Vishay WSL1206 package. Panasonic FS 330uF/35V, 41mOhm maximum impedance at 20C and 123mOhm at -10C. Constant ESR approximation only; does not qualify PCB parasitics, hardware, thermal behavior or a complete cold-temperature operating range.",
+  "criteria": {
+    "output_range_V": [
+      4.75,
+      5.25
+    ],
+    "ripple_max_Vpp": 0.05
+  },
+  "external_components": {
+    "L_H": 0.0001,
+    "L_DCR_ohm": 0.118,
+    "Cin_F": 0.0001,
+    "Cin_ESR_ohm": 0.1,
+    "Cout_F": 0.00033,
+    "Cout_total_series_ohm": 0.1,
+    "Cout_added_series_resistance_ohm": 0.05,
+    "Cout_lower_series_bound_ohm": 0.049,
+    "Cout_tolerance_case_F": 0.000264,
+    "output_capacitor_example": "Panasonic EEUFS1V331LB; quote-only alternative",
+    "output_capacitor_source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFS1V331LB",
+    "diode": "Vishay SS36, SMC, 60 V / 3 A, official unmodified SPICE3 model",
+    "inductor": "Bourns SRP1770TA-101M, 100 uH +/-20%, DCR max 118 mOhm, Isat1 6.5 A at 20% loss; modeled linearly. Derated case L=80 uH and C=264 uF. Startup peaks and physical integration require review.",
+    "inductor_source": "https://www.bourns.com/docs/Product-Datasheets/srp1770ta.pdf"
+  },
+  "cases": [
+    {
+      "name": "startup",
+      "regulated_window_s": [
+        0.004,
+        0.008
+      ],
+      "ripple_window_s": [
+        0.007,
+        0.008
+      ],
+      "deck": "benches/startup.cir"
+    },
+    {
+      "name": "load_step",
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ],
+      "deck": "benches/load_step.cir"
+    },
+    {
+      "name": "load_step_derated",
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ],
+      "deck": "benches/load_step_derated.cir"
+    },
+    {
+      "name": "esr_lower_bound",
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ],
+      "deck": "benches/esr_lower_bound.cir"
+    },
+    {
+      "name": "line_step",
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "ripple_window_s": [
+        0.011,
+        0.012
+      ],
+      "deck": "benches/line_step.cir"
+    },
+    {
+      "name": "disable",
+      "regulated_window_s": [
+        0.004,
+        0.005
+      ],
+      "ripple_window_s": [
+        0.004,
+        0.005
+      ],
+      "shutdown_below_V": 0.5,
+      "deck": "benches/disable.cir"
+    },
+    {
+      "name": "upper_esr_stress",
+      "regulated_window_s": [
+        0.004,
+        0.012
+      ],
+      "ripple_window_s": [
+        0.008,
+        0.009
+      ],
+      "deck": "benches/upper_esr_stress.cir"
+    }
+  ]
+}

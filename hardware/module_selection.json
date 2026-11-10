@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4.2 / B0.5.2 UART, original power topology",
+  "revision": "A0.4.3 / B0.5.3 stock alternatives; power/UART topology preserved",
   "devkit": {
     "manufacturer": "Customer supplied; diymore is historical reference drawing",
     "purchase_url": "https://www.amazon.fr/dp/B0DGLCWR76",
@@ -13,7 +13,7 @@
       27
     ],
     "outline_source": "Seller image: 5.4 x 2.7 cm; not a controlled mechanical drawing",
-    "spacing_reason": "25.40mm row spacing confirmed by user. Current footprint selects two Harwin sockets and1.05mm nominal holes; old _ASSUMED library file is historical only.",
+    "spacing_reason": "25.40mm row spacing measured; two HCTL PM254 sockets, existing1.05mm holes and conservative courtyard retained.",
     "top_view_orientation": "Before placement rotation: antenna top, USB bottom; numbering down left 1..15, up right 16..30. On PCB A: antenna left, USB right.",
     "pin_labels": {
       "1": "EN",
@@ -79,7 +79,7 @@
       "29": "I2C_SCL",
       "30": "ENC_SW"
     },
-    "footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
+    "footprint": "LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm",
     "pcb_A_header_rows_antenna_left_usb_right": {
       "top_row_left_to_right": [
         30,
@@ -140,7 +140,7 @@
       "reference": "devkit_compatibility.md"
     },
     "socket": {
-      "MPN": "M20-7821546",
+      "MPN": "PM254-1-15-Z-8.5",
       "quantity": 2,
       "nominal_body_mm": [
         38.5,
@@ -148,21 +148,23 @@
         8.5
       ],
       "maximum_body_mm": [
-        38.85,
+        38.8,
         2.65,
         8.65
       ],
       "native_finished_hole_nominal_mm": 1.05,
       "manufacturer_recommended_hole_mm": [
         1.02,
-        1.07
+        1.02
       ],
       "male_contact_interface_mm": 0.64,
       "assumed_male_header_insulator_mm": 2.54,
       "assembly_gap_allowance_mm": 0.15,
-      "source": "https://content.harwin.com/asset/53851ba8-b32e-4ac5-a0c5-09d9271c0c0a/DRG-00385-Technical-Drawing-Datasheet-M20-782-pdf.pdf",
-      "drawing_revision": "11 / 2026-08-03",
-      "limits": "Female dimensions documented; DevKit male-header plastic and full three-board bodies remain envelopes to check on hardware."
+      "source": "https://www.lcsc.com/datasheet/C2897378.pdf",
+      "drawing_revision": "HCTL PM254-1-N-Z-8.5-XX(L11.7), revision A",
+      "limits": "Manufacturer nominal recommended hole1.02mm; native1.05mm retained for0.64x0.40mm leads. Finished-hole tolerance/assembly acceptance and physical mating require factory/hardware review.",
+      "Manufacturer": "HCTL",
+      "supplier_id": "C2897378"
     }
   },
   "buck": {
@@ -175,8 +177,8 @@
     "inductor": "SRP1770TA-101M / 100uH",
     "diode": "SS36-E3/57T",
     "input_C8": "EEUFR1H101 / 100uF 50V, reused local input reservoir",
-    "output_C10": "EEUFR1V331UB / 330uF 35V",
-    "output_damping_R13": "56mOhm / 1% / 0.25W / 1206",
+    "output_C10": "EEUFS1V331LB / 330uF 35V / formedP5 / Hmax16.5mm",
+    "output_damping_R13": "50mOhm / 1% / 0.25W / Vishay WSL1206R0500FEA",
     "ground_connection": "NT1 copper net tie near input: PGND <-> GND; no CC shunt",
     "removed_connectors": [
       "J8",

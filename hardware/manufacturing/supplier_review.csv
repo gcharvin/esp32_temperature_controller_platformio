@@ -4,7 +4,6 @@
 1715721,B/J2 B/J3,C480516,True,Phoenix Contact,"Plugin,P=5.08mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C480516,
 ADS1115IDGSR,B/U4,C37593,True,Texas Instruments,VSSOP-10,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C37593,
 AP2112K-3.3TRG1,A/U2 B/U2,C51118,True,Diodes Incorporated,SOT-25-5,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C51118,
-APT2012LSECK/J4-PRV,B/D8,C5879381,True,Kingbright,"SMD,2x1.3mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C5879381,
 APT2012LZGCK,A/D1 A/D2 B/D5 B/D6 B/D7,C5569446,True,Kingbright,0805,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C5569446,
 B2B-XH-A(LF)(SN),A/J1 B/J1 B/J4,C158012,True,JST,"Plugin,P=2.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C158012,
 B3B-XH-A(LF)(SN),A/J6 B/J6,C144394,True,JST,"Plugin,P=2.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C144394,
@@ -13,8 +12,6 @@ B6B-XH-A(LF)(SN),A/J7 B/J7,C144397,True,JST,"Plugin,P=2.5mm",manualWeld,NOT EXPO
 BZT52C12-7-F,B/D3,C124196,True,Diodes Incorporated,SOD-123,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C124196,
 C0603C104K4RACTU,B/C3 B/C4 B/C5 B/C6,C2181816,True,KEMET,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C2181816,
 C0805C104K5RACTU,B/C9,C3018562,True,KEMET,0805,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C3018562,
-C1608X5R1A106K080AC,A/C3,C2167467,True,TDK,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C2167467,
-C1608X7R1C105K080AC,A/C1 A/C2 B/C1 B/C2 B/C7,C2167399,True,TDK,0603,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C2167399,
 DMP6023LE-13,B/Q2,C154901,True,Diodes Incorporated,SOT-223,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C154901,
 EEUFR1H101,B/C8,C178702,True,PANASONIC,"Plugin,D8xL11.5mm",manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C178702,
 IRLZ44NPBF,B/Q1,C38774,True,Infineon Technologies,TO-220AB,manualWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C38774,
@@ -36,8 +33,11 @@ SRP1770TA-101M,B/L1,C2045587,True,BOURNS,"SMD,17.8x16.9mm",smtWeld,NOT EXPOSED /
 SS36-E3/57T,B/D9,C35722,True,Vishay Intertech,SMC(DO-214AB),smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C35722,
 STPS5L60U,B/D4,C157397,True,STMicroelectronics,SMB(DO-214AA),smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C157397,
 UCC27517DBVR,B/U5,C99395,True,Texas Instruments,SOT-23-5,smtWeld,NOT EXPOSED / verify in assembly quotation,https://jlcpcb.com/partdetail/C99395,
-EEUFR1V331UB,B/C10,,False,,,,UNMATCHED / sourcing quotation needed,,Exact compact capacitor selected for ESR and mechanical height. Request sourcing; no automatic substitution of EEUFR1V331U or another capacitor.
-WSL1206R0560FEA,B/R13,,False,,,,UNMATCHED / sourcing quotation needed,,56mOhm damping resistor. Request global sourcing or propose a manufacturer-documented 1206 alternative with the same electrical requirements and land pattern review.
-M20-9990246,A/JP1,,False,,,,UNMATCHED / sourcing quotation needed,,Harwin JP1 THT header; request sourcing or approve a fully dimensioned equivalent.
-M20-7821546,,,False,,,,UNMATCHED / sourcing quotation needed,,Two separate Harwin 1x15 sockets per A; request sourcing with height8.5mm maintained.
-M7566-05,,,False,,,,UNMATCHED / sourcing quotation needed,,"Separate removable jumper shunt; system BOM, not an SMT placement."
+0603B105K160CT,A/C1 A/C2 B/C1 B/C2 B/C7,C108463,True,Walsin,0603,smtWeld,Observed in logged-in November10 configurator; not reserved; recheck before purchase,https://jlcpcb.com/partdetail/C108463,
+CL10A106KP8NNNC,A/C3,C19702,True,Samsung,0603,smtWeld,Observed in logged-in November10 configurator; not reserved; recheck before purchase,https://jlcpcb.com/partdetail/C19702,
+PM254-1-15-Z-8.5,A/U1_SOCKET_BOTTOM A/U1_SOCKET_TOP,C2897378,True,HCTL,"Through Hole,P=2.54mm",THT_FACTORY_PROCESS_PENDING,Observed in logged-in November10 configurator; not reserved; recheck before purchase,https://jlcpcb.com/partdetail/C2897378,
+EEUFS1V331LB,B/C10,C1584641,True,Panasonic,"D8xL15mm,P5mm",THT_FACTORY_PROCESS_PENDING,Observed in logged-in November10 configurator; not reserved; recheck before purchase,https://jlcpcb.com/partdetail/C1584641,
+WSL1206R0500FEA,B/R13,C844686,True,Vishay,1206,smtWeld,Observed in logged-in November10 configurator; not reserved; recheck before purchase,https://jlcpcb.com/partdetail/C844686,
+APT2012LSYCK/J3-PRV,B/D8,C5879382,True,Kingbright,0805,smtWeld,Observed in logged-in November10 configurator; not reserved; recheck before purchase,https://jlcpcb.com/partdetail/C5879382,
+M20-9990246,A/JP1,C3332353,True,Harwin,"Through Hole,P=2.54mm",THT_FACTORY_PROCESS_PENDING,Observed in logged-in November10 configurator; not reserved; recheck before purchase,https://jlcpcb.com/partdetail/C3332353,
+M7566-05,,,False,,,,SEPARATE_LOOSE_ACCESSORY_NOT_IN_PCBA_PRICE,,"Customer-supplied loose JP1 shunt, five for the lot; not a CPL placement or included in assembled-board quotation."

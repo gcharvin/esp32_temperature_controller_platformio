@@ -152,13 +152,13 @@
           35.0,
           -90.0
         ],
-        "color": "orange",
-        "mpn": "APT2012LSECK/J4-PRV",
-        "vf_typ_V": 1.8,
+        "color": "yellow",
+        "mpn": "APT2012LSYCK/J3-PRV",
+        "vf_typ_V": 1.85,
         "net": "LED_B_D8",
         "resistor_fp": "Resistor_SMD:R_0603_1608Metric",
         "resistor_value": "2.2k",
-        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lseck-j4-prv.pdf"
+        "datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lsyck-j3-prv.pdf"
       }
     ]
   }

@@ -61,6 +61,12 @@ def main():
         add(ROOT/'review'/name,'native/hardware/review/'+name)
     add(ROOT/'review/routing/electronics_bench_plan.md','native/hardware/review/routing/electronics_bench_plan.md')
     for path in sorted((ROOT/'lab_hardware.pretty').glob('*.kicad_mod')):add(path,'native/hardware/lab_hardware.pretty/'+path.name)
+    for path in sorted((ROOT/'lab_hardware.3dshapes').glob('*.wrl')):add(path,'native/hardware/lab_hardware.3dshapes/'+path.name)
+    qualification=read(ROOT/'power_study/lm2596/current_acceptance.json')
+    for relative in qualification['source_sha256']:
+        add(ROOT/relative,'evidence/'+relative)
+    for name in ('README.md','quote_bom_changes.json'):
+        add(ROOT/'manufacturing/online_quote_20261110'/name,'evidence/manufacturing/online_quote_20261110/'+name)
     for name in ('build_enclosure.py','light_sensor_mount.py','package_enclosure.py','enclosure_parameters.json','README.md'):
         add(ROOT/'mechanical'/name,'native/hardware/mechanical/'+name)
     # Native manufacturing choices remain alongside CAD in the editable copy.
@@ -85,6 +91,8 @@ def main():
         automatic_stages=15,final_visual_review=True,physical_native_components=70,SMT_components=51,
         physical_THT_items=21,extra_loose_shunts=1,mechanical_service_stages=mechanical['assembly_service_stages'],
         source_geometry_and_MPNs_frozen=True,simulations_rerun_in_this_revision=False,
+        selected_component_simulation_cases_passed=7,
+        simulation_qualification='November10 seven-case stock-alternative study, promoted to B0.5.3; source-bound current_acceptance.json',
         mechanical_revision=parameters['revision'],BH1750_breakout_and_optical_transmission_qualified=False,
         copper_only_testpads=22,diagnostic_firmware_compiled=True,diagnostic_firmware_flashed=False,
         hardware_functional_tests_performed=False,fabrication_release=False,order_authorized=False,order_placed=False,

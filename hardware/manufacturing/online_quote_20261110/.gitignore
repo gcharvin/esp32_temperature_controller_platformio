@@ -1,0 +1,4 @@
+simulation/benches/*.dat
+simulation/benches/*.log
+simulation/benches/*.run.json
+__pycache__/

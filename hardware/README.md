@@ -1,8 +1,17 @@
 # PCB A et B température — A v0.4 / B v0.5 buck intégré
 
+**Révision courante du 10 novembre : A0.4.3 / B0.5.3, maquette v0.12.**
+Les remplacements examinés dans le devis sont reportés dans les sources :
+MLCC Walsin/Samsung, sockets HCTL, C10 Panasonic FS (16,5 mm maximum),
+R13 Vishay 50 mΩ et LED HEAT jaune. Voir
+[le dossier de substitution et le devis](manufacturing/online_quote_20261110/README.md).
+Les fichiers A04/B05 gardent leurs noms de famille ; employer les nouvelles
+archives et leurs SHA256. Les devis en ligne précédents restent des instantanés,
+le placement final et le DFM usine restent à approuver ; aucune commande lancée.
+
 ## Révision UART du 10 novembre 2026
 
-A0.4.2 / B0.5.2 ajoutent **J10, JST-XH3 UART 3,3V** sur les deux cartes.
+A0.4.3 / B0.5.3 ajoutent **J10, JST-XH3 UART 3,3V** sur les deux cartes.
 Voir [le contrat et les limites](UART_EXTENSION.md). Le PCB B température
 laisse les signaux UART non connectés ; aucun câble supplémentaire obligatoire.
 
@@ -59,8 +68,8 @@ réservée à une marque ou à un pont USB/série. Voir le
 mais l'encombrement et le comportement VIN/VBUS restent à vérifier par variante.
 La diymore ci-dessous reste la représentation de référence du schéma et du STEP.
 
-- **DevKit ESP32 USB-C amovible, 30 contacts**, commune aux trois variantes au brochage confirmé par l’utilisateur. Deux sockets Harwin M20-7821546, pas2,54mm, rangées25,40mm mesurées, trous nominaux1,05mm. Empreinte locale `LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm`. La diymore [B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76) reste une référence de dessin54×27mm ; les variantes CP210x/CH340 ne sont pas distinguées par le PCB hôte. Le corps, la hauteur des broches et l’alimentation USB se vérifient à l’intégration. Voir `module_selection.json` et [A](pcb_a_display/README.md).
-- **B v0.5 : LM2596S-5.0/NOPB intégré**, self 100 µH SRP1770TA-101M, diode SS36, C8 d’entrée 100 µF / 50 V, C9 de découplage 100 nF / 50 V, C10 de sortie 330 µF / 35 V et résistance R13 de 56 mΩ. Le module XL4015 acheté n’est plus utilisé dans cette révision. J8/J9 sont supprimés ; NT1 matérialise la jonction des masses.
+- **DevKit ESP32 USB-C amovible, 30 contacts**, commune aux trois variantes au brochage confirmé par l’utilisateur. Deux sockets HCTL PM254-1-15-Z-8.5, pas2,54mm, rangées25,40mm mesurées, trous nominaux1,05mm. Empreinte locale `LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm`. La diymore [B0DGLCWR76](https://www.amazon.fr/dp/B0DGLCWR76) reste une référence de dessin54×27mm ; les variantes CP210x/CH340 ne sont pas distinguées par le PCB hôte. Le corps, la hauteur des broches et l’alimentation USB se vérifient à l’intégration. Voir `module_selection.json` et [A](pcb_a_display/README.md).
+- **B v0.5 : LM2596S-5.0/NOPB intégré**, self 100 µH SRP1770TA-101M, diode SS36, C8 d’entrée 100 µF / 50 V, C9 de découplage 100 nF / 50 V, C10 de sortie 330 µF / 35 V et résistance R13 de 50 mΩ. Le module XL4015 acheté n’est plus utilisé dans cette révision. J8/J9 sont supprimés ; NT1 matérialise la jonction des masses.
 
 - Les ports périphériques A et la sonde B ont des JST-XH physiques. U3 est une SN74LVC1G08DBVR en SOT-23-5 ; U5 une UCC27517DBVR en SOT-23-5. Q1 est une IRLZ44NPBF TO-220 ; Q2 une DMP6023LE-13 SOT-223. Les anciennes enveloppes sans pastilles sont conservées dans leur bibliothèque historique, mais **aucune n'est utilisée dans les PCB routés**.
 
@@ -78,7 +87,7 @@ J2 et J3 : borniers Phoenix Contact **1715721, MKDS 1,5/2-5,08**, pas 5,08 mm. A
 
 ## Buck intégré et masses — B v0.5
 
-Le 24 V protégé alimente U1 et C8/C9. U1 commute le nœud BUCK_SW, repris par D9 et L1. L1 produit +5V_BUCK ; C10 filtre la sortie et son retour passe par R13 = 56 mΩ. F2 protège ensuite +5V_AB. La broche 5 de U1 est reliée à PGND : le buck fonctionne dès que le 24 V est présent.
+Le 24 V protégé alimente U1 et C8/C9. U1 commute le nœud BUCK_SW, repris par D9 et L1. L1 produit +5V_BUCK ; C10 filtre la sortie et son retour passe par R13 = 50 mΩ. F2 protège ensuite +5V_AB. La broche 5 de U1 est reliée à PGND : le buck fonctionne dès que le 24 V est présent.
 
 **GND et PGND sont désormais reliées par NT1**, empreinte de cuivre près de l’entrée. Leurs noms distincts servent à organiser les retours. Le trajet principal du chauffage reste sur sa piste PGND de puissance, sans passer par NT1 ni les JST. Il n’y a plus de shunt CC/CV à préserver. NT1 n’est pas un composant à acheter ni une barrière d’isolation. Le partage USB/VBUS reste un point distinct à résoudre.
 
@@ -98,7 +107,7 @@ J7.5 et J7.6 restent non connectées sur B température. Les empreintes sont B2B
 
 ## Voyants de diagnostic et sonde
 
-Six LED 0805 sont montées côté composants, avec résistances de limitation individuelles. Elles fonctionnent sans firmware ni GPIO supplémentaire. Les références sélectionnées sont [Kingbright APT2012LZGCK, verte](https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf) et [APT2012LSECK/J4-PRV, orange](https://www.kingbrightusa.com/images/catalog/spec/apt2012lseck-j4-prv.pdf), caractérisées à 2 mA. Leurs courants ci-dessous sont des estimations à tension nominale avec Vf typique, pas des mesures.
+Six LED 0805 sont montées côté composants, avec résistances de limitation individuelles. Elles fonctionnent sans firmware ni GPIO supplémentaire. Les références sélectionnées sont [Kingbright APT2012LZGCK, verte](https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf) et [APT2012LSYCK/J3-PRV, jaune](https://www.kingbrightusa.com/images/catalog/spec/apt2012lsyck-j3-prv.pdf), caractérisées à 2 mA. Leurs courants ci-dessous sont des estimations à tension nominale avec Vf typique, pas des mesures.
 
 | Carte / repère sérigraphié | LED / résistance | Point observé / retour | Courant typique estimé |
 | --- | --- | --- | --- |
@@ -107,7 +116,7 @@ Six LED 0805 sont montées côté composants, avec résistances de limitation in
 | B : `24V` | D5 verte / R9 15 kohms, 0805 ≥0,125 W | VIN_PROTECTED / PGND, après F1 et Q2 | 1,42 mA |
 | B : `5V` | D6 verte / R10 1,5 kohm | +5V_AB / GND, après F2 | 1,57 mA |
 | B : `3V3` | D7 verte / R11 470 ohms | +3V3_B / GND | 1,38 mA |
-| B : `HEAT` | D8 orange / R12 2,2 kohms | GATE_DRV / PGND, sortie du driver U5 | 1,45 mA pendant ON |
+| B : `HEAT` | D8 jaune / R12 2,2 kohms | GATE_DRV / PGND, sortie du driver U5 | 1,43 mA pendant ON |
 
 Les autres résistances de voyant sont des 0603, 1 %, ≥0,1 W. R9 dissipe environ 30 mW à 24 V ; même en supposant une LED court-circuitée et 32 V, la borne de calcul reste inférieure à 69 mW. Cela ne qualifie pas les transitoires du reste du circuit.
 

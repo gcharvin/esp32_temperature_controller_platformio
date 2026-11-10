@@ -1,8 +1,8 @@
 {
   "status": "Manufacturer drawing checks; prototype and assembler approval still required",
-  "checked_date": "2026-11-05",
+  "checked_date": "2026-11-10",
   "R13": {
-    "MPN_candidate": "WSL1206R0560FEA",
+    "MPN_candidate": "WSL1206R0500FEA",
     "source": "https://www.vishay.com/docs/30100/wsl.pdf",
     "drawing": "page 2, WSL1206 resistance range 0.006..0.200 ohm",
     "footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
@@ -32,27 +32,30 @@
     "positive_pin": "1"
   },
   "C10": {
-    "MPN_candidate": "EEUFR1V331UB",
-    "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB",
-    "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
-    "body_diameter_mm": 10,
-    "body_height_mm": 12.5,
+    "MPN_candidate": "EEUFS1V331LB",
+    "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFS1V331LB",
+    "footprint": "LabHardware:CP_Radial_EEUFS1V331LB_P5_D10_Keepout",
+    "body_diameter_mm": 8,
+    "body_height_mm": 15,
     "lead_pitch_mm": 5,
     "positive_pin": "1",
-    "limits": "Keep UB suffix and envelope; no implicit substitution by a taller or different-ESR capacitor."
+    "limits": "LB formed5mm lead pitch required. Original D10 native keepout/lands retained conservatively; body max8.5mm fits within it. Custom VRML represents maximum body height; factory polarity/process approval pending.",
+    "body_diameter_max_mm": 8.5,
+    "body_height_max_mm": 16.5,
+    "mechanical_envelope_height_mm": 16.5
   },
   "A_U1_SOCKETS": {
-    "MPN": "M20-7821546",
+    "MPN": "PM254-1-15-Z-8.5",
     "quantity": 2,
-    "source": "https://content.harwin.com/asset/53851ba8-b32e-4ac5-a0c5-09d9271c0c0a/DRG-00385-Technical-Drawing-Datasheet-M20-782-pdf.pdf",
-    "drawing_revision": "11 / 2026-08-03",
-    "footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
+    "source": "https://www.lcsc.com/datasheet/C2897378.pdf",
+    "drawing_revision": "HCTL PM254-1-N-Z-8.5-XX(L11.7), revision A",
+    "footprint": "LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm",
     "pitch_mm": 2.54,
     "row_spacing_mm": 25.4,
     "drill_nominal_mm": 1.05,
     "recommended_hole_mm": [
       1.02,
-      1.07
+      1.02
     ],
     "pad_size_mm": [
       1.8,
@@ -64,11 +67,12 @@
       8.5
     ],
     "body_max_mm": [
-      38.85,
+      38.8,
       2.65,
       8.65
     ],
-    "notes": "Hole1.05 selected within recommended nominal range; finished-hole tolerance and solder process to be confirmed in DFM. Male header insulator2.54mm plus0.15mm gap are assembly allowances, not measurements of the three modules."
+    "notes": "Manufacturer nominal recommended hole1.02mm; native1.05mm retained for0.64x0.40mm leads. Finished-hole tolerance/assembly acceptance and physical mating require factory/hardware review.",
+    "Manufacturer": "HCTL"
   },
   "LED_APT2012": {
     "references": {
@@ -85,13 +89,13 @@
     },
     "MPNs": [
       "APT2012LZGCK",
-      "APT2012LSECK/J4-PRV"
+      "APT2012LSYCK/J3-PRV"
     ],
     "sources": [
       "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf",
-      "https://www.kingbrightusa.com/images/catalog/spec/apt2012lseck-j4-prv.pdf"
+      "https://www.kingbrightusa.com/images/catalog/spec/apt2012lsyck-j3-prv.pdf"
     ],
-    "drawing": "page1, recommended soldering pattern; greenV8B2025-03-17, orangeV4A2025-05-24",
+    "drawing": "page1 recommended soldering pattern; greenV8B2025-03-17, yellowV5B2025-03-14",
     "footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
     "pad_size_mm": [
       1.25,

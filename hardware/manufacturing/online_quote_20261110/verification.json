@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-10",
+  "scope": "QUOTE ONLY; no cart/order/payment; native CAD and released fabrication ZIPs unchanged",
+  "stock_reserved": false,
+  "boards": {
+    "A": {
+      "placements": 24,
+      "all_selected": true,
+      "all_codes_match_quote_bom": true
+    },
+    "B": {
+      "placements": 48,
+      "all_selected": true,
+      "all_codes_match_quote_bom": true
+    }
+  },
+  "price_usd": {
+    "A": {
+      "pcb": 33.38,
+      "pcba": 67.87,
+      "displayed_total": 101.25,
+      "bake_separate": 7.94,
+      "depanel_separate": 3.31,
+      "budget_with_listed_options": 112.5
+    },
+    "B": {
+      "pcb": 63.76,
+      "pcba": 169.44,
+      "displayed_total": 233.2,
+      "bake_separate": 7.94,
+      "depanel_separate": 3.31,
+      "budget_with_listed_options": 244.45
+    },
+    "displayed_sum": 334.45,
+    "budget_with_listed_options_sum": 356.95,
+    "excluded": [
+      "shipping",
+      "taxes",
+      "additional charges determined after review"
+    ]
+  },
+  "engineering": {
+    "transients_passed": 7,
+    "mechanical_service_stages_passed": 20,
+    "physical_validation_performed": false,
+    "final_placement_DFM_approved": false,
+    "native_release_synchronization_required": false
+  },
+  "artifacts_sha256": {
+    "A04_BOM_STOCK_ALTERNATIVES_QUOTE_ONLY.csv": "f2d3ce0c313d5471f9154a082951f9c7489c4033c26c1ac23cd87589587f9112",
+    "B05_BOM_STOCK_ALTERNATIVES_QUOTE_ONLY.csv": "7e370e18b6739c9387614971f8cf08ad03652811c82a8b540119eb91f24962aa",
+    "live_BOM_A.json": "d63ad36df33307490994026d656c3f30f350344d9f4dfb70ac9da2bba5542a82",
+    "live_BOM_B.json": "757c251f3257b40a733396773c87b01741506839600417e292c33e762f792f3e",
+    "placement_B_preview.png": "1976f398cb6c23b357f8beec3389aa2a666278d6c07c8c5e1d42f63181772570",
+    "prepare_quote_boms.py": "0986c8cfe47d5695879b9c133c00085aa78804442864c4762dde9f09e11f1e94",
+    "qualify_buck_alternatives.py": "0a725709453121d71a36ae10384e358b7ae8b0034a177fb6c829ad5ddca9d58c",
+    "qualify_mechanical_alternatives.py": "7d584521884779701c3b559e9619a7adf4b2ef3c864eea0b0cd47ea18b2f4c07",
+    "quote_A.png": "823c976d7162e8d9c155ec770133d5636bbd44cb2fa3ebf627a45a7fd2236527",
+    "quote_A.txt": "ab9df67b8788ea0a7cc1529375af12906aa54db223708254aff380c7d166213c",
+    "quote_B.png": "3324f1c476468e499df7b291450d256376fda898e8b2e111ae62f8b728e0b1a8",
+    "quote_B.txt": "98836f27e2d04f422df192d53c270422702928d462dcf4d9844e639276dc7753",
+    "quote_bom_changes.json": "cadd96d33b0bf9f8e858cebff66537de9681ba688cf38d777b73725482fa4f7e",
+    "mechanical/alternative_clearance.json": "cbabb4dfdda8e83b2a713043ba2cb43dcefba699252123f15e4f73bc29831e83",
+    "mechanical/assembly_sequence_validation.json": "ea7a8f28aa2e7a6224523cf0d0e815d12569f9e0ecc689e4c9ee67b3cd6c4de4",
+    "simulation/validation_plan.json": "8d0f5319cb305a1ca25dd9fed3773578e6e7ab5108c03680ee64374c849d10c3",
+    "simulation/results/disable.png": "7db8e742ee5f1c9a4e102961329a7d806797ce11be3f6c5785b0cdfd9589fddb",
+    "simulation/results/esr_lower_bound.png": "e0aa97accfcae7416d98968390a1cee76b17dd303d66a11e9cac8a4050124b55",
+    "simulation/results/line_step.png": "842b32c58cdb565bd4a5211ad12e22763c7fc6a52047471f00a6b1d2e5c2a285",
+    "simulation/results/load_step.png": "db0224c8737424fd672a3abb13711529f429d75c83ed87c77380ea8d0034572e",
+    "simulation/results/load_step_derated.png": "4fa2694b2db9711aeb7b7f2c1c07a300d3a13248004425ba46b9835336a53149",
+    "simulation/results/simulation_results.json": "dbdd8ab6846daeb535ade819a967a3e959ffaa0dc8f570c61969cd6461409c28",
+    "simulation/results/startup.png": "764a6c420f9b5b766a880a927de6567839a5d4964ef2a6bb88b6e1c3f3e2e869",
+    "simulation/results/upper_esr_stress.png": "a07c19592aa2015c0ad86dfe0cf726453282de5d40069e85bf8841447bafddcf"
+  },
+  "native_integration": {
+    "revision": "A0.4.3/B0.5.3",
+    "mechanical": "v12",
+    "native_release_synchronization_required": false,
+    "order_placed": false,
+    "factory_placement_DFM_approved": false
+  }
+}

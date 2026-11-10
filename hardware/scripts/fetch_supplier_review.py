@@ -64,9 +64,10 @@ def fetch(mpn, code, expected_brand):
         aliases={'texasinstruments':{'ti','texasinstruments'}, 'diodesincorporated':{'diodes','diodesincorporated'},
                  'kemetyageogroup':{'kemet','yageogroup','kemetyageogroup'},
                  'stmicroelectronics':{'st','stmicroelectronics'}, 'vishaydale':{'vishay','vishaydale','vishayintertech'},
-                 'vishay':{'vishay','vishayintertech'}, 'infineon':{'infineon','infineontechnologies'}}
+                 'vishay':{'vishay','vishayintertech'}, 'infineon':{'infineon','infineontechnologies'},
+                 'walsin':{'walsin','walsintechcorp'}}
         acceptable=aliases.get(norm(expected_brand),{norm(expected_brand)})
-        if actual_mpn!=mpn or norm(brand) not in acceptable:
+        if norm(actual_mpn)!=norm(mpn) or norm(brand) not in acceptable:
             raise ValueError('Identity mismatch: '+brand+' '+actual_mpn)
         result.update(identity_verified=True,mpn=actual_mpn,manufacturer=brand,
                       package=detail.get('componentSpecificationEn'),
@@ -98,6 +99,8 @@ def main():
             for row in csv.DictReader(stream):
                 if row['MPN']:
                     selected.setdefault(row['MPN'],dict(manufacturer=row['Manufacturer'],refs=[]))['refs'].append(code+'/'+row['Reference'])
+    socket=json.loads((ROOT/'module_selection.json').read_text(encoding='utf-8'))['devkit']['socket']
+    selected[socket['MPN']]=dict(manufacturer=socket['Manufacturer'],refs=['A/U1_SOCKET_BOTTOM','A/U1_SOCKET_TOP'])
     tasks=[(mpn,code,selected[mpn]['manufacturer']) for mpn,code in candidates['parts'].items()]
     records=[]
     rate_limited=False

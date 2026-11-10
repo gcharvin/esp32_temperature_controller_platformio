@@ -47,7 +47,7 @@ La procédure commune reste celle de
 Une difficulté de connexion au bootloader ne démontre pas une incompatibilité
 avec les sockets de A ; elle doit être diagnostiquée sur la carte concernée.
 
-La préparation finale utilise `LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm`, avec deux HarwinM20-7821546, trous1,05mm et entraxe confirmé. L’ancienne empreinte `_ASSUMED` ne sert qu’aux révisions archivées. Le STEP v0.8 inclut le plastique des broches mâles sous forme d’une enveloppe2,54mm, à vérifier sur les modules.
+La préparation finale utilise `LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm`, avec deux HarwinPM254-1-15-Z-8.5, trous1,05mm et entraxe confirmé. L’ancienne empreinte `_ASSUMED` ne sert qu’aux révisions archivées. Le STEP v0.8 inclut le plastique des broches mâles sous forme d’une enveloppe2,54mm, à vérifier sur les modules.
 
 ## Révision UART et retour d’usage du 10 novembre 2026
 

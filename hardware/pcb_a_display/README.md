@@ -3,10 +3,10 @@
 Ouvrir `pcb_a_display.kicad_pro` puis le PCB ou le schéma. Format110×75×1,6mm,
 deux couches35µm, réserves mécaniques et antenne conservées.
 
-La préparation finale utilise deux sockets **HarwinM20-7821546**,15 contacts
+La préparation finale utilise deux sockets **HCTL PM254-1-15-Z-8.5**,15 contacts
 chacun, pas2,54mm, rangées25,40mm confirmées par l'utilisateur. L'empreinte
-locale `LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm` emploie des trous
-nominaux1,05mm et des zones de dégagement dimensionnées pour les boîtiers Harwin. La DevKit
+locale `LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm` emploie des trous
+nominaux1,05mm et des zones de dégagement dimensionnées pour les boîtiers HCTL. La DevKit
 reste amovible, fournie par l'utilisateur ; ses trois variantes partagent le
 brochage confirmé. Le nom historique diymore/ASSUMED n'est plus l'empreinte active.
 
@@ -24,8 +24,8 @@ USB seul pour le service : sources externes coupées, J1/J6/J7 débranchés,
 JP1 retiré. JP1 ne gère pas automatiquement VBUS/VIN. Les circuits USB des
 DevKit et leur hauteur réelle restent des vérifications d'intégration.
 
-La maquette v0.8 inclut les sockets maximaux documentés et une enveloppe
-d'entretoise mÃ¢le2,54mm. Voir le [dossier de fabrication](../manufacturing/START_HERE.md)
+La maquette v0.12 inclut les sockets maximaux documentés et une enveloppe
+d'entretoise mâle2,54mm. Voir le [dossier de fabrication](../manufacturing/START_HERE.md)
 pour les plans, le routage, le contrôle usine et les accords externes requis.
 
 ## Révision diagnostic du 6 novembre 2026
@@ -37,7 +37,7 @@ sont conservés ; le diagnostic maintient ENABLE à zéro.
 
 ## Extension UART du 10 novembre 2026
 
-Révisions **A0.4.2 / B0.5.2** : J10 est un JST-XH3 supplémentaire assemblé
+Révisions **A0.4.3 / B0.5.3** : J10 est un JST-XH3 supplémentaire assemblé
 sur chaque PCB, pas2,50mm, même MPN B3B-XH-A(LF)(SN) que J6.
 
 | Broche J10 | Carte A | Carte B température |

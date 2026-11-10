@@ -74,6 +74,9 @@ def main():
                           'No placement rotations approved by assembly house; THT requires explicit quotation.',
                           'USB/external simultaneous operation remains unqualified.'])
     for source in (Path(__file__), ROOT/'scripts/verify_manufacturing_review.py', ROOT/'interface_ab.json',ROOT/'module_selection.json',
+                   ROOT/'scripts/apply_stock_revision.py', ROOT/'review/stock_revision_copper_validation.json',
+                   ROOT/'scripts/build_component_models.py',
+                   ROOT/'power_study/lm2596/current_acceptance.json',ROOT/'review/routing/integrated_buck_validation.json',
                    ROOT/'manufacturing/power_and_usb_review.md', ROOT/'manufacturing/README.md',
                    ROOT/'manufacturing/release_checklist.json',ROOT/'manufacturing/system_bom_review.csv',
                    ROOT/'manufacturing/customer_supply_policy.json',
@@ -84,7 +87,9 @@ def main():
                    ROOT/'manufacturing/land_pattern_review.json', ROOT/'manufacturing/component_selection.json', lands, drawings,
                    ROOT/'scripts/build_assembly_review.py', ROOT/'scripts/check_manufacturer_land_patterns.py',
                    ROOT/'lab_hardware.pretty/Vishay_WSL1206_6m_to_200m.kicad_mod',
-                   ROOT/'lab_hardware.pretty/ESP32_30P_Harwin_M20_7821546_Rows25.40mm.kicad_mod',
+                   ROOT/'lab_hardware.pretty/ESP32_30P_HCTL_PM254_Rows25.40mm.kicad_mod',
+                   ROOT/'lab_hardware.pretty/CP_Radial_EEUFS1V331LB_P5_D10_Keepout.kicad_mod',
+                   ROOT/'lab_hardware.3dshapes/EEUFS1V331LB_envelope.wrl',
                    ROOT/'lab_hardware.pretty/LED_Kingbright_APT2012_Manufacturer.kicad_mod',
                    ROOT/'scripts/export_bare_board_test.py',ROOT/'scripts/verify_fabrication_outputs.py',
                    ROOT/'scripts/render_gerber_review.py',ROOT/'scripts/check_component_selection.py',parts,
@@ -195,14 +200,14 @@ def main():
                 recorded_mm=DEVKIT['row_spacing_mm'],status=DEVKIT['row_spacing_status'],
                 evidence=DEVKIT.get('row_spacing_measurement'),other_fit_checks='OPEN')
             write_csv(folder/'U1_socket_assembly_quote.csv',[
-                dict(Assembly_item='U1_SOCKET_BOTTOM',Quantity=1,MPN='M20-7821546',Manufacturer='Harwin',
+                dict(Assembly_item='U1_SOCKET_BOTTOM',Quantity=1,MPN=DEVKIT['socket']['MPN'],Manufacturer=DEVKIT['socket']['Manufacturer'],
                      Pads='U1.1..15',Pitch_mm=2.54,Body_height_mm=8.5,Row_spacing_mm=25.4,
-                     Status='Selected: holes1.05mm, pitch2.54mm, rows25.4mm. Harwin body8.5mm high; OPEN: check actual insertion/body variants at integration',
-                     Source='https://www.harwin.com/products/M20-7821546'),
-                dict(Assembly_item='U1_SOCKET_TOP',Quantity=1,MPN='M20-7821546',Manufacturer='Harwin',
+                     Status='Selected HCTL: holes1.05mm, pitch2.54mm, rows25.4mm; body8.5mm high; actual insertion/body variants remain to check',
+                     Source=DEVKIT['socket']['source']),
+                dict(Assembly_item='U1_SOCKET_TOP',Quantity=1,MPN=DEVKIT['socket']['MPN'],Manufacturer=DEVKIT['socket']['Manufacturer'],
                      Pads='U1.16..30',Pitch_mm=2.54,Body_height_mm=8.5,Row_spacing_mm=25.4,
-                     Status='Selected: holes1.05mm, pitch2.54mm, rows25.4mm. Harwin body8.5mm high; OPEN: check actual insertion/body variants at integration',
-                     Source='https://www.harwin.com/products/M20-7821546')])
+                     Status='Selected HCTL: holes1.05mm, pitch2.54mm, rows25.4mm; body8.5mm high; actual insertion/body variants remain to check',
+                     Source=DEVKIT['socket']['source'])])
         for source in (sch,pcb,ROOT/name/(name+'.kicad_pro')):
             manifest['sources_sha256'][source.relative_to(ROOT).as_posix()]=native_hashes[source]
         # Edge_Cuts bounding boxes include drawing stroke width. Fabrication

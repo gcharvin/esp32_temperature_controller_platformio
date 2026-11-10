@@ -149,6 +149,8 @@ def build():
     geometry=read_json(M/'output/assembly_geometry.json')
     for relative,digest in geometry['source_sha256'].items():assert sha(source(ROOT/relative))==digest
     geometry_boards={b['code']:b for b in geometry['boards']}
+    modules=read_json(ROOT/'module_selection.json')
+    supplier=read_json(M/'supplier_candidates.json')['parts']
     probes=read_json(ROOT/'test_points.json')['boards']
     mappings=[];all_boms=[];counts={}
     for code,prefix,expected_smt,expected_tht in [('A','A04',13,11),('B','B05',38,10)]:
@@ -191,10 +193,11 @@ def build():
                 assert len(pads)==15 and all(abs(math.dist(a['at'],b['at'])-2.54)<1e-6 for a,b in zip(pads,pads[1:]))
                 center=[sum(p['at'][i] for p in pads)/15 for i in (0,1)]
                 a,b=pads[0]['at'],pads[-1]['at'];angle=math.degrees(math.atan2(-(b[1]-a[1]),b[0]-a[0]))
-                assert sockets[0]['MPN']==sockets[1]['MPN']=='M20-7821546'
+                socket=modules['devkit']['socket']
+                assert sockets[0]['MPN']==sockets[1]['MPN']==socket['MPN']
                 bom.append(dict(Comment='Female socket 1x15 2.54mm 8.5mm high',Designator=alias,
-                    Footprint='Harwin_M20-7821546_1x15_P2.54mm',Manufacturer='Harwin',
-                    **{'Manufacturer Part':'M20-7821546','LCSC Part #':''}))
+                    Footprint='HCTL_PM254_1x15_P2.54mm',Manufacturer=socket['Manufacturer'],
+                    **{'Manufacturer Part':socket['MPN'],'LCSC Part #':supplier[socket['MPN']]}))
                 place(alias,'U1',[center[0]+ox,center[1]+oy],angle,'Separate socket row pad centroid','THT',pads)
             assert math.isclose(abs(mapping[-1]['Local_Y_mm']-mapping[-2]['Local_Y_mm']),25.4,abs_tol=1e-6)
         assert len(bom)==len(cpl)==expected_smt+expected_tht
@@ -224,7 +227,7 @@ def build():
     loose=read_csv(M/'review_A04_B05/loose_accessories.csv');assert len(loose)==1 and loose[0]['MPN']=='M7566-05'
     missing['M7566-05']=dict(Manufacturer='Harwin',MPN='M7566-05',References=['A/JP1_SHUNT'],Net_quantity_for_lot=5,
                            Assembly='SUPPLY_LOOSE_NOT_ON_CPL',Status='EXACT_SOURCING_REQUIRED')
-    assert set(missing)=={'M20-7821546','M20-9990246','M7566-05','EEUFR1V331UB','WSL1206R0560FEA'}
+    assert set(missing)=={'M7566-05'},'All fitted components must have reviewed catalogue identifiers'
     for entry in missing.values():entry['References']=' '.join(entry['References'])
     write_csv(OUT/'support/exact_sourcing_REQUIRED.csv',list(missing.values()),list(next(iter(missing.values()))))
     copies={

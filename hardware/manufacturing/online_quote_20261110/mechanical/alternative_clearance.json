@@ -1,0 +1,28 @@
+{
+  "scope": "Quote-only mechanical alternatives, conservative original D10 C10 footprint envelope",
+  "C10_old_height_mm": 12.5,
+  "C10_alternative_max_height_mm": 16.5,
+  "socket_alternative_max_body_mm": [
+    38.8,
+    2.65,
+    8.65
+  ],
+  "socket_existing_envelope_mm": [
+    38.85,
+    2.65,
+    8.65
+  ],
+  "static_C10_collisions": [],
+  "service_stages": 20,
+  "assembly_failures": [],
+  "source_sha256": {
+    "mechanical\\build_enclosure.py": "31cdb6038dbbc195c2b8286143e90dae1e510c107f7e449430af0f6e46332e41",
+    "mechanical\\light_sensor_mount.py": "c0b53a91f28ac4433e636308215f43479675ed253105bb419053816ac1647f40",
+    "mechanical\\enclosure_parameters.json": "68557c0629a5c0b843d6fcc4c8d1965466fd4d8e3884ed40057229460c603e2b",
+    "placement.json": "abe05c095f4512ee4aee41556f07a1bf23bfef0cc862dcdf0c1c0cf2a85a2d09",
+    "module_selection.json": "63712d1417803524367246603235468f019b53de587e32b1922d63a382ab97a1",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26"
+  },
+  "physical_fit_verified": false
+}

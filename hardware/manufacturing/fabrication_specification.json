@@ -44,7 +44,7 @@
     "moisture": "Handle each actual MSL lot correctly; LM2596 and Kingbright LEDs include MSL3 parts",
     "all_THT_factory_assembled": true,
     "THT_lead_protrusion_target_max_mm": 2,
-    "extra_sockets": "Two Harwin M20-7821546 under A/U1; nominal finished holes1.05mm; 25.4mm row centres, 2.54mm pitch",
+    "extra_sockets": "Two HCTL PM254-1-15-Z-8.5 under A/U1; nominal finished holes1.05mm; 25.4mm row centres, 2.54mm pitch",
     "loose_shunt": "One Harwin M7566-05 per A, supplied loose; do not bridge JP1 at delivery",
     "customer_module": "Do not buy or solder the removable ESP32 DevKit",
     "net_tie": "B/NT1 copper only; no purchased part",

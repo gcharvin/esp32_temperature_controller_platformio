@@ -8,10 +8,10 @@ simulations ni le modèle 3D en qualification du matériel réel.
 
 `component_selection.json` fixe les MPN des 70 composants physiques natifs.
 Ils sont inscrits dans les schémas et PCB, puis comparés aux netlists fraîches.
-Les deux barrettes Harwin et le cavalier livré séparément sont des articles
+Les deux barrettes HCTL et le cavalier livré séparément sont des articles
 supplémentaires explicites. La DevKit reste fournie par l'utilisateur et NT1
 reste une jonction de cuivre. Le fabricant doit sourcer les références exactes,
-notamment C10, R13 et Harwin ; une référence sans ID JLC n'est pas une pièce
+notamment C10, R13 et les sockets HCTL ; une référence sans ID JLC n'est pas une pièce
 libre de substitution.
 
 Les empreintes locales remplacent les hypothèses de perçage de la DevKit et
@@ -20,14 +20,14 @@ intégrées. Les dimensions et sources sont dans `land_pattern_review.json`.
 Le perçage des sockets est nominalement 1,05 mm ; le fournisseur confirmera
 sa tolérance de trou fini et son procédé de soudure au DFM.
 
-Sources : [Harwin](https://content.harwin.com/asset/53851ba8-b32e-4ac5-a0c5-09d9271c0c0a/DRG-00385-Technical-Drawing-Datasheet-M20-782-pdf.pdf),
+Sources : [HCTL](https://www.lcsc.com/datasheet/C2897378.pdf),
 [LED verte](https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf),
-[LED orange](https://www.kingbrightusa.com/images/catalog/spec/apt2012lseck-j4-prv.pdf),
+[LED jaune](https://www.kingbrightusa.com/images/catalog/spec/apt2012lsyck-j3-prv.pdf),
 [R13](https://www.vishay.com/docs/30100/wsl.pdf).
 
 ## Condensateurs et régulateurs 3,3 V
 
-Choix conservé pour ce prototype : **C1608X7R1C105K080AC**, 1 µF nominal,
+Choix conservé pour ce prototype : **0603B105K160CT**, 1 µF nominal,
 16 V, X7R, ±10 %, sur les découplages 1 µF existants. Le circuit typique AP2112
 emploie 1 µF en entrée et sortie et recommande X5R/X7R. La sélection suit cette
 application nominale. La valeur effective après polarisation, température et
@@ -40,7 +40,7 @@ Le 10 µF d'entrée A/C3 reste un découplage supplémentaire, pas la compensati
 du convertisseur LM2596. C10/R13 conservent leur réseau de retour simulé.
 
 Sources : [AP2112, circuit typique et note4](https://www.diodes.com/datasheet/download/AP2112.pdf),
-[TDK, référence sélectionnée et caractère indicatif des courbes](https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC).
+[Walsin, caractéristiques de la référence sélectionnée](https://www.ic-components.se/files/d4/0603B105K160CT.pdf).
 
 Le courant nominal 600 mA de l'AP2112 n'est pas un budget thermique utilisable
 sans calcul sur ce PCB. Pour la mise au point, limiter les périphériques 3,3 V
@@ -110,3 +110,19 @@ L’utilisateur rapporte un fonctionnement simultané USB/VIN sans problème
 observé sur les DevKit utilisées. JP1 est conservé dans cette révision UART
 comme isolement de banc ; aucune incompatibilité générale n’est déduite de
 l’absence de schéma documenté. Les chemins des variantes restent à caractériser.
+
+## Révision A0.4.3 / B0.5.3 : remplacements examinés au devis
+
+Les cinq condensateurs 1 µF deviennent Walsin 0603B105K160CT ; A/C3 devient
+Samsung CL10A106KP8NNNC. Les deux sockets deviennent HCTL PM254-1-15-Z-8.5.
+C10 devient Panasonic EEUFS1V331LB, hauteur maximale 16,5 mm, pas formé 5 mm ;
+son dégagement natif Ø10 et ses pastilles sont conservés. Le modèle 3D local
+représente l'enveloppe maximale. R13 devient Vishay WSL1206R0500FEA, 50 mΩ.
+D8 devient Kingbright APT2012LSYCK/J3-PRV, jaune, avec R12 inchangée.
+
+Les sept simulations de cette combinaison sont désormais liées au PCB par
+`../power_study/lm2596/current_acceptance.json`. Elles couvrent notamment la
+borne basse 49 mΩ et le stress 180 mΩ du retour C10. Leur plage régulée globale
+est 4,9575–5,0128 V et l'ondulation maximale 35,31 mV crête à crête.
+Les limites physiques, thermiques et CEM de la qualification restent ouvertes.
+Aucun achat ni ordre de fabrication n'est autorisé par cette révision.

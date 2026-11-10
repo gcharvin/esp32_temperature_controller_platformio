@@ -1,0 +1,18 @@
+LM2596 fixed 5 V - disable - original TI and Vishay models
+.include "C:/Users/Gilles/Documents/PlatformIO/Projects/esp32-temperature-controller-platformio/hardware/power_study/vendor_model/LM2596_5P0_TRANS.LIB"
+.include "C:/Users/Gilles/Documents/PlatformIO/Projects/esp32-temperature-controller-platformio/hardware/power_study/vendor_model/ss36.lib"
+VIN vin 0 PWL(0 0 100u 24)
+VDIS disable 0 PWL(0 0 5m 0 5.01m 3.3)
+XU1 vin vout sw 0 disable LM2596_5P0_TRANS
+CIN vin cinret 100u
+RIN_ESR cinret 0 0.1
+L1 sw lind 100u
+RDCR lind vout 0.118
+XD1 0 sw ss36
+COUT vout esr 330u
+RESR esr 0 0.1
+VLOADCMD loadcmd 0 0.5
+GLOAD vout 0 VALUE={V(loadcmd)*LIMIT(V(vout)/4.75,0,1)}
+.options method=gear maxord=2 reltol=0.003 abstol=1n vntol=1u
+.tran 100n 15m 0 100n
+.end

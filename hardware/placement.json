@@ -1,5 +1,5 @@
 {
-  "revision": "A0.4.2 / B0.5.2 dedicated UART J10",
+  "revision": "A0.4.3 / B0.5.3 stock alternatives; copper/pads and conservative keepouts unchanged",
   "status": "routed, ERC/DRC checked; prototype thermal/mechanical qualification pending",
   "case_external_mm": {
     "width": 155,
@@ -659,7 +659,7 @@
             56.15,
             28.6
           ],
-          "footprint": "LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm",
+          "footprint": "LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm",
           "height_mm": 18,
           "status": "physical routed prototype; verify module fit and thermal behavior"
         },
@@ -784,7 +784,7 @@
             46.5
           ],
           "rotation_deg": 0.0,
-          "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+          "footprint": "LabHardware:CP_Radial_EEUFS1V331LB_P5_D10_Keepout",
           "bounds_mm": [
             6.96035,
             41.225,
@@ -792,7 +792,7 @@
             10.55
           ],
           "status": "physical footprint / prototype review pending",
-          "height_mm": 12.5
+          "height_mm": 16.5
         },
         {
           "reference": "C2",
@@ -1048,7 +1048,7 @@
         },
         {
           "reference": "D8",
-          "value": "APT2012LSECK/J4-PRV",
+          "value": "APT2012LSYCK/J3-PRV",
           "origin_mm": [
             66.0,
             39.0
@@ -1390,7 +1390,7 @@
         },
         {
           "reference": "R13",
-          "value": "56m / 1% / 0.25W",
+          "value": "50m / 1% / 0.25W",
           "origin_mm": [
             21.0,
             44.5

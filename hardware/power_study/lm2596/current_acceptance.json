@@ -1,0 +1,21 @@
+{
+  "revision": "B0.5.3",
+  "C10": "EEUFS1V331LB",
+  "R13": "WSL1206R0500FEA",
+  "R13_ohm": 0.05,
+  "plan": "manufacturing/online_quote_20261110/simulation/validation_plan.json",
+  "results": "manufacturing/online_quote_20261110/simulation/results/simulation_results.json",
+  "source_sha256": {
+    "manufacturing/online_quote_20261110/simulation/results/simulation_results.json": "dbdd8ab6846daeb535ade819a967a3e959ffaa0dc8f570c61969cd6461409c28",
+    "manufacturing/online_quote_20261110/simulation/validation_plan.json": "8d0f5319cb305a1ca25dd9fed3773578e6e7ab5108c03680ee64374c849d10c3",
+    "manufacturing/online_quote_20261110/qualify_buck_alternatives.py": "0a725709453121d71a36ae10384e358b7ae8b0034a177fb6c829ad5ddca9d58c",
+    "manufacturing/online_quote_20261110/simulation/benches/startup.cir": "87f946bc8b7f5d74a0031dd9fdb312949d3dba0dd6d4add3c8d3fa45410b50b8",
+    "manufacturing/online_quote_20261110/simulation/benches/load_step.cir": "8b4936679b50b8404b9f75147404ea77b199abff9ea0d68f454c05012fb8df6f",
+    "manufacturing/online_quote_20261110/simulation/benches/load_step_derated.cir": "0d46206a9b15cf368cf65fe218bbdb526148e0f088aa72dc9eabfc51284e7600",
+    "manufacturing/online_quote_20261110/simulation/benches/esr_lower_bound.cir": "3c689d8ca40d8b3bcecf8d102260bd116efe615ed94c12087ed91d5f50472bb4",
+    "manufacturing/online_quote_20261110/simulation/benches/line_step.cir": "300e9913581eb92dd7e8a6944b71d7ccd0c50181222afe99748b6394d4cb6c11",
+    "manufacturing/online_quote_20261110/simulation/benches/disable.cir": "eba6ac87703d79e71009507c8d839f407231cf9cec0e89a5203fccd44eb082be",
+    "manufacturing/online_quote_20261110/simulation/benches/upper_esr_stress.cir": "a03dae2e78a76cc356b1b5412693a12fab90e0c9c2b17bc8fc5253906ca640f9"
+  },
+  "note": "November10 quote qualification promoted to native revision; original six-case FR/56mOhm study remains historical. No physical qualification inferred."
+}

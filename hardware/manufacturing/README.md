@@ -1,6 +1,15 @@
 # Préparation de fabrication A v0.4 / B v0.5
 
-Révision courante **A0.4.2 / B0.5.2**, ajout du **JST UART J10** sur chaque carte.
+**Révision courante du 10 novembre : A0.4.3 / B0.5.3, maquette v0.12.**
+Les remplacements examinés dans le devis sont reportés dans les sources :
+MLCC Walsin/Samsung, sockets HCTL, C10 Panasonic FS (16,5 mm maximum),
+R13 Vishay 50 mΩ et LED HEAT jaune. Voir
+[le dossier de substitution et le devis](online_quote_20261110/README.md).
+Les fichiers A04/B05 gardent leurs noms de famille ; employer les nouvelles
+archives et leurs SHA256. Les devis en ligne précédents restent des instantanés,
+le placement final et le DFM usine restent à approuver ; aucune commande lancée.
+
+Révision courante **A0.4.3 / B0.5.3**, ajout du **JST UART J10** sur chaque carte.
 Les22 pastilles de test au dos sont conservées. Le lot comprend désormais
 **70 composants natifs achetés, plus les deux sockets**. Cela représente
 **51 CMS et21 traversants physiques à assembler**, sockets incluses. Les anciens noms A04/B05 désignent la famille de fichiers.
@@ -20,14 +29,15 @@ fabricant restent distincts.
 [component_selection.json](component_selection.json) fixe les70 composants
 physiques natifs, avec fabricant/MPN exacts, empreintes et sources. Les champs
 sont inscrits dans les schémas et PCB, et vérifiés sur les netlists fraîches.
-Deux sockets HarwinM20-7821546 et un cavalier M7566-05 livré séparément sont
+Deux sockets HCTL PM254-1-15-Z-8.5 et un cavalier M7566-05 livré séparément sont
 spécifiés en plus. A/U1 représente une DevKit fournie par l’utilisateur,
 pas un module à souder ; B/NT1 est du cuivre sans pièce à acheter.
 
-Les37 identités distinctes du catalogue JLC vérifiées couvrent50 des51 CMS.
-R13, C10 et les articles Harwin exigent un sourcing exact au devis ; absence
-d’ID catalogue ne signifie pas indisponibilité. Aucun stock réservé ou prix
-final n’est déduit des pages publiques. Aucune substitution automatique.
+Toutes les références à monter disposent maintenant d'un code catalogue vérifié
+au devis du 10 novembre, dont C10, R13, JP1 et les sockets HCTL. Les stocks
+observés ne sont pas réservés et doivent être revérifiés avant achat. Le
+cavalier amovible M7566-05 est hors CPL et hors montant d'assemblage chiffré.
+Aucune substitution supplémentaire n'est automatique.
 
 La [revue technique](engineering_review.md) documente les choix du prototype,
 les capacités1µF conformes à l’application nominale AP2112, les budgets de

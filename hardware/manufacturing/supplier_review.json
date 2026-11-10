@@ -1,9 +1,9 @@
 {
-  "scope": "Public catalogue identity/assembly classification only; no order, reservation or upload",
-  "checked_date": "2026-11-05",
-  "verified_exact_MPNs": 37,
-  "live_stock_confirmed_MPNs": 0,
-  "candidate_input_sha256": "a1b9ad4ac19b9272a45ec599ba9824ef3e1a40e2e3b414b8512da714ab8aded0",
+  "scope": "Catalogue identities plus dated November10 online quote observations; no paid reservation or order",
+  "checked_date": "2026-11-10",
+  "verified_exact_MPNs": 41,
+  "live_stock_confirmed_MPNs": 7,
+  "candidate_input_sha256": "68191f7f3b6015a0779ae103eb142a8db63b969432bb5395d76a70ab315979a9",
   "records": [
     {
       "requested_mpn": "0451001.MRL",
@@ -280,61 +280,6 @@
       "board_references": [
         "A/U2",
         "B/U2"
-      ]
-    },
-    {
-      "requested_mpn": "APT2012LSECK/J4-PRV",
-      "supplier_id": "C5879381",
-      "source_url": "https://jlcpcb.com/partdetail/C5879381",
-      "checked_utc": "2026-11-05T18:02:32.950282+00:00",
-      "identity_verified": true,
-      "stock_quantity": null,
-      "stock_status": "NOT EXPOSED / verify in assembly quotation",
-      "purchase_approved": false,
-      "resolved_url": "https://jlcpcb.com/partdetail/C5879381",
-      "public_page_sha256": "a3febf5e024ce1cd380609028a321a85bf5c8543b982d47efa935a43248d95d4",
-      "mpn": "APT2012LSECK/J4-PRV",
-      "manufacturer": "Kingbright",
-      "package": "SMD,2x1.3mm",
-      "assembly_mode": "manualWeld",
-      "library_type": "expand",
-      "MSL": "MSL 3",
-      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2404170948_Kingbright-APT2012LSECK-J4-PRV_C5879381.pdf",
-      "reference_price_tiers": [
-        {
-          "min_qty": 1,
-          "max_qty": 49,
-          "public_productPrice": 0.1621
-        },
-        {
-          "min_qty": 50,
-          "max_qty": 149,
-          "public_productPrice": 0.1577
-        },
-        {
-          "min_qty": 150,
-          "max_qty": 499,
-          "public_productPrice": 0.1548
-        },
-        {
-          "min_qty": 500,
-          "max_qty": 509,
-          "public_productPrice": 0.1518
-        },
-        {
-          "min_qty": 510,
-          "max_qty": 519,
-          "public_productPrice": 0.1518
-        },
-        {
-          "min_qty": 520,
-          "max_qty": -1,
-          "public_productPrice": 0.1518
-        }
-      ],
-      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
-      "board_references": [
-        "B/D8"
       ]
     },
     {
@@ -789,120 +734,6 @@
       "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
       "board_references": [
         "B/C9"
-      ]
-    },
-    {
-      "requested_mpn": "C1608X5R1A106K080AC",
-      "supplier_id": "C2167467",
-      "source_url": "https://jlcpcb.com/partdetail/C2167467",
-      "checked_utc": "2026-11-05T18:02:35.419669+00:00",
-      "identity_verified": true,
-      "stock_quantity": null,
-      "stock_status": "NOT EXPOSED / verify in assembly quotation",
-      "purchase_approved": false,
-      "resolved_url": "https://jlcpcb.com/partdetail/C2167467",
-      "public_page_sha256": "81e0053eedb257593bb8042ad8e792a3525b8aadc0cc1382e9136eebefb5aea9",
-      "mpn": "C1608X5R1A106K080AC",
-      "manufacturer": "TDK",
-      "package": "0603",
-      "assembly_mode": "smtWeld",
-      "library_type": "expand",
-      "MSL": "MSL 1",
-      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_TDK-C1608X5R1A106K080AC_C2167467.pdf",
-      "reference_price_tiers": [
-        {
-          "min_qty": 1,
-          "max_qty": 9,
-          "public_productPrice": 0.5299
-        },
-        {
-          "min_qty": 10,
-          "max_qty": 29,
-          "public_productPrice": 0.422
-        },
-        {
-          "min_qty": 30,
-          "max_qty": 99,
-          "public_productPrice": 0.3762
-        },
-        {
-          "min_qty": 100,
-          "max_qty": 499,
-          "public_productPrice": 0.3189
-        },
-        {
-          "min_qty": 500,
-          "max_qty": 999,
-          "public_productPrice": 0.2944
-        },
-        {
-          "min_qty": 1000,
-          "max_qty": -1,
-          "public_productPrice": 0.2781
-        }
-      ],
-      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
-      "board_references": [
-        "A/C3"
-      ]
-    },
-    {
-      "requested_mpn": "C1608X7R1C105K080AC",
-      "supplier_id": "C2167399",
-      "source_url": "https://jlcpcb.com/partdetail/C2167399",
-      "checked_utc": "2026-11-05T18:02:35.809919+00:00",
-      "identity_verified": true,
-      "stock_quantity": null,
-      "stock_status": "NOT EXPOSED / verify in assembly quotation",
-      "purchase_approved": false,
-      "resolved_url": "https://jlcpcb.com/partdetail/C2167399",
-      "public_page_sha256": "9c80e2f6e8fc6401b50e3d2de4e8f9c4717f20ce665047a09ab6f0cb430cc88e",
-      "mpn": "C1608X7R1C105K080AC",
-      "manufacturer": "TDK",
-      "package": "0603",
-      "assembly_mode": "smtWeld",
-      "library_type": "expand",
-      "MSL": "MSL 1",
-      "supplier_datasheet_url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_TDK-C1608X7R1C105K080AC_C2167399.pdf",
-      "reference_price_tiers": [
-        {
-          "min_qty": 1,
-          "max_qty": 99,
-          "public_productPrice": 0.0548
-        },
-        {
-          "min_qty": 100,
-          "max_qty": 299,
-          "public_productPrice": 0.044
-        },
-        {
-          "min_qty": 300,
-          "max_qty": 999,
-          "public_productPrice": 0.0386
-        },
-        {
-          "min_qty": 1000,
-          "max_qty": 3999,
-          "public_productPrice": 0.0346
-        },
-        {
-          "min_qty": 4000,
-          "max_qty": 7999,
-          "public_productPrice": 0.0313
-        },
-        {
-          "min_qty": 8000,
-          "max_qty": -1,
-          "public_productPrice": 0.0296
-        }
-      ],
-      "price_scope": "Public raw productPrice fields only; currency/tax/assembly fees/stock not established as an order quotation.",
-      "board_references": [
-        "A/C1",
-        "A/C2",
-        "B/C1",
-        "B/C2",
-        "B/C7"
       ]
     },
     {
@@ -2067,13 +1898,161 @@
       "board_references": [
         "B/U5"
       ]
+    },
+    {
+      "requested_mpn": "0603B105K160CT",
+      "supplier_id": "C108463",
+      "source_url": "https://jlcpcb.com/partdetail/C108463",
+      "checked_utc": "2026-11-10",
+      "identity_verified": true,
+      "stock_quantity": 67244,
+      "stock_status": "Observed in logged-in November10 configurator; not reserved; recheck before purchase",
+      "purchase_approved": false,
+      "mpn": "0603B105K160CT",
+      "manufacturer": "Walsin",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "VERIFY LOT LABEL",
+      "board_references": [
+        "A/C1",
+        "A/C2",
+        "B/C1",
+        "B/C2",
+        "B/C7"
+      ],
+      "verification_evidence": "online_quote_20261110/README.md; live_BOM_A.json and live_BOM_B.json",
+      "price_scope": "See dated quote_A.txt/quote_B.txt, no inventory reservation or purchase approval."
+    },
+    {
+      "requested_mpn": "CL10A106KP8NNNC",
+      "supplier_id": "C19702",
+      "source_url": "https://jlcpcb.com/partdetail/C19702",
+      "checked_utc": "2026-11-10",
+      "identity_verified": true,
+      "stock_quantity": 9747393,
+      "stock_status": "Observed in logged-in November10 configurator; not reserved; recheck before purchase",
+      "purchase_approved": false,
+      "mpn": "CL10A106KP8NNNC",
+      "manufacturer": "Samsung",
+      "package": "0603",
+      "assembly_mode": "smtWeld",
+      "library_type": "basic",
+      "MSL": "VERIFY LOT LABEL",
+      "board_references": [
+        "A/C3"
+      ],
+      "verification_evidence": "online_quote_20261110/README.md; live_BOM_A.json and live_BOM_B.json",
+      "price_scope": "See dated quote_A.txt/quote_B.txt, no inventory reservation or purchase approval."
+    },
+    {
+      "requested_mpn": "PM254-1-15-Z-8.5",
+      "supplier_id": "C2897378",
+      "source_url": "https://jlcpcb.com/partdetail/C2897378",
+      "checked_utc": "2026-11-10",
+      "identity_verified": true,
+      "stock_quantity": 2859,
+      "stock_status": "Observed in logged-in November10 configurator; not reserved; recheck before purchase",
+      "purchase_approved": false,
+      "mpn": "PM254-1-15-Z-8.5",
+      "manufacturer": "HCTL",
+      "package": "Through Hole,P=2.54mm",
+      "assembly_mode": "THT_FACTORY_PROCESS_PENDING",
+      "library_type": "expand",
+      "MSL": "VERIFY LOT LABEL",
+      "board_references": [
+        "A/U1_SOCKET_BOTTOM",
+        "A/U1_SOCKET_TOP"
+      ],
+      "verification_evidence": "online_quote_20261110/README.md; live_BOM_A.json and live_BOM_B.json",
+      "price_scope": "See dated quote_A.txt/quote_B.txt, no inventory reservation or purchase approval."
+    },
+    {
+      "requested_mpn": "EEUFS1V331LB",
+      "supplier_id": "C1584641",
+      "source_url": "https://jlcpcb.com/partdetail/C1584641",
+      "checked_utc": "2026-11-10",
+      "identity_verified": true,
+      "stock_quantity": 755,
+      "stock_status": "Observed in logged-in November10 configurator; not reserved; recheck before purchase",
+      "purchase_approved": false,
+      "mpn": "EEUFS1V331LB",
+      "manufacturer": "Panasonic",
+      "package": "D8xL15mm,P5mm",
+      "assembly_mode": "THT_FACTORY_PROCESS_PENDING",
+      "library_type": "expand",
+      "MSL": "VERIFY LOT LABEL",
+      "board_references": [
+        "B/C10"
+      ],
+      "verification_evidence": "online_quote_20261110/README.md; live_BOM_A.json and live_BOM_B.json",
+      "price_scope": "See dated quote_A.txt/quote_B.txt, no inventory reservation or purchase approval."
+    },
+    {
+      "requested_mpn": "WSL1206R0500FEA",
+      "supplier_id": "C844686",
+      "source_url": "https://jlcpcb.com/partdetail/C844686",
+      "checked_utc": "2026-11-10",
+      "identity_verified": true,
+      "stock_quantity": 7527,
+      "stock_status": "Observed in logged-in November10 configurator; not reserved; recheck before purchase",
+      "purchase_approved": false,
+      "mpn": "WSL1206R0500FEA",
+      "manufacturer": "Vishay",
+      "package": "1206",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "VERIFY LOT LABEL",
+      "board_references": [
+        "B/R13"
+      ],
+      "verification_evidence": "online_quote_20261110/README.md; live_BOM_A.json and live_BOM_B.json",
+      "price_scope": "See dated quote_A.txt/quote_B.txt, no inventory reservation or purchase approval."
+    },
+    {
+      "requested_mpn": "APT2012LSYCK/J3-PRV",
+      "supplier_id": "C5879382",
+      "source_url": "https://jlcpcb.com/partdetail/C5879382",
+      "checked_utc": "2026-11-10",
+      "identity_verified": true,
+      "stock_quantity": 1583,
+      "stock_status": "Observed in logged-in November10 configurator; not reserved; recheck before purchase",
+      "purchase_approved": false,
+      "mpn": "APT2012LSYCK/J3-PRV",
+      "manufacturer": "Kingbright",
+      "package": "0805",
+      "assembly_mode": "smtWeld",
+      "library_type": "expand",
+      "MSL": "MSL 3",
+      "board_references": [
+        "B/D8"
+      ],
+      "verification_evidence": "online_quote_20261110/README.md; live_BOM_A.json and live_BOM_B.json",
+      "price_scope": "See dated quote_A.txt/quote_B.txt, no inventory reservation or purchase approval."
+    },
+    {
+      "requested_mpn": "M20-9990246",
+      "supplier_id": "C3332353",
+      "source_url": "https://jlcpcb.com/partdetail/C3332353",
+      "checked_utc": "2026-11-10",
+      "identity_verified": true,
+      "stock_quantity": 3222,
+      "stock_status": "Observed in logged-in November10 configurator; not reserved; recheck before purchase",
+      "purchase_approved": false,
+      "mpn": "M20-9990246",
+      "manufacturer": "Harwin",
+      "package": "Through Hole,P=2.54mm",
+      "assembly_mode": "THT_FACTORY_PROCESS_PENDING",
+      "library_type": "expand",
+      "MSL": "VERIFY LOT LABEL",
+      "board_references": [
+        "A/JP1"
+      ],
+      "verification_evidence": "online_quote_20261110/README.md; live_BOM_A.json and live_BOM_B.json",
+      "price_scope": "See dated quote_A.txt/quote_B.txt, no inventory reservation or purchase approval."
     }
   ],
   "unresolved_exact_MPNs": {
-    "EEUFR1V331UB": "Exact compact capacitor selected for ESR and mechanical height. Request sourcing; no automatic substitution of EEUFR1V331U or another capacitor.",
-    "WSL1206R0560FEA": "56mOhm damping resistor. Request global sourcing or propose a manufacturer-documented 1206 alternative with the same electrical requirements and land pattern review.",
-    "M20-9990246": "Harwin JP1 THT header; request sourcing or approve a fully dimensioned equivalent.",
-    "M20-7821546": "Two separate Harwin 1x15 sockets per A; request sourcing with height8.5mm maintained.",
-    "M7566-05": "Separate removable jumper shunt; system BOM, not an SMT placement."
+    "M7566-05": "Customer-supplied loose JP1 shunt, five for the lot; not a CPL placement or included in assembled-board quotation."
   }
 }

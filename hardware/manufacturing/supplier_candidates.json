@@ -6,7 +6,6 @@
     "1715721": "C480516",
     "ADS1115IDGSR": "C37593",
     "AP2112K-3.3TRG1": "C51118",
-    "APT2012LSECK/J4-PRV": "C5879381",
     "APT2012LZGCK": "C5569446",
     "B2B-XH-A(LF)(SN)": "C158012",
     "B3B-XH-A(LF)(SN)": "C144394",
@@ -15,8 +14,6 @@
     "BZT52C12-7-F": "C124196",
     "C0603C104K4RACTU": "C2181816",
     "C0805C104K5RACTU": "C3018562",
-    "C1608X5R1A106K080AC": "C2167467",
-    "C1608X7R1C105K080AC": "C2167399",
     "DMP6023LE-13": "C154901",
     "EEUFR1H101": "C178702",
     "IRLZ44NPBF": "C38774",
@@ -37,13 +34,16 @@
     "SRP1770TA-101M": "C2045587",
     "SS36-E3/57T": "C35722",
     "STPS5L60U": "C157397",
-    "UCC27517DBVR": "C99395"
+    "UCC27517DBVR": "C99395",
+    "0603B105K160CT": "C108463",
+    "CL10A106KP8NNNC": "C19702",
+    "PM254-1-15-Z-8.5": "C2897378",
+    "EEUFS1V331LB": "C1584641",
+    "WSL1206R0500FEA": "C844686",
+    "APT2012LSYCK/J3-PRV": "C5879382",
+    "M20-9990246": "C3332353"
   },
   "unmatched_exact_MPNs": {
-    "EEUFR1V331UB": "Exact compact capacitor selected for ESR and mechanical height. Request sourcing; no automatic substitution of EEUFR1V331U or another capacitor.",
-    "WSL1206R0560FEA": "56mOhm damping resistor. Request global sourcing or propose a manufacturer-documented 1206 alternative with the same electrical requirements and land pattern review.",
-    "M20-9990246": "Harwin JP1 THT header; request sourcing or approve a fully dimensioned equivalent.",
-    "M20-7821546": "Two separate Harwin 1x15 sockets per A; request sourcing with height8.5mm maintained.",
-    "M7566-05": "Separate removable jumper shunt; system BOM, not an SMT placement."
+    "M7566-05": "Customer-supplied loose JP1 shunt, five for the lot; not a CPL placement or included in assembled-board quotation."
   }
 }

@@ -34,8 +34,8 @@ Project requirements:
 
 Please review specifically:
 1. Exact sourcing, availability, lead time, minimum purchases and attrition for
-   every fitted MPN. The unmatched list includes Panasonic EEUFR1V331UB (C10),
-   Vishay WSL1206R0560FEA (R13), Harwin M20-9990246, M20-7821546 and M7566-05.
+   every fitted MPN. The unmatched list includes Panasonic EEUFS1V331LB (C10),
+   Vishay WSL1206R0500FEA (R13), Harwin M20-9990246, PM254-1-15-Z-8.5 and M7566-05.
    Blank catalogue codes are NOT DNP instructions. No automatic substitutions.
 2. B is below your published70x70mm Standard minimum. Please propose removable
    rails, tooling/fiducials and tab locations; 5mm top/bottom rails giving90x75mm
@@ -49,7 +49,7 @@ Please review specifically:
    and assembly drawings. All CSV positions/rotations remain subject to this
    approval. THT body centres differ from native pin1 footprint origins.
 5. A/U1 is a customer-owned REMOVABLE ESP32 DevKit: do not buy or solder it.
-   A/J8 and A/J9 are upload-only aliases for two physical M20-7821546 sockets:
+   A/J8 and A/J9 are upload-only aliases for two physical PM254-1-15-Z-8.5 sockets:
    J8 -> U1 pads1..15; J9 -> U1 pads16..30. They are not new silkscreen labels.
    Check the mapping and confirm this alias method is acceptable before import.
    Socket row spacing25.40mm, pitch2.54mm, nominal finished holes1.05mm.

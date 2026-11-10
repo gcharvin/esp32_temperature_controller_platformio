@@ -1,0 +1,62 @@
+Charge Details
+PCB Price
+$63.76 
+Via Covering:
+$0.00
+Special Offer:
+$4.00
+Surface Finish:
+$17.40
+Outer Copper Weight:
+$35.40
+Material Type:
+$6.96
+Confirm Production file:
+$0.00
+Standard PCBA Price
+$169.44 
+Setup Fee:
+$25.75
+Stencil:
+$8.27
+Panel:
+$0.00
+Large Size:
+$0.00
+Components(36 items):
+$82.09
+Feeders Loading fee: 
+$44.95
+SMT Assembly 
+$1.50
+Confirm Parts Placement:
+$0.45
+Hand-soldering labor fee:
+$3.61
+Manual Assembly 
+$2.31
+Packaging fee:
+$0.51
+Advanced Options:
+Bake Components:
+$7.94
+Depanel boards & edge rail before delivery:
+$3.31
+Build Time: 
+PCB:
+24 hours
+$0.00
+Assembly:
+ 4 - 5 days
+$0.00
+Add 3 more days (extended by advanced options)
+Total Price:
+$233.20
+Cost of some advanced options excluded 
+Weight 
+1.12kg
+Product Description 
+Remark
+SAVE TO CART
+
+By placing your order, you agree to the Terms and Conditions of JLCPCB assembly Service. .

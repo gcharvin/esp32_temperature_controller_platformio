@@ -1,0 +1,247 @@
+{
+  "status": "QUOTE ONLY - not a manufacturing release",
+  "boards": {
+    "A": {
+      "source_sha256": "22cddec8b455277d186730935401600780a5eb088a16e5a53bb6d9676078f75c",
+      "quote_sha256": "f2d3ce0c313d5471f9154a082951f9c7489c4033c26c1ac23cd87589587f9112",
+      "placements": 24,
+      "changes": [
+        {
+          "designator": "C1",
+          "old": {
+            "Comment": "1uF",
+            "Designator": "C1",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "TDK",
+            "Manufacturer Part": "C1608X7R1C105K080AC",
+            "LCSC Part #": "C2167399"
+          },
+          "quote": {
+            "Comment": "1uF",
+            "Designator": "C1",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "Walsin",
+            "Manufacturer Part": "0603B105K160CT",
+            "LCSC Part #": "C108463"
+          }
+        },
+        {
+          "designator": "C2",
+          "old": {
+            "Comment": "1uF",
+            "Designator": "C2",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "TDK",
+            "Manufacturer Part": "C1608X7R1C105K080AC",
+            "LCSC Part #": "C2167399"
+          },
+          "quote": {
+            "Comment": "1uF",
+            "Designator": "C2",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "Walsin",
+            "Manufacturer Part": "0603B105K160CT",
+            "LCSC Part #": "C108463"
+          }
+        },
+        {
+          "designator": "C3",
+          "old": {
+            "Comment": "10uF",
+            "Designator": "C3",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "TDK",
+            "Manufacturer Part": "C1608X5R1A106K080AC",
+            "LCSC Part #": "C2167467"
+          },
+          "quote": {
+            "Comment": "10uF",
+            "Designator": "C3",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "Samsung",
+            "Manufacturer Part": "CL10A106KP8NNNC",
+            "LCSC Part #": "C19702"
+          }
+        },
+        {
+          "designator": "JP1",
+          "old": {
+            "Comment": "5V DevKit link / remove for service",
+            "Designator": "JP1",
+            "Footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+            "Manufacturer": "Harwin",
+            "Manufacturer Part": "M20-9990246",
+            "LCSC Part #": ""
+          },
+          "quote": {
+            "Comment": "5V DevKit link / remove for service",
+            "Designator": "JP1",
+            "Footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+            "Manufacturer": "Harwin",
+            "Manufacturer Part": "M20-9990246",
+            "LCSC Part #": "C3332353"
+          }
+        },
+        {
+          "designator": "J8",
+          "old": {
+            "Comment": "Female socket 1x15 2.54mm 8.5mm high",
+            "Designator": "J8",
+            "Footprint": "Harwin_M20-7821546_1x15_P2.54mm",
+            "Manufacturer": "Harwin",
+            "Manufacturer Part": "M20-7821546",
+            "LCSC Part #": ""
+          },
+          "quote": {
+            "Comment": "Female socket 1x15 2.54mm 8.5mm high",
+            "Designator": "J8",
+            "Footprint": "Harwin_M20-7821546_1x15_P2.54mm",
+            "Manufacturer": "HCTL",
+            "Manufacturer Part": "PM254-1-15-Z-8.5",
+            "LCSC Part #": "C2897378"
+          }
+        },
+        {
+          "designator": "J9",
+          "old": {
+            "Comment": "Female socket 1x15 2.54mm 8.5mm high",
+            "Designator": "J9",
+            "Footprint": "Harwin_M20-7821546_1x15_P2.54mm",
+            "Manufacturer": "Harwin",
+            "Manufacturer Part": "M20-7821546",
+            "LCSC Part #": ""
+          },
+          "quote": {
+            "Comment": "Female socket 1x15 2.54mm 8.5mm high",
+            "Designator": "J9",
+            "Footprint": "Harwin_M20-7821546_1x15_P2.54mm",
+            "Manufacturer": "HCTL",
+            "Manufacturer Part": "PM254-1-15-Z-8.5",
+            "LCSC Part #": "C2897378"
+          }
+        }
+      ]
+    },
+    "B": {
+      "source_sha256": "ced0290731de52ecc080ac83c6a0fef413a6765cdfb3f755a0d9549b36c0aeed",
+      "quote_sha256": "7e370e18b6739c9387614971f8cf08ad03652811c82a8b540119eb91f24962aa",
+      "placements": 48,
+      "changes": [
+        {
+          "designator": "C1",
+          "old": {
+            "Comment": "1uF / 16V X7R",
+            "Designator": "C1",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "TDK",
+            "Manufacturer Part": "C1608X7R1C105K080AC",
+            "LCSC Part #": "C2167399"
+          },
+          "quote": {
+            "Comment": "1uF / 16V X7R",
+            "Designator": "C1",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "Walsin",
+            "Manufacturer Part": "0603B105K160CT",
+            "LCSC Part #": "C108463"
+          }
+        },
+        {
+          "designator": "C2",
+          "old": {
+            "Comment": "1uF / 10V X7R",
+            "Designator": "C2",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "TDK",
+            "Manufacturer Part": "C1608X7R1C105K080AC",
+            "LCSC Part #": "C2167399"
+          },
+          "quote": {
+            "Comment": "1uF / 10V X7R",
+            "Designator": "C2",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "Walsin",
+            "Manufacturer Part": "0603B105K160CT",
+            "LCSC Part #": "C108463"
+          }
+        },
+        {
+          "designator": "C7",
+          "old": {
+            "Comment": "1uF / 16V X7R",
+            "Designator": "C7",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "TDK",
+            "Manufacturer Part": "C1608X7R1C105K080AC",
+            "LCSC Part #": "C2167399"
+          },
+          "quote": {
+            "Comment": "1uF / 16V X7R",
+            "Designator": "C7",
+            "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "Manufacturer": "Walsin",
+            "Manufacturer Part": "0603B105K160CT",
+            "LCSC Part #": "C108463"
+          }
+        },
+        {
+          "designator": "D8",
+          "old": {
+            "Comment": "APT2012LSECK/J4-PRV",
+            "Designator": "D8",
+            "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+            "Manufacturer": "Kingbright",
+            "Manufacturer Part": "APT2012LSECK/J4-PRV",
+            "LCSC Part #": "C5879381"
+          },
+          "quote": {
+            "Comment": "APT2012LSYCK/J3-PRV/HEAT_YELLOW_QUOTE_ONLY",
+            "Designator": "D8",
+            "Footprint": "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+            "Manufacturer": "Kingbright",
+            "Manufacturer Part": "APT2012LSYCK/J3-PRV",
+            "LCSC Part #": "C5879382"
+          }
+        },
+        {
+          "designator": "R13",
+          "old": {
+            "Comment": "56m / 1% / 0.25W",
+            "Designator": "R13",
+            "Footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
+            "Manufacturer": "Vishay Dale",
+            "Manufacturer Part": "WSL1206R0560FEA",
+            "LCSC Part #": ""
+          },
+          "quote": {
+            "Comment": "50mR/1%/0.25W/C10_damping_QUOTE_ONLY",
+            "Designator": "R13",
+            "Footprint": "LabHardware:Vishay_WSL1206_6m_to_200m",
+            "Manufacturer": "Vishay",
+            "Manufacturer Part": "WSL1206R0500FEA",
+            "LCSC Part #": "C844686"
+          }
+        },
+        {
+          "designator": "C10",
+          "old": {
+            "Comment": "330uF / 35V",
+            "Designator": "C10",
+            "Footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+            "Manufacturer": "Panasonic",
+            "Manufacturer Part": "EEUFR1V331UB",
+            "LCSC Part #": ""
+          },
+          "quote": {
+            "Comment": "330uF / 35V",
+            "Designator": "C10",
+            "Footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+            "Manufacturer": "Panasonic",
+            "Manufacturer Part": "EEUFS1V331LB",
+            "LCSC Part #": "C1584641"
+          }
+        }
+      ]
+    }
+  }
+}

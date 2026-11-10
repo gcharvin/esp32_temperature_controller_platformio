@@ -8,7 +8,7 @@
 	)
 	(paper "A4")
 	(title_block
-		(rev "0.5.2")
+		(rev "0.5.3")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -3211,7 +3211,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
+		(property "Datasheet" "https://www.ic-components.se/files/d4/0603B105K160CT.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3245,7 +3245,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3257,7 +3257,7 @@
 				)
 			)
 		)
-		(property "MPN" "C1608X7R1C105K080AC"
+		(property "MPN" "0603B105K160CT"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -3269,7 +3269,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Walsin"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5695,7 +5695,7 @@
 				)
 			)
 		)
-		(property "Value" "56m / 1% / 0.25W"
+		(property "Value" "50m / 1% / 0.25W"
 			(at 0 1.83 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5741,7 +5741,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5753,7 +5753,7 @@
 				)
 			)
 		)
-		(property "MPN" "WSL1206R0560FEA"
+		(property "MPN" "WSL1206R0500FEA"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5765,7 +5765,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Vishay Dale"
+		(property "Manufacturer" "Vishay"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -7874,7 +7874,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
+		(property "Datasheet" "https://www.ic-components.se/files/d4/0603B105K160CT.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7908,7 +7908,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -7920,7 +7920,7 @@
 				)
 			)
 		)
-		(property "MPN" "C1608X7R1C105K080AC"
+		(property "MPN" "0603B105K160CT"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -7932,7 +7932,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Walsin"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9011,11 +9011,11 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
+	(footprint "LabHardware:CP_Radial_EEUFS1V331LB_P5_D10_Keepout"
 		(layer "F.Cu")
 		(uuid "a423263a-3156-4039-85bf-6f8bc0da37a5")
 		(at 70 101.5)
-		(descr "CP, Radial series, Radial, pin pitch=5.00mm, diameter=10mm, height=16mm, Electrolytic Capacitor")
+		(descr "Panasonic EEUFS1V331LB: D8 nominal, H16.5 max, formed P5. Original D10 keepout, pads and holes retained; custom maximum-height VRML envelope.")
 		(tags "CP Radial series Radial pin pitch 5.00mm diameter 10mm height 16mm Electrolytic Capacitor")
 		(property "Reference" "C10"
 			(at -2 -6 0)
@@ -9040,7 +9040,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1V331UB"
+		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFS1V331LB"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9074,7 +9074,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9086,7 +9086,7 @@
 				)
 			)
 		)
-		(property "MPN" "EEUFR1V331UB"
+		(property "MPN" "EEUFS1V331LB"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -11131,7 +11131,7 @@
 			(uuid "7554f084-b82b-4d4b-a005-f1e98be678dc")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D10.0mm_P5.00mm.step"
+		(model "${KIPRJMOD}/../lab_hardware.3dshapes/EEUFS1V331LB_envelope.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -13407,7 +13407,7 @@
 				)
 			)
 		)
-		(property "Value" "APT2012LSECK/J4-PRV"
+		(property "Value" "APT2012LSYCK/J3-PRV"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13419,7 +13419,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.kingbrightusa.com/images/catalog/spec/apt2012lseck-j4-prv.pdf"
+		(property "Datasheet" "https://www.kingbrightusa.com/images/catalog/spec/apt2012lsyck-j3-prv.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13453,7 +13453,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -13465,7 +13465,7 @@
 				)
 			)
 		)
-		(property "MPN" "APT2012LSECK/J4-PRV"
+		(property "MPN" "APT2012LSYCK/J3-PRV"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -15524,7 +15524,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
+		(property "Datasheet" "https://www.ic-components.se/files/d4/0603B105K160CT.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15558,7 +15558,7 @@
 				)
 			)
 		)
-		(property "Design_Status" "ENGINEERING_SELECTED_FOR_PROTOTYPE"
+		(property "Design_Status" "ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -15570,7 +15570,7 @@
 				)
 			)
 		)
-		(property "MPN" "C1608X7R1C105K080AC"
+		(property "MPN" "0603B105K160CT"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -15582,7 +15582,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Walsin"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -16963,7 +16963,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17110,7 +17110,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17257,7 +17257,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17404,7 +17404,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17551,7 +17551,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17698,7 +17698,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17845,7 +17845,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17992,7 +17992,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -18139,7 +18139,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -18286,7 +18286,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -18433,7 +18433,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -18580,7 +18580,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Design_Status" "COPPER_ONLY_BACK_SIDE_TEST_POINT"
+		(property "Design_Status" "COPPER_ONLY_TEST_POINT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)

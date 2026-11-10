@@ -49,7 +49,7 @@ The batch now has360 physical placements plus5 loose JP1 shunts.
 **Special purchasing/assembly points:**
 
 - A/U1 is a customer-owned removable ESP32 DevKit, **not a soldered module**.
-  Quote two Harwin M20-7821546 1×15 sockets under the two groups of U1 pads,
+  Quote two HCTL PM254-1-15-Z-8.5 1×15 sockets under the two groups of U1 pads,
   25.4 mm between rows, 8.5 mm housing height. Do not treat U1 as one placed
   component. Jumper header M20-9990246 and separate shunt M7566-05 are also
   requested; the shunt may be supplied loose for final service configuration.
@@ -57,10 +57,11 @@ The batch now has360 physical placements plus5 loose JP1 shunts.
 - Exact-match public catalogue IDs have been added where verified. This does
   not establish reserved or live assembly stock. Please confirm quantity,
   availability, lead time, losses/minimum quantities and price for every line.
-- Exact sourcing remains requested for **EEUFR1V331UB**, **WSL1206R0560FEA**
-  and the Harwin parts above. RC0603FR-0747KL is verified as C105579 in the
-  public catalogue; live assembly stock still requires confirmation.
-  Do not change manufacturer merely because another part has a similar MPN.
+- The November10 reviewed stock alternatives are now native A0.4.3/B0.5.3:
+  Walsin/Samsung MLCC, HCTL sockets, Panasonic EEUFS1V331LB, Vishay
+  WSL1206R0500FEA and yellow Kingbright APT2012LSYCK/J3-PRV. Exact catalogue
+  IDs are included for every fitted component. Recheck stock before purchase.
+  Five loose M7566-05 shunts are customer supplied, outside the PCBA quote.
 - C10's exact height, capacitance/ESR and R13's value are design constraints.
   Alternatives must be proposed with manufacturer data, land pattern,
   dimensions and electrical rationale before substitution approval.

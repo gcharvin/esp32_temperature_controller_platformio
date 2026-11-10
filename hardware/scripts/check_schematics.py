@@ -88,7 +88,7 @@ def main():
     bc={c.attrib['ref']:c for c in ET.parse(out/'pcb_b_temperature.net.xml').getroot().findall('./components/comp')}
     assert bc['U1'].findtext('value')=='LM2596S-5.0/NOPB'
     assert bc['U1'].findtext('footprint')=='Package_TO_SOT_SMD:TO-263-5_TabPin3'
-    assert bc['L1'].findtext('value').startswith('100uH') and bc['C10'].findtext('value').startswith('330uF') and bc['R13'].findtext('value').startswith('56m')
+    assert bc['L1'].findtext('value').startswith('100uH') and bc['C10'].findtext('value').startswith('330uF') and bc['R13'].findtext('value').startswith('50m')
     # Independent diagnostic contract: check rail, series resistor, LED polarity
     # and return. In particular, HEAT must follow the enabled driver output and
     # no indicator may load the NTC divider or add another PGND-to-GND connection.
@@ -106,7 +106,7 @@ def main():
             assert groups[series]=={(resistor,'2'),(led,'2')},(led,'wrong series chain')
             assert comps[resistor].findtext('value').split(' / ')[0]==resistance
             assert comps[led].findtext('footprint')=='LabHardware:LED_Kingbright_APT2012_Manufacturer'
-            assert comps[led].findtext('value')==('APT2012LSECK/J4-PRV' if led=='D8' else 'APT2012LZGCK')
+            assert comps[led].findtext('value')==('APT2012LSYCK/J3-PRV' if led=='D8' else 'APT2012LZGCK')
             diagnostics.append(dict(board=name,led=led,resistor=resistor,supply=rail,return_net=ground,
                                     series_only=True,cathode_pin=1,anode_pin=2))
     check_pin(b,'J4',1,'+3V3_B');check_pin(b,'J4',2,'NTC_RAW')

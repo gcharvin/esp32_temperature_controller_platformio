@@ -1,0 +1,298 @@
+[
+  {
+    "cells": [
+      "C1",
+      "1uF",
+      "Capacitor_SMD:C_0603_1608Metric",
+      "0603B105K160CT\nC108463\n16V 1uF X7R \u00b110% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "20",
+      "JLCPCB",
+      "Extended",
+      "$0.3140",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "C2",
+      "1uF",
+      "Capacitor_SMD:C_0603_1608Metric",
+      "0603B105K160CT\nC108463\n16V 1uF X7R \u00b110% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "C3",
+      "10uF",
+      "Capacitor_SMD:C_0603_1608Metric",
+      "CL10A106KP8NNNC\nC19702\n10V 10uF X5R \u00b110% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "20",
+      "JLCPCB",
+      "Basic",
+      "$0.4660",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "D1",
+      "APT2012LZGCK",
+      "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+      "APT2012LZGCK\nC5569446\n-40\u2103~+85\u2103 102.5mW 140\u00b0 2.65V 2mA 50mcd 515nm 525nm Discrete Diode Emerald Green Water Clear 0805 LED Indication - Discrete ROHS",
+      "10",
+      "JLCPCB",
+      "Extended",
+      "$3.7510",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "D2",
+      "APT2012LZGCK",
+      "LabHardware:LED_Kingbright_APT2012_Manufacturer",
+      "APT2012LZGCK\nC5569446\n-40\u2103~+85\u2103 102.5mW 140\u00b0 2.65V 2mA 50mcd 515nm 525nm Discrete Diode Emerald Green Water Clear 0805 LED Indication - Discrete ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J1",
+      "A-BPOWER/XH-2",
+      "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "B2B-XH-A(LF)(SN)\nC158012\n-25\u2103~+85\u2103 1 1x2P 2 2.5mm 250V 2P 3A 5.75mm 7.4mm 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      "6",
+      "JLCPCB",
+      "Extended",
+      "$0.2004",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J2",
+      "LCD20x4+backpack/3V3",
+      "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "B4B-XH-A(LF)(SN)\nC144395\n-25\u2103~+85\u2103 1 12.4mm 1x4P 2.5mm 250V 3A 4 4P 5.75mm 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      "21",
+      "JLCPCB",
+      "Extended",
+      "$0.9765",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J3",
+      "Encoder/ABSWGND",
+      "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "B4B-XH-A(LF)(SN)\nC144395\n-25\u2103~+85\u2103 1 12.4mm 1x4P 2.5mm 250V 3A 4 4P 5.75mm 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J4",
+      "TMP117module/addr0x48",
+      "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "B4B-XH-A(LF)(SN)\nC144395\n-25\u2103~+85\u2103 1 12.4mm 1x4P 2.5mm 250V 3A 4 4P 5.75mm 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J5",
+      "BH1750module/addr0x23",
+      "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical",
+      "B4B-XH-A(LF)(SN)\nC144395\n-25\u2103~+85\u2103 1 12.4mm 1x4P 2.5mm 250V 3A 4 4P 5.75mm 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J6",
+      "A-BI2C/XH-3",
+      "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "B3B-XH-A(LF)(SN)\nC144394\n-25\u2103~+85\u2103 1 1x3P 2.5mm 250V 3 3A 3P 5.75mm 7mm 9.9mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      "11",
+      "JLCPCB",
+      "Extended",
+      "$0.4939",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J10",
+      "A-BUART/3V3/GNDTX_ARX_A",
+      "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "B3B-XH-A(LF)(SN)\nC144394\n-25\u2103~+85\u2103 1 1x3P 2.5mm 250V 3 3A 3P 5.75mm 7mm 9.9mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J7",
+      "A-BCTRL/XH-6",
+      "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+      "B6B-XH-A(LF)(SN)\nC144397\n-25\u2103~+85\u2103 1 17.4mm 1x6P 2.5mm 250V 3A 5.75mm 6 6P 7mm Brass K Pin PA66 Through Hole Tin UL94V-0 White XH \u63d2\u4ef6,P=2.5mm Wire To Board Connector ROHS",
+      "5",
+      "JLCPCB",
+      "Extended",
+      "$0.4585",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J8",
+      "Femalesocket1x152.54mm8.5mmhigh",
+      "Harwin_M20-7821546_1x15_P2.54mm",
+      "PM254-1-15-Z-8.5\nC2897378\n-40\u2103~+105\u2103 1 15P 1x15P 2.54mm 3A 8.5mm Copper alloy Square Hole Through Hole Top Plugin,P=2.54mm Female Headers ROHS",
+      "10",
+      "JLCPCB",
+      "Extended",
+      "$2.7080",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "J9",
+      "Femalesocket1x152.54mm8.5mmhigh",
+      "Harwin_M20-7821546_1x15_P2.54mm",
+      "PM254-1-15-Z-8.5\nC2897378\n-40\u2103~+105\u2103 1 15P 1x15P 2.54mm 3A 8.5mm Copper alloy Square Hole Through Hole Top Plugin,P=2.54mm Female Headers ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "JP1",
+      "5VDevKitlink/removeforservice",
+      "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "M20-9990246\nC3332353\n-40\u2103~+105\u2103 1 2.54mm 2.54mm 2P 3A 3mm 6.1mm Black Brass Pin Header Through Hole Tin \u63d2\u4ef6,P=2.54mm Pin Headers ROHS",
+      "5",
+      "JLCPCB",
+      "Extended",
+      "$0.5605",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "R1",
+      "10k",
+      "Resistor_SMD:R_0603_1608Metric",
+      "RC0603FR-0710KL\nC98220\n-55\u2103~+155\u2103 100mW 10k\u03a9 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0603 Chip Resistor - Surface Mount ROHS",
+      "30",
+      "JLCPCB",
+      "Extended",
+      "$0.0690",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "R2",
+      "10k",
+      "Resistor_SMD:R_0603_1608Metric",
+      "RC0603FR-0710KL\nC98220\n-55\u2103~+155\u2103 100mW 10k\u03a9 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0603 Chip Resistor - Surface Mount ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "R3",
+      "10k",
+      "Resistor_SMD:R_0603_1608Metric",
+      "RC0603FR-0710KL\nC98220\n-55\u2103~+155\u2103 100mW 10k\u03a9 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0603 Chip Resistor - Surface Mount ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "R4",
+      "4.7k",
+      "Resistor_SMD:R_0603_1608Metric",
+      "RC0603FR-074K7L\nC99782\n-55\u2103~+155\u2103 100mW 4.7k\u03a9 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0603 Chip Resistor - Surface Mount ROHS",
+      "20",
+      "JLCPCB",
+      "Extended",
+      "$0.0640",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "R5",
+      "4.7k",
+      "Resistor_SMD:R_0603_1608Metric",
+      "RC0603FR-074K7L\nC99782\n-55\u2103~+155\u2103 100mW 4.7k\u03a9 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0603 Chip Resistor - Surface Mount ROHS",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "R6",
+      "1.5k/1%/0.1W",
+      "Resistor_SMD:R_0603_1608Metric",
+      "RC0603FR-071K5L\nC114668\n-55\u2103~+155\u2103 1.5k\u03a9 100mW 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0603 Chip Resistor - Surface Mount ROHS",
+      "20",
+      "JLCPCB",
+      "Extended",
+      "$0.0740",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "R7",
+      "470R/1%/0.1W",
+      "Resistor_SMD:R_0603_1608Metric",
+      "RC0603FR-07470RL\nC114669\n-55\u2103~+155\u2103 100mW 470\u03a9 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103 0603 Chip Resistor - Surface Mount ROHS",
+      "20",
+      "JLCPCB",
+      "Extended",
+      "$0.0540",
+      ""
+    ],
+    "checked": true
+  },
+  {
+    "cells": [
+      "U2",
+      "AP2112K-3.3peripherals",
+      "Package_TO_SOT_SMD:SOT-23-5",
+      "AP2112K-3.3TRG1\nC51118\n-40\u2103~+85\u2103@(Ta) 1 250mV@(600mA) 3.3V 50uVrms 55uA 600mA 65dB@(1kHz) 6V Fixed Over Current Protection\u3001Thermal Shutdown\u3001Enable control Positive SOT-25-5 Voltage Regulators - Linear, Low Drop Out (LDO) Regulators ROHS",
+      "5",
+      "JLCPCB",
+      "Extended",
+      "$0.9150",
+      ""
+    ],
+    "checked": true
+  }
+]

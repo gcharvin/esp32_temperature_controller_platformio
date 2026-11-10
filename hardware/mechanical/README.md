@@ -1,4 +1,4 @@
-# Maquette 3D v0.11 — jack de sonde compact et PCB B avec buck intégré
+# Maquette 3D v0.12 — jack de sonde compact et PCB B avec buck intégré
 
 Révision du **9 novembre 2026**. Boîtier nu **155 × 100 × 115 mm**, paroi 3 mm.
 La carte B v0.5 porte maintenant son LM2596 : le XL4015, son berceau, ses guides,
@@ -7,17 +7,17 @@ côté de B peut servir au passage des faisceaux. A reste à v0.4.
 
 ## Ouvrir dans Fusion 360
 
-- **`exports/enclosure_v11_integrated_buck.step`** : assemblage complet courant.
-- `exports/enclosure_v11_printed_parts.step` : les six pièces imprimées seules.
+- **`exports/enclosure_v12_integrated_buck.step`** : assemblage complet courant.
+- `exports/enclosure_v12_printed_parts.step` : les six pièces imprimées seules.
 - `exports/enclosure_exploded.step` et `enclosure_printed_parts_exploded.step` : vues éclatées courantes.
-- `exports/parts_v11/` : STEP et STL individuels.
+- `exports/parts_v12/` : STEP et STL individuels.
 - `exports/preview_service.png`, `preview_b_power.png`, `preview_exploded.png` : arrière ouvert, B équipée et vue éclatée.
 - `exports/preview_light_sensor.png`, `preview_light_sensor_front.png` : fixation intérieure et fenêtre extérieure, vues locales de la géométrie réelle.
-- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v11.json` : résultats et traçabilité.
-- `exports/enclosure_v11_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
+- `exports/validation.json`, `assembly_sequence_validation.json`, `source_manifest_v12.json` : résultats et traçabilité.
+- `exports/enclosure_v12_integrated_buck_fusion_bundle.zip` : STEP, STL, sources, documentation et contrôles regroupés.
 
 Les fichiers numérotés v01 à v09 et leurs dossiers de pièces sont historiques. Les exports
-sans numéro listés ci-dessus correspondent à v0.11. Ne pas employer l'ancienne
+sans numéro listés ci-dessus correspondent à v0.12. Ne pas employer l'ancienne
 vue `preview_buck.png`, qui représente encore le module externe.
 
 Le STEP contient une arborescence de solides nommés : **105 solides valides** dans
@@ -58,7 +58,7 @@ Les coordonnées sont x gauche→droite en vue de face, y avant→arrière, z ba
 
 Les enveloppes de B sont relues depuis l'implantation courante, avec les nouvelles
 positions et hauteurs de U1 LM2596 (4,8 mm), L1 (7 mm), D9 (2,4 mm), C8 (11,5 mm)
-et C10 (12,5 mm). Q1 demeure le plus haut, 17 mm. Elles restent dans la réserve
+et C10 (16,5 mm maximum). Q1 demeure le plus haut, 17 mm. Elles restent dans la réserve
 nominale de 20 mm ; le plan principal intérieur du panneau arrière est à y=112,
 soit 10 mm derrière le sommet de Q1. La place locale des passe-paroi et clips
 est contrôlée par intersection, pas seulement par cette distance au plan.
@@ -216,7 +216,7 @@ la soudure sans traction ; sortir le panneau avant démontage de B.
 
 **L'équivalence dimensionnelle du lot Amazon avec le dessin Tayda n'est pas
 vérifiée.** La référence alternative documentée est Tayda **A-2585**. Imprimer
-d'abord `98_Optional_jack_fit_coupon.stl` dans `parts_v11/`, puis tester le jack,
+d'abord `98_Optional_jack_fit_coupon.stl` dans `parts_v12/`, puis tester le jack,
 sa rondelle et son écrou réels. Le coupon est séparé des six pièces du boîtier.
 Le jeu FDM, la rigidité locale et la tenue au serrage restent à essayer.
 
@@ -293,3 +293,15 @@ Les deux sockets utilisent désormais les enveloppes maximales Harwin38,85×2,65
 Les deux enveloppes J10 sont ajoutées à partir du PCB natif. Le contrôle de
 déconnexion de B inclut ce nouveau JST même si son câble reste facultatif.
 Les six pièces imprimées et les dimensions155×100×115mm sont conservées.
+
+## Révision v0.12 : composants disponibles
+
+Les cartes natives sont A0.4.3 et B0.5.3. Les sockets HCTL ont une enveloppe
+maximale 38,80 × 2,65 × 8,65 mm. C10 Panasonic EEUFS1V331LB est plus haut :
+16,5 mm maximum, au lieu de 12,5 mm pour l'ancien composant. Son dégagement
+Ø10 reste volontairement conservateur pour le corps réel Ø8 nominal/8,5 maximum.
+Les six pièces imprimées, les rails et clips, les ouvertures latérales,
+l'accès USB et les interfaces du panneau arrière sont conservés. Les contrôles
+statiques et les 20 étapes de montage/service sont régénérés sur cette version.
+Le STEP ne contient pas d'historique natif Fusion ; les sources CadQuery restent
+paramétriques. Essai physique du montage et revue usine toujours requis.

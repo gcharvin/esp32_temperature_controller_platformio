@@ -300,7 +300,7 @@ def build():
         renderSVG.drawToFile(page.d,str(OUT/(name+'.svg')))
     paper_w,paper_h=landscape(A3)
     c=canvas.Canvas(str(PDF),pagesize=(paper_w,paper_h),invariant=1)
-    c.setTitle('Cartes A et B - Guide visuel annote - A0.4.2 / B0.5.2 UART')
+    c.setTitle('Cartes A et B - Guide visuel annote - A0.4.3 / B0.5.3 UART')
     c.setAuthor('Projet controleur de temperature')
     for page in pages:
         c.saveState(); c.scale(paper_w/W,paper_h/H); renderPDF.draw(page.d,c,0,0); c.restoreState(); c.showPage()
@@ -310,7 +310,7 @@ def build():
         (OUT/f'guide-{i}.png').replace(OUT/(name+'.png'))
     sources={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path(__file__),geometry_path,ROOT/'manufacturing/wiring_and_harnesses.md',ROOT/'TEST_POINTS.md',ROOT/'diagnostic_leds.json']}
     sources.update(geometry['source_sha256'])
-    (OUT/'source_manifest.json').write_text(json.dumps(dict(native_revisions=['A0.4.2','B0.5.2'],
+    (OUT/'source_manifest.json').write_text(json.dumps(dict(native_revisions=['A0.4.3','B0.5.3'],
         purpose='French explanatory diagrams; not a manufacturing or placement approval',
         source_sha256=sources,pcb_sources_modified=False),indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'pdf':str(PDF),'pages':3,'native_geometry_verified':True,'output':str(OUT)},indent=2))

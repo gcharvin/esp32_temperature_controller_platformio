@@ -1,5 +1,5 @@
 Gate,Status,Required_response,Evidence,Date
-exact_sourcing,PENDING,"Exact MPN/manufacturer availability incl C10 R13 Harwin; proposed substitutions separately for approval",,
+exact_sourcing,PENDING,"Exact MPN/manufacturer availability incl C10 R13 HCTL sockets and Harwin JP1 header; proposed substitutions separately for approval",,
 DFM_and_holes,PENDING,"Finished dimensions copper thickness ENIG and1.05mm socket-hole tolerance accepted",,
 panel_and_edges,PENDING,"Panel tooling tabs/fiducials approved; deliver depanelized deburred clip edges",,
 thermal_and_MSL,PENDING,"Measured LM2596 peak<=245C; all actual MSL lots including LEDs; THT process accepted",,

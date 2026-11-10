@@ -130,7 +130,7 @@ def render():
     def header(title, page):
         text(30, H-35, title, 19)
         text(30, H-54, 'ASSEMBLY REVIEW - NOT FOR ORDER | 2026-11-10 | Top view, not mirrored', 9, '#a14d16')
-        text(30, 20, 'A0.4.2 / B0.5.2 | Native KiCad geometry | PCB corner coordinates in mm; not a printable 1:1 template.', 8)
+        text(30, 20, 'A0.4.3 / B0.5.3 | Native KiCad geometry | PCB corner coordinates in mm; not a printable 1:1 template.', 8)
         text(W-55, 20, str(page), 8)
     for index, b in enumerate(data['boards'], 1):
         header('PCB '+b['code']+' - component side and pin 1', index)
@@ -192,7 +192,7 @@ def render():
         for j,line in enumerate(notes): text(left,baseline-j*13,line,9)
         c.showPage()
     header('Assembly details - selected orientations and R13 lands', 3)
-    text(35,H-86,'R13 / WSL1206R0560FEA - manufacturer recommended pattern, 0.006..0.200 ohm range',11)
+    text(35,H-86,'R13 / WSL1206R0500FEA - manufacturer recommended pattern, 0.006..0.200 ohm range',11)
     scale=28; cx,cy=170,H-153
     for sign in (-1,1):
         c.setFillColor(HexColor('#e5b867'));c.setStrokeColor(HexColor('#ae8943'))

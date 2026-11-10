@@ -1,6 +1,15 @@
 # Dossier prototype A04 / B05 — point d’entrée
 
-Dernière révision native : **A0.4.2 / B0.5.2**, ajout du JST UART J10 sur A et B,
+**Révision courante du 10 novembre : A0.4.3 / B0.5.3, maquette v0.12.**
+Les remplacements examinés dans le devis sont reportés dans les sources :
+MLCC Walsin/Samsung, sockets HCTL, C10 Panasonic FS (16,5 mm maximum),
+R13 Vishay 50 mΩ et LED HEAT jaune. Voir
+[le dossier de substitution et le devis](online_quote_20261110/README.md).
+Les fichiers A04/B05 gardent leurs noms de famille ; employer les nouvelles
+archives et leurs SHA256. Les devis en ligne précédents restent des instantanés,
+le placement final et le DFM usine restent à approuver ; aucune commande lancée.
+
+Dernière révision native : **A0.4.3 / B0.5.3**, ajout du JST UART J10 sur A et B,
 avec les22 points de test au dos conservés. Les archives A04/B05 sont régénérées.
 Voir `../TEST_POINTS.md` et `../../firmware/diagnostic/README.md` : le programme
 de banc maintient ENABLE à zéro, sans autoriser le chauffage. Il est compilé
@@ -43,7 +52,7 @@ sur les deux PCB, signaux NC sur B température, câble facultatif. Tous sont au
 Le connecteur de sonde est **B/J4**, NTC passive15k. Voir le schéma et
 `wiring_and_harnesses.md` ; ne pas déterminer la polarité à la couleur des fils.
 
-Le STEP courant est `enclosure_v11_integrated_buck.step` : façade amovible
+Le STEP courant est `enclosure_v12_integrated_buck.step` : façade amovible
 avec LCD/A, rails/clips, berceau B, panneau arrière, USB latéral et ventilation
 sur les côtés. Il représente des enveloppes de composants, avec les dimensions
 documentées des sockets/borniers et une réserve pour le plastique des broches

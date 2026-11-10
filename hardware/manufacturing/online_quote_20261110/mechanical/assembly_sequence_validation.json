@@ -1,0 +1,244 @@
+{
+  "tests": [
+    {
+      "stage": "1 LCD outside tube: through empty A holder",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -64,
+        0
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: align laterally",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        -4,
+        0,
+        0
+      ],
+      "prism_count": 12,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: raise above bottom groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        4.5
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: approach above groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -6,
+        0
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: lower into groove",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        -3.5
+      ],
+      "prism_count": 20,
+      "reversible": true
+    },
+    {
+      "stage": "1 LCD outside tube: pivot and release clips",
+      "method": "BRep poses at 0.1 degree intervals",
+      "angle_deg": [
+        4,
+        0
+      ],
+      "clips_held_outward_mm": 2.4,
+      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+      "reversible": true
+    },
+    {
+      "stage": "2 A outside tube: approach above groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -40,
+        0
+      ],
+      "prism_count": 155,
+      "reversible": true
+    },
+    {
+      "stage": "2 A outside tube: lower into groove",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        -3.5
+      ],
+      "prism_count": 155,
+      "reversible": true
+    },
+    {
+      "stage": "2 A outside tube: pivot and release clips",
+      "method": "BRep poses at 0.1 degree intervals",
+      "angle_deg": [
+        4,
+        0
+      ],
+      "clips_held_outward_mm": 2.4,
+      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+      "reversible": true
+    },
+    {
+      "stage": "3 B outside tube: approach above groove lip",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -40,
+        0
+      ],
+      "prism_count": 245,
+      "reversible": true
+    },
+    {
+      "stage": "3 B outside tube: lower into groove",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        0,
+        -3.5
+      ],
+      "prism_count": 245,
+      "reversible": true
+    },
+    {
+      "stage": "3 B outside tube: pivot and release clips",
+      "method": "BRep poses at 0.1 degree intervals",
+      "angle_deg": [
+        4,
+        0
+      ],
+      "clips_held_outward_mm": 2.4,
+      "note": "Free arm/hook translated as release envelope; no elastic/FEM claim",
+      "reversible": true
+    },
+    {
+      "stage": "BH1 optical insert from inside",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -15,
+        0
+      ],
+      "prism_count": 5,
+      "reversible": true
+    },
+    {
+      "stage": "BH2 PCB into cassette with clips released",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -15,
+        0
+      ],
+      "prism_count": 6,
+      "reversible": true
+    },
+    {
+      "stage": "BH3 equipped cassette with facade clips released",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        -20,
+        0
+      ],
+      "prism_count": 26,
+      "reversible": true
+    },
+    {
+      "stage": "4 equipped front enters from front",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        100,
+        0
+      ],
+      "prism_count": 208,
+      "reversible": true
+    },
+    {
+      "stage": "5 USB male plug insertion after front fitted",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        -15,
+        0,
+        0
+      ],
+      "prism_count": 3,
+      "reversible": true
+    },
+    {
+      "stage": "6 B carrier extraction / reverse insertion",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        50,
+        0
+      ],
+      "prism_count": 171,
+      "reversible": true
+    },
+    {
+      "stage": "7 rear panel withdrawal / reverse insertion",
+      "method": "planar-face translational swept volumes",
+      "translation_mm": [
+        0,
+        60,
+        0
+      ],
+      "prism_count": 37,
+      "reversible": true
+    },
+    {
+      "stage": "9 B connector service",
+      "rear_panel_removed": true,
+      "shaft_diameter_mm": 6,
+      "JST_rear_corridor_length_mm": 35,
+      "JST_housing_basis": {
+        "source": "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf",
+        "housing_family": "XHP",
+        "depth_mm": 5.7,
+        "width_end_allowance_mm": 4.8,
+        "pitch_mm": 2.5,
+        "envelope_margin_each_side_mm": 0.25,
+        "extraction_corridor_mm": 35,
+        "notes": "XHP width = (circuits-1)*pitch+4.8. Clearance is for plug body and nominal margin, not fingers; real mating and cable slack require physical test."
+      },
+      "terminal_refs": [
+        "J2",
+        "J3"
+      ],
+      "JST_refs": [
+        "J1",
+        "J4",
+        "J6",
+        "J7",
+        "J10"
+      ],
+      "method": "BRep intersection of XHP body corridor with 0.25mm nominal margin above header. Fingers, mating contacts and wire bends unqualified"
+    }
+  ],
+  "failures": [],
+  "reverse_order": "rear off; B disconnected/extracted; USB male unplugged before front released/pulled; A then LCD unclipped; BH1750 cassette and optical insert removable separately on bench",
+  "limits": "Rigid-body geometry only. Rotations sampled at 0.1 deg. Latches represented as released envelopes. Cable slack, fingers, flexure and print tolerances require physical validation."
+}
