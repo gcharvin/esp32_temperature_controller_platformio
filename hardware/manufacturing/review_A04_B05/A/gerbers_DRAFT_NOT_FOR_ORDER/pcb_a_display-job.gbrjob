@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-11-10T15:22:50+01:00"
+    "CreationDate": "2026-11-10T19:27:36+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "pcb_a_display",
       "GUID": "7063625f-615f-4646-9973-706c61792e6b",
-      "Revision": "0.4.2"
+      "Revision": "0.4.3"
     },
     "Size": {
       "X": 110.15,

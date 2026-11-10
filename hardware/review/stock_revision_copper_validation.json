@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "revision": "A0.4.3 / B0.5.3 reviewed stock alternatives 2026-11-10",
+  "boards": {
+    "A": {
+      "tracks_vias_preserved": 432,
+      "pads_preserved": 101,
+      "copper_sha256": "de3b657f2171a476442f7f8c3fb6ef1e0e064399da261c38221cb692574f03f4"
+    },
+    "B": {
+      "tracks_vias_preserved": 456,
+      "pads_preserved": 144,
+      "copper_sha256": "9b4a67ab9be249ad5af4bf7ef96d73ccac3ff1deeea266b6c7452df4993a587f"
+    }
+  },
+  "order_placed": false,
+  "electrical_connectivity_or_routing_changed": false
+}

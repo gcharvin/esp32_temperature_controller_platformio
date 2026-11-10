@@ -25,11 +25,7 @@
     "B_NT1": "Copper only; not a purchased component"
   },
   "missing_exact_catalogue_MPNs": [
-    "EEUFR1V331UB",
-    "M20-7821546",
-    "M20-9990246",
-    "M7566-05",
-    "WSL1206R0560FEA"
+    "M7566-05"
   ],
   "JLCPCB_import_tested": false,
   "factory_placement_approved": false,

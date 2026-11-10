@@ -24,12 +24,12 @@
     "review\\uart_extension_copper_baseline.json": "2990f6f04ad5170495238f2d8669d01ab335ee1b0f3e934dd38692958777bb09",
     "scripts\\check_uart_extension.py": "95f6e24ca371fcdf5864bf9b404e7589706f7e80d42af203165745e2cdbb45c4",
     "interface_ab.json": "f87fad4ef3a8226ccddc440bddc45af0d5c3d7ca315f79864eeb51ccf1e0ae41",
-    "module_selection.json": "63712d1417803524367246603235468f019b53de587e32b1922d63a382ab97a1",
-    "pcb_a_display\\pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
-    "pcb_a_display\\pcb_a_display.kicad_sch": "2552f7f0641d2093ba39fa690c9effa31fbcab8c06515929b86895068d7c5fb2",
-    "review\\pcb_a_display.net.xml": "458b45408441d02f53effc0c43e2ddc226d17b0ce81b8eae2a8d07ad4ab3fef0",
-    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26",
-    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "2ecab8c268ec178d21c996a38642f33ae28489d9b481da25c6548ee43e405931",
-    "review\\pcb_b_temperature.net.xml": "02e9e23db00198be671f155e8d7b72983fd4144a27f7028f96639c86f249b634"
+    "module_selection.json": "aaacf0b4d743463330c700246037ef4b5e80dc2e69afafd6a83949537b8cc308",
+    "pcb_a_display\\pcb_a_display.kicad_pcb": "598d2b5b2df9db87c496324726e76991de4e57d1b67e69cb55c9b27c541bad0f",
+    "pcb_a_display\\pcb_a_display.kicad_sch": "021092577df898db21f381e23eaa22e2d6e92d8d32f49397f669826b2f815ea4",
+    "review\\pcb_a_display.net.xml": "2b90e57b33f78f8c036f64957fb240c9377fb2aa4f64a70825738ddaceab0f0a",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_pcb": "d1e18c4f5b05ec88fdd52b688b039b8969644c30a6edf927df737547a069545f",
+    "pcb_b_temperature\\pcb_b_temperature.kicad_sch": "e5d6a3566c8b6cb957653bb4d517f47212d3bddf6e21f8a99f510f388cec554b",
+    "review\\pcb_b_temperature.net.xml": "427184211d5b42b339e63b30877cd9c236a41bf4e99d04ef0d51ad0def47112f"
   }
 }

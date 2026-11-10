@@ -1,28 +1,30 @@
 {
   "status": "PASS",
-  "date_utc": "2026-11-10T14:23:01.962544+00:00",
-  "reviewer": "Codex - actual render inspection",
-  "method": "Inspected current schematic pages, all three assembly PDF pages, four exported Gerber renders and required mechanical views. SHA256 verifies renders stayed identical during final regeneration.",
+  "date_utc": "2026-11-10T18:24:20.302998+00:00",
+  "reviewer": "Codex - actual rendered artifact inspection",
+  "method": "Inspected schematic renders, three assembly pages and corrected revision footer, four exported Gerber views, enclosure/connector/BH1750 views, and native KiCad B 3D render showing the new C10 model.",
   "findings": [
-    "A0.4.2/B0.5.2 J10 fitted on both boards. A GPIO17 TX/GPIO16 RX; B contacts2/3 intentionally NC. Original tracks and vias preserved by UUID and geometry signature.",
-    "J10 visible in assembly drawings and Gerber output; existing J8/J9 factory socket aliases retained.",
-    "Six printed parts and107 STEP reference solids; all20 modeled assembly/service stages pass. B extraction and connector corridor include J10.",
-    "BH1750 retained behind thin optical zone; actual print fit, optical transmission and component/cable grip remain unqualified."
+    "A0.4.3/B0.5.3 reviewed stock substitutions synchronized in native sources; all432 A and456 B tracks/vias,245 pad geometries/UUIDs and nets preserved.",
+    "C10 FS formed5mm pitch; native D10 lands/keepout retained, maximum body height16.5mm represented in STEP and local KiCad model.",
+    "HCTL sockets max38.8x2.65x8.65mm; same row spacing25.40mm and existing holes1.05mm.",
+    "R13 is50mOhm in C10 return; seven-case source-bound qualification passed. D8 yellow, existing2.2kOhm retained.",
+    "Six connected printed pieces,107 reference solids; all20 assembly/service stages pass with no collisions."
   ],
   "reviewed_files_sha256": {
-    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "58eeafdad1b61e076efd477b698ccf7e7a936626d03af14647b774432e2bdac2",
-    "review/pcb_a_display.pdf": "78effd41834476c8173c7d2b318ff050256aa5831431c7fa1f657f7e4583fb2d",
-    "review/pcb_b_temperature.pdf": "237994ed0c2dc9412c437d2ea2da89d70237d25a49ad3ccc4078dbe916be0c03",
+    "manufacturing/output/pdf/assembly_review_A04_B05.pdf": "da650506572585c3fc116d1f06a950c47db490f8cf76c68ec7e12636717349c4",
+    "review/pcb_a_display.pdf": "765e0dc3e542e666993cc12cad4f157054b3ad487c8be246b13beeb24cf47ffa",
+    "review/pcb_b_temperature.pdf": "88e091489a5fd1d745939f96d0a92dce1cae8ca8eb32658853735a79226e768e",
+    "mechanical/exports/preview_service.png": "d6994b2e2dbaeffc26288b7730cd27b36318c6843271cb7535ec1046beee5e58",
+    "mechanical/exports/preview_b_power.png": "28eb24d8f974ae05dc16d13a386b3b863e8319fc592a1868c0791979e27cdc5f",
+    "mechanical/exports/preview_light_sensor.png": "28ce24e462b64f880ba7c1c38016ae90fad606ff8a5909ab4bd45ffb324ddc4b",
+    "mechanical/exports/preview_assembled.png": "0024b79a5dbb0c21c15bb1052beaeac4176937f0c6dc2a4861786e1d87a95eca",
+    "review/stock_revision_pcb_B_3d.png": "89a8a730266aa5b0d48446a5003a8d6d42247266f8fe90cf02c11e4670710137",
     "manufacturing/review_A04_B05/gerber_review/A_front.png": "ecfc0ad1364d403642aeca926e478da3e319d4b9bae9adb08e85e9ffd75f7e91",
     "manufacturing/review_A04_B05/gerber_review/A_back.png": "808bd2f779167d72aa206ec67ba001076c627627f845952a176c850e4734d7db",
     "manufacturing/review_A04_B05/gerber_review/B_front.png": "4167534e4bfa2ec2d3f581dde323b51e151d3dd4d73b5297e0e6bdad5ac7db6b",
-    "manufacturing/review_A04_B05/gerber_review/B_back.png": "2009c8553d33972f256013f2cb571ad0bf4aff048f8a5301352aa220790b99a3",
-    "mechanical/exports/preview_assembled.png": "eedc53415728c0e018408fe56e73acd43d6433e7ab5632b68625781d8a6dd064",
-    "mechanical/exports/preview_service.png": "39da56b9c4f520efd81c465715b291e03030bce14fccaf30b6f18595026c7710",
-    "mechanical/exports/preview_b_power.png": "d28ea47d35a8494ef3ada1233dbe8e4f544aeaffcf9b435d2c1bc81af366673d",
-    "mechanical/exports/preview_light_sensor.png": "28ce24e462b64f880ba7c1c38016ae90fad606ff8a5909ab4bd45ffb324ddc4b"
+    "manufacturing/review_A04_B05/gerber_review/B_back.png": "2009c8553d33972f256013f2cb571ad0bf4aff048f8a5301352aa220790b99a3"
   },
   "limits": [
-    "Engineering visual review; not factory sourcing/orientation/process approval, physical fit, electrical or thermal qualification."
+    "Engineering review only. Factory sourcing, final orientation/process/DFM approval, physical fit, electrical and thermal qualification remain separate; no order or purchase."
   ]
 }

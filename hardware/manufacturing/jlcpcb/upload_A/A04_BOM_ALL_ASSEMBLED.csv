@@ -1,7 +1,7 @@
 ﻿Comment,Designator,Footprint,Manufacturer,Manufacturer Part,LCSC Part #
-1uF,C1,Capacitor_SMD:C_0603_1608Metric,TDK,C1608X7R1C105K080AC,C2167399
-1uF,C2,Capacitor_SMD:C_0603_1608Metric,TDK,C1608X7R1C105K080AC,C2167399
-10uF,C3,Capacitor_SMD:C_0603_1608Metric,TDK,C1608X5R1A106K080AC,C2167467
+1uF,C1,Capacitor_SMD:C_0603_1608Metric,Walsin,0603B105K160CT,C108463
+1uF,C2,Capacitor_SMD:C_0603_1608Metric,Walsin,0603B105K160CT,C108463
+10uF,C3,Capacitor_SMD:C_0603_1608Metric,Samsung,CL10A106KP8NNNC,C19702
 APT2012LZGCK,D1,LabHardware:LED_Kingbright_APT2012_Manufacturer,Kingbright,APT2012LZGCK,C5569446
 APT2012LZGCK,D2,LabHardware:LED_Kingbright_APT2012_Manufacturer,Kingbright,APT2012LZGCK,C5569446
 10k,R1,Resistor_SMD:R_0603_1608Metric,YAGEO,RC0603FR-0710KL,C98220
@@ -20,6 +20,6 @@ BH1750 module / addr 0x23,J5,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical
 A-B I2C / XH-3,J6,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,JST,B3B-XH-A(LF)(SN),C144394
 A-B CTRL / XH-6,J7,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,JST,B6B-XH-A(LF)(SN),C144397
 A-B UART / 3V3 / GND TX_A RX_A,J10,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,JST,B3B-XH-A(LF)(SN),C144394
-5V DevKit link / remove for service,JP1,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Harwin,M20-9990246,
-Female socket 1x15 2.54mm 8.5mm high,J8,Harwin_M20-7821546_1x15_P2.54mm,Harwin,M20-7821546,
-Female socket 1x15 2.54mm 8.5mm high,J9,Harwin_M20-7821546_1x15_P2.54mm,Harwin,M20-7821546,
+5V DevKit link / remove for service,JP1,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Harwin,M20-9990246,C3332353
+Female socket 1x15 2.54mm 8.5mm high,J8,HCTL_PM254_1x15_P2.54mm,HCTL,PM254-1-15-Z-8.5,C2897378
+Female socket 1x15 2.54mm 8.5mm high,J9,HCTL_PM254_1x15_P2.54mm,HCTL,PM254-1-15-Z-8.5,C2897378

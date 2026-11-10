@@ -5,7 +5,7 @@
   "ground_tie_records_normalized": 0,
   "expected_physical_equivalence": [],
   "all_coordinates_and_other_nets_unchanged": true,
-  "source_PCB_sha256": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
+  "source_PCB_sha256": "598d2b5b2df9db87c496324726e76991de4e57d1b67e69cb55c9b27c541bad0f",
   "output_sha256": {
     "bare_board_test_raw_kicad.d356": "952511adb41a2414aa9da85a4cadb125538575c8042d4af8dcfff9e5c36059f9",
     "bare_board_test.d356": "3ea94b5fff8e9229b11a281f1ff823d88150521bceced5d0b9c7d81b90572976"

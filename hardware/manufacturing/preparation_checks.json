@@ -66,23 +66,31 @@
   "order_authorized": false,
   "evidence_sha256": {
     "review/validation.txt": "2f012cebafe860b7b72d80ad254dcdc74e6b15e2753ea1b28158740c9969bdfb",
-    "review/routing/component_selection_validation.json": "24113778998ce194e129a15e6f1b600181d3b993ca252b3d4acf992b441c6edf",
-    "review/routing/uart_extension_validation.json": "67ea76e0641b94ae5e4121f2909e288498ce23b2c38b18cb5bb9eba5c13aba25",
-    "review/routing/test_points_validation.json": "d9115758878b4a995b25ebbb6f505f6059aeafe3a4f10f59aee5378e1ccc2bbd",
-    "review/diagnostic_firmware_validation.json": "e7f26119560557b967be30ab8be6bacc0731215d657260574e31e8bc19cec34c",
-    "review/routing/manufacturer_land_patterns.json": "d55deb9f5200073ca4346233ce90f603fe914ad89f7ad6eb41c7c585c26f6c70",
+    "review/routing/component_selection_validation.json": "a51d68c32a663f7f4e024c39c004844ec0dee9b5f77c518d4ee3ac2484174fa5",
+    "review/routing/uart_extension_validation.json": "b302eb572c03c7622637c1fcb709bc18ec97b56d91b589578daa5ea476f99cba",
+    "review/stock_revision_copper_validation.json": "258c622da681c101dcf74eb3019736dc5beaad2a1b082a97f57e08bf7c9c0081",
+    "power_study/lm2596/current_acceptance.json": "dc7e80cb5192f84da52ece6f4e9136995ccb7a538d4f1ac5409328dfa8d8199b",
+    "review/routing/integrated_buck_validation.json": "58f3ba1297f76a59b0c83ed8567df64365523a048d5399a5ffab369dd5354ba9",
+    "review/routing/test_points_validation.json": "fa5073082f4d123911e7320fce904f752b25dba689fed485e288e46616fdcba3",
+    "review/diagnostic_firmware_validation.json": "582add659de35a1aefaf77ae3f836cf988cc86df0bebd280758a402e1052009e",
+    "review/routing/manufacturer_land_patterns.json": "7b14eb4fab6522411134c144469466a7f301576a9439b9774016a4278620b1d6",
     "review/routing/routing_validation.json": "a2ad0f2a496463e9af213db515583643f8a06b1c06c180c55066e70dd48c8801",
-    "manufacturing/manufacturing_fit_audit.json": "612d6f680336a3b1dd4a6640de9e41b2e39e83c0b2ff5718e0ab4bcc17454f23",
-    "manufacturing/harness_validation.json": "7e3a53a5dc68abab68b381d4c7c1aeec9e77404a23abfbd8e88fb976347f319d",
-    "manufacturing/output/assembly_review_manifest.json": "32ab15d4a165a9451a1806501841ee2168a3486278bb05edb6659e1a8db3f7b6",
-    "manufacturing/fabrication_output_validation.json": "5e8bb51a17a7884a011171244dd1b475e31a780ca5734bcd644f7229fb5efece",
-    "manufacturing/rfq_integrity_validation.json": "cc1b62f1e7c6f75a486b3a89420f6df3746a671c3540f4337d181d766ff48b2a",
-    "mechanical/exports/source_manifest_v11.json": "71ce939df7a087affcc1ef626e7cca5e966c926aeca718576d895bd090fe8448",
+    "manufacturing/manufacturing_fit_audit.json": "677dac2c97be51d562546cb1d26a24d19be0ad0d5e49ddeb7850da012389181d",
+    "manufacturing/harness_validation.json": "7b43bc8726f685984685f96385888d855a214ca6ccfbf6ba5c6565a2a53db37f",
+    "manufacturing/output/assembly_review_manifest.json": "21e8941b312d227eeba8fb02bc027bbfe70b7d72a434786c9e775bfe1d9cc9b8",
+    "manufacturing/fabrication_output_validation.json": "e5a27fc67934253540145bd21db08f0db4befc82d242b29e93a41fa583cb42cf",
+    "manufacturing/rfq_integrity_validation.json": "eb349655c1a399327059ef8384fdc843375c5fcfbd466e971413ff3510593fe4",
+    "mechanical/exports/source_manifest_v12.json": "8cc55a9374428fce6eb76a21945c117645d95cdb7c98df4311e41dcfd07d86d8",
     "mechanical/exports/assembly_sequence_validation.json": "ea7a8f28aa2e7a6224523cf0d0e815d12569f9e0ecc689e4c9ee67b3cd6c4de4",
-    "mechanical/exports/validation.json": "ec97ac0a67170ecf1252046e159b3247da25c85973ee8dc54061b62420cf3fca"
+    "mechanical/exports/validation.json": "df1a382cc9bf136147b53f38166363bebca489826ad5c13e3935cf690c0ac849"
   },
   "limits": [
     "Factory sourcing/DFM/placement-preview/quotation approvals are external.",
     "No actual heater, DevKit power path or printed fit qualification inferred."
+  ],
+  "revalidated_after_visual_corrections": [
+    "assembly_pdf",
+    "manufacturing_exports",
+    "rfq_integrity"
   ]
 }

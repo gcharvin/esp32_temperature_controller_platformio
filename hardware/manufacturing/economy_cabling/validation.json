@@ -15,7 +15,7 @@
     "hardware/interface_ab.json": "f87fad4ef3a8226ccddc440bddc45af0d5c3d7ca315f79864eeb51ccf1e0ae41",
     "hardware/manufacturing/harness_pin_map.csv": "c82e17f5cb0775e5ee93013917fc4381d555e0bf19de189b0f3f80a86e879d0b",
     "hardware/manufacturing/lcsc_cable_rfq/rfq_specification.json": "6e682120628b4de9ffb81649faa07e791fd6bf7a357cdf754f5e4dced5645197",
-    "hardware/manufacturing/system_bom_review.csv": "9252c25ec03c4dcd12212ef07713ee993baa6e712a8ad879abec0932a4fff84b",
+    "hardware/manufacturing/system_bom_review.csv": "74d2739d2ac49bbe2640281ab891f7cbf6019762193e39a07b47a938fcfd85b4",
     "hardware/manufacturing/wiring_and_harnesses.md": "569a1f60535925032522c2a5f3e04f0bd607a4f9fdbc8ca604ed08e6865a3e5c",
     "hardware/manufacturing/customer_supply_policy.json": "1c7cd593fe757e562bdb627df3297db729845c63a3fb94532b313f80cfcbc886",
     "hardware/manufacturing/economy_cabling/economy_plan.json": "252d85aec13344128c2469e7b27e794e23822c81583499885fd136c2f0999c90",

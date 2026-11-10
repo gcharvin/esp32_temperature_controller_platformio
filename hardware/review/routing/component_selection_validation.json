@@ -10,13 +10,13 @@
   "all_native_MPN_manufacturer_fields_match": true,
   "substitutions_allowed": false,
   "source_sha256": {
-    "manufacturing/component_selection.json": "98cff5178d0b853918e45aa743f7521928651683228ec91e9f67194f26be5d9f",
+    "manufacturing/component_selection.json": "57848547c2be9dff97bc599ef63f0160c40ef3216ad94dbf3119205d1fe38d54",
     "scripts/check_component_selection.py": "c2a5440dbb1a0255b2b38c271f3859c1798283cde151d64f7fede05d698bf30f",
-    "pcb_a_display/pcb_a_display.kicad_sch": "2552f7f0641d2093ba39fa690c9effa31fbcab8c06515929b86895068d7c5fb2",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
-    "review/pcb_a_display.net.xml": "458b45408441d02f53effc0c43e2ddc226d17b0ce81b8eae2a8d07ad4ab3fef0",
-    "pcb_b_temperature/pcb_b_temperature.kicad_sch": "2ecab8c268ec178d21c996a38642f33ae28489d9b481da25c6548ee43e405931",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26",
-    "review/pcb_b_temperature.net.xml": "02e9e23db00198be671f155e8d7b72983fd4144a27f7028f96639c86f249b634"
+    "pcb_a_display/pcb_a_display.kicad_sch": "021092577df898db21f381e23eaa22e2d6e92d8d32f49397f669826b2f815ea4",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "598d2b5b2df9db87c496324726e76991de4e57d1b67e69cb55c9b27c541bad0f",
+    "review/pcb_a_display.net.xml": "2b90e57b33f78f8c036f64957fb240c9377fb2aa4f64a70825738ddaceab0f0a",
+    "pcb_b_temperature/pcb_b_temperature.kicad_sch": "e5d6a3566c8b6cb957653bb4d517f47212d3bddf6e21f8a99f510f388cec554b",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "d1e18c4f5b05ec88fdd52b688b039b8969644c30a6edf927df737547a069545f",
+    "review/pcb_b_temperature.net.xml": "427184211d5b42b339e63b30877cd9c236a41bf4e99d04ef0d51ad0def47112f"
   }
 }

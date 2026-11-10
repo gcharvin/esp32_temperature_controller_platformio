@@ -1,19 +1,19 @@
 {
   "native_revisions": [
-    "A0.4.2",
-    "B0.5.2"
+    "A0.4.3",
+    "B0.5.3"
   ],
   "purpose": "French explanatory diagrams; not a manufacturing or placement approval",
   "source_sha256": {
-    "scripts\\build_board_guides.py": "451731f063d9922d90325bc143be7b1b06d3288e0d1bb097c9c43675d92bd147",
-    "manufacturing\\output\\assembly_geometry.json": "74e040ec33a56f1185e46bc8ea32742e7a4f0edc6d08e712ecffa6c3044254d2",
+    "scripts\\build_board_guides.py": "4b57638d811d141098678de4505de1e33d754b8f5fbcb7f15ea7a336d8dbd2d3",
+    "manufacturing\\output\\assembly_geometry.json": "2e39ff9653d8077fc947e2b546fe6d6105f72afd56108598bedd8a72691f0255",
     "manufacturing\\wiring_and_harnesses.md": "569a1f60535925032522c2a5f3e04f0bd607a4f9fdbc8ca604ed08e6865a3e5c",
     "TEST_POINTS.md": "02ac221429a8aefc63104357d6358fde7694eb9ab627383050f35b52dc154471",
-    "diagnostic_leds.json": "7b509eefab2449795e2bd69c93731aa7e7472a59fa2cf43d1001452df8f28489",
-    "scripts/build_assembly_review.py": "bb302b91885e8806d835886aac69677e1bfb3d3486f3079a75201b1e3a85ea49",
-    "manufacturing/land_pattern_review.json": "dddfcd35f83c779fcb7acc36aa68279d16dc28d48f96b85b6994e6e44ce67dc4",
-    "pcb_a_display/pcb_a_display.kicad_pcb": "336e5b117d70470f56c6b6a9d1dfec3612f65611cbd57375a5cc6ffb1c957a07",
-    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "6be8eb91a4be177a758ac07430337c75d658e2231cc9f30551e2a51dfde84c26"
+    "diagnostic_leds.json": "43cb3c1e76f96664b6d3cd2a6e8387f01fc24b4ac29b34d28f4f47cc266251fe",
+    "scripts/build_assembly_review.py": "4642aeb84942dc8477d11930a5be7c5d7354440db49c573aa2ba129dc1f58ef2",
+    "manufacturing/land_pattern_review.json": "11a8804b40a981ff41a03ad69a6ae87a9e05f042d1278e3a0b3f628452ac2488",
+    "pcb_a_display/pcb_a_display.kicad_pcb": "598d2b5b2df9db87c496324726e76991de4e57d1b67e69cb55c9b27c541bad0f",
+    "pcb_b_temperature/pcb_b_temperature.kicad_pcb": "d1e18c4f5b05ec88fdd52b688b039b8969644c30a6edf927df737547a069545f"
   },
   "pcb_sources_modified": false
 }

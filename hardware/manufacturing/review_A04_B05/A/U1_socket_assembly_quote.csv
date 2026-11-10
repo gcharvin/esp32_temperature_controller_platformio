@@ -1,3 +1,3 @@
 ﻿Assembly_item,Quantity,MPN,Manufacturer,Pads,Pitch_mm,Body_height_mm,Row_spacing_mm,Status,Source
-U1_SOCKET_BOTTOM,1,M20-7821546,Harwin,U1.1..15,2.54,8.5,25.4,"Selected: holes1.05mm, pitch2.54mm, rows25.4mm. Harwin body8.5mm high; OPEN: check actual insertion/body variants at integration",https://www.harwin.com/products/M20-7821546
-U1_SOCKET_TOP,1,M20-7821546,Harwin,U1.16..30,2.54,8.5,25.4,"Selected: holes1.05mm, pitch2.54mm, rows25.4mm. Harwin body8.5mm high; OPEN: check actual insertion/body variants at integration",https://www.harwin.com/products/M20-7821546
+U1_SOCKET_BOTTOM,1,PM254-1-15-Z-8.5,HCTL,U1.1..15,2.54,8.5,25.4,"Selected HCTL: holes1.05mm, pitch2.54mm, rows25.4mm; body8.5mm high; actual insertion/body variants remain to check",https://www.lcsc.com/datasheet/C2897378.pdf
+U1_SOCKET_TOP,1,PM254-1-15-Z-8.5,HCTL,U1.16..30,2.54,8.5,25.4,"Selected HCTL: holes1.05mm, pitch2.54mm, rows25.4mm; body8.5mm high; actual insertion/body variants remain to check",https://www.lcsc.com/datasheet/C2897378.pdf

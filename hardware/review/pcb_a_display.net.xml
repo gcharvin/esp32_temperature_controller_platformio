@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>C:\Users\Gilles\Documents\PlatformIO\Projects\esp32-temperature-controller-platformio\hardware\pcb_a_display\pcb_a_display.kicad_sch</source>
-    <date>2026-11-10T15:19:03</date>
+    <date>2026-11-10T19:16:11</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>PCB A - Display and ESP32 carrier</title>
         <company>Laboratory hardware platform</company>
-        <rev>0.4.2</rev>
+        <rev>0.4.3</rev>
         <date>2026-11-10</date>
         <source>pcb_a_display.kicad_sch</source>
         <comment number="1" value="PROTOTYPE - ENGINEERING PREPARED - ASSEMBLER APPROVAL REQUIRED"/>
@@ -27,20 +27,20 @@
     <comp ref="C1">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</datasheet>
+      <datasheet>https://www.ic-components.se/files/d4/0603B105K160CT.pdf</datasheet>
       <fields>
-        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
-        <field name="MPN">C1608X7R1C105K080AC</field>
-        <field name="Manufacturer">TDK</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10</field>
+        <field name="MPN">0603B105K160CT</field>
+        <field name="Manufacturer">Walsin</field>
         <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</field>
+        <field name="Datasheet">https://www.ic-components.se/files/d4/0603B105K160CT.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
-      <property name="MPN" value="C1608X7R1C105K080AC"/>
-      <property name="Manufacturer" value="TDK"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"/>
+      <property name="MPN" value="0603B105K160CT"/>
+      <property name="Manufacturer" value="Walsin"/>
       <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
@@ -60,20 +60,20 @@
     <comp ref="C2">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</datasheet>
+      <datasheet>https://www.ic-components.se/files/d4/0603B105K160CT.pdf</datasheet>
       <fields>
-        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
-        <field name="MPN">C1608X7R1C105K080AC</field>
-        <field name="Manufacturer">TDK</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10</field>
+        <field name="MPN">0603B105K160CT</field>
+        <field name="Manufacturer">Walsin</field>
         <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC</field>
+        <field name="Datasheet">https://www.ic-components.se/files/d4/0603B105K160CT.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
-      <property name="MPN" value="C1608X7R1C105K080AC"/>
-      <property name="Manufacturer" value="TDK"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"/>
+      <property name="MPN" value="0603B105K160CT"/>
+      <property name="Manufacturer" value="Walsin"/>
       <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
@@ -93,20 +93,20 @@
     <comp ref="C3">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1A106K080AC</datasheet>
+      <datasheet>https://static6.arrow.com/aropdfconversion/f24e86c802cdb5d71185c025570539bb11b8d108/specsheetcl10a106kp8nnn20250808.pdf</datasheet>
       <fields>
-        <field name="Design_Status">ENGINEERING_SELECTED_FOR_PROTOTYPE</field>
-        <field name="MPN">C1608X5R1A106K080AC</field>
-        <field name="Manufacturer">TDK</field>
+        <field name="Design_Status">ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10</field>
+        <field name="MPN">CL10A106KP8NNNC</field>
+        <field name="Manufacturer">Samsung</field>
         <field name="Assembly">FACTORY_SMT_QUOTE</field>
         <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
-        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1A106K080AC</field>
+        <field name="Datasheet">https://static6.arrow.com/aropdfconversion/f24e86c802cdb5d71185c025570539bb11b8d108/specsheetcl10a106kp8nnn20250808.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Design_Status" value="ENGINEERING_SELECTED_FOR_PROTOTYPE"/>
-      <property name="MPN" value="C1608X5R1A106K080AC"/>
-      <property name="Manufacturer" value="TDK"/>
+      <property name="Design_Status" value="ENGINEERING_SELECTED_STOCK_REVISION_2026_11_10"/>
+      <property name="MPN" value="CL10A106KP8NNNC"/>
+      <property name="Manufacturer" value="Samsung"/>
       <property name="Assembly" value="FACTORY_SMT_QUOTE"/>
       <property name="Sheetname" value="pcb_a_display"/>
       <property name="Sheetfile" value="pcb_a_display.kicad_sch"/>
@@ -735,7 +735,7 @@
       <value>GND</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -744,7 +744,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -767,7 +767,7 @@
       <value>+5V_AB</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -776,7 +776,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -799,7 +799,7 @@
       <value>+5V_DEVKIT</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -808,7 +808,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -831,7 +831,7 @@
       <value>+3V3_A</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -840,7 +840,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -863,7 +863,7 @@
       <value>I2C_SDA</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -872,7 +872,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -895,7 +895,7 @@
       <value>I2C_SCL</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -904,7 +904,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -927,7 +927,7 @@
       <value>PWM0</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -936,7 +936,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -959,7 +959,7 @@
       <value>ENABLE</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -968,7 +968,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -991,7 +991,7 @@
       <value>FAULT_N</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -1000,7 +1000,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -1023,7 +1023,7 @@
       <value>ENC_SW</value>
       <footprint>LabHardware:ProbePad_D1.5mm_NoPaste</footprint>
       <fields>
-        <field name="Design_Status">COPPER_ONLY_BACK_SIDE_TEST_POINT</field>
+        <field name="Design_Status">COPPER_ONLY_TEST_POINT</field>
         <field name="MPN"/>
         <field name="Manufacturer"/>
         <field name="Assembly">NONE_COPPER</field>
@@ -1032,7 +1032,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
-      <property name="Design_Status" value="COPPER_ONLY_BACK_SIDE_TEST_POINT"/>
+      <property name="Design_Status" value="COPPER_ONLY_TEST_POINT"/>
       <property name="MPN" value=""/>
       <property name="Manufacturer" value=""/>
       <property name="Assembly" value="NONE_COPPER"/>
@@ -1053,14 +1053,14 @@
     </comp>
     <comp ref="U1">
       <value>ESP32 USB-C / 30P user module</value>
-      <footprint>LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm</footprint>
+      <footprint>LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm</footprint>
       <datasheet>devkit_compatibility.md</datasheet>
       <fields>
         <field name="Design_Status">NOT_A_FACTORY_PURCHASED_NATIVE_PART</field>
         <field name="MPN"/>
         <field name="Manufacturer">Customer supplied</field>
         <field name="Assembly">CUSTOMER_PLUG_IN</field>
-        <field name="Footprint">LabHardware:ESP32_30P_Harwin_M20_7821546_Rows25.40mm</field>
+        <field name="Footprint">LabHardware:ESP32_30P_HCTL_PM254_Rows25.40mm</field>
         <field name="Datasheet">devkit_compatibility.md</field>
         <field name="Description"/>
       </fields>

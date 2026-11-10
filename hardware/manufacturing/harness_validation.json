@@ -12,8 +12,8 @@
   "lengths": "300+/-10mm for prototype quotation; UART cable optional and not added to current LCSC RFQ; real cable routing unqualified",
   "source_sha256": {
     "interface_ab.json": "f87fad4ef3a8226ccddc440bddc45af0d5c3d7ca315f79864eeb51ccf1e0ae41",
-    "review/pcb_a_display.net.xml": "458b45408441d02f53effc0c43e2ddc226d17b0ce81b8eae2a8d07ad4ab3fef0",
-    "review/pcb_b_temperature.net.xml": "02e9e23db00198be671f155e8d7b72983fd4144a27f7028f96639c86f249b634",
+    "review/pcb_a_display.net.xml": "2b90e57b33f78f8c036f64957fb240c9377fb2aa4f64a70825738ddaceab0f0a",
+    "review/pcb_b_temperature.net.xml": "427184211d5b42b339e63b30877cd9c236a41bf4e99d04ef0d51ad0def47112f",
     "scripts/build_harness_map.py": "c8d509546e590e7d567620c084ac682d1fc9091f495073a2a73aecd81fc21380",
     "manufacturing/harness_pin_map.csv": "c82e17f5cb0775e5ee93013917fc4381d555e0bf19de189b0f3f80a86e879d0b"
   }

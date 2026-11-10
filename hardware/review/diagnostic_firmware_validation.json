@@ -14,7 +14,7 @@
     "firmware\\diagnostic\\BenchPolicy.h": "1f4f17b90a08a2b49e2f9f650606b0d4c2886b6d37614a3925015ecc6907f3cd",
     "firmware\\diagnostic\\main.cpp": "52ab9230f89d73b37fd965cd222b55bac82ba43ca03db82c7d1356de29924862",
     "firmware\\diagnostic\\README.md": "a52ca2e937e874a0d23c49c1d6873b4b28d57f6144da9a63215f43b38b343122",
-    "hardware\\module_selection.json": "63712d1417803524367246603235468f019b53de587e32b1922d63a382ab97a1"
+    "hardware\\module_selection.json": "aaacf0b4d743463330c700246037ef4b5e80dc2e69afafd6a83949537b8cc308"
   },
   "binaries_sha256": {
     "firmware\\diagnostic\\release\\firmware.bin": "9ab820fa07be69d128ba3b808acc9f3a237406c4f686cd7c7789591476282a5e",
@@ -24,6 +24,6 @@
   "compile_summary": [
     "RAM:   [=         ]  13.9% (used 45600 bytes from 327680 bytes)",
     "Flash: [======    ]  61.6% (used 807325 bytes from 1310720 bytes)",
-    "========================= [SUCCESS] Took 5.92 seconds ========================="
+    "========================= [SUCCESS] Took 2.84 seconds ========================="
   ]
 }
